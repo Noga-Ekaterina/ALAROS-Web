@@ -1,0 +1,48 @@
+@import "../../styles/mixins";
+
+.header{
+  background: #fff;
+  position: sticky;
+  top: 0;
+  padding-block: 20rem;
+  z-index: 5;
+
+  &__container{
+    width: 100%;
+    @include flex-sb-c
+  }
+
+  &__left-block{
+    width: 325rem;
+    @include flex-sb-c;
+
+    @include sm{
+      width: 174rem;
+    }
+  }
+
+  &__logo{
+    width: 24rem;
+  }
+
+  &__menu{
+    width: 28rem;
+
+    &-wrapp{
+      width: 95rem;
+      font-size: 13rem;
+      letter-spacing: 0.02em;
+      color: var(--c-main);
+
+      @include flex-sb-c;
+
+      @include sm{
+        font-size: 15rem;
+      }
+    }
+
+    &__search{
+      width: 23rem;
+    }
+  }
+}

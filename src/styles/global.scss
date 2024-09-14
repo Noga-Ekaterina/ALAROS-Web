@@ -1,5 +1,68 @@
 @import "fonts";
+@import "mixins";
+
+:root{
+  --c-main: #273827;
+  --c-accent: #E0F273;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Root', sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: calc(100vw / 1024);
+
+  @include sm{
+    font-size: calc(100vw / 390);
+  }
+}
 
 body {
   font-family: 'PT Root', sans-serif;
+}
+
+.container{
+  max-width: 964rem;
+  margin-inline: auto;
+
+  @include sm{
+    max-width: 350rem;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &, a:link, a:visited {
+    color: inherit;
+  }
+}
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+span{
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.accent{
+  color: var(--c-accent);
 }
