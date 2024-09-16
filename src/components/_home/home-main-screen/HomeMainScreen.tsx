@@ -97,7 +97,7 @@ const HomeMainScreen = () => {
             искусству</h2>
           <div className="home-main-screen__links">
             <Link to="/" className="home-main-screen__link-main">Принять участие</Link>
-            <Link to="/" className="home-main-screen__link">Архив работ</Link>
+            <Link to="/" className="home-main-screen__link link-underline">Архив работ</Link>
           </div>
           <div className="home-main-screen__aside-ellipse-wrapp">
             <div className="home-main-screen__aside-ellipse"></div>

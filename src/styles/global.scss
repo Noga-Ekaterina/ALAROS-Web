@@ -4,6 +4,7 @@
 :root{
   --c-main: #273827;
   --c-accent: #E0F273;
+  --c-red: #E74F3D;
 }
 
 *{
@@ -45,6 +46,11 @@ a {
   &, a:link, a:visited {
     color: inherit;
   }
+}
+
+.link-underline{
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.1em;
 }
 
 button, input[type="submit"] {

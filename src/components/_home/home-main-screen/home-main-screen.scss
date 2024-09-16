@@ -193,6 +193,10 @@
           top: 0;
           left: 340rem;
 
+          @include md-book{
+            display: none;
+          }
+
           @include sm{
             display: none;
           }
@@ -236,8 +240,7 @@
 
   &__link{
     color: #6E7A64;
-    line-height: 1.1em;
-    border-bottom: 1px solid #6E7A64;
+    line-height: 1em;
     &-main{
       color: #E5E5E5;
       border: 1px solid #E5E5E5;
