@@ -21,7 +21,7 @@ const HomeMainScreen = () => {
           >
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/1.png" alt="" className="home-main-screen__slide-bg"/>
+                <img src="/Assets/Projects/1.jpg" alt="" className="home-main-screen__slide-bg"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -38,7 +38,7 @@ const HomeMainScreen = () => {
             </SwiperSlide>
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/2.png" alt="" className="home-main-screen__slide-bg"/>
+                <img src="/Assets/Projects/2.jpg" alt="" className="home-main-screen__slide-bg"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -55,7 +55,7 @@ const HomeMainScreen = () => {
             </SwiperSlide>
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/3.png" alt="" className="home-main-screen__slide-bg"/>
+                <img src="/Assets/Projects/3.jpg" alt="" className="home-main-screen__slide-bg"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -71,7 +71,7 @@ const HomeMainScreen = () => {
             </SwiperSlide>
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/4.png" alt="" className="home-main-screen__slide-bg"/>
+                <img src="/Assets/Projects/4.jpg" alt="" className="home-main-screen__slide-bg"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
