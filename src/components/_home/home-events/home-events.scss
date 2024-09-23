@@ -3,10 +3,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  position: relative;
 
   @include sm{
     flex-direction: column;
+  }
+
+  >*{
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &__bg{
+    position: absolute;
+    top: 113rem;
+    left: 0;
+    right: 0;
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__block-text{

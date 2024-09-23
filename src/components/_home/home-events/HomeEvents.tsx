@@ -3,8 +3,8 @@ import "./home-events.scss"
 import {Swiper, SwiperSlide} from "swiper/react";
 import pagesData from "../../../store/pagesData";
 import {Autoplay, Pagination} from "swiper/modules";
-import "swiper/css"
 import {useMediaQuery} from "react-responsive";
+import {ReactSVG} from "react-svg";
 const HomeEvents = () => {
   const {homeData}=pagesData
   const mobileScreen = useMediaQuery({maxWidth: 660});
@@ -25,6 +25,7 @@ const HomeEvents = () => {
   }, [mobileScreen]);
   return (
       <div className="home-events">
+        <ReactSVG src="/Assets/Pages/Home/bg/2.svg" className="home-events__bg"/>
       <div className="home-events__block-text">
           <div className="home-events__title">События</div>
           <p className="home-events__text">Календарь ближайших <br/>

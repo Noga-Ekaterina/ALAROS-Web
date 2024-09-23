@@ -21,6 +21,11 @@
     }
   }
 
+  svg{
+    width: 100%;
+    height: auto;
+  }
+
   &__logo{
     width: 24rem;
   }
@@ -40,9 +45,9 @@
         font-size: 15rem;
       }
     }
+  }
 
-    &__search{
-      width: 23rem;
-    }
+  &__search{
+    width: 23rem;
   }
 }

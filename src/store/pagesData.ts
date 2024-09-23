@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import {fetchData} from "../utils/fetchData";
-import {IHomeData} from "../types/data";
+import {IEventsByYear, IHomeData} from "../types/data";
 
 
 class Store {
@@ -10,8 +10,14 @@ class Store {
 
   homeData: IHomeData|null= null
 
+  calendarEvents: IEventsByYear|null= null
+
   fetchHomeData= async ()=>{
     this.homeData= await fetchData("Pages/Home/data.json")
+  }
+
+  fetchcCalendarEvents= async ()=>{
+    this.calendarEvents= await fetchData("Pages/Home/calendar-events/data.json")
   }
 }
 

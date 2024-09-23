@@ -2,7 +2,6 @@ import React from 'react';
 import "./home-main-screen.scss"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Link} from "react-router-dom";
-import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 import {EffectFade, Autoplay} from "swiper/modules";

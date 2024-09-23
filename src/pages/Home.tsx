@@ -1,28 +1,30 @@
 import React, {useEffect} from 'react';
+import "swiper/css"
 import HomeMainScreen from "../components/_home/home-main-screen/HomeMainScreen";
 import HomeEvents from "../components/_home/home-events/HomeEvents";
 import {observer} from "mobx-react-lite";
 import pagesData from "../store/pagesData";
+import CalendarEvents from "../components/_home/calendar-events/CalendarEvents";
 
 const Home = () => {
-  const {homeData, fetchHomeData}=pagesData
+  const {homeData, fetchHomeData, calendarEvents, fetchcCalendarEvents}=pagesData
 
   useEffect(() => {
     if (!homeData)
       fetchHomeData()
-  }, []);
 
-  useEffect(() => {
-    console.log(homeData)
-  }, [homeData]);
+    if (!calendarEvents)
+      fetchcCalendarEvents()
+  }, []);
 
   return (
     <>
       {
-        homeData?
+        (homeData && calendarEvents)?
             <div>
               <HomeMainScreen/>
               <HomeEvents/>
+              <CalendarEvents/>
             </div>
             :
             <></>

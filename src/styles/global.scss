@@ -2,6 +2,7 @@
 @import "mixins";
 
 :root{
+  --c-dark: #181818;
   --c-main: #273827;
   --c-accent: #E0F273;
   --c-red: #E74F3D;
@@ -12,6 +13,7 @@
   padding: 0;
   font-family: 'PT Root', sans-serif;
   box-sizing: border-box;
+  color: var(--c-dark);
 }
 
 html{
@@ -24,6 +26,7 @@ html{
 
 body {
   font-family: 'PT Root', sans-serif;
+  background: #F8F8F8;
 }
 
 .container{
@@ -49,7 +52,7 @@ a {
 }
 
 .link-underline{
-  border-bottom: 1px solid currentColor;
+  border-bottom: max(1px, 1rem) solid currentColor;
   padding-bottom: 0.1em;
 }
 
@@ -71,4 +74,8 @@ span{
 
 .accent{
   color: var(--c-accent);
+}
+
+.red{
+  color: var(--c-red);
 }
