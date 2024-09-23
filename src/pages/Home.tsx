@@ -7,14 +7,14 @@ import pagesData from "../store/pagesData";
 import CalendarEvents from "../components/_home/calendar-events/CalendarEvents";
 
 const Home = () => {
-  const {homeData, fetchHomeData, calendarEvents, fetchcCalendarEvents}=pagesData
+  const {homeData, fetchHomeData, calendarEvents, fetchCalendarEvents}=pagesData
 
   useEffect(() => {
     if (!homeData)
       fetchHomeData()
 
     if (!calendarEvents)
-      fetchcCalendarEvents()
+      fetchCalendarEvents()
   }, []);
 
   return (

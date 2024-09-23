@@ -16,8 +16,8 @@ class Store {
     this.homeData= await fetchData("Pages/Home/data.json")
   }
 
-  fetchcCalendarEvents= async ()=>{
-    this.calendarEvents= await fetchData("Pages/Home/calendar-events/data.json")
+  fetchCalendarEvents= async ()=>{
+    this.calendarEvents= await fetchData("Pages/Home/Calendar-events/data.json")
   }
 }
 
