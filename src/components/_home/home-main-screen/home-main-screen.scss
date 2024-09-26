@@ -66,7 +66,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    padding: 21rem 28rem 25rem 18rem;
+    padding: 21rem var(--p-y) 25rem 18rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -181,7 +181,7 @@
         z-index: 3;
         background: rgba(0, 0, 0, 0.15);
         height: 50%;
-        padding: 21rem 28rem;
+        padding: 21rem var(--p-y);
         //border-bottom: max(1px, 1rem) solid #E5E5E5;
 
         &::before{
@@ -213,7 +213,7 @@
         position: relative;
         z-index: 2;
         height: 19.46%;
-        padding: 21rem 28rem;
+        padding: 21rem var(--p-y);
         display: flex;
         align-items: flex-end;
         background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5) 70%);

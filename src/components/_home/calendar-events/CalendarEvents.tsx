@@ -25,7 +25,7 @@ const CalendarEvents = () => {
   const [activeEventsDays, setActiveEventsDays] = useState<ICalendarDay[]>([])
   const [activeMonth, setActiveMonth] = useState("")
   const [activeYear, setActiveYear] = useState(0)
-  const [eventsStar, setEventsStar] = useState<ICalendarDay[]>([])
+  const [eventsStart, setEventsStart] = useState<ICalendarDay[]>([])
 
   const swiperCalendarRef=useRef<SwiperRef | null>(null);
   const swiperEventRef=useRef<SwiperRef | null>(null);
@@ -33,7 +33,7 @@ const CalendarEvents = () => {
   const swiperEventNav= new SwiperNavigation(swiperEventRef)
   const progressRef = useRef<HTMLDivElement>(null);
 
-  const handleActiveIndexChange = () => {
+  const handleActiveDayIndexChange = () => {
     if (swiperCalendarRef.current){
       const {activeIndex, progress}=swiperCalendarRef.current?.swiper
       const activeDay=days[activeIndex]
@@ -48,7 +48,7 @@ const CalendarEvents = () => {
     }
   }
 
-  const changeActiveEvent = (day: ICalendarDay) => {
+  const changeActiveEventDays = (day: ICalendarDay) => {
     for (let i=0; i<eventsDays.length; i++){
       if ((eventsDays[i]).findIndex(item=> item.date==day.date)==0){
         console.log(eventsDays[i])
@@ -58,9 +58,28 @@ const CalendarEvents = () => {
     }
   }
 
-  const swipActiveEvent = (dir: "next"|"prev") => {
-    const newIndexActibeEvent= eventsDays.indexOf(activeEventsDays)+ (dir=="next"?1:-1)
-    setActiveEventsDays(eventsDays[newIndexActibeEvent])
+  const handleClickBtnEvent = (dir: "next"|"prev") => {
+    if (dir=="next")
+      swiperEventNav.goToNext()
+    else
+      swiperEventNav.goToPrevt()
+  }
+
+
+  const handleActiveEvent = () => {
+    if (swiperEventRef.current){
+      const {activeIndex}=swiperEventRef.current?.swiper
+      const activeDay=eventsStart[activeIndex]
+
+      if (activeDay) {
+        for (let i=0; i<eventsDays.length; i++){
+          if (eventsDays[i].indexOf(activeDay)==0){
+            setActiveEventsDays(eventsDays[i])
+            break
+          }
+        }
+      }
+    }
   }
 
   useEffect(() => {
@@ -176,7 +195,7 @@ const CalendarEvents = () => {
   useEffect(() => {
     const starts= days.filter(day=> day.startEvent)
 
-    setEventsStar(starts)
+    setEventsStart(starts)
   }, [eventsDays]);
 
   useEffect(() => {
@@ -184,7 +203,7 @@ const CalendarEvents = () => {
     console.log(day)
 
     if (day){
-      changeActiveEvent(day)
+      changeActiveEventDays(day)
       setActiveMonth(day.month)
       setActiveYear(day.year)
     }
@@ -207,7 +226,7 @@ const CalendarEvents = () => {
   }, [activeYear, activeMonth]);
 
   useEffect(() => {
-    swiperEventNav.goToSlide(eventsStar.findIndex(start=>{
+    swiperEventNav.goToSlide(eventsStart.findIndex(start=>{
       const activeDay= activeEventsDays[0]
 
       return start.year==activeDay.year && start.monthNumber==activeDay.monthNumber && start.dayNumber==activeDay.dayNumber
@@ -237,16 +256,17 @@ const CalendarEvents = () => {
                   "calendar-events__btn",
                   eventsDays.indexOf(activeEventsDays)<1&& "calendar-events__btn--disable"
               )}
-              onClick={()=>swipActiveEvent("prev")}
+              onClick={()=>handleClickBtnEvent("prev")}
           >
             <ReactSVG src="/Assets/Icons/arrow.svg"/>
           </button>
           <Swiper
               ref={swiperEventRef}
               className="calendar-events__event-slider"
+              onActiveIndexChange={handleActiveEvent}
           >
             {
-              eventsStar.map(start => {
+              eventsStart.map(start => {
                 const event = calendarEvents && calendarEvents[start.year].find(event => {
                   const startDate = event.date.start.split('.');
 
@@ -287,7 +307,7 @@ const CalendarEvents = () => {
                   "calendar-events__btn--next",
                   eventsDays.indexOf(activeEventsDays)==eventsDays.length-1&& "calendar-events__btn--disable"
               )}
-              onClick={()=>swipActiveEvent("next")}
+              onClick={()=>handleClickBtnEvent("next")}
           >
             <ReactSVG src="/Assets/Icons/arrow.svg"/>
           </button>
@@ -310,7 +330,7 @@ const CalendarEvents = () => {
                 mousewheel={{sensitivity: 5000}}
                 modules={[Mousewheel]}
                 ref={swiperCalendarRef}
-                onActiveIndexChange={handleActiveIndexChange}
+                onActiveIndexChange={handleActiveDayIndexChange}
             >
               {
                 days.map(day => (
@@ -324,7 +344,7 @@ const CalendarEvents = () => {
                             activeEventsDays.includes(day) ?
                                 day.passed ? "calendar-events__day--active-passed-day" : "calendar-events__day--active-day" : ""
                         )}
-                        onClick={() => changeActiveEvent(day)}
+                        onClick={() => changeActiveEventDays(day)}
                     >
                       <span>{day.dayNumber >= 10 ? day.dayNumber : `0${day.dayNumber}`}</span>
 

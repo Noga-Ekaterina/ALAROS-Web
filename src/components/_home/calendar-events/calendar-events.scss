@@ -5,6 +5,10 @@
   z-index: 2;
   padding-top: 28rem;
 
+  @include sm{
+    padding-top: 38rem;
+  }
+
   .swiper{
     padding-bottom: 24rem;
   }
@@ -130,6 +134,10 @@
       justify-content: flex-end;
       align-items: center;
       gap: 17rem;
+
+      @include sm{
+        padding: 0 var(--p-y);
+      }
     }
 
     &-slider{
@@ -142,6 +150,11 @@
       width: 161rem;
       object-fit: cover;
       object-position: center;
+
+      @include sm{
+        width: 170rem;
+        height: 235rem;
+      }
     }
   }
 
@@ -152,10 +165,13 @@
 
   &__block-text{
     display: flex;
-    padding: 18rem 18rem 28rem 28rem;
+    padding: 18rem 18rem var(--p-y) var(--p-y);
 
     @include sm{
       flex-direction: column;
+      width: 180rem;
+      padding: 15rem;
+      justify-content: space-between;
     }
   }
 
@@ -186,6 +202,10 @@
     align-self: flex-end;
     width: 193rem;
     font-size: 11rem;
+
+    @include sm{
+      width: 100%;
+    }
   }
 
   &__btn{

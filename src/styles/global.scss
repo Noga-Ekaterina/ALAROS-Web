@@ -6,6 +6,11 @@
   --c-main: #273827;
   --c-accent: #E0F273;
   --c-red: #E74F3D;
+  --p-y: 28rem;
+
+  @include sm{
+    --p-y: 20rem;
+  }
 }
 
 *{
@@ -52,8 +57,8 @@ a {
 }
 
 .link-underline{
-  border-bottom: max(1px, 1rem) solid currentColor;
-  padding-bottom: 0.1em;
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
 }
 
 button, input[type="submit"] {

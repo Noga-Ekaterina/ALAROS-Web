@@ -6,7 +6,8 @@
   position: relative;
 
   @include sm{
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 23rem;
   }
 
   >*{
@@ -28,15 +29,17 @@
   }
 
   &__block-text{
-    padding-left: 28rem;
+    padding-left: var(--p-y);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15rem;
     width: 340rem;
+    position: relative;
 
     @include sm{
       width: 100%;
+      padding-right: var(--p-y);
     }
   }
 
@@ -44,19 +47,34 @@
     color: var(--c-red);
     font-size: 36rem;
     font-weight: 500;
+
+    @include sm{
+      font-size: 26rem;
+    }
   }
 
   &__text{
     font-size: 21rem;
+
+    @include sm{
+      font-size: 15rem;
+    }
   }
 
   &__link{
     font-size: 15rem;
     color: #B3B3B3;
+
+    @include sm{
+      position: absolute;
+      bottom: 0;
+      right: var(--p-y);
+    }
   }
 
   &__slider{
     width: calc(100% - 340rem);
+    border-top: max(3px, 3rem) solid #E5E5E5;
 
     @include sm{
       width: 100%;
@@ -74,6 +92,11 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
+
+        @include sm{
+          width: 7rem;
+          height: 7rem;
+        }
 
         &--active{
           background: #6E7A64;
