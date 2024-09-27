@@ -1,6 +1,6 @@
 @import "../../../styles/mixins";
 .calendar-events{
-  margin-bottom: 60px;
+  margin-bottom: 300rem;
   position: relative;
   z-index: 2;
   padding-top: 28rem;
@@ -59,11 +59,11 @@
     }
 
     &--active-day {
-      background: #0B231E;
+      background: var(--c-main-dark);
       color: #fff;
 
       svg * {
-        stroke: #0B231E;
+        stroke: var(--c-main-dark);
       }
     }
 
