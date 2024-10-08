@@ -1,0 +1,88 @@
+@import "../../../styles/mixins";
+
+.news-main-screen{
+  $bh: calc(1vh - 0.6rem);
+  display: flex;
+
+
+  &__block-text{
+    width: 498rem;
+    display: flex;
+    align-items: center;
+    background: #D3E660;
+    background-image: url("../../../../public/Assets/Pages/News/bg/1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 20rem 46rem;
+
+    @include sm{
+      height: 65%;
+    }
+  }
+
+  &__title{
+    font-size: min(27rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+
+    @include md-book{
+      font-size: 35rem;
+    }
+  }
+  
+  &__img-wrapp{
+    width: 524rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+
+    @include sm{
+      height: 35%;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 48.2%;
+      z-index: 2;
+      border: max(1px, 1rem) solid #E5E5E5;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      border: max(1px, 1rem) solid #E5E5E5;
+    }
+  }
+
+  &__signature{
+    max-width: 320rem;
+  }
+
+  &__elipse{
+    position: absolute;
+    width: calc($bh*79.4);
+    max-height: 79.4%;
+    aspect-ratio: 1/1;
+    left: calc(50% - $bh*39.7);
+    bottom: 8.8%;
+    z-index: 4;
+    border-radius: 50%;
+    border: max(1.2px, 1.2rem) solid #E5E5E5;
+
+    @include sm{
+      max-height: unset;
+      width: 340rem;
+      left: 25rem;
+      bottom: calc(50% - 170rem);
+    }
+  }
+}

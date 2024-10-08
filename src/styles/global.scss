@@ -85,3 +85,59 @@ span{
 .red{
   color: var(--c-red);
 }
+
+.main-screen{
+  $height: calc(100vh - 68rem);
+  width: 100%;
+  max-height: 80vw;
+  height: $height;
+  display: flex;
+  overflow: hidden;
+
+  @include sm{
+    max-height: unset;
+    flex-direction: column;
+
+    >*{
+      width: 100% !important;
+    }
+  }
+
+  &__img{
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    width: 101%;
+    height: 101%;
+    left: -0.5%;
+    top: -0.5%;
+  }
+
+  &__signature{
+    color: #fff;
+    font-size: 10rem;
+    max-width: 242rem;
+
+    &-wrapp{
+      position: relative;
+      z-index: 2;
+      height: 19.46%;
+      width: 100%;
+      padding: 21rem var(--p-y);
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5) 70%);
+
+      //&::before{
+      //  content: '';
+      //  width: max(1px, 1rem);
+      //  height: 256.94%;
+      //  background: #E5E5E5;
+      //  position: absolute;
+      //  bottom: 0;
+      //  left: calc(340rem + $height/2 * cos(45deg));
+      //  transform: rotate(-45deg);
+      //}
+    }
+  }
+}
