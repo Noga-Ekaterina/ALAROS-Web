@@ -1,0 +1,59 @@
+@import "../../../styles/mixins";
+
+.festival-main-screen{
+  $bh: calc(1vh - 0.6rem);
+  display: flex;
+
+
+  &__block-text{
+    width: 498rem;
+    display: flex;
+    align-items: center;
+    background: var(--c-main);
+    background-image: url("../../../../public/Assets/Pages/Festival/images/bg/1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 20rem 46rem;
+
+    @include sm{
+      height: 65%;
+    }
+
+    *{
+      color: #fff;
+    }
+  }
+
+  &__title{
+    font-size: min(27rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+
+    @include md-book{
+      font-size: 35rem;
+    }
+  }
+  
+  &__img-wrapp {
+    width: 524rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    @include sm {
+      height: 35%;
+    }
+  }
+
+  &__img{
+    position: static;
+    height: 50%;
+  }
+
+  &__btns{
+    width: 100%;
+    height: 50%;
+    display: flex;
+  }
+}

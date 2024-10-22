@@ -15,7 +15,7 @@ const Footer = () => {
             <h2 className="footer__title">Информация</h2>
             <ul>
               <li><Link to="/">Об ассоциации</Link></li>
-              <li><Link to="/">Фестиваль</Link></li>
+              <li><Link to="/festival">Фестиваль</Link></li>
               <li><Link to="/">Партнерам</Link></li>
             </ul>
           </div>

@@ -5,9 +5,10 @@ import HomeEvents from "../components/_home/home-events/HomeEvents";
 import {observer} from "mobx-react-lite";
 import pagesData from "../store/pagesData";
 import CalendarEvents from "../components/_home/calendar-events/CalendarEvents";
+import HomeNewsSlider from "../components/_home/home-news-slider/HomeNewsSlider";
 
 const Home = () => {
-  const {homeData, fetchHomeData, calendarEvents, fetchCalendarEvents}=pagesData
+  const {homeData, fetchHomeData, calendarEvents, fetchNewsPage, newsPages, fetchCalendarEvents}=pagesData
 
   useEffect(() => {
     if (!homeData)
@@ -15,16 +16,19 @@ const Home = () => {
 
     if (!calendarEvents)
       fetchCalendarEvents()
+
+    fetchNewsPage(1)
   }, []);
 
   return (
     <>
       {
-        (homeData && calendarEvents)?
+        (homeData && calendarEvents && newsPages["1"])?
             <div>
               <HomeMainScreen/>
               <HomeEvents/>
               <CalendarEvents/>
+              <HomeNewsSlider/>
             </div>
             :
             <></>

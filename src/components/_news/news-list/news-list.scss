@@ -1,0 +1,26 @@
+@import "../../../styles/mixins";
+.news-list {
+  &__row {
+    gap: 10rem;
+    padding-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include sm{
+      grid-template-columns: 1fr;
+    }
+    &--large {
+      grid-template-columns: 5fr 7fr;
+
+      &-reverse{
+        grid-template-columns: 7fr 5fr;
+      }
+
+      @include sm{
+        &, &-reverse{
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

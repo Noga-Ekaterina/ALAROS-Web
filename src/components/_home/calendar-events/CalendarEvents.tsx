@@ -62,7 +62,7 @@ const CalendarEvents = () => {
     if (dir=="next")
       swiperEventNav.goToNext()
     else
-      swiperEventNav.goToPrevt()
+      swiperEventNav.goToPrev()
   }
 
 
@@ -181,14 +181,14 @@ const CalendarEvents = () => {
         }
       }
 
-      console.log(nextEventEndDayIndex)
-      console.log(nextEventStartDayIndex)
+      // console.log(nextEventEndDayIndex)
+      // console.log(nextEventStartDayIndex)
       setNextEventIndex(nextEventStartDayIndex !== -1 ? nextEventStartDayIndex : daysWithEvents.length - 1);
 
       swiperCalendarNav.goToSlide(nextEventStartDayIndex - 4)
 
       setDays(daysWithEvents);
-      console.log(daysWithEvents)
+      // console.log(daysWithEvents)
     }
   }, []);
 
@@ -200,7 +200,7 @@ const CalendarEvents = () => {
 
   useEffect(() => {
     const day=days[nextEventIndex]
-    console.log(day)
+    // console.log(day)
 
     if (day){
       changeActiveEventDays(day)
@@ -232,20 +232,20 @@ const CalendarEvents = () => {
       return start.year==activeDay.year && start.monthNumber==activeDay.monthNumber && start.dayNumber==activeDay.dayNumber
     }))
 
-    console.log(days.indexOf(activeEventsDays[0]))
+    // console.log(days.indexOf(activeEventsDays[0]))
 
     swiperCalendarNav.goToSlideNoVisible(days.indexOf(activeEventsDays[0]))
 
     if (swiperCalendarRef.current) {
       const { progress} = swiperCalendarRef.current?.swiper
 
-      console.log(swiperCalendarRef.current?.swiper)
+      // console.log(swiperCalendarRef.current?.swiper)
 
       if (progressRef.current)
         progressRef.current.style.left = `min(${progress * 100}%, calc(100% - 100rem))`
     }
 
-    console.log(eventsDays)
+    // console.log(eventsDays)
     }, [activeEventsDays]);
 
   return (
@@ -254,7 +254,7 @@ const CalendarEvents = () => {
           <button
               className={classNames(
                   "calendar-events__btn",
-                  eventsDays.indexOf(activeEventsDays)<1&& "calendar-events__btn--disable"
+                  eventsDays.indexOf(activeEventsDays)<1&& "btn--disable"
               )}
               onClick={()=>handleClickBtnEvent("prev")}
           >
@@ -305,7 +305,7 @@ const CalendarEvents = () => {
               className={classNames(
                   "calendar-events__btn",
                   "calendar-events__btn--next",
-                  eventsDays.indexOf(activeEventsDays)==eventsDays.length-1&& "calendar-events__btn--disable"
+                  eventsDays.indexOf(activeEventsDays)==eventsDays.length-1&& "btn--disable"
               )}
               onClick={()=>handleClickBtnEvent("next")}
           >

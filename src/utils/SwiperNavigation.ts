@@ -7,7 +7,7 @@ export class SwiperNavigation {
 
   constructor(swiper: MutableRefObject<SwiperRef | null>) {
     this.swiper = swiper;
-    console.log(swiper)
+    // console.log(swiper)
   }
 
   goToSlide(index: number) {
@@ -21,7 +21,7 @@ export class SwiperNavigation {
       this.swiper.current?.swiper.slideNext()
   }
 
-  goToPrevt(){
+  goToPrev(){
     if (this.swiper.current)
       this.swiper.current?.swiper.slidePrev()
   }
@@ -36,7 +36,7 @@ export class SwiperNavigation {
         let viewSlides = 0
         let slidesSizes = 0
 
-        console.log(activeIndex)
+        // console.log(activeIndex)
 
         while (slidesSizes < viewportWidth) {
           if (slidesSizesGrid[activeIndex + viewSlides]) {
@@ -51,8 +51,8 @@ export class SwiperNavigation {
 
       }
 
-      console.log(slides)
-      console.log(slides[index])
+      // console.log(slides)
+      // console.log(slides[index])
 
     }
   }
@@ -67,11 +67,12 @@ export class SwiperNavigation {
   }
 
 
-  isEnd(){
+  isEnd(viemSlide: number){
     if (this.swiper.current){
       const {slides, activeIndex,} = this.swiper.current.swiper;
+      console.log({slides: slides.length, activeIndex})
 
-      return activeIndex==slides.length
+      return activeIndex==slides.length-viemSlide
     }else
       return true
   }

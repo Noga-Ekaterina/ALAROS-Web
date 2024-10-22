@@ -26,3 +26,18 @@ export interface IEvent {
 export interface IEventsByYear {
   [year: string]: IEvent[];
 };
+
+export interface INewsItem {
+  title: string
+  description: string
+  slug: string
+  date: string
+  place: string| null
+  body:{
+    html: string
+  }
+}
+
+export interface INewsPages {
+  [pages: string]: INewsItem[]
+}

@@ -1,0 +1,50 @@
+@import "../../../styles/mixins";
+.home-news-slider{
+  background: #fff;
+  padding-block: 31rem;
+
+  &__title{
+    color: #6E7A64;
+    font-size: 36rem;
+    font-weight: 500;
+    margin-bottom: 20rem;
+  }
+
+  &__wrapp{
+    position: relative;
+  }
+
+  &__btn{
+    position: absolute;
+    width: 10rem;
+    top: 170rem;
+
+    &--prev{
+      left: -16rem;
+    }
+
+    &--next{
+      right: -16rem;
+      transform: rotate(180deg);
+    }
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__slide{
+    width: 397rem;
+
+    &--small{
+      .news-item__img{
+        aspect-ratio: 396/170;
+
+        @include sm{
+          aspect-ratio: 315/188;
+        }
+      }
+    }
+  }
+}
