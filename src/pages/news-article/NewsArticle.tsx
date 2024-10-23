@@ -48,7 +48,7 @@ const NewsArticle = () => {
             const caption = captions[imgIndex];
             slides.push(
                 <SwiperSlide key={`image-${img}`} className="news-article__slide">
-                  <img src={`/Assets/News/${slug}/${img}.png`} alt={`Image ${img}`} />
+                  <img src={`http://demo-it-park.ru/alaros/Assets/News/${slug}/${img}.png`} alt={caption} />
                   <p>{caption}</p>
                 </SwiperSlide>
             );
@@ -142,7 +142,7 @@ const NewsArticle = () => {
                 <p className="news-article__description">{news.description}</p>
                 <div className="news-article__main">
                   <div className="news-article__aside">
-                    <img src={`/Assets/News/${slug}/cover.png`} alt=""/>
+                    <img src={`http://demo-it-park.ru/alaros/Assets/News/${slug}/cover.png`} alt=""/>
                     <Link to="/news" className="news-article__link news-article__link--md link-underline">К архиву новостей</Link>
                   </div>
                   <div className="news-article__body">
