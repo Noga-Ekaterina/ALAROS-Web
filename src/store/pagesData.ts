@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import {fetchData} from "../utils/fetchData";
-import {IEventsByYear, IHomeData, INewsItem, INewsPages} from "../types/data";
+import {IEventsByYear, IFestival, IHomeData, INewsItem, INewsPages} from "../types/data";
 import axios from "axios";
 
 
@@ -14,6 +14,8 @@ class Store {
   calendarEvents: IEventsByYear|null= null
 
   newsPages: INewsPages={}
+
+  festivalText: IFestival|null=null
 
   fetchHomeData= async ()=>{
     this.homeData= await fetchData("Pages/Home/data.json")
@@ -50,6 +52,10 @@ class Store {
         }));
       });
     }
+  }
+
+  fetchFestivalText= async ()=>{
+    this.festivalText= await fetchData("Pages/Festival/text.json")
   }
 }
 

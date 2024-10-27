@@ -5,6 +5,7 @@
   --c-dark: #181818;
   --c-main: #273827;
   --c-main-dark: #0B231E;
+  --c-green-text: #6E7A64;
   --c-accent: #E0F273;
   --c-red: #E74F3D;
   --p-y: 28rem;
@@ -94,6 +95,10 @@ span{
   color: var(--c-red);
 }
 
+.green{
+  color: var(--c-green-text);
+}
+
 .main-screen{
   $height: calc(100vh - 68rem);
   width: 100%;
@@ -147,5 +152,24 @@ span{
       //  transform: rotate(-45deg);
       //}
     }
+  }
+}
+
+.titles-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__title{
+    font-size: 42rem;
+    font-weight: 300;
+    max-width: 828rem;
+  }
+
+  &__section{
+    padding-top: 9rem;
+    font-size: 16rem;
+    color: var(--c-red);
+    font-weight: 500;
   }
 }

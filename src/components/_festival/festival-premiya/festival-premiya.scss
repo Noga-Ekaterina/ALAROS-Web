@@ -1,0 +1,47 @@
+@import "../../../styles/mixins";
+.festival-premiya{
+  padding-block: 32rem;
+
+  &__list{
+    font-size: 13rem;
+    display: flex;
+    gap: 64rem;
+    margin-top: 80rem;
+    padding-inline: 80rem 20rem;
+
+    @include sm{
+      flex-direction: column;
+    }
+
+    a{
+      font-weight: 600;
+    }
+  }
+
+  &__step{
+    display: flex;
+    gap: 57rem;
+  }
+
+  &__col{
+    display: flex;
+    gap: 64rem;
+    flex-direction: column;
+    width: calc(50% - 32rem);
+
+    @include sm{
+      width: 100%;
+    }
+  }
+
+  &__num{
+    font-size: 21rem;
+  }
+
+  &__note{
+    font-size: 9rem;
+    color: var(--c-red);
+    font-weight: 500;
+    line-height: normal;
+  }
+}
