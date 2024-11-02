@@ -1,0 +1,59 @@
+.festival-price{
+  background: #1D2E23;
+  padding-block: 32rem 8rem;
+
+  *{
+    color: #fff;
+  }
+
+  &__body{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 34rem;
+  }
+
+  &__table{
+    width: 566rem;
+    max-width: 100%;
+    table-layout: fixed;
+    border-spacing: 0 13rem;
+    text-align: left;
+
+    &-title{
+      font-size: 16rem;
+      color: var(--c-green-text);
+      padding-bottom: 17rem;
+    }
+
+    &-td{
+      border-bottom: max(1px, 1rem) solid var(--c-green-text);
+      font-size: 20rem;
+      font-weight: 300;
+      line-height: 1em;
+    }
+  }
+
+  &__running-line{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 62rem;
+
+    *{
+      white-space: nowrap;
+    }
+
+    &-wrapp{
+      display: inline-flex;
+      flex-direction: row;
+      gap: 26rem;
+    }
+
+    &-item{
+      color: var(--c-red);
+      text-transform: uppercase;
+      font-size: 20rem;
+      font-weight: 300;
+      gap: 26rem;
+    }
+  }
+}

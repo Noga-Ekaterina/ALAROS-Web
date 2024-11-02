@@ -2,7 +2,7 @@ export interface IHomeData {
   announcements:{
     title:string
     text: string
-    slides:null
+    slides:number
   }
 }
 
@@ -61,6 +61,23 @@ export interface IFestivalPremiya extends ITitlesBlock{
   steps: IStep[]
 }
 
+export interface IFestivalPriceRow{
+  count: string
+  price: string|number
+}
+
+export interface IFestivalPrice extends ITitlesBlock {
+  table:{
+    titles: IFestivalPriceRow
+    rows: IFestivalPriceRow[]
+  }
+  runningLine: {
+    text: string
+    white: string[]
+  }
+}
+
 export interface IFestival{
   premiya: IFestivalPremiya
+  price: IFestivalPrice
 }
