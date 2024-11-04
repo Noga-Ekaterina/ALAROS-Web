@@ -1,0 +1,57 @@
+@import "../../../styles/mixins";
+
+.festival-date{
+  background: var(--c-red);
+  padding-block: 50rem 5rem;
+
+  @include sm{
+    padding-block: 28rem 5rem;
+  }
+  
+  *{
+    color: #fff;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+
+    @include sm{
+      flex-direction: column;
+      gap: 56rem;
+    }
+  }
+
+  &__text{
+    font-size: 20rem;
+    font-weight: 500;
+    @include sm{
+      font-size: 15rem;
+    }
+
+  }
+
+  &__date{
+    font-size: 114rem;
+    font-weight: 300;
+    line-height: 0.85em;
+
+    @include sm{
+      font-size: 68rem;
+    }
+  }
+
+  &__btns{
+    display: flex;
+    gap: 6rem;
+  }
+
+  &__btn{
+    opacity: 0.5;
+
+    &--disabled{
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}

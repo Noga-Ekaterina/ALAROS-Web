@@ -72,6 +72,8 @@ button, input[type="submit"] {
   background: none;
   border: none;
   font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -164,10 +166,19 @@ span{
   justify-content: space-between;
   align-items: flex-start;
 
+  @include sm{
+    flex-direction: column-reverse;
+    gap: 40rem;
+  }
+
   &__title{
     font-size: 42rem;
     font-weight: 300;
     max-width: 828rem;
+
+    @include sm{
+      font-size: 28rem;
+    }
   }
 
   &__section{

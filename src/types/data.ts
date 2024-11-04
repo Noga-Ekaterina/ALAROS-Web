@@ -77,7 +77,16 @@ export interface IFestivalPrice extends ITitlesBlock {
   }
 }
 
+export interface IFestivalDateSection{
+  title: string
+  date: string
+}
+
 export interface IFestival{
   premiya: IFestivalPremiya
   price: IFestivalPrice
+  date: {
+    text: string
+    sections: IFestivalDateSection[]
+  }
 }

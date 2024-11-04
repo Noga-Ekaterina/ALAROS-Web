@@ -4,6 +4,7 @@ import pagesData from "../store/pagesData";
 import {observer} from "mobx-react-lite";
 import FestivalPremiya from "../components/_festival/festival-premiya/FestivalPremiya";
 import FestivalPrice from "../components/_festival/festival-price/FestivalPrice";
+import FestivalDate from "../components/_festival/festival-date/FestivalDate";
 
 const Festival = () => {
   const {festivalText, fetchFestivalText}=pagesData
@@ -20,6 +21,7 @@ const Festival = () => {
                 <FestivalMainScreen/>
                 <FestivalPremiya/>
                 <FestivalPrice/>
+                <FestivalDate/>
               </div>
               :
               <div></div>
