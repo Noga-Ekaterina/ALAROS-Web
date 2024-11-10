@@ -19,6 +19,8 @@
   }
 
   &__title{
+    display: flex;
+    gap: 15rem;
     cursor: pointer;
 
     &:hover{
@@ -26,12 +28,8 @@
       padding-bottom: 0.1em;
     }
 
-    .dropdown--icon &::before {
-      content: '\25BA';
-
-      .open & {
-        content: '\25BC';
-      }
+    &-text{
+      width: 100%;
     }
   }
 
@@ -62,6 +60,29 @@
 
     &:last-child{
       border-bottom-width: 0;
+    }
+  }
+
+  &__line{
+    background: #BEBCBB;
+    width: 2rem;
+    height: 14rem;
+    align-self: center;
+  }
+
+  &__arrow{
+    width: 14rem;
+
+    svg{
+      width: auto;
+      height: 14rem;
+      transform: rotate(-90deg);
+      position: relative;
+      top: 2rem;
+
+      .open &{
+        transform: rotate(90deg);
+      }
     }
   }
 }

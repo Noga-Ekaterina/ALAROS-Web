@@ -1,9 +1,17 @@
+import {HTMLInputTypeAttribute} from "react";
+
 export interface IHomeData {
   announcements:{
     title:string
     text: string
     slides:number
   }
+  partners: IPartner[]
+}
+
+export interface IPartner {
+  title: string;
+  href: string;
 }
 
 export interface ILink {
@@ -13,6 +21,14 @@ export interface ILink {
 
 export interface ILinkColor extends ILink{
   color: string
+}
+
+export interface IFormInput{
+  name: string
+  type: HTMLInputTypeAttribute |"radios"|"dropdown"
+  placeholder: string
+  note?: string
+  values?: string[]
 }
 
 export interface IEventDate {
@@ -82,6 +98,12 @@ export interface IFestivalDateSection{
   date: string
 }
 
+export interface IFestivalBid extends ITitlesBlock{
+  form:{
+    inputs: IFormInput[]
+  }
+}
+
 export interface IFestival{
   premiya: IFestivalPremiya
   price: IFestivalPrice
@@ -89,4 +111,5 @@ export interface IFestival{
     text: string
     sections: IFestivalDateSection[]
   }
+  bid: IFestivalBid
 }

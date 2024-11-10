@@ -3,5 +3,27 @@
     "title": "",
     "text": "",
     "slides": 3
-  }
+  },
+  "partners": [
+    {
+      "title": "CAR",
+      "href": ""
+    },
+    {
+      "title": "CDA",
+      "href": ""
+    },
+    {
+      "title": "CMA",
+      "href": ""
+    },
+    {
+      "title": "Gotica",
+      "href": ""
+    },
+    {
+      "title": "KROST",
+      "href": ""
+    }
+  ]
 }

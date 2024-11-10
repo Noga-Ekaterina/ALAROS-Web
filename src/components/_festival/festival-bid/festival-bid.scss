@@ -1,0 +1,104 @@
+.festival-bid{
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  padding-block: 30rem 200px;
+
+  .titles-block{
+    margin-bottom: 20rem;
+  }
+
+  form *{
+    font-size: 13rem;
+    font-weight: 500;
+  }
+  &__input{
+    &-wrapp{
+      display: flex;
+      justify-content: space-between;
+      gap: 15rem;
+      border-bottom: #BEBCBB solid max(1px, 1rem);
+      padding-block: 9rem;
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    
+    &-text{
+      width: 100%;
+
+      &::placeholder{
+        color: #BEBCBB;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  input[type="radio"]{
+    display: none;
+
+    &:checked+label{
+      color: var(--c-dark);
+      cursor: default;
+    }
+  }
+  
+  &__placeholder{
+    color: #BEBCBB;
+    text-transform: uppercase;
+  }
+
+  &__radios{
+    text-transform: uppercase;
+    display: flex;
+    gap: 15rem;
+
+    *{
+      color: #BEBCBB;
+    }
+  }
+
+  &__dropdown{
+    position: relative;
+    top: -4rem;
+    width: 100%;
+
+    &-item{
+      width: 100%;
+      display: flex;
+      gap: 15rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .dropdown{
+    &__title{
+      padding: 4rem 13rem;
+      *{
+        font-weight: 500;
+        color: var(--c-dark);
+      }
+
+      &:hover{
+        border-bottom: none !important;
+        background: #F8F8F8;
+      }
+    }
+
+    &__content{
+      background: #F8F8F8;
+    }
+  }
+
+  &__btn{
+    font-size: 16rem !important;
+    font-weight: 500 !important;
+    text-align: center;
+    color: var(--c-dark);
+    background: #EFEFEF !important;
+    width: 197rem;
+    padding: 10rem;
+    margin-top: 10rem;
+  }
+}

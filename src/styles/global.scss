@@ -78,6 +78,22 @@ button, input[type="submit"] {
   transition: 0.5s;
 }
 
+input{
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  border: none;
+
+  &:focus{
+    border: none;
+    outline: none;
+  }
+}
+
+label{
+  cursor: pointer;
+}
+
 .btn--disable{
   opacity: 0;
   pointer-events: none;
@@ -178,6 +194,12 @@ span{
 
     @include sm{
       font-size: 28rem;
+    }
+
+    &--small{
+      font-size: 36rem;
+      font-weight: 500;
+      color: var(--c-green-text);
     }
   }
 
