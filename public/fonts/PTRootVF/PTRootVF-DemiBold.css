@@ -1,0 +1,12 @@
+/* Webfont: PTRootVF-DemiBold */@font-face {
+    font-family: 'PTRootVF';
+    src: url('PTRootVF-DemiBold.eot'); /* IE9 Compat Modes */
+    src: url('PTRootVF-DemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('PTRootVF-DemiBold.woff') format('woff'), /* Modern Browsers */
+         url('PTRootVF-DemiBold.woff2') format('woff2'), /* Modern Browsers */
+         url('PTRootVF-DemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

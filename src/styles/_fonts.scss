@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'PT Root';
   src:
-          url('../../public/fonts/PT-Root/pt-root-ui_regular.woff2') format('woff2'),
-          url('../../public/fonts/PT-Root/pt-root-ui_regular.woff') format('woff');
+          url('../../public/fonts/PTRootVF/PTRootVF-Regular.woff2') format('woff2'),
+          url('../../public/fonts/PTRootVF/PTRootVF-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -10,24 +10,32 @@
 @font-face {
   font-family: 'PT Root';
   src:
-          url('../../public/fonts/PT-Root/pt-root-ui_medium.woff2') format('woff2'),
-          url('../../public/fonts/PT-Root/pt-root-ui_medium.woff') format('woff');
+          url('../../public/fonts/PTRootVF/PTRootVF-Medium.woff2') format('woff2'),
+          url('../../public/fonts/PTRootVF/PTRootVF-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'PT Root';
   src:
-          url('../../public/fonts/PT-Root/pt-root-ui_light.woff2') format('woff2'),
-          url('../../public/fonts/PT-Root/pt-root-ui_light.woff') format('woff');
+          url('../../public/fonts/PTRootVF/PTRootVF-Light.woff2') format('woff2'),
+          url('../../public/fonts/PTRootVF/PTRootVF-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'PT Root';
   src:
-          url('../../public/fonts/PT-Root/pt-root-ui_bold.woff2') format('woff2'),
-          url('../../public/fonts/PT-Root/pt-root-ui_bold.woff') format('woff');
+          url('../../public/fonts/PTRootVF/PTRootVF-ExtraLight.woff2') format('woff2'),
+          url('../../public/fonts/PTRootVF/PTRootVF-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PT Root';
+  src:
+          url('../../public/fonts/PTRootVF/PTRootVF-Bold.woff2') format('woff2'),
+          url('../../public/fonts/PTRootVF/PTRootVF-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
