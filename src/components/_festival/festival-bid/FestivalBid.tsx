@@ -54,8 +54,8 @@ const FestivalBid = () => {
 
     const result: {[key: string]: string}={}
 
-    festivalText.bid.form.inputs.forEach((input, index)=>{
-      if (!input.values){
+    festivalText.bidInputs.forEach((input, index)=>{
+      if (input.values.length==0){
         result[index]=''
       }else
         result[index]=input.values[0]
@@ -72,16 +72,16 @@ const FestivalBid = () => {
       <div className="festival-bid">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title titles-block__title--small">{festivalText.bid.title}</h2>
+            <h2 className="titles-block__title titles-block__title--small">{festivalText.bidTitle}</h2>
           </div>
           <Formik initialValues={inputsObj} onSubmit={()=>{}}>
             <Form>
               <div>
                 {
-                  festivalText.bid.form.inputs.map((input, index)=>(
+                  festivalText.bidInputs.map((input, index)=>(
                       <>
                         {
-                          !input.values ?(
+                          input.values.length==0 ?(
                                   <div className="festival-bid__input-wrapp">
                                     <Field placeholder={input.placeholder} type={input.type} name={index} className="festival-bid__input-text"/>
                                   </div>
@@ -112,7 +112,7 @@ const FestivalBid = () => {
                   ))
                 }
               </div>
-              <Field type="submit" value="Отправить" className="festival-bid__btn"/>
+              <Field type="submit" value={festivalText.bidButton} className="festival-bid__btn"/>
             </Form>
           </Formik>
         </div>

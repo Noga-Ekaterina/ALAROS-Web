@@ -47,6 +47,10 @@ body {
   }
 }
 
+p{
+  color: inherit;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -60,9 +64,19 @@ a {
   }
 }
 
-.link-underline{
+.link-underline, u{
   text-decoration-line: underline;
   text-underline-offset: 0.2em;
+}
+
+u{
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  a &:hover{
+    text-decoration: none;
+  }
 }
 
 button, input[type="submit"] {

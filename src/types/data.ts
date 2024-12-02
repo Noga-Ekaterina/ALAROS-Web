@@ -1,5 +1,9 @@
 import {HTMLInputTypeAttribute} from "react";
 
+export interface IHtmlString{
+  html: string
+}
+
 export interface IHomeData {
   announcements:{
     title:string
@@ -28,7 +32,7 @@ export interface IFormInput{
   type: HTMLInputTypeAttribute |"radios"|"dropdown"
   placeholder: string
   note?: string
-  values?: string[]
+  values: string[]
 }
 
 export interface IEventDate {
@@ -104,12 +108,18 @@ export interface IFestivalBid extends ITitlesBlock{
   }
 }
 
-export interface IFestival{
-  premiya: IFestivalPremiya
-  price: IFestivalPrice
-  date: {
-    text: string
-    sections: IFestivalDateSection[]
-  }
-  bid: IFestivalBid
+export interface IFestival {
+  mainScreenLeftSection: IHtmlString
+  mainScreenSections: IHtmlString
+  premiyaTitle: string
+  premiyaSection: string
+  premiyaSteps: IHtmlString[]
+  priceTitle: string
+  priceTable: IHtmlString
+  priceRunningLine: IHtmlString
+  dateText: IHtmlString
+  dateSections: IHtmlString[]
+  bidTitle: string
+  bidInputs: IFormInput[]
+  bidButton: string
 }

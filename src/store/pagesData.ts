@@ -55,7 +55,52 @@ class Store {
   }
 
   fetchFestivalText= async ()=>{
-    this.festivalText= await fetchData("Pages/Festival/text.json")
+
+    axios({
+      method: 'POST',
+      url: process.env.REACT_APP_API_URL,
+      data: {
+        query: `
+          query FestivalQuery {
+            festivalS {
+              mainScreenLeftSection {
+                html
+              }
+              mainScreenSections {
+                html
+              }
+              premiyaTitle
+              premiyaSection
+              premiyaSteps {
+                html
+              }
+              priceTitle
+              priceTable {
+                html
+              }
+              priceRunningLine{
+                html
+              }
+              dateText {
+                html
+              }
+              dateSections {
+                html
+              }
+              bidTitle
+              bidInputs {
+                type
+                placeholder
+                values
+              }
+              bidButton
+            }
+          }`
+      }
+    }).then((resp) => {
+      console.log(resp)
+      this.festivalText= resp.data.data.festivalS[0]
+    });
   }
 }
 

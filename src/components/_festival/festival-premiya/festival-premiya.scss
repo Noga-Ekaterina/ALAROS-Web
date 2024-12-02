@@ -39,10 +39,11 @@
     font-size: 21rem;
   }
 
-  &__note{
+  .note{
     font-size: 9rem;
     color: var(--c-red);
     font-weight: 500;
     line-height: normal;
+    margin-top: 14rem;
   }
 }

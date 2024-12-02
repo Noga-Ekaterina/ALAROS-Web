@@ -22,9 +22,16 @@
     @include sm{
       height: 57.5%;
     }
+
+    >*:last-child{
+      position: absolute;
+      left: var(--p-y);
+      bottom: 30rem;
+      color: #C3C3C3;
+    }
   }
 
-  &__title{
+  h1{
     font-size: min(27rem);
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -68,24 +75,36 @@
     }
   }
 
-  &__btn{
+  table{
+    border: none;
+    height: 50%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    @include md-book{
+      height: 34%;
+    }
+  }
+
+  td{
+    height: 100%;
     width: 50%;
     padding: 20rem 25rem 30rem;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
-    &--red{
+    &:nth-child(odd){
       background: var(--c-red);
     }
 
-    &--green{
+    &:nth-child(even){
       background: #6E7A64;
     }
   }
 
-  &__title2{
+  h2{
     font-size: 25rem;
     font-weight: 400;
 
@@ -94,15 +113,8 @@
     }
   }
 
-  &__link{
+  a{
     font-size: 16rem;
     font-weight: 500;
-
-    &--1{
-      position: absolute;
-      left: var(--p-y);
-      bottom: 30rem;
-      color: #C3C3C3;
-    }
   }
 }

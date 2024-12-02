@@ -12,24 +12,31 @@
     margin-top: 34rem;
   }
 
-  &__table{
+  table{
     width: 566rem;
     max-width: 100%;
     table-layout: fixed;
     border-spacing: 0 13rem;
     text-align: left;
 
-    &-title{
-      font-size: 16rem;
-      color: var(--c-green-text);
+    th{
       padding-bottom: 17rem;
+
+      *{
+        font-size: 16rem;
+        color: var(--c-green-text);
+      }
     }
 
-    &-td{
+    td{
       border-bottom: max(1px, 1rem) solid var(--c-green-text);
-      font-size: 20rem;
-      font-weight: 300;
       line-height: 1em;
+      font-size: 20rem;
+
+      *{
+        font-size: inherit;
+        font-weight: 300;
+      }
     }
   }
 
@@ -48,7 +55,11 @@
       gap: 26rem;
     }
 
-    &-item{
+    &__player{
+      gap: 26rem;
+    }
+
+    p{
       color: var(--c-red);
       text-transform: uppercase;
       font-size: 20rem;
