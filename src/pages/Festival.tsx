@@ -6,13 +6,15 @@ import FestivalPremiya from "../components/_festival/festival-premiya/FestivalPr
 import FestivalPrice from "../components/_festival/festival-price/FestivalPrice";
 import FestivalDate from "../components/_festival/festival-date/FestivalDate";
 import FestivalBid from "../components/_festival/festival-bid/FestivalBid";
+import {useSearchParams} from "react-router-dom";
 
 const Festival = () => {
   const {festivalText, fetchFestivalText}=pagesData
-
+  const [searchParams, setSearchParams] = useSearchParams()
+  const view= (searchParams.get("view")=="draft" && searchParams.get("preview-secret")===process.env.REACT_APP_PREVIEW)?"DRAFT":"PUBLISHED"
   useEffect(() => {
     if (!festivalText)
-      fetchFestivalText()
+      fetchFestivalText(view)
   }, []);
   return (
       <>

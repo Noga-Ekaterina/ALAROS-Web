@@ -54,15 +54,15 @@ class Store {
     }
   }
 
-  fetchFestivalText= async ()=>{
-
+  fetchFestivalText= async (view: string) =>{
     axios({
       method: 'POST',
       url: process.env.REACT_APP_API_URL,
       data: {
         query: `
           query FestivalQuery {
-            festivalS {
+            festivalS(stage: ${view.toUpperCase()}) {
+              stage
               mainScreenLeftSection {
                 html
               }
@@ -88,7 +88,7 @@ class Store {
                 html
               }
               bidTitle
-              bidInputs {
+              bidInputs(first: 100) {
                 type
                 placeholder
                 values
