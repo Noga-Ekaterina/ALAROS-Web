@@ -122,4 +122,6 @@ export interface IFestival {
   bidTitle: string
   bidInputs: IFormInput[]
   bidButton: string
+  documentsTitle: string
+  documentsLinks: IHtmlString[]
 }

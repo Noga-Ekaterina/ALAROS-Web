@@ -1,0 +1,31 @@
+.festival-documents{
+  background: #fff;
+  padding-block: 50rem;
+
+  &__btns{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 53rem;
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 15rem;
+    background: #2A3A2B;
+
+    &:last-child{
+      background: var(--c-red);
+    }
+
+    *{
+      color: #ffffff;
+      font-size: 20rem;
+    }
+
+    a u{
+      text-underline-offset: 0.14em;
+    }
+  }
+}

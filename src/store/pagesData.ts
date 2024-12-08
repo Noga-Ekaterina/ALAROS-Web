@@ -94,6 +94,10 @@ class Store {
                 values
               }
               bidButton
+              documentsTitle
+              documentsLinks {
+                html
+              }
             }
           }`
       }
