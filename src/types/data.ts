@@ -124,4 +124,5 @@ export interface IFestival {
   bidButton: string
   documentsTitle: string
   documentsLinks: IHtmlString[]
+  emails: IHtmlString[]
 }

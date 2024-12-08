@@ -98,6 +98,9 @@ class Store {
               documentsLinks {
                 html
               }
+              emails{
+                html
+              }
             }
           }`
       }

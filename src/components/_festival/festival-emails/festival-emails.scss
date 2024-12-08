@@ -1,0 +1,30 @@
+.festival-emails{
+  padding-bottom: 33rem;
+  background: #fff;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, calc(100% / 12));
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    &:first-child{
+      grid-column: 1/span 4;
+    }
+
+    &:last-child{
+      grid-column: 8/span 4;
+    }
+
+    a{
+      font-size: 20rem;
+    }
+
+    p{
+      font-size: 10rem;
+      color: var(--c-green-text);
+    }
+  }
+}
