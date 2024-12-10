@@ -1,11 +1,12 @@
-import React, {JSX, useEffect, useState} from 'react';
-import "./festival-bid.scss"
+import React, {useEffect, useState} from 'react';
+import "./festival-diploma.scss"
 import pagesData from "../../../store/pagesData";
-import {Form, Formik, Field} from "formik";
-import Input from "../../input/Input";
+import Detalis from "../../detalis/Detalis";
+import {Field, Form, Formik} from "formik";
 import {IField} from "../../../types/tehnic";
+import Input from "../../input/Input";
 
-const FestivalBid = () => {
+const FestivalDiploma = () => {
   const {festivalText}=pagesData
   const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
 
@@ -29,21 +30,21 @@ const FestivalBid = () => {
   if (!festivalText||!inputsObj) return <div/>
 
   return (
-      <div className="festival-bid">
-        <div className="container">
-          <div className="titles-block">
-            <h2 className="titles-block__title titles-block__title--small">{festivalText.bidTitle}</h2>
-          </div>
+      <div className="festival-diploma">
+        <Detalis
+            title={<span>{festivalText.diplomaTitle}</span>}
+            icon={<span className="festival-diploma__icon">+</span>}
+        >
           <Formik initialValues={inputsObj} onSubmit={()=>{}}>
-            <Form>
+            <Form className='container'>
               <div>
                 {
-                  festivalText.bidInputs.map((input, index)=>(
+                  festivalText.diplomaInputs.map((input, index)=>(
                       <Field
-                        name={index}
-                        render={({field}: IField)=> (
-                            <Input input={input} field={field}/>
-                        )}
+                          name={index}
+                          render={({field}: IField)=> (
+                              <Input input={input} field={field}/>
+                          )}
                       />
                   ))
                 }
@@ -51,9 +52,9 @@ const FestivalBid = () => {
               <Field type="submit" value={festivalText.bidButton} className="festival-bid__btn"/>
             </Form>
           </Formik>
-        </div>
+        </Detalis>
       </div>
   );
 };
 
-export default FestivalBid;
+export default FestivalDiploma;

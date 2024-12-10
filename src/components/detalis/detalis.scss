@@ -1,0 +1,15 @@
+.detalis{
+  overflow: hidden;
+
+  &__btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content{
+    transition: 0.5s;
+  }
+}

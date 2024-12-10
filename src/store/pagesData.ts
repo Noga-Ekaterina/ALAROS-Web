@@ -101,6 +101,12 @@ class Store {
               emails{
                 html
               }
+              diplomaTitle
+              diplomaInputs(first: 100) {
+                placeholder
+                type
+                values
+              }
             }
           }`
       }

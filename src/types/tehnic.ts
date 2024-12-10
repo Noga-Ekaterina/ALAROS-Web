@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+  import {ReactNode} from "react";
 import {getMonthNumberOfDays} from "../utils/date";
 
 export interface IWithClass {
@@ -24,4 +24,11 @@ export interface IDay {
   monthNumberOfDays: number
   timestamp: number,
   week: number
+}
+
+export interface IField{
+  field:{
+    [key: string]: string
+    value: string
+  }
 }

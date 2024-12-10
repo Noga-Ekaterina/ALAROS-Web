@@ -9,6 +9,7 @@ import FestivalBid from "../components/_festival/festival-bid/FestivalBid";
 import {useSearchParams} from "react-router-dom";
 import FestivalDocuments from "../components/_festival/festival-documents/FestivalDocuments";
 import FestivalEmails from "../components/_festival/festival-emails/FestivalEmails";
+import FestivalDiploma from "../components/_festival/festival-diploma/FestivalDiploma";
 
 const Festival = () => {
   const {festivalText, fetchFestivalText}=pagesData
@@ -30,6 +31,7 @@ const Festival = () => {
                 <FestivalBid/>
                 <FestivalDocuments/>
                 <FestivalEmails/>
+                <FestivalDiploma/>
               </div>
               :
               <div></div>

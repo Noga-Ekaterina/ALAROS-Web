@@ -1,0 +1,28 @@
+.festival-diploma{
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 8rem;
+
+  &__icon{
+    transition: 0.5s;
+    transform: rotate(0);
+  }
+
+  .detalis{
+    &__btn{
+      padding: 17rem var(--p-y);
+      font-size: 36rem;
+      background: #EFEFEF;
+      color: var(--c-green-text);
+    }
+    
+    &__opened{
+      .detalis__btn{
+        background: #fff;
+      }
+      .festival-diploma__icon{
+        transform: rotate(405deg);
+      }
+    }
+  }
+}

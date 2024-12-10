@@ -125,4 +125,6 @@ export interface IFestival {
   documentsTitle: string
   documentsLinks: IHtmlString[]
   emails: IHtmlString[]
+  diplomaTitle: string
+  diplomaInputs: IFormInput[]
 }
