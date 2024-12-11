@@ -10,9 +10,10 @@ import {useSearchParams} from "react-router-dom";
 import FestivalDocuments from "../components/_festival/festival-documents/FestivalDocuments";
 import FestivalEmails from "../components/_festival/festival-emails/FestivalEmails";
 import FestivalDiploma from "../components/_festival/festival-diploma/FestivalDiploma";
+import FestivalJuries from "../components/_festival/festival-juries/FestivalJuries";
 
 const Festival = () => {
-  const {festivalText, fetchFestivalText}=pagesData
+  const {festivalText, juries, fetchFestivalText}=pagesData
   const [searchParams, setSearchParams] = useSearchParams()
   const view= (searchParams.get("view")=="draft" && searchParams.get("preview-secret")===process.env.REACT_APP_PREVIEW)?"DRAFT":"PUBLISHED"
   useEffect(() => {
@@ -22,7 +23,7 @@ const Festival = () => {
   return (
       <>
         {
-          festivalText ?
+          (festivalText && juries) ?
               <div>
                 <FestivalMainScreen/>
                 <FestivalPremiya/>
@@ -32,6 +33,7 @@ const Festival = () => {
                 <FestivalDocuments/>
                 <FestivalEmails/>
                 <FestivalDiploma/>
+                <FestivalJuries/>
               </div>
               :
               <div></div>

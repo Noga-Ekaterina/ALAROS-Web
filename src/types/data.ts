@@ -127,4 +127,12 @@ export interface IFestival {
   emails: IHtmlString[]
   diplomaTitle: string
   diplomaInputs: IFormInput[]
+  juriesTitle: string
+}
+
+export interface IJury{
+  name: string
+  place: string
+  image: string
+  jobTitle: IHtmlString
 }

@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import {fetchData} from "../utils/fetchData";
-import {IEventsByYear, IFestival, IHomeData, INewsItem, INewsPages} from "../types/data";
+import {IEventsByYear, IFestival, IHomeData, IJury, INewsItem, INewsPages} from "../types/data";
 import axios from "axios";
 
 
@@ -16,6 +16,8 @@ class Store {
   newsPages: INewsPages={}
 
   festivalText: IFestival|null=null
+
+  juries: IJury[]|null=null
 
   fetchHomeData= async ()=>{
     this.homeData= await fetchData("Pages/Home/data.json")
@@ -107,12 +109,23 @@ class Store {
                 type
                 values
               }
+              juriesTitle
+            }
+            juries {
+              name
+              place
+              image
+              jobTitle {
+                html
+              }
             }
           }`
       }
     }).then((resp) => {
       console.log(resp)
-      this.festivalText= resp.data.data.festivalS[0]
+      const data=resp.data.data
+      this.festivalText= data.festivalS[0]
+      this.juries=data.juries
     });
   }
 }

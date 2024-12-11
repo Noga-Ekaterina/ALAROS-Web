@@ -120,19 +120,19 @@ span{
 }
 
 .white{
-  color: #fff;
+  color: #fff !important;
 }
 
 .accent{
-  color: var(--c-accent);
+  color: var(--c-accent) !important;
 }
 
 .red{
-  color: var(--c-red);
+  color: var(--c-red) !important;
 }
 
 .green{
-  color: var(--c-green-text);
+  color: var(--c-green-text) !important;
 }
 
 .main-screen{

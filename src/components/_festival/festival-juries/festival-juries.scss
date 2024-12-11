@@ -1,0 +1,62 @@
+.festival-juries{
+  padding-block: 30rem 10rem;
+  background-image: url("../../../../public/Assets/Pages/Festival/Images/bg/juries.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title{
+    font-size: 36rem;
+    font-weight: 500;
+    color: var(--c-red);
+    padding-inline: var(--p-y);
+    margin-bottom: 40rem;
+  }
+
+  &__item{
+    aspect-ratio: 1/1;
+    width: 234rem;
+    overflow: hidden;
+    position: relative;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__slide{
+    width: 234rem;
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+  }
+
+  &__info{
+    background: rgba(42, 58, 43, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -100%;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12rem;
+    
+    &--opened, .festival-juries__item:hover &{
+      top: 0;
+    }
+
+    *{
+      font-size: 13rem;
+      color: #fff;
+    }
+  }
+
+  &__name{
+    font-size: 20rem;
+  }
+}
