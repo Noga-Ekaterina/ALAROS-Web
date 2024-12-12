@@ -128,6 +128,7 @@ export interface IFestival {
   diplomaTitle: string
   diplomaInputs: IFormInput[]
   juriesTitle: string
+  protectionsTitle: string
 }
 
 export interface IJury{
@@ -135,4 +136,9 @@ export interface IJury{
   place: string
   image: string
   jobTitle: IHtmlString
+}
+
+export interface IProtectionsDay {
+  date: string
+  protections: IHtmlString
 }

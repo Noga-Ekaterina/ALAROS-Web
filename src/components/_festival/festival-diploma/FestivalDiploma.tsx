@@ -33,7 +33,6 @@ const FestivalDiploma = () => {
       <div className="festival-diploma">
         <Detalis
             title={<span>{festivalText.diplomaTitle}</span>}
-            icon={<span className="festival-diploma__icon">+</span>}
         >
           <Formik initialValues={inputsObj} onSubmit={()=>{}}>
             <Form className='container'>

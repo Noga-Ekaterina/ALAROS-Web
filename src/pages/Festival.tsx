@@ -11,9 +11,10 @@ import FestivalDocuments from "../components/_festival/festival-documents/Festiv
 import FestivalEmails from "../components/_festival/festival-emails/FestivalEmails";
 import FestivalDiploma from "../components/_festival/festival-diploma/FestivalDiploma";
 import FestivalJuries from "../components/_festival/festival-juries/FestivalJuries";
+import FestivalProtections from "../components/_festival/festival-protections/FestivalProtections";
 
 const Festival = () => {
-  const {festivalText, juries, fetchFestivalText}=pagesData
+  const {festivalText, juries, protectionsDays, fetchFestivalText}=pagesData
   const [searchParams, setSearchParams] = useSearchParams()
   const view= (searchParams.get("view")=="draft" && searchParams.get("preview-secret")===process.env.REACT_APP_PREVIEW)?"DRAFT":"PUBLISHED"
   useEffect(() => {
@@ -23,7 +24,7 @@ const Festival = () => {
   return (
       <>
         {
-          (festivalText && juries) ?
+          (festivalText && juries && protectionsDays) ?
               <div>
                 <FestivalMainScreen/>
                 <FestivalPremiya/>
@@ -34,6 +35,7 @@ const Festival = () => {
                 <FestivalEmails/>
                 <FestivalDiploma/>
                 <FestivalJuries/>
+                <FestivalProtections/>
               </div>
               :
               <div></div>

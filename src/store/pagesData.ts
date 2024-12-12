@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 import {fetchData} from "../utils/fetchData";
-import {IEventsByYear, IFestival, IHomeData, IJury, INewsItem, INewsPages} from "../types/data";
+import {IEventsByYear, IFestival, IHomeData, IJury, INewsItem, INewsPages, IProtectionsDay} from "../types/data";
 import axios from "axios";
 
 
@@ -18,6 +18,8 @@ class Store {
   festivalText: IFestival|null=null
 
   juries: IJury[]|null=null
+
+  protectionsDays: IProtectionsDay[]|null=null
 
   fetchHomeData= async ()=>{
     this.homeData= await fetchData("Pages/Home/data.json")
@@ -110,6 +112,7 @@ class Store {
                 values
               }
               juriesTitle
+              protectionsTitle
             }
             juries {
               name
@@ -119,13 +122,24 @@ class Store {
                 html
               }
             }
+            protectionsDays(orderBy: date_ASC) {
+              date
+              protections {
+                html
+              }
+            }
           }`
       }
     }).then((resp) => {
       console.log(resp)
       const data=resp.data.data
-      this.festivalText= data.festivalS[0]
-      this.juries=data.juries
+      const {festivalS, juries, protectionsDays}=data
+      this.festivalText= festivalS[0]
+      this.juries=juries
+      this.protectionsDays=protectionsDays.map((item: IProtectionsDay) => ({
+        ...item,
+        date: new Date(item.date).toLocaleDateString("ru-RU", { year: 'numeric', month: '2-digit', day: '2-digit' })
+      }))
     });
   }
 }

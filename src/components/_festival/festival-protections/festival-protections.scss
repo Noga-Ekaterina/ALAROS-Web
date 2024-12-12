@@ -1,0 +1,87 @@
+.festival-protections{
+  background: #fff;
+  padding-block: 30rem;
+
+  &__title{
+    font-size: 36rem;
+    font-weight: 500;
+    color: #2A3A2B;
+    margin-bottom: 20rem;
+  }
+
+
+  .detalis {
+    border-top: max(1px, 1rem) solid #BEBCBB;
+
+    &:last-child{
+      border-bottom: max(1px, 1rem) solid #BEBCBB;
+    }
+
+    &__btn {
+      padding: 7rem 0;
+      font-size: 16rem;
+      color: var(--c-red);
+      font-weight: 500;
+      background: #fff;
+    }
+
+    &--opened{
+      tbody tr:hover{
+        background: var(--c-red);
+
+        *{
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  table{
+    width: 100%;
+    display: block;
+    >*{
+      display: block;
+    }
+    *{
+      font-size: 13rem;
+      font-weight: 500;
+
+    }
+
+    tbody{
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      margin-top: 42rem;
+      overflow-y: auto;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+      max-height: 286rem;
+
+      &::-webkit-scrollbar { width: 0 !important }
+    }
+  }
+
+  tr{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 7fr 3fr;
+    gap: 17rem;
+    transition: 0.3s;
+    padding-block: 3rem;
+    padding-inline: 5rem;
+  }
+
+  td, th{
+    overflow: hidden;
+    *{
+      text-align: left;
+      overflow: hidden;
+      text-wrap: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  th{
+    color: #959595;
+  }
+}

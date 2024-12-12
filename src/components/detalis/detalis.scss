@@ -1,3 +1,5 @@
+
+
 .detalis{
   overflow: hidden;
 
@@ -8,6 +10,16 @@
     position: relative;
     z-index: 2;
   }
+
+  &__icon{
+    transition: 0.5s;
+    transform: rotate(0);
+
+    .detalis--opened &{
+      transform: rotate(405deg);
+    }
+  }
+
 
   &__content{
     transition: 0.5s;
