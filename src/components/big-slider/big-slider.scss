@@ -1,0 +1,23 @@
+.big-slider{
+  position: relative;
+
+  &__btn{
+    position: absolute;
+    width: 10rem;
+    top: 170rem;
+
+    &--prev{
+      left: -16rem;
+    }
+
+    &--next{
+      right: -16rem;
+      transform: rotate(180deg);
+    }
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
