@@ -20,7 +20,7 @@ const HomeMainScreen = () => {
           >
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/1.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_1/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -37,7 +37,7 @@ const HomeMainScreen = () => {
             </SwiperSlide>
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/2.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_2/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -47,14 +47,14 @@ const HomeMainScreen = () => {
                   </h2>
                 </div>
                 <div className="main-screen__signature-wrapp">
-                  <strong className="main-screen__signature">Конкурсная работа «Благоустройство территории в ЖК
-                    UNION PARK» © Готика, 2023</strong>
+                  <strong className="main-screen__signature">Конкурсная работа «Благоустройство территории DOR
+                    Технологии» © Готика, 2023</strong>
                 </div>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/3.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_3/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -70,7 +70,7 @@ const HomeMainScreen = () => {
             </SwiperSlide>
             <SwiperSlide>
               <Link to={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Projects/4.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_4/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>

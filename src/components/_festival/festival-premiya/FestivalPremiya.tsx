@@ -62,7 +62,9 @@ const FestivalPremiya = () => {
       <div className="container festival-premiya">
         <div className="titles-block">
           <h2 className="titles-block__title">{festivalText.premiyaTitle}</h2>
-          <strong className="titles-block__section">{festivalText.premiyaSection}</strong>
+          <div className="titles-block__section">
+            <HtmlProcessing html={festivalText.premiyaRightSignature.html}/>
+          </div>
         </div>
         <div className="festival-premiya__list">
           {

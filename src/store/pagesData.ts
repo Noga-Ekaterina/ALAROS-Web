@@ -74,7 +74,9 @@ class Store {
                 html
               }
               premiyaTitle
-              premiyaSection
+              premiyaRightSignature{
+                html
+              }
               premiyaSteps {
                 html
               }
@@ -113,6 +115,18 @@ class Store {
               }
               juriesTitle
               protectionsTitle
+              projectsTitle
+              projectsRightSignature{
+                html
+              }
+              projects {
+                name
+                nomination
+                number
+                diploma
+                year
+                winner
+              }
             }
             juries {
               name

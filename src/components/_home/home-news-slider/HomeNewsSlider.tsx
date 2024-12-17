@@ -6,10 +6,12 @@ import {observer} from "mobx-react-lite";
 import NewsItem from "../../_news/news-item/NewsItem";
 import classNames from "classnames";
 import BigSlider from "../../big-slider/BigSlider";
+import {useMediaQuery} from "react-responsive";
 
 const HomeNewsSlider = () => {
   const {newsPages}= pagesData
   const arrIndexSmall= [2, 5, 7, 10]
+  const mobileScreen = useMediaQuery({maxWidth: 660});
 
   if (!newsPages[1]) return <div/>
 
@@ -18,7 +20,7 @@ const HomeNewsSlider = () => {
         <div className="container">
           <h2 className="home-news-slider__title">Новости</h2>
 
-          <BigSlider>
+          <BigSlider slidesPerView={mobileScreen? 1:2}>
             {
                 newsPages["1"].map((news, index) => (
                     <SwiperSlide

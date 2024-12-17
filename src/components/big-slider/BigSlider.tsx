@@ -9,11 +9,10 @@ import {SwiperNavigation} from "../../utils/SwiperNavigation";
 import {useMediaQuery} from "react-responsive";
 
 interface IProps extends IWithChildren, IWithClass{
-
+  slidesPerView: number
 }
 
 const BigSlider = (props: IProps) => {
-  const mobileScreen = useMediaQuery({maxWidth: 660});
   const swiperRef=useRef<SwiperRef | null>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
   const [swiperIsStart, setSwiperIsStart] = useState(true)
@@ -21,7 +20,7 @@ const BigSlider = (props: IProps) => {
 
   function togleSwiper  (){
     setSwiperIsStart(swiperNav.isStart())
-    setSwiperIsEnd(swiperNav.isEnd(mobileScreen? 1:2))
+    setSwiperIsEnd(swiperNav.isEnd(props.slidesPerView))
   }
 
   return (

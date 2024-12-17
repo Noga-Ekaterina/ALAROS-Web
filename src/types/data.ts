@@ -112,7 +112,7 @@ export interface IFestival {
   mainScreenLeftSection: IHtmlString
   mainScreenSections: IHtmlString
   premiyaTitle: string
-  premiyaSection: string
+  premiyaRightSignature: IHtmlString
   premiyaSteps: IHtmlString[]
   priceTitle: string
   priceTable: IHtmlString
@@ -129,6 +129,9 @@ export interface IFestival {
   diplomaInputs: IFormInput[]
   juriesTitle: string
   protectionsTitle: string
+  projectsTitle: string
+  projectsRightSignature: IHtmlString
+  projects: IProject[]
 }
 
 export interface IJury{
@@ -141,4 +144,13 @@ export interface IJury{
 export interface IProtectionsDay {
   date: string
   protections: IHtmlString
+}
+
+export interface IProject{
+  number: number
+  year: number
+  name: string
+  diploma: "gold" |"silver"|"bronze"|"president"|"grandPrix"
+  winner: string
+  nomination: string|null
 }
