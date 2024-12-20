@@ -35,7 +35,7 @@ const NewsArticle = () => {
 
       } else {
         const rows: string = segment;
-        const rowMatches=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/g))
+          const rowMatches=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/g))
         console.log(rowMatches)
         if (rowMatches) {
           const slides: JSX.Element[]=[]

@@ -79,7 +79,7 @@ const FestivalJuries = () => {
                          {
                            item &&
                              <>
-                                <img src={`/Assets/Pages/Festival/Images/Juries/${item.image}`} alt=""/>
+                                <img src={`/Assets/Pages/Festival/Images/People/${item.image}`} alt=""/>
 
                                 <div className={cn(
                                     "festival-juries__info",

@@ -2,6 +2,7 @@ import { makeAutoObservable } from "mobx";
 import {fetchData} from "../utils/fetchData";
 import {IEventsByYear, IFestival, IHomeData, IJury, INewsItem, INewsPages, IProtectionsDay} from "../types/data";
 import axios from "axios";
+import {formaterDate} from "../utils/date/formaterDate";
 
 
 class Store {
@@ -52,7 +53,7 @@ class Store {
         // Здесь создаем массив новостей, чтобы он соответствовал типу
         this.newsPages[page] = news.map(item => ({
           ...item,
-          date: new Date(item.date).toLocaleDateString("ru-RU", { year: 'numeric', month: '2-digit', day: '2-digit' })
+          date: formaterDate(item.date)
         }));
       });
     }
@@ -127,6 +128,15 @@ class Store {
                 year
                 winner
               }
+              businessProgramDate
+              businessProgramTime
+              businessProgramTitle
+              businessProgramRightSignature {
+                html
+              }
+              businessProgramSessions {
+                html
+              }
             }
             juries {
               name
@@ -152,7 +162,7 @@ class Store {
       this.juries=juries
       this.protectionsDays=protectionsDays.map((item: IProtectionsDay) => ({
         ...item,
-        date: new Date(item.date).toLocaleDateString("ru-RU", { year: 'numeric', month: '2-digit', day: '2-digit' })
+        date: formaterDate(item.date)
       }))
     });
   }

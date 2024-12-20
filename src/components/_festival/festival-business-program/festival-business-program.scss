@@ -1,0 +1,94 @@
+@import "../../../styles/mixins";
+
+.festival-business-program{
+  background: #fff;
+  padding-block: 26rem 8rem;
+
+  &__date{
+    font-size: 20rem;
+    color: #959595;
+    margin-bottom: 23rem;
+    margin-top: 10rem;
+  }
+
+  &__session{
+    padding-block: 41rem 25rem;
+    &:nth-child(odd){
+      background: #F8F8F8;
+    }
+  }
+
+  &__content{
+    display: flex;
+    gap: 94rem;
+  }
+
+  &__title{
+    font-size: 36rem;
+    font-weight: 400;
+    margin-bottom: 36rem;
+
+    @include sm{
+      font-size: 20rem;
+      font-weight: 500;
+    }
+  }
+
+  &__rolle{
+    font-size: 20rem;
+    font-weight: 400;
+    margin-bottom: 36rem;
+
+    @include sm{
+      font-size: 15rem;
+      font-weight: 400;
+      margin-bottom: 20rem;
+    }
+  }
+
+  &__moderators{
+    display: flex;
+    flex-direction: column;
+    gap: 37rem;
+    width: 234rem;
+
+    .session-user__img{
+      margin-bottom: 28rem;
+    }
+  }
+
+  &__speakers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37rem 85rem;
+
+    .session-user{
+      width: 151rem;
+    }
+  }
+
+  &__slide{
+    width: 160rem;
+  }
+}
+
+.session-user{
+  *{
+    font-size: max(10rem, 10px);
+  }
+
+  &__img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 22rem;
+  }
+
+  &__name{
+    font-weight: 600;
+    margin-bottom: 1em;
+
+    @include sm{
+      margin-bottom: 5rem;
+    }
+  }
+}

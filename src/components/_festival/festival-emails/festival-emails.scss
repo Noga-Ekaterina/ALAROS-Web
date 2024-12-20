@@ -1,9 +1,15 @@
+@import "../../../styles/mixins";
+
 .festival-emails{
   padding-bottom: 33rem;
   background: #fff;
   &__container {
     display: grid;
     grid-template-columns: repeat(12, calc(100% / 12));
+
+    @include sm{
+      gap: 30rem 0;
+    }
   }
 
   &__item{
@@ -12,10 +18,19 @@
     gap: 20rem;
     &:first-child{
       grid-column: 1/span 4;
+
+      @include sm{
+        grid-column: 1/12;
+      }
     }
 
     &:last-child{
       grid-column: 8/span 4;
+
+      @include sm{
+        grid-column: 1/12;
+        grid-row: 2/3;
+      }
     }
 
     a{

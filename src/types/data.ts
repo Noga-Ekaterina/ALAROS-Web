@@ -132,6 +132,11 @@ export interface IFestival {
   projectsTitle: string
   projectsRightSignature: IHtmlString
   projects: IProject[]
+  businessProgramDate: string
+  businessProgramTitle: string
+  businessProgramTime: string
+  businessProgramRightSignature: IHtmlString
+  businessProgramSessions: IHtmlString[]
 }
 
 export interface IJury{

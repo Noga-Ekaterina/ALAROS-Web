@@ -42,6 +42,10 @@
     @include md-book{
       font-size: 35rem;
     }
+
+    @include sm{
+      font-size: min(27rem, 3.5vh);
+    }
   }
   
   &__img-wrapp {
@@ -110,6 +114,10 @@
 
     @include md{
       font-size: 22px;
+    }
+
+    @include sm{
+      font-size: min(25rem, 3.28vh);
     }
   }
 

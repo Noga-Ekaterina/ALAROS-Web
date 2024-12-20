@@ -13,6 +13,7 @@ import FestivalDiploma from "../components/_festival/festival-diploma/FestivalDi
 import FestivalJuries from "../components/_festival/festival-juries/FestivalJuries";
 import FestivalProtections from "../components/_festival/festival-protections/FestivalProtections";
 import FestivalProjects from "../components/_festival/festival-projects/FestivalProjects";
+import FestivalBusinessProgram from "../components/_festival/festival-business-program/FestivalBusinessProgram";
 
 const Festival = () => {
   const {festivalText, juries, protectionsDays, fetchFestivalText}=pagesData
@@ -38,6 +39,7 @@ const Festival = () => {
                 <FestivalJuries/>
                 <FestivalProtections/>
                 <FestivalProjects/>
+                <FestivalBusinessProgram/>
               </div>
               :
               <div></div>

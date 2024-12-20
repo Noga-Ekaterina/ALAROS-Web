@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .festival-juries{
   padding-block: 30rem 10rem;
   background-image: url("../../../../public/Assets/Pages/Festival/Images/bg/juries.svg");
@@ -14,7 +16,7 @@
 
   &__item{
     aspect-ratio: 1/1;
-    width: 234rem;
+    width: 100%;
     overflow: hidden;
     position: relative;
 
@@ -31,6 +33,10 @@
     display: flex;
     flex-direction: column;
     gap: 9rem;
+
+    @include sm{
+      width: 174rem;
+    }
   }
 
   &__info{
@@ -53,10 +59,18 @@
     *{
       font-size: 13rem;
       color: #fff;
+
+      @include sm{
+        font-size: 10rem;
+      }
     }
   }
 
   &__name{
     font-size: 20rem;
+
+    @include sm{
+      font-size: 15rem;
+    }
   }
 }
