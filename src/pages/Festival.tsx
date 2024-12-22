@@ -14,6 +14,7 @@ import FestivalJuries from "../components/_festival/festival-juries/FestivalJuri
 import FestivalProtections from "../components/_festival/festival-protections/FestivalProtections";
 import FestivalProjects from "../components/_festival/festival-projects/FestivalProjects";
 import FestivalBusinessProgram from "../components/_festival/festival-business-program/FestivalBusinessProgram";
+import FestivalForum from "../components/_festival/festival-forum/FestivalForum";
 
 const Festival = () => {
   const {festivalText, juries, protectionsDays, fetchFestivalText}=pagesData
@@ -40,6 +41,7 @@ const Festival = () => {
                 <FestivalProtections/>
                 <FestivalProjects/>
                 <FestivalBusinessProgram/>
+                <FestivalForum/>
               </div>
               :
               <div></div>

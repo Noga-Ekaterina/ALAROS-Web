@@ -137,6 +137,17 @@ export interface IFestival {
   businessProgramTime: string
   businessProgramRightSignature: IHtmlString
   businessProgramSessions: IHtmlString[]
+  forumTitle: string
+  forumRightSignature: IHtmlString
+  forumDescriptionBlocks: IHtmlString[]
+  forumImages: string[]
+  forumRegistration: IHtmlString
+  forumProgramTitle: string
+  forumProgram: IHtmlString[]
+  forumContactsTitle: string
+  forumContactsImage: string
+  forumContacts: IHtmlString
+  forumSocials: IHtmlString[]
 }
 
 export interface IJury{

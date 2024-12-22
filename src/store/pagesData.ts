@@ -137,6 +137,29 @@ class Store {
               businessProgramSessions {
                 html
               }
+              forumTitle
+              forumRightSignature {
+                html
+              }
+              forumImages
+              forumDescriptionBlocks {
+                html
+              }
+              forumRegistration {
+                html
+              }
+              forumProgramTitle
+              forumProgram {
+                html
+              }
+              forumContactsTitle
+              forumContactsImage
+              forumContacts {
+                html
+              }
+              forumSocials {
+                html
+              }
             }
             juries {
               name
