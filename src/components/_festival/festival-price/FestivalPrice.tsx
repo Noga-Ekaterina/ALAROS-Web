@@ -14,7 +14,7 @@ const FestivalPrice = () => {
   if (!festivalText) return <div/>
 
   return (
-      <div className="festival-price">
+      <div className="festival-price" id="price">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{festivalText.priceTitle}</h2>

@@ -30,7 +30,7 @@ const FestivalDiploma = () => {
   if (!festivalText||!inputsObj) return <div/>
 
   return (
-      <div className="festival-diploma">
+      <div className="festival-diploma" id="diploma">
         <Detalis
             title={<span>{festivalText.diplomaTitle}</span>}
         >

@@ -59,7 +59,7 @@ const FestivalPremiya = () => {
   if (!festivalText) return <></>
 
   return (
-      <div className="container festival-premiya">
+      <div className="container festival-premiya" id="premiya">
         <div className="titles-block">
           <h2 className="titles-block__title">{festivalText.premiyaTitle}</h2>
           <div className="titles-block__section">

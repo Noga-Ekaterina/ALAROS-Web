@@ -164,7 +164,7 @@ const FestivalBusinessProgram = () => {
   if (!festivalText) return <div/>
 
   return (
-      <div className="festival-business-program">
+      <div className="festival-business-program" id="business-program">
         <div className="container titles-block">
           <div>
             <p className="festival-business-program__date">{formaterDate(festivalText.businessProgramDate)} | {festivalText.businessProgramTime}</p>

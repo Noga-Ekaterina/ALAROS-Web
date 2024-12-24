@@ -29,7 +29,7 @@ const FestivalBid = () => {
   if (!festivalText||!inputsObj) return <div/>
 
   return (
-      <div className="festival-bid">
+      <div className="festival-bid" id="bid">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small">{festivalText.bidTitle}</h2>

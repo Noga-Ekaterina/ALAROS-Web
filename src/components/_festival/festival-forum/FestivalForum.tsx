@@ -12,7 +12,7 @@ const FestivalForum = () => {
   if (!festivalText) return <div/>
 
   return (
-      <div className="festival-forum">
+      <div className="festival-forum" id="forum">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{festivalText.forumTitle}</h2>

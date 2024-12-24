@@ -10,7 +10,7 @@ const FestivalProtections = () => {
 
   if (!festivalText ||!protectionsDays) return <div/>
   return (
-      <div className="festival-protections">
+      <div className="festival-protections" id="protections">
         <div className="container">
           <h2 className="festival-protections__title">{festivalText.protectionsTitle}</h2>
 

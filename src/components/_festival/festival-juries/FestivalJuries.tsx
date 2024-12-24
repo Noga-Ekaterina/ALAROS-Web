@@ -58,7 +58,7 @@ const FestivalJuries = () => {
   if (!festivalText||!juries) return <div/>
 
   return (
-      <div className="festival-juries">
+      <div className="festival-juries" id="juries">
         <h2 className="festival-juries__title">{festivalText.juriesTitle}</h2>
 
         <Swiper

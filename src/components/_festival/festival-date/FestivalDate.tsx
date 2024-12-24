@@ -31,7 +31,7 @@ const FestivalDate = () => {
 
   if (!festivalText) return <div/>
   return (
-      <div className='festival-date'>
+      <div className='festival-date' id="date">
         <div className="container">
           <div className="festival-date__text">
             <HtmlProcessing html={festivalText.dateText.html}/>

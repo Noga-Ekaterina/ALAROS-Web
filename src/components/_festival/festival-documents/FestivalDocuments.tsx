@@ -32,7 +32,7 @@ const FestivalDocuments = () => {
   if (!festivalText) return <div/>
 
   return (
-      <div className="festival-documents">
+      <div className="festival-documents" id="documents">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{festivalText.documentsTitle}</h2>

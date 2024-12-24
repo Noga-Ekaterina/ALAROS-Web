@@ -1,6 +1,8 @@
-import React, {JSX, useEffect, useState} from "react";
+import React, {FC, JSX, useEffect, useState} from "react";
 import parse from "html-react-parser";
 import {Link} from "react-router-dom";
+import {useGetHashPosition} from "../hoocs/useGetHashPosition";
+import {smoothScroll} from "../utils/smoothScroll";
 
 interface Props{
   html: string
@@ -8,14 +10,35 @@ interface Props{
 
 const HtmlProcessing = ({html}:Props) => {
   const [elements, setElements] = useState<JSX.Element[]>([])
+  const getHashPosition= useGetHashPosition()
+
+  const handleHashed=(event:  React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
+    event.preventDefault()
+
+    const targetElement = event.target as HTMLElement;
+
+    const hash = targetElement.getAttribute("href")
+        ?? targetElement.closest("a")?.getAttribute("href");
+
+
+    console.log(event)
+
+    if (!hash) return
+
+    smoothScroll(getHashPosition(hash))
+
+    setTimeout(()=> window.location.hash=hash.slice(1))
+  }
 
   const replaceWithLink = (element: JSX.Element):  JSX.Element => {
     const props=element.props
     if (element.type === 'a') {
       if (props.className?.includes('download'))
-        return React.createElement("a", {...props, className: props.className.replace("download",'') }, props.children);
+        return React.createElement("a", {...props, className: props.className.replace("download",''), download: true }, props.children);
       else if (props.href.startsWith('/') && !props.download)
         return React.createElement(Link, { to: props.href, ...props }, props.children);
+      else if (props.href.startsWith('#') && !props.download)
+        return React.createElement("a", { to: props.href, onClick: handleHashed, ...props }, props.children);
       else if (props.href=='text')
         return React.createElement("span", {className: props.className}, props.children);
     }

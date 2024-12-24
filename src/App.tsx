@@ -10,7 +10,6 @@ import Festival from "./pages/Festival";
 
 function App() {
   useEffect(() => {
-
   }, []);
   return (
     <Routes>
