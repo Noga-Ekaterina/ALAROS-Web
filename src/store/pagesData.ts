@@ -1,9 +1,29 @@
 import { makeAutoObservable } from "mobx";
 import {fetchData} from "../utils/fetchData";
-import {IEventsByYear, IFestival, IHomeData, IJury, INewsItem, INewsPages, IProtectionsDay} from "../types/data";
+import {
+  IEventsByYear,
+  IEventsDataYear,
+  IFestival,
+  IHomeData,
+  IJury,
+  INewsItem,
+  INewsPages,
+  IProtectionsDay
+} from "../types/data";
 import axios from "axios";
 import {formaterDate} from "../utils/date/formaterDate";
 
+const getNewsQueryStr=(page: number)=>(
+    `
+                newsAll(orderBy: date_DESC, first: ${10 * page}, skip: ${10 * (page - 1)}) {
+              date
+              description
+              title
+              slug
+              body { html}
+            }
+    `
+)
 
 class Store {
   constructor() {
@@ -12,7 +32,7 @@ class Store {
 
   homeData: IHomeData|null= null
 
-  calendarEvents: IEventsByYear|null= null
+  calendarEvents: IEventsDataYear[]|null= null
 
   newsPages: INewsPages={}
 
@@ -23,11 +43,50 @@ class Store {
   protectionsDays: IProtectionsDay[]|null=null
 
   fetchHomeData= async ()=>{
-    this.homeData= await fetchData("Pages/Home/data.json")
+    axios({
+      method: 'POST',
+      url: process.env.REACT_APP_API_URL,
+      data: {
+        query: `
+          query MyQuery {
+            homes {
+              mainTitle
+              mainSection {
+                html
+              }
+              bannersDesktop
+              bannersMobile
+              events {
+                html
+              }
+              newsTitle
+            }
+            eventsYears {
+              year
+              events {
+                html
+              }
+            }
+            ${getNewsQueryStr(1)}
+          }`
+      }
+    }).then((resp) => {
+      console.log(resp)
+      const data=resp.data.data
+      const {homes, eventsYears, newsAll}=data
+
+      this.homeData= homes[0]
+
+      this.calendarEvents= eventsYears
+
+      this.newsPages[1] = newsAll.map((item: INewsItem) => ({
+        ...item,
+        date: formaterDate(item.date)
+      }));    });
   }
 
   fetchCalendarEvents= async ()=>{
-    this.calendarEvents= await fetchData("Pages/Home/Calendar-events/data.json")
+    // this.calendarEvents= await fetchData("Pages/Home/Calendar-events/data.json")
   }
 
   fetchNewsPage = (page: number) => {
@@ -38,13 +97,7 @@ class Store {
         data: {
           query: `
           query NewsAllQuery {
-            newsAll(orderBy: date_DESC, first: ${10 * page}, skip: ${10 * (page - 1)}) {
-              date
-              description
-              title
-              slug
-              body { html}
-            }
+            ${getNewsQueryStr(page)}
           }`
         }
       }).then((resp) => {

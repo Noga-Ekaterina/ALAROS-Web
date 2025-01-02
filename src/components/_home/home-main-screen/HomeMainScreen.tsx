@@ -3,11 +3,16 @@ import "./home-main-screen.scss"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Link} from "react-router-dom";
 import 'swiper/css/effect-fade';
-
 import {EffectFade, Autoplay} from "swiper/modules";
+import pagesData from "../../../store/pagesData";
+import HtmlProcessing from "../../HtmlProcessing";
 
 
 const HomeMainScreen = () => {
+  const {homeData}=pagesData
+
+  if (!homeData) return <div/>
+
   return (
       <div className="main-screen home-main-screen">
         <div className="home-main-screen__slider-wrapp">
@@ -87,20 +92,11 @@ const HomeMainScreen = () => {
           </Swiper>
         </div>
         <aside className="home-main-screen__aside">
-          <strong className="accent">Ежегодное событие</strong>
-          <h2 className="home-main-screen__aside-title">Национальная <br/>
-            премия <br/>
-            по ландшафтной <br/>
-            архитектуре <br/>
-            и садово-парковому <br/>
-            искусству</h2>
-          <div className="home-main-screen__links">
-            <Link to="/" className="home-main-screen__link-main">Принять участие</Link>
-            <Link to="/" className="home-main-screen__link link-underline">Архив работ</Link>
-          </div>
           <div className="home-main-screen__aside-ellipse-wrapp">
             <div className="home-main-screen__aside-ellipse"></div>
           </div>
+
+          <HtmlProcessing html={homeData.mainSection.html}/>
         </aside>
       </div>
   );

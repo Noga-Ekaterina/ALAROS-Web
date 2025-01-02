@@ -9,6 +9,9 @@ import { IDay } from "../../../types/tehnic";
 import {ReactSVG} from "react-svg";
 import Dropdown from "../../dropdown/Dropdown";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
+import {IEventsByYear} from "../../../types/data";
+import {eventsDataProcessing} from "../../../utils/eventsDataProcessing";
+import HtmlProcessing from "../../HtmlProcessing";
 
 interface ICalendarDay extends IDay {
   startEvent?: boolean;
@@ -18,7 +21,8 @@ interface ICalendarDay extends IDay {
 
 const CalendarEvents = () => {
   const { calendarEvents } = pagesData;
-  const years = Object.keys(calendarEvents as Object);
+  const [eventsByYear, setEventsByYear] = useState<null | IEventsByYear>(null)
+  const [years, setYears] = useState<string[]>([])
   const [days, setDays] = useState<ICalendarDay[]>([]);
   const [nextEventIndex, setNextEventIndex] = useState(0); // Индекс ближайшего события
   const [eventsDays, setEventsDays] = useState<ICalendarDay[][]>([])
@@ -83,7 +87,15 @@ const CalendarEvents = () => {
   }
 
   useEffect(() => {
-    if (calendarEvents) {
+    if (!calendarEvents) return
+
+    const data= eventsDataProcessing(calendarEvents)
+    setEventsByYear(data)
+    setYears(Object.keys(data))
+  }, [calendarEvents]);
+
+  useEffect(() => {
+    if (eventsByYear) {
       let events: ICalendarDay[][] = [];
       let daysWithEvents: ICalendarDay[] = [];
       const today = createDate();
@@ -97,7 +109,7 @@ const CalendarEvents = () => {
           daysWithEvents = [...daysWithEvents, ...monthe];
         });
 
-        const eventsForYear = calendarEvents[year];
+        const eventsForYear = eventsByYear[year];
 
         eventsForYear.forEach(event => {
           const startDate = event.date.start.split('.');
@@ -190,7 +202,7 @@ const CalendarEvents = () => {
       setDays(daysWithEvents);
       // console.log(daysWithEvents)
     }
-  }, []);
+  }, [eventsByYear]);
 
   useEffect(() => {
     const starts= days.filter(day=> day.startEvent)
@@ -267,7 +279,7 @@ const CalendarEvents = () => {
           >
             {
               eventsStart.map(start => {
-                const event = calendarEvents && calendarEvents[start.year].find(event => {
+                const event = eventsByYear && eventsByYear[start.year].find(event => {
                   const startDate = event.date.start.split('.');
 
                   const startDay = Number(startDate[0]);
@@ -283,14 +295,15 @@ const CalendarEvents = () => {
                           <div className="calendar-events__titles">
                             <h2 className="calendar-events__date">{event.date.start} - {event.date.end}</h2>
                             <div>
-                              <a href={event.link.href}
-                                 className="calendar-events__link link-underline">{event.link.text}</a>
+                              <div className="calendar-events__link">
+                                <HtmlProcessing html={event.title}/>
+                              </div>
                               <p className="calendar-events__plase">{event.place}</p>
                             </div>
                           </div>
-                          <p className="calendar-events__description">
-                            {event.description}
-                          </p>
+                          <div className="calendar-events__description">
+                            <HtmlProcessing html={event.description}/>
+                          </div>
                         </div>
                         <img
                             src={`/Assets/Pages/Home/Calendar-events/Images/${start.year}/${event.date.start.replace(".", "-")}.png`}

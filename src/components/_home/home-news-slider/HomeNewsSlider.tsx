@@ -9,16 +9,16 @@ import BigSlider from "../../big-slider/BigSlider";
 import {useMediaQuery} from "react-responsive";
 
 const HomeNewsSlider = () => {
-  const {newsPages}= pagesData
+  const {newsPages, homeData}= pagesData
   const arrIndexSmall= [2, 5, 7, 10]
   const mobileScreen = useMediaQuery({maxWidth: 660});
 
-  if (!newsPages[1]) return <div/>
+  if (!homeData || !newsPages[1]) return <div/>
 
   return (
       <div className="home-news-slider">
         <div className="container">
-          <h2 className="home-news-slider__title">Новости</h2>
+          <h2 className="home-news-slider__title">{homeData.newsTitle}</h2>
 
           <BigSlider slidesPerView={mobileScreen? 1:2}>
             {

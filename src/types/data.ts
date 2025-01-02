@@ -5,12 +5,12 @@ export interface IHtmlString{
 }
 
 export interface IHomeData {
-  announcements:{
-    title:string
-    text: string
-    slides:number
-  }
-  partners: IPartner[]
+  mainTitle: string
+  mainSection: IHtmlString
+  bannersDesktop: string[]
+  bannersMobile: string[]
+  events: IHtmlString
+  newsTitle: string
 }
 
 export interface IPartner {
@@ -42,10 +42,15 @@ export interface IEventDate {
 
 export interface IEvent {
   date: IEventDate;
-  link: ILink
+  title: string
   description: string;
   place: string;
 };
+
+export interface IEventsDataYear {
+  year: number
+  events: IHtmlString
+}
 
 export interface IEventsByYear {
   [year: string]: IEvent[];

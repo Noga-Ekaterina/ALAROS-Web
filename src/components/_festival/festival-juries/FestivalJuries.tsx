@@ -86,7 +86,7 @@ const FestivalJuries = () => {
                                     isOpenedArr.includes(item) && "festival-juries__info--opened"
                                 )}>
                                    <div>
-                                      <p className="festival-juries__name">{item.name}</p><p className="accent">{item.place}</p>
+                                      <p className="festival-juries__name">{item.name}</p><p className="yellow">{item.place}</p>
                                    </div>
                                    <HtmlProcessing html={item.jobTitle.html}/>
                                 </div>

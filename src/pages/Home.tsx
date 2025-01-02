@@ -17,7 +17,6 @@ const Home = () => {
     if (!calendarEvents)
       fetchCalendarEvents()
 
-    fetchNewsPage(1)
   }, []);
 
   return (

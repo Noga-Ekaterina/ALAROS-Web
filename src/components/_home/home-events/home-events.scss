@@ -43,7 +43,7 @@
     }
   }
 
-  &__title{
+  h2{
     color: var(--c-red);
     font-size: 36rem;
     font-weight: 500;
@@ -53,7 +53,7 @@
     }
   }
 
-  &__text{
+  p{
     font-size: 21rem;
 
     @include sm{
@@ -61,9 +61,8 @@
     }
   }
 
-  &__link{
+  p:last-child{
     font-size: 13rem;
-    color: #B3B3B3;
 
     @include sm{
       position: absolute;

@@ -5,34 +5,19 @@ import pagesData from "../../../store/pagesData";
 import {Autoplay, Pagination} from "swiper/modules";
 import {useMediaQuery} from "react-responsive";
 import {ReactSVG} from "react-svg";
+import HtmlProcessing from "../../HtmlProcessing";
 const HomeEvents = () => {
   const {homeData}=pagesData
   const mobileScreen = useMediaQuery({maxWidth: 660});
-  const [slides, setSlides] = useState<any[]>([])
 
-  useEffect(() => {
-    if (homeData?.announcements.slides) {
-      const newArr: any[] = []
-      for (let i = 1; i <= homeData.announcements.slides; i++) {
-        newArr.push(
-            <SwiperSlide>
-              <img src={`/Assets/Pages/Home/Announcements/${i}${mobileScreen? "-mobile":""}.png`} alt=""/>
-            </SwiperSlide>
-        )
-      }
-      setSlides(newArr)
-    }
-  }, [mobileScreen]);
+  if (!homeData) return <div/>
+
   return (
       <div className="home-events">
         <ReactSVG src="/Assets/Pages/Home/bg/2.svg" className="home-events__bg"/>
       <div className="home-events__block-text">
-          <div className="home-events__title">События</div>
-          <p className="home-events__text">Календарь ближайших <br/>
-            событий и мероприятий <br/>
-            в индустрии</p>
-        <a href="" className="home-events__link link-underline">Смотреть все</a>
-        </div>
+          <HtmlProcessing html={homeData.events.html}/>
+      </div>
         <div className='home-events__slider'>
           <Swiper
               modules={[Autoplay, Pagination]}
@@ -41,7 +26,26 @@ const HomeEvents = () => {
               loop={true}
           >
             {
-              slides.map(slide=>slide)
+              mobileScreen?
+                  <>
+                  {
+                    homeData.bannersMobile.map(banner=>(
+                        <SwiperSlide>
+                          <img src={`/Assets/Pages/Home/Banners/Mobile/${banner}`} alt=""/>
+                        </SwiperSlide>
+                    ))
+                  }
+                  </>
+                  :
+                  <>
+                    {
+                      homeData.bannersDesktop.map(banner=>(
+                          <SwiperSlide>
+                            <img src={`/Assets/Pages/Home/Banners/Desktop/${banner}`} alt=""/>
+                          </SwiperSlide>
+                      ))
+                    }
+                  </>
             }
           </Swiper>
           <div className='home-events__slider-pagination'></div>

@@ -6,8 +6,9 @@
   --c-main: #273827;
   --c-main-dark: #0B231E;
   --c-green-text: #6E7A64;
-  --c-accent: #E0F273;
+  --c-yellow: #E0F273;
   --c-red: #E74F3D;
+  --c-grey: #BEBCBB;
   --p-y: 28rem;
 
   @include sm{
@@ -123,8 +124,8 @@ span{
   color: #fff !important;
 }
 
-.accent{
-  color: var(--c-accent) !important;
+.yellow{
+  color: var(--c-yellow) !important;
 }
 
 .red{
@@ -133,6 +134,10 @@ span{
 
 .green{
   color: var(--c-green-text) !important;
+}
+
+.grey{
+  color: var(--c-grey) !important;
 }
 
 .main-screen{
