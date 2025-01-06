@@ -3,7 +3,6 @@ import "./festival-juries.scss"
 import pagesData from "../../../store/pagesData";
 import {IJury} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Mousewheel} from "swiper/modules";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
 import HtmlProcessing from "../../HtmlProcessing";
@@ -64,8 +63,6 @@ const FestivalJuries = () => {
         <Swiper
             spaceBetween={10*rem}
             slidesPerView="auto"
-            mousewheel={{sensitivity: 5000}}
-            modules={[Mousewheel]}
         >
           {
             slides.map(items=>(

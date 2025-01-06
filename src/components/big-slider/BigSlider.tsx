@@ -4,9 +4,7 @@ import {IWithChildren, IWithClass} from "../../types/tehnic";
 import classNames from "classnames";
 import {ReactSVG} from "react-svg";
 import {Swiper, SwiperRef} from "swiper/react";
-import {Mousewheel} from "swiper/modules";
 import {SwiperNavigation} from "../../utils/SwiperNavigation";
-import {useMediaQuery} from "react-responsive";
 
 interface IProps extends IWithChildren, IWithClass{
   slidesPerView: number
@@ -37,8 +35,6 @@ const BigSlider = (props: IProps) => {
         </button>
         <Swiper
             slidesPerView="auto"
-            mousewheel={{sensitivity: 5000}}
-            modules={[Mousewheel]}
             spaceBetween={"10rem"}
             ref={swiperRef}
             onActiveIndexChange={togleSwiper}
