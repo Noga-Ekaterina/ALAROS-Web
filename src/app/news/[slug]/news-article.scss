@@ -1,0 +1,198 @@
+@import "../../styles/mixins";
+
+.news-article{
+  background: #F8F8F8;
+  padding-bottom: 26rem;
+
+  *{
+    font-size: 13rem;
+  }
+
+  img{
+    width: 100%;
+  }
+  
+  .container{
+    position: relative;
+  }
+
+  &__header{
+    margin-block: 38rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm{
+      margin-top: 25rem;
+    }
+
+    *{
+      color: #959595;
+    }
+  }
+
+  &__place{
+    position: absolute;
+    top: 0;
+    left: 487rem;
+
+    @include sm{
+      position: static;
+    }
+  }
+
+  &__title{
+    width: 477rem;
+    font-size: 41rem;
+    font-weight: 300;
+
+    @include sm{
+      width: 100%;
+      font-size: 35rem;
+    }
+  }
+
+  &__description{
+    font-size: 15rem;
+    color: var(--c-red);
+    width: 477rem;
+    margin-block: 40rem;
+
+    @include sm{
+      width: 100%;
+      margin-bottom: 30rem;
+    }
+  }
+
+  &__main{
+    display: flex;
+    justify-content: space-between;
+
+    @include sm{
+      flex-direction: column;
+      gap: 28rem;
+    }
+  }
+
+  &__aside{
+    width: 477rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include sm{
+      width: 100%;
+    }
+  }
+
+  &__body {
+    width: 475rem;
+
+    @include sm{
+      width: 100%;
+    }
+
+    *{
+      &:first-child{
+        margin-top: 0;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      font-size: 20rem;
+      margin-block: 18rem 8rem;
+    }
+
+    >p {
+      margin-block: 8rem;
+    }
+
+    ol{
+      list-style: none;
+      margin-block: 8rem;
+
+      li {
+        counter-increment: num;
+        display: flex;
+        gap: 9rem;
+
+        &::before{
+          content: counter(num) '.';
+          width: 14rem;
+        }
+      }
+    }
+
+    ul{
+      list-style-position: inside;
+
+      li{
+        display: flex;
+        gap: 9rem;
+      }
+    }
+
+    table{
+      border-spacing: 0 10rem;
+      width: 100%;
+      table-layout: fixed;
+
+      *{
+        font-size: 11rem;
+        line-height: 14rem;
+      }
+      tr{
+        margin-block: 12rem;
+
+        &:first-child{
+          margin-top: 0;
+        }
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__slider{
+    margin-top: 18rem;
+  }
+
+  &__slide{
+    width: 314rem;
+
+    p{
+      font-size: 8rem;
+      margin-top: 8rem;
+    }
+  }
+
+  &__link{
+    font-weight: 500;
+
+    *{
+      font-size: 15rem;
+    }
+
+    &--md{
+      @include sm{
+        display: none;
+      }
+    }
+
+    &--sm{
+      display: none;
+
+      @include sm{
+        display: block;
+        margin-block: 30rem;
+      }
+    }
+  }
+}

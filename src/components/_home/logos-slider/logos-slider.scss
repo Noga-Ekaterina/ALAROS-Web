@@ -1,0 +1,21 @@
+.logos-slider{
+  display: flex;
+  align-items: center;
+
+  img{
+    width: 100%;
+  }
+
+  &__swiper{
+
+  }
+
+  &__btn{
+    width: 21rem;
+    flex-shrink: 0;
+
+    &--prev{
+      transform: rotate(180deg);
+    }
+  }
+}
