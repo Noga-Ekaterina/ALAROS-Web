@@ -4,12 +4,18 @@ export interface IHtmlString{
   html: string
 }
 
-export interface IHomeData {
+export interface IHomeMainScreen{
   mainTitle: string
   mainSection: IHtmlString
+}
+
+export interface IHomeBaners{
   bannersDesktop: string[]
   bannersMobile: string[]
   events: IHtmlString
+}
+
+export interface IHomeData extends IHomeMainScreen, IHomeBaners{
   newsTitle: string
 }
 
@@ -82,35 +88,9 @@ export interface IStep{
   note?: string[]
 }
 
-export interface IFestivalPremiya extends ITitlesBlock{
-  steps: IStep[]
-}
-
-export interface IFestivalPriceRow{
-  count: string
-  price: string|number
-}
-
-export interface IFestivalPrice extends ITitlesBlock {
-  table:{
-    titles: IFestivalPriceRow
-    rows: IFestivalPriceRow[]
-  }
-  runningLine: {
-    text: string
-    white: string[]
-  }
-}
-
-export interface IFestivalDateSection{
+export interface INews{
   title: string
-  date: string
-}
-
-export interface IFestivalBid extends ITitlesBlock{
-  form:{
-    inputs: IFormInput[]
-  }
+  allNews: IHtmlString
 }
 
 export interface IFestival {
@@ -167,11 +147,18 @@ export interface IProtectionsDay {
   protections: IHtmlString
 }
 
+export type TDiploma= "gold" |"silver"|"bronze"|"president"|"grandPrix"
+
 export interface IProject{
   number: number
   year: number
   name: string
-  diploma: "gold" |"silver"|"bronze"|"president"|"grandPrix"
+  diploma: TDiploma
   winner: string
   nomination: string|null
+}
+
+export interface IProjectsPage{
+  title: string
+  years: string
 }

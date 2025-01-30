@@ -1,18 +1,20 @@
+'use client'
 import React, {useEffect, useState} from 'react';
-import "./festival-diploma.scss"
-import pagesData from "../../../store/pagesData";
+import "./festival-diploma.scss";
 import Detalis from "../../detalis/Detalis";
 import {Field, Form, Formik} from "formik";
 import {IField} from "../../../types/tehnic";
 import Input from "../../input/Input";
+import {IFestival} from "@/types/data";
 
-const FestivalDiploma = () => {
-  const {festivalText}=pagesData
+interface Props{
+  festivalText: IFestival
+}
+
+const FestivalDiploma = ({festivalText}: Props) => {
   const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
 
   useEffect(() => {
-    if (!festivalText) return
-
     const result: {[key: string]: string}={}
 
     festivalText.bidInputs.forEach((input, index)=>{
@@ -27,7 +29,7 @@ const FestivalDiploma = () => {
     setInputsObj(result)
   }, [festivalText])
 
-  if (!festivalText||!inputsObj) return <div/>
+  if (!inputsObj) return <div/>
 
   return (
       <div className="festival-diploma" id="diploma">
@@ -40,6 +42,7 @@ const FestivalDiploma = () => {
                 {
                   festivalText.diplomaInputs.map((input, index)=>(
                       <Field
+                          key={index}
                           name={index}
                           render={({field}: IField)=> (
                               <Input input={input} field={field}/>

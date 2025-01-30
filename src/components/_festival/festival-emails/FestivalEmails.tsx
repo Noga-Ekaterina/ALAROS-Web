@@ -1,13 +1,13 @@
 import React from 'react';
 import "./festival-emails.scss"
-import pagesData from "../../../store/pagesData";
 import HtmlProcessing from "../../HtmlProcessing";
+import {IFestival} from "@/types/data";
 
-const FestivalEmails = () => {
-  const {festivalText}=pagesData
+interface Props{
+  festivalText: IFestival
+}
 
-  if (!festivalText) return <div/>
-
+const FestivalEmails = ({festivalText}:Props) => {
   return (
       <div className="festival-emails">
         <div className="container festival-emails__container">

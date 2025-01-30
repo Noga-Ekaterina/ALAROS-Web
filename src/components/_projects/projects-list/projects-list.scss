@@ -1,0 +1,12 @@
+.projects-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rem 10rem;
+
+  >p{
+    width: 100%;
+    font-size: 25rem;
+    text-align: center;
+    font-weight: 500;
+  }
+}

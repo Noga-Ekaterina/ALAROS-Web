@@ -1,12 +1,11 @@
+'use client'
 import React, {useEffect, useRef, useState} from 'react';
 import './festival-business-program.scss'
-import pagesData from "../../../store/pagesData";
 import HtmlProcessing from "../../HtmlProcessing";
-import {IHtmlString} from "../../../types/data";
+import {IFestival, IHtmlString} from "../../../types/data";
 import {formaterDate} from "../../../utils/date/formaterDate";
 import {useMediaQuery} from "react-responsive";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {SwiperRef} from "swiper/swiper-react";
+import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import {Mousewheel} from "swiper/modules";
 
@@ -24,6 +23,36 @@ interface IUserCardProps{
   user: IUser
 }
 
+interface Props{
+  festivalText: IFestival
+}
+
+const getUsers=(rows: string)=>{
+  const rowsArr=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/gs)).map(m=>m[1])
+
+  console.log(rowsArr)
+
+  return rowsArr.map(row=>{
+    const [name, jobTitle, image] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);
+
+    return {name, jobTitle, image}
+  })
+}
+
+const getSectionData=(data: string)=>{
+  const [mainTitle]=Array.from(data.matchAll(/<h1>(.*?)<\/h1>/gs)).map(m => m[1])
+  const [moderatorRows, speakersRows]=Array.from(data.matchAll(/<tbody>(.*?)<\/tbody>/gs)).map(m => m[1])
+  const [moderatorsTitle, speakersTitle]=Array.from(data.matchAll(/<h3>(.*?)<\/h3>/gs)).map(m => m[1])
+
+  return({
+    mainTitle,
+    moderatorsTitle,
+    speakersTitle,
+    moderators: getUsers(moderatorRows),
+    speakers: getUsers(speakersRows)
+  })
+}
+
 const UserCard=({user}: IUserCardProps)=>{
   return(
       <div className="session-user">
@@ -35,27 +64,13 @@ const UserCard=({user}: IUserCardProps)=>{
 }
 
 const Session = ({data}: ISessionProps) => {
-  const [title, setTitle] = useState("")
-  const [moderatorsTitle, setModeratorsTitle] = useState('')
-  const [moderators, setModerators] = useState<IUser[]>([])
-  const [speakersTitle, setSpeakersTitle] = useState("")
-  const [speakers, setSpeakers] = useState<IUser[]>([])
+  const {speakers
+  , speakersTitle, moderatorsTitle, moderators, mainTitle
+  }= getSectionData(data)
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const usersSwiperRef=useRef<SwiperRef | null>(null);
   const rolleSwiperRef=useRef<SwiperRef | null>(null);
   const rolleSwiperNav= new SwiperNavigation(rolleSwiperRef)
-
-  const getUsers=(rows: string)=>{
-    const rowsArr=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/gs)).map(m=>m[1])
-
-    console.log(rowsArr)
-
-    return rowsArr.map(row=>{
-      const [name, jobTitle, image] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);
-
-      return {name, jobTitle, image}
-    })
-  }
 
   const handleSwiper=()=>{
     if (!usersSwiperRef.current) return
@@ -71,21 +86,13 @@ const Session = ({data}: ISessionProps) => {
   }
 
   useEffect(() => {
-    const [mainTitle]=Array.from(data.matchAll(/<h1>(.*?)<\/h1>/gs)).map(m => m[1])
-    const [moderatorRows, speakersRows]=Array.from(data.matchAll(/<tbody>(.*?)<\/tbody>/gs)).map(m => m[1])
-    const [moderatorTitle, speakerTitle]=Array.from(data.matchAll(/<h3>(.*?)<\/h3>/gs)).map(m => m[1])
 
-    setTitle(mainTitle)
-    setModeratorsTitle(moderatorTitle)
-    setSpeakersTitle(speakerTitle)
-    setModerators(getUsers(moderatorRows))
-    setSpeakers(getUsers(speakersRows))
   }, []);
 
   return(
       <div className="festival-business-program__session">
         <div className="container">
-          <h3 className="festival-business-program__title">{title}</h3>
+          <h3 className="festival-business-program__title">{mainTitle}</h3>
 
           {
             !mobileScreen ?
@@ -95,7 +102,7 @@ const Session = ({data}: ISessionProps) => {
                     <div className="festival-business-program__moderators">
                       {
                         moderators.map(moderator => (
-                            <UserCard user={moderator}/>
+                            <UserCard key={moderator.name} user={moderator}/>
                         ))
                       }
                     </div>
@@ -105,7 +112,7 @@ const Session = ({data}: ISessionProps) => {
                     <div className="festival-business-program__speakers">
                       {
                         speakers.map(speaker => (
-                            <UserCard user={speaker}/>
+                            <UserCard key={speaker.name} user={speaker}/>
                         ))
                       }
                     </div>
@@ -138,14 +145,14 @@ const Session = ({data}: ISessionProps) => {
                   >
                     {
                       moderators.map(moderator => (
-                          <SwiperSlide className="festival-business-program__slide">
+                          <SwiperSlide key={moderator.name} className="festival-business-program__slide">
                             <UserCard user={moderator}/>
                           </SwiperSlide>
                       ))
                     }
                     {
                       speakers.map(speaker => (
-                          <SwiperSlide className="festival-business-program__slide">
+                          <SwiperSlide key={speaker.name} className="festival-business-program__slide">
                             <UserCard user={speaker}/>
                           </SwiperSlide>
                       ))
@@ -158,11 +165,7 @@ const Session = ({data}: ISessionProps) => {
   )
 }
 
-const FestivalBusinessProgram = () => {
-  const {festivalText} = pagesData
-
-  if (!festivalText) return <div/>
-
+const FestivalBusinessProgram = ({festivalText}:Props) => {
   return (
       <div className="festival-business-program" id="business-program">
         <div className="container titles-block">
@@ -175,8 +178,8 @@ const FestivalBusinessProgram = () => {
           </div>
         </div>
         {
-          festivalText.businessProgramSessions.map(session => (
-              <Session data={session.html}/>
+          festivalText.businessProgramSessions.map((session, index) => (
+              <Session key={index} data={session.html}/>
           ))
         }
       </div>

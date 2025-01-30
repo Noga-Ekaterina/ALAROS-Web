@@ -1,12 +1,13 @@
 import React from 'react';
 import './festival-main-screen.scss'
-import {observer} from "mobx-react-lite";
-import pagesData from "../../../store/pagesData";
 import HtmlProcessing from "../../HtmlProcessing";
-const FestivalMainScreen = () => {
-  const {festivalText}=pagesData
+import {IFestival} from "@/types/data";
 
-  if (!festivalText) return <div/>
+interface Props{
+  festivalText: IFestival
+}
+
+const FestivalMainScreen = ({festivalText}: Props) => {
   return (
       <div className="main-screen festival-main-screen">
         <div className="festival-main-screen__block-text">
@@ -21,4 +22,4 @@ const FestivalMainScreen = () => {
   );
 };
 
-export default observer(FestivalMainScreen)
+export default FestivalMainScreen

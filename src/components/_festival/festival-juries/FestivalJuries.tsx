@@ -1,17 +1,48 @@
+'use client'
 import React, {useEffect, useState} from 'react';
 import "./festival-juries.scss"
-import pagesData from "../../../store/pagesData";
-import {IJury} from "../../../types/data";
+import pagesData from "@/store/pagesData";
+import {IFestival, IJury} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
 import HtmlProcessing from "../../HtmlProcessing";
 
+interface Props{
+  title: string
+  juries: IJury[]
+}
+
 type TItem= IJury|null|undefined
 
-const FestivalJuries = () => {
-  const {festivalText, juries}=pagesData
-  const [slides, setSlides] = useState<TItem[][]>([])
+const getSlides=(juries: IJury[])=>{
+  let newIndex=0
+
+  const result: TItem[][]=[]
+
+  for (let i = 0; i < juries.length; i++){
+    const item=juries[newIndex]
+
+    if (!item)
+      break
+
+    if ((i+1) % 3===0){
+      result.push([item, null])
+      newIndex++
+    } else if (i % 3===0 && i!=0){
+      result.push([null, item])
+      newIndex++
+    } else{
+      result.push([item, juries[newIndex+1]])
+      newIndex=newIndex+2
+    }
+  }
+
+  return result
+}
+
+const FestivalJuries = ({juries, title}:Props) => {
+  const slides= getSlides(juries)
   const rem=useGetRem()
   const [isOpenedArr, setIsOpenedArr] = useState<IJury[]>([])
 
@@ -26,51 +57,20 @@ const FestivalJuries = () => {
     }
   }
 
-  useEffect(() => {
-    if (!juries) return
-
-    let newIndex=0
-
-    const result: TItem[][]=[]
-
-    for (let i = 0; i < juries.length; i++){
-      const item=juries[newIndex]
-
-      if (!item)
-        break
-
-      if ((i+1) % 3===0){
-        result.push([item, null])
-        newIndex++
-      } else if (i % 3===0 && i!=0){
-        result.push([null, item])
-        newIndex++
-      } else{
-        result.push([item, juries[newIndex+1]])
-        newIndex=newIndex+2
-      }
-    }
-
-    setSlides(result)
-  }, []);
-
-  if (!festivalText||!juries) return <div/>
-
   return (
       <div className="festival-juries" id="juries">
-        <h2 className="festival-juries__title">{festivalText.juriesTitle}</h2>
+        <h2 className="festival-juries__title">{title}</h2>
 
         <Swiper
             spaceBetween={10*rem}
             slidesPerView="auto"
         >
           {
-            slides.map(items=>(
-               <SwiperSlide className="festival-juries__slide">
+            slides.map((items, index)=>(
+               <SwiperSlide key={index} className="festival-juries__slide">
                  {
-                   items.map(item=>(
-                       <div
-                           className="festival-juries__item"
+                   items.map((item, itemIndex)=>(
+                       <div key={index+itemIndex} className="festival-juries__item"
                         onClick={()=> openInfo(item)}
                        >
                          {

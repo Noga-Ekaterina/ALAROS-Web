@@ -1,15 +1,15 @@
+'use client'
 import React, {FC, JSX, useEffect, useState} from "react";
 import parse from "html-react-parser";
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 import {useGetHashPosition} from "../hoocs/useGetHashPosition";
 import {smoothScroll} from "../utils/smoothScroll";
 
 interface Props{
-  html: string
+  html: string| JSX.Element[]
 }
 
 const HtmlProcessing = ({html}:Props) => {
-  const [elements, setElements] = useState<JSX.Element[]>([])
   const getHashPosition= useGetHashPosition()
 
   const handleHashed=(event:  React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
@@ -20,9 +20,6 @@ const HtmlProcessing = ({html}:Props) => {
     const hash = targetElement.getAttribute("href")
         ?? targetElement.closest("a")?.getAttribute("href");
 
-
-    console.log(event)
-
     if (!hash) return
 
     smoothScroll(getHashPosition(hash))
@@ -30,69 +27,58 @@ const HtmlProcessing = ({html}:Props) => {
     setTimeout(()=> window.location.hash=hash.slice(1))
   }
 
-  const replaceWithLink = (element: JSX.Element):  JSX.Element => {
-    const props=element.props
+  const replaceWithLink = (element: JSX.Element, index: number): JSX.Element => {
+    const uniqueId = element.props?.id || element.key ||element.props?.className || element.props?.href || `key-${index}`; // Используем id или href, если доступны
+    const key = `${uniqueId}-${element.type}-${index}`; // Уникальный ключ на основе id/href и типа элемента
+    const props = {...element.props, key};
+
     if (element.type === 'a') {
       if (props.className?.includes('download'))
-        return React.createElement("a", {...props, className: props.className.replace("download",''), download: true }, props.children);
+        return React.createElement("a", {...props, className: props.className.replace("download", ''), download: true}, props.children);
       else if (props.href.startsWith('/') && !props.download)
-        return React.createElement(Link, { to: props.href, ...props }, props.children);
+        return React.createElement(Link, { href: props.href, ...props }, props.children);
       else if (props.href.startsWith('#') && !props.download)
         return React.createElement("a", { to: props.href, onClick: handleHashed, ...props }, props.children);
-      else if (props.href=='text')
-        return React.createElement("span", {className: props.className}, props.children);
+      else if (props.href === 'text')
+        return React.createElement("span", { className: props.className, key }, props.children);
     }
+
     if (props && props.children) {
       const newChildren = Array.isArray(props.children)
-          ? props.children.map((child: JSX.Element) => replaceWithLink(child))
-          : replaceWithLink(props.children);
+          ? props.children.map((child: JSX.Element, childIndex: number) => replaceWithLink(child, childIndex))
+          : replaceWithLink(props.children, 0); // Используем 0 для единственного дочернего элемента
       return React.createElement(element.type, { ...props }, newChildren);
     }
     return element;
   };
 
-  useEffect(() => {
-    let result: JSX.Element[]=[]
+
+  const parseHtml=()=>{
 
     // Убираем пустые теги <p></p>
-    let str = html.replace("<p></p>", '');
+    let str = typeof html ==="string"&&html.replace("<p></p>", '');
 
-    // Регулярное выражение для замены ссылки с классом "red" и href "text"
-    // const patternRedLink = /<a[^>]*class="[^"]*red[^"]*"[^>]*href="text"[^>]*>.*?<\/a>/gs;
-    //
-    // // Заменяем ссылки на <span>
-    // str = str.replace(patternRedLink, (match) => {
-    //   console.log("text")
-    //   return match.replace(/<a.*class="([^"]*)".*href="text".*>(.*?)<\/a>/, '<span class="$1">$2</span>');
-    // });
-    //
-    // // Регулярное выражение для замены ссылки с классом "download"
-    // const patternDownloadLink = /<a[^>]*class="[^"]*?download[^"]*?"[^>]*?href="[^>]*">.*?<\/a>/gs;
-    // console.log(patternDownloadLink.test(html))
-    //
-    // // Заменяем на нужный формат
-    // str = str.replace(patternDownloadLink, (match) => {
-    //   console.log("download")
-    //   return match.replace(/<a(.*?)class="download(.*?)"(.*)>(.*?)<\/a>/, '<a$1 download class="$2"$3>$4</a>');
-    // });
-    //
-    // // Регулярное выражение для обработки ссылок
-    // const linksPattern = /<a[^>]*class="([^"']*)"[^>]*href="(\/[^"]*)"[^>]*>(.*?)<\/a>/g;
-
-    const jsx = parse(str)
+    const jsx = str? parse(str):html
 
     if (typeof jsx=="object"){
       if (Array.isArray(jsx))
-        setElements(jsx.map(el=> replaceWithLink(el)))
+        return (jsx.map(el=> replaceWithLink(el, 0)))
       else
-        setElements([replaceWithLink(jsx)])
+        return([replaceWithLink(jsx, 0)])
     }
+  }
+  const [elements, setElements] = useState<JSX.Element[] |undefined>(parseHtml())
+
+  useEffect(() => {
+    setElements(parseHtml())
   }, [html]);
 
   return (
       <>
         {
-          elements.map(el=>el)
+          elements?.map((el, index)=>{
+            return React.createElement(el.type, {...el.props, key:index+ Date.now()}, el.props.children)
+          })
         }
       </>
   );

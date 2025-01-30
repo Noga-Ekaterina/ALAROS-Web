@@ -1,28 +1,32 @@
+'use client'
 import React from 'react';
 import "./home-news-slider.scss"
 import {SwiperSlide} from "swiper/react";
-import pagesData from "../../../store/pagesData";
+import pagesData from "@/store/pagesData";
 import {observer} from "mobx-react-lite";
 import NewsItem from "../../_news/news-item/NewsItem";
 import classNames from "classnames";
 import BigSlider from "../../big-slider/BigSlider";
 import {useMediaQuery} from "react-responsive";
+import {INewsItem} from "@/types/data";
 
-const HomeNewsSlider = () => {
-  const {newsPages, homeData}= pagesData
+interface Props{
+  news: INewsItem[]
+  title: string
+}
+
+const HomeNewsSlider = ({title, news}: Props) => {
   const arrIndexSmall= [2, 5, 7, 10]
   const mobileScreen = useMediaQuery({maxWidth: 660});
-
-  if (!homeData || !newsPages[1]) return <div/>
 
   return (
       <div className="home-news-slider">
         <div className="container">
-          <h2 className="home-news-slider__title">{homeData.newsTitle}</h2>
+          <h2 className="home-news-slider__title">{title}</h2>
 
           <BigSlider slidesPerView={mobileScreen? 1:2}>
             {
-                newsPages["1"].map((news, index) => (
+                news.map((news, index) => (
                     <SwiperSlide
                         key={`news-slide-${news.slug}`}
                         className={classNames(
@@ -40,4 +44,4 @@ const HomeNewsSlider = () => {
   );
 };
 
-export default observer(HomeNewsSlider);
+export default HomeNewsSlider

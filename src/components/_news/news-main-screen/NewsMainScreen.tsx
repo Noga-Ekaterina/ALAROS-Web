@@ -1,14 +1,18 @@
 import React from 'react';
 import './news-main-screen.scss'
-const NewsMainScreen = () => {
+import {INews} from "@/types/data";
+interface Props{
+  data: INews
+}
+const NewsMainScreen = ({data}: Props) => {
   return (
       <div className="main-screen news-main-screen">
         <div className="news-main-screen__block-text">
-          <h1 className="news-main-screen__title">Мы — объединение российских специалистов в&nbsp;области ландшафтной архитектуры, градостроительства  и&nbsp;ландшафтного планирования</h1>
+          <h1 className="news-main-screen__title">{data.title}</h1>
         </div>
 
         <div className="news-main-screen__img-wrapp">
-          <img src="/Assets/Projects/2023/Project_5/cover.jpg" alt="" className="main-screen__img"/>
+          <img src="/Assets/Page/2023/Project_5/cover.jpg" alt="" className="main-screen__img"/>
           <div className="news-main-screen__elipse"></div>
 
           <div className="main-screen__signature-wrapp">

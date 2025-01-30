@@ -1,3 +1,4 @@
+'use client'
 import React, {useRef, useState} from 'react';
 import "./big-slider.scss"
 import {IWithChildren, IWithClass} from "../../types/tehnic";

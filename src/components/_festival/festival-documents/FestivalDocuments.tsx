@@ -1,35 +1,31 @@
+'use client'
 import React, {useEffect, useState} from 'react';
 import "./festival-documents.scss"
-import pagesData from "../../../store/pagesData";
 import HtmlProcessing from "../../HtmlProcessing";
+import {IFestival, IHtmlString} from "@/types/data";
+
+interface Props{
+  festivalText: IFestival
+}
 
 interface IBtn{
   title: string
   link: string
 }
 
-const FestivalDocuments = () => {
-  const {festivalText}=pagesData
-  const [btns, setBtns] = useState<IBtn[]>([])
+const getBtns=(arr: IHtmlString[]) => {
+  return arr.map(item => {
+    let str = item.html.replace('<p>', '')
+    str = str.replace('</p>', '')
 
-  useEffect(() => {
-    if (!festivalText) return
+    const [title, link] = str.split(/:\s?/)
 
-    const result: IBtn[]=[]
+    return ({title: `<span>${title}</span>`, link})
+  })
+}
 
-    festivalText.documentsLinks.map(item=>{
-      let str= item.html.replace('<p>','')
-      str=str.replace('</p>','')
-
-      const [title, link]= str.split(/:\s?/)
-
-      result.push({title: `<span>${title}</span>`, link})
-    })
-
-    setBtns(result)
-  }, []);
-
-  if (!festivalText) return <div/>
+const FestivalDocuments = ({festivalText}: Props) => {
+  const btns= getBtns(festivalText.documentsLinks)
 
   return (
       <div className="festival-documents" id="documents">
@@ -41,7 +37,7 @@ const FestivalDocuments = () => {
           <div className="festival-documents__btns">
             {
               btns.map(btn=>(
-                  <div className="festival-documents__btn">
+                  <div className="festival-documents__btn" key={btn.title}>
                     <HtmlProcessing html={btn.title}/>
                     <HtmlProcessing html={btn.link}/>
                   </div>

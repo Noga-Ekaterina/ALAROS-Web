@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-import {fetchData} from "../utils/fetchData";
 import {
   IEventsByYear,
   IEventsDataYear,
@@ -7,8 +6,8 @@ import {
   IHomeData,
   IJury,
   INewsItem,
-  INewsPages,
-  IProtectionsDay
+  INewsPages, IProject, IProjectsPage,
+  IProtectionsDay, TDiploma
 } from "../types/data";
 import axios from "axios";
 import {formaterDate} from "../utils/date/formaterDate";
@@ -25,6 +24,32 @@ const getNewsQueryStr=(page: number)=>(
     `
 )
 
+const getProjectsQueryStr= (year: null| string, diploma: null |string, page: number)=>{
+  const diplomaFilter= diploma? `diploma: ${diploma}`:''
+  const yearFilter= year? `year: ${year}, `:""
+
+  return (`
+    projectsConnection(
+      stage: PUBLISHED,
+      where: {${yearFilter}${diplomaFilter}},      first: ${10 * page}, skip: ${10 * (page - 1)}
+    ) {
+      aggregate {
+        count
+      }
+    }
+    projects(
+      where: {${yearFilter}${diplomaFilter}},
+      first: ${10 * page}, skip: ${10 * (page - 1)}
+    ){
+      name
+      nomination
+      number
+      diploma
+      year
+      winner
+    }
+  `)
+}
 class Store {
   constructor() {
     makeAutoObservable(this);
@@ -42,10 +67,16 @@ class Store {
 
   protectionsDays: IProtectionsDay[]|null=null
 
+  projectsPages: IProjectsPage | null= null
+
+  projects: IProject[] |null=null
+
+  projectsCount=0
+
   fetchHomeData= async ()=>{
     axios({
       method: 'POST',
-      url: process.env.REACT_APP_API_URL,
+      url: process.env.NEXT_PUBLIC_API_URL,
       data: {
         query: `
           query MyQuery {
@@ -82,7 +113,8 @@ class Store {
       this.newsPages[1] = newsAll.map((item: INewsItem) => ({
         ...item,
         date: formaterDate(item.date)
-      }));    });
+      }));
+    });
   }
 
   fetchCalendarEvents= async ()=>{
@@ -93,7 +125,7 @@ class Store {
     if (!(page in this.newsPages)) {
       axios({
         method: 'POST',
-        url: process.env.REACT_APP_API_URL,
+        url: process.env.NEXT_PUBLIC_API_URL,
         data: {
           query: `
           query NewsAllQuery {
@@ -115,7 +147,7 @@ class Store {
   fetchFestivalText= async (view: string) =>{
     axios({
       method: 'POST',
-      url: process.env.REACT_APP_API_URL,
+      url: process.env.NEXT_PUBLIC_API_URL,
       data: {
         query: `
           query FestivalQuery {
@@ -240,6 +272,47 @@ class Store {
         ...item,
         date: formaterDate(item.date)
       }))
+    });
+  }
+
+  fetchProjectsPage = (year: null| string, diploma: null |string, page: number)=>{
+    axios({
+      method: 'POST',
+      url: process.env.NEXT_PUBLIC_API_URL,
+      data: {
+        query: `
+          query NewsAllQuery {
+            ${getProjectsQueryStr(year, diploma, page)}
+            projectsPages {
+              title
+              years
+            }
+          }`
+      }
+    }).then((resp) => {
+      const {projectsConnection, projects, projectsPages}= resp.data.data
+
+      this.projectsCount= projectsConnection.aggregate.count
+      this.projectsPages= projectsPages[0]
+      this.projects= projects
+    });
+  }
+
+  fetchProjects = (year: null| string, diploma: null |string, page: number)=>{
+    axios({
+      method: 'POST',
+      url: process.env.NEXT_PUBLIC_API_URL,
+      data: {
+        query: `
+          query NewsAllQuery {
+            ${getProjectsQueryStr(year, diploma, page)}
+          }`
+      }
+    }).then((resp) => {
+      const {projectsConnection, projects}= resp.data.data
+
+      this.projectsCount= projectsConnection.aggregate.count
+      this.projects= projects
     });
   }
 }

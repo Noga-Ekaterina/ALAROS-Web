@@ -1,57 +1,33 @@
 {
-  "name": "alaros",
+  "name": "untitled",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.108",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "axios": "^1.7.7",
+    "axios": "^1.7.9",
     "classnames": "^2.5.1",
     "formik": "^2.4.6",
-    "html-react-parser": "^5.1.18",
-    "mobx-react": "^9.1.1",
-    "mobx-react-lite": "^3.0.7",
+    "html-react-parser": "^5.2.2",
+    "mobx-react-lite": "^4.1.0",
+    "next": "14.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-responsive": "^10.0.0",
-    "react-router": "^6.26.1",
-    "react-router-dom": "^6.26.1",
-    "react-scripts": "5.0.1",
-    "react-svg": "^16.1.34",
-    "sass": "^1.77.4",
-    "swiper": "^11.1.14",
-    "swiper-react": "^1.0.0",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "react-svg": "^16.2.0",
+    "sass": "^1.83.1",
+    "swiper": "^11.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@types/swiper": "^6.0.0",
+    "typescript": "^5"
   }
 }

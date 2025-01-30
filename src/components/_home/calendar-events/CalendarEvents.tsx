@@ -1,17 +1,22 @@
+'use client'
 import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
 import "./calendar-events.scss";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import { Mousewheel } from 'swiper/modules';
 import {createDate, createYear, getMonthesNames} from "../../../utils/date";
 import classNames from "classnames";
-import pagesData from "../../../store/pagesData";
+import pagesData from "@/store/pagesData";
 import { IDay } from "../../../types/tehnic";
 import {ReactSVG} from "react-svg";
 import Dropdown from "../../dropdown/Dropdown";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
-import {IEventsByYear} from "../../../types/data";
+import {IEventsByYear, IEventsDataYear} from "../../../types/data";
 import {eventsDataProcessing} from "../../../utils/eventsDataProcessing";
 import HtmlProcessing from "../../HtmlProcessing";
+
+interface Props{
+  calendarEvents: IEventsDataYear[]
+}
 
 interface ICalendarDay extends IDay {
   startEvent?: boolean;
@@ -19,8 +24,7 @@ interface ICalendarDay extends IDay {
   passed?: boolean
 }
 
-const CalendarEvents = () => {
-  const { calendarEvents } = pagesData;
+const CalendarEvents = ({calendarEvents}:Props) => {
   const [eventsByYear, setEventsByYear] = useState<null | IEventsByYear>(null)
   const [years, setYears] = useState<string[]>([])
   const [days, setDays] = useState<ICalendarDay[]>([]);
@@ -290,7 +294,7 @@ const CalendarEvents = () => {
 
                 if (event) {
                   return (
-                      <SwiperSlide className="calendar-events__event">
+                      <SwiperSlide key={`${start.year} ${event.date.start}`} className="calendar-events__event">
                         <div className="calendar-events__block-text">
                           <div className="calendar-events__titles">
                             <h2 className="calendar-events__date">{event.date.start} - {event.date.end}</h2>
@@ -302,7 +306,7 @@ const CalendarEvents = () => {
                             </div>
                           </div>
                           <div className="calendar-events__description">
-                            <HtmlProcessing html={event.description}/>
+                            <HtmlProcessing html={`<p>${event.description}</p>`}/>
                           </div>
                         </div>
                         <img
@@ -348,7 +352,7 @@ const CalendarEvents = () => {
               {
                 days.map(day => (
                     <SwiperSlide
-                        key={day.dayNumber}
+                        key={`${day.dayNumber} ${day.monthNumber} ${day.year}`}
                         className={classNames('calendar-events__day',
                             (day.dayNumberInWeek === 1 || day.dayNumberInWeek === 7) && "red",
                             day.dayNumberInWeek === 1 && "calendar-events__day--last-week",

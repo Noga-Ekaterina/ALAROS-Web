@@ -1,6 +1,6 @@
 import React from 'react';
 import "./footer.scss"
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -14,9 +14,9 @@ const Footer = () => {
           <div className="footer__item footer__info">
             <h2 className="footer__title">Информация</h2>
             <ul>
-              <li><Link to="/">Об ассоциации</Link></li>
-              <li><Link to="/festival">Фестиваль</Link></li>
-              <li><Link to="/">Партнерам</Link></li>
+              <li><Link href="/">Об ассоциации</Link></li>
+              <li><Link href="/festival">Фестиваль</Link></li>
+              <li><Link href="/">Партнерам</Link></li>
             </ul>
           </div>
           <div className="footer__item footer__contacts">

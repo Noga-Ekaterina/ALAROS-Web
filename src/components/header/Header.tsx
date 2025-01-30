@@ -2,7 +2,7 @@ import React from 'react';
 import "./header.scss"
 import {IWithClass} from "../../types/tehnic";
 import classNames from "classnames";
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 import {ReactSVG} from "react-svg";
 
 interface Props extends IWithClass{
@@ -13,7 +13,7 @@ const Header = (props: Props) => {
       <header className={classNames("header", props.className)}>
         <div className="container header__container">
           <div className="header__left-block">
-            <Link to="/" className="header__logo">
+            <Link href="/" className="header__logo">
               <ReactSVG src="/Assets/Icons/logo.svg"/>
             </Link>
             <button className="header__menu-wrapp">

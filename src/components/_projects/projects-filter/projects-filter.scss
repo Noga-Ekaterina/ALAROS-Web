@@ -1,0 +1,40 @@
+.projects-filter{
+  display: flex;
+  gap: 6rem;
+  position: relative;
+  z-index: 3;
+  margin-block: 52rem 35rem;
+
+  *{
+    font-size: 13rem;
+  }
+
+  &__year{
+    width: 114rem;
+  }
+
+  &__diploma{
+    width: 260rem;
+  }
+
+  &__btn{
+    padding: 14rem;
+    background: var(--c-green-text);
+    color: #fff;
+  }
+
+  .dropdown{
+    &__title{
+      background: #D9D9D9;
+      padding: 14rem;
+    }
+
+    &__content{
+      background: #D9D9D9;
+    }
+
+    &__item{
+      border: none;
+    }
+  }
+}

@@ -1,33 +1,28 @@
-import React, {useEffect, useState} from 'react';
+'use client'
+import React, {Fragment, useState} from 'react';
 import "./festival-date.scss"
-import pagesData from "../../../store/pagesData";
 import classNames from "classnames";
-import {IFestivalDateSection} from '../../../types/data'
+import {IFestival, IHtmlString} from '../../../types/data'
 import HtmlProcessing from "../../HtmlProcessing";
-import {observer} from "mobx-react-lite";
 
-const FestivalDate = () => {
-  const {festivalText}=pagesData
-  const [sections, setSections] = useState<IFestivalDateSection[]>([])
+interface Props{
+  festivalText: IFestival
+}
+
+const getSections=(arr: IHtmlString[])=>{
+
+  return arr.map(section=>{
+    let str= section.html.replace("<p>", "")
+    str=str.replace("<\/p>", '')
+
+    const [title, date]= str.split(/:\s?/)
+
+    return ({title: `<span>${title}</span>`, date: `<span>${date}</span>`})
+  })}
+
+const FestivalDate = ({festivalText}:Props) => {
+  const sections= getSections(festivalText.dateSections)
   const [activeDateIndex, setActiveDateIndex] = useState(0)
-
-  useEffect(() => {
-    if (!festivalText) return
-
-    const result: IFestivalDateSection[]=[]
-    festivalText.dateSections.map(section=>{
-      let str= section.html.replace("<p>", "")
-      str=str.replace("<\/p>", '')
-
-      const [title, date]= str.split(/:\s?/)
-
-      result.push({title: `<span>${title}</span>`, date: `<span>${date}</span>`})
-    })
-
-    console.log(result)
-
-    setSections(result)
-  }, [festivalText]);
 
   if (!festivalText) return <div/>
   return (
@@ -38,7 +33,7 @@ const FestivalDate = () => {
             <p className="festival-date__btns">
               {
                 sections.map((section, index)=>(
-                    <>
+                    <Fragment key={index}>
                       <button
                         className={classNames(
                             "festival-date__btn",
@@ -52,7 +47,7 @@ const FestivalDate = () => {
                       {
                         index<sections.length-1 && <span>|</span>
                       }
-                    </>
+                    </Fragment>
                 ))
               }
             </p>
@@ -67,4 +62,4 @@ const FestivalDate = () => {
   );
 };
 
-export default observer(FestivalDate);
+export default FestivalDate;

@@ -1,13 +1,18 @@
+'use client'
 import React, {useEffect, useState} from 'react';
 import "./home-events.scss"
 import {Swiper, SwiperSlide} from "swiper/react";
-import pagesData from "../../../store/pagesData";
 import {Autoplay, Pagination} from "swiper/modules";
 import {useMediaQuery} from "react-responsive";
 import {ReactSVG} from "react-svg";
 import HtmlProcessing from "../../HtmlProcessing";
-const HomeEvents = () => {
-  const {homeData}=pagesData
+import {IHomeData} from "@/types/data";
+
+interface Props{
+  homeData: IHomeData
+}
+
+const HomeEvents = ({homeData}:Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
 
   if (!homeData) return <div/>
@@ -29,8 +34,8 @@ const HomeEvents = () => {
               mobileScreen?
                   <>
                   {
-                    homeData.bannersMobile.map(banner=>(
-                        <SwiperSlide>
+                    homeData.bannersMobile.map((banner, index)=>(
+                        <SwiperSlide key={`mob banner ${index}`}>
                           <img src={`/Assets/Pages/Home/Banners/Mobile/${banner}`} alt=""/>
                         </SwiperSlide>
                     ))
@@ -39,8 +44,8 @@ const HomeEvents = () => {
                   :
                   <>
                     {
-                      homeData.bannersDesktop.map(banner=>(
-                          <SwiperSlide>
+                      homeData.bannersDesktop.map((banner, index)=>(
+                          <SwiperSlide key={`banner ${index}`}>
                             <img src={`/Assets/Pages/Home/Banners/Desktop/${banner}`} alt=""/>
                           </SwiperSlide>
                       ))

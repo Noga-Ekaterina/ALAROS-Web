@@ -1,4 +1,4 @@
-import React, {JSX, useEffect, useState} from 'react';
+import React, {Fragment, JSX, useEffect, useState} from 'react';
 import "./input.scss"
 import {IFormInput} from "../../types/data";
 import parse from "html-react-parser";
@@ -61,13 +61,13 @@ const Input = ({input, field}: IProps) => {
                         <div className="input__radios">
                           {
                             input.values.map((value, valueIndex) => (
-                                <>
+                                <Fragment key={`bid-radio-${valueIndex}`}>
                                   <input {...field}
                                       value={value} type="radio" id={`bid-radio-${valueIndex}`}/>
                                   <label htmlFor={`bid-radio-${valueIndex}`}>{value}</label>
 
                                   {input.values? valueIndex< input.values.length-1 && <span>|</span> :<></>}
-                                </>
+                                </Fragment>
                             ))
                           }
                         </div>

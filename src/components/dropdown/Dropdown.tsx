@@ -1,3 +1,4 @@
+'use client'
 import React, {useRef, useState, useEffect, ChangeEvent, JSX} from 'react';
 import "./dropdown.scss"
 import {useClose} from "../../hoocs/useClose";
@@ -11,9 +12,10 @@ interface Props extends IWithClass{
   name?: string
   elements?: JSX.Element[]
   arrow?: boolean
+  years?: boolean
   handleCheck: (e: ChangeEvent<HTMLInputElement>)=> void
 }
-function Dropdown({value, values, name, handleCheck, className, elements, arrow}:Props) {
+function Dropdown({value, values, name, handleCheck, className, elements, arrow, years}:Props) {
    const [isOpen, setIsOpen] = useState(false);
    const dropdownRef = useRef(null);
 
@@ -21,7 +23,7 @@ function Dropdown({value, values, name, handleCheck, className, elements, arrow}
    return ( 
       <div className={classNames("dropdown", isOpen && "open", className)} ref={dropdownRef}>
          <div className="dropdown__title" onClick={()=> setIsOpen(!isOpen)}>
-           <span className="dropdown__title-text">{elements? elements[values.indexOf(value)] :value}</span>
+           <span className="dropdown__title-text">{elements? elements[values.indexOf(value)] :years? value.replace(/(года?)/, "") :value}</span>
 
            {
              arrow &&(

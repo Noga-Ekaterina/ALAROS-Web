@@ -1,0 +1,31 @@
+import React from 'react';
+import "./projects-list.scss"
+import pagesData from "@/store/pagesData";
+import Project from "../../project/Project";
+import {observer} from "mobx-react-lite";
+import {IProject} from "@/types/data";
+
+interface Props{
+  projects: IProject[]
+}
+
+const ProjectsList = ({projects}:Props) => {
+  return (
+      <div className="projects-list">
+        {
+          projects.length==0?
+              <p>ничего не найдено</p>
+              :
+              <>
+                {
+                  projects.map(project=>(
+                      <Project project={project}/>
+                  ))
+                }
+              </>
+        }
+      </div>
+  );
+};
+
+export default ProjectsList

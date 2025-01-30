@@ -1,5 +1,5 @@
 export * from './createDate';
-export * from './formatDate';
+export * from './formaterDate';
 export * from './getMonthesNames';
 export * from './getWeekDaysNames';
 export * from './getWeekNumber';

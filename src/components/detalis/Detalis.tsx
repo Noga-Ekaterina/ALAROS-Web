@@ -1,3 +1,4 @@
+'use client'
 import React, {JSX, useEffect, useRef, useState} from 'react';
 import "./detalis.scss"
 import {IWithChildren} from "../../types/tehnic";

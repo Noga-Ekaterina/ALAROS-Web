@@ -1,12 +1,17 @@
+'use client'
 import React, {JSX, useEffect, useState} from 'react';
 import "./festival-bid.scss"
-import pagesData from "../../../store/pagesData";
+import pagesData from "@/store/pagesData";
 import {Form, Formik, Field} from "formik";
 import Input from "../../input/Input";
 import {IField} from "../../../types/tehnic";
+import {IFestival} from "@/types/data";
 
-const FestivalBid = () => {
-  const {festivalText}=pagesData
+interface Props{
+  festivalText: IFestival
+}
+
+const FestivalBid = ({festivalText}: Props) => {
   const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
 
   useEffect(() => {
@@ -21,12 +26,10 @@ const FestivalBid = () => {
         result[index]=input.values[0]
     })
 
-    console.log(result)
-
     setInputsObj(result)
   }, [festivalText])
 
-  if (!festivalText||!inputsObj) return <div/>
+  if (!inputsObj) return <div/>
 
   return (
       <div className="festival-bid" id="bid">
@@ -40,6 +43,7 @@ const FestivalBid = () => {
                 {
                   festivalText.bidInputs.map((input, index)=>(
                       <Field
+                          key={index}
                         name={index}
                         render={({field}: IField)=> (
                             <Input input={input} field={field}/>

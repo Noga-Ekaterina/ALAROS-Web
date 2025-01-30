@@ -1,62 +1,53 @@
+'use client'
 import React, {JSX, useEffect, useState} from 'react';
 import "./festival-premiya.scss"
 import {observer} from "mobx-react-lite";
-import pagesData from "../../../store/pagesData";
+import pagesData from "@/store/pagesData";
 import parse from "html-react-parser";
 import HtmlProcessing from "../../HtmlProcessing";
+import {IFestival, IHtmlString} from "@/types/data";
 
-const FestivalPremiya = () => {
-  const {festivalText}=pagesData
-  const [cols, setCols] = useState<JSX.Element[]>([])
+interface Props{
+  festivalText: IFestival
+}
 
-  useEffect(() => {
-    if (!festivalText) return
+const getCols=(arr: IHtmlString[])=>{
 
-    const steps: JSX.Element[]=[]
+  const steps: JSX.Element[]=[]
 
-    festivalText.premiyaSteps.forEach((step, index)=>{
-      // let str= step.text
-      //
-      // step.links.forEach(link=>{
-      //   str=str.replace(link.text, `<a href="${link.href}" class="${link.color} link-underline">${link.text}</a>`)
-      // })
-
-
-      steps.push(
-          <div key={`festival-premiya-step-${index}`} className="festival-premiya__step">
-            <span className="festival-premiya__num">0{index+1}</span>
-            <div>
-              <HtmlProcessing html={step.html}/>
-              {
-                // step.note &&
-                //   <>
-                //      <br/>
-                //      <p className="festival-premiya__note">{step.note}</p>
-                //   </>
-              }
-            </div>
-          </div>
-      )
-    })
-
-    const result: JSX.Element[]=[]
-    const colSize= Math.ceil(steps.length/2)
-    const colsArr: JSX.Element[][]=[steps.slice(0, colSize), steps.slice(colSize)]
-
-    colsArr.forEach(((col, index)=>{
-      result.push(
-          <div key={`festival-premiya-col-${index}`} className="festival-premiya__col">
+  arr.forEach((step, index)=>{
+    steps.push(
+        <div key={`festival-premiya-step-${index}`} className="festival-premiya__step">
+          <span className="festival-premiya__num">0{index+1}</span>
+          <div>
+            <HtmlProcessing html={step.html}/>
             {
-              col.map(step=> step)
+              // step.note &&
+              //   <>
+              //      <br/>
+              //      <p className="festival-premiya__note">{step.note}</p>
+              //   </>
             }
           </div>
-      )
-    }))
+        </div>
+    )
+  })
 
-    setCols(result)
-  }, [festivalText]);
+  const result: JSX.Element[]=[]
+  const colSize= Math.ceil(steps.length/2)
+  const colsArr: JSX.Element[][]=[steps.slice(0, colSize), steps.slice(colSize)]
 
-  if (!festivalText) return <></>
+  return colsArr.map((col, index)=> (
+      <div key={`festival-premiya-col-${index}`} className="festival-premiya__col">
+        {
+          col.map(step => step)
+        }
+      </div>
+  ))
+}
+
+const FestivalPremiya = ({festivalText}: Props) => {
+  const cols = getCols(festivalText.premiyaSteps)
 
   return (
       <div className="container festival-premiya" id="premiya">

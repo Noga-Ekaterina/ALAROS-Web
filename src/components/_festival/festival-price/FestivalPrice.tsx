@@ -1,18 +1,15 @@
-import React, {useEffect, useState} from 'react';
+'use client'
+import React from 'react';
 import "./festival-price.scss"
-import {observer} from "mobx-react-lite";
-import pagesData from "../../../store/pagesData";
 import Marquee from 'react-fast-marquee';
-import {useMediaQuery} from "react-responsive";
-import {useGetRem} from "../../../hoocs/useGetRem";
-import parse from "html-react-parser";
 import HtmlProcessing from "../../HtmlProcessing";
+import {IFestival} from "@/types/data";
 
-const FestivalPrice = () => {
-  const {festivalText} = pagesData
+interface Props{
+  festivalText: IFestival
+}
 
-  if (!festivalText) return <div/>
-
+const FestivalPrice = ({festivalText}:Props) => {
   return (
       <div className="festival-price" id="price">
         <div className="container">
@@ -35,4 +32,4 @@ const FestivalPrice = () => {
   );
 };
 
-export default observer(FestivalPrice);
+export default FestivalPrice;
