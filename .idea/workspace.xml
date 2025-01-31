@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="переход на next">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила проблемы с фото">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/src/app",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
@@ -56,6 +55,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -92,7 +96,7 @@
       <workItem from="1710767255985" duration="606000" />
       <workItem from="1711295585256" duration="187000" />
       <workItem from="1738267135921" duration="1319000" />
-      <workItem from="1738324019338" duration="1605000" />
+      <workItem from="1738324019338" duration="3382000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -110,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738268480599</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="исправила проблемы с фото">
+      <option name="closed" value="true" />
+      <created>1738327456171</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738327456171</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="переход на next" />
-    <option name="LAST_COMMIT_MESSAGE" value="переход на next" />
+    <MESSAGE value="исправила проблемы с фото" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправила проблемы с фото" />
   </component>
 </project>

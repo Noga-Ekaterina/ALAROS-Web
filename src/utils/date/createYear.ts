@@ -8,7 +8,7 @@ interface CreateYearParams {
 }
 
 export const createYear = (params?: CreateYearParams) => {
-  const locale = params?.locale ?? 'default';
+  const locale = "ru";
 
   const monthCount = 12;
   const today = createDate();

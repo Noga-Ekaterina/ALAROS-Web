@@ -7,7 +7,7 @@ interface CreateDateParams {
 }
 
 export const createDate = (params?: CreateDateParams) => {
-  const locale = params?.locale ?? 'default';
+  const locale = "ru";
 
   const d = params?.date ?? new Date();
   const dayNumber = d.getDate();
