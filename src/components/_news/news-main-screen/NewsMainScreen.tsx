@@ -12,7 +12,7 @@ const NewsMainScreen = ({data}: Props) => {
         </div>
 
         <div className="news-main-screen__img-wrapp">
-          <img src="/Assets/Page/2023/Project_5/cover.jpg" alt="" className="main-screen__img"/>
+          <img src="/Assets/Projects/2023/Project_5/cover.jpg" alt="" className="main-screen__img"/>
           <div className="news-main-screen__elipse"></div>
 
           <div className="main-screen__signature-wrapp">

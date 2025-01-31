@@ -25,7 +25,7 @@ const HomeMainScreen = ({homeData}: Props) => {
           >
             <SwiperSlide>
               <Link href={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Page/2023/Project_1/cover.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_1/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -42,7 +42,7 @@ const HomeMainScreen = ({homeData}: Props) => {
             </SwiperSlide>
             <SwiperSlide>
               <Link href={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Page/2023/Project_2/cover.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_2/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -59,7 +59,7 @@ const HomeMainScreen = ({homeData}: Props) => {
             </SwiperSlide>
             <SwiperSlide>
               <Link href={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Page/2023/Project_3/cover.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_3/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
@@ -75,7 +75,7 @@ const HomeMainScreen = ({homeData}: Props) => {
             </SwiperSlide>
             <SwiperSlide>
               <Link href={`/`} className="home-main-screen__slide-content">
-                <img src="/Assets/Page/2023/Project_4/cover.jpg" alt="" className="main-screen__img"/>
+                <img src="/Assets/Projects/2023/Project_4/cover.jpg" alt="" className="main-screen__img"/>
                 <div className="home-main-screen__slide-title-wrapp">
                   <h2 className='home-main-screen__slide-title'>
                     Ассоциация <br/>
