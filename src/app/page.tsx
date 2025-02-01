@@ -1,12 +1,12 @@
 import React from 'react';
 import HomeMainScreen from "../components/_home/home-main-screen/HomeMainScreen";
 import HomeEvents from "../components/_home/home-events/HomeEvents";
-import {pagesData} from "@/pagesData";
 import CalendarEvents from "../components/_home/calendar-events/CalendarEvents";
 import HomeNewsSlider from "../components/_home/home-news-slider/HomeNewsSlider";
 import LogosSlider from "../components/_home/logos-slider/LogosSlider";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
+import {unstable_cache} from "next/cache";
 
 interface IData{
   homes: IHomeData[]
@@ -14,7 +14,7 @@ interface IData{
   newsAll: INewsItem[]
 }
 
-const init= async ()=>{
+const init= unstable_cache(async ()=>{
   const data: IData|null= await fetchData(`
           query MyQuery {
             homes {
@@ -45,15 +45,11 @@ const init= async ()=>{
 
   const result={homeData: homes[0], calendarEvents: eventsYears, news: newsAll}
 
-  pagesData.home=result
-
-  pagesData.newsPages[1]=result.news
-  
   return result
-}
+}, ["home"])
 
 const Home = async () => {
-  const data= pagesData.home?? await init()
+  const data=  await init()
 
   if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
 

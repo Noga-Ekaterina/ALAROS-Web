@@ -15,6 +15,7 @@ import FestivalForum from "../../components/_festival/festival-forum/FestivalFor
 import {fetchData} from "@/utils/fetchData";
 import {IFestival, IJury, IProtectionsDay} from "@/types/data";
 import {pagesData} from "@/pagesData";
+import {unstable_cache} from "next/cache";
 
 interface IData{
   festivalS: IFestival[]
@@ -22,7 +23,11 @@ interface IData{
   protectionsDays: IProtectionsDay[]
 }
 
-const init= async ()=>{
+interface Props{
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+const init= unstable_cache(async ()=>{
   const data: IData| null= await fetchData(`
           query FestivalQuery {
             festivalS {
@@ -143,19 +148,21 @@ const init= async ()=>{
 
   const result= {festivalText: festivalS[0], juries, protectionsDays}
 
-  pagesData.festival= result
 
   return result
-}
+},
+    ["festival"], {revalidate: 1})
 
-const Page = async () => {
-  const data= pagesData.festival?? await init()
+const Page = async ({searchParams}:Props) => {
+  const {preview}=searchParams
+  const data=  await init()
 
   if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
 
   const {festivalText, juries, protectionsDays}= data
   return (
       <div>
+        <div style={{display:"none"}}>{typeof preview=="string"&&preview}</div>
         <FestivalMainScreen festivalText={festivalText}/>
         <FestivalPremiya festivalText={festivalText}/>
         <FestivalPrice festivalText={festivalText}/>

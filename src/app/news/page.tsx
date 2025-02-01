@@ -10,38 +10,29 @@ interface Props{
 }
 
 interface IData{
-  newsAll?: INewsItem[]
-  newsPages?: INews[]
+  newsAll: INewsItem[]
+  newsPages: INews[]
 }
 
 const init= async (page: string)=>{
-  if (page in pagesData.newsPages && pagesData.news) return {pageData: pagesData.news, news: pagesData.newsPages[page]}
 
   const data: IData|null= await fetchData( `
           query NewsAllQuery {
-            ${!(page in pagesData.newsPages) &&getNewsQueryStr(Number(page))}
-            ${!pagesData.news&&`
+            ${getNewsQueryStr(Number(page))}
             newsPages {
               allNews {
                 html
               }
               title
             }
-            `}
           }
       `)
 
   if (!data) return null
 
-  if (data.newsPages)
-    pagesData.news= data.newsPages[0]
-
-  if (data.newsAll)
-    pagesData.newsPages[page]=data.newsAll
-
   return {
-    pageData: data.newsPages? data.newsPages[0] :pagesData.news,
-    news: data.newsAll?? pagesData.newsPages[page]
+    pageData: data.newsPages[0],
+    news: data.newsAll
   }
 }
 

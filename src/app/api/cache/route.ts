@@ -3,7 +3,9 @@ import { revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 
 interface RevalidateRequest {
-  tag: string;
+  data:{
+    __typename: string
+  }
 }
 
 interface RevalidateResponse {
@@ -22,25 +24,15 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     const body = (await request.json()) as RevalidateRequest;
     console.log('Request body:', body);
 
-    const { tag } = body;
+    const {__typename } = body.data;
 
-    // Проверяем, передан ли тег
-    if (!tag) {
-      console.log('Tag is missing in the request body');
-      return NextResponse.json(
-          { success: false, revalidated: false, error: 'Tag is required' },
-          { status: 400 }
-      );
-    }
-
-    // Логируем тег
-    console.log('Revalidating tag:', tag);
-
-    // Вызываем revalidateTag для указанного тега
-    revalidateTag(tag);
+    if (__typename==="Festival" || __typename==="Jury" || __typename==="ProtectionsDay" ||__typename==="Input" || __typename==="Project")
+      revalidateTag("festival");
+    else if (__typename==="Home" || __typename==="News")
+      revalidateTag('home')
 
     // Возвращаем успешный ответ
-    return NextResponse.json({ success: true, revalidated: true, tag });
+    return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {
     // Логируем ошибку
     console.error('Error in revalidate route:', error);
