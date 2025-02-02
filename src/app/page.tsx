@@ -50,7 +50,7 @@ const init= unstable_cache(async ()=>{
   const result={homeData: homes[0], calendarEvents: eventsYears, news: newsAll}
 
   return result
-}, ["home"])
+}, ["home"], {tags: ["home"]})
 
 const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams

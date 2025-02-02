@@ -4,6 +4,30 @@
   background: #F8F8F8;
   padding-bottom: 26rem;
 
+  &__back{
+    width: 44rem;
+    aspect-ratio: 1/1;
+    background: #fff;
+    box-shadow: 1.34px 2.69px 19.28px 0px #0000001A;
+    border-radius: 50%;
+    z-index: 9999;
+    position: fixed;
+    top: 90rem;
+    left: 24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__arr{
+    width: 10rem;
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+
   *{
     font-size: 13rem;
   }
