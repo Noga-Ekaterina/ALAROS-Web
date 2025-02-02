@@ -10,7 +10,7 @@ interface RevalidateRequest {
 
 interface RevalidateResponse {
   success: boolean;
-  revalidated: boolean;
+  revalidated?: boolean;
   tag?: string;
   error?: string;
 }
@@ -26,13 +26,19 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
 
     const {__typename } = body.data;
 
-    if (__typename==="Festival" || __typename==="Jury" || __typename==="ProtectionsDay" ||__typename==="Input" || __typename==="Project")
+    if (__typename==="Festival" || __typename==="Jury" || __typename==="ProtectionsDay" ||__typename==="Input" || __typename==="Project"){
       revalidateTag("festival");
-    else if (__typename==="Home" || __typename==="News")
+
+      return NextResponse.json({ success: true, revalidated: true, });
+    }
+    else if (__typename==="Home" || __typename==="News"){
       revalidateTag('home')
 
+      return NextResponse.json({ success: true, revalidated: true, });
+    }
+
     // Возвращаем успешный ответ
-    return NextResponse.json({ success: true, revalidated: true, });
+    return NextResponse.json({ success: true, });
   } catch (error) {
     // Логируем ошибку
     console.error('Error in revalidate route:', error);

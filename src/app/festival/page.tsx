@@ -151,7 +151,7 @@ const init= unstable_cache(async ()=>{
 
   return result
 },
-    ["festival"], {revalidate: 1})
+    ["festival"])
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
