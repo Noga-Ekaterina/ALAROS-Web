@@ -7,6 +7,9 @@ import parse from 'html-react-parser';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Mousewheel} from "swiper/modules";
 import {pagesData} from "@/pagesData";
+import {ReactSVG} from "react-svg";
+import {formaterDate} from "@/utils/date";
+import {useRouter} from "next/navigation";
 
 interface Props{
   slug: string
@@ -72,14 +75,21 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
 
     return result;
   };
+  const router= useRouter()
 
   const body = replaceHtmlSegments(news.body? news.body.html:'')
   
   return (
       <div className="news-article">
+        <button
+            className="news-article__back"
+          onClick={()=>router.back()}
+        >
+          <ReactSVG src="/Assets/Icons/arrow.svg" className="news-article__arr"/>
+        </button>
         <div className="container">
           <div className="news-article__header">
-            <p>{news.date}</p>
+            <p>{formaterDate(news.date)}</p>
             <p className="news-article__place">{news.place && news.place}</p>
           </div>
           <h1 className="news-article__title">{news.title}</h1>
