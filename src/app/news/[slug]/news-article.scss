@@ -44,9 +44,12 @@
     margin-block: 38rem;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     @include sm{
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4rem;
       margin-top: 25rem;
     }
 
