@@ -116,6 +116,12 @@
       transition: 0.5s;
     }
   }
+  
+  &__month{
+    .dropdown__title-text:first-letter, .dropdown__item label:first-letter{
+      text-transform: uppercase;
+    }
+  }
 
   &__year{
     .dropdown__title{

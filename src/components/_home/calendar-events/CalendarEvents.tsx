@@ -338,7 +338,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
           </div>
           <div className="calendar-events__calendar-wrapp">
             <Dropdown value={activeMonth} values={getMonthesNames()} handleCheck={(e) => setActiveMonth(e.target.value)}
-                      name="month"/>
+                      name="month" className="calendar-events__month"/>
             <Dropdown value={String(activeYear)} values={years}
                       handleCheck={(e) => setActiveYear(Number(e.target.value))} name='year' className="calendar-events__year"/>
 

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="испавила название модели для очистки кэша">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="испавила стили">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-forum/FestivalForum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-forum/FestivalForum.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <workItem from="1738324019338" duration="12186000" />
       <workItem from="1738361580474" duration="4673000" />
       <workItem from="1738417616448" duration="12611000" />
-      <workItem from="1738499246172" duration="3204000" />
+      <workItem from="1738499246172" duration="5523000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -222,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738503247104</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="испавила стили">
+      <option name="closed" value="true" />
+      <created>1738504180008</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738504180008</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +256,19 @@
     <MESSAGE value="доделала апи для очистки кэша" />
     <MESSAGE value="добавила теги для очистки кэша" />
     <MESSAGE value="испавила название модели для очистки кэша" />
-    <option name="LAST_COMMIT_MESSAGE" value="испавила название модели для очистки кэша" />
+    <MESSAGE value="испавила стили" />
+    <option name="LAST_COMMIT_MESSAGE" value="испавила стили" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx</url>
+          <line>341</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

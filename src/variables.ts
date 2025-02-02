@@ -1,22 +1,22 @@
 export const diplomas={
   bronze:{
-    text: 'бронзовый диплом',
+    text: 'Бронзовый диплом',
     color: "#be806e"
   },
   silver:{
-    text: "серебряный диплом",
+    text: "Серебряный диплом",
     color: "#a6a2a4"
   },
   gold:{
-    text: "золотой диплом",
+    text: "Золотой диплом",
     color: "#bfa100"
   },
   president:{
-    text: "диплом президента",
+    text: "Диплом президента",
     color: "#cd1619"
   },
   grandPrix:{
-    text:"диплом гран-при",
+    text:"Диплом гран-при",
     color: "#018b9a"
   }
 }
