@@ -8,6 +8,10 @@ import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
 import {unstable_cache} from "next/cache";
 
+interface Props{
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
 interface IData{
   homes: IHomeData[]
   eventsYears: IEventsDataYear[]
@@ -48,7 +52,8 @@ const init= unstable_cache(async ()=>{
   return result
 }, ["home"])
 
-const Home = async () => {
+const Home = async ({searchParams}:Props) => {
+  const {preview}=searchParams
   const data=  await init()
 
   if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
@@ -57,6 +62,7 @@ const Home = async () => {
 
   return (
       <div>
+        <div style={{display: "none"}}>{typeof preview == "string" && preview}</div>
         <HomeMainScreen homeData={homeData}/>
         <HomeEvents homeData={homeData}/>
         <CalendarEvents calendarEvents={calendarEvents}/>
