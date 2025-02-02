@@ -1,10 +1,7 @@
 'use client'
 import React from 'react';
 import "./festival-forum.scss"
-import pagesData from "@/store/pagesData";
-import {formaterDate} from "../../../utils/date/formaterDate";
 import HtmlProcessing from "../../HtmlProcessing";
-import {Mousewheel} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {IFestival} from "@/types/data";
 
@@ -34,8 +31,6 @@ const FestivalForum = ({festivalText}:Props) => {
         </div>
         <Swiper
             slidesPerView="auto"
-            mousewheel={{sensitivity: 5000}}
-            modules={[Mousewheel]}
             spaceBetween={"10rem"}
             className="festival-forum__slider"
         >

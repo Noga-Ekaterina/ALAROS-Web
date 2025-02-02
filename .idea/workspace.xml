@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала апи для очистки кэша">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="испавила название модели для очистки кэша">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/cache/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/cache/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-forum/FestivalForum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-forum/FestivalForum.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +105,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +131,8 @@
       <workItem from="1738267135921" duration="1319000" />
       <workItem from="1738324019338" duration="12186000" />
       <workItem from="1738361580474" duration="4673000" />
-      <workItem from="1738417616448" duration="11076000" />
+      <workItem from="1738417616448" duration="12611000" />
+      <workItem from="1738499246172" duration="3204000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -180,7 +174,55 @@
       <option name="project" value="LOCAL" />
       <updated>1738450266397</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="доделала апи для очистки кэша">
+      <option name="closed" value="true" />
+      <created>1738454348713</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738454348713</updated>
+    </task>
+    <task id="LOCAL-00007" summary="доделала апи для очистки кэша">
+      <option name="closed" value="true" />
+      <created>1738455773705</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738455773705</updated>
+    </task>
+    <task id="LOCAL-00008" summary="доделала апи для очистки кэша">
+      <option name="closed" value="true" />
+      <created>1738499342595</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738499342595</updated>
+    </task>
+    <task id="LOCAL-00009" summary="доделала апи для очистки кэша">
+      <option name="closed" value="true" />
+      <created>1738499992479</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738499992479</updated>
+    </task>
+    <task id="LOCAL-00010" summary="добавила теги для очистки кэша">
+      <option name="closed" value="true" />
+      <created>1738501175232</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738501175233</updated>
+    </task>
+    <task id="LOCAL-00011" summary="испавила название модели для очистки кэша">
+      <option name="closed" value="true" />
+      <created>1738503247104</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738503247104</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +244,9 @@
     <MESSAGE value="исправила проблемы с фото" />
     <MESSAGE value="исправила язык" />
     <MESSAGE value="сделала апи для очистки кэша" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала апи для очистки кэша" />
+    <MESSAGE value="доделала апи для очистки кэша" />
+    <MESSAGE value="добавила теги для очистки кэша" />
+    <MESSAGE value="испавила название модели для очистки кэша" />
+    <option name="LAST_COMMIT_MESSAGE" value="испавила название модели для очистки кэша" />
   </component>
 </project>
