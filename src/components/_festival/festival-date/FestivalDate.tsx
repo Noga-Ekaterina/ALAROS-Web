@@ -37,7 +37,7 @@ const FestivalDate = ({festivalText}:Props) => {
                       <button
                         className={classNames(
                             "festival-date__btn",
-                            index==activeDateIndex && "festival-date__btn--disabled",
+                            index==activeDateIndex? "festival-date__btn--disabled":'link-underline',
                         )}
                         onClick={()=> setActiveDateIndex(index)}
                       >

@@ -37,7 +37,7 @@
     line-height: 0.85em;
 
     @include sm{
-      font-size: 68rem;
+      font-size: 72rem;
     }
   }
 
@@ -48,6 +48,10 @@
 
   &__btn{
     opacity: 0.5;
+
+    &:hover{
+      text-decoration: none;
+    }
 
     &--disabled{
       opacity: 1;
