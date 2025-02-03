@@ -5,13 +5,14 @@ import pagesData from "@/store/pagesData";
 import {Form, Formik, Field} from "formik";
 import Input from "../../input/Input";
 import {IField} from "../../../types/tehnic";
-import {IFestival} from "@/types/data";
+import {IFestival, INomination} from "@/types/data";
 
 interface Props{
   festivalText: IFestival
+  nominations: INomination[]
 }
 
-const FestivalBid = ({festivalText}: Props) => {
+const FestivalBid = ({festivalText, nominations}: Props) => {
   const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const FestivalBid = ({festivalText}: Props) => {
                           key={index}
                         name={index}
                         render={({field}: IField)=> (
-                            <Input input={input} field={field}/>
+                            <Input input={input} field={field} nominations={nominations}/>
                         )}
                       />
                   ))

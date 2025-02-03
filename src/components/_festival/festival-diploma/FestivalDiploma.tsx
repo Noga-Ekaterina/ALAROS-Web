@@ -5,13 +5,14 @@ import Detalis from "../../detalis/Detalis";
 import {Field, Form, Formik} from "formik";
 import {IField} from "../../../types/tehnic";
 import Input from "../../input/Input";
-import {IFestival} from "@/types/data";
+import {IFestival, INomination} from "@/types/data";
 
 interface Props{
   festivalText: IFestival
+  nominations: INomination[]
 }
 
-const FestivalDiploma = ({festivalText}: Props) => {
+const FestivalDiploma = ({festivalText, nominations}: Props) => {
   const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const FestivalDiploma = ({festivalText}: Props) => {
                           key={index}
                           name={index}
                           render={({field}: IField)=> (
-                              <Input input={input} field={field}/>
+                              <Input input={input} field={field} nominations={nominations}/>
                           )}
                       />
                   ))

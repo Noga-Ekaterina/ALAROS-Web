@@ -1,7 +1,8 @@
 .festival-diploma{
   background: #fff;
-  overflow: hidden;
   padding-bottom: 8rem;
+  position: relative;
+  z-index: 3;
 
   .detalis{
     &__btn{

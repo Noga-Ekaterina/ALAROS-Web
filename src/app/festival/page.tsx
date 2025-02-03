@@ -13,14 +13,17 @@ import FestivalProjects from "../../components/_festival/festival-projects/Festi
 import FestivalBusinessProgram from "../../components/_festival/festival-business-program/FestivalBusinessProgram";
 import FestivalForum from "../../components/_festival/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
-import {IFestival, IJury, IProtectionsDay} from "@/types/data";
-import {pagesData} from "@/pagesData";
+import {IFestival, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
 import {unstable_cache} from "next/cache";
+import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 
 interface IData{
   festivalS: IFestival[]
   juries: IJury[]
   protectionsDays: IProtectionsDay[]
+  nominationsS: {
+    nominations: IHtmlString
+  }[]
 }
 
 interface Props{
@@ -139,14 +142,19 @@ const init= unstable_cache(async ()=>{
                 html
               }
             }
+            nominationsS {
+              nominations {
+                html
+              }
+            }
           }`)
 
   if (!data)
     return null
 
-  const {festivalS, juries, protectionsDays}=data
+  const {festivalS, juries, protectionsDays, nominationsS}=data
 
-  const result= {festivalText: festivalS[0], juries, protectionsDays}
+  const result= {festivalText: festivalS[0], juries, protectionsDays, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
 
 
   return result
@@ -159,7 +167,7 @@ const Page = async ({searchParams}:Props) => {
 
   if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
 
-  const {festivalText, juries, protectionsDays}= data
+  const {festivalText, juries, protectionsDays, nominations}= data
   return (
       <div>
         <div style={{display:"none"}}>{typeof preview=="string"&&preview}</div>
@@ -167,10 +175,10 @@ const Page = async ({searchParams}:Props) => {
         <FestivalPremiya festivalText={festivalText}/>
         <FestivalPrice festivalText={festivalText}/>
         <FestivalDate festivalText={festivalText}/>
-        <FestivalBid festivalText={festivalText}/>
+        <FestivalBid festivalText={festivalText} nominations={nominations}/>
         <FestivalDocuments festivalText={festivalText}/>
         <FestivalEmails festivalText={festivalText}/>
-        <FestivalDiploma festivalText={festivalText}/>
+        <FestivalDiploma festivalText={festivalText} nominations={nominations}/>
         <FestivalJuries title={festivalText.juriesTitle} juries={juries}/>
         <FestivalProtections title={festivalText.protectionsTitle} protectionsDays={protectionsDays}/>
         <FestivalProjects festivalText={festivalText}/>

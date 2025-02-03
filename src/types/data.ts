@@ -35,7 +35,7 @@ export interface ILinkColor extends ILink{
 
 export interface IFormInput{
   name: string
-  type: HTMLInputTypeAttribute |"radios"|"dropdown"
+  type: HTMLInputTypeAttribute |"radios"|"dropdown"|"nominations"
   placeholder: string
   note?: string
   values: string[]
@@ -133,6 +133,12 @@ export interface IFestival {
   forumContactsImage: string
   forumContacts: IHtmlString
   forumSocials: IHtmlString[]
+}
+
+export interface INomination{
+  number: string
+  title: string
+  link: string
 }
 
 export interface IJury{
