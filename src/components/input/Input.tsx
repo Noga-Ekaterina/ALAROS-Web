@@ -11,45 +11,14 @@ interface IProps extends IField{
 }
 
 const InputDropdown=({input, field, nominations}: IProps)=>{
-  const [value, setValue] = useState('')
-  const [values, setValues] = useState<string[]>(input.values)
-  const [labels, setLabels] = useState<JSX.Element[]|undefined>(undefined)
-
-  useEffect(() => {
-    setValue(nominations? `${nominations[0].number} ${nominations[0].title}`: input.values[0])
-
-    if (!nominations) return
-
-    const resultValues: string[]=[]
-    const result: JSX.Element[]=[]
-
-    nominations.forEach(nomination=>{
-      resultValues.push( `${nomination.number} ${nomination.title}`)
-
-      result.push(
-          <span className="input__dropdown-item" key={nomination.number}>
-            <span>{nomination.number}</span>
-            <span>{nomination.title}</span>
-          </span>
-      )
-    })
-
-    console.log(result)
-
-    setValues(resultValues)
-    setLabels(result)
-  }, []);
-
-  useEffect(() => {
-    console.log(labels)
-  }, [labels]);
-
+  const [value, setValue] = useState(nominations? nominations[0].value:input.type[0])
+  const values = nominations? nominations.map(nomination=> nomination.value):input.values
   return(
       <div className="input">
         <span className="input__placeholder">{input.placeholder}</span>
         <input {...field}
             name={input.name} value={value} style={{display: "none"}}/>
-        <Dropdown value={value} values={values} handleCheck={e => setValue(e.target.value)} elements={labels} arrow={true} className="input__dropdown"/>
+        <Dropdown value={value} values={values} handleCheck={e => setValue(e.target.value)} nominations={nominations} arrow={true} className="input__dropdown" id={Math.random()}/>
       </div>
   )
 }

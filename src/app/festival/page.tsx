@@ -72,6 +72,12 @@ const init= unstable_cache(async ()=>{
               documentsLinks {
                 html
               }
+              templates {
+                html
+              }
+              templatesDownload {
+                html
+              }
               emails{
                 html
               }
@@ -176,7 +182,7 @@ const Page = async ({searchParams}:Props) => {
         <FestivalPrice festivalText={festivalText}/>
         <FestivalDate festivalText={festivalText}/>
         <FestivalBid festivalText={festivalText} nominations={nominations}/>
-        <FestivalDocuments festivalText={festivalText}/>
+        <FestivalDocuments festivalText={festivalText} nominations={nominations}/>
         <FestivalEmails festivalText={festivalText}/>
         <FestivalDiploma festivalText={festivalText} nominations={nominations}/>
         <FestivalJuries title={festivalText.juriesTitle} juries={juries}/>

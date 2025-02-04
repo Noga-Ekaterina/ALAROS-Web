@@ -7,9 +7,10 @@ import {useGetRem} from "../../hoocs/useGetRem";
 
 interface IProps extends IWithChildren{
   title: JSX.Element
+  rightElement?: JSX.Element
 }
 
-const Detalis = ({title, children}: IProps) => {
+const Detalis = ({title, rightElement, children}: IProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const contentRef= useRef<null | HTMLDivElement>(null)
   const [marginTop, setMarginTop] = useState<string|0>(0)
@@ -33,7 +34,10 @@ const Detalis = ({title, children}: IProps) => {
       <div className={cn("detalis", isOpen&& "detalis--opened")} style={{overflow}}>
         <button className="detalis__btn" onClick={handleClick}>
           {title}
-          <span className="detalis__icon">+</span>
+          {
+            rightElement ? <>{rightElement}</> :
+                <span className="detalis__icon">+</span>
+          }
         </button>
         <div
             className="detalis__content"

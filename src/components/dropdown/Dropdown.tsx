@@ -5,8 +5,10 @@ import {useClose} from "../../hoocs/useClose";
 import classNames from "classnames";
 import {IWithClass} from "../../types/tehnic";
 import {ReactSVG} from "react-svg";
+import {INomination} from "@/types/data";
 
 interface Props extends IWithClass{
+  id?: string|number
   value: string
   values: string[]
   name?: string
@@ -14,16 +16,24 @@ interface Props extends IWithClass{
   arrow?: boolean
   years?: boolean
   handleCheck: (e: ChangeEvent<HTMLInputElement>)=> void
+  nominations?: INomination[]
 }
-function Dropdown({value, values, name, handleCheck, className, elements, arrow, years}:Props) {
+
+function Dropdown({id, value, values, name, handleCheck, className, elements, arrow, years, nominations}:Props) {
    const [isOpen, setIsOpen] = useState(false);
    const dropdownRef = useRef(null);
+   const nominationsElements= nominations&& nominations.map(nomination=> (
+       <span className="dropdown__nomination-item" key={nomination.number}>
+            <span>{nomination.number}</span>
+            <span>{nomination.title}</span>
+          </span>
+   ))
 
-   useClose({ref: dropdownRef, isOpen, setIsOpen});
-   return ( 
+  useClose({ref: dropdownRef, isOpen, setIsOpen});
+  return (
       <div className={classNames("dropdown", isOpen && "open", className)} ref={dropdownRef}>
-         <div className="dropdown__title" onClick={()=> setIsOpen(!isOpen)}>
-           <span className="dropdown__title-text">{elements? elements[values.indexOf(value)] :years? value.replace(/(года?)/, "") :value}</span>
+        <div className="dropdown__title" onClick={()=> setIsOpen(!isOpen)}>
+           <span className="dropdown__title-text">{elements? elements[values.indexOf(value)] :years? value.replace(/(года?)/, "") : nominationsElements? nominationsElements[values.indexOf(value)]: value}</span>
 
            {
              arrow &&(
@@ -36,16 +46,24 @@ function Dropdown({value, values, name, handleCheck, className, elements, arrow,
          </div>
          <div className="dropdown__content">
             {
-               values.map((item, index)=>
-                   <div key={item} className="dropdown__item">
-                      <input type='radio' checked={item==value} name={name??""} id={item} value={item} onChange={e=> handleCheck(e)}/>
-                      <label htmlFor={item}>
-                        {
-                          elements? elements[index]:item
-                        }
-                      </label>
-                   </div>
-               )
+              values.map((item, index) =>
+                  <div key={item} className="dropdown__item">
+                    <input
+                        type='radio'
+                        checked={item == value}
+                        name={name ?? ""}
+                        id={item+id}
+                        value={item}
+                        onChange={e => handleCheck(e)}
+                    />
+                    <label
+                        htmlFor={item+id}
+                        onClick={(e) => e.stopPropagation()} // Добавлено остановка всплытия
+                    >
+                      {elements ? elements[index] : nominationsElements ? nominationsElements[index] : item}
+                    </label>
+                  </div>
+              )
             }
 
          </div>

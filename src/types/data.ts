@@ -109,6 +109,8 @@ export interface IFestival {
   bidButton: string
   documentsTitle: string
   documentsLinks: IHtmlString[]
+  templates: IHtmlString
+  templatesDownload: IHtmlString
   emails: IHtmlString[]
   diplomaTitle: string
   diplomaInputs: IFormInput[]
@@ -139,6 +141,7 @@ export interface INomination{
   number: string
   title: string
   link: string
+  value: string
 }
 
 export interface IJury{

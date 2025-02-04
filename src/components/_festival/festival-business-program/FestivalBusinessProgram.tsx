@@ -71,6 +71,7 @@ const Session = ({data}: ISessionProps) => {
   const usersSwiperRef=useRef<SwiperRef | null>(null);
   const rolleSwiperRef=useRef<SwiperRef | null>(null);
   const rolleSwiperNav= new SwiperNavigation(rolleSwiperRef)
+  const [isClient, setIsClient] = useState(false)
 
   const handleSwiper=()=>{
     if (!usersSwiperRef.current) return
@@ -86,6 +87,7 @@ const Session = ({data}: ISessionProps) => {
   }
 
   useEffect(() => {
+    setIsClient(true)
 
   }, []);
 
@@ -95,7 +97,7 @@ const Session = ({data}: ISessionProps) => {
           <h3 className="festival-business-program__title">{mainTitle}</h3>
 
           {
-            !mobileScreen ?
+            (isClient&&!mobileScreen) ?
                 <div className="festival-business-program__content">
                   <div className="">
                     <h4 className="festival-business-program__rolle">{moderatorsTitle}</h4>

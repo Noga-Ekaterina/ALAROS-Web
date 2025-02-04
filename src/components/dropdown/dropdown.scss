@@ -84,4 +84,11 @@
       }
     }
   }
+
+  &__nomination-item{
+    width: 100%;
+    display: flex;
+    gap: 15rem;
+    text-transform: uppercase;
+  }
 }

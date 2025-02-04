@@ -1,0 +1,122 @@
+@import "@/app/styles/mixins";
+
+.festival-templates{
+  background: var(--c-red);
+
+  @include sm{
+    padding-bottom: 8rem;
+  }
+
+  *{
+    color: #ffffff;
+    font-size: 20rem;
+  }
+
+  u{
+    text-underline-offset: 0.14em;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  .detalis{
+    &__btn{
+      padding: 15rem;
+      background: var(--c-red);
+
+      @include sm{
+        text-align: left;
+        padding: 10rem 15rem 4rem;
+      }
+    }
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 15rem;
+
+    @include sm{
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 40rem;
+    }
+  }
+
+  .dropdown{
+    width: 777rem;
+
+    @include sm{
+      width: 100%;
+    }
+
+    *{
+      font-size: 13rem;
+
+      @include sm{
+        font-size: 9rem;
+      }
+    }
+
+    input:checked+label .dropdown__nomination-item span{
+      color: var(--c-red);
+    }
+
+    label .dropdown__nomination-item span{
+      color: var(--c-grey);
+    }
+
+    &__line{
+      background: #fff;
+    }
+
+    &__arrow svg *{
+      stroke: #fff;
+    }
+  }
+
+  &__btn{
+    transition: 0.5s;
+
+    @include sm{
+      display: flex;
+    }
+
+    .detalis--opened &{
+      opacity: 0.5;
+
+      @include sm{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__icon{
+    transition: 0.5s;
+    transform: rotate(0);
+    position: relative;
+    top: 2rem;
+
+    .detalis--opened &{
+      transform: rotate(405deg);
+    }
+  }
+
+  &__subtitle{
+    display: none;
+
+    @include sm{
+      display: block;
+      margin-bottom: 25rem;
+      padding-left: 15rem;
+      opacity: 0.5;
+      font-size: 15rem;
+
+      *{
+        text-decoration: none;
+      }
+    }
+  }
+}

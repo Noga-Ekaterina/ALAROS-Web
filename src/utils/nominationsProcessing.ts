@@ -9,6 +9,6 @@ export const nominationsSProcessing=(nominations: string)=>{
   return rowsArr.map(row=>{
     const [number, title, link] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);
 
-    return {number, title, link}
+    return {number, title, link, value: `${number} ${title}`}
   })
 }

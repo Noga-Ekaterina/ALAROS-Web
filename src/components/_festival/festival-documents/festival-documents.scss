@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins";
+
 .festival-documents{
   background: #fff;
   padding-block: 50rem;
@@ -15,8 +17,8 @@
     padding: 15rem;
     background: #2A3A2B;
 
-    &:last-child{
-      background: var(--c-red);
+    @include sm{
+      padding: 10rem 15rem;
     }
 
     *{
@@ -28,4 +30,30 @@
       text-underline-offset: 0.14em;
     }
   }
+
+  &__icon{
+    display: flex;
+  }
+  &__arrow{
+    width: 14rem;
+
+    svg{
+      width: auto;
+      height: 14rem;
+      transform: rotate(-90deg);
+      position: relative;
+      top: 3rem;
+      left: 3rem;
+
+      *{
+        stroke: currentColor;
+      }
+
+      .open &{
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+
 }
