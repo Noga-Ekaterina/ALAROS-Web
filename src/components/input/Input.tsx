@@ -27,7 +27,7 @@ const Input = ({input, field, nominations}: IProps) => {
   return (
       <>
         {
-          input.type==="text" ?(
+          (input.type==="text" || input.type==="tel" || input.type==='email') ?(
                   <div className="input">
                     <input {...field}
                         placeholder={input.placeholder} type={input.type} className="input__text"/>
