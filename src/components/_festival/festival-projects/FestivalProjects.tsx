@@ -2,7 +2,7 @@
 import React from 'react';
 import "./festival-projects.scss"
 import {Swiper, SwiperSlide} from "swiper/react";
-import Project from "../../project/Project";
+import Project from "@/components/_projects/project/Project";
 import BigSlider from "../../big-slider/BigSlider";
 import pagesData from "@/store/pagesData";
 import HtmlProcessing from "../../HtmlProcessing";

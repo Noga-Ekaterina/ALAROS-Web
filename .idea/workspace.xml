@@ -4,24 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="вынесла отдельно список номинаций">
-      <change afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getBtns.ts" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала выбор шаблона">
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hoocs/useSearchParamsControl.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/buildLink.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/festival/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-business-program/FestivalBusinessProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-business-program/FestivalBusinessProgram.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/FestivalDocuments.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/FestivalDocuments.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoocs/useClose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoocs/useClose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-list/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-list/ProjectsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/nominationsProcessing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/nominationsProcessing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/SwiperNavigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/SwiperNavigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -88,6 +88,9 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\utils" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -123,8 +126,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +155,8 @@
       <workItem from="1738417616448" duration="12611000" />
       <workItem from="1738499246172" duration="22596000" />
       <workItem from="1738589339976" duration="29105000" />
-      <workItem from="1738672455042" duration="8956000" />
+      <workItem from="1738672455042" duration="16830000" />
+      <workItem from="1738762254170" duration="24313000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -290,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738542410976</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="сделала выбор шаблона">
+      <option name="closed" value="true" />
+      <created>1738708385212</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738708385212</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +333,8 @@
     <MESSAGE value="переверстала шапку новости" />
     <MESSAGE value="подправила стили" />
     <MESSAGE value="вынесла отдельно список номинаций" />
-    <option name="LAST_COMMIT_MESSAGE" value="вынесла отдельно список номинаций" />
+    <MESSAGE value="сделала выбор шаблона" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала выбор шаблона" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

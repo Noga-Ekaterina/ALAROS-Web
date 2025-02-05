@@ -165,6 +165,7 @@ export interface IProject{
   diploma: TDiploma
   winner: string
   nomination: string|null
+  images: string[]
 }
 
 export interface IProjectsPage{

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./projects-list.scss"
 import pagesData from "@/store/pagesData";
-import Project from "../../project/Project";
+import Project from "@/components/_projects/project/Project";
 import {observer} from "mobx-react-lite";
 import {IProject} from "@/types/data";
 

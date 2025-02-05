@@ -57,6 +57,14 @@ export class SwiperNavigation {
     }
   }
 
+  getActiveIndex() {
+    if (this.swiper.current) {
+      const {activeIndex,} = this.swiper.current.swiper;
+
+      return activeIndex
+    }else
+      return 0
+  }
   isStart(){
     if (this.swiper.current){
       const { activeIndex,} = this.swiper.current.swiper;

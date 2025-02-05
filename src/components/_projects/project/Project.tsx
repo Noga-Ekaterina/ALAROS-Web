@@ -1,17 +1,26 @@
+'use client'
 import React from 'react';
 import "./project.scss"
-import {IProject} from "../../types/data";
+import {IProject} from "../../../types/data";
 import Link from 'next/link';
-import {diplomas} from "../../variables";
+import {diplomas} from "../../../variables";
+import {usePathname, useSearchParams} from "next/navigation";
+import {buildLink} from "@/utils/buildLink";
 
 interface Props{
   project: IProject
 }
 
 const Project = ({project}: Props) => {
+  const pathname= usePathname()
+  const searchParams= useSearchParams()
   const {text, color}=diplomas[project.diploma]
   return (
-      <Link href={`/`} className="project">
+      <Link
+          href={buildLink(pathname, searchParams, {project: String(project.number), projectYear: String(project.year)})}
+          className="project"
+          scroll={false}
+      >
         <p style={{color}}>{text}</p>
 
         <div className="project__img">

@@ -5,10 +5,14 @@ import pagesData from "@/store/pagesData";
 import {useSearchParams} from "next/navigation";
 import Dropdown from "../../dropdown/Dropdown";
 import {diplomas} from "../../../variables";
-import {TDiploma} from "../../../types/data";
+import {IProjectsPage, TDiploma} from "../../../types/data";
+import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
 
-const ProjectsFilter = () => {
-  const {projectsPages, fetchProjects}=pagesData
+interface Props{
+  projectsPage: IProjectsPage
+}
+
+const ProjectsFilter = ({projectsPage}:Props) => {
   const [years, setYears] = useState<string[]>([])
   const [diplomaValues, setDiplomaValues] = useState<string[]>([])
   const diplomasKeys = Object.keys(diplomas) as Array<keyof typeof diplomas>;
@@ -18,12 +22,19 @@ const ProjectsFilter = () => {
   const diploma= searchParams.get("diploma")
   const [yearValue, setYearValue] = useState("все года")
   const [diplomaValue, setDiplomaValue] = useState("все дипломы")
+  const {
+    setParam,
+    deleteParam,
+    clearParams,
+    setMultipleParams,
+    currentParams,
+  } = useSearchParamsControl();
 
   const handleFilter=()=>{
     const yearValueWithoutText = yearValue.replace(" год", "");
-    const yearFilter = isNaN(Number(yearValueWithoutText))? undefined: yearValueWithoutText;
+    const yearFilter = isNaN(Number(yearValueWithoutText))? null: yearValueWithoutText;
 
-    let diplomaFilter: undefined|TDiploma
+    let diplomaFilter: null|TDiploma=null
 
     for (let diploma of diplomasKeys) {
       if (diplomas[diploma].text===diplomaValue){
@@ -32,24 +43,16 @@ const ProjectsFilter = () => {
       }
     }
 
-    const params: {page: string, diploma?: TDiploma, year?: string}={page: "1"}
-
-    if (diplomaFilter)
-      params.diploma= diplomaFilter
-
-    if (yearFilter)
-      params.year= yearFilter
-
-    // setSearchParams(params)
+    setMultipleParams({page:"1", diploma: diplomaFilter, year: yearFilter})
   }
 
   useEffect(() => {
-    if (!projectsPages) return
+    if (!projectsPage) return
 
     const yearsResult: string[]=["все года"]
     const diplomasResult: string[]=["все дипломы"]
 
-    const [start, end]= projectsPages.years.split("-")
+    const [start, end]= projectsPage.years.split("-")
 
     for (let i = Number(start); i <= Number(end); i++) {
       yearsResult.push(`${i} год`)
@@ -63,9 +66,9 @@ const ProjectsFilter = () => {
     setDiplomaValues(diplomasResult)
   }, []);
 
-  useEffect(() => {
-    fetchProjects(year, diploma, page)
-  }, [year, diploma, page]);
+  // useEffect(() => {
+  //   fetchProjects(year, diploma, page)
+  // }, [year, diploma, page]);
 
   return (
       <div className="projects-filter">

@@ -16,6 +16,7 @@ import {fetchData} from "@/utils/fetchData";
 import {IFestival, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
 import {unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
+import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface IData{
   festivalS: IFestival[]
@@ -100,6 +101,7 @@ const init= unstable_cache(async ()=>{
                 diploma
                 year
                 winner
+                images
               }
               businessProgramDate
               businessProgramTime
@@ -176,7 +178,7 @@ const Page = async ({searchParams}:Props) => {
   const {festivalText, juries, protectionsDays, nominations}= data
   return (
       <div>
-        <div style={{display:"none"}}>{typeof preview=="string"&&preview}</div>
+        <ProjectModal projects={festivalText.projects} searchParams={searchParams}/>
         <FestivalMainScreen festivalText={festivalText}/>
         <FestivalPremiya festivalText={festivalText}/>
         <FestivalPrice festivalText={festivalText}/>

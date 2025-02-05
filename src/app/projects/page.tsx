@@ -4,6 +4,8 @@ import ProjectsFilter from "../../components/_projects/projects-filter/ProjectsF
 import ProjectsList from "../../components/_projects/projects-list/ProjectsList";
 import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import {IProject, IProjectsPage} from "@/types/data";
+import {unstable_cache} from "next/cache";
+import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 
 interface Props{
@@ -17,32 +19,28 @@ interface IData{
       count: number
     }
   }
-  projectsPages?: IProjectsPage[]
+  projectsPages: IProjectsPage[]
 }
 
-const init= async (year: undefined| string, diploma: undefined |string, page: string)=>{
+const init=unstable_cache( async (year: undefined| string, diploma: undefined |string, page: string)=>{
   const data: IData|null= await fetchData(`
           query NewsAllQuery {
             ${getProjectsQueryStr(year, diploma, Number(page))}
-            ${!pagesData.projectsPage &&`
             projectsPages {
               title
               years
             }
-            `}
           }`)
 
   if (!data) return null
 
-  if (data.projectsPages)
-    pagesData.projectsPage= data.projectsPages[0]
-
   return {
-    pageData: data.projectsPages? data.projectsPages[0]: pagesData.projectsPage,
+    pageData: data.projectsPages[0],
     projects: data.projects,
     count: data.projectsConnection.aggregate.count
   }
-}
+},
+    ["projects"], {tags: ["projects"]})
 
 const Page = async ({searchParams}: Props) => {
   const {page, diploma, year}= searchParams
@@ -56,13 +54,16 @@ const Page = async ({searchParams}: Props) => {
   if (!data ||!data.pageData) return <div>произошла ошибка, перезагрузите страницу</div>
 
   return (
-      <div className="container" style={{paddingBlock: "32rem"}}>
-        <div className="titles-block">
-          <h1 className="titles-block__title titles-block__title--small">{data.pageData.title}</h1>
+      <>
+        <ProjectModal projects={data.projects} searchParams={searchParams}/>
+        <div className="container" style={{paddingBlock: "32rem"}}>
+          <div className="titles-block">
+            <h1 className="titles-block__title titles-block__title--small">{data.pageData.title}</h1>
+          </div>
+          <ProjectsFilter projectsPage={data.pageData}/>
+          <ProjectsList projects={data.projects}/>
         </div>
-        <ProjectsFilter/>
-        <ProjectsList projects={data.projects}/>
-      </div>
+      </>
   );
 };
 

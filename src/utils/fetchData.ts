@@ -52,6 +52,7 @@ export const getProjectsQueryStr= (year: undefined| string, diploma: undefined |
       diploma
       year
       winner
+      images
     }
   `)
 }
