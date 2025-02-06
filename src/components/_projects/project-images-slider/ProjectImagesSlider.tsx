@@ -7,6 +7,7 @@ import {SwiperNavigation} from "@/utils/SwiperNavigation";
 import {ReactSVG} from "react-svg";
 import {useRouter} from "next/navigation";
 import {useMediaQuery} from "react-responsive";
+import classNames from "classnames";
 
 interface Props{
   project: IProject
@@ -43,17 +44,37 @@ const ProjectImagesSlider = ({project}:Props) => {
           <ReactSVG src="/Assets/Icons/close.svg"/>
         </button>
         <div className="project-images-slider__control">
+          <button
+              className={classNames(
+                  "project-images-slider__control-btn",
+                  "project-images-slider__control-btn--prev",
+                  swiperIsStart && "btn--disable"
+              )}
+              onClick={() => swiperNav.goToPrev()}
+          >
+            <ReactSVG src="/Assets/Icons/arrow.svg"/>
+          </button>
           <span>{activeSlide} из {project.images.length}</span>
+          <button
+              className={classNames(
+                  "project-images-slider__control-btn",
+                  "project-images-slider__control-btn--next",
+                  swiperIsEnd && "btn--disable"
+              )}
+              onClick={() => swiperNav.goToNext()}
+          >
+            <ReactSVG src="/Assets/Icons/arrow.svg"/>
+          </button>
         </div>
         <Swiper
             centeredSlides={true}
             spaceBetween={'45rem'}
-            slidesPerView={mobileScreen? 1:1.45}
+            slidesPerView={mobileScreen ? 1 : 1.45}
             ref={swiperRef}
             onActiveIndexChange={togleSwiper}
         >
           {
-            project.images.map((image, index)=>(
+            project.images.map((image, index) => (
                 <SwiperSlide key={index}>
                   <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${image}`} alt=""/>
                 </SwiperSlide>

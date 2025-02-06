@@ -8,6 +8,35 @@
     display: flex;
     justify-content: center;
     margin-block: 58rem 15rem;
+    gap: 7rem;
+
+    span{
+      font-size: 20rem;
+    }
+
+      &-btn{
+        position: relative;
+        width: 9rem;
+
+        &--prev{
+          top: 2rem;
+        }
+
+        &--next{
+          top: -1rem;
+          transform: rotate(180deg);
+        }
+
+        svg{
+          width: 100%;
+          height: auto;
+
+          *{
+            stroke: #CACACA;
+          }
+        }
+      }
+
   }
 
   &__back{

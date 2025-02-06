@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала выбор шаблона">
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hoocs/useSearchParamsControl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/buildLink.ts" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила стили">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-list/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-list/ProjectsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/SwiperNavigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/SwiperNavigation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +142,7 @@
       <workItem from="1738499246172" duration="22596000" />
       <workItem from="1738589339976" duration="29105000" />
       <workItem from="1738672455042" duration="16830000" />
-      <workItem from="1738762254170" duration="24313000" />
+      <workItem from="1738762254170" duration="29020000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -302,7 +288,39 @@
       <option name="project" value="LOCAL" />
       <updated>1738708385212</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="сделала модалку проекта">
+      <option name="closed" value="true" />
+      <created>1738798725350</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1738798725350</updated>
+    </task>
+    <task id="LOCAL-00020" summary="сделала модалку проекта">
+      <option name="closed" value="true" />
+      <created>1738798766030</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1738798766030</updated>
+    </task>
+    <task id="LOCAL-00021" summary="исправила условия типов в input">
+      <option name="closed" value="true" />
+      <created>1738799824485</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1738799824485</updated>
+    </task>
+    <task id="LOCAL-00022" summary="исправила стили">
+      <option name="closed" value="true" />
+      <created>1738801851557</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1738801851557</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +352,10 @@
     <MESSAGE value="подправила стили" />
     <MESSAGE value="вынесла отдельно список номинаций" />
     <MESSAGE value="сделала выбор шаблона" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала выбор шаблона" />
+    <MESSAGE value="сделала модалку проекта" />
+    <MESSAGE value="исправила условия типов в input" />
+    <MESSAGE value="исправила стили" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправила стили" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
