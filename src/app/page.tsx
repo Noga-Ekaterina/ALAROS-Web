@@ -7,6 +7,7 @@ import LogosSlider from "../components/_home/logos-slider/LogosSlider";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
 import {unstable_cache} from "next/cache";
+import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -25,6 +26,16 @@ const init= unstable_cache(async ()=>{
               mainTitle
               mainSection {
                 html
+              }
+              projects {
+                name
+                nomination
+                number
+                diploma
+                year
+                winner
+                images
+                homeSignature
               }
               bannersDesktop
               bannersMobile
@@ -62,7 +73,7 @@ const Home = async ({searchParams}:Props) => {
 
   return (
       <div>
-        <div style={{display: "none"}}>{typeof preview == "string" && preview}</div>
+        <ProjectModal projects={homeData.projects} searchParams={searchParams}/>
         <HomeMainScreen homeData={homeData}/>
         <HomeEvents homeData={homeData}/>
         <CalendarEvents calendarEvents={calendarEvents}/>

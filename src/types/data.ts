@@ -7,6 +7,7 @@ export interface IHtmlString{
 export interface IHomeMainScreen{
   mainTitle: string
   mainSection: IHtmlString
+  projects: IProject[]
 }
 
 export interface IHomeBaners{
@@ -166,6 +167,7 @@ export interface IProject{
   winner: string
   nomination: string|null
   images: string[]
+  homeSignature: null|string
 }
 
 export interface IProjectsPage{
