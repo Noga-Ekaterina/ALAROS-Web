@@ -39,15 +39,103 @@
 
   }
 
-  &__back{
-    position: absolute;
-    right: 30rem;
-    top: 25rem;
-    width: 17rem;
+  &__btn{
+    width: 44rem;
+    aspect-ratio: 1/1;
+    background: #fff;
+    box-shadow: 1.34px 2.69px 19.28px 0px #0000001A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36rem !important;
+    color: var(--c-green-text) !important;
 
     svg{
-      width: 100%;
+      width: 17rem;
       height: auto;
+      position: relative;
+      top: 2rem;
+
+      *{
+        stroke: var(--c-green-text);
+      }
+    }
+
+    &--increase{
+      transform: rotate(-45deg);
+    }
+
+    &--decrease{
+      &::before{
+        content: '';
+        width: 17rem;
+        height: 2.6rem;
+        background: var(--c-green-text);
+      }
+    }
+
+
+    &--back{
+      position: absolute;
+      right: 30rem;
+      top: 25rem;
+      z-index: 9;
+    }
+  }
+
+  &__scale{
+    position: absolute;
+    left: 30rem;
+    top: 25rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+
+    &-img-wrap{
+      position: fixed;
+      min-width: 100vw;
+      height: 100vh;
+      top: 0;
+      z-index: -1;
+
+      &--opened{
+        z-index: 8;
+
+        &::before{
+          content: '';
+          opacity: 0.45;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 8;
+          height: 135rem;
+          background: linear-gradient(180deg, #000000 30%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .project-modal:has(&){
+          overflow-y: hidden;
+        }
+      }
+
+
+      /* Для альбомной ориентации (ширина > высоты) */
+      @media (orientation: landscape) {
+        img {
+          width: 100vw;
+          height: auto;
+        }
+      }
+
+      /* Для портретной ориентации (высота > ширины) */
+      @media (orientation: portrait) {
+        img {
+          width: auto;
+          height: 100vh;
+        }
+      }
     }
   }
 }

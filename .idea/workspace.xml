@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила стили">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила модалку проекта на главной">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/utils&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/it-парк/use-popcorn-master&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -112,8 +115,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +145,13 @@
       <workItem from="1738499246172" duration="22596000" />
       <workItem from="1738589339976" duration="29105000" />
       <workItem from="1738672455042" duration="16830000" />
-      <workItem from="1738762254170" duration="29020000" />
+      <workItem from="1738762254170" duration="29383000" />
+      <workItem from="1738845024257" duration="5000" />
+      <workItem from="1738856059603" duration="8255000" />
+      <workItem from="1738943280506" duration="12073000" />
+      <workItem from="1739020327577" duration="8802000" />
+      <workItem from="1739191866300" duration="44000" />
+      <workItem from="1739555632917" duration="2612000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -320,7 +329,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738801851557</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="добавила кнопки для слайдера в модалку проекта">
+      <option name="closed" value="true" />
+      <created>1738804516768</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1738804516768</updated>
+    </task>
+    <task id="LOCAL-00024" summary="добавила модалку проекта на главной">
+      <option name="closed" value="true" />
+      <created>1738865538441</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1738865538441</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +380,9 @@
     <MESSAGE value="сделала модалку проекта" />
     <MESSAGE value="исправила условия типов в input" />
     <MESSAGE value="исправила стили" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправила стили" />
+    <MESSAGE value="добавила кнопки для слайдера в модалку проекта" />
+    <MESSAGE value="добавила модалку проекта на главной" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила модалку проекта на главной" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

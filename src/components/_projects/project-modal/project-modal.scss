@@ -1,8 +1,10 @@
 @import "@/app/styles/mixins";
 
 .project-modal{
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: fixed;
+  width: 100vw;
   inset: 0;
   z-index: 999;
   background: linear-gradient(180deg, rgba(102, 102, 102, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%);
