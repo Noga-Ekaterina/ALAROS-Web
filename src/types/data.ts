@@ -173,4 +173,5 @@ export interface IProject{
 export interface IProjectsPage{
   title: string
   years: string
+  nominations: IHtmlString
 }

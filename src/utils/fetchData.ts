@@ -5,10 +5,19 @@ export const fetchData=async (query: string)=> {
     const resp= await axios({
       method: 'POST',
       url: process.env.NEXT_PUBLIC_API_URL,
+      headers: {
+        'Authorization': process.env.TOKEN
+      },
       data: {
         query
       }
     })
+
+    if (resp.data.errors) {
+      // 3. Обрабатываем ошибки GraphQL
+      console.error("Hygraph Errors:", resp.data.errors);
+      throw new Error("GraphQL request error");
+    }
 
     return resp.data.data
   }catch (err){

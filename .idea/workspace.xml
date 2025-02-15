@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила модалку проекта на главной">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила функцию масштабирования в модалку проекта">
+      <change afterPath="$PROJECT_DIR$/src/app/api/project-nomination/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/nominationsProcessing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/nominationsProcessing.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +150,8 @@
       <workItem from="1738943280506" duration="12073000" />
       <workItem from="1739020327577" duration="8802000" />
       <workItem from="1739191866300" duration="44000" />
-      <workItem from="1739555632917" duration="2612000" />
+      <workItem from="1739555632917" duration="10367000" />
+      <workItem from="1739620619768" duration="13752000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -345,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738865538441</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="добавила функцию масштабирования в модалку проекта">
+      <option name="closed" value="true" />
+      <created>1739573594026</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1739573594026</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +390,9 @@
     <MESSAGE value="исправила стили" />
     <MESSAGE value="добавила кнопки для слайдера в модалку проекта" />
     <MESSAGE value="добавила модалку проекта на главной" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавила модалку проекта на главной" />
+    <MESSAGE value="добавила функцию масштабрования в модалку проекта" />
+    <MESSAGE value="добавила функцию масштабирования в модалку проекта" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила функцию масштабирования в модалку проекта" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
