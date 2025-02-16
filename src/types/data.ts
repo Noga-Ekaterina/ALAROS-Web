@@ -166,6 +166,7 @@ export interface IProject{
   diploma: TDiploma
   winner: string
   nomination: string|null
+  nominationId: string|null
   images: string[]
   homeSignature: null|string
 }

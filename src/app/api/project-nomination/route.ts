@@ -2,6 +2,7 @@ import {NextResponse} from "next/server";
 import {IProject, IProjectsPage} from "@/types/data";
 import {fetchData} from "@/utils/fetchData";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
+import {unstable_cache} from "next/cache";
 
 interface IDataRequest extends IProject{
   id: string
@@ -19,7 +20,7 @@ interface IDataNominations{
   projectsPages: IProjectsPage[]
 }
 
-async function fetchNominations(){
+const fetchNominations= unstable_cache(async ()=>{
   const data: IDataNominations|null= await fetchData(`
     query MyQuery {
       projectsPages {
@@ -35,11 +36,12 @@ async function fetchNominations(){
   console.log(data.projectsPages[0].nominations.html)
 
   return nominationsSProcessing(data.projectsPages[0].nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
-}
+}, ["projects-nominations"], {tags: ["projects-nominations"]})
 
 export async function PUT(request: Request): Promise<NextResponse<RevalidateResponse>> {
   try {
     const body = (await request.json()) as RevalidateRequest;
+
     if (!body.data.nomination){
       return NextResponse.json(
           { message: "номинация не указана" },
@@ -65,7 +67,14 @@ export async function PUT(request: Request): Promise<NextResponse<RevalidateResp
     if (!nominationId)
       throw new Error("в списке номинаций нет такой номинации")
 
-    const result= await fetchData(`
+    if (body.data.nominationId==nominationId){
+      return NextResponse.json(
+          { message: "id номинации уже установлен" },
+          { status: 200}
+      );
+    }
+
+    const updateResult= await fetchData(`
       mutation {
         updateProject(where: {id: "${body.data.id}"}, data: {nominationId: "${nominationId}"}){
           nominationId
@@ -73,8 +82,19 @@ export async function PUT(request: Request): Promise<NextResponse<RevalidateResp
       }
     `)
 
-    if (!result)
+    if (!updateResult)
       throw new Error("ошибка записи id номинации")
+
+    const publishResult= await fetchData(`
+      mutation {
+        publishProject(where: {id: "${body.data.id}"}, to: PUBLISHED) {
+            stage
+        }
+      }
+    `)
+
+    if (!publishResult)
+      throw new Error("ошибка публикации")
 
     return NextResponse.json(
         { message: `id номинации установлен: ${nominationId}` },
