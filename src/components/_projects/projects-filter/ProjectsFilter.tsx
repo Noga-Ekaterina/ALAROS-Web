@@ -1,27 +1,27 @@
 'use client'
 import React, {useEffect, useState} from 'react';
 import "./projects-filter.scss"
-import pagesData from "@/store/pagesData";
 import {useSearchParams} from "next/navigation";
 import Dropdown from "../../dropdown/Dropdown";
-import {diplomas} from "../../../variables";
-import {IProjectsPage, TDiploma} from "../../../types/data";
+import {IProjectsPage} from "../../../types/data";
 import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
+import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 
 interface Props{
   projectsPage: IProjectsPage
 }
 
 const ProjectsFilter = ({projectsPage}:Props) => {
+  const nominations= nominationsSProcessing(projectsPage.nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
+  const nominationsValues =nominations.map(({title})=>title )
+  nominationsValues.unshift("все номинации")
+
   const [years, setYears] = useState<string[]>([])
-  const [diplomaValues, setDiplomaValues] = useState<string[]>([])
-  const diplomasKeys = Object.keys(diplomas) as Array<keyof typeof diplomas>;
   const searchParams= useSearchParams()
-  const page= searchParams.get("page")?Number(searchParams.get("page")) :1
   const year= searchParams.get("year")
-  const diploma= searchParams.get("diploma")
-  const [yearValue, setYearValue] = useState("все года")
-  const [diplomaValue, setDiplomaValue] = useState("все дипломы")
+  const nomination= searchParams.get("nomination")
+  const [yearValue, setYearValue] = useState(year??"все года")
+  const [nominationsValue, setNominationsValue] = useState(nomination? nominations.find(item=> item.id==nomination)?.title??"неизвестная номинация":"все номинации")
   const {
     setParam,
     deleteParam,
@@ -34,23 +34,22 @@ const ProjectsFilter = ({projectsPage}:Props) => {
     const yearValueWithoutText = yearValue.replace(" год", "");
     const yearFilter = isNaN(Number(yearValueWithoutText))? null: yearValueWithoutText;
 
-    let diplomaFilter: null|TDiploma=null
+    let nominationFilter: null|string=null
 
-    for (let diploma of diplomasKeys) {
-      if (diplomas[diploma].text===diplomaValue){
-        diplomaFilter= diploma
+    for (let nomination of nominations) {
+      if (nomination.title===nominationsValue){
+        nominationFilter= nomination.id
         break
       }
     }
 
-    setMultipleParams({page:"1", diploma: diplomaFilter, year: yearFilter})
+    setMultipleParams({page:"1", nomination: nominationFilter, year: yearFilter})
   }
 
   useEffect(() => {
     if (!projectsPage) return
 
     const yearsResult: string[]=["все года"]
-    const diplomasResult: string[]=["все дипломы"]
 
     const [start, end]= projectsPage.years.split("-")
 
@@ -58,17 +57,8 @@ const ProjectsFilter = ({projectsPage}:Props) => {
       yearsResult.push(`${i} год`)
     }
 
-    for (let diploma of diplomasKeys) {
-      diplomasResult.push(diplomas[diploma].text)
-    }
-
     setYears(yearsResult)
-    setDiplomaValues(diplomasResult)
   }, []);
-
-  // useEffect(() => {
-  //   fetchProjects(year, diploma, page)
-  // }, [year, diploma, page]);
 
   return (
       <div className="projects-filter">
@@ -80,7 +70,7 @@ const ProjectsFilter = ({projectsPage}:Props) => {
             years={true}
             className="projects-filter__year"
         />
-        <Dropdown value={diplomaValue} values={diplomaValues} handleCheck={(e) => setDiplomaValue(e.target.value)} arrow={true} className="projects-filter__diploma"/>
+        <Dropdown value={nominationsValue} values={nominationsValues} handleCheck={(e) => setNominationsValue(e.target.value)} arrow={true} className="projects-filter__nomination"/>
         <button className="projects-filter__btn" onClick={handleFilter}>Применить</button>
       </div>
   );

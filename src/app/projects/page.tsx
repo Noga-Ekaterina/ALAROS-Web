@@ -22,13 +22,16 @@ interface IData{
   projectsPages: IProjectsPage[]
 }
 
-const init=unstable_cache( async (year: undefined| string, diploma: undefined |string, page: string)=>{
+const init=unstable_cache( async (year: undefined| string, nomination: undefined |string, page: string)=>{
   const data: IData|null= await fetchData(`
           query NewsAllQuery {
-            ${getProjectsQueryStr(year, diploma, Number(page))}
+            ${getProjectsQueryStr(year, nomination, Number(page))}
             projectsPages {
               title
               years
+              nominations{
+                html
+              }
             }
           }`)
 
@@ -43,10 +46,10 @@ const init=unstable_cache( async (year: undefined| string, diploma: undefined |s
     ["projects"], {tags: ["projects"]})
 
 const Page = async ({searchParams}: Props) => {
-  const {page, diploma, year}= searchParams
+  const {page, nomination, year}= searchParams
   const data= await init(
       typeof year ==="string"? year:undefined,
-      typeof diploma ==="string"? diploma:undefined,
+      typeof nomination ==="string"? nomination:undefined,
       typeof page==="string"? isNaN(Number(page))? page:"1":"1"
   )
 
@@ -56,7 +59,7 @@ const Page = async ({searchParams}: Props) => {
   return (
       <>
         <ProjectModal projects={data.projects} searchParams={searchParams}/>
-        <div className="container" style={{paddingBlock: "32rem"}}>
+        <div className="container" style={{paddingBlock: "32rem", position: "relative", zIndex: 4}}>
           <div className="titles-block">
             <h1 className="titles-block__title titles-block__title--small">{data.pageData.title}</h1>
           </div>

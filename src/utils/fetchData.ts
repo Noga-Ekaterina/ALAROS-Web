@@ -38,21 +38,21 @@ export const getNewsQueryStr=(page: number)=>(
     `
 )
 
-export const getProjectsQueryStr= (year: undefined| string, diploma: undefined |string, page: number)=>{
-  const diplomaFilter= diploma? `diploma: ${diploma}`:''
+export const getProjectsQueryStr= (year: undefined| string, nomination: undefined |string, page: number)=>{
+  const nominationFilter= nomination? `nominationId: "${nomination}"`:''
   const yearFilter= year? `year: ${year}, `:""
 
   return (`
     projectsConnection(
       stage: PUBLISHED,
-      where: {${yearFilter}${diplomaFilter}},      first: ${10 * page}, skip: ${10 * (page - 1)}
+      where: {${yearFilter}${nominationFilter}},      first: ${10 * page}, skip: ${10 * (page - 1)}
     ) {
       aggregate {
         count
       }
     }
     projects(
-      where: {${yearFilter}${diplomaFilter}},
+      where: {${yearFilter}${nominationFilter}},
       first: ${10 * page}, skip: ${10 * (page - 1)}
     ){
       name

@@ -1,26 +1,68 @@
+@import "@/app/styles/mixins";
+
 .projects-filter{
   display: flex;
+  align-items: start;
   gap: 6rem;
   position: relative;
   z-index: 3;
   margin-block: 52rem 35rem;
 
+  @include sm{
+    flex-wrap: wrap;
+  }
+
   *{
     font-size: 13rem;
+
+    @include sm{
+      font-size: 18rem;
+    }
   }
 
   &__year{
     width: 114rem;
+
+    @include sm{
+      width: 125rem;
+    }
   }
 
-  &__diploma{
-    width: 260rem;
+  &__nomination{
+    width: 725rem;
+    position: relative;
+    z-index: 3;
+
+    @include sm{
+      width: 100%;
+      order: -1;
+    }
+
+    *{
+      text-transform: uppercase;
+
+      @include sm{
+        font-size: 13rem;
+      }
+    }
+
+    .dropdown__line{
+      @include sm{
+        height: auto;
+        align-self: stretch;
+      }
+    }
   }
 
   &__btn{
     padding: 14rem;
     background: var(--c-green-text);
     color: #fff;
+
+    @include sm{
+      width: 219rem;
+      text-align: center;
+    }
   }
 
   .dropdown{

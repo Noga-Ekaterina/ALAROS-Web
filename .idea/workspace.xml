@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила функцию масштабирования в модалку проекта">
-      <change afterPath="$PROJECT_DIR$/src/app/api/project-nomination/route.ts" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="изменила стили для таблицы расписания">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/nominationsProcessing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/nominationsProcessing.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +153,8 @@
       <workItem from="1739020327577" duration="8802000" />
       <workItem from="1739191866300" duration="44000" />
       <workItem from="1739555632917" duration="10367000" />
-      <workItem from="1739620619768" duration="13752000" />
+      <workItem from="1739620619768" duration="21219000" />
+      <workItem from="1739712237802" duration="17621000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -353,7 +356,31 @@
       <option name="project" value="LOCAL" />
       <updated>1739573594026</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="сделала api для добавления в проект id номина">
+      <option name="closed" value="true" />
+      <created>1739656662658</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1739656662659</updated>
+    </task>
+    <task id="LOCAL-00027" summary="усовершенствовала api для добавления в проект id номина">
+      <option name="closed" value="true" />
+      <created>1739714910477</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1739714910477</updated>
+    </task>
+    <task id="LOCAL-00028" summary="изменила стили для таблицы расписания">
+      <option name="closed" value="true" />
+      <created>1739750679020</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1739750679020</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +419,10 @@
     <MESSAGE value="добавила модалку проекта на главной" />
     <MESSAGE value="добавила функцию масштабрования в модалку проекта" />
     <MESSAGE value="добавила функцию масштабирования в модалку проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавила функцию масштабирования в модалку проекта" />
+    <MESSAGE value="сделала api для добавления в проект id номина" />
+    <MESSAGE value="усовершенствовала api для добавления в проект id номина" />
+    <MESSAGE value="изменила стили для таблицы расписания" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменила стили для таблицы расписания" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
