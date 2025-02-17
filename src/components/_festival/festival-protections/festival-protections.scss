@@ -1,3 +1,4 @@
+@import "@/app/styles/mixins";
 .festival-protections{
   background: #fff;
   padding-block: 30rem;
@@ -5,6 +6,7 @@
   &__title{
     font-size: 36rem;
     font-weight: 500;
+    font-variant-numeric: tabular-nums;
     color: #2A3A2B;
     margin-bottom: 20rem;
   }
@@ -26,6 +28,10 @@
     }
 
     &--opened{
+      table{
+        overflow-x: auto;
+      }
+
       tbody tr:hover{
         background: var(--c-red);
 
@@ -38,6 +44,7 @@
 
   table{
     width: 100%;
+    overflow-x: hidden;
     display: block;
     >*{
       display: block;
@@ -63,8 +70,9 @@
   }
 
   tr{
+    min-width: 734rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 7fr 3fr;
+    grid-template-columns: repeat(3, 1fr) 6fr 3fr;
     gap: 17rem;
     transition: 0.3s;
     padding-block: 3rem;
@@ -83,5 +91,16 @@
 
   th{
     color: #959595;
+  }
+
+  td{
+    &:first-child *{
+      font-variant-numeric: tabular-nums;
+      font-size: 10.5rem;
+
+      @include sm{
+        font-size: 13rem;
+      }
+    }
   }
 }
