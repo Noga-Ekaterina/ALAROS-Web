@@ -67,8 +67,12 @@ const init= unstable_cache(async ()=>{
                 type
                 placeholder
                 values
+                necessarily
               }
               bidButton
+              bidNote {
+                html
+              }
               documentsTitle
               documentsLinks {
                 html
@@ -87,6 +91,10 @@ const init= unstable_cache(async ()=>{
                 placeholder
                 type
                 values
+                necessarily
+              }
+              diplomaNote {
+                html
               }
               juriesTitle
               protectionsTitle

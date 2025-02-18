@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="изменила стили для таблицы расписания">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала фильтр номинаций">
+      <change afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/festival-bid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/festival-bid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -154,7 +157,9 @@
       <workItem from="1739191866300" duration="44000" />
       <workItem from="1739555632917" duration="10367000" />
       <workItem from="1739620619768" duration="21219000" />
-      <workItem from="1739712237802" duration="17621000" />
+      <workItem from="1739712237802" duration="19007000" />
+      <workItem from="1739805990443" duration="11585000" />
+      <workItem from="1739905931586" duration="6456000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -380,7 +385,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739750679020</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="сделала фильтр номинаций">
+      <option name="closed" value="true" />
+      <created>1739752354378</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1739752354378</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +435,8 @@
     <MESSAGE value="сделала api для добавления в проект id номина" />
     <MESSAGE value="усовершенствовала api для добавления в проект id номина" />
     <MESSAGE value="изменила стили для таблицы расписания" />
-    <option name="LAST_COMMIT_MESSAGE" value="изменила стили для таблицы расписания" />
+    <MESSAGE value="сделала фильтр номинаций" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала фильтр номинаций" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

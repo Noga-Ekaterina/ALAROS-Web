@@ -2,10 +2,9 @@
 import React, {useEffect, useState} from 'react';
 import "./festival-diploma.scss";
 import Detalis from "../../detalis/Detalis";
-import {Field, Form, Formik} from "formik";
-import {IField} from "../../../types/tehnic";
 import Input from "../../input/Input";
 import {IFestival, INomination} from "@/types/data";
+import Form from "@/components/form/Form";
 
 interface Props{
   festivalText: IFestival
@@ -13,48 +12,14 @@ interface Props{
 }
 
 const FestivalDiploma = ({festivalText, nominations}: Props) => {
-  const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
-
-  useEffect(() => {
-    const result: {[key: string]: string}={}
-
-    festivalText.bidInputs.forEach((input, index)=>{
-      if (input.values.length==0){
-        result[index]=''
-      }else
-        result[index]=input.values[0]
-    })
-
-    console.log(result)
-
-    setInputsObj(result)
-  }, [festivalText])
-
-  if (!inputsObj) return <div/>
-
   return (
       <div className="festival-diploma" id="diploma">
         <Detalis
             title={<span>{festivalText.diplomaTitle}</span>}
         >
-          <Formik initialValues={inputsObj} onSubmit={()=>{}}>
-            <Form className='container'>
-              <div>
-                {
-                  festivalText.diplomaInputs.map((input, index)=>(
-                      <Field
-                          key={index}
-                          name={index}
-                          render={({field}: IField)=> (
-                              <Input input={input} field={field} nominations={nominations}/>
-                          )}
-                      />
-                  ))
-                }
-              </div>
-              <Field type="submit" value={festivalText.bidButton} className="festival-bid__btn"/>
-            </Form>
-          </Formik>
+          <div className="container">
+            <Form inputs={festivalText.diplomaInputs} btn={festivalText.bidButton} note={festivalText.diplomaNote.html} nominations={nominations}/>
+          </div>
         </Detalis>
       </div>
   );

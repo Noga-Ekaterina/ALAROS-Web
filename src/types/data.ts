@@ -38,7 +38,7 @@ export interface IFormInput{
   name: string
   type: HTMLInputTypeAttribute |"radios"|"dropdown"|"nominations"
   placeholder: string
-  note?: string
+  necessarily: null|boolean
   values: string[]
 }
 
@@ -108,6 +108,7 @@ export interface IFestival {
   bidTitle: string
   bidInputs: IFormInput[]
   bidButton: string
+  bidNote: IHtmlString
   documentsTitle: string
   documentsLinks: IHtmlString[]
   templates: IHtmlString
@@ -115,6 +116,7 @@ export interface IFestival {
   emails: IHtmlString[]
   diplomaTitle: string
   diplomaInputs: IFormInput[]
+  diplomaNote: IHtmlString
   juriesTitle: string
   protectionsTitle: string
   projectsTitle: string

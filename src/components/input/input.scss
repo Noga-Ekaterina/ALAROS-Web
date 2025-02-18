@@ -3,11 +3,14 @@
   display: flex;
   justify-content: space-between;
   gap: 15rem;
-  border-bottom: #BEBCBB solid max(1px, 1rem);
+  border-top: #BEBCBB solid max(1px, 1rem);
   padding-block: 9rem;
 
-  &:last-child{
-    border-bottom: none;
+  &:first-child{
+    border-top: none;
+  }
+
+  &--dropdown{
 
     @include sm{
       flex-direction: column;
@@ -40,10 +43,24 @@
       text-transform: uppercase;
     }
   }
+
   &__placeholder{
     min-width: max-content;
     color: #BEBCBB;
     text-transform: uppercase;
+  }
+
+  &__error{
+    min-width: max-content;
+    text-transform: uppercase;
+
+    .input:has(&){
+      border-block: var(--c-red) solid max(1px, 1rem);
+
+      &+.input{
+        border-top: 0;
+      }
+    }
   }
 
   &__radios{

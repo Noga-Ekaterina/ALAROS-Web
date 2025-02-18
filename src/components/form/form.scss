@@ -1,0 +1,27 @@
+@import "@/app/styles/mixins";
+.form{
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+    gap: 6rem;
+
+    @include sm{
+      flex-direction: column;
+    }
+  }
+
+  &__btn{
+    font-size: 16rem !important;
+    font-weight: 500 !important;
+    text-align: center;
+    color: var(--c-dark);
+    background: #EFEFEF !important;
+    width: 197rem;
+    padding: 10rem;
+  }
+
+  .note{
+    width: 260rem;
+  }
+}
