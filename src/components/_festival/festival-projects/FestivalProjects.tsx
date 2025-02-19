@@ -19,7 +19,7 @@ const FestivalProjects = ({festivalText}:Props) => {
   if (!festivalText) return <div/>
 
   return (
-      <div className="festival-projects">
+      <div className="festival-projects" id="projects">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small">{festivalText.projectsTitle}</h2>

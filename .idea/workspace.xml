@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала фильтр номинаций">
-      <change afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="вынесла форму в отдельный компонент">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/festival-bid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/festival-bid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoocs/useGetHashPosition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoocs/useGetHashPosition.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +154,7 @@
       <workItem from="1739620619768" duration="21219000" />
       <workItem from="1739712237802" duration="19007000" />
       <workItem from="1739805990443" duration="11585000" />
-      <workItem from="1739905931586" duration="6456000" />
+      <workItem from="1739905931586" duration="13421000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -393,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739752354378</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="вынесла форму в отдельный компонент">
+      <option name="closed" value="true" />
+      <created>1739914682754</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1739914682754</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="переход на next" />
     <MESSAGE value="исправила проблемы с фото" />
     <MESSAGE value="исправила язык" />
     <MESSAGE value="сделала апи для очистки кэша" />
@@ -436,7 +438,8 @@
     <MESSAGE value="усовершенствовала api для добавления в проект id номина" />
     <MESSAGE value="изменила стили для таблицы расписания" />
     <MESSAGE value="сделала фильтр номинаций" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала фильтр номинаций" />
+    <MESSAGE value="вынесла форму в отдельный компонент" />
+    <option name="LAST_COMMIT_MESSAGE" value="вынесла форму в отдельный компонент" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

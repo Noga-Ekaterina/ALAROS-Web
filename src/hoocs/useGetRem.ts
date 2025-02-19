@@ -1,25 +1,29 @@
+// useGetRem.ts
 import {useMediaQuery} from "react-responsive";
-import {useEffect, useState} from "react";
+import {useState, useEffect} from "react";
 
-export const useGetRem=()=>{
+export const useGetRem = () => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
-  const [rem, setRem] = useState(0)
+  const [rem, setRem] = useState(() =>
+      typeof window !== 'undefined'
+          ? window.document.documentElement.clientWidth / (mobileScreen ? 390 : 1024)
+          : 0
+  );
 
   useEffect(() => {
-    const handleResize=()=>{
-      setRem(document.documentElement.clientWidth/ (mobileScreen? 390:1024))
+    const handleResize = () => {
+      const newRem = document.documentElement.clientWidth / (mobileScreen ? 390 : 1024)
+      setRem(prev => Math.abs(prev - newRem) > 0.01 ? newRem : prev)
     }
 
+    const timer = setTimeout(handleResize, 100)
     window.addEventListener("resize", handleResize)
 
-    return ()=>{
+    return () => {
       window.removeEventListener("resize", handleResize)
+      clearTimeout(timer)
     }
-  }, []);
-
-  useEffect(() => {
-    setRem(document.documentElement.clientWidth/ (mobileScreen? 390:1024))
-  }, [mobileScreen]);
+  }, [])
 
   return rem
 }

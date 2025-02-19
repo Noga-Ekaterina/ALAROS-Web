@@ -1,18 +1,20 @@
 'use client'
-import React, {FC, JSX, useEffect, useState} from "react";
+import React, {FC, JSX, useCallback, useEffect, useState} from "react";
 import parse from "html-react-parser";
 import Link from 'next/link';
 import {useGetHashPosition} from "../hoocs/useGetHashPosition";
 import {smoothScroll} from "../utils/smoothScroll";
+import {useGetRem} from "@/hoocs/useGetRem";
 
 interface Props{
   html: string| JSX.Element[]
 }
 
 const HtmlProcessing = ({html}:Props) => {
+  const rem= useGetRem()
   const getHashPosition= useGetHashPosition()
 
-  const handleHashed=(event:  React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
+  const handleHashed=useCallback((event:  React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
     event.preventDefault()
 
     const targetElement = event.target as HTMLElement;
@@ -25,7 +27,7 @@ const HtmlProcessing = ({html}:Props) => {
     smoothScroll(getHashPosition(hash))
 
     setTimeout(()=> window.location.hash=hash.slice(1))
-  }
+  }, [getHashPosition])
 
   const replaceWithLink = (element: JSX.Element, index: number): JSX.Element => {
     const uniqueId = element.props?.id || element.key ||element.props?.className || element.props?.href || `key-${index}`; // Используем id или href, если доступны
