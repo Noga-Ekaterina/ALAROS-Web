@@ -35,8 +35,8 @@
       tbody tr:hover{
         background: var(--c-red);
 
-        *{
-          color: #fff;
+        *, .red, .red *{
+          color: #fff !important;
         }
       }
     }

@@ -120,23 +120,23 @@ span{
   font-weight: inherit;
 }
 
-.white{
+.white, .white *{
   color: #fff !important;
 }
 
-.yellow{
+.yellow, .yellow *{
   color: var(--c-yellow) !important;
 }
 
-.red{
+.red, .red *{
   color: var(--c-red) !important;
 }
 
-.green{
+.green, .green *{
   color: var(--c-green-text) !important;
 }
 
-.grey{
+.grey, .grey *{
   color: var(--c-grey) !important;
 }
 
