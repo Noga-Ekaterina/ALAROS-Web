@@ -7,6 +7,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
 import HtmlProcessing from "../../HtmlProcessing";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   title: string
@@ -83,7 +84,7 @@ const FestivalJuries = ({juries, title}:Props) => {
                                     isOpenedArr.includes(item) && "festival-juries__info--opened"
                                 )}>
                                    <div>
-                                      <p className="festival-juries__name">{item.name}</p><p className="yellow">{item.place}</p>
+                                      <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>
                                    </div>
                                    <HtmlProcessing html={item.jobTitle.html}/>
                                 </div>

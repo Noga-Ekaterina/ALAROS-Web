@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправлен баг со цветом">
+      <change afterPath="$PROJECT_DIR$/src/utils/nonBreakingSpaces.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-protections/festival-protections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/project-nomination/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/project-nomination/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-business-program/FestivalBusinessProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-business-program/FestivalBusinessProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-forum/FestivalForum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-forum/FestivalForum.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/FestivalMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/FestivalMainScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-protections/FestivalProtections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -152,7 +169,8 @@
       <workItem from="1739620619768" duration="21219000" />
       <workItem from="1739712237802" duration="19007000" />
       <workItem from="1739805990443" duration="11585000" />
-      <workItem from="1739905931586" duration="15572000" />
+      <workItem from="1739905931586" duration="17061000" />
+      <workItem from="1739983381851" duration="7131000" />
     </task>
     <task id="LOCAL-00001" summary="переход на next">
       <option name="closed" value="true" />
@@ -402,7 +420,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739925053729</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="исправлен баг со цветом">
+      <option name="closed" value="true" />
+      <created>1739980138783</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1739980138783</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="исправила язык" />
     <MESSAGE value="сделала апи для очистки кэша" />
     <MESSAGE value="доделала апи для очистки кэша" />
     <MESSAGE value="добавила теги для очистки кэша" />
@@ -445,14 +470,15 @@
     <MESSAGE value="сделала фильтр номинаций" />
     <MESSAGE value="вынесла форму в отдельный компонент" />
     <MESSAGE value="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю" />
-    <option name="LAST_COMMIT_MESSAGE" value="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю" />
+    <MESSAGE value="исправлен баг со цветом" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправлен баг со цветом" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx</url>
-          <line>341</line>
+          <line>342</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

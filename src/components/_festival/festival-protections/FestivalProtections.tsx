@@ -5,6 +5,7 @@ import Detalis from "../../detalis/Detalis";
 import HtmlProcessing from "../../HtmlProcessing";
 import {createDate, formaterDate} from "../../../utils/date";
 import {IProtectionsDay} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props {
   title: string
@@ -15,7 +16,7 @@ const FestivalProtections = ({title, protectionsDays}:Props) => {
   return (
       <div className="festival-protections" id="protections">
         <div className="container">
-          <h2 className="festival-protections__title">{title}</h2>
+          <h2 className="festival-protections__title">{nonBreakingSpaces(title)}</h2>
 
           {
             protectionsDays.map(item=>{

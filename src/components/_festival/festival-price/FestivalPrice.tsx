@@ -4,6 +4,7 @@ import "./festival-price.scss"
 import Marquee from 'react-fast-marquee';
 import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   festivalText: IFestival
@@ -14,7 +15,7 @@ const FestivalPrice = ({festivalText}:Props) => {
       <div className="festival-price" id="price">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{festivalText.priceTitle}</h2>
+            <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.priceTitle)}</h2>
           </div>
           <div className="festival-price__body">
             <HtmlProcessing html={festivalText.priceTable.html}/>

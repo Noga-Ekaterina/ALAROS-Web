@@ -13,6 +13,7 @@ import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import {IEventsByYear, IEventsDataYear} from "../../../types/data";
 import {eventsDataProcessing} from "../../../utils/eventsDataProcessing";
 import HtmlProcessing from "../../HtmlProcessing";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   calendarEvents: IEventsDataYear[]
@@ -302,7 +303,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
                               <div className="calendar-events__link">
                                 <HtmlProcessing html={event.title}/>
                               </div>
-                              <p className="calendar-events__plase">{event.place}</p>
+                              <p className="calendar-events__plase">{nonBreakingSpaces(event.place)}</p>
                             </div>
                           </div>
                           <div className="calendar-events__description">

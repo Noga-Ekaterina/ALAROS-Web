@@ -8,6 +8,7 @@ import {useMediaQuery} from "react-responsive";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import {Mousewheel} from "swiper/modules";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface ISessionProps{
   data: string
@@ -57,8 +58,8 @@ const UserCard=({user}: IUserCardProps)=>{
   return(
       <div className="session-user">
         <img src={`/Assets/Pages/Festival/Images/People/${user.image}`} alt="" className="session-user__img"/>
-        <p className="session-user__name">{user.name}</p>
-        <p>{user.jobTitle}</p>
+        <p className="session-user__name">{nonBreakingSpaces(user.name)}</p>
+        <p>{nonBreakingSpaces(user.jobTitle)}</p>
       </div>
   )
 }
@@ -173,7 +174,7 @@ const FestivalBusinessProgram = ({festivalText}:Props) => {
         <div className="container titles-block">
           <div>
             <p className="festival-business-program__date">{formaterDate(festivalText.businessProgramDate)} | {festivalText.businessProgramTime}</p>
-            <h2 className="titles-block__title">{festivalText.businessProgramTitle}</h2>
+            <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.businessProgramTitle)}</h2>
           </div>
           <div className="titles-block__section">
             <HtmlProcessing html={festivalText.businessProgramRightSignature.html}/>

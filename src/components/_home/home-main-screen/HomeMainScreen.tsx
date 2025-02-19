@@ -10,6 +10,7 @@ import {IHomeData} from "@/types/data";
 import project from "@/components/_projects/project/Project";
 import {useSearchParams} from "next/navigation";
 import {buildLink} from "@/utils/buildLink";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   homeData: IHomeData
@@ -36,10 +37,10 @@ const HomeMainScreen = ({homeData}: Props) => {
                     >
                       <img src={`/Assets/Projects/${project.year}/Project_${project.number}/cover.jpg`} alt="" className="main-screen__img"/>
                       <div className="home-main-screen__slide-title-wrapp">
-                        <h2 className='home-main-screen__slide-title'>{homeData.mainTitle}</h2>
+                        <h2 className='home-main-screen__slide-title'>{nonBreakingSpaces(homeData.mainTitle)}</h2>
                       </div>
                       <div className="main-screen__signature-wrapp">
-                        <strong className="main-screen__signature">{project.homeSignature}</strong>
+                        <strong className="main-screen__signature">{project.homeSignature && nonBreakingSpaces(project.homeSignature)}</strong>
                       </div>
                     </Link>
                   </SwiperSlide>

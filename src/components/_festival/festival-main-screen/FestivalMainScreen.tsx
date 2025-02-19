@@ -2,6 +2,7 @@ import React from 'react';
 import './festival-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   festivalText: IFestival

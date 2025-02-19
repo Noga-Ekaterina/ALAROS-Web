@@ -57,8 +57,7 @@ export async function PUT(request: Request): Promise<NextResponse<RevalidateResp
     let nominationId: string|null= null
 
     for (let nomination of nominations) {
-      console.log({nt: nomination.title, nn:body.data.nomination.replaceAll("\n", "")})
-      if (nomination.title==body.data.nomination.replaceAll("\n", "")){
+      if (nomination.title==body.data.nomination.replaceAll("\n", "").replaceAll("^", " ")){
         nominationId= nomination.id
         break
       }

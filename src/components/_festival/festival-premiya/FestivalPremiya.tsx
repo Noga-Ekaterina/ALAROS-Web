@@ -6,6 +6,7 @@ import pagesData from "@/store/pagesData";
 import parse from "html-react-parser";
 import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival, IHtmlString} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   festivalText: IFestival
@@ -52,7 +53,7 @@ const FestivalPremiya = ({festivalText}: Props) => {
   return (
       <div className="container festival-premiya" id="premiya">
         <div className="titles-block">
-          <h2 className="titles-block__title">{festivalText.premiyaTitle}</h2>
+          <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.premiyaTitle)}</h2>
           <div className="titles-block__section">
             <HtmlProcessing html={festivalText.premiyaRightSignature.html}/>
           </div>

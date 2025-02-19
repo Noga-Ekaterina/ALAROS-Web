@@ -4,6 +4,7 @@ import "./festival-forum.scss"
 import HtmlProcessing from "../../HtmlProcessing";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {IFestival} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   festivalText: IFestival
@@ -14,7 +15,7 @@ const FestivalForum = ({festivalText}:Props) => {
       <div className="festival-forum" id="forum">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{festivalText.forumTitle}</h2>
+            <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.forumTitle)}</h2>
             <div className="titles-block__section">
               <HtmlProcessing html={festivalText.forumRightSignature.html}/>
             </div>
@@ -49,7 +50,7 @@ const FestivalForum = ({festivalText}:Props) => {
               <HtmlProcessing html={festivalText.forumRegistration.html}/>
             </div>
             <div className="">
-              <h3>{festivalText.forumProgramTitle}</h3>
+              <h3>{nonBreakingSpaces(festivalText.forumProgramTitle)}</h3>
               <div className="festival-forum__program">
                 {
                   festivalText.forumProgram.map((block, index)=>(
@@ -65,7 +66,7 @@ const FestivalForum = ({festivalText}:Props) => {
         
         <div className="festival-forum__contacts-and-socials-wrap">
           <div className="container">
-            <h3>{festivalText.forumContactsTitle}</h3>
+            <h3>{nonBreakingSpaces(festivalText.forumContactsTitle)}</h3>
             <div className="festival-forum__contacts-and-socials">
               <div className="festival-forum__contacts">
                 <img src={`/Assets/Pages/Festival/Images/People/${festivalText.forumContactsImage}`} alt=""/>

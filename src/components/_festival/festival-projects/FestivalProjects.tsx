@@ -8,6 +8,7 @@ import pagesData from "@/store/pagesData";
 import HtmlProcessing from "../../HtmlProcessing";
 import {useMediaQuery} from "react-responsive";
 import {IFestival} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   festivalText: IFestival
@@ -22,7 +23,7 @@ const FestivalProjects = ({festivalText}:Props) => {
       <div className="festival-projects" id="projects">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title titles-block__title--small">{festivalText.projectsTitle}</h2>
+            <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(festivalText.projectsTitle)}</h2>
             <div className="titles-block__section">
               <HtmlProcessing html={festivalText.projectsRightSignature.html}/>
             </div>

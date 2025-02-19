@@ -10,6 +10,7 @@ import {pagesData} from "@/pagesData";
 import {ReactSVG} from "react-svg";
 import {formaterDate} from "@/utils/date";
 import {useRouter} from "next/navigation";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   slug: string
@@ -92,8 +93,8 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
             <p>{formaterDate(news.date)}</p>
             <p className="news-article__place">{news.place && news.place}</p>
           </div>
-          <h1 className="news-article__title">{news.title}</h1>
-          <p className="news-article__description">{news.description}</p>
+          <h1 className="news-article__title">{nonBreakingSpaces(news.title)}</h1>
+          <p className="news-article__description">{  nonBreakingSpaces(news.description)}</p>
           <div className="news-article__main">
             <div className="news-article__aside">
               <img src={`http://demo-it-park.ru/alaros/Assets/News/${slug}/cover.png`} alt=""/>

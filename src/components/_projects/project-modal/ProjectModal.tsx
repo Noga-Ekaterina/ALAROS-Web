@@ -5,6 +5,7 @@ import {unstable_cache} from "next/cache";
 import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import ProjectImagesSlider from "@/components/_projects/project-images-slider/ProjectImagesSlider";
 import {diplomas} from "@/variables";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   projects: IProject[]
@@ -55,15 +56,15 @@ const ProjectModal = async ({projects, searchParams}:Props) => {
       <div className="project-modal">
         <ProjectImagesSlider project={projectItem}/>
         <div className="project-modal__content">
-          <h2 className="project-modal__title">{projectItem.name}</h2>
+          <h2 className="project-modal__title">{nonBreakingSpaces(projectItem.name)}</h2>
           <div className="project-modal__subtitle">
             <span className="project-modal__year">{projectItem.year}</span>
             <span style={{color: diploma.color}}>{diploma.text}</span>
           </div>
 
           <div className="project-modal__row">
-            <p>{projectItem.winner}</p>
-            <p className="project-modal__nomination">{projectItem.nomination&&projectItem.nomination}</p>
+            <p>{nonBreakingSpaces(projectItem.winner)}</p>
+            <p className="project-modal__nomination">{projectItem.nomination&& nonBreakingSpaces(projectItem.nomination)}</p>
           </div>
         </div>
       </div>
