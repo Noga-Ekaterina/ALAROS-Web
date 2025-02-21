@@ -12,48 +12,6 @@
   }
 
   &__btn{
-    display: flex;
-    justify-content: space-between;
-    padding: 15rem;
     background: #2A3A2B;
-
-    @include sm{
-      padding: 10rem 15rem;
-    }
-
-    *{
-      color: #ffffff;
-      font-size: 20rem;
-    }
-
-    a u{
-      text-underline-offset: 0.14em;
-    }
   }
-
-  &__icon{
-    display: flex;
-  }
-  &__arrow{
-    width: 14rem;
-
-    svg{
-      width: auto;
-      height: 14rem;
-      transform: rotate(-90deg);
-      position: relative;
-      top: 3rem;
-      left: 3rem;
-
-      *{
-        stroke: currentColor;
-      }
-
-      .open &{
-        transform: rotate(90deg);
-      }
-    }
-  }
-
-
 }
