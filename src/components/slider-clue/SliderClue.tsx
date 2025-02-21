@@ -17,7 +17,7 @@ const SliderClue = ({parentRef}:Props) => {
           // Запускаем анимацию, когда элемент появляется в viewport
           if (entry.isIntersecting) {
             setIsPlay(true);
-            setTimeout(()=> setIsPlay(false), 2000)
+            setTimeout(()=> setIsPlay(false), 1500)
           }
         },
         {
