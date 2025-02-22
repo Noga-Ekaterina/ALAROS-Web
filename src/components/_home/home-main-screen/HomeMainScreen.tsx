@@ -35,7 +35,7 @@ const HomeMainScreen = ({homeData}: Props) => {
                         href={buildLink("/", searchParams, {project: String(project.number), projectYear: String(project.year)})}
                           className="home-main-screen__slide-content"
                     >
-                      <img src={`/Assets/Projects/${project.year}/Project_${project.number}/cover.jpg`} alt="" className="main-screen__img"/>
+                      <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt="" className="main-screen__img"/>
                       <div className="home-main-screen__slide-title-wrapp">
                         <h2 className='home-main-screen__slide-title'>{nonBreakingSpaces(homeData.mainTitle)}</h2>
                       </div>

@@ -34,6 +34,7 @@ const init= unstable_cache(async ()=>{
                 diploma
                 year
                 winner
+                cover
                 images
                 homeSignature
               }

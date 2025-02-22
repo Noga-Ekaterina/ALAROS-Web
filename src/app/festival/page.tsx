@@ -42,6 +42,7 @@ const init= unstable_cache(async ()=>{
               mainScreenSections {
                 html
               }
+              mainScreenPhoto
               premiyaTitle
               premiyaRightSignature{
                 html
@@ -109,6 +110,7 @@ const init= unstable_cache(async ()=>{
                 diploma
                 year
                 winner
+                cover
                 images
               }
               businessProgramDate

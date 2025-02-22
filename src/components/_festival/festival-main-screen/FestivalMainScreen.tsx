@@ -16,7 +16,7 @@ const FestivalMainScreen = ({festivalText}: Props) => {
         </div>
 
         <div className="festival-main-screen__img-wrapp">
-          <img src="/Assets/Pages/Festival/Images/Main.png" alt="" className="main-screen__img festival-main-screen__img"/>
+          <img src={`/Assets/Pages/Festival/Images/${festivalText.mainScreenPhoto}`} alt="" className="main-screen__img festival-main-screen__img"/>
           <HtmlProcessing html={festivalText.mainScreenSections.html}/>
         </div>
       </div>

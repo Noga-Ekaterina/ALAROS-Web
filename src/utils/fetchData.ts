@@ -28,8 +28,9 @@ export const fetchData=async (query: string)=> {
 
 export const getNewsQueryStr=(page: number)=>(
     `
-                newsAll(orderBy: date_DESC, first: ${10 * page}, skip: ${10 * (page - 1)}) {
+            newsAll(orderBy: date_DESC, first: ${10 * page}, skip: ${10 * (page - 1)}) {
               date
+              cover
               description
               title
               slug
@@ -61,6 +62,7 @@ export const getProjectsQueryStr= (year: undefined| string, nomination: undefine
       diploma
       year
       winner
+      cover
       images
     }
   `)

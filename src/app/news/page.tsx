@@ -24,6 +24,8 @@ const init= async (page: string)=>{
                 html
               }
               title
+              mainScreenPhoto
+              mainScreenPhotoSignature
             }
           }
       `)

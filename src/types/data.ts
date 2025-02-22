@@ -65,6 +65,7 @@ export interface IEventsByYear {
 
 export interface INewsItem {
   title: string
+  cover: string
   description: string
   slug: string
   date: string
@@ -91,12 +92,15 @@ export interface IStep{
 
 export interface INews{
   title: string
+  mainScreenPhoto: string
+  mainScreenPhotoSignature: string
   allNews: IHtmlString
 }
 
 export interface IFestival {
   mainScreenLeftSection: IHtmlString
   mainScreenSections: IHtmlString
+  mainScreenPhoto: string
   premiyaTitle: string
   premiyaRightSignature: IHtmlString
   premiyaSteps: IHtmlString[]
@@ -169,6 +173,7 @@ export interface IProject{
   winner: string
   nomination: string|null
   nominationId: string|null
+  cover: string
   images: string[]
   homeSignature: null|string
 }
