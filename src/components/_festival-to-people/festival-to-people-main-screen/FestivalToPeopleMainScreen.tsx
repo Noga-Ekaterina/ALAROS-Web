@@ -10,13 +10,13 @@ interface Props{
 
 const FestivalToPeopleMainScreen = ({pageData}: Props) => {
   return (
-      <div className="main-screen festival-main-screen">
-        <div className="festival-main-screen__block-text">
+      <div className="main-screen festival-to-people-main-screen">
+        <div className="festival-to-people-main-screen__block-text">
           <HtmlProcessing html={pageData.mainScreenLeftSection.html}/>
         </div>
 
-        <div className="festival-main-screen__img-wrapp">
-          <img src={`/Assets/Pages/festival-to-people/${pageData.mainScreenPhoto}`} alt="" className="main-screen__img festival-main-screen__img"/>
+        <div className="festival-to-people-main-screen__img-wrapp">
+          <img src={`/Assets/Pages/Festival-to-people/${pageData.mainScreenPhoto}`} alt="" className="main-screen__img festival-to-people-main-screen__img"/>
         </div>
       </div>
   );
