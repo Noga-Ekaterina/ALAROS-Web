@@ -42,7 +42,7 @@ const init=unstable_cache( async (year: undefined| string, nomination: undefined
     count: data.projectsConnection.aggregate.count
   }
 },
-    ["projects"], {tags: ["projects"]})
+    ["projects"], {tags: ["Project"]})
 
 const Page = async ({searchParams}: Props) => {
   const {page, nomination, year}= searchParams

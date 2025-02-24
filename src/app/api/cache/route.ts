@@ -24,21 +24,11 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     const body = (await request.json()) as RevalidateRequest;
     console.log('Request body:', body);
 
-    const {__typename } = body.data;
+    const {__typename } = body.data
 
-    if (__typename==="Festival-main" || __typename==="Jury" || __typename==="ProtectionsDay" ||__typename==="FormInput" || __typename==="Project" ||__typename==="Nominations"){
-      revalidateTag("festival-main");
+    revalidateTag(__typename)
 
-      return NextResponse.json({ success: true, revalidated: true, });
-    }
-    else if (__typename==="Home" || __typename==="News"){
-      revalidateTag('home')
-
-      return NextResponse.json({ success: true, revalidated: true, });
-    }
-
-    // Возвращаем успешный ответ
-    return NextResponse.json({ success: true, });
+    return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {
     // Логируем ошибку
     console.error('Error in revalidate route:', error);

@@ -144,7 +144,7 @@ const init= unstable_cache(async ()=>{
 
   return result
 },
-    ["festival-main"], {tags: ["festival-main"]})
+    ["festival-main"], {tags: ["FestivalMain", "Jury", "FormInput", "Project", "Nominations"]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams

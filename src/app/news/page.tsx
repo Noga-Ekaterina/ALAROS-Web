@@ -3,6 +3,7 @@ import NewsMainScreen from "../../components/_news/news-main-screen/NewsMainScre
 import NewsList from "../../components/_news/news-list/NewsList";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {INews, INewsItem} from "@/types/data";
+import {unstable_cache} from "next/cache";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -13,7 +14,7 @@ interface IData{
   newsPages: INews[]
 }
 
-const init= async (page: string)=>{
+const init= unstable_cache(async (page: string)=>{
 
   const data: IData|null= await fetchData( `
           query NewsAllQuery {
@@ -35,7 +36,7 @@ const init= async (page: string)=>{
     pageData: data.newsPages[0],
     news: data.newsAll
   }
-}
+}, ["news-page"], {tags: ["News", "NewsPage"]})
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams

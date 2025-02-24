@@ -4,6 +4,7 @@ import {INews, INewsItem} from "../../../types/data";
 import {fetchData} from "@/utils/fetchData";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
+import {unstable_cache} from "next/cache";
 
 interface Props{
   params: {
@@ -16,7 +17,7 @@ interface IData{
   newsPages: INews[]
 }
 
-const init= async (slug: string)=>{
+const init= unstable_cache(async (slug: string)=>{
 
   const data: IData= await fetchData( `
                 query NewsItemQuery {
@@ -37,7 +38,7 @@ const init= async (slug: string)=>{
                   }
                 }`)
   return {news: data.news, allNews: data.newsPages[0].allNews}
-}
+}, ["news-article"], {tags: ["News"]})
 
 const Page = async ({params}:Props) => {
   const slug= params.slug

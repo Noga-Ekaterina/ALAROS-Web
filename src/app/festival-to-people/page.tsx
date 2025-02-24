@@ -80,7 +80,7 @@ const init= unstable_cache(async ()=>{
 
   return result
 },
-    ["festival-main-to-people"], {tags: ["festival-main-to-people"]})
+    ["festival-to-people"], {tags: ["FestivalToPeople", "ProtectionsDay", ]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
