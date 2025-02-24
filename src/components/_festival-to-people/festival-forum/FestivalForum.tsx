@@ -3,26 +3,26 @@ import React from 'react';
 import "./festival-forum.scss"
 import HtmlProcessing from "../../HtmlProcessing";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {IFestival} from "@/types/data";
+import {IFestival, FestivalToPeople} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  festivalText: IFestival
+  pageData: FestivalToPeople
 }
 
-const FestivalForum = ({festivalText}:Props) => {
+const FestivalForum = ({pageData}:Props) => {
   return (
       <div className="festival-forum" id="forum">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.forumTitle)}</h2>
+            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.forumTitle)}</h2>
             <div className="titles-block__section">
-              <HtmlProcessing html={festivalText.forumRightSignature.html}/>
+              <HtmlProcessing html={pageData.forumRightSignature.html}/>
             </div>
           </div>
           <div className="festival-forum__descriptions">
             {
-              festivalText.forumDescriptionBlocks.map((block, index)=>(
+              pageData.forumDescriptionBlocks.map((block, index)=>(
                   <div key={index} className="festival-forum__block-text">
                     <HtmlProcessing html={block.html}/>
                   </div>
@@ -36,9 +36,9 @@ const FestivalForum = ({festivalText}:Props) => {
             className="festival-forum__slider"
         >
           {
-            festivalText.forumImages.map((img, index)=>(
+            pageData.forumImages.map((img, index)=>(
                 <SwiperSlide key={index} className="festival-forum__slide">
-                  <img src={`/Assets/Pages/Festival/Images/Forum/${img}`} alt=""/>
+                  <img src={`/Assets/Pages/festival-to-people/Forum/${img}`} alt=""/>
                 </SwiperSlide>
             ))
           }
@@ -47,13 +47,13 @@ const FestivalForum = ({festivalText}:Props) => {
         <div className="container">
           <div className="festival-forum__registraion-and-program">
             <div className="festival-forum__registraion festival-forum__block-text">
-              <HtmlProcessing html={festivalText.forumRegistration.html}/>
+              <HtmlProcessing html={pageData.forumRegistration.html}/>
             </div>
             <div className="">
-              <h3>{nonBreakingSpaces(festivalText.forumProgramTitle)}</h3>
+              <h3>{nonBreakingSpaces(pageData.forumProgramTitle)}</h3>
               <div className="festival-forum__program">
                 {
-                  festivalText.forumProgram.map((block, index)=>(
+                  pageData.forumProgram.map((block, index)=>(
                       <div key={index} className="festival-forum__block-text">
                         <HtmlProcessing html={block.html}/>
                       </div>
@@ -66,18 +66,18 @@ const FestivalForum = ({festivalText}:Props) => {
         
         <div className="festival-forum__contacts-and-socials-wrap">
           <div className="container">
-            <h3>{nonBreakingSpaces(festivalText.forumContactsTitle)}</h3>
+            <h3>{nonBreakingSpaces(pageData.forumContactsTitle)}</h3>
             <div className="festival-forum__contacts-and-socials">
               <div className="festival-forum__contacts">
-                <img src={`/Assets/Pages/Festival/Images/People/${festivalText.forumContactsImage}`} alt=""/>
+                <img src={`/Assets/Pages/People/${pageData.forumContactsImage}`} alt=""/>
                 <div className="festival-forum__block-text">
-                  <HtmlProcessing html={festivalText.forumContacts.html}/>-
+                  <HtmlProcessing html={pageData.forumContacts.html}/>-
                 </div>
               </div>
 
               <div className="festival-forum__socials">
                 {
-                  festivalText.forumSocials.map((block, index)=>(
+                  pageData.forumSocials.map((block, index)=>(
                       <div key={index} className="festival-forum__block-text">
                         <HtmlProcessing html={block.html}/>
                       </div>

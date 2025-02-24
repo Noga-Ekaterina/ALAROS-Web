@@ -26,8 +26,8 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
 
     const {__typename } = body.data;
 
-    if (__typename==="Festival" || __typename==="Jury" || __typename==="ProtectionsDay" ||__typename==="FormInput" || __typename==="Project" ||__typename==="Nominations"){
-      revalidateTag("festival");
+    if (__typename==="Festival-main" || __typename==="Jury" || __typename==="ProtectionsDay" ||__typename==="FormInput" || __typename==="Project" ||__typename==="Nominations"){
+      revalidateTag("festival-main");
 
       return NextResponse.json({ success: true, revalidated: true, });
     }

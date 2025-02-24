@@ -9,12 +9,12 @@ import Dropdown from "@/components/dropdown/Dropdown";
 import {useMediaQuery} from "react-responsive";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
   nominations: INomination[]
 }
 
-const FestivalTemplates = ({festivalText, nominations}:Props) => {
-  const [btn]= getBtns([festivalText.templates])
+const FestivalTemplates = ({pageData, nominations}:Props) => {
+  const [btn]= getBtns([pageData.templates])
   const [value, setValue] = useState(nominations[0].value)
   const values = nominations.map(nomination=> nomination.value)
   const mobileScreen = useMediaQuery({maxWidth: 660});
@@ -28,7 +28,7 @@ const FestivalTemplates = ({festivalText, nominations}:Props) => {
       <div className="festival-templates">
         <Detalis
             title={<HtmlProcessing html={btn.title}/>}
-            rightElement={<HtmlProcessing html={`<span class="festival-templates__btn">${isClient? mobileScreen ? "<span>[</span><span class='festival-templates__icon'>+</span><span>]</span>":btn.link:btn.link}</span>`}/>}
+            rightElement={<HtmlProcessing html={`<span class="festival-templates__btn">${isClient? mobileScreen ? "<span>[</span><span class='festival-main-templates__icon'>+</span><span>]</span>":btn.link:btn.link}</span>`}/>}
         >
           <HtmlProcessing html={`<span class="festival-templates__subtitle">${btn.link}</span>`}/>
           <div className="festival-templates__content">
@@ -37,7 +37,7 @@ const FestivalTemplates = ({festivalText, nominations}:Props) => {
               console.log(e.target.value)
             }} nominations={nominations} arrow={true}/>
 
-            <a href={nominations.find(item=>item.value==value)?.link} download><HtmlProcessing html={festivalText.templatesDownload.html}/></a>
+            <a href={nominations.find(item=>item.value==value)?.link} download><HtmlProcessing html={pageData.templatesDownload.html}/></a>
           </div>
         </Detalis>
       </div>

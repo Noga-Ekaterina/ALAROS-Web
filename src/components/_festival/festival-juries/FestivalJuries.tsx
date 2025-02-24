@@ -1,7 +1,6 @@
 'use client'
 import React, {useEffect, useState} from 'react';
 import "./festival-juries.scss"
-import pagesData from "@/store/pagesData";
 import {IFestival, IJury} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
@@ -77,11 +76,11 @@ const FestivalJuries = ({juries, title}:Props) => {
                          {
                            item &&
                              <>
-                                <img src={`/Assets/Pages/Festival/Images/People/${item.image}`} alt=""/>
+                                <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
 
                                 <div className={cn(
-                                    "festival-juries__info",
-                                    isOpenedArr.includes(item) && "festival-juries__info--opened"
+                                    "festival-main-juries__info",
+                                    isOpenedArr.includes(item) && "festival-main-juries__info--opened"
                                 )}>
                                    <div>
                                       <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>

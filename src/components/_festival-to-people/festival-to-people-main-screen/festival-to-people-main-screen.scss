@@ -9,12 +9,12 @@
   }
 
   &__block-text{
-    width: 505rem;
+    width: 683rem;
     position: relative;
     display: flex;
     align-items: center;
-    background: var(--c-main);
-    background-image: url("../../../../public/Assets/Pages/Festival-main/Images/bg/1.svg");
+    background: var(--c-red);
+    background-image: url("../../../../public/Assets/Pages/festival-to-people/bg/1.svg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-inline: 20rem 46rem;
@@ -49,20 +49,16 @@
   }
   
   &__img-wrapp {
-    width: 517rem;
+    width: 449rem;
     position: relative;
     display: flex;
     overflow: hidden;
     flex-direction: column;
-
-    @include sm {
-      height: 42.5%;
-    }
   }
 
   &__img{
     position: static;
-    height: 50%;
+    height: 100%;
 
     @include md-book{
       height: 66%;

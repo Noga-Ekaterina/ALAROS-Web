@@ -2,8 +2,6 @@
 import React from 'react';
 import "./home-news-slider.scss"
 import {SwiperSlide} from "swiper/react";
-import pagesData from "@/store/pagesData";
-import {observer} from "mobx-react-lite";
 import NewsItem from "../../_news/news-item/NewsItem";
 import classNames from "classnames";
 import BigSlider from "../../big-slider/BigSlider";

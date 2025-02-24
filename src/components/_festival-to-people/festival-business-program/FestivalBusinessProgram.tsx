@@ -2,7 +2,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './festival-business-program.scss'
 import HtmlProcessing from "../../HtmlProcessing";
-import {IFestival, IHtmlString} from "../../../types/data";
+import {IFestival, FestivalToPeople, IHtmlString} from "../../../types/data";
 import {formaterDate} from "../../../utils/date/formaterDate";
 import {useMediaQuery} from "react-responsive";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
@@ -25,7 +25,7 @@ interface IUserCardProps{
 }
 
 interface Props{
-  festivalText: IFestival
+  pageData: FestivalToPeople
 }
 
 const getUsers=(rows: string)=>{
@@ -57,7 +57,7 @@ const getSectionData=(data: string)=>{
 const UserCard=({user}: IUserCardProps)=>{
   return(
       <div className="session-user">
-        <img src={`/Assets/Pages/Festival/Images/People/${user.image}`} alt="" className="session-user__img"/>
+        <img src={`/Assets/Pages/People/${user.image}`} alt="" className="session-user__img"/>
         <p className="session-user__name">{nonBreakingSpaces(user.name)}</p>
         <p>{nonBreakingSpaces(user.jobTitle)}</p>
       </div>
@@ -168,20 +168,20 @@ const Session = ({data}: ISessionProps) => {
   )
 }
 
-const FestivalBusinessProgram = ({festivalText}:Props) => {
+const FestivalBusinessProgram = ({pageData}:Props) => {
   return (
       <div className="festival-business-program" id="business-program">
         <div className="container titles-block">
           <div>
-            <p className="festival-business-program__date">{formaterDate(festivalText.businessProgramDate)} | {festivalText.businessProgramTime}</p>
-            <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.businessProgramTitle)}</h2>
+            <p className="festival-business-program__date">{formaterDate(pageData.businessProgramDate)} | {pageData.businessProgramTime}</p>
+            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.businessProgramTitle)}</h2>
           </div>
           <div className="titles-block__section">
-            <HtmlProcessing html={festivalText.businessProgramRightSignature.html}/>
+            <HtmlProcessing html={pageData.businessProgramRightSignature.html}/>
           </div>
         </div>
         {
-          festivalText.businessProgramSessions.map((session, index) => (
+          pageData.businessProgramSessions.map((session, index) => (
               <Session key={index} data={session.html}/>
           ))
         }

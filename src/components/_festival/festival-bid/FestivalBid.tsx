@@ -6,20 +6,20 @@ import Form from "@/components/form/Form";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
   nominations: INomination[]
 }
 
-const FestivalBid = ({festivalText, nominations}: Props) => {
+const FestivalBid = ({pageData, nominations}: Props) => {
 
 
   return (
       <div className="festival-bid" id="bid">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(festivalText.bidTitle)}</h2>
+            <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.bidTitle)}</h2>
           </div>
-          <Form inputs={festivalText.bidInputs} btn={festivalText.bidButton} note={festivalText.bidNote.html} nominations={nominations}/>-
+          <Form inputs={pageData.bidInputs} btn={pageData.bidButton} note={pageData.bidNote.html} nominations={nominations}/>-
         </div>
       </div>
   );

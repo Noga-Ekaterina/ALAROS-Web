@@ -1,7 +1,6 @@
 import React, { JSX} from 'react';
 import "./news-article.scss"
 import {INews, INewsItem} from "../../../types/data";
-import {pagesData} from "@/pagesData";
 import {fetchData} from "@/utils/fetchData";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
@@ -44,7 +43,6 @@ const Page = async ({params}:Props) => {
   const slug= params.slug
   const data= await init(slug)
 
-  console.log(pagesData)
 
   if (!data ||!data.news) return <div></div>
 

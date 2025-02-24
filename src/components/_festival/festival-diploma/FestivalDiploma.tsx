@@ -8,18 +8,18 @@ import Form from "@/components/form/Form";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
   nominations: INomination[]
 }
 
-const FestivalDiploma = ({festivalText, nominations}: Props) => {
+const FestivalDiploma = ({pageData, nominations}: Props) => {
   return (
       <div className="festival-diploma" id="diploma">
         <Detalis
-            title={<span>{nonBreakingSpaces(festivalText.diplomaTitle)}</span>}
+            title={<span>{nonBreakingSpaces(pageData.diplomaTitle)}</span>}
         >
           <div className="container">
-            <Form inputs={festivalText.diplomaInputs} btn={festivalText.bidButton} note={festivalText.diplomaNote.html} nominations={nominations}/>
+            <Form inputs={pageData.diplomaInputs} btn={pageData.bidButton} note={pageData.diplomaNote.html} nominations={nominations}/>
           </div>
         </Detalis>
       </div>

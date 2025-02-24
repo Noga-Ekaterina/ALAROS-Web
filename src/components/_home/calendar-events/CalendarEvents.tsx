@@ -5,7 +5,6 @@ import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import { Mousewheel } from 'swiper/modules';
 import {createDate, createYear, getMonthesNames} from "../../../utils/date";
 import classNames from "classnames";
-import pagesData from "@/store/pagesData";
 import { IDay } from "../../../types/tehnic";
 import {ReactSVG} from "react-svg";
 import Dropdown from "../../dropdown/Dropdown";

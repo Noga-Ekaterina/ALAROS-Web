@@ -2,14 +2,13 @@
 import React, {JSX, useEffect, useState} from 'react';
 import "./festival-premiya.scss"
 import {observer} from "mobx-react-lite";
-import pagesData from "@/store/pagesData";
 import parse from "html-react-parser";
 import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival, IHtmlString} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
 }
 
 const getCols=(arr: IHtmlString[])=>{
@@ -26,7 +25,7 @@ const getCols=(arr: IHtmlString[])=>{
               // step.note &&
               //   <>
               //      <br/>
-              //      <p className="festival-premiya__note">{step.note}</p>
+              //      <p className="festival-main-premiya__note">{step.note}</p>
               //   </>
             }
           </div>
@@ -47,15 +46,15 @@ const getCols=(arr: IHtmlString[])=>{
   ))
 }
 
-const FestivalPremiya = ({festivalText}: Props) => {
-  const cols = getCols(festivalText.premiyaSteps)
+const FestivalPremiya = ({pageData}: Props) => {
+  const cols = getCols(pageData.premiyaSteps)
 
   return (
       <div className="container festival-premiya" id="premiya">
         <div className="titles-block">
-          <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.premiyaTitle)}</h2>
+          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.premiyaTitle)}</h2>
           <div className="titles-block__section">
-            <HtmlProcessing html={festivalText.premiyaRightSignature.html}/>
+            <HtmlProcessing html={pageData.premiyaRightSignature.html}/>
           </div>
         </div>
         <div className="festival-premiya__list">

@@ -5,10 +5,8 @@ import {clearTimers, observer} from "mobx-react-lite";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import arrow from '../../../public/images/arrow.svg';
-import pagesData from "@/store/pagesData";
 
 const LogosSlider: FC = (props) => {
-  const {homeData}=pagesData
   const [slides, setSlides] = useState<JSX.Element[]|null>(null)
   const swiperRef = useRef<SwiperRef>(null);
   const swiperNav= new SwiperNavigation(swiperRef)

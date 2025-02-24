@@ -4,15 +4,15 @@ import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival} from "@/types/data";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
 }
 
-const FestivalEmails = ({festivalText}:Props) => {
+const FestivalEmails = ({pageData}:Props) => {
   return (
       <div className="festival-emails">
         <div className="container festival-emails__container">
           {
-            festivalText.emails.map(({html})=>(
+            pageData.emails.map(({html})=>(
                 <div className='festival-emails__item'><HtmlProcessing html={html}/></div>
             ))
           }

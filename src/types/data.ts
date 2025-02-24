@@ -122,10 +122,16 @@ export interface IFestival {
   diplomaInputs: IFormInput[]
   diplomaNote: IHtmlString
   juriesTitle: string
-  protectionsTitle: string
   projectsTitle: string
   projectsRightSignature: IHtmlString
   projects: IProject[]
+}
+
+export interface FestivalToPeople {
+  mainScreenLeftSection: IHtmlString
+  mainScreenPhoto: string
+  isShowProtectionsDays: boolean
+  protectionsTitle: string
   businessProgramDate: string
   businessProgramTitle: string
   businessProgramTime: string

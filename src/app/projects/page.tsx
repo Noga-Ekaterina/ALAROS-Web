@@ -1,5 +1,4 @@
 import React from 'react';
-import {pagesData} from "@/pagesData";
 import ProjectsFilter from "../../components/_projects/projects-filter/ProjectsFilter";
 import ProjectsList from "../../components/_projects/projects-list/ProjectsList";
 import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";

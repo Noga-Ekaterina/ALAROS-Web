@@ -1,6 +1,5 @@
 import React from 'react';
 import NewsMainScreen from "../../components/_news/news-main-screen/NewsMainScreen";
-import {pagesData} from "@/pagesData";
 import NewsList from "../../components/_news/news-list/NewsList";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {INews, INewsItem} from "@/types/data";

@@ -6,7 +6,7 @@ import {IFestival, IHtmlString} from '../../../types/data'
 import HtmlProcessing from "../../HtmlProcessing";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
 }
 
 const getSections=(arr: IHtmlString[])=>{
@@ -20,24 +20,24 @@ const getSections=(arr: IHtmlString[])=>{
     return ({title: `<span>${title}</span>`, date: `<span>${date}</span>`})
   })}
 
-const FestivalDate = ({festivalText}:Props) => {
-  const sections= getSections(festivalText.dateSections)
+const FestivalDate = ({pageData}:Props) => {
+  const sections= getSections(pageData.dateSections)
   const [activeDateIndex, setActiveDateIndex] = useState(0)
 
-  if (!festivalText) return <div/>
+  if (!pageData) return <div/>
   return (
       <div className='festival-date' id="date">
         <div className="container">
           <div className="festival-date__text">
-            <HtmlProcessing html={festivalText.dateText.html}/>
+            <HtmlProcessing html={pageData.dateText.html}/>
             <p className="festival-date__btns">
               {
                 sections.map((section, index)=>(
                     <Fragment key={index}>
                       <button
                         className={classNames(
-                            "festival-date__btn",
-                            index==activeDateIndex? "festival-date__btn--disabled":'link-underline',
+                            "festival-main-date__btn",
+                            index==activeDateIndex? "festival-main-date__btn--disabled":'link-underline',
                         )}
                         onClick={()=> setActiveDateIndex(index)}
                       >

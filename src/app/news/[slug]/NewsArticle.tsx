@@ -6,7 +6,6 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import parse from 'html-react-parser';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Mousewheel} from "swiper/modules";
-import {pagesData} from "@/pagesData";
 import {ReactSVG} from "react-svg";
 import {formaterDate} from "@/utils/date";
 import {useRouter} from "next/navigation";

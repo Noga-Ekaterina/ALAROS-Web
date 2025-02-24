@@ -8,10 +8,10 @@ import FestivalDocuments from "../../components/_festival/festival-documents/Fes
 import FestivalEmails from "../../components/_festival/festival-emails/FestivalEmails";
 import FestivalDiploma from "../../components/_festival/festival-diploma/FestivalDiploma";
 import FestivalJuries from "../../components/_festival/festival-juries/FestivalJuries";
-import FestivalProtections from "../../components/_festival/festival-protections/FestivalProtections";
+import FestivalProtections from "@/components/_festival-to-people/festival-protections/FestivalProtections";
 import FestivalProjects from "../../components/_festival/festival-projects/FestivalProjects";
-import FestivalBusinessProgram from "../../components/_festival/festival-business-program/FestivalBusinessProgram";
-import FestivalForum from "../../components/_festival/festival-forum/FestivalForum";
+import FestivalBusinessProgram from "@/components/_festival-to-people/festival-business-program/FestivalBusinessProgram";
+import FestivalForum from "@/components/_festival-to-people/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
 import {IFestival, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
 import {unstable_cache} from "next/cache";
@@ -19,7 +19,7 @@ import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface IData{
-  festivalS: IFestival[]
+  festivalMains: IFestival[]
   juries: IJury[]
   protectionsDays: IProtectionsDay[]
   nominationsS: {
@@ -34,7 +34,7 @@ interface Props{
 const init= unstable_cache(async ()=>{
   const data: IData| null= await fetchData(`
           query FestivalQuery {
-            festivalS {
+            festivalMains {
               stage
               mainScreenLeftSection {
                 html
@@ -98,7 +98,6 @@ const init= unstable_cache(async ()=>{
                 html
               }
               juriesTitle
-              protectionsTitle
               projectsTitle
               projectsRightSignature{
                 html
@@ -112,38 +111,6 @@ const init= unstable_cache(async ()=>{
                 winner
                 cover
                 images
-              }
-              businessProgramDate
-              businessProgramTime
-              businessProgramTitle
-              businessProgramRightSignature {
-                html
-              }
-              businessProgramSessions {
-                html
-              }
-              forumTitle
-              forumRightSignature {
-                html
-              }
-              forumImages
-              forumDescriptionBlocks {
-                html
-              }
-              forumRegistration {
-                html
-              }
-              forumProgramTitle
-              forumProgram {
-                html
-              }
-              forumContactsTitle
-              forumContactsImage
-              forumContacts {
-                html
-              }
-              forumSocials {
-                html
               }
             }
             juries {
@@ -170,14 +137,14 @@ const init= unstable_cache(async ()=>{
   if (!data)
     return null
 
-  const {festivalS, juries, protectionsDays, nominationsS}=data
+  const {festivalMains, juries, protectionsDays, nominationsS}=data
 
-  const result= {festivalText: festivalS[0], juries, protectionsDays, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
+  const result= {pageData: festivalMains[0], juries, protectionsDays, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
 
 
   return result
 },
-    ["festival"], {tags: ["festival"]})
+    ["festival-main"], {tags: ["festival-main"]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
@@ -185,23 +152,20 @@ const Page = async ({searchParams}:Props) => {
 
   if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
 
-  const {festivalText, juries, protectionsDays, nominations}= data
+  const {pageData, juries, protectionsDays, nominations}= data
   return (
       <div>
-        <ProjectModal projects={festivalText.projects} searchParams={searchParams}/>
-        <FestivalMainScreen festivalText={festivalText}/>
-        <FestivalPremiya festivalText={festivalText}/>
-        <FestivalPrice festivalText={festivalText}/>
-        <FestivalDate festivalText={festivalText}/>
-        <FestivalBid festivalText={festivalText} nominations={nominations}/>
-        <FestivalDocuments festivalText={festivalText} nominations={nominations}/>
-        <FestivalEmails festivalText={festivalText}/>
-        <FestivalDiploma festivalText={festivalText} nominations={nominations}/>
-        <FestivalJuries title={festivalText.juriesTitle} juries={juries}/>
-        <FestivalProtections title={festivalText.protectionsTitle} protectionsDays={protectionsDays}/>
-        <FestivalProjects festivalText={festivalText}/>
-        <FestivalBusinessProgram festivalText={festivalText}/>
-        <FestivalForum festivalText={festivalText}/>
+        <ProjectModal projects={pageData.projects} searchParams={searchParams}/>
+        <FestivalMainScreen pageData={pageData}/>
+        <FestivalPremiya pageData={pageData}/>
+        <FestivalPrice pageData={pageData}/>
+        <FestivalDate pageData={pageData}/>
+        <FestivalBid pageData={pageData} nominations={nominations}/>
+        <FestivalDocuments pageData={pageData} nominations={nominations}/>
+        <FestivalEmails pageData={pageData}/>
+        <FestivalDiploma pageData={pageData} nominations={nominations}/>
+        <FestivalJuries title={pageData.juriesTitle} juries={juries}/>
+        <FestivalProjects pageData={pageData}/>
       </div>
 
   );

@@ -7,25 +7,25 @@ import {IFestival} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
 }
 
-const FestivalPrice = ({festivalText}:Props) => {
+const FestivalPrice = ({pageData}:Props) => {
   return (
       <div className="festival-price" id="price">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{nonBreakingSpaces(festivalText.priceTitle)}</h2>
+            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.priceTitle)}</h2>
           </div>
           <div className="festival-price__body">
-            <HtmlProcessing html={festivalText.priceTable.html}/>
+            <HtmlProcessing html={pageData.priceTable.html}/>
           </div>
         </div>
         <div className="festival-price__running-line">
           <Marquee direction='left' className="festival-price__running-line__player">
             <div className="festival-price__running-line-wrapp">
-              <HtmlProcessing html={festivalText.priceRunningLine.html}/>
-              <HtmlProcessing html={festivalText.priceRunningLine.html}/>
+              <HtmlProcessing html={pageData.priceRunningLine.html}/>
+              <HtmlProcessing html={pageData.priceRunningLine.html}/>
             </div>
           </Marquee>
         </div>

@@ -7,19 +7,19 @@ import FestivalTemplates from "@/components/_festival/festival-templates/Festiva
 import LinkBlock from "@/components/link-block/LinkBlock";
 
 interface Props{
-  festivalText: IFestival
+  pageData: IFestival
   nominations: INomination[]
 }
 
-const FestivalDocuments = ({festivalText, nominations}: Props) => {
-  const btns= getBtns(festivalText.documentsLinks)
+const FestivalDocuments = ({pageData, nominations}: Props) => {
+  const btns= getBtns(pageData.documentsLinks)
 
 
   return (
       <div className="festival-documents" id="documents">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{festivalText.documentsTitle}</h2>
+            <h2 className="titles-block__title">{pageData.documentsTitle}</h2>
           </div>
 
           <div className="festival-documents__btns">
@@ -30,7 +30,7 @@ const FestivalDocuments = ({festivalText, nominations}: Props) => {
                 )
               })
             }
-            <FestivalTemplates festivalText={festivalText} nominations={nominations}/>
+            <FestivalTemplates pageData={pageData} nominations={nominations}/>
           </div>
         </div>
       </div>

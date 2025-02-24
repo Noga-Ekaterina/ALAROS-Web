@@ -1,6 +1,5 @@
 import React from 'react';
 import "./festival-protections.scss"
-import pagesData from "@/store/pagesData";
 import Detalis from "../../detalis/Detalis";
 import HtmlProcessing from "../../HtmlProcessing";
 import {createDate, formaterDate} from "../../../utils/date";
