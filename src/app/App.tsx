@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import {observer} from "mobx-react-lite";
 import ToTop from "@/components/to-top/ToTop";
+import Scroll from "@/app/Scroll";
 
 const App = ({children}:IWithChildren) => {
 
@@ -15,6 +16,7 @@ const App = ({children}:IWithChildren) => {
         {children}
         <Footer/>
         <ToTop/>
+        <Scroll/>
       </>
   );
 };
