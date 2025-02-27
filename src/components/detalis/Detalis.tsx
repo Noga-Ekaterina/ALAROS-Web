@@ -44,11 +44,13 @@ const Detalis = ({ title, rightElement, children }: IProps) => {
 
   // Инициализация начального состояния
   useLayoutEffect(() => {
-    if (contentRef.current && !isOpen) {
-      const node = contentRef.current;
-      node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
-      node.style.overflow = 'hidden';
-    }
+    setTimeout(()=>{
+      if (contentRef.current && !isOpen) {
+        const node = contentRef.current;
+        node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
+        node.style.overflow = 'hidden';
+      }
+    }, 100)
   }, [isOpen, rem]);
 
   return (
