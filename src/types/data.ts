@@ -127,9 +127,20 @@ export interface IFestival {
   projects: IProject[]
 }
 
-export interface FestivalToPeople {
+export interface IFestivalProgramDay {
+  date: string
+  schedule: IHtmlString
+  businessProgram: IHtmlString|null
+  businessProgramPosition: number|null
+  fullVersionBusinessProgram: IHtmlString|null
+}
+
+export interface IFestivalToPeople {
   mainScreenLeftSection: IHtmlString
   mainScreenPhoto: string
+  isShowFestivalProgram: boolean|null
+  festivalProgramTitle: string
+  festivalProgramColumns: IHtmlString
   isShowProtectionsDays: boolean
   protectionsTitle: string
   businessProgramDate: string

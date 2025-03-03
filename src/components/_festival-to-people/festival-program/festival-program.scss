@@ -1,0 +1,130 @@
+@import "@/app/styles/mixins";
+.festival-program{
+  background: #fff;
+  padding-block: 25rem 50rem;
+
+  *{
+    font-size: 13rem;
+  }
+
+  &__title{
+    font-size: 36rem;
+    font-weight: 500;
+    color: var(--c-red);
+    margin-bottom: 62rem;
+
+    @include sm{
+      font-size: 26rem;
+    }
+  }
+
+  &__row{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 6fr 2fr;
+    align-items: baseline;
+    gap: 17rem;
+  }
+
+  &__content{
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__header{
+    min-width: 717rem;
+    margin-bottom: 42rem;
+
+    *{
+      color: #959595;
+    }
+  }
+
+  &__body{
+    min-width: 717rem;
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+  }
+
+  &__day{
+    color: var(--c-red);
+    font-weight: 600;
+  }
+
+  &__time{
+    font-size: 10.5rem;
+    font-weight: 600;
+
+
+    @include sm{
+      font-size: 13rem;
+    }
+  }
+
+  &__text{
+    max-width: 374rem;
+
+    @include sm{
+      width: 293rem;
+    }
+  }
+
+  .detalis {
+    width: 438rem;
+    border-top: max(1px, 1rem) solid #BEBCBB;
+
+    @include sm{
+      width: 323rem;
+    }
+
+    &:last-child {
+      border-bottom: max(1px, 1rem) solid #BEBCBB;
+    }
+
+    *{
+      font-size: 9.6rem;
+    }
+
+    b{
+      font-weight: 600;
+    }
+
+    &__btn {
+      padding: 15.5rem 0;
+      text-align: left;
+      font-weight: 600;
+      background: #fff;
+    }
+
+    &__icon{
+      font-size: 16rem;
+      color: var(--c-red);
+    }
+  }
+
+  &__business-program{
+    display: flex;
+    flex-direction: column;
+    gap: 12.48rem;
+    margin-bottom: 31rem;
+  }
+
+  .detalis &__full-version-business-program{
+    margin-bottom: 23rem;
+
+    *{
+      font-size: 16rem;
+    }
+  }
+
+  &__place{
+    color: var(--c-red);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include sm{
+      font-size: 10rem;
+    }
+  }
+}

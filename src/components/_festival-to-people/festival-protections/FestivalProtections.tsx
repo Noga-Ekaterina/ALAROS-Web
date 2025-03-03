@@ -22,8 +22,6 @@ const FestivalProtections = ({title, protectionsDays}:Props) => {
               const [year, month, dayNumber]=item.date.split("-")
               const {day}=createDate  ({date:new Date(Number(year), Number(month)-1, Number(dayNumber))})
 
-              console.log(createDate({date:new Date(Number(year), Number(month)-1, Number(dayNumber))}))
-
               return(
                   <Detalis title={<span>{formaterDate(item.date)} | {day}</span>}>
                     <HtmlProcessing html={item.protections.html}/>

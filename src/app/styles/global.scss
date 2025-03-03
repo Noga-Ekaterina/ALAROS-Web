@@ -109,6 +109,10 @@ label{
   cursor: pointer;
 }
 
+table *{
+  font-variant-numeric: tabular-nums;
+}
+
 .btn--disable{
   opacity: 0;
   pointer-events: none;

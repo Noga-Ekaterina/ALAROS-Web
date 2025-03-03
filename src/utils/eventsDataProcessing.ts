@@ -1,13 +1,11 @@
 import {IEvent, IEventsByYear, IEventsDataYear} from "../types/data";
+import {getRowsInTable} from "@/utils/getRowsInTable";
 
 export const eventsDataProcessing= (eventsDataYears: IEventsDataYear[])=>{
   const eventsByYear: IEventsByYear={}
 
   const getEvents=(table: string)=>{
-    const [rows]= Array.from(table.matchAll(/<tbody>(.*?)<\/tbody>/gs)).map(m => m[1])
-    const rowsArr=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/gs)).map(m=>m[1])
-
-    console.log(rowsArr)
+    const rowsArr= getRowsInTable(table)
 
     return rowsArr.map(row=>{
       const [start, end, title, place, description, image] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);

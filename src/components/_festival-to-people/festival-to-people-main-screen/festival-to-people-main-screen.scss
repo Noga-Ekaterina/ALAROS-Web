@@ -9,7 +9,7 @@
   }
 
   &__block-text{
-    width: 683rem;
+    width: 682rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -18,6 +18,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-inline: 20rem 46rem;
+
+    @include md-book{
+      width: 576rem;
+    }
 
     @include sm{
       height: 57.5%;
@@ -39,91 +43,30 @@
     position: relative;
     top: -8rem;
 
-    @include md-book{
-      font-size: 35rem;
-    }
-
     @include sm{
-      font-size: min(27rem, 3.5vh);
+      font-size: min(22rem, 2.444vh);
     }
   }
   
   &__img-wrapp {
-    width: 449rem;
+    width: 342rem;
     position: relative;
     display: flex;
     overflow: hidden;
     flex-direction: column;
+
+    @include md-book{
+      width: 448rem;
+    }
+
+    @include sm{
+      height: 42.5%;
+    }
   }
 
   &__img{
     position: static;
     height: 100%;
-
-    @include md-book{
-      height: 66%;
-    }
-  }
-
-  &__btns{
-    width: 100%;
-    height: 50%;
-    display: flex;
-
-    @include md-book{
-      height: 34%;
-    }
-  }
-
-  table{
-    border: none;
-    height: 50%;
-    table-layout: fixed;
-    border-collapse: collapse;
-
-    @include md-book{
-      height: 34%;
-    }
-  }
-
-  tr{
-    height: 100%;
-    display: flex;
-  }
-
-  td{
-    width: 50%;
-    padding: 20rem 25rem 30rem;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    @include sm{
-      padding: 14rem 19rem 20rem;
-    }
-
-    &:nth-child(odd){
-      background: var(--c-red);
-    }
-
-    &:nth-child(even){
-      background: #6E7A64;
-    }
-  }
-
-  h2{
-    font-size: 25rem;
-    font-weight: 400;
-    line-height: 1.2em;
-
-    @include md{
-      font-size: 22px;
-    }
-
-    @include sm{
-      font-size: min(20rem, 2.222vh);
-    }
   }
 
   p{

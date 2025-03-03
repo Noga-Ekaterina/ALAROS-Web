@@ -3,11 +3,11 @@ import React from 'react';
 import "./festival-forum.scss"
 import HtmlProcessing from "../../HtmlProcessing";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {IFestival, FestivalToPeople} from "@/types/data";
+import {IFestival, IFestivalToPeople} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  pageData: FestivalToPeople
+  pageData: IFestivalToPeople
 }
 
 const FestivalForum = ({pageData}:Props) => {

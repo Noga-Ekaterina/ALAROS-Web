@@ -1,11 +1,11 @@
 import React from 'react';
 import './festival-to-people-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
-import {IFestival, FestivalToPeople} from "@/types/data";
+import {IFestival, IFestivalToPeople} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  pageData: FestivalToPeople
+  pageData: IFestivalToPeople
 }
 
 const FestivalToPeopleMainScreen = ({pageData}: Props) => {

@@ -13,15 +13,15 @@ import FestivalProjects from "../../components/_festival/festival-projects/Festi
 import FestivalBusinessProgram from "@/components/_festival-to-people/festival-business-program/FestivalBusinessProgram";
 import FestivalForum from "@/components/_festival-to-people/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
-import {IFestival, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
+import {IFestival, IFestivalProgramDay, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
 import {unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
+import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
 
 interface IData{
   festivalMains: IFestival[]
   juries: IJury[]
-  protectionsDays: IProtectionsDay[]
   nominationsS: {
     nominations: IHtmlString
   }[]
@@ -121,12 +121,6 @@ const init= unstable_cache(async ()=>{
                 html
               }
             }
-            protectionsDays(orderBy: date_ASC) {
-              date
-              protections {
-                html
-              }
-            }
             nominationsS {
               nominations {
                 html
@@ -137,9 +131,9 @@ const init= unstable_cache(async ()=>{
   if (!data)
     return null
 
-  const {festivalMains, juries, protectionsDays, nominationsS}=data
+  const {festivalMains, juries,nominationsS}=data
 
-  const result= {pageData: festivalMains[0], juries, protectionsDays, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
+  const result= {pageData: festivalMains[0], juries, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
 
 
   return result
@@ -152,7 +146,7 @@ const Page = async ({searchParams}:Props) => {
 
   if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
 
-  const {pageData, juries, protectionsDays, nominations}= data
+  const {pageData, juries, nominations}= data
   return (
       <div>
         <ProjectModal projects={pageData.projects} searchParams={searchParams}/>

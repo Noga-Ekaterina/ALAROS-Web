@@ -95,7 +95,6 @@
 
   td{
     &:first-child *{
-      font-variant-numeric: tabular-nums;
       font-size: 10.5rem;
 
       @include sm{
