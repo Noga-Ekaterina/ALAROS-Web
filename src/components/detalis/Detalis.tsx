@@ -5,14 +5,18 @@ import "./detalis.scss"
 import { IWithChildren } from "../../types/tehnic";
 import cn from "classnames";
 import { useGetRem } from "../../hoocs/useGetRem";
+import {useHash} from "@/hoocs/useHash";
 
 interface IProps extends IWithChildren {
   title: JSX.Element
   rightElement?: JSX.Element
+  hash?: string
 }
 
-const Detalis = ({ title, rightElement, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, children }: IProps) => {
+  const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(false);
+  const [isInit, setIsInit] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null);
   const rem = useGetRem();
 
@@ -42,10 +46,17 @@ const Detalis = ({ title, rightElement, children }: IProps) => {
     node.style.transition = 'margin-top 500ms ease-in-out'
   };
 
+  useLayoutEffect(() => {
+    if (hash===activeHash)
+      setIsOpen(true)
+
+    setIsInit(true)
+  }, [activeHash]);
+
   // Инициализация начального состояния
   useLayoutEffect(() => {
     setTimeout(()=>{
-      if (contentRef.current && !isOpen) {
+      if (contentRef.current && !isOpen && (hash!==activeHash ||isInit)) {
         const node = contentRef.current;
         node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
         node.style.overflow = 'hidden';

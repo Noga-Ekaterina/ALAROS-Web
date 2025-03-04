@@ -9,6 +9,7 @@ import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import {Mousewheel} from "swiper/modules";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import Detalis from "@/components/detalis/Detalis";
 
 interface ISessionProps{
   data: string
@@ -41,12 +42,12 @@ const getUsers=(rows: string)=>{
 }
 
 const getSectionData=(data: string)=>{
-  const [mainTitle]=Array.from(data.matchAll(/<h1>(.*?)<\/h1>/gs)).map(m => m[1])
+  const [text]=Array.from(data.matchAll(/([\s\S]*?)<h4[^>]*>/ig)).map(m => m[1])
   const [moderatorRows, speakersRows]=Array.from(data.matchAll(/<tbody>(.*?)<\/tbody>/gs)).map(m => m[1])
-  const [moderatorsTitle, speakersTitle]=Array.from(data.matchAll(/<h3>(.*?)<\/h3>/gs)).map(m => m[1])
+  const [moderatorsTitle, speakersTitle]=Array.from(data.matchAll(/<h4>(.*?)<\/h4>/gs)).map(m => m[1])
 
   return({
-    mainTitle,
+    text,
     moderatorsTitle,
     speakersTitle,
     moderators: getUsers(moderatorRows),
@@ -66,7 +67,7 @@ const UserCard=({user}: IUserCardProps)=>{
 
 const Session = ({data}: ISessionProps) => {
   const {speakers
-  , speakersTitle, moderatorsTitle, moderators, mainTitle
+  , speakersTitle, moderatorsTitle, moderators, text
   }= getSectionData(data)
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const usersSwiperRef=useRef<SwiperRef | null>(null);
@@ -95,7 +96,8 @@ const Session = ({data}: ISessionProps) => {
   return(
       <div className="festival-business-program__session">
         <div className="container">
-          <h3 className="festival-business-program__title">{mainTitle}</h3>
+          {/*<h3 className="festival-business-program__title">{mainTitle}</h3>*/}
+          <HtmlProcessing html={text ||""}/>
 
           {
             (isClient&&!mobileScreen) ?
@@ -171,20 +173,13 @@ const Session = ({data}: ISessionProps) => {
 const FestivalBusinessProgram = ({pageData}:Props) => {
   return (
       <div className="festival-business-program" id="business-program">
-        <div className="container titles-block">
-          <div>
-            <p className="festival-business-program__date">{formaterDate(pageData.businessProgramDate)} | {pageData.businessProgramTime}</p>
-            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.businessProgramTitle)}</h2>
-          </div>
-          <div className="titles-block__section">
-            <HtmlProcessing html={pageData.businessProgramRightSignature.html}/>
-          </div>
-        </div>
-        {
-          pageData.businessProgramSessions.map((session, index) => (
-              <Session key={index} data={session.html}/>
-          ))
-        }
+        <Detalis title={<span>{pageData.businessProgramTitle}</span>} hash="business-program">
+          {
+            pageData.businessProgramSessions.map((session, index) => (
+                <Session key={index} data={session.html}/>
+            ))
+          }
+        </Detalis>
       </div>
   );
 };

@@ -143,10 +143,7 @@ export interface IFestivalToPeople {
   festivalProgramColumns: IHtmlString
   isShowProtectionsDays: boolean
   protectionsTitle: string
-  businessProgramDate: string
   businessProgramTitle: string
-  businessProgramTime: string
-  businessProgramRightSignature: IHtmlString
   businessProgramSessions: IHtmlString[]
   forumTitle: string
   forumRightSignature: IHtmlString

@@ -4,34 +4,75 @@
   background: #fff;
   padding-block: 26rem 8rem;
 
-  &__date{
-    font-size: 20rem;
-    color: #959595;
-    margin-bottom: 23rem;
-    margin-top: 10rem;
+  .detalis{
+    &__btn{
+      padding: 17rem var(--p-y);
+      font-size: 36rem;
+      color: var(--c-red);
+      background: #EFEFEF;
+    }
   }
 
   &__session{
     padding-block: 41rem 25rem;
-    &:nth-child(odd){
+
+    &:first-child{
+      background: linear-gradient(180deg, #EFEFEF 0%, rgba(239, 239, 239, 0) 230rem);
+
+    }
+
+    &:nth-child(even){
       background: #F8F8F8;
+    }
+
+    .container>p:first-child {
+      font-size: 20rem;
+      margin-bottom: 17.333rem;
+
+    }
+
+    h2{
+      font-size: 42rem;
+      font-weight: 300;
+      max-width: 828rem;
+
+      @include sm{
+        font-size: 28rem;
+        margin-bottom: 17.333rem;
+      }
+
+      ~p{
+        font-size: 13rem;
+        width: 560rem;
+        margin-inline: auto 81.5rem;
+        margin-bottom: 17.333rem;
+
+        @include sm{
+          width: 100%;
+          margin-inline: 0;
+        }
+
+        + h3, +.festival-business-program__content, + .swiper{
+          margin-top: 40.3rem;
+        }
+      }
+    }
+
+    h3{
+      font-size: 36rem;
+      font-weight: 400;
+      margin-bottom: 36rem;
+
+      @include sm{
+        font-size: 20rem;
+        font-weight: 500;
+      }
     }
   }
 
   &__content{
     display: flex;
     gap: 94rem;
-  }
-
-  &__title{
-    font-size: 36rem;
-    font-weight: 400;
-    margin-bottom: 36rem;
-
-    @include sm{
-      font-size: 20rem;
-      font-weight: 500;
-    }
   }
 
   &__rolle{

@@ -36,12 +36,7 @@ const init= unstable_cache(async ()=>{
               }
               isShowProtectionsDays
               protectionsTitle
-              businessProgramDate
-              businessProgramTime
               businessProgramTitle
-              businessProgramRightSignature {
-                html
-              }
               businessProgramSessions {
                 html
               }

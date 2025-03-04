@@ -9,6 +9,7 @@
   --c-yellow: #E0F273;
   --c-red: #E74F3D;
   --c-grey: #BEBCBB;
+  --c-grey-dark: #959595;
   --p-y: 28rem;
 
   @include sm{
@@ -142,6 +143,10 @@ span{
 
 .grey, .grey *{
   color: var(--c-grey) !important;
+}
+
+.grey-dark, .grey-dark *{
+  color: var(--c-grey-dark);
 }
 
 .main-screen{
