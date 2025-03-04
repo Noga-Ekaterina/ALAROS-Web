@@ -28,7 +28,17 @@ const init= unstable_cache(async ()=>{
               mainScreenLeftSection {
                 html
               }
-              mainScreenPhoto
+              mainScreenProject {
+                cover
+                diploma
+                signature
+                images
+                name
+                nomination
+                number
+                winner
+                year
+              }
               isShowFestivalProgram
               festivalProgramTitle
               festivalProgramColumns {
@@ -95,7 +105,7 @@ const init= unstable_cache(async ()=>{
 
   return result
 },
-    ["festival-to-people"], {tags: ["FestivalToPeople", "ProtectionsDay", "FestivalProgram"]})
+    ["festival-to-people"], {tags: ["FestivalToPeople", "Project", "ProtectionsDay", "FestivalProgram"]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
@@ -105,13 +115,14 @@ const Page = async ({searchParams}:Props) => {
 
   const {pageData, festivalProgram, protectionsDays, }= data
   return (
-      <div>
+      <>
+        <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <FestivalToPeopleMainScreen pageData={pageData}/>
         {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
         <FestivalBusinessProgram pageData={pageData}/>
         {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsDays={protectionsDays}/>}
         <FestivalForum pageData={pageData}/>
-      </div>
+      </>
 
   );
 };

@@ -4,6 +4,7 @@ import NewsList from "../../components/_news/news-list/NewsList";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {INews, INewsItem} from "@/types/data";
 import {unstable_cache} from "next/cache";
+import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -24,8 +25,17 @@ const init= unstable_cache(async (page: string)=>{
                 html
               }
               title
-              mainScreenPhoto
-              mainScreenPhotoSignature
+              mainScreenProject {
+                cover
+                diploma
+                signature
+                images
+                name
+                nomination
+                number
+                winner
+                year
+              }
             }
           }
       `)
@@ -44,10 +54,11 @@ const Page = async ({searchParams}:Props) => {
 
   if (!data ||!data.pageData) return <div>произошла ошибка, перезагрузите страницу</div>
   return (
-      <div>
+      <>
+        <ProjectModal projects={[data.pageData.mainScreenProject]} searchParams={searchParams}/>
         <NewsMainScreen data={data.pageData}/>
         <NewsList news={data.news}/>
-      </div>
+      </>
   );
 };
 

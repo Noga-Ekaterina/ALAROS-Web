@@ -92,8 +92,7 @@ export interface IStep{
 
 export interface INews{
   title: string
-  mainScreenPhoto: string
-  mainScreenPhotoSignature: string
+  mainScreenProject: IProject
   allNews: IHtmlString
 }
 
@@ -137,7 +136,7 @@ export interface IFestivalProgramDay {
 
 export interface IFestivalToPeople {
   mainScreenLeftSection: IHtmlString
-  mainScreenPhoto: string
+  mainScreenProject: IProject
   isShowFestivalProgram: boolean|null
   festivalProgramTitle: string
   festivalProgramColumns: IHtmlString
@@ -189,7 +188,7 @@ export interface IProject{
   nominationId: string|null
   cover: string
   images: string[]
-  homeSignature: null|string
+  signature: null|string
 }
 
 export interface IProjectsPage{

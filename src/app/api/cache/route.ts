@@ -5,6 +5,7 @@ import { NextResponse } from 'next/server';
 interface RevalidateRequest {
   data:{
     __typename: string
+    newsPage: any
   }
 }
 
@@ -24,9 +25,12 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     const body = (await request.json()) as RevalidateRequest;
     console.log('Request body:', body);
 
-    const {__typename } = body.data
+    const {__typename, newsPage } = body.data
 
     revalidateTag(__typename)
+
+    if (newsPage)
+      revalidateTag("NewsPage")
 
     return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {

@@ -11,13 +11,13 @@ import project from "@/components/_projects/project/Project";
 import {useSearchParams} from "next/navigation";
 import {buildLink} from "@/utils/buildLink";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
 
 interface Props{
   homeData: IHomeData
 }
 
 const HomeMainScreen = ({homeData}: Props) => {
-  const searchParams= useSearchParams()
   return (
       <div className="main-screen home-main-screen">
         <div className="home-main-screen__slider-wrapp">
@@ -31,18 +31,11 @@ const HomeMainScreen = ({homeData}: Props) => {
             {
               homeData.projects.map(project=>(
                   <SwiperSlide>
-                    <Link
-                        href={buildLink("/", searchParams, {project: String(project.number), projectYear: String(project.year)})}
-                          className="home-main-screen__slide-content"
-                    >
-                      <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt="" className="main-screen__img"/>
+                    <MainScreenProject project={project} className="home-main-screen__slide-content" key={`${project.year}-${project.number}`}>
                       <div className="home-main-screen__slide-title-wrapp">
                         <h2 className='home-main-screen__slide-title'>{nonBreakingSpaces(homeData.mainTitle)}</h2>
                       </div>
-                      <div className="main-screen__signature-wrapp">
-                        <strong className="main-screen__signature">{project.homeSignature && nonBreakingSpaces(project.homeSignature)}</strong>
-                      </div>
-                    </Link>
+                    </MainScreenProject>
                   </SwiperSlide>
               ))
             }

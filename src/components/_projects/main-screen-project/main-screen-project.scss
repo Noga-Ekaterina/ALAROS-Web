@@ -1,0 +1,48 @@
+.main-screen-project{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+
+  &__img{
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    width: 101%;
+    height: 101%;
+    left: -0.5%;
+    top: -0.5%;
+  }
+
+  &__signature{
+    color: #fff;
+    font-size: 10rem;
+    font-weight: 500;
+    max-width: 242rem;
+    position: relative;
+    z-index: 2;
+
+    &-wrapp{
+      position: relative;
+      z-index: 2;
+      height: 19.46%;
+      width: 100%;
+      padding: 21rem var(--p-y);
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5) 70%);
+
+      //&::before{
+      //  content: '';
+      //  width: max(1px, 1rem);
+      //  height: 256.94%;
+      //  background: #E5E5E5;
+      //  position: absolute;
+      //  bottom: 0;
+      //  left: calc(340rem + $height/2 * cos(45deg));
+      //  transform: rotate(-45deg);
+      //}
+    }
+  }
+}
