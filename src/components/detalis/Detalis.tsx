@@ -56,7 +56,7 @@ const Detalis = ({ title, rightElement, hash, children }: IProps) => {
   // Инициализация начального состояния
   useLayoutEffect(() => {
     setTimeout(()=>{
-      if (contentRef.current && !isOpen && (hash!==activeHash ||isInit)) {
+      if (contentRef.current && !isOpen && (hash!==window.location.hash.slice(1) ||isInit)) {
         const node = contentRef.current;
         node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
         node.style.overflow = 'hidden';
