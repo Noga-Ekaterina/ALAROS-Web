@@ -36,7 +36,7 @@ const init= unstable_cache(async ()=>{
                 winner
                 cover
                 images
-                homeSignature
+                signature
               }
               bannersDesktop
               bannersMobile
