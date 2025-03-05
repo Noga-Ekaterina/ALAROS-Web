@@ -1,4 +1,6 @@
 import axios from "axios";
+import {INews, INewsItem} from "@/types/data";
+import {unstable_cache} from "next/cache";
 
 export const fetchData=async (query: string)=> {
   try{
@@ -67,3 +69,37 @@ export const getProjectsQueryStr= (year: undefined| string, nomination: undefine
     }
   `)
 }
+
+
+interface INewsPageData{
+  newsPages: INews[]
+}
+
+export const getNewsPageData= unstable_cache(async ()=>{
+
+  const data: INewsPageData|null= await fetchData( `
+          query NewsPageDataQuery {
+            newsPages {
+              allNews {
+                html
+              }
+              title
+              mainScreenProject {
+                cover
+                diploma
+                signature
+                images
+                name
+                nomination
+                number
+                winner
+                year
+              }
+            }
+          }
+      `)
+
+  if (!data) return null
+
+  return  data.newsPages[0]
+}, ["news-page-data"], {tags: ["NewsPage"]})

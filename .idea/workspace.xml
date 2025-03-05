@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила баг открывания detalis при переходе с другой стр">
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/MainScreenProject.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="усовершенствовала кэш новостей">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/cache/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/cache/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/FestivalMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/FestivalMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,23 +176,7 @@
       <workItem from="1740745091787" duration="10000" />
       <workItem from="1740845620285" duration="11677000" />
       <workItem from="1741028506009" duration="11084000" />
-      <workItem from="1741098751388" duration="22021000" />
-    </task>
-    <task id="LOCAL-00001" summary="переход на next">
-      <option name="closed" value="true" />
-      <created>1738267256078</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1738267256078</updated>
-    </task>
-    <task id="LOCAL-00002" summary="переход на next">
-      <option name="closed" value="true" />
-      <created>1738268480599</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1738268480599</updated>
+      <workItem from="1741098751388" duration="25991000" />
     </task>
     <task id="LOCAL-00003" summary="исправила проблемы с фото">
       <option name="closed" value="true" />
@@ -575,7 +546,31 @@
       <option name="project" value="LOCAL" />
       <updated>1741110015679</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="сделала фото с подписью проекта на главном экране кликакабельным на всех стр">
+      <option name="closed" value="true" />
+      <created>1741130561691</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1741130561691</updated>
+    </task>
+    <task id="LOCAL-00050" summary="сделала фото с подписью проекта на главном экране кликакабельным на всех стр">
+      <option name="closed" value="true" />
+      <created>1741132120578</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1741132120579</updated>
+    </task>
+    <task id="LOCAL-00051" summary="усовершенствовала кэш новостей">
+      <option name="closed" value="true" />
+      <created>1741133671512</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1741133671512</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,8 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавила модалку проекта на главной" />
-    <MESSAGE value="добавила функцию масштабрования в модалку проекта" />
     <MESSAGE value="добавила функцию масштабирования в модалку проекта" />
     <MESSAGE value="сделала api для добавления в проект id номина" />
     <MESSAGE value="усовершенствовала api для добавления в проект id номина" />
@@ -618,7 +611,9 @@
     <MESSAGE value="сделала програму фестиваля" />
     <MESSAGE value="переверстала ДП" />
     <MESSAGE value="исправила баг открывания detalis при переходе с другой стр" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправила баг открывания detalis при переходе с другой стр" />
+    <MESSAGE value="сделала фото с подписью проекта на главном экране кликакабельным на всех стр" />
+    <MESSAGE value="усовершенствовала кэш новостей" />
+    <option name="LAST_COMMIT_MESSAGE" value="усовершенствовала кэш новостей" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

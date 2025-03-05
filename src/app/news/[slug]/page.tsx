@@ -1,7 +1,7 @@
 import React, { JSX} from 'react';
 import "./news-article.scss"
 import {INews, INewsItem} from "../../../types/data";
-import {fetchData} from "@/utils/fetchData";
+import {fetchData, getNewsPageData} from "@/utils/fetchData";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
 import {unstable_cache} from "next/cache";
@@ -14,7 +14,6 @@ interface Props{
 
 interface IData{
   news: null| INewsItem
-  newsPages: INews[]
 }
 
 const init=  (slug: string)=>(
@@ -32,27 +31,23 @@ const init=  (slug: string)=>(
                       html
                     }
                   }
-                  newsPages {
-                    allNews {
-                      html
-                    }
-                  }
                 }`)
-      return {news: data.news, allNews: data.newsPages[0].allNews}
-    }, ["news-article"], {tags: [`news-${slug}`, "NewsPage"]})
+
+      return data.news
+    }, ["news-article"], {tags: [`news-${slug}`]})
 )
 
 const Page = async ({params}:Props) => {
   const slug= params.slug
   const getData= init(slug)
-  const data= await getData(slug)
+  const news= await getData(slug)
+  const pageData= await getNewsPageData()
 
-
-  if (!data ||!data.news) return <div></div>
+  if (!pageData||!news) return <div></div>
 
 
   return (
-      <NewsArticle news={data.news} slug={slug} allNews={data.allNews.html}/>
+      <NewsArticle news={news} slug={slug} allNews={pageData.allNews.html}/>
   );
 };
 
