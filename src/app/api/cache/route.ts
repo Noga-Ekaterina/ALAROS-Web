@@ -6,6 +6,7 @@ interface RevalidateRequest {
   data:{
     __typename: string
     newsPage: any
+    slug: string
   }
 }
 
@@ -25,12 +26,15 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     const body = (await request.json()) as RevalidateRequest;
     console.log('Request body:', body);
 
-    const {__typename, newsPage } = body.data
+    const {__typename, newsPage, slug } = body.data
 
     revalidateTag(__typename)
 
     if (newsPage)
       revalidateTag("NewsPage")
+
+    if (__typename==="News")
+      revalidateTag(`news-${slug}`)
 
     return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {

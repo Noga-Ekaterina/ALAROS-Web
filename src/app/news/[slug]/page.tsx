@@ -17,9 +17,10 @@ interface IData{
   newsPages: INews[]
 }
 
-const init= unstable_cache(async (slug: string)=>{
+const init=  (slug: string)=>(
+    unstable_cache(async (slug: string)=>{
 
-  const data: IData= await fetchData( `
+      const data: IData= await fetchData( `
                 query NewsItemQuery {
                   news(where: {slug: "${slug}"}) {
                     date
@@ -37,12 +38,14 @@ const init= unstable_cache(async (slug: string)=>{
                     }
                   }
                 }`)
-  return {news: data.news, allNews: data.newsPages[0].allNews}
-}, ["news-article"], {tags: ["News"]})
+      return {news: data.news, allNews: data.newsPages[0].allNews}
+    }, ["news-article"], {tags: [`news-${slug}`, "NewsPage"]})
+)
 
 const Page = async ({params}:Props) => {
   const slug= params.slug
-  const data= await init(slug)
+  const getData= init(slug)
+  const data= await getData(slug)
 
 
   if (!data ||!data.news) return <div></div>
