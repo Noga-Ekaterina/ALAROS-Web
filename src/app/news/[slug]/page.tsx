@@ -25,6 +25,7 @@ const init=  (slug: string)=>(
                     date
                     description
                     title
+                    cover
                     slug
                     place
                     body {
