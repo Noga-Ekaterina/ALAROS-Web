@@ -24,5 +24,6 @@
   &__iframe{
     width: 100%;
     height: min(530rem, calc(100vh - 60rem));
+    border: none;
   }
 }
