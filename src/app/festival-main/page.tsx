@@ -148,7 +148,7 @@ const Page = async ({searchParams}:Props) => {
 
   const {pageData, juries, nominations}= data
   return (
-      <div>
+      <>
         <ProjectModal projects={pageData.projects} searchParams={searchParams}/>
         <FestivalMainScreen pageData={pageData}/>
         <FestivalPremiya pageData={pageData}/>
@@ -160,7 +160,7 @@ const Page = async ({searchParams}:Props) => {
         <FestivalDiploma pageData={pageData} nominations={nominations}/>
         <FestivalJuries title={pageData.juriesTitle} juries={juries}/>
         <FestivalProjects pageData={pageData}/>
-      </div>
+      </>
 
   );
 };

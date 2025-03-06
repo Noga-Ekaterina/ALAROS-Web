@@ -1,0 +1,79 @@
+@import "../../../app/styles/mixins";
+
+.competition-results-main-screen{
+  $bh: calc(1vh - 0.6rem);
+  display: flex;
+
+  *{
+    color: #fff;
+  }
+
+  &__block-text{
+    width: 682rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--c-main);
+    background-image: url("../../../../public/Assets/Pages/Competition-results/bg/1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-inline: 20rem 46rem;
+
+    @include md-book{
+      width: 576rem;
+    }
+
+    @include sm{
+      height: 57.5%;
+    }
+
+    >*:last-child{
+      position: absolute;
+      left: var(--p-y);
+      bottom: 30rem;
+      color: #C3C3C3;
+    }
+  }
+
+  h1{
+    font-size: min(27rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    position: relative;
+    top: -8rem;
+
+    @include sm{
+      font-size: min(22rem, 2.444vh);
+    }
+  }
+  
+  &__img-wrapp {
+    width: 342rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    @include md-book{
+      width: 448rem;
+    }
+
+    @include sm{
+      height: 42.5%;
+    }
+  }
+
+  p{
+    font-size: 16rem;
+    line-height: 1.87em;
+
+    @include sm{
+      font-size: 13rem;
+    }
+  }
+
+  a{
+    font-weight: 500;
+  }
+}

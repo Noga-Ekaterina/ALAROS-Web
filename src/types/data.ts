@@ -196,3 +196,10 @@ export interface IProjectsPage{
   years: string
   nominations: IHtmlString
 }
+
+export interface ICompetitionResults{
+  mainScreenLeftSection: IHtmlString
+  mainScreenProject: IProject
+  resultsTitle: string
+  results: IHtmlString
+}
