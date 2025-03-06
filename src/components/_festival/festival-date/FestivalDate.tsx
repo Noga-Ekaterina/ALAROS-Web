@@ -36,8 +36,8 @@ const FestivalDate = ({pageData}:Props) => {
                     <Fragment key={index}>
                       <button
                         className={classNames(
-                            "festival-main-date__btn",
-                            index==activeDateIndex? "festival-main-date__btn--disabled":'link-underline',
+                            "festival-date__btn",
+                            index==activeDateIndex? "festival-date__btn--disabled":'link-underline',
                         )}
                         onClick={()=> setActiveDateIndex(index)}
                       >
