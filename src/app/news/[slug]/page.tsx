@@ -50,7 +50,7 @@ const Page = async ({params}:Props) => {
   const news= await getData(slug)
   const pageData= await getNewsPageData()
 
-  if (!pageData|| typeof news=="string" || news===null) return <div>произошла ошибка{news && `: ${news}`}, перезагрузите страницу</div>
+  if (!pageData|| typeof pageData==="string" ||typeof news=="string" || news===null) return <div>произошла ошибка{(news || pageData) && `: ${news ||pageData}`}, перезагрузите страницу</div>
 
   if (news === undefined) return <div>новость не найдена</div>
 
