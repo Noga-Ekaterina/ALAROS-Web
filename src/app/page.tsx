@@ -6,7 +6,7 @@ import HomeNewsSlider from "../components/_home/home-news-slider/HomeNewsSlider"
 import LogosSlider from "../components/_home/logos-slider/LogosSlider";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface Props{
@@ -20,7 +20,7 @@ interface IData{
 }
 
 const init= unstable_cache(async ()=>{
-  const data: IData|null= await fetchData(`
+  const data: IData|null|string= await fetchData(`
           query MyQuery {
             homes {
               mainTitle
@@ -54,8 +54,10 @@ const init= unstable_cache(async ()=>{
             ${getNewsQueryStr(1)}
           }`)
 
-  if (!data)
-    return null
+  if (typeof data==="string" || !data){
+    revalidateTag("Home")
+    return data
+  }
 
   const {homes, eventsYears, newsAll}=data
 
@@ -68,7 +70,7 @@ const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams
   const data=  await init()
 
-  if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
 
   const {homeData, calendarEvents, news}= data
 

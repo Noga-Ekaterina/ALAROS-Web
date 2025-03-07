@@ -3,7 +3,7 @@ import ProjectsFilter from "../../components/_projects/projects-filter/ProjectsF
 import ProjectsList from "../../components/_projects/projects-list/ProjectsList";
 import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import {IProject, IProjectsPage} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 
@@ -22,7 +22,7 @@ interface IData{
 }
 
 const init=unstable_cache( async (year: undefined| string, nomination: undefined |string, page: string)=>{
-  const data: IData|null= await fetchData(`
+  const data: IData|null|string= await fetchData(`
           query NewsAllQuery {
             ${getProjectsQueryStr(year, nomination, Number(page))}
             projectsPages {
@@ -34,15 +34,17 @@ const init=unstable_cache( async (year: undefined| string, nomination: undefined
             }
           }`)
 
-  if (!data) return null
-
+  if (typeof data==="string" || !data) {
+    revalidateTag("ProjectsPage")
+    return data
+  }
   return {
     pageData: data.projectsPages[0],
     projects: data.projects,
     count: data.projectsConnection.aggregate.count
   }
 },
-    ["projects"], {tags: ["Project"]})
+    ["projects"], {tags: ["Project", "ProjectsPage"]})
 
 const Page = async ({searchParams}: Props) => {
   const {page, nomination, year}= searchParams
@@ -52,8 +54,7 @@ const Page = async ({searchParams}: Props) => {
       typeof page==="string"? isNaN(Number(page))? page:"1":"1"
   )
 
-
-  if (!data ||!data.pageData) return <div>произошла ошибка, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
 
   return (
       <>

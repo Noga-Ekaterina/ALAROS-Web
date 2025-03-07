@@ -1,6 +1,6 @@
 import React from 'react';
 import {ICompetitionResults, IFestival, IHtmlString, IJury} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CompetitionResultsMainScreen
@@ -17,7 +17,7 @@ interface Props{
 }
 
 const init= unstable_cache(async ()=>{
-  const data: null|IData= await fetchData(`
+  const data: null|IData|string= await fetchData(`
     query MyQuery {
       competitionResultsS {
         mainScreenLeftSection {
@@ -42,14 +42,19 @@ const init= unstable_cache(async ()=>{
     }
   `)
 
+  if (typeof data==="string"){
+    revalidateTag("CompetitionResults")
+    return data
+  }
+
   return data? data.competitionResultsS[0] : null
 
-  }, ["competition-results"], {tags: ["CompetitionResults"]})
+  }, ["competition-results"], {tags: ["CompetitionResults", "Project"]})
 
 const Page = async ({searchParams}:Props) => {
   const pageData= await init()
 
-  if (!pageData) return <div>произошла ошибка, перезагрузите страницу</div>
+  if (typeof pageData==="string" || !pageData) return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
 
   return (
       <>

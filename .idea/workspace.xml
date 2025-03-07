@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила баг отбражения актив/неактив">
-      <change afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/CompetitionResultsMainScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_competition-results/results/Results.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_competition-results/results/results.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила ошибку с границей">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-to-people/Main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/News/Main.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/cache/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/cache/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/competition-results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,23 +185,7 @@
       <workItem from="1741028506009" duration="11084000" />
       <workItem from="1741098751388" duration="26401000" />
       <workItem from="1741207536176" duration="8600000" />
-      <workItem from="1741264448409" duration="6676000" />
-    </task>
-    <task id="LOCAL-00005" summary="сделала апи для очистки кэша">
-      <option name="closed" value="true" />
-      <created>1738450266397</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1738450266397</updated>
-    </task>
-    <task id="LOCAL-00006" summary="доделала апи для очистки кэша">
-      <option name="closed" value="true" />
-      <created>1738454348713</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1738454348713</updated>
+      <workItem from="1741264448409" duration="16366000" />
     </task>
     <task id="LOCAL-00007" summary="доделала апи для очистки кэша">
       <option name="closed" value="true" />
@@ -578,7 +563,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741275950461</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="сделала стр результатов">
+      <option name="closed" value="true" />
+      <created>1741281931626</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1741281931626</updated>
+    </task>
+    <task id="LOCAL-00055" summary="исправила ошибку с границей">
+      <option name="closed" value="true" />
+      <created>1741282734356</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1741282734356</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,8 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="усовершенствовала api для добавления в проект id номина" />
-    <MESSAGE value="изменила стили для таблицы расписания" />
     <MESSAGE value="сделала фильтр номинаций" />
     <MESSAGE value="вынесла форму в отдельный компонент" />
     <MESSAGE value="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю" />
@@ -621,7 +620,9 @@
     <MESSAGE value="усовершенствовала кэш новостей" />
     <MESSAGE value="ещё усовершенствовала кэш новостей" />
     <MESSAGE value="исправила баг отбражения актив/неактив" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправила баг отбражения актив/неактив" />
+    <MESSAGE value="сделала стр результатов" />
+    <MESSAGE value="исправила ошибку с границей" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправила ошибку с границей" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

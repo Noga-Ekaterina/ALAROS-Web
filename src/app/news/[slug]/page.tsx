@@ -4,7 +4,7 @@ import {INews, INewsItem} from "../../../types/data";
 import {fetchData, getNewsPageData} from "@/utils/fetchData";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 
 interface Props{
   params: {
@@ -19,9 +19,9 @@ interface IData{
 const init=  (slug: string)=>(
     unstable_cache(async (slug: string)=>{
 
-      const data: IData= await fetchData( `
+      const data: IData|null|string= await fetchData( `
                 query NewsItemQuery {
-                  news(where: {slug: "${slug}"}) {
+                  new(where: {slug: "${slug}"}) {
                     date
                     description
                     title
@@ -34,7 +34,13 @@ const init=  (slug: string)=>(
                   }
                 }`)
 
-      return data.news
+
+      if (typeof data==="string" || !data){
+        revalidateTag(`news-${slug}`)
+        return data
+      }
+
+      return data.news??undefined
     }, ["news-article"], {tags: [`news-${slug}`]})
 )
 
@@ -44,8 +50,9 @@ const Page = async ({params}:Props) => {
   const news= await getData(slug)
   const pageData= await getNewsPageData()
 
-  if (!pageData||!news) return <div></div>
+  if (!pageData|| typeof news=="string" || news===null) return <div>произошла ошибка{news && `: ${news}`}, перезагрузите страницу</div>
 
+  if (news === undefined) return <div>новость не найдена</div>
 
   return (
       <NewsArticle news={news} slug={slug} allNews={pageData.allNews.html}/>

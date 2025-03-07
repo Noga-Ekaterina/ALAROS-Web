@@ -1,7 +1,7 @@
 import React from 'react';
 import "./project-modal.scss"
 import {IProject} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import ProjectImagesSlider from "@/components/_projects/project-images-slider/ProjectImagesSlider";
 import {diplomas} from "@/variables";
@@ -16,8 +16,8 @@ interface IData{
   projects: IProject[]
 }
 
-const init=unstable_cache( async (year: string, number: string)=>{
-      const data: IData|null= await fetchData(`
+const init=(year: string, number: string)=>(unstable_cache( async (year: string, number: string)=>{
+          const data: IData|null|string= await fetchData(`
           query NewsAllQuery {
             projects(
               where: {year: ${year}, number: ${number}}
@@ -32,23 +32,30 @@ const init=unstable_cache( async (year: string, number: string)=>{
             }
           }`)
 
-      if (!data) return null
+          if (typeof data==="string" || !data){
+            revalidateTag(`project-${year}-${number}`)
+            return data
+          }
 
-      return data.projects[0]
-    },
-    ["project"], {tags: ["projects"]})
-
+          return data.projects[0]
+        },
+        ["project"], {tags: [`project-${year}-${number}`]})
+)
 const ProjectModal = async ({projects, searchParams}:Props) => {
   const {project, projectYear}= searchParams
 
   if (typeof project!=="string" || typeof projectYear!=="string")
     return <div/>
 
+  const getProject= init(projectYear, project)
 
-  const projectItem= projects.find(item=> String(item.year)===projectYear && String(item.number)===project) ?? await init(projectYear, project)
+  const projectItem= projects.find(item=> String(item.year)===projectYear && String(item.number)===project) ?? await getProject(projectYear, project)
 
   if (!projectItem) return <div><span>проект не найден
   </span></div>
+
+  if (typeof projectItem   ==="string") return <div>произошла ошибка{ `: ${projectItem}`}, перезагрузите страницу</div>
+
 
   const diploma=diplomas[projectItem.diploma]
 

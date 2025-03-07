@@ -14,7 +14,7 @@ import FestivalBusinessProgram from "@/components/_festival-to-people/festival-b
 import FestivalForum from "@/components/_festival-to-people/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
 import {IFestival, IFestivalProgramDay, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
@@ -32,7 +32,7 @@ interface Props{
 }
 
 const init= unstable_cache(async ()=>{
-  const data: IData| null= await fetchData(`
+  const data: IData| null| string= await fetchData(`
           query FestivalQuery {
             festivalMains {
               stage
@@ -128,9 +128,10 @@ const init= unstable_cache(async ()=>{
             }
           }`)
 
-  if (!data)
-    return null
-
+  if (typeof data==="string" ||!data){
+    revalidateTag("FestivalMain")
+    return data
+  }
   const {festivalMains, juries,nominationsS}=data
 
   const result= {pageData: festivalMains[0], juries, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
@@ -144,7 +145,7 @@ const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
   const data=  await init()
 
-  if (!data) return <div>произошла ошибка, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
 
   const {pageData, juries, nominations}= data
   return (

@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios, {AxiosError} from "axios";
 import {INews, INewsItem} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 
 export const fetchData=async (query: string)=> {
   try{
@@ -23,7 +23,9 @@ export const fetchData=async (query: string)=> {
 
     return resp.data.data
   }catch (err){
-    console.log(err)
+    if (err instanceof AxiosError || err instanceof Error)
+      return err.message
+
     return null
   }
 }
@@ -77,7 +79,7 @@ interface INewsPageData{
 
 export const getNewsPageData= unstable_cache(async ()=>{
 
-  const data: INewsPageData|null= await fetchData( `
+  const data: INewsPageData|null|string= await fetchData( `
           query NewsPageDataQuery {
             newsPages {
               allNews {
@@ -99,7 +101,10 @@ export const getNewsPageData= unstable_cache(async ()=>{
           }
       `)
 
-  if (!data) return null
+  if (typeof data==="string" || !data){
+    revalidateTag("NewsPage")
+    return data
+  }
 
   return  data.newsPages[0]
 }, ["news-page-data"], {tags: ["NewsPage"]})

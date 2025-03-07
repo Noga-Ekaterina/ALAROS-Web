@@ -3,7 +3,7 @@ import NewsMainScreen from "../../components/_news/news-main-screen/NewsMainScre
 import NewsList from "../../components/_news/news-list/NewsList";
 import {fetchData, getNewsPageData, getNewsQueryStr} from "@/utils/fetchData";
 import {INews, INewsItem} from "@/types/data";
-import {unstable_cache} from "next/cache";
+import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface Props{
@@ -16,23 +16,26 @@ interface IData{
 
 const init= unstable_cache(async (page: string)=>{
 
-  const data: IData|null= await fetchData( `
+  const data: IData|null|string= await fetchData( `
           query NewsAllQuery {
             ${getNewsQueryStr(Number(page))}
           }
       `)
 
-  if (!data) return null
+  if (typeof data==="string"|| !data){
+    revalidateTag("AllNews")
+    return data
+  }
 
   return  data.newsAll
-}, ["news-page"], {tags: ["News", ]})
+}, ["news-page"], {tags: ["News", "AllNews"]})
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams
   const news= await init( typeof page==="string"? isNaN(Number(page))? page:"1":"1")
   const pageData= await getNewsPageData()
 
-  if (!news ||!pageData) return <div>произошла ошибка, перезагрузите страницу</div>
+  if (!news || typeof news ==="string"||!pageData) return <div>произошла ошибка{news && `: ${news}`}, перезагрузите страницу</div>
   return (
       <>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
