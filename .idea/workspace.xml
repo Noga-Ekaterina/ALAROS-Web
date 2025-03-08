@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила ошибку с границей">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала обработку ошибок в новоостях">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/cache/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/cache/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/competition-results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/to-top/ToTop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/ToTop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,23 +181,9 @@
       <workItem from="1741028506009" duration="11084000" />
       <workItem from="1741098751388" duration="26401000" />
       <workItem from="1741207536176" duration="8600000" />
-      <workItem from="1741264448409" duration="16366000" />
-    </task>
-    <task id="LOCAL-00007" summary="доделала апи для очистки кэша">
-      <option name="closed" value="true" />
-      <created>1738455773705</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1738455773705</updated>
-    </task>
-    <task id="LOCAL-00008" summary="доделала апи для очистки кэша">
-      <option name="closed" value="true" />
-      <created>1738499342595</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1738499342595</updated>
+      <workItem from="1741264448409" duration="18664000" />
+      <workItem from="1741393950110" duration="2451000" />
+      <workItem from="1741455708071" duration="14258000" />
     </task>
     <task id="LOCAL-00009" summary="доделала апи для очистки кэша">
       <option name="closed" value="true" />
@@ -579,7 +561,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741282734356</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="сделала обработку ошибок">
+      <option name="closed" value="true" />
+      <created>1741356296360</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1741356296360</updated>
+    </task>
+    <task id="LOCAL-00057" summary="сделала обработку ошибок в новоостях">
+      <option name="closed" value="true" />
+      <created>1741357321206</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1741357321206</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,8 +595,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="сделала фильтр номинаций" />
-    <MESSAGE value="вынесла форму в отдельный компонент" />
     <MESSAGE value="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю" />
     <MESSAGE value="исправлен баг со цветом" />
     <MESSAGE value="сделала неразрывные пробелы" />
@@ -622,7 +618,9 @@
     <MESSAGE value="исправила баг отбражения актив/неактив" />
     <MESSAGE value="сделала стр результатов" />
     <MESSAGE value="исправила ошибку с границей" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправила ошибку с границей" />
+    <MESSAGE value="сделала обработку ошибок" />
+    <MESSAGE value="сделала обработку ошибок в новоостях" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала обработку ошибок в новоостях" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

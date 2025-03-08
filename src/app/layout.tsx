@@ -1,7 +1,11 @@
 import "swiper/css"
 import "./styles/global.scss"
 import type { Metadata } from "next";
-import App from "@/app/App";
+import Header from "@/components/header/Header";
+import ToTop from "@/components/to-top/ToTop";
+import Scroll from "@/app/Scroll";
+import React from "react";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <App>{children}</App>
+      <Header/>
+      {children}
+      <Footer/>
+      <ToTop/>
+      <Scroll/>
       </body>
     </html>
   );

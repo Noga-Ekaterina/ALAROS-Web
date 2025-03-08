@@ -4,6 +4,13 @@ export interface IHtmlString{
   html: string
 }
 
+export interface IFooter{
+  columns: IHtmlString[]
+  mobileColumns: number[]
+  socials: IHtmlString
+  socialsColumn: number
+}
+
 export interface IHomeMainScreen{
   mainTitle: string
   mainSection: IHtmlString
