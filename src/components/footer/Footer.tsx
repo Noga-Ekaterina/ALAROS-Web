@@ -27,7 +27,6 @@ const init= unstable_cache(async ()=>{
   `)
 
   if (typeof data==="string" || !data){
-    revalidateTag("Footer")
     return data
   }
 
@@ -37,7 +36,10 @@ const init= unstable_cache(async ()=>{
 const Footer = async () => {
   const data= await init()
 
-  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) {
+    revalidateTag("Footer")
+    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  }
 
   return (
       <footer className="footer">

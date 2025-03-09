@@ -21,7 +21,7 @@ const init=  (slug: string)=>(
 
       const data: IData|null|string= await fetchData( `
                 query NewsItemQuery {
-                  new(where: {slug: "${slug}"}) {
+                  news(where: {slug: "${slug}"}) {
                     date
                     description
                     title
@@ -36,7 +36,6 @@ const init=  (slug: string)=>(
 
 
       if (typeof data==="string" || !data){
-        revalidateTag(`news-${slug}`)
         return data
       }
 
@@ -50,7 +49,15 @@ const Page = async ({params}:Props) => {
   const news= await getData(slug)
   const pageData= await getNewsPageData()
 
-  if (!pageData|| typeof pageData==="string" ||typeof news=="string" || news===null) return <div>произошла ошибка{(news || pageData) && `: ${news ||pageData}`}, перезагрузите страницу</div>
+  if (typeof news=="string" || news===null) {
+    revalidateTag(`news-${slug}`)
+    return <div>произошла ошибка{news && `: ${news}`}, перезагрузите страницу</div>
+  }
+
+  if (!pageData|| typeof pageData==="string" ) {
+    revalidateTag("NewsPage")
+    return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
+  }
 
   if (news === undefined) return <div>новость не найдена</div>
 

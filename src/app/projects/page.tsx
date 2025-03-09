@@ -35,7 +35,6 @@ const init=unstable_cache( async (year: undefined| string, nomination: undefined
           }`)
 
   if (typeof data==="string" || !data) {
-    revalidateTag("ProjectsPage")
     return data
   }
   return {
@@ -54,7 +53,10 @@ const Page = async ({searchParams}: Props) => {
       typeof page==="string"? isNaN(Number(page))? page:"1":"1"
   )
 
-  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) {
+    revalidateTag("ProjectsPage")
+    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  }
 
   return (
       <>

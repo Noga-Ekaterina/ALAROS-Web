@@ -102,7 +102,6 @@ export const getNewsPageData= unstable_cache(async ()=>{
       `)
 
   if (typeof data==="string" || !data){
-    revalidateTag("NewsPage")
     return data
   }
 

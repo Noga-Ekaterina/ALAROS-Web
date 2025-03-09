@@ -96,7 +96,6 @@ const init= unstable_cache(async ()=>{
           }`)
 
   if (typeof data==="string"||!data){
-    revalidateTag("FestivalToPeople")
     return data
   }
 
@@ -113,7 +112,10 @@ const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
   const data=  await init()
 
-  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) {
+    revalidateTag("FestivalToPeople")
+    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  }
 
 
   const {pageData, festivalProgram, protectionsDays, }= data

@@ -43,7 +43,6 @@ const init= unstable_cache(async ()=>{
   `)
 
   if (typeof data==="string"){
-    revalidateTag("CompetitionResults")
     return data
   }
 
@@ -54,7 +53,10 @@ const init= unstable_cache(async ()=>{
 const Page = async ({searchParams}:Props) => {
   const pageData= await init()
 
-  if (typeof pageData==="string" || !pageData) return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
+  if (typeof pageData==="string" || !pageData) {
+    revalidateTag("CompetitionResults")
+    return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
+  }
 
   return (
       <>

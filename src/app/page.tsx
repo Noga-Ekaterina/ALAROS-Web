@@ -55,7 +55,6 @@ const init= unstable_cache(async ()=>{
           }`)
 
   if (typeof data==="string" || !data){
-    revalidateTag("Home")
     return data
   }
 
@@ -70,7 +69,10 @@ const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams
   const data=  await init()
 
-  if (typeof data==="string" || !data) return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  if (typeof data==="string" || !data) {
+    revalidateTag("Home")
+    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  }
 
   const {homeData, calendarEvents, news}= data
 

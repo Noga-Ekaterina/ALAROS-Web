@@ -23,7 +23,6 @@ const init= unstable_cache(async (page: string)=>{
       `)
 
   if (typeof data==="string"|| !data){
-    revalidateTag("AllNews")
     return data
   }
 
@@ -35,8 +34,15 @@ const Page = async ({searchParams}:Props) => {
   const news= await init( typeof page==="string"? isNaN(Number(page))? page:"1":"1")
   const pageData= await getNewsPageData()
 
-  if (!pageData|| typeof pageData==="string" ||typeof news=="string" || news===null) return <div>произошла ошибка{(news || pageData) && `: ${news ||pageData}`}, перезагрузите страницу</div>
+  if (typeof news=="string" || news===null) {
+    revalidateTag("AllNews")
+    return <div>произошла ошибка{news && `: ${news}`}, перезагрузите страницу</div>
+  }
 
+  if (!pageData|| typeof pageData==="string" ) {
+    revalidateTag("NewsPage")
+    return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
+  }
   return (
       <>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>

@@ -33,11 +33,10 @@ const init=(year: string, number: string)=>(unstable_cache( async (year: string,
           }`)
 
           if (typeof data==="string" || !data){
-            revalidateTag(`project-${year}-${number}`)
             return data
           }
 
-          return data.projects[0]
+          return data.projects[0]||undefined
         },
         ["project"], {tags: [`project-${year}-${number}`]})
 )
@@ -51,10 +50,13 @@ const ProjectModal = async ({projects, searchParams}:Props) => {
 
   const projectItem= projects.find(item=> String(item.year)===projectYear && String(item.number)===project) ?? await getProject(projectYear, project)
 
-  if (!projectItem) return <div><span>проект не найден
+  if (projectItem===undefined) return <div><span>проект не найден
   </span></div>
 
-  if (typeof projectItem   ==="string") return <div>произошла ошибка{ `: ${projectItem}`}, перезагрузите страницу</div>
+  if (typeof projectItem ==="string" ||projectItem===null) {
+    revalidateTag(`project-${projectYear}-${project}`)
+    return <div>произошла ошибка{projectItem &&`: ${projectItem}`}, перезагрузите страницу</div>
+  }
 
 
   const diploma=diplomas[projectItem.diploma]
