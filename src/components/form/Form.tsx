@@ -1,20 +1,22 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import "./form.scss"
-import {Field, Form as FormikForm, Formik} from "formik";
+import {Field, Form as FormikForm, Formik, FormikHelpers} from "formik";
 import {IField} from "@/types/tehnic";
 import Input from "@/components/input/Input";
 import {IFormInput, INomination} from "@/types/data";
 import HtmlProcessing from "@/components/HtmlProcessing";
+import cn from "classnames";
 
 interface Props{
   inputs: IFormInput[]
-  btn: string
   note: string
   nominations: INomination[]
 }
 
-const Form = ({inputs, btn, note, nominations}:Props) => {
+const Form = ({inputs, note, nominations}:Props) => {
   const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
+  const [isSent, setIsSent] = useState(false)
+  const [isError, setIsError] = useState(true)
 
   const validate=(values:{ [key: string]: string })=>{
     const errors:{ [key: string]: string }={}
@@ -31,7 +33,16 @@ const Form = ({inputs, btn, note, nominations}:Props) => {
         errors[key]= "неверный формат"
     }
 
+    setIsError(Object.keys(errors).length>0)
+
     return errors
+  }
+
+  const handleSubmit=(values: {   [p: string]: string }, {resetForm}: FormikHelpers<{   [p: string]: string }>)=>{
+    resetForm()
+    setIsSent(true)
+    setIsError(true)
+    setTimeout(()=> setIsSent(false), 3000)
   }
 
   useEffect(() => {
@@ -51,7 +62,7 @@ const Form = ({inputs, btn, note, nominations}:Props) => {
 
   if (!inputsObj) return <div/>
   return (
-      <Formik initialValues={inputsObj} onSubmit={()=>{}} validate={validate}>
+      <Formik initialValues={inputsObj} onSubmit={handleSubmit} validate={validate}>
         <FormikForm className="form">
           <div>
             {
@@ -72,7 +83,7 @@ const Form = ({inputs, btn, note, nominations}:Props) => {
             }
           </div>
           <div className="form__row">
-            <Field type="submit" value={btn} className="form__btn"/>
+            <Field type="submit" value={isSent? "Успешно отправлено": "Отправить"} className={cn({"btn-grey": true,"form__btn": true, "form__btn--error": isError && !isSent, "form__btn--sent": isSent})}/>
             <div className="note">
               <HtmlProcessing html={note}/>
             </div>

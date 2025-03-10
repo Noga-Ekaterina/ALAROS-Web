@@ -1,4 +1,4 @@
-@import "../../../app/styles/mixins";
+@import "../../../app/styles/mixins-and-extends";
 
 .festival-forum{
   background: #fff;
@@ -124,13 +124,7 @@
     }
 
     a{
-      font-size: 16rem !important;
-      font-weight: 500 !important;
-      text-align: center;
-      background: #EFEFEF !important;
-      width: 100%;
-      padding: 10rem;
-      margin-bottom: -2rem;
+      @extend .btn-grey;
     }
   }
 

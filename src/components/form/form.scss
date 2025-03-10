@@ -1,4 +1,4 @@
-@import "@/app/styles/mixins";
+@import "@/app/styles/mixins-and-extends";
 .form{
   &__row{
     display: flex;
@@ -11,14 +11,18 @@
     }
   }
 
-  &__btn{
-    font-size: 16rem !important;
-    font-weight: 500 !important;
-    text-align: center;
-    color: var(--c-dark);
-    background: #EFEFEF !important;
-    width: 197rem;
-    padding: 10rem;
+  .form &__btn{
+
+    &--error{
+      color: var(--c-grey);
+      background: #EFEFEF;
+    }
+
+    &--sent{
+      pointer-events: none;
+      background: var(--c-red);
+      color: #fff;
+    }
   }
 
   .note{

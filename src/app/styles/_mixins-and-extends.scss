@@ -1,3 +1,22 @@
+.btn-grey{
+  font-size: 16rem !important;
+  font-weight: 500 !important;
+  text-align: center;
+  color: var(--c-dark);
+  background: #EFEFEF;
+  width: 197rem;
+  padding: 10rem;
+
+  &:hover{
+    background: var(--c-main);
+    color: #fff;
+  }
+
+  &:active{
+    background: #fff;
+  }
+}
+
 @mixin lg{
   @media (max-width: 1600px) {
     @content

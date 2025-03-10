@@ -70,7 +70,6 @@ const init= unstable_cache(async ()=>{
                 values
                 necessarily
               }
-              bidButton
               bidNote {
                 html
               }

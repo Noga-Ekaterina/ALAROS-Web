@@ -1,5 +1,5 @@
 @import "fonts";
-@import "mixins";
+@import "@/app/styles/mixins-and-extends";
 
 :root{
   --c-dark: #181818;
@@ -85,17 +85,16 @@ u{
   }
 }
 
-button, input[type="submit"] {
+button, *[type="submit"] {
   display: inline-block;
   box-shadow: none;
-  background-color: transparent;
   background: none;
   border: none;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 input{

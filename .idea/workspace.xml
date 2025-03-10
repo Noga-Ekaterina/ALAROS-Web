@@ -4,18 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала обработку ошибок в новоостях">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перенесла очистку кэша при ошибки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/competition-results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,15 +211,7 @@
       <workItem from="1741264448409" duration="18664000" />
       <workItem from="1741393950110" duration="2451000" />
       <workItem from="1741455708071" duration="14258000" />
-      <workItem from="1741541886161" duration="4171000" />
-    </task>
-    <task id="LOCAL-00009" summary="доделала апи для очистки кэша">
-      <option name="closed" value="true" />
-      <created>1738499992479</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1738499992479</updated>
+      <workItem from="1741541886161" duration="13667000" />
     </task>
     <task id="LOCAL-00010" summary="добавила теги для очистки кэша">
       <option name="closed" value="true" />
@@ -581,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741357321206</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="перенесла очистку кэша при ошибки">
+      <option name="closed" value="true" />
+      <created>1741549459191</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1741549459191</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +623,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю" />
     <MESSAGE value="исправлен баг со цветом" />
     <MESSAGE value="сделала неразрывные пробелы" />
     <MESSAGE value="сделала кнопку &quot;наверх&quot;" />
@@ -624,7 +647,8 @@
     <MESSAGE value="исправила ошибку с границей" />
     <MESSAGE value="сделала обработку ошибок" />
     <MESSAGE value="сделала обработку ошибок в новоостях" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала обработку ошибок в новоостях" />
+    <MESSAGE value="перенесла очистку кэша при ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="перенесла очистку кэша при ошибки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

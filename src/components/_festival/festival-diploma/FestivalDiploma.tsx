@@ -17,9 +17,10 @@ const FestivalDiploma = ({pageData, nominations}: Props) => {
       <div className="festival-diploma" id="diploma">
         <Detalis
             title={<span>{nonBreakingSpaces(pageData.diplomaTitle)}</span>}
+            hash="diploma"
         >
           <div className="container">
-            <Form inputs={pageData.diplomaInputs} btn={pageData.bidButton} note={pageData.diplomaNote.html} nominations={nominations}/>
+            <Form inputs={pageData.diplomaInputs} note={pageData.diplomaNote.html} nominations={nominations}/>
           </div>
         </Detalis>
       </div>
