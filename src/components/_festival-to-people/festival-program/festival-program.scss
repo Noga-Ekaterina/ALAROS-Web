@@ -72,14 +72,14 @@
 
   .detalis {
     width: 438rem;
-    border-top: max(1px, 1rem) solid #BEBCBB;
+    border-top: max(1px, 1rem) solid var(--c-grey);
 
     @include sm{
       width: 323rem;
     }
 
     &:last-child {
-      border-bottom: max(1px, 1rem) solid #BEBCBB;
+      border-bottom: max(1px, 1rem) solid var(--c-grey);
     }
 
     *{

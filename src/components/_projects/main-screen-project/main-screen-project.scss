@@ -1,3 +1,4 @@
+@import "@/app/styles/mixins-and-extends";
 .main-screen-project{
   display: flex;
   flex-direction: column;
@@ -17,11 +18,16 @@
 
   &__signature{
     color: #fff;
-    font-size: 10rem;
+    font-size: 8.5rem;
     font-weight: 500;
     max-width: 242rem;
     position: relative;
     z-index: 2;
+
+    @include lg{
+      font-size: 10rem;
+
+    }
 
     &-wrapp{
       position: relative;
@@ -35,7 +41,7 @@
 
       //&::before{
       //  content: '';
-      //  width: max(1px, 1rem);
+      //  width: var(--main-screen-line);
       //  height: 256.94%;
       //  background: #E5E5E5;
       //  position: absolute;

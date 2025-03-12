@@ -30,8 +30,8 @@ const HomeMainScreen = ({homeData}: Props) => {
           >
             {
               homeData.projects.map(project=>(
-                  <SwiperSlide>
-                    <MainScreenProject project={project} className="home-main-screen__slide-content" key={`${project.year}-${project.number}`}>
+                  <SwiperSlide key={`${project.year}-${project.number}`}>
+                    <MainScreenProject project={project} className="home-main-screen__slide-content" >
                       <div className="home-main-screen__slide-title-wrapp">
                         <h2 className='home-main-screen__slide-title'>{nonBreakingSpaces(homeData.mainTitle)}</h2>
                       </div>

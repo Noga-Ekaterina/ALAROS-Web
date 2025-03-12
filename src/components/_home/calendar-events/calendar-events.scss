@@ -25,9 +25,11 @@
   }
 
   &__day {
+    cursor:  e-resize;
     position: relative;
     overflow: visible;
     font-size: 14rem;
+    user-select: none;
     width: 35rem;
     height: 35rem;
     display: flex;
@@ -42,19 +44,13 @@
     }
 
     &--last-week {
-      width: 39rem;
-
-      span {
-        border-right: max(1px, 1rem) solid #BEBCBB;
-        padding-right: 4rem;
-      }
-
-      + .calendar-events__day {
-        width: 39rem;
-
-        span {
-          padding-left: 4rem;
-        }
+      margin-right: 35rem;
+      &:after{
+        content: '';
+        position: absolute;
+        right: calc(-17.5rem +  max(1px, 1rem)/2);
+        height: 22rem;
+        border-left: max(1.2px, 1.2rem) solid var(--c-grey);
       }
     }
 
@@ -105,27 +101,19 @@
   }
 
   &__progres{
-    margin-bottom: 6rem;
-    border-top: max(1rem, 1px) solid #BEBCBB;
-    &-slider{
-      width: 100rem;
-      height: max(3.5rem, 1.5px);
-      background: var(--c-dark);
-      position: relative;
-      bottom: max(1rem, 1px);
-      transition: 0.5s;
-    }
+    margin-bottom: 13rem
   }
   
   &__month{
     .dropdown__title-text:first-letter, .dropdown__item label:first-letter{
       text-transform: uppercase;
+      user-select: none;
     }
   }
 
   &__year{
     .dropdown__title{
-      color: #BEBCBB;
+      color: var(--c-grey);
     }
   }
 
@@ -134,14 +122,14 @@
     display: flex;
 
     &-wrapp{
-      padding-right: 60rem;
-      width: 100%;
+      width: 951rem;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       gap: 17rem;
 
       @include sm{
+        width: 100%;
         padding: 0 var(--p-y);
       }
     }

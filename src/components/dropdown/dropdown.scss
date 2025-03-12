@@ -1,6 +1,7 @@
 .dropdown{
   position: relative;
   font-size: 13rem;
+  user-select: none;
 
   input{
     display: none;
@@ -14,7 +15,7 @@
   label{
     display: block;
     padding-block: 8rem;
-    color: #BEBCBB;
+    color: var(--c-grey);
     cursor: pointer;
   }
 
@@ -63,7 +64,7 @@
   }
 
   &__line{
-    background: #BEBCBB;
+    background: var(--c-grey);
     width: 2rem;
     height: 14rem;
     align-self: center;

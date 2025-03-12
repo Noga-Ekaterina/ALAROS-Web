@@ -24,7 +24,8 @@ export const eventsDataProcessing= (eventsDataYears: IEventsDataYear[])=>{
       },
       title: row.title,
       place: row.place,
-      description: row.description
+      description: row.description,
+      image: row.image
     }))
 
     eventsByYear[yearData.year]= eventsYear

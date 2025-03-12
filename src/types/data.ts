@@ -59,6 +59,7 @@ export interface IEvent {
   title: string
   description: string;
   place: string;
+  image: string
 };
 
 export interface IEventsDataYear {

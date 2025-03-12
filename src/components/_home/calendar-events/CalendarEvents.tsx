@@ -1,8 +1,8 @@
 'use client'
-import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
+import React, {Fragment, MutableRefObject, useEffect, useRef, useState} from 'react';
 import "./calendar-events.scss";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, FreeMode } from 'swiper/modules';
 import {createDate, createYear, getMonthesNames} from "../../../utils/date";
 import classNames from "classnames";
 import { IDay } from "../../../types/tehnic";
@@ -13,6 +13,7 @@ import {IEventsByYear, IEventsDataYear} from "../../../types/data";
 import {eventsDataProcessing} from "../../../utils/eventsDataProcessing";
 import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import SliderProgress from "@/components/slider-progress/SliderProgress";
 
 interface Props{
   calendarEvents: IEventsDataYear[]
@@ -40,6 +41,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
   const swiperCalendarNav= new SwiperNavigation(swiperCalendarRef)
   const swiperEventNav= new SwiperNavigation(swiperEventRef)
   const progressRef = useRef<HTMLDivElement>(null);
+
 
   const handleActiveDayIndexChange = () => {
     if (swiperCalendarRef.current){
@@ -310,7 +312,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
                           </div>
                         </div>
                         <img
-                            src={`/Assets/Pages/Home/Calendar-events/Images/${start.year}/${event.date.start.replace(".", "-")}.png`}
+                            src={`/Assets/Pages/Home/Calendar-events/Images/${start.year}/${event.image}`}
                             alt=""/>
                       </SwiperSlide>
                   )
@@ -330,12 +332,13 @@ const CalendarEvents = ({calendarEvents}:Props) => {
           </button>
         </div>
         <div className="calendar-events__calendar">
-          <div className="calendar-events__progres">
-            <div
-                className="calendar-events__progres-slider"
-                ref={progressRef}
-            ></div>
-          </div>
+          {/*<div className="calendar-events__progres">*/}
+          {/*  <div*/}
+          {/*      className="calendar-events__progres-slider"*/}
+          {/*      ref={progressRef}*/}
+          {/*  ></div>*/}
+          {/*</div>*/}
+          <SliderProgress swiperRef={swiperCalendarRef} progressClass="calendar-events__progres"/>
           <div className="calendar-events__calendar-wrapp">
             <Dropdown value={activeMonth} values={getMonthesNames()} handleCheck={(e) => setActiveMonth(e.target.value)}
                       name="month" className="calendar-events__month"/>
@@ -344,8 +347,16 @@ const CalendarEvents = ({calendarEvents}:Props) => {
 
             <Swiper
                 slidesPerView="auto"
-                mousewheel={{sensitivity: 5000}}
-                modules={[Mousewheel]}
+                mousewheel={{
+                  sensitivity: 0.5,    // Уменьшаем чувствительность
+                  releaseOnEdges: true, // Разрешаем инерцию после достижения краев
+                }}
+                speed={800} // Уменьшаем длительность анимации
+                freeMode={{
+                  momentum: true,
+                  momentumRatio: 0.5,
+                }}
+                modules={[Mousewheel, FreeMode]}
                 ref={swiperCalendarRef}
                 onActiveIndexChange={handleActiveDayIndexChange}
             >

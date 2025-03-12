@@ -13,10 +13,10 @@
 
 
   .detalis {
-    border-top: max(1px, 1rem) solid #BEBCBB;
+    border-top: max(1px, 1rem) solid var(--c-grey);
 
     &:last-child{
-      border-bottom: max(1px, 1rem) solid #BEBCBB;
+      border-bottom: max(1px, 1rem) solid var(--c-grey);
     }
 
     &__btn {
@@ -73,6 +73,7 @@
     min-width: 734rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr) 6fr 3fr;
+    align-items: baseline;
     gap: 17rem;
     transition: 0.3s;
     padding-block: 3rem;

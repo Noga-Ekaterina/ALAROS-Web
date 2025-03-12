@@ -22,18 +22,18 @@
       &:before{
         content: '';
         width: 100vw;
-        height: max(1px, 1rem);
+        height:var(--main-screen-line);
         background: #E5E5E5;
         position: absolute;
         left: 0;
-        top: calc(50% - max(1px, 1rem));
+        top: calc(50% - var(--main-screen-line)/2);
         z-index: 5;
       }
 
       &::after{
         content: '';
         height: 100%;
-        width: max(1px, 1rem);
+        width: var(--main-screen-line);
         position: absolute;
         right: 0;
         top: 0;
@@ -55,7 +55,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    padding: 21rem var(--p-y) 25rem 18rem;
+    padding: 21rem 0 25rem 18rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,7 +79,7 @@
       height: 100%;
       aspect-ratio: 1/1;
       border-radius: 0 50% 50% 0;
-      border: 1.5px solid #E5E5E5;
+      border: var(--main-screen-line) solid #E5E5E5;
       border-left: none;
 
       &-wrapp {
@@ -133,17 +133,21 @@
 
     p:last-child {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
 
       a {
         line-height: 1em;
+        text-align: center;
 
         &:first-child {
-          color: #E5E5E5;
-          border: max(1px, 1rem) solid #E5E5E5;
+          color: #ffffff;
+          border: var(--main-screen-line) solid #E5E5E5;
           background: var(--c-main);
           padding: 12rem 35rem;
+        }
+
+        &:last-child{
+          margin-inline: auto;
         }
       }
     }
@@ -186,7 +190,7 @@
 
         &::before{
           content: '';
-          width: max(1px, 1rem);
+          width: var(--main-screen-line);
           height: 200%;
           background: #E5E5E5;
           position: absolute;
