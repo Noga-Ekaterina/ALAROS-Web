@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/react-lenis": "^0.0.47",
     "@types/react-transition-group": "^4.4.12",
     "axios": "^1.7.9",
     "classnames": "^2.5.1",

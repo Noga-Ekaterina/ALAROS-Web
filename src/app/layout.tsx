@@ -6,6 +6,7 @@ import ToTop from "@/components/to-top/ToTop";
 import Scroll from "@/app/Scroll";
 import React from "react";
 import Footer from "@/components/footer/Footer";
+import SmoothScrolling from "@/app/SmoothScrolling";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-      <Header/>
-      {children}
-      <Footer/>
-      <ToTop/>
-      <Scroll/>
+        <SmoothScrolling root={true}>
+          <Header/>
+          {children}
+          <Footer/>
+          <ToTop/>
+          <Scroll/>
+        </SmoothScrolling>
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import classNames from "classnames";
 import {IWithClass} from "../../types/tehnic";
 import {ReactSVG} from "react-svg";
 import {INomination} from "@/types/data";
+import SmoothScrolling from "@/app/SmoothScrolling";
 
 interface Props extends IWithClass{
   id?: string|number
@@ -44,28 +45,32 @@ function Dropdown({id, value, values, name, handleCheck, className, elements, ar
                )
            }
          </div>
-         <div className="dropdown__content">
-            {
-              values.map((item, index) =>
-                  <div key={item} className="dropdown__item">
-                    <input
-                        type='radio'
-                        checked={item == value}
-                        name={name ?? ""}
-                        id={item+id}
-                        value={item}
-                        onChange={e => handleCheck(e)}
-                    />
-                    <label
-                        htmlFor={item+id}
-                        onClick={(e) => e.stopPropagation()} // Добавлено остановка всплытия
-                    >
-                      {elements ? elements[index] : nominationsElements ? nominationsElements[index] : item}
-                    </label>
-                  </div>
-              )
-            }
+         <div className="dropdown__content"
+         >
 
+           <SmoothScrolling>
+             {
+               values.map((item, index) =>
+                   <div key={item} className="dropdown__item">
+                     <input
+                         type='radio'
+                         checked={item == value}
+                         name={name ?? ""}
+                         id={item+id}
+                         value={item}
+                         onChange={e => handleCheck(e)}
+                     />
+                     <label
+                         htmlFor={item+id}
+                         onClick={(e) => e.stopPropagation()} // Добавлено остановка всплытия
+                     >
+                       {elements ? elements[index] : nominationsElements ? nominationsElements[index] : item}
+                     </label>
+                   </div>
+               )
+             }
+
+           </SmoothScrolling>
          </div>
       </div>
    );

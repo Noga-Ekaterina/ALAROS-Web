@@ -36,10 +36,6 @@
   &__content{
     display: none;
     border-top-width: 0;
-    padding: 8rem 10rem;
-    overflow-y: auto;
-    overflow: -moz-scrollbars-none;
-    -ms-overflow-style: none;
     max-height: 155rem;
     position: absolute;
     min-width: 100%;
@@ -48,8 +44,10 @@
     -moz-box-shadow: 11px 0px 34px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 11px 0px 34px 0px rgba(0, 0, 0, 0.2);
 
-    &::-webkit-scrollbar { width: 0 !important }
-
+    .lenis.lenis-smooth {
+      padding: 8rem 10rem;
+      max-height: 155rem;
+    }
     .open &{
       display: block;
     }

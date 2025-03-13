@@ -37,7 +37,9 @@ const Results = ({pageData}:Props) => {
            }
          </div>
 
-          <iframe src={results.find(({year})=> year===activeYear)?.link}  className="results__iframe"></iframe>
+          <div data-lenis-prevent="">
+            <iframe src={results.find(({year}) => year === activeYear)?.link} className="results__iframe"></iframe>
+          </div>
         </div>
       </div>
   );

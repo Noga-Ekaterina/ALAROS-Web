@@ -1,11 +1,12 @@
 'use client'
-import React, {JSX, useLayoutEffect, useRef, useState} from 'react';
+import React, {JSX, useEffect, useLayoutEffect, useRef, useState} from 'react';
 import { CSSTransition } from 'react-transition-group';
 import "./detalis.scss"
 import { IWithChildren } from "../../types/tehnic";
 import cn from "classnames";
 import { useGetRem } from "../../hoocs/useGetRem";
 import {useHash} from "@/hoocs/useHash";
+import {useLenis} from "@studio-freight/react-lenis";
 
 interface IProps extends IWithChildren {
   title: JSX.Element
@@ -19,6 +20,7 @@ const Detalis = ({ title, rightElement, hash, children }: IProps) => {
   const [isInit, setIsInit] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null);
   const rem = useGetRem();
+  const lenis = useLenis()
 
   const handleClick = () => setIsOpen(!isOpen);
 
@@ -63,6 +65,10 @@ const Detalis = ({ title, rightElement, hash, children }: IProps) => {
       }
     }, 100)
   }, [isOpen, rem]);
+
+  useEffect(() => {
+    setTimeout(()=>lenis?.resize(), 1000)
+  }, [isOpen]);
 
   return (
       <div className={cn("detalis", { "detalis--opened": isOpen })}>

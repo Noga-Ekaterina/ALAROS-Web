@@ -55,15 +55,17 @@
 
     }
 
+
+    thead{
+      position: sticky;
+      top: 0;
+    }
+
     tbody{
       display: flex;
       flex-direction: column;
       gap: 6rem;
       margin-top: 42rem;
-      overflow-y: auto;
-      overflow: -moz-scrollbars-none;
-      -ms-overflow-style: none;
-      max-height: 286rem;
 
       &::-webkit-scrollbar { width: 0 !important }
     }
@@ -102,5 +104,9 @@
         font-size: 13rem;
       }
     }
+  }
+
+  .lenis.lenis-smooth {
+    max-height: 316rem;
   }
 }

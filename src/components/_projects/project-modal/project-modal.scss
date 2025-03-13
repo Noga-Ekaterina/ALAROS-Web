@@ -1,8 +1,7 @@
 @import "@/app/styles/mixins-and-extends";
 
 .project-modal{
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   position: fixed;
   width: 100vw;
   inset: 0;
@@ -13,6 +12,11 @@
   *{
     color: #fff;
     font-size: 13rem;
+  }
+
+  &__container{
+    overflow-y: auto;
+    height: 100%;
   }
 
   &__content{

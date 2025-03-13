@@ -6,6 +6,7 @@ import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import ProjectImagesSlider from "@/components/_projects/project-images-slider/ProjectImagesSlider";
 import {diplomas} from "@/variables";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import SmoothScrolling from "@/app/SmoothScrolling";
 
 interface Props{
   projects: IProject[]
@@ -63,19 +64,21 @@ const ProjectModal = async ({projects, searchParams}:Props) => {
 
   return (
       <div className="project-modal">
-        <ProjectImagesSlider project={projectItem}/>
-        <div className="project-modal__content">
-          <h2 className="project-modal__title">{nonBreakingSpaces(projectItem.name)}</h2>
-          <div className="project-modal__subtitle">
-            <span className="project-modal__year">{projectItem.year}</span>
-            <span style={{color: diploma.color}}>{diploma.text}</span>
-          </div>
+        <SmoothScrolling>
+          <ProjectImagesSlider project={projectItem}/>
+          <div className="project-modal__content">
+            <h2 className="project-modal__title">{nonBreakingSpaces(projectItem.name)}</h2>
+            <div className="project-modal__subtitle">
+              <span className="project-modal__year">{projectItem.year}</span>
+              <span style={{color: diploma.color}}>{diploma.text}</span>
+            </div>
 
-          <div className="project-modal__row">
-            <p>{nonBreakingSpaces(projectItem.winner)}</p>
-            <p className="project-modal__nomination">{projectItem.nomination&& nonBreakingSpaces(projectItem.nomination)}</p>
+            <div className="project-modal__row">
+              <p>{nonBreakingSpaces(projectItem.winner)}</p>
+              <p className="project-modal__nomination">{projectItem.nomination&& nonBreakingSpaces(projectItem.nomination)}</p>
+            </div>
           </div>
-        </div>
+        </SmoothScrolling>
       </div>
   );
 };

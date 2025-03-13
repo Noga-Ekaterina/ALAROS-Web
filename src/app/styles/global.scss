@@ -30,13 +30,31 @@
 }
 
 html{
-  overflow-x: hidden;
+  overflow: hidden;
   font-size: calc(100vw / 1024);
 
   @include sm{
     font-size: calc(100vw / 390);
   }
 }
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth{
+  height: 100%;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar { width: 0 !important }
+}
+
 
 body {
   font-family: 'PT Root', sans-serif;

@@ -5,6 +5,7 @@ import HtmlProcessing from "../../HtmlProcessing";
 import {createDate, formaterDate} from "../../../utils/date";
 import {IProtectionsDay} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import SmoothScrolling from "@/app/SmoothScrolling";
 
 interface Props {
   title: string
@@ -24,7 +25,9 @@ const FestivalProtections = ({title, protectionsDays}:Props) => {
 
               return(
                   <Detalis title={<span>{formaterDate(item.date)} | {day}</span>}>
-                    <HtmlProcessing html={item.protections.html}/>
+                    <SmoothScrolling>
+                      <HtmlProcessing html={item.protections.html}/>
+                    </SmoothScrolling>
                   </Detalis>
               )
             })

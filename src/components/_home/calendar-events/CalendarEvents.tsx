@@ -331,7 +331,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
             <ReactSVG src="/Assets/Icons/arrow.svg"/>
           </button>
         </div>
-        <div className="calendar-events__calendar">
+        <div className="calendar-events__calendar" >
           {/*<div className="calendar-events__progres">*/}
           {/*  <div*/}
           {/*      className="calendar-events__progres-slider"*/}
@@ -339,7 +339,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
           {/*  ></div>*/}
           {/*</div>*/}
           <SliderProgress swiperRef={swiperCalendarRef} progressClass="calendar-events__progres"/>
-          <div className="calendar-events__calendar-wrapp">
+          <div className="calendar-events__calendar-wrapp"  onWheel={(e) => (e.target as HTMLElement)?.closest(".swiper") && e.stopPropagation()}>
             <Dropdown value={activeMonth} values={getMonthesNames()} handleCheck={(e) => setActiveMonth(e.target.value)}
                       name="month" className="calendar-events__month"/>
             <Dropdown value={String(activeYear)} values={years}
