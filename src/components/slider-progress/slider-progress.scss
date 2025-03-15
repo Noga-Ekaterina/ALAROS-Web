@@ -1,6 +1,6 @@
 .slider-progress {
   position: relative;
-  border-top: max(1rem, 1px) solid var(--c-grey);
+  border-top: var(--w-line) solid var(--c-grey);
 
   &__bar {
     cursor:  e-resize;

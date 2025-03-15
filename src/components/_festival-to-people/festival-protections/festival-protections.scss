@@ -13,18 +13,23 @@
 
 
   .detalis {
-    border-top: max(1px, 1rem) solid var(--c-grey);
+    border-top: var(--w-line) solid var(--c-grey);
 
     &:last-child{
-      border-bottom: max(1px, 1rem) solid var(--c-grey);
+      border-bottom: var(--w-line) solid var(--c-grey);
     }
 
     &__btn {
-      padding: 7rem 0;
+      padding: 8.6rem 0 9.5rem;
       font-size: 16rem;
       color: var(--c-red);
       font-weight: 500;
       background: #fff;
+    }
+
+    &__icon{
+      font-size: 25rem;
+      font-weight: 400;
     }
 
     &--opened{

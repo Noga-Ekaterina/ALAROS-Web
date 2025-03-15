@@ -55,7 +55,7 @@
   &__time{
     font-size: 10.5rem;
     font-weight: 600;
-
+    color: #0B2719;
 
     @include sm{
       font-size: 13rem;
@@ -72,33 +72,34 @@
 
   .detalis {
     width: 438rem;
-    border-top: max(1px, 1rem) solid var(--c-grey);
+    border-top: var(--w-line) solid var(--c-grey);
 
     @include sm{
       width: 323rem;
     }
 
     &:last-child {
-      border-bottom: max(1px, 1rem) solid var(--c-grey);
+      border-bottom: var(--w-line) solid var(--c-grey);
     }
 
     *{
       font-size: 9.6rem;
     }
 
-    b{
+    b, strong{
       font-weight: 600;
     }
 
     &__btn {
-      padding: 15.5rem 0;
+      padding: 13rem 0 14rem;
       text-align: left;
       font-weight: 600;
       background: #fff;
     }
 
     &__icon{
-      font-size: 16rem;
+      font-size: 20rem;
+      font-weight:500;
       color: var(--c-red);
     }
   }

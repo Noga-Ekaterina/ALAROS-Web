@@ -22,11 +22,11 @@
       &:before{
         content: '';
         width: 100vw;
-        height:var(--main-screen-line);
+        height:var(--w-line);
         background: #E5E5E5;
         position: absolute;
         left: 0;
-        top: calc(50% - var(--main-screen-line)/2);
+        top: calc(50% - var(--w-line)/2);
         z-index: 5;
       }
 
@@ -34,7 +34,7 @@
         content: '';
         height: 100%;
         width: 0;
-        border-left: var(--main-screen-line) solid #E5E5E5;
+        border-left: var(--w-line) solid #E5E5E5;
         position: absolute;
         right: 0;
         top: 0;
@@ -55,7 +55,7 @@
     //left: 50%;
     //bottom: 0;
     z-index: 3;
-    border-top: var(--main-screen-line) solid #E5E5E5;
+    border-top: var(--w-line) solid #E5E5E5;
     //background: linear-gradient(to top left, transparent calc(50% - var(--main-screen-line)/2), #E5E5E5 calc(50% - var(--main-screen-line)/2), #E5E5E5 calc(50% + var(--main-screen-line)/2), transparent calc(50% + var(--main-screen-line)/2))  ;
   }
 
@@ -91,7 +91,7 @@
       height: 100%;
       aspect-ratio: 1/1;
       border-radius: 0 50% 50% 0;
-      border: var(--main-screen-line) solid #E5E5E5;
+      border: var(--w-line) solid #E5E5E5;
       border-left: none;
 
       &-wrapp {
@@ -154,7 +154,7 @@
 
         &:first-child {
           color: #ffffff;
-          border: var(--main-screen-line) solid #E5E5E5;
+          border: var(--w-line) solid #E5E5E5;
           background: var(--c-main);
           padding: 12rem 35rem;
         }
@@ -203,7 +203,7 @@
 
         &::before{
           content: '';
-          width: var(--main-screen-line);
+          width: var(--w-line);
           height: 200%;
           background: #E5E5E5;
           position: absolute;

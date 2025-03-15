@@ -43,14 +43,14 @@
       text-align: center;
     }
 
-    &--last-week {
+    &--last-week:not(&--active-day, &--active-passed-day) {
       margin-right: 35rem;
       &:after{
         content: '';
         position: absolute;
         right: calc(-17.5rem +  max(1px, 1rem)/2);
         height: 22rem;
-        border-left: max(1.2px, 1.2rem) solid var(--c-grey);
+        border-left: var(--w-line) solid var(--c-grey);
       }
     }
 
