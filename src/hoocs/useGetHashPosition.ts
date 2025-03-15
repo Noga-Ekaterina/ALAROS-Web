@@ -10,9 +10,7 @@ export const useGetHashPosition=()=>{
 
     const {top} = el.getBoundingClientRect()
 
-    console.log(rem)
-
-    return top - 60 * rem
+    return top - 48 * rem
   }, [rem])
 }
 

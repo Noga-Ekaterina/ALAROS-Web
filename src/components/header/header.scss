@@ -4,7 +4,7 @@
   background: #fff;
   position: sticky;
   top: 0;
-  padding-block: 20rem;
+  padding-block: 14rem;
   z-index: 5;
   box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 95.3px 0px #0000000D;
 
@@ -28,14 +28,14 @@
   }
 
   &__logo{
-    width: 24rem;
+    width: 14.4rem;
   }
 
   &__menu{
-    width: 28rem;
+    width: 16.8rem;
 
     &-wrapp{
-      width: 95rem;
+      width: 83.8rem;
       font-size: 13rem;
       letter-spacing: 0.02em;
       color: var(--c-main);
@@ -49,6 +49,6 @@
   }
 
   &__search{
-    width: 23rem;
+    width: 13.8rem;
   }
 }
