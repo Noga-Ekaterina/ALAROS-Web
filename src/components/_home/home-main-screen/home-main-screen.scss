@@ -33,7 +33,8 @@
       &::after{
         content: '';
         height: 100%;
-        width: var(--main-screen-line);
+        width: 0;
+        border-left: var(--main-screen-line) solid #E5E5E5;
         position: absolute;
         right: 0;
         top: 0;
@@ -45,6 +46,17 @@
         }
       }
     }
+  }
+
+  &__diagonal{
+    position: absolute;
+    top: 75%;
+    //right: -12%;
+    //left: 50%;
+    //bottom: 0;
+    z-index: 3;
+    border-top: var(--main-screen-line) solid #E5E5E5;
+    //background: linear-gradient(to top left, transparent calc(50% - var(--main-screen-line)/2), #E5E5E5 calc(50% - var(--main-screen-line)/2), #E5E5E5 calc(50% + var(--main-screen-line)/2), transparent calc(50% + var(--main-screen-line)/2))  ;
   }
 
   &__aside {
@@ -100,6 +112,7 @@
     * {
       font-weight: 500;
       font-size: 13rem;
+      letter-spacing: 0.02em;
 
       @include md-book {
         font-size: 20rem;
