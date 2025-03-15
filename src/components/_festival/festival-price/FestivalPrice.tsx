@@ -15,7 +15,7 @@ const FestivalPrice = ({pageData}:Props) => {
       <div className="festival-price" id="price">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.priceTitle)}</h2>
+            <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.priceTitle)}</h2>
           </div>
           <div className="festival-price__body">
             <HtmlProcessing html={pageData.priceTable.html}/>

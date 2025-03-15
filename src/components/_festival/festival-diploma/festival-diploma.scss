@@ -6,10 +6,15 @@
 
   .detalis{
     &__btn{
-      padding: 17rem var(--p-y);
+      padding: 17rem var(--p-y) 19rem;
       font-size: 36rem;
+      font-weight: 500;
       background: #EFEFEF;
       color: var(--c-green-text);
+    }
+
+    &__icon{
+      font-weight: 300;
     }
     
     &--opened{

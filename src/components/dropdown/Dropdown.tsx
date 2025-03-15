@@ -7,6 +7,7 @@ import {IWithClass} from "../../types/tehnic";
 import {ReactSVG} from "react-svg";
 import {INomination} from "@/types/data";
 import SmoothScrolling from "@/app/SmoothScrolling";
+import HtmlProcessing from "@/components/HtmlProcessing";
 
 interface Props extends IWithClass{
   id?: string|number
@@ -26,7 +27,7 @@ function Dropdown({id, value, values, name, handleCheck, className, elements, ar
    const nominationsElements= nominations&& nominations.map(nomination=> (
        <span className="dropdown__nomination-item" key={nomination.number}>
             <span>{nomination.number}</span>
-            <span>{nomination.title}</span>
+            <HtmlProcessing html={`<span>${nomination.title}</span>`}/>
           </span>
    ))
 

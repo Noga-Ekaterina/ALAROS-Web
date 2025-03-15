@@ -79,8 +79,8 @@ const FestivalJuries = ({juries, title}:Props) => {
                                 <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
 
                                 <div className={cn(
-                                    "festival-main-juries__info",
-                                    isOpenedArr.includes(item) && "festival-main-juries__info--opened"
+                                    "festival-juries__info",
+                                    isOpenedArr.includes(item) && "festival-juries__info--opened"
                                 )}>
                                    <div>
                                       <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>

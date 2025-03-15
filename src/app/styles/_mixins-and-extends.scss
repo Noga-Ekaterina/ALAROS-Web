@@ -37,7 +37,7 @@
 }
 
 @mixin md-book{
-  @media (min-width: 640px) and (min-height: 80vw){
+  @media (min-width: 640.1px) and (min-height: 80vw){
     @content
   }
 }

@@ -4,25 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="оживила ползунок слайдера и всякие правки">
-      <change afterPath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала плавную прокрутку">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/results/Results.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/results/Results.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/LinkBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/LinkBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/to-top/to-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/to-top.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoocs/useGetHashPosition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoocs/useGetHashPosition.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,15 +204,8 @@
       <workItem from="1741783776010" duration="26266000" />
       <workItem from="1741822280035" duration="49000" />
       <workItem from="1741822837494" duration="3749000" />
-      <workItem from="1741868733029" duration="21364000" />
-    </task>
-    <task id="LOCAL-00012" summary="испавила стили">
-      <option name="closed" value="true" />
-      <created>1738504180008</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1738504180008</updated>
+      <workItem from="1741868733029" duration="26581000" />
+      <workItem from="1741954697766" duration="28793000" />
     </task>
     <task id="LOCAL-00013" summary="заглавные буквы">
       <option name="closed" value="true" />
@@ -594,11 +591,30 @@
       <option name="project" value="LOCAL" />
       <updated>1741821882799</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="сделала плавную прокрутку">
+      <option name="closed" value="true" />
+      <created>1741908807734</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1741908807735</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -612,7 +628,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="сделала кнопку &quot;наверх&quot;" />
     <MESSAGE value="сделала анимацию подсказки для слайдера" />
     <MESSAGE value="уменьшила время задержки" />
     <MESSAGE value="вынесла блок со ссылкой в отдельный компонент" />
@@ -637,7 +652,8 @@
     <MESSAGE value="перенесла очистку кэша при ошибки" />
     <MESSAGE value="переименовала файл mixins и сделала кнопку более &quot;живой&quot;" />
     <MESSAGE value="оживила ползунок слайдера и всякие правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="оживила ползунок слайдера и всякие правки" />
+    <MESSAGE value="сделала плавную прокрутку" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала плавную прокрутку" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -26,7 +26,6 @@ const LinkBlock = ({title, link, mobileIcon, className}:Props) => {
           ]
         </span>
     )
-    console.log(link)
     return (
         <>
           {

@@ -22,7 +22,7 @@
 
   .detalis{
     &__btn{
-      padding: 15rem;
+      padding: 12rem 15rem 17rem 12rem;
       background: var(--c-red);
 
       @include sm{

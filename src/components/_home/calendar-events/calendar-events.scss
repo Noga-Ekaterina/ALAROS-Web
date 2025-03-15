@@ -55,11 +55,11 @@
     }
 
     &--active-day {
-      background: var(--c-main-dark);
+      background: var(--c-main);
       color: #fff;
 
       svg * {
-        stroke: var(--c-main-dark);
+        stroke: var(--c-main);
       }
     }
 

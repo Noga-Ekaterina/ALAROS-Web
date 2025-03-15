@@ -1,12 +1,12 @@
 @import "../../../app/styles/mixins-and-extends";
 .festival-premiya{
-  padding-block: 32rem;
+  padding-block: 32rem 74rem;
 
   &__list{
     font-size: 13rem;
     display: flex;
     gap: 64rem;
-    margin-top: 80rem;
+    margin-top: 62rem;
     padding-inline: 80rem 20rem;
 
     @include sm{
@@ -21,13 +21,14 @@
 
   &__step{
     display: flex;
-    gap: 57rem;
+    gap: 45rem;
   }
 
   &__col{
     display: flex;
-    gap: 64rem;
+    gap: 51rem;
     flex-direction: column;
+    justify-content: space-between;
     width: calc(50% - 32rem);
 
     @include sm{
