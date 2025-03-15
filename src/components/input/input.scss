@@ -41,6 +41,7 @@
     &::placeholder{
       color: var(--c-grey);
       text-transform: uppercase;
+      font-weight: 400;
     }
   }
 
@@ -48,6 +49,7 @@
     min-width: max-content;
     color: var(--c-grey);
     text-transform: uppercase;
+    font-weight: 400;
   }
 
   &__error{
@@ -71,12 +73,21 @@
     *{
       color: var(--c-grey);
     }
+
+
+    &-line{
+      background: var(--c-grey);
+      width: 2rem;
+      height: 14rem;
+      align-self: center;
+    }
   }
 
   &__dropdown{
     position: relative;
     top: -4rem;
     width: 100%;
+    height: 6.3em;
   }
 
   .dropdown{

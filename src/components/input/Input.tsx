@@ -49,7 +49,7 @@ const Input = ({input, field, nominations}: IProps) => {
                                       value={value} type="radio" id={`bid-radio-${valueIndex}`}/>
                                   <label htmlFor={`bid-radio-${valueIndex}`}>{value}</label>
 
-                                  {input.values? valueIndex< input.values.length-1 && <span>|</span> :<></>}
+                                  {input.values? valueIndex< input.values.length-1 && <span className="input__radios-line"></span> :<></>}
                                 </Fragment>
                             ))
                           }
