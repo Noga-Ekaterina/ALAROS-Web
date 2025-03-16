@@ -99,7 +99,9 @@ export interface IStep{
 }
 
 export interface INews{
+  mainTitle: string
   title: string
+  rightSignature: IHtmlString
   mainScreenProject: IProject
   allNews: IHtmlString
 }

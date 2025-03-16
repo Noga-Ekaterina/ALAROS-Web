@@ -47,7 +47,7 @@ const Page = async ({searchParams}:Props) => {
       <>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <NewsMainScreen data={pageData}/>
-        <NewsList news={news}/>
+        <NewsList news={news} pageData={pageData}/>
       </>
   );
 };

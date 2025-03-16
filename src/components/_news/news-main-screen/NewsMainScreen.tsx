@@ -10,7 +10,7 @@ const NewsMainScreen = ({data}: Props) => {
   return (
       <div className="main-screen news-main-screen">
         <div className="news-main-screen__block-text">
-          <h1 className="news-main-screen__title">{data.title}</h1>
+          <h1 className="news-main-screen__title">{nonBreakingSpaces(data.mainTitle)}</h1>
         </div>
 
         <MainScreenProject project={data.mainScreenProject} className="news-main-screen__img-wrapp">

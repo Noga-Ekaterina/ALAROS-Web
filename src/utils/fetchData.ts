@@ -85,6 +85,10 @@ export const getNewsPageData= unstable_cache(async ()=>{
               allNews {
                 html
               }
+              mainTitle
+              rightSignature {
+                html
+              }
               title
               mainScreenProject {
                 cover

@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="мелкие правки формы">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила возможность делать detalis открытым поумолчанию и мелкие правки формы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,15 +194,7 @@
       <workItem from="1741868733029" duration="26581000" />
       <workItem from="1741954697766" duration="30197000" />
       <workItem from="1742044767793" duration="20927000" />
-      <workItem from="1742158582516" duration="3660000" />
-    </task>
-    <task id="LOCAL-00017" summary="вынесла отдельно список номинаций">
-      <option name="closed" value="true" />
-      <created>1738542410976</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1738542410976</updated>
+      <workItem from="1742158582516" duration="6860000" />
     </task>
     <task id="LOCAL-00018" summary="сделала выбор шаблона">
       <option name="closed" value="true" />
@@ -588,7 +580,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742059814848</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="добавила возможность делать detalis открытым поумолчанию и мелкие правки формы">
+      <option name="closed" value="true" />
+      <created>1742163535226</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1742163535226</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -617,7 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="разделила страницу фестиваля" />
     <MESSAGE value="исправила опечатку" />
     <MESSAGE value="работа с кэшом" />
     <MESSAGE value="переименовала стили и исправила опечатки в путях" />
@@ -642,7 +641,8 @@
     <MESSAGE value="уменьшила шапку" />
     <MESSAGE value="мелкие правки" />
     <MESSAGE value="мелкие правки формы" />
-    <option name="LAST_COMMIT_MESSAGE" value="мелкие правки формы" />
+    <MESSAGE value="добавила возможность делать detalis открытым поумолчанию и мелкие правки формы" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила возможность делать detalis открытым поумолчанию и мелкие правки формы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

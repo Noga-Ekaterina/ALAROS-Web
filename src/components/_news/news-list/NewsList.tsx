@@ -1,18 +1,21 @@
 'use client'
-import { FC, ReactNode, useEffect, useState } from 'react';
+import React, { FC, ReactNode, useEffect, useState } from 'react';
 import './news-list.scss';
 
 import cn from 'classnames';
 import { useMediaQuery } from 'react-responsive';
-import {INewsItem} from "../../../types/data";
+import {INews, INewsItem} from "../../../types/data";
 import {observer} from "mobx-react-lite";
 import NewsItem from "../news-item/NewsItem";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import HtmlProcessing from "@/components/HtmlProcessing";
 
 interface Props{
   news: INewsItem[]
+  pageData: INews
 }
 
-const NewsList: FC<Props> = ({news}) => {
+const NewsList: FC<Props> = ({news, pageData}) => {
   const [baseChunkSize, setBaseChunkSize] = useState(3);
   const mobileScreen = useMediaQuery({maxWidth: 640});
   const [isBigItem, setIsBigItem] = useState(false)
@@ -83,7 +86,12 @@ const NewsList: FC<Props> = ({news}) => {
   return (
     <div className="news-list">
       <div className="container">
-
+        <div className="titles-block">
+          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.title)}</h2>
+          <div className="titles-block__section">
+            <HtmlProcessing html={pageData.rightSignature.html}/>
+          </div>
+        </div>
         {itemsGrid.map((row, rowIndex) => {
           const rowClass = cn(
             "news-list__row",
