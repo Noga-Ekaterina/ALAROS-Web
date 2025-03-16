@@ -12,11 +12,12 @@ interface IProps extends IWithChildren {
   title: JSX.Element
   rightElement?: JSX.Element
   hash?: string
+  startIsOpen?: boolean
 }
 
-const Detalis = ({ title, rightElement, hash, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) => {
   const activeHash= useHash()
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(startIsOpen??false);
   const [isInit, setIsInit] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null);
   const rem = useGetRem();

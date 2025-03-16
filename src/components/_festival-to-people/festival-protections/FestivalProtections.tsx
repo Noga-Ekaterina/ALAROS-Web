@@ -19,12 +19,12 @@ const FestivalProtections = ({title, protectionsDays}:Props) => {
           <h2 className="festival-protections__title">{nonBreakingSpaces(title)}</h2>
 
           {
-            protectionsDays.map(item=>{
+            protectionsDays.map((item, index)=>{
               const [year, month, dayNumber]=item.date.split("-")
               const {day}=createDate  ({date:new Date(Number(year), Number(month)-1, Number(dayNumber))})
 
               return(
-                  <Detalis title={<span>{formaterDate(item.date)} | {day}</span>}>
+                  <Detalis title={<span>{formaterDate(item.date)} | {day}</span>} startIsOpen={index===0}>
                     <SmoothScrolling>
                       <HtmlProcessing html={item.protections.html}/>
                     </SmoothScrolling>

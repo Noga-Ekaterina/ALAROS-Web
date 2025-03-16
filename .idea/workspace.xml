@@ -6,18 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="мелкие правки формы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider-progress/slider-progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-progress/slider-progress.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +194,7 @@
       <workItem from="1741868733029" duration="26581000" />
       <workItem from="1741954697766" duration="30197000" />
       <workItem from="1742044767793" duration="20927000" />
+      <workItem from="1742158582516" duration="3660000" />
     </task>
     <task id="LOCAL-00017" summary="вынесла отдельно список номинаций">
       <option name="closed" value="true" />

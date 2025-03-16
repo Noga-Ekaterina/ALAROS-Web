@@ -98,15 +98,17 @@
   }
 
   th{
-    color: #959595;
+    color: var(--c-grey);
   }
 
   td{
     &:first-child *{
       font-size: 10.5rem;
+      font-weight: 600;
 
       @include sm{
         font-size: 13rem;
+        font-weight: 500;
       }
     }
   }
