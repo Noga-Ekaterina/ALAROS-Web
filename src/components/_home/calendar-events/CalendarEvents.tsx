@@ -10,7 +10,7 @@ import {ReactSVG} from "react-svg";
 import Dropdown from "../../dropdown/Dropdown";
 import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import {IEventsByYear, IEventsDataYear} from "../../../types/data";
-import {eventsDataProcessing} from "../../../utils/eventsDataProcessing";
+import {eventsDataProcessing} from "./eventsDataProcessing";
 import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SliderProgress from "@/components/slider-progress/SliderProgress";

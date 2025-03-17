@@ -18,6 +18,7 @@ import {revalidateTag, unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
+import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 
 interface IData{
   festivalMains: IFestival[]
@@ -162,6 +163,7 @@ const Page = async ({searchParams}:Props) => {
         <FestivalDiploma pageData={pageData} nominations={nominations}/>
         <FestivalJuries title={pageData.juriesTitle} juries={juries}/>
         <FestivalProjects pageData={pageData}/>
+        <PartnersSlider/>
       </>
 
   );

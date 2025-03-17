@@ -6,6 +6,7 @@ import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CompetitionResultsMainScreen
   from "@/components/_competition-results/competition-results-main-screen/CompetitionResultsMainScreen";
 import Results from "@/components/_competition-results/results/Results";
+import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 
 
 interface IData{
@@ -63,6 +64,7 @@ const Page = async ({searchParams}:Props) => {
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <CompetitionResultsMainScreen pageData={pageData}/>
         <Results pageData={pageData}/>
+        <PartnersSlider/>
       </>
   );
 };

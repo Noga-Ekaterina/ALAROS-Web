@@ -28,8 +28,12 @@ export interface IHomeData extends IHomeMainScreen, IHomeBaners{
 }
 
 export interface IPartner {
+  image: string;
+  link: string;
+}
+export interface IPartnersSlider {
   title: string;
-  href: string;
+  partners: IHtmlString
 }
 
 export interface ILink {

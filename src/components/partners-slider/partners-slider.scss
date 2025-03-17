@@ -1,0 +1,41 @@
+.partners-slider{
+  background: #EFEFEF;
+  padding: 48rem 16rem 41rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26rem;
+
+  &-title{
+    margin-block: 33rem 31rem;
+  }
+
+  &__swiper {
+    width: 781rem;
+  }
+  &__slide{
+    height: 51rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+
+    img{
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__btn{
+    width: 10rem;
+    flex-shrink: 0;
+
+    &--next{
+      transform: rotate(180deg);
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+}
