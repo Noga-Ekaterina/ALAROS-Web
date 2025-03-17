@@ -50,7 +50,7 @@ const HomeMainScreen = ({homeData}: Props) => {
               loop={true}
               modules={[EffectFade, Autoplay]}
               effect="fade"
-              // autoplay={{delay: 3500, disableOnInteraction: false}}
+              autoplay={{delay: 3500, disableOnInteraction: false}}
           >
             {
               homeData.projects.map(project=>(
