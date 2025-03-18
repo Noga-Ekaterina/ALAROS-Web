@@ -183,25 +183,36 @@ const CalendarEvents = ({calendarEvents}:Props) => {
       setEventsDays(events)
 
       // Находим индекс ближайшего события
-      const nextEventEndDayIndex = daysWithEvents.findIndex(day => day.endEvent &&
+      const nextEventEndDayIndex = daysWithEvents.findIndex(day => day.endEvent&&
           (
               (day.year > today.year) ||
               (day.year === today.year && day.monthNumber > today.monthNumber) ||
               (day.year === today.year && day.monthNumber === today.monthNumber && day.dayNumber >= today.dayNumber)
           )
       );
-      let nextEventStartDayIndex=0
+      let nextEventStartDayIndex=daysWithEvents.findIndex(day => day.startEvent  &&
+          (
+              (day.year > today.year) ||
+              (day.year === today.year && day.monthNumber > today.monthNumber) ||
+              (day.year === today.year && day.monthNumber === today.monthNumber && day.dayNumber >= today.dayNumber)
+          )
+      );
 
-      for (let i=nextEventEndDayIndex; i>=0; i--){
-        if (daysWithEvents[i].startEvent){
-          nextEventStartDayIndex=i
-          break
+
+      let nextEventDayIndex=0
+
+      if (nextEventStartDayIndex>nextEventEndDayIndex){
+        for (let i=nextEventEndDayIndex; i>=0; i--){
+          if (daysWithEvents[i].startEvent){
+            nextEventDayIndex=i
+            break
+          }
         }
-      }
+      } else nextEventDayIndex=nextEventStartDayIndex
 
       // console.log(nextEventEndDayIndex)
       // console.log(nextEventStartDayIndex)
-      setNextEventIndex(nextEventStartDayIndex !== -1 ? nextEventStartDayIndex : daysWithEvents.length - 1);
+      setNextEventIndex(nextEventDayIndex !== -1 ? nextEventDayIndex : daysWithEvents.length - 1);
 
       swiperCalendarNav.goToSlide(nextEventStartDayIndex - 4)
 
