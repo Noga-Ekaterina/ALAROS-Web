@@ -17,12 +17,22 @@
     padding-block: 8rem;
     color: var(--c-grey);
     cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+      color: var(--c-dark);
+    }
+
+    &:active{
+      color: #fff;
+    }
   }
 
   &__title{
     display: flex;
     gap: 15rem;
     cursor: pointer;
+    transition: 0.3s;
 
     &:hover{
       border-bottom: max(1px, 1rem) solid currentColor;
@@ -63,9 +73,10 @@
 
   &__line{
     background: var(--c-grey);
-    width: 2rem;
+    width: var(--w-line);
     height: 14rem;
     align-self: center;
+    flex-shrink: 0;
   }
 
   &__arrow{

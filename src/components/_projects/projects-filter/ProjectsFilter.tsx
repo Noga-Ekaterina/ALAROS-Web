@@ -20,7 +20,7 @@ const ProjectsFilter = ({projectsPage}:Props) => {
   const searchParams= useSearchParams()
   const year= searchParams.get("year")
   const nomination= searchParams.get("nomination")
-  const [yearValue, setYearValue] = useState(year??"все года")
+  const [yearValue, setYearValue] = useState(year??"Все года")
   const [nominationsValue, setNominationsValue] = useState(nomination? nominations.find(item=> item.id==nomination)?.title??"неизвестная номинация":"все номинации")
   const {
     setParam,
@@ -49,7 +49,7 @@ const ProjectsFilter = ({projectsPage}:Props) => {
   useEffect(() => {
     if (!projectsPage) return
 
-    const yearsResult: string[]=["все года"]
+    const yearsResult: string[]=["Все года"]
 
     const [start, end]= projectsPage.years.split("-")
 
