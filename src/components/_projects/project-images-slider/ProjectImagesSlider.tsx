@@ -61,9 +61,9 @@ const ProjectImagesSlider = ({project}:Props) => {
   }, []);
 
   const scaleIn=(zoomIn: zoomFunc)=>{
-    setScale(prevState => prevState + 0.5)
+    setScale(prevState => prevState + (prevState<3? 0.5:0))
 
-    if ((scale>1.5 || mobileScreen) && scale<3) {
+    if ((scale>=1.5 || mobileScreen) && scale<3) {
       zoomIn(0.5)
     }
   }
