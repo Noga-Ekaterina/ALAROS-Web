@@ -49,7 +49,7 @@
       right: 0;
       bottom: 48.2%;
       z-index: 2;
-      border: calc(var(--w-line)/2) solid #E5E5E5;
+      border-top: var(--w-line) solid #E5E5E5;
     }
 
     &::after{
@@ -59,7 +59,7 @@
       top: 0;
       bottom: 0;
       z-index: 2;
-      border: calc(var(--w-line)/2) solid #E5E5E5;
+      border-left: var(--w-line) solid #E5E5E5;
     }
   }
 
