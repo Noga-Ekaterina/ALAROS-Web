@@ -4,6 +4,10 @@
     font-size: 13rem;
   }
 
+  &__diploma{
+    font-weight: 500;
+  }
+
   &__img{
     position: relative;
     height: 314rem;
@@ -43,8 +47,8 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 11rem;
-    padding: 10rem 15rem;
+    gap: 8rem;
+    padding: 14rem 15rem;
   }
 
   &__winner{
