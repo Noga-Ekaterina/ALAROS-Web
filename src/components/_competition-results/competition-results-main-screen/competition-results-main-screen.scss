@@ -14,9 +14,6 @@
     display: flex;
     align-items: center;
     background: var(--c-main);
-    background-image: url("../../../../public/Assets/Pages/Competition-results/bg/1.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-inline: 20rem 46rem;
 
     @include md-book{
@@ -25,6 +22,11 @@
 
     @include sm{
       height: 57.5%;
+    }
+
+    *{
+      position: relative;
+      z-index: 2;
     }
 
     >*:last-child{
@@ -40,7 +42,6 @@
     text-transform: uppercase;
     letter-spacing: 0.02em;
     font-weight: 500;
-    position: relative;
     top: -8rem;
 
     @include sm{

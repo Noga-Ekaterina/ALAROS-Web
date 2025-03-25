@@ -1,6 +1,26 @@
 @import "../../../app/styles/mixins-and-extends";
+
 .news-list {
   padding-block: 26rem 52rem;
+  position: relative;
+
+  *{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bg{
+    position: absolute;
+    top: -506rem;
+    right: 0;
+    width: 835rem;
+    z-index: 1;
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
 
   .titles-block{
     margin-bottom: 78rem;

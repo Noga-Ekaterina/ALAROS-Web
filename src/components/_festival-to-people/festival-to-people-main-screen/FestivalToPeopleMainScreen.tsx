@@ -18,6 +18,7 @@ const FestivalToPeopleMainScreen = ({pageData}: Props) => {
   return (
       <div className="main-screen festival-to-people-main-screen">
         <div className="festival-to-people-main-screen__block-text">
+          <div className="main-screen__bg" style={{backgroundImage: 'url("/Assets/Pages/Festival-to-people/bg/1.svg")'}}/>
           <HtmlProcessing html={pageData.mainScreenLeftSection.html}/>
         </div>
 

@@ -1,12 +1,3 @@
-<svg width="342" height="600" viewBox="0 0 342 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.152344" y="0.0681152" width="343.222" height="599.932" fill="#1D2E23"/>
-<g opacity="0.05">
-<mask id="mask0_434_57" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="0" width="334" height="600">
-<rect width="333.096" height="599.932" transform="matrix(-1 0 0 1 340.703 0.0681152)" fill="#E0F273"/>
-<rect x="-0.266476" y="0.266476" width="332.563" height="599.399" transform="matrix(-1 0 0 1 340.17 0.0681152)" stroke="#D0DB8C" stroke-opacity="0.1" stroke-width="0.532953"/>
-</mask>
-<g mask="url(#mask0_434_57)">
-<path d="M1018.09 243.094L-242.875 -12.7229C-242.875 -12.7229 910.726 461.916 893.914 537.817C877.101 613.719 10.7547 267.407 -19.5677 294.791C-49.8901 322.175 277.264 551.088 259.167 562.333C241.069 573.579 1.435 474.585 -45.1495 463.204C-118.867 445.193 -156.118 436.478 104.61 643.342" stroke="#E0F273" stroke-width="79.9429" stroke-linecap="round"/>
-</g>
-</g>
+<svg width="645" height="1081" viewBox="0 0 645 1081" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1912 455.5L-454 -24.5C-454 -24.5 1710.55 866.083 1679 1008.5C1647.45 1150.92 21.8951 501.119 -35 552.5C-91.8951 603.881 521.957 1033.4 488 1054.5C454.043 1075.6 4.40824 889.855 -83 868.5C-221.319 834.706 -291.214 818.353 198 1206.5" stroke="#16311E" stroke-width="150" stroke-linecap="round"/>
 </svg>

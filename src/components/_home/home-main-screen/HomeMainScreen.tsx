@@ -71,6 +71,8 @@ const HomeMainScreen = ({homeData}: Props) => {
             <div className="home-main-screen__aside-ellipse"></div>
           </div>
 
+          <div className="main-screen__bg" style={{backgroundImage: 'url("/Assets/Pages/Home/bg/1.svg")'}}/>
+
           <HtmlProcessing html={homeData.mainSection.html}/>
         </aside>
       </div>

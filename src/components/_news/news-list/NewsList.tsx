@@ -9,6 +9,7 @@ import {observer} from "mobx-react-lite";
 import NewsItem from "../news-item/NewsItem";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import HtmlProcessing from "@/components/HtmlProcessing";
+import {ReactSVG} from "react-svg";
 
 interface Props{
   news: INewsItem[]
@@ -85,6 +86,7 @@ const NewsList: FC<Props> = ({news, pageData}) => {
 
   return (
     <div className="news-list">
+      <ReactSVG src="/Assets/Pages/News/bg/2.svg" className="news-list__bg"/>
       <div className="container">
         <div className="titles-block">
           <h2 className="titles-block__title">{nonBreakingSpaces(pageData.newsTitle)}</h2>

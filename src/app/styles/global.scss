@@ -2,7 +2,7 @@
 @import "@/app/styles/mixins-and-extends";
 
 :root{
-      --c-dark: #181818;
+  --c-dark: #181818;
   --c-main: #0B2719;
   --c-green-text: #6E7A64;
   --c-yellow: #E0F273;
@@ -196,6 +196,13 @@ span{
     }
   }
 
+  &__bg{
+    position: absolute !important;
+    inset: 5rem;
+    z-index: 1 !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .titles-block{

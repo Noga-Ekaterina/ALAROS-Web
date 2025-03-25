@@ -14,8 +14,11 @@ interface Props{
 
 const HomeEvents = ({homeData}:Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
+  const [isClient, setIsClient] = useState(false)
 
-  if (!homeData) return <div/>
+  useEffect(() => {
+    setIsClient(true)
+  }, []);
 
   return (
       <div className="home-events">
@@ -31,7 +34,7 @@ const HomeEvents = ({homeData}:Props) => {
               loop={true}
           >
             {
-              mobileScreen?
+              (mobileScreen && isClient)?
                   <>
                   {
                     homeData.bannersMobile.map((banner, index)=>(

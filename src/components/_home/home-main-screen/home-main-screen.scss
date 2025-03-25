@@ -63,9 +63,6 @@
     position: relative;
     width: 33.5%;
     background-color: var(--c-main);
-    background-image: url("../../../../public/Assets/Pages/Home/bg/1.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
     padding: 21rem 0 25rem 18rem;
     display: flex;
@@ -83,7 +80,7 @@
 
     * {
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
 
     &-ellipse {
@@ -101,7 +98,7 @@
         position: absolute;
         top: -6%;
         left: 0;
-        z-index: 1;
+        z-index: 2;
         aspect-ratio: 1/2;
         display: flex;
         justify-content: flex-end;

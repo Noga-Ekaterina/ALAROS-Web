@@ -48,8 +48,10 @@ const Page = async ({searchParams}:Props) => {
       <>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <NewsMainScreen data={pageData}/>
-        <CalendarEvents title={pageData.calendarEventsTitle}/>
-        <NewsList news={news} pageData={pageData}/>
+        <div style={{background: "#fff", overflow: "hidden"}}>
+          <CalendarEvents title={pageData.calendarEventsTitle}/>
+          <NewsList news={news} pageData={pageData}/>
+        </div>
       </>
   );
 };
