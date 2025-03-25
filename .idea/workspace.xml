@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала календарь на разных стр и мелкие правки">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подправила фона">
       <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/bg/1.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Competition-results/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Competition-results/bg/1.svg" afterDir="false" />
@@ -219,15 +219,7 @@
       <workItem from="1742459298667" duration="8515000" />
       <workItem from="1742646960133" duration="7000" />
       <workItem from="1742843071036" duration="12539000" />
-      <workItem from="1742907257086" duration="12681000" />
-    </task>
-    <task id="LOCAL-00024" summary="добавила модалку проекта на главной">
-      <option name="closed" value="true" />
-      <created>1738865538441</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1738865538441</updated>
+      <workItem from="1742907257086" duration="13030000" />
     </task>
     <task id="LOCAL-00025" summary="добавила функцию масштабирования в модалку проекта">
       <option name="closed" value="true" />
@@ -613,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742861984494</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="подправила фона">
+      <option name="closed" value="true" />
+      <created>1742937168887</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1742937168887</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="переверстала ДП" />
     <MESSAGE value="исправила баг открывания detalis при переходе с другой стр" />
     <MESSAGE value="сделала фото с подписью проекта на главном экране кликакабельным на всех стр" />
     <MESSAGE value="усовершенствовала кэш новостей" />
@@ -667,7 +666,8 @@
     <MESSAGE value="чуть подправила масштабирование" />
     <MESSAGE value="замена шрифтов" />
     <MESSAGE value="сделала календарь на разных стр и мелкие правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала календарь на разных стр и мелкие правки" />
+    <MESSAGE value="подправила фона" />
+    <option name="LAST_COMMIT_MESSAGE" value="подправила фона" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
