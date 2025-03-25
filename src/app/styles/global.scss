@@ -86,10 +86,8 @@ a {
   }
 }
 
-.link-underline, u{
-  text-decoration-line: underline;
-  text-underline-offset: 0.2em;
-  text-decoration-skip-ink: none;
+.link-underline, u {
+  @extend %link-underline
 }
 
 .link-underline:hover{

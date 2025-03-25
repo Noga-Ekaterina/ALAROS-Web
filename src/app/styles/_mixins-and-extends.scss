@@ -17,6 +17,22 @@
   }
 }
 
+%link-underline{
+  text-decoration-line: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
+}
+
+%link-hover-underline{
+  &:hover{
+    @extend %link-underline
+  }
+
+  &:has(u):hover, &[href^="tel:"]{
+    text-decoration: none;
+  }
+}
+
 @mixin lg{
   @media (max-width: 1600px) {
     @content

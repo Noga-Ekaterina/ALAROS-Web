@@ -3,19 +3,20 @@ import React, {Fragment, MutableRefObject, useEffect, useRef, useState} from 're
 import "./calendar-events.scss";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import { Mousewheel, FreeMode } from 'swiper/modules';
-import {createDate, createYear, getMonthesNames} from "../../../utils/date";
+import {createDate, createYear, getMonthesNames} from "../../utils/date";
 import classNames from "classnames";
-import { IDay } from "../../../types/tehnic";
+import { IDay } from "../../types/tehnic";
 import {ReactSVG} from "react-svg";
-import Dropdown from "../../dropdown/Dropdown";
-import {SwiperNavigation} from "../../../utils/SwiperNavigation";
-import {IEventsByYear, IEventsDataYear} from "../../../types/data";
+import Dropdown from "../dropdown/Dropdown";
+import {SwiperNavigation} from "../../utils/SwiperNavigation";
+import {IEventsByYear, IEventsDataYear} from "../../types/data";
 import {eventsDataProcessing} from "./eventsDataProcessing";
-import HtmlProcessing from "../../HtmlProcessing";
+import HtmlProcessing from "../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SliderProgress from "@/components/slider-progress/SliderProgress";
 
 interface Props{
+  title?: string
   calendarEvents: IEventsDataYear[]
 }
 
@@ -25,7 +26,7 @@ interface ICalendarDay extends IDay {
   passed?: boolean
 }
 
-const CalendarEvents = ({calendarEvents}:Props) => {
+const CalendarEventsClient = ({title, calendarEvents}:Props) => {
   const [eventsByYear, setEventsByYear] = useState<null | IEventsByYear>(null)
   const [years, setYears] = useState<string[]>([])
   const [days, setDays] = useState<ICalendarDay[]>([]);
@@ -280,6 +281,12 @@ const CalendarEvents = ({calendarEvents}:Props) => {
   return (
       <div className="calendar-events">
         <div className="calendar-events__event-wrapp">
+          {
+            title&&
+              <div className="titles-block calendar-events__main-title">
+                 <h2 className="titles-block__title">{nonBreakingSpaces(title)}</h2>
+              </div>
+          }
           <button
               className={classNames(
                   "calendar-events__btn",
@@ -310,7 +317,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
                       <SwiperSlide key={`${start.year} ${event.date.start}`} className="calendar-events__event">
                         <div className="calendar-events__block-text">
                           <div className="calendar-events__titles">
-                            <h2 className="calendar-events__date">{event.date.start} - {event.date.end}</h2>
+                            <h3 className="calendar-events__date">{event.date.start} - {event.date.end}</h3>
                             <div>
                               <div className="calendar-events__link">
                                 <HtmlProcessing html={event.title}/>
@@ -323,7 +330,7 @@ const CalendarEvents = ({calendarEvents}:Props) => {
                           </div>
                         </div>
                         <img
-                            src={`/Assets/Pages/Home/Calendar-events/Images/${start.year}/${event.image}`}
+                            src={`/Assets/Calendar-events/${start.year}/${event.image}`}
                             alt=""/>
                       </SwiperSlide>
                   )
@@ -343,12 +350,6 @@ const CalendarEvents = ({calendarEvents}:Props) => {
           </button>
         </div>
         <div className="calendar-events__calendar" >
-          {/*<div className="calendar-events__progres">*/}
-          {/*  <div*/}
-          {/*      className="calendar-events__progres-slider"*/}
-          {/*      ref={progressRef}*/}
-          {/*  ></div>*/}
-          {/*</div>*/}
           <SliderProgress swiperRef={swiperCalendarRef} progressClass="calendar-events__progres"/>
           <div className="calendar-events__calendar-wrapp"  onWheel={(e) => (e.target as HTMLElement)?.closest(".swiper") && e.stopPropagation()}>
             <Dropdown value={activeMonth} values={getMonthesNames()} handleCheck={(e) => setActiveMonth(e.target.value)}
@@ -405,4 +406,4 @@ const CalendarEvents = ({calendarEvents}:Props) => {
   );
 };
 
-export default CalendarEvents;
+export default CalendarEventsClient;

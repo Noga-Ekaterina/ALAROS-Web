@@ -1,4 +1,4 @@
-import {IEvent, IEventsByYear, IEventsDataYear} from "../../../types/data";
+import {IEvent, IEventsByYear, IEventsDataYear} from "../../types/data";
 import {getRowsInTable} from "@/utils/getRowsInTable";
 
 export const eventsDataProcessing= (eventsDataYears: IEventsDataYear[])=>{

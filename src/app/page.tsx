@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeMainScreen from "../components/_home/home-main-screen/HomeMainScreen";
 import HomeEvents from "../components/_home/home-events/HomeEvents";
-import CalendarEvents from "../components/_home/calendar-events/CalendarEvents";
+import CalendarEvents from "@/components/calendar-events/CalendarEvents";
 import HomeNewsSlider from "../components/_home/home-news-slider/HomeNewsSlider";
 import LogosSlider from "@/components/partners-slider/PartnersSliderClient";
 import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
@@ -16,7 +16,6 @@ interface Props{
 
 interface IData{
   homes: IHomeData[]
-  eventsYears: IEventsDataYear[]
   newsAll: INewsItem[]
 }
 
@@ -46,12 +45,6 @@ const init= unstable_cache(async ()=>{
               }
               newsTitle
             }
-            eventsYears {
-              year
-              events {
-                html
-              }
-            }
             ${getNewsQueryStr(1)}
           }`)
 
@@ -59,12 +52,12 @@ const init= unstable_cache(async ()=>{
     return data
   }
 
-  const {homes, eventsYears, newsAll}=data
+  const {homes, newsAll}=data
 
-  const result={homeData: homes[0], calendarEvents: eventsYears, news: newsAll}
+  const result={homeData: homes[0], news: newsAll}
 
   return result
-}, ["home"], {tags: ["Home", "Project", "EventsYear", "News"]})
+}, ["home"], {tags: ["Home", "Project", "News"]})
 
 const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams
@@ -75,14 +68,14 @@ const Home = async ({searchParams}:Props) => {
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 
-  const {homeData, calendarEvents, news}= data
+  const {homeData, news}= data
 
   return (
       <div>
         <ProjectModal projects={homeData.projects} searchParams={searchParams}/>
         <HomeMainScreen homeData={homeData}/>
         <HomeEvents homeData={homeData}/>
-        <CalendarEvents calendarEvents={calendarEvents}/>
+        <CalendarEvents/>
         <HomeNewsSlider title={homeData.newsTitle} news={news}/>
         <PartnersSlider/>
       </div>

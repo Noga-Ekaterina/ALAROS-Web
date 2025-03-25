@@ -87,9 +87,9 @@ const NewsList: FC<Props> = ({news, pageData}) => {
     <div className="news-list">
       <div className="container">
         <div className="titles-block">
-          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.title)}</h2>
+          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.newsTitle)}</h2>
           <div className="titles-block__section">
-            <HtmlProcessing html={pageData.rightSignature.html}/>
+            <HtmlProcessing html={pageData.newsRightSignature.html}/>
           </div>
         </div>
         {itemsGrid.map((row, rowIndex) => {

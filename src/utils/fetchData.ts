@@ -86,10 +86,11 @@ export const getNewsPageData= unstable_cache(async ()=>{
                 html
               }
               mainTitle
-              rightSignature {
+              calendarEventsTitle
+              newsRightSignature {
                 html
               }
-              title
+              newsTitle
               mainScreenProject {
                 cover
                 diploma

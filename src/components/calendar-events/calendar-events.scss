@@ -1,4 +1,4 @@
-@import "../../../app/styles/mixins-and-extends";
+@import "../../app/styles/mixins-and-extends";
 .calendar-events{
   margin-bottom: 44rem;
   position: relative;
@@ -117,6 +117,16 @@
     }
   }
 
+  &__main-title{
+    padding-left: var(--p-y);
+    width: 340rem;
+    align-self: start;
+
+    @include sm{
+      padding-left: 0;
+    }
+  }
+
   &__event{
     background: #fff;
     display: flex;
@@ -131,12 +141,17 @@
       @include sm{
         width: 100%;
         padding: 0 var(--p-y);
+        flex-direction: column;
       }
     }
 
     &-slider{
       width: 582rem;
       margin-inline:0;
+
+      @include sm{
+        width: 100%;
+      }
     }
 
     img{

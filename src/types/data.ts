@@ -104,8 +104,9 @@ export interface IStep{
 
 export interface INews{
   mainTitle: string
-  title: string
-  rightSignature: IHtmlString
+  calendarEventsTitle: string
+  newsTitle: string
+  newsRightSignature: IHtmlString
   mainScreenProject: IProject
   allNews: IHtmlString
 }

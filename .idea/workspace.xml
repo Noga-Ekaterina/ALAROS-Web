@@ -4,78 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="чуть подправила масштабирование">
-      <change afterPath="$PROJECT_DIR$/public/fonts/PTRootVF/pt-root_medium (1).eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/PTRootVF/pt-root_medium (1).woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/fonts/PTRootVF/pt-root_medium (1).woff2" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="замена шрифтов">
+      <change afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEvents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT Root VF/PT Root vf.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PT-Root/pt-root-ui_regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Black.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Black.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Bold.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Bold.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-DemiBold.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-DemiBold.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-DemiBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-DemiBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-DemiBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraBold.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraBold.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraBold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraBold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraLight.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraLight.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraLight.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraLight.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-ExtraLight.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Hairline.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Hairline.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Hairline.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Hairline.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Hairline.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Light.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Medium.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Medium.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Regular.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Regular.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Thin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Thin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Thin.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/PTRootVF/PTRootVF-Thin.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Competition-results/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Competition-results/bg/1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Images/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Images/bg/1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-to-people/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-to-people/bg/1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Calendar-events/Images/2024/16-12.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/Images/2024/16-12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Calendar-events/Images/2024/18-11.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/Images/2024/18-11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Calendar-events/Images/2025/16-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/Images/2025/16-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Calendar-events/Images/2025/18-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/Images/2025/18-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Calendar-events/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/bg/1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/News/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/News/bg/1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/calendar-events/eventsDataProcessing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/eventsDataProcessing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,8 +42,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -147,11 +102,11 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\News" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets" />
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_home\calendar-events" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_home" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_festival-to-people" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Festival-participants" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -259,15 +214,9 @@
       <workItem from="1742158582516" duration="6860000" />
       <workItem from="1742213874838" duration="20426000" />
       <workItem from="1742324719349" duration="7277000" />
-      <workItem from="1742459298667" duration="8130000" />
-    </task>
-    <task id="LOCAL-00022" summary="исправила стили">
-      <option name="closed" value="true" />
-      <created>1738801851557</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1738801851557</updated>
+      <workItem from="1742459298667" duration="8515000" />
+      <workItem from="1742646960133" duration="7000" />
+      <workItem from="1742843071036" duration="10504000" />
     </task>
     <task id="LOCAL-00023" summary="добавила кнопки для слайдера в модалку проекта">
       <option name="closed" value="true" />
@@ -653,7 +602,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742331417847</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="замена шрифтов">
+      <option name="closed" value="true" />
+      <created>1742494581531</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1742494581531</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="дала влемя отрендериться потомкам Detalis" />
     <MESSAGE value="сделала програму фестиваля" />
     <MESSAGE value="переверстала ДП" />
     <MESSAGE value="исправила баг открывания detalis при переходе с другой стр" />
@@ -707,13 +663,14 @@
     <MESSAGE value="подделала календарь" />
     <MESSAGE value="чуть подправила стили dropdown" />
     <MESSAGE value="чуть подправила масштабирование" />
-    <option name="LAST_COMMIT_MESSAGE" value="чуть подправила масштабирование" />
+    <MESSAGE value="замена шрифтов" />
+    <option name="LAST_COMMIT_MESSAGE" value="замена шрифтов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/_home/calendar-events/CalendarEvents.tsx</url>
+          <url>file://$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx</url>
           <line>355</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
