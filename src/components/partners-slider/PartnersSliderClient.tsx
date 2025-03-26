@@ -5,6 +5,7 @@ import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "../../utils/SwiperNavigation";
 import {IPartner} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import {Autoplay} from "swiper/modules";
 
 interface Props{
   title: string
@@ -14,38 +15,13 @@ interface Props{
 const PartnersSliderClient = ({title, partners}:Props) => {
   const swiperRef = useRef<SwiperRef>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
-  let timeout: ReturnType<typeof setTimeout>
-  let interval: ReturnType<typeof setInterval>;
 
   const togleSwiper=(dir?: "next" | "prev")=>{
-    clearTimeout(timeout)
-    clearInterval(interval)
-
-    const step=()=>{
-      if (dir=="next")
-        swiperNav.goToNext()
-      else
-        swiperNav.goToPrev()
-    }
-
-    step()
-
-    interval= setInterval( step, 400)
-
-    setTimeout(()=>{
-      clearInterval(interval)
-      timeout= setTimeout(()=>togleSwiper("next"), 5000)
-    },2000)
+    if (dir=="next")
+      swiperNav.goToNext()
+    else
+      swiperNav.goToPrev()
   }
-
-  useEffect(() => {
-    togleSwiper()
-
-    return ()=> {
-      clearTimeout(timeout)
-      clearInterval(interval)
-    }
-  }, []);
 
   return (
       <>
@@ -59,7 +35,9 @@ const PartnersSliderClient = ({title, partners}:Props) => {
           <Swiper
               slidesPerView={5}
               spaceBetween={"30rem"}
+              autoplay={{delay: 1000, disableOnInteraction: false}}
               loop={true}
+              modules={[Autoplay]}
               className="partners-slider__swiper"
               ref={swiperRef}
           >
