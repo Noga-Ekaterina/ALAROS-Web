@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="навела порядок в серых" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="навела порядок в серых">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -191,15 +195,7 @@
       <workItem from="1742646960133" duration="7000" />
       <workItem from="1742843071036" duration="12539000" />
       <workItem from="1742907257086" duration="20313000" />
-      <workItem from="1742991095668" duration="3730000" />
-    </task>
-    <task id="LOCAL-00029" summary="сделала фильтр номинаций">
-      <option name="closed" value="true" />
-      <created>1739752354378</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1739752354378</updated>
+      <workItem from="1742991095668" duration="7993000" />
     </task>
     <task id="LOCAL-00030" summary="вынесла форму в отдельный компонент">
       <option name="closed" value="true" />
@@ -585,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742998571995</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="навела порядок в серых">
+      <option name="closed" value="true" />
+      <created>1743002157949</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1743002157949</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
