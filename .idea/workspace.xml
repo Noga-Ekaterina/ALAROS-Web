@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подправила фона">
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/bg/1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/AnimationPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Competition-results/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Competition-results/bg/1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Images/Main.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Images/bg/1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Images/bg/juries.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/bg/juries.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/text.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-to-people/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-to-people/bg/1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/bg/1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/News/bg/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/News/bg/1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/CompetitionResultsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/CompetitionResultsMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/FestivalMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/FestivalMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/HomeMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/NewsMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,15 +197,7 @@
       <workItem from="1742459298667" duration="8515000" />
       <workItem from="1742646960133" duration="7000" />
       <workItem from="1742843071036" duration="12539000" />
-      <workItem from="1742907257086" duration="13030000" />
-    </task>
-    <task id="LOCAL-00025" summary="добавила функцию масштабирования в модалку проекта">
-      <option name="closed" value="true" />
-      <created>1739573594026</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1739573594026</updated>
+      <workItem from="1742907257086" duration="20008000" />
     </task>
     <task id="LOCAL-00026" summary="сделала api для добавления в проект id номина">
       <option name="closed" value="true" />
@@ -613,7 +583,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742937168887</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="подправила фона">
+      <option name="closed" value="true" />
+      <created>1742941379356</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1742941379356</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
