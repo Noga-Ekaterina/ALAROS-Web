@@ -10,7 +10,7 @@
       font-size: 36rem;
       font-weight: 500;
       color: var(--c-red);
-      background: #EFEFEF;
+      background: var(--c-grey-bg-light);
     }
 
     &__icon{
@@ -22,12 +22,12 @@
     padding-block: 41rem 65rem;
 
     &:first-child{
-      background: linear-gradient(180deg, #EFEFEF 0%, rgba(239, 239, 239, 0) 230rem);
+      background: linear-gradient(180deg, var(--c-grey-bg-light) 0%, rgba(239, 239, 239, 0) 230rem);
 
     }
 
     &:nth-child(even){
-      background: #F8F8F8;
+      background: var(--c-grey-bg-light-2);
     }
 
     .container>p:first-child {

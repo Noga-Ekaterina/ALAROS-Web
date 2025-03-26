@@ -70,16 +70,16 @@
     }
 
     &--active-passed-day {
-      background: #959595;
+      background: var(--c-grey);
       color: #fff;
 
       svg * {
-        stroke: #959595;
+        stroke: var(--c-grey);
       }
     }
 
     &--event-passed-day {
-      background: #C2C0BF;
+      background: var(--c-grey-bg);
       color: #fff;
       cursor: pointer;
     }

@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подправила фона">
-      <change afterPath="$PROJECT_DIR$/src/app/AnimationPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
-    </list>
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="навела порядок в серых" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,31 +190,8 @@
       <workItem from="1742459298667" duration="8515000" />
       <workItem from="1742646960133" duration="7000" />
       <workItem from="1742843071036" duration="12539000" />
-      <workItem from="1742907257086" duration="20008000" />
-    </task>
-    <task id="LOCAL-00026" summary="сделала api для добавления в проект id номина">
-      <option name="closed" value="true" />
-      <created>1739656662658</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1739656662659</updated>
-    </task>
-    <task id="LOCAL-00027" summary="усовершенствовала api для добавления в проект id номина">
-      <option name="closed" value="true" />
-      <created>1739714910477</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1739714910477</updated>
-    </task>
-    <task id="LOCAL-00028" summary="изменила стили для таблицы расписания">
-      <option name="closed" value="true" />
-      <created>1739750679020</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1739750679020</updated>
+      <workItem from="1742907257086" duration="20313000" />
+      <workItem from="1742991095668" duration="3730000" />
     </task>
     <task id="LOCAL-00029" summary="сделала фильтр номинаций">
       <option name="closed" value="true" />
@@ -591,7 +561,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742941379356</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="анимация перхода между стр">
+      <option name="closed" value="true" />
+      <created>1742949488245</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1742949488245</updated>
+    </task>
+    <task id="LOCAL-00076" summary="поменяла механику слайдера партнёров">
+      <option name="closed" value="true" />
+      <created>1742995828047</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1742995828047</updated>
+    </task>
+    <task id="LOCAL-00077" summary="навела порядок в серых">
+      <option name="closed" value="true" />
+      <created>1742998571995</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1742998571995</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,9 +614,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="исправила баг открывания detalis при переходе с другой стр" />
-    <MESSAGE value="сделала фото с подписью проекта на главном экране кликакабельным на всех стр" />
-    <MESSAGE value="усовершенствовала кэш новостей" />
     <MESSAGE value="ещё усовершенствовала кэш новостей" />
     <MESSAGE value="исправила баг отбражения актив/неактив" />
     <MESSAGE value="сделала стр результатов" />
@@ -645,7 +636,10 @@
     <MESSAGE value="замена шрифтов" />
     <MESSAGE value="сделала календарь на разных стр и мелкие правки" />
     <MESSAGE value="подправила фона" />
-    <option name="LAST_COMMIT_MESSAGE" value="подправила фона" />
+    <MESSAGE value="анимация перхода между стр" />
+    <MESSAGE value="поменяла механику слайдера партнёров" />
+    <MESSAGE value="навела порядок в серых" />
+    <option name="LAST_COMMIT_MESSAGE" value="навела порядок в серых" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

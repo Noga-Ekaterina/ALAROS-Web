@@ -14,7 +14,7 @@
 
     &--error{
       color: var(--c-grey);
-      background: #EFEFEF;
+      background: var(--c-grey-bg-light);
     }
 
     &--sent{

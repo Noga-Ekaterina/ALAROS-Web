@@ -100,12 +100,12 @@
 
       &:hover{
         border-bottom: none !important;
-        background: #F8F8F8;
+        background: var(--c-grey-bg-light-2);
       }
     }
 
     &__content{
-      background: #F8F8F8;
+      background: var(--c-grey-bg-light-2);
     }
   }
 }

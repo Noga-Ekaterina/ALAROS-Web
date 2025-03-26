@@ -64,7 +64,7 @@
   }
 
   &__item{
-    border-bottom: max(1px, 1rem) solid #EFEFEF;
+    border-bottom: max(1px, 1rem) solid var(--c-grey-bg-light);
 
     &:last-child{
       border-bottom-width: 0;
