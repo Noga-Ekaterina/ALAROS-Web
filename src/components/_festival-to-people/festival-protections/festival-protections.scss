@@ -91,9 +91,8 @@
     overflow: hidden;
     *{
       text-align: left;
-      overflow: hidden;
-      text-wrap: nowrap;
-      text-overflow: ellipsis;
+
+      @extend %text-overflow-ellipsis
     }
   }
 

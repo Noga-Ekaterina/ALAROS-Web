@@ -33,6 +33,12 @@
   }
 }
 
+%text-overflow-ellipsis{
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
 @mixin lg{
   @media (max-width: 1600px) {
     @content

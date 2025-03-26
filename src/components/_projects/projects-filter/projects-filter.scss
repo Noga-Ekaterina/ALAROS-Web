@@ -2,14 +2,14 @@
 
 .projects-filter{
   display: flex;
-  align-items: start;
-  gap: 6rem;
+  gap: 3rem;
   position: relative;
   z-index: 3;
   margin-block: 52rem 35rem;
 
   @include sm{
     flex-wrap: wrap;
+    gap: 6rem;
   }
 
   *{
@@ -21,15 +21,19 @@
   }
 
   &__year{
-    width: 114rem;
+    width: 102rem;
 
     @include sm{
       width: 125rem;
     }
+
+    *{
+      font-variant-numeric: tabular-nums;
+    }
   }
 
   &__nomination{
-    width: 725rem;
+    width: 710rem;
     position: relative;
     z-index: 3;
 
@@ -46,17 +50,22 @@
       }
     }
 
-    .dropdown__line{
-      @include sm{
-        height: auto;
-        align-self: stretch;
+    .dropdown{
+      &__title-text{
+        @extend %text-overflow-ellipsis
+      }
+      &__line{
+        @include sm{
+          height: auto;
+          align-self: stretch;
+        }
       }
     }
   }
 
   &__btn{
-    width: 219rem;
-    padding: 14rem;
+    width: 145rem;
+    padding: 15rem 14rem 14rem;
     background: var(--c-green-text);
     color: #fff;
 
@@ -73,6 +82,11 @@
 
       &:hover{
         border-bottom: none;
+      }
+
+      &-text{
+        position: relative;
+        top: 2rem;
       }
     }
 

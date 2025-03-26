@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="навела порядок в серых">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="выровняла красные тексты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,15 +196,7 @@
       <workItem from="1742646960133" duration="7000" />
       <workItem from="1742843071036" duration="12539000" />
       <workItem from="1742907257086" duration="20313000" />
-      <workItem from="1742991095668" duration="7993000" />
-    </task>
-    <task id="LOCAL-00030" summary="вынесла форму в отдельный компонент">
-      <option name="closed" value="true" />
-      <created>1739914682754</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1739914682754</updated>
+      <workItem from="1742991095668" duration="14875000" />
     </task>
     <task id="LOCAL-00031" summary="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю">
       <option name="closed" value="true" />
@@ -589,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743002157949</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="выровняла красные тексты">
+      <option name="closed" value="true" />
+      <created>1743008598905</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1743008598905</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +619,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ещё усовершенствовала кэш новостей" />
     <MESSAGE value="исправила баг отбражения актив/неактив" />
     <MESSAGE value="сделала стр результатов" />
     <MESSAGE value="исправила ошибку с границей" />
@@ -643,7 +643,8 @@
     <MESSAGE value="анимация перхода между стр" />
     <MESSAGE value="поменяла механику слайдера партнёров" />
     <MESSAGE value="навела порядок в серых" />
-    <option name="LAST_COMMIT_MESSAGE" value="навела порядок в серых" />
+    <MESSAGE value="выровняла красные тексты" />
+    <option name="LAST_COMMIT_MESSAGE" value="выровняла красные тексты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
