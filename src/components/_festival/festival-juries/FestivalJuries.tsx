@@ -7,6 +7,7 @@ import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
 import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import {Autoplay} from "swiper/modules";
 
 interface Props{
   title: string
@@ -64,6 +65,9 @@ const FestivalJuries = ({juries, title}:Props) => {
         <Swiper
             spaceBetween={10*rem}
             slidesPerView="auto"
+            loop
+            modules={[Autoplay]}
+            autoplay={{delay: 4000, disableOnInteraction: false}}
         >
           {
             slides.map((items, index)=>(
