@@ -47,8 +47,8 @@ const LinkBlock = ({title, link, mobileIcon, className}:Props) => {
 
   return (
       <div className={cn("link-block", className)}>
-        <HtmlProcessing html={title}/>
-        {linkElement}
+        <span className="link-block__title"><HtmlProcessing html={title}/></span>
+        <span className="link-block__link">{linkElement}</span>
       </div>
   );
 };

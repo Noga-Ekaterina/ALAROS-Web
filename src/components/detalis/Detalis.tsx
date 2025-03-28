@@ -27,7 +27,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
 
   // Обработчики с правильными сигнатурами
   const handleEnter = (node: HTMLElement) => {
-    node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
+    node.style.marginTop = `-${node.scrollHeight}px`;
     node.style.overflow = 'hidden';
   };
 
@@ -42,7 +42,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
 
   const handleExit = (node: HTMLElement) => {
     node.style.overflow = 'hidden';
-    node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
+    node.style.marginTop = `-${node.scrollHeight}px`;
   };
 
   const handleExiting = (node: HTMLElement) => {
@@ -59,10 +59,14 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
   // Инициализация начального состояния
   useLayoutEffect(() => {
     setTimeout(()=>{
-      if (contentRef.current && !isOpen && (hash!==window.location.hash.slice(1) ||isInit)) {
+      if (contentRef.current){
         const node = contentRef.current;
-        node.style.marginTop = `-${node.scrollHeight + 3 * rem}px`;
-        node.style.overflow = 'hidden';
+        if (!isOpen && (hash!==window.location.hash.slice(1) ||isInit)) {
+          node.style.marginTop = `-${node.scrollHeight}px`;
+          node.style.overflow = 'hidden';
+        }else {
+          node.style.transition = 'margin-top 500ms ease-in-out'
+        }
       }
     }, 100)
   }, [isOpen, rem]);

@@ -28,7 +28,7 @@ const FestivalTemplates = ({pageData, nominations}:Props) => {
       <div className="festival-templates">
         <Detalis
             title={<HtmlProcessing html={btn.title}/>}
-            rightElement={<HtmlProcessing html={`<span class="festival-templates__btn">${isClient? mobileScreen ? "<span>[</span><span class='festival-main-templates__icon'>+</span><span>]</span>":btn.link:btn.link}</span>`}/>}
+            rightElement={<HtmlProcessing html={`<span class="festival-templates__btn">${isClient? mobileScreen ? "<span>[</span><span class='festival-templates__icon'>+</span><span>]</span>":btn.link:btn.link}</span>`}/>}
         >
           <HtmlProcessing html={`<span class="festival-templates__subtitle">${btn.link}</span>`}/>
           <div className="festival-templates__content">

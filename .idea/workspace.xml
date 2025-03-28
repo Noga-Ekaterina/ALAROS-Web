@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="выровняла красные тексты">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки в слайдерах">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/LinkBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/LinkBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,23 +206,10 @@
       <workItem from="1742646960133" duration="7000" />
       <workItem from="1742843071036" duration="12539000" />
       <workItem from="1742907257086" duration="20313000" />
-      <workItem from="1742991095668" duration="14875000" />
-    </task>
-    <task id="LOCAL-00031" summary="перевёрстан гланый экран фестиваля и исправлен баг в прокрутке к якорю">
-      <option name="closed" value="true" />
-      <created>1739925053729</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1739925053729</updated>
-    </task>
-    <task id="LOCAL-00032" summary="исправлен баг со цветом">
-      <option name="closed" value="true" />
-      <created>1739980138783</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1739980138783</updated>
+      <workItem from="1742991095668" duration="20354000" />
+      <workItem from="1743091106603" duration="432000" />
+      <workItem from="1743097521297" duration="12977000" />
+      <workItem from="1743163065202" duration="7536000" />
     </task>
     <task id="LOCAL-00033" summary="сделала неразрывные пробелы">
       <option name="closed" value="true" />
@@ -590,7 +587,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743008598905</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="подправила фильтр">
+      <option name="closed" value="true" />
+      <created>1743028735070</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1743028735070</updated>
+    </task>
+    <task id="LOCAL-00081" summary="правки в слайдерах">
+      <option name="closed" value="true" />
+      <created>1743120279937</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1743120279938</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,8 +632,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="исправила баг отбражения актив/неактив" />
-    <MESSAGE value="сделала стр результатов" />
     <MESSAGE value="исправила ошибку с границей" />
     <MESSAGE value="сделала обработку ошибок" />
     <MESSAGE value="сделала обработку ошибок в новоостях" />
@@ -644,7 +655,9 @@
     <MESSAGE value="поменяла механику слайдера партнёров" />
     <MESSAGE value="навела порядок в серых" />
     <MESSAGE value="выровняла красные тексты" />
-    <option name="LAST_COMMIT_MESSAGE" value="выровняла красные тексты" />
+    <MESSAGE value="подправила фильтр" />
+    <MESSAGE value="правки в слайдерах" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки в слайдерах" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

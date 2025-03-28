@@ -3,10 +3,6 @@
 .festival-templates{
   background: var(--c-red);
 
-  @include sm{
-    padding-bottom: 8rem;
-  }
-
   *{
     color: #ffffff;
     font-size: 20rem;
@@ -22,12 +18,23 @@
 
   .detalis{
     &__btn{
-      padding: 12rem 15rem 17rem 12rem;
+      padding: 9rem 15rem 11.5rem 12rem;
       background: var(--c-red);
+      align-items: stretch;
 
       @include sm{
         text-align: left;
-        padding: 10rem 15rem 4rem;
+        //padding: 10rem 15rem 4rem;
+      }
+
+      >*:first-child{
+        position: relative;
+        top: -0.5rem;
+        line-height: 1.5em;
+
+        @include sm{
+          top: 0;
+        }
       }
     }
   }
@@ -79,9 +86,12 @@
 
   &__btn{
     transition: 0.5s;
+    position: relative;
 
     @include sm{
       display: flex;
+      align-items: start;
+      top: 0.5rem;
     }
 
     .detalis--opened &{
