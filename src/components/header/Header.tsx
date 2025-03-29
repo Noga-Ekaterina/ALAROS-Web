@@ -5,20 +5,24 @@ import {IWithClass} from "../../types/tehnic";
 import classNames from "classnames";
 import Link from 'next/link';
 import {ReactSVG} from "react-svg";
+import store from "@/store/store";
 
 interface Props extends IWithClass{
-
+  isMenuOpened?: boolean
 }
-const Header = (props: Props) => {
+
+const Header = ({className, isMenuOpened}: Props) => {
+  const {togleMenu}=store
+
   return (
-      <header className={classNames("header", props.className)}>
+      <header className={classNames("header", className, {"header--menu": isMenuOpened})}>
         <div className="container header__container">
           <div className="header__left-block">
-            <Link href="/" className="header__logo">
+            <Link href="/" className="header__logo" onClick={()=> isMenuOpened && togleMenu()}>
               <ReactSVG src="/Assets/Icons/logo.svg"/>
             </Link>
-            <button className="header__menu-wrapp">
-              <ReactSVG src="/Assets/Icons/more.svg" className="header__menu"/>
+            <button className="header__menu-wrapp" onClick={togleMenu}>
+              <ReactSVG src={`/Assets/Icons/${isMenuOpened? "close":"more"}.svg`} className="header__menu"/>
               <span>Меню</span>
             </button>
           </div>

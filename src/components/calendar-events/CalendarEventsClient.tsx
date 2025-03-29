@@ -279,7 +279,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
     }, [activeEventsDays]);
 
   return (
-      <div className="calendar-events">
+      <div className="calendar-events" id="calendar-events">
         <div className="calendar-events__event-wrapp">
           {
             title&&

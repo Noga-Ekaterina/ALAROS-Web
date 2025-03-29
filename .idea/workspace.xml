@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки в слайдерах">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="работа с отступами исправление detalis">
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/menu-bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/MenuClient.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/menu/menu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/link-block/LinkBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/LinkBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +27,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -66,7 +64,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/app&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/public/Assets/Pages&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -83,11 +81,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_competition-results" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\hoocs" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_festival-participants" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\News" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Festival-main" />
@@ -209,15 +207,8 @@
       <workItem from="1742991095668" duration="20354000" />
       <workItem from="1743091106603" duration="432000" />
       <workItem from="1743097521297" duration="12977000" />
-      <workItem from="1743163065202" duration="7536000" />
-    </task>
-    <task id="LOCAL-00033" summary="сделала неразрывные пробелы">
-      <option name="closed" value="true" />
-      <created>1740000739774</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1740000739774</updated>
+      <workItem from="1743163065202" duration="19002000" />
+      <workItem from="1743250863841" duration="26807000" />
     </task>
     <task id="LOCAL-00034" summary="сделала кнопку &quot;наверх&quot;">
       <option name="closed" value="true" />
@@ -603,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743120279938</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="работа с отступами исправление detalis">
+      <option name="closed" value="true" />
+      <created>1743182860260</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1743182860261</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -632,7 +631,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="исправила ошибку с границей" />
     <MESSAGE value="сделала обработку ошибок" />
     <MESSAGE value="сделала обработку ошибок в новоостях" />
     <MESSAGE value="перенесла очистку кэша при ошибки" />
@@ -657,7 +655,8 @@
     <MESSAGE value="выровняла красные тексты" />
     <MESSAGE value="подправила фильтр" />
     <MESSAGE value="правки в слайдерах" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки в слайдерах" />
+    <MESSAGE value="работа с отступами исправление detalis" />
+    <option name="LAST_COMMIT_MESSAGE" value="работа с отступами исправление detalis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

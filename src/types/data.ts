@@ -11,6 +11,13 @@ export interface IFooter{
   socialsColumn: number
 }
 
+export interface IMenuSection {
+  section: IHtmlString;
+  subsections: IHtmlString[];
+  additionalLinks: IHtmlString[];
+  position: number;
+}
+
 export interface IHomeMainScreen{
   mainTitle: string
   mainSection: IHtmlString

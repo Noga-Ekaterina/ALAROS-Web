@@ -85,7 +85,7 @@ const NewsList: FC<Props> = ({news, pageData}) => {
   },[mobileScreen])
 
   return (
-    <div className="news-list">
+    <div className="news-list" id="news-list">
       <ReactSVG src="/Assets/Pages/News/bg/2.svg" className="news-list__bg"/>
       <div className="container">
         <div className="titles-block">

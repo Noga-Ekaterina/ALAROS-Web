@@ -9,6 +9,7 @@ import React from "react";
 import Footer from "@/components/footer/Footer";
 import SmoothScrolling from "@/app/SmoothScrolling";
 import AnimationPage from "@/app/AnimationPage";
+import Menu from "@/components/menu/Menu";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="ru">
       <body>
         <Header/>
+        <Menu/>
         <AnimationPage>
           <SmoothScrolling root={true}>
             {children}

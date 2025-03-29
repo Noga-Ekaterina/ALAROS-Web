@@ -8,6 +8,19 @@
   z-index: 5;
   box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 95.3px 0px #0000000D;
 
+  &--menu{
+    background: none;
+    box-shadow: none;
+
+    *{
+      color: #fff;
+    }
+
+    svg *{
+      stroke: #fff;
+    }
+  }
+
   &__container{
     width: 100%;
     @include flex-sb-c
@@ -29,6 +42,10 @@
 
   &__logo{
     width: 14.4rem;
+
+    .header--menu & *{
+      fill: #fff;
+    }
   }
 
   &__menu{
