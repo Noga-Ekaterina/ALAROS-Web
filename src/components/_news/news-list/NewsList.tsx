@@ -60,7 +60,6 @@ const NewsList: FC<Props> = ({news, pageData}) => {
 
   useEffect(() => {
     if (!news) return;
-    console.log(news)
 
     setItemsGrid(getModifiedList(news));
   }, [news, baseChunkSize]);
@@ -76,7 +75,6 @@ const NewsList: FC<Props> = ({news, pageData}) => {
   // },[])
 
   useEffect(() => {
-    console.log(itemsGrid)
     if (mobileScreen) {
       setBaseChunkSize(1);
     } else {

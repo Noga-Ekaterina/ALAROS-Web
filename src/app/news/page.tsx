@@ -17,7 +17,7 @@ interface IData{
 
 const init= unstable_cache(async (page: string)=>{
 
-  const data: IData|null|string= await fetchData( `
+  const data= await fetchData<IData>( `
           query NewsAllQuery {
             ${getNewsQueryStr(Number(page))}
           }

@@ -78,7 +78,6 @@ export class SwiperNavigation {
   isEnd(viemSlide: number){
     if (this.swiper.current){
       const {slides, activeIndex,} = this.swiper.current.swiper;
-      console.log({slides: slides.length, activeIndex})
 
       return activeIndex==slides.length-viemSlide
     }else

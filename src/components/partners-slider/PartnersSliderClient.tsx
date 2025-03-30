@@ -42,8 +42,8 @@ const PartnersSliderClient = ({title, partners}:Props) => {
               ref={swiperRef}
           >
             {
-              partners.map(partner => (
-                  <SwiperSlide key={`${partner.image}-${partner.link}`} className="partners-slider__slide">
+              partners.map((partner, index) => (
+                  <SwiperSlide key={`${partner.image}-${index}`} className="partners-slider__slide">
                     {
                       partner.link === "" ? <img src={`/Assets/Pages/Logo-partners/${partner.image}`}/> :
                           <a href={partner.link} target="_blank">

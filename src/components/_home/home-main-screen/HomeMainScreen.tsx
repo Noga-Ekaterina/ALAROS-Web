@@ -35,8 +35,6 @@ const HomeMainScreen = ({homeData}: Props) => {
     const height= block.current.clientHeight/2
     const diagonal= Math.sqrt(Math.pow(width, 2)+Math.pow(height, 2))
 
-    console.log(height/diagonal)
-
     setDiagonalWidth(diagonal)
     setDiagonalDeg(Math.asin(height/diagonal) * (180 / Math.PI)* (mobileScreen? 1: -1))
     setDiagonalRight((diagonal-width)/2)

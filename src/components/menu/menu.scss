@@ -28,6 +28,7 @@
   
   *{
     color: #fff;
+    transition: color 0.3s;
   }
 
   >*{
@@ -72,7 +73,7 @@
   }
 
   &__subsection-link{
-    font-size: min(20rem, 3.3vh, 13rem);
+    font-size: min(20rem, 3.3vh, 15rem);
     font-weight: 300;
     line-height: 1.6em;
 
@@ -82,6 +83,10 @@
 
     @include sm{
       font-size: 20rem;
+    }
+
+    a:hover{
+      color: var(--c-yellow);
     }
   }
 

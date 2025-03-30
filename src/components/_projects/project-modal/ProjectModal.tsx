@@ -18,7 +18,7 @@ interface IData{
 }
 
 const init=(year: string, number: string)=>(unstable_cache( async (year: string, number: string)=>{
-          const data: IData|null|string= await fetchData(`
+          const data= await fetchData<IData>(`
           query NewsAllQuery {
             projects(
               where: {year: ${year}, number: ${number}}

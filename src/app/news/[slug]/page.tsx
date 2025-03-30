@@ -19,7 +19,7 @@ interface IData{
 const init=  (slug: string)=>(
     unstable_cache(async (slug: string)=>{
 
-      const data: IData|null|string= await fetchData( `
+      const data= await fetchData<IData>( `
                 query NewsItemQuery {
                   news(where: {slug: "${slug}"}) {
                     date

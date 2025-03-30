@@ -14,7 +14,6 @@ export const useClose = (params: Params) => {
       if (ref.current){
         if (ref.current && !ref.current.contains(e.target as Node) && window.innerWidth > size) {
           setIsOpen(false);
-          console.log(e.target)
         }
       }
    };

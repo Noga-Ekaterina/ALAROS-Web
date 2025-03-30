@@ -22,7 +22,7 @@ interface IData{
 }
 
 const init=unstable_cache( async (year: undefined| string, nomination: undefined |string, page: string)=>{
-  const data: IData|null|string= await fetchData(`
+  const data= await fetchData<IData>(`
           query NewsAllQuery {
             ${getProjectsQueryStr(year, nomination, Number(page))}
             projectsPages {

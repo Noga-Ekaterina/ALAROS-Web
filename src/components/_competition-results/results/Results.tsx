@@ -32,7 +32,7 @@ const Results = ({pageData}:Props) => {
          <div className="results__years">
            {
              results.map(({year})=>(
-                 <button className="results__btn link-underline" disabled={year===activeYear} onClick={()=> setActiveYear(year)}>{year}</button>
+                 <button key={year} className="results__btn link-underline" disabled={year===activeYear} onClick={()=> setActiveYear(year)}>{year}</button>
              ))
            }
          </div>

@@ -33,7 +33,7 @@ interface Props{
 }
 
 const init= unstable_cache(async ()=>{
-  const data: IData| null| string= await fetchData(`
+  const data= await fetchData<IData>(`
           query FestivalQuery {
             festivalMains {
               stage

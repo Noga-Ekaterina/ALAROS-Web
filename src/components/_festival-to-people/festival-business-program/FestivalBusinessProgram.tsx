@@ -55,7 +55,6 @@ const Session = ({data}: ISessionProps) => {
 
     const activeUser= usersSwiperRef.current.swiper.activeIndex
 
-    console.log(activeUser)
     if (activeUser+1>moderators.length){
       rolleSwiperNav.goToSlide(2)
     }else {

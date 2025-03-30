@@ -32,10 +32,7 @@ const FestivalTemplates = ({pageData, nominations}:Props) => {
         >
           <HtmlProcessing html={`<span class="festival-templates__subtitle">${btn.link}</span>`}/>
           <div className="festival-templates__content">
-            <Dropdown id={'templates'} value={value} values={values} handleCheck={e => {
-              setValue(e.target.value)
-              console.log(e.target.value)
-            }} nominations={nominations} arrow={true}/>
+            <Dropdown id={'templates'} value={value} values={values} handleCheck={e => {setValue(e.target.value)}} nominations={nominations} arrow={true}/>
 
             <a href={nominations.find(item=>item.value==value)?.link} download><HtmlProcessing html={pageData.templatesDownload.html}/></a>
           </div>

@@ -18,7 +18,7 @@ interface Props{
 }
 
 const init= unstable_cache(async ()=>{
-  const data: null|IData|string= await fetchData(`
+  const data= await fetchData<IData>(`
     query MyQuery {
       competitionResultsS {
         mainScreenLeftSection {

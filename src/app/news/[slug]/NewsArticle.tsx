@@ -20,7 +20,6 @@ interface Props{
 const NewsArticle = ({news, slug, allNews}:Props) => {
   const replaceHtmlSegments = (html: string): JSX.Element[] => {
     const patternImgs = /<h2>IMG<\/h2><table><tbody>(.*?)<\/tbody><\/table>/gs;
-    console.log(html)
     const segments: string[] = html.split(patternImgs);
     const result: JSX.Element[] = [];
 
@@ -28,7 +27,6 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
     segments.forEach((segment, index) => {
       if (index % 2 === 0) {
         const replaceTd= segment.replaceAll(/<td>(.*?)<\/td><td><p>-<\/p><\/td>/g, "<td colspan='2'>$1</td>")
-        console.log(replaceTd)
         const jsx= parse(replaceTd)
         if (typeof jsx==="object"){
           if (Array.isArray(jsx))
@@ -40,14 +38,11 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
       } else {
         const rows: string = segment;
         const rowMatches=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/g))
-        console.log(rowMatches)
         if (rowMatches) {
           const slides: JSX.Element[]=[]
-          // console.log(rowMatch)
           const images = Array.from(rowMatches[0][1].matchAll(rowMatches[0][1].includes("<p>")? /<td><p>(.*?)<\/p><\/td>/g : /<td>(.*?)<\/td>/g)).map(m => m[1].trim());
           const captions = Array.from(rowMatches[1][1].matchAll(rowMatches[1][1].includes("<p>")? /<td><p>(.*?)<\/p><\/td>/g : /<td>(.*?)<\/td>/g)).map(m => m[1].trim());
 
-          console.log({images, captions})
           images.forEach((img, imgIndex)=>{
             const caption = captions[imgIndex];
             slides.push(

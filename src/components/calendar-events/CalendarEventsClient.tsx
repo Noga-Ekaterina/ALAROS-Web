@@ -62,7 +62,6 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
   const changeActiveEventDays = (day: ICalendarDay) => {
     for (let i=0; i<eventsDays.length; i++){
       if ((eventsDays[i]).findIndex(item=> item.date==day.date)==0){
-        console.log(eventsDays[i])
         setActiveEventsDays(eventsDays[i])
         break
       }

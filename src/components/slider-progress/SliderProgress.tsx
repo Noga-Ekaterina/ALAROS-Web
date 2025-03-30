@@ -43,8 +43,6 @@ const SliderProgress = ({ swiperRef, progressClass }: SliderProgressProps) => {
   }, [])
 
   const handleDragMove = useCallback((clientX: number) => {
-    console.log("handleDragMove")
-    console.log(isDragging.current)
     if (!isDragging.current || !progressRef.current) return;
     const swiper = swiperRef.current?.swiper;
     if (!swiper) return;
@@ -76,7 +74,6 @@ const SliderProgress = ({ swiperRef, progressClass }: SliderProgressProps) => {
 
   // Обработчики событий мыши
   const onMouseDown = useCallback((e: React.MouseEvent) => {
-    console.log('MouseDown')
     handleDragStart(e.clientX);
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
@@ -84,7 +81,6 @@ const SliderProgress = ({ swiperRef, progressClass }: SliderProgressProps) => {
 
   const onMouseMove = useCallback((e: MouseEvent) => {
     handleDragMove(e.clientX);
-    console.log(e.clientX);
   }, [])
   const onMouseUp = useCallback(() => {
     handleDragEnd();

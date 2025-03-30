@@ -21,7 +21,7 @@ interface IDataNominations{
 }
 
 const fetchNominations= unstable_cache(async ()=>{
-  const data: IDataNominations|null= await fetchData(`
+  const data= await fetchData<IDataNominations>(`
     query MyQuery {
       projectsPages {
         nominations {
@@ -31,9 +31,8 @@ const fetchNominations= unstable_cache(async ()=>{
     }
   `)
 
-  if (!data)
+  if (!data || typeof data==="string")
     return null
-  console.log(data.projectsPages[0].nominations.html)
 
   return nominationsSProcessing(data.projectsPages[0].nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
 }, ["projects-nominations"], {tags: ["projects-nominations"]})
