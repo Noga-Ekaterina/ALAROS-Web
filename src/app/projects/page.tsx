@@ -5,6 +5,7 @@ import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import {IProject, IProjectsPage} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
+import AnimationPage from "@/app/AnimationPage";
 
 
 interface Props{
@@ -59,7 +60,7 @@ const Page = async ({searchParams}: Props) => {
   }
 
   return (
-      <>
+      <AnimationPage>
         <ProjectModal projects={data.projects} searchParams={searchParams}/>
         <div className="container" style={{paddingBlock: "32rem", position: "relative", zIndex: 4}}>
           <div className="titles-block">
@@ -68,7 +69,7 @@ const Page = async ({searchParams}: Props) => {
           <ProjectsFilter projectsPage={data.pageData}/>
           <ProjectsList projects={data.projects}/>
         </div>
-      </>
+      </AnimationPage>
   );
 };
 

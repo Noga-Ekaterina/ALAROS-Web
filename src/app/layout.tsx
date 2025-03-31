@@ -2,14 +2,14 @@ import "swiper/css"
 import "./styles/global.scss"
 import type { Metadata } from "next";
 import Header from "@/components/header/Header";
-import { AnimatePresence } from "framer-motion";
+import { Suspense } from 'react';
 import ToTop from "@/components/to-top/ToTop";
 import Scroll from "@/app/Scroll";
-import React from "react";
 import Footer from "@/components/footer/Footer";
 import SmoothScrolling from "@/app/SmoothScrolling";
 import AnimationPage from "@/app/AnimationPage";
 import Menu from "@/components/menu/Menu";
+import Loading from './loading';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,19 +22,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+      <html lang="ru">
+      <head>
+        <link rel="icon" href="/favicon.ico"/>
+      </head>
       <body>
-        <Header/>
-        <Menu/>
-        <AnimationPage>
+      <Header/>
+      <Menu/>
+      <Suspense fallback={<Loading />}>
           <SmoothScrolling root={true}>
             {children}
-            <Footer/>
-            <ToTop/>
-            <Scroll/>
           </SmoothScrolling>
-        </AnimationPage>
+      </Suspense>
+      <Footer/>
+      <ToTop/>
+      <Scroll/>
       </body>
-    </html>
+      </html>
   );
 }

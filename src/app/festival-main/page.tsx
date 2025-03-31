@@ -19,6 +19,7 @@ import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
+import AnimationPage from "@/app/AnimationPage";
 
 interface IData{
   festivalMains: IFestival[]
@@ -151,7 +152,7 @@ const Page = async ({searchParams}:Props) => {
 
   const {pageData, juries, nominations}= data
   return (
-      <>
+      <AnimationPage>
         <ProjectModal projects={pageData.projects} searchParams={searchParams}/>
         <FestivalMainScreen pageData={pageData}/>
         <FestivalPremiya pageData={pageData}/>
@@ -164,7 +165,7 @@ const Page = async ({searchParams}:Props) => {
         <FestivalJuries title={pageData.juriesTitle} juries={juries}/>
         <FestivalProjects pageData={pageData}/>
         <PartnersSlider/>
-      </>
+      </AnimationPage>
 
   );
 };

@@ -6,6 +6,7 @@ import {INews, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CalendarEvents from "@/components/calendar-events/CalendarEvents";
+import AnimationPage from "@/app/AnimationPage";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -45,14 +46,14 @@ const Page = async ({searchParams}:Props) => {
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
   return (
-      <>
+      <AnimationPage>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <NewsMainScreen data={pageData}/>
         <div style={{background: "#fff", overflow: "hidden"}}>
           <CalendarEvents title={pageData.calendarEventsTitle}/>
           <NewsList news={news} pageData={pageData}/>
         </div>
-      </>
+      </AnimationPage>
   );
 };
 

@@ -10,6 +10,7 @@ import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import FestivalToPeopleMainScreen
   from "@/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen";
 import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
+import AnimationPage from "@/app/AnimationPage";
 
 interface IData{
   festivalToPeoples: IFestivalToPeople[]
@@ -120,14 +121,14 @@ const Page = async ({searchParams}:Props) => {
 
   const {pageData, festivalProgram, protectionsDays, }= data
   return (
-      <>
+      <AnimationPage>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <FestivalToPeopleMainScreen pageData={pageData}/>
         {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
         <FestivalBusinessProgram pageData={pageData}/>
         {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsDays={protectionsDays}/>}
         <FestivalForum pageData={pageData}/>
-      </>
+      </AnimationPage>
 
   );
 };

@@ -5,6 +5,7 @@ import {fetchData, getNewsPageData} from "@/utils/fetchData";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
 import {revalidateTag, unstable_cache} from "next/cache";
+import AnimationPage from "@/app/AnimationPage";
 
 interface Props{
   params: {
@@ -62,7 +63,9 @@ const Page = async ({params}:Props) => {
   if (news === undefined) return <div>новость не найдена</div>
 
   return (
-      <NewsArticle news={news} slug={slug} allNews={pageData.allNews.html}/>
+      <AnimationPage>
+        <NewsArticle news={news} slug={slug} allNews={pageData.allNews.html}/>
+      </AnimationPage>
   );
 };
 

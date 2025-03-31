@@ -7,6 +7,7 @@ import CompetitionResultsMainScreen
   from "@/components/_competition-results/competition-results-main-screen/CompetitionResultsMainScreen";
 import Results from "@/components/_competition-results/results/Results";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
+import AnimationPage from "@/app/AnimationPage";
 
 
 interface IData{
@@ -60,12 +61,12 @@ const Page = async ({searchParams}:Props) => {
   }
 
   return (
-      <>
+      <AnimationPage>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <CompetitionResultsMainScreen pageData={pageData}/>
         <Results pageData={pageData}/>
         <PartnersSlider/>
-      </>
+      </AnimationPage>
   );
 };
 
