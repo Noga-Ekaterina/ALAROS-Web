@@ -30,7 +30,11 @@ const MenuClient = ({data}:Props) => {
   }
 
   useEffect(() => {
-    if (pathname==="/") return
+    if (pathname==="/") {
+      setIsMultiPage(false)
+      setActiveSection(null)
+      return
+    }
 
     for (let section of data) {
       let isNewActiveSection=false
