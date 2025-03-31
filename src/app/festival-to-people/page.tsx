@@ -11,6 +11,7 @@ import FestivalToPeopleMainScreen
   from "@/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen";
 import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 interface IData{
   festivalToPeoples: IFestivalToPeople[]
@@ -131,6 +132,10 @@ const Page = async ({searchParams}:Props) => {
       </AnimationPage>
 
   );
+};
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Фестиваль",
 };
 
 export default Page;

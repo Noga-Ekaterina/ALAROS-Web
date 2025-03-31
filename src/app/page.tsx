@@ -10,6 +10,7 @@ import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -81,6 +82,10 @@ const Home = async ({searchParams}:Props) => {
         <PartnersSlider/>
       </AnimationPage>
   );
+};
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Ассоциация Ландшафтных Архитекторов России",
 };
 
 export default Home;

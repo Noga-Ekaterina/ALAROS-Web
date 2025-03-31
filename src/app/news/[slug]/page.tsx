@@ -6,6 +6,7 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
 import {revalidateTag, unstable_cache} from "next/cache";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 interface Props{
   params: {
@@ -67,6 +68,10 @@ const Page = async ({params}:Props) => {
         <NewsArticle news={news} slug={slug} allNews={pageData.allNews.html}/>
       </AnimationPage>
   );
+};
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Новости",
 };
 
 export default Page

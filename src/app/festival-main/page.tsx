@@ -20,6 +20,7 @@ import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 interface IData{
   festivalMains: IFestival[]
@@ -168,6 +169,10 @@ const Page = async ({searchParams}:Props) => {
       </AnimationPage>
 
   );
+};
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Фестиваль",
 };
 
 export default Page;

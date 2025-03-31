@@ -7,6 +7,7 @@ import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CalendarEvents from "@/components/calendar-events/CalendarEvents";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -55,6 +56,10 @@ const Page = async ({searchParams}:Props) => {
         </div>
       </AnimationPage>
   );
+};
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Новости",
 };
 
 export default Page;

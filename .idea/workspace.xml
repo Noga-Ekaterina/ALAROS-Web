@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="рефакторинг">
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/loading.tsx" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подпрвила меню">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AnimationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AnimationPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/competition-results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
@@ -18,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,23 +210,7 @@
       <workItem from="1743163065202" duration="19002000" />
       <workItem from="1743250863841" duration="27266000" />
       <workItem from="1743370559432" duration="13159000" />
-      <workItem from="1743428297101" duration="3792000" />
-    </task>
-    <task id="LOCAL-00036" summary="сделала анимацию подсказки для слайдера">
-      <option name="closed" value="true" />
-      <created>1740155956166</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1740155956166</updated>
-    </task>
-    <task id="LOCAL-00037" summary="уменьшила время задержки">
-      <option name="closed" value="true" />
-      <created>1740174344045</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1740174344045</updated>
+      <workItem from="1743428297101" duration="6694000" />
     </task>
     <task id="LOCAL-00038" summary="вынесла блок со ссылкой в отдельный компонент">
       <option name="closed" value="true" />
@@ -609,7 +588,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743375310454</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="loader">
+      <option name="closed" value="true" />
+      <created>1743442202407</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1743442202407</updated>
+    </task>
+    <task id="LOCAL-00086" summary="подпрвила меню">
+      <option name="closed" value="true" />
+      <created>1743442636704</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1743442636704</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,8 +633,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="перенесла очистку кэша при ошибки" />
-    <MESSAGE value="переименовала файл mixins и сделала кнопку более &quot;живой&quot;" />
     <MESSAGE value="оживила ползунок слайдера и всякие правки" />
     <MESSAGE value="сделала плавную прокрутку" />
     <MESSAGE value="нарисовала дигональ" />
@@ -663,7 +656,9 @@
     <MESSAGE value="работа с отступами исправление detalis" />
     <MESSAGE value="сделала меню" />
     <MESSAGE value="рефакторинг" />
-    <option name="LAST_COMMIT_MESSAGE" value="рефакторинг" />
+    <MESSAGE value="loader" />
+    <MESSAGE value="подпрвила меню" />
+    <option name="LAST_COMMIT_MESSAGE" value="подпрвила меню" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,6 +8,7 @@ import CompetitionResultsMainScreen
 import Results from "@/components/_competition-results/results/Results";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 
 interface IData{
@@ -68,6 +69,10 @@ const Page = async ({searchParams}:Props) => {
         <PartnersSlider/>
       </AnimationPage>
   );
+};
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Итоги конкурса",
 };
 
 export default Page;

@@ -6,6 +6,7 @@ import {IProject, IProjectsPage} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import AnimationPage from "@/app/AnimationPage";
+import type {Metadata} from "next";
 
 
 interface Props{
@@ -71,6 +72,11 @@ const Page = async ({searchParams}: Props) => {
         </div>
       </AnimationPage>
   );
+};
+
+
+export const metadata: Metadata = {
+  title: "АЛАРОС | Архив премии",
 };
 
 export default Page
