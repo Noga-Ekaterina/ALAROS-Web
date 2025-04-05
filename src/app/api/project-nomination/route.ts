@@ -56,7 +56,7 @@ export async function PUT(request: Request): Promise<NextResponse<RevalidateResp
     let nominationId: string|null= null
 
     for (let nomination of nominations) {
-      if (nomination.title==body.data.nomination.replaceAll("\n", "").replaceAll("^", " ")){
+      if (nomination.title.trim()==body.data.nomination.replaceAll("\n", "").replaceAll("^", " ").trim()){
         nominationId= nomination.id
         break
       }
@@ -102,7 +102,7 @@ export async function PUT(request: Request): Promise<NextResponse<RevalidateResp
     console.error('Error in revalidate route:', error);
     // Обрабатываем ошибки
     return NextResponse.json(
-        { error: "ошибка сервера" },
+        { error: error instanceof Error? error.message :"ошибка сервера" },
         { status: 500 }
     );
   }
