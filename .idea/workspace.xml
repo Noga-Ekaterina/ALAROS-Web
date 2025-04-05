@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подпрвила меню">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="замена фото">
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-text/ProjectText.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-text/project-text.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/competition-results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-to-people/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AnimationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AnimationPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoocs/useSearchParamsControl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoocs/useSearchParamsControl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +26,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -60,25 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/app&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Colors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/src/app",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
@@ -88,11 +89,11 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_festival-participants" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects\project-modal" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Festival-main" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -211,14 +212,7 @@
       <workItem from="1743250863841" duration="27266000" />
       <workItem from="1743370559432" duration="13159000" />
       <workItem from="1743428297101" duration="6694000" />
-    </task>
-    <task id="LOCAL-00038" summary="вынесла блок со ссылкой в отдельный компонент">
-      <option name="closed" value="true" />
-      <created>1740177748379</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1740177748379</updated>
+      <workItem from="1743720751217" duration="42145000" />
     </task>
     <task id="LOCAL-00039" summary="сделала управление фото с админки">
       <option name="closed" value="true" />
@@ -604,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743442636704</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="замена фото">
+      <option name="closed" value="true" />
+      <created>1743720837078</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1743720837078</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,7 +635,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="оживила ползунок слайдера и всякие правки" />
     <MESSAGE value="сделала плавную прокрутку" />
     <MESSAGE value="нарисовала дигональ" />
     <MESSAGE value="уменьшила шапку" />
@@ -658,7 +659,8 @@
     <MESSAGE value="рефакторинг" />
     <MESSAGE value="loader" />
     <MESSAGE value="подпрвила меню" />
-    <option name="LAST_COMMIT_MESSAGE" value="подпрвила меню" />
+    <MESSAGE value="замена фото" />
+    <option name="LAST_COMMIT_MESSAGE" value="замена фото" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,6 +669,12 @@
           <url>file://$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx</url>
           <line>354</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/page.tsx</url>
+          <line>74</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

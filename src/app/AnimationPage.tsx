@@ -1,24 +1,34 @@
 'use client'
 import React from 'react';
 import { AnimatePresence, motion } from "framer-motion"
-import { IWithChildren } from "@/types/tehnic";
-import { usePathname } from "next/navigation";
+import {IWithChildren, IWithClass} from "@/types/tehnic";
 
-const AnimationPage = ({ children }: IWithChildren) => {
-  const pathname = usePathname()
+interface Props extends IWithChildren, IWithClass{
+  conditions?: boolean
+  isNoWait?: boolean
+  onClick?: (e:  React.MouseEvent<HTMLDivElement, MouseEvent>)=> void
+}
+
+const AnimationPage = ({ children, conditions, className, isNoWait, onClick }: Props) => {
 
   return (
-      <AnimatePresence mode="wait">
-        <motion.div
-            key={pathname}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-            style={{ position: 'relative', overflow: 'hidden' }}
-        >
-          {children}
-        </motion.div>
+      <AnimatePresence mode={isNoWait ? 'sync' : 'wait'}>
+        {
+          (conditions== undefined || conditions)&& (
+                <motion.div
+                    key={JSON.stringify(conditions)}
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    exit={{opacity: 0}}
+                    transition={{duration: 0.5, ease: 'easeInOut'}}
+                    className={className}
+                    style={{overflow: 'hidden'}}
+                    onClick={onClick}
+                >
+                  {children}
+                </motion.div>
+            )
+        }
       </AnimatePresence>
   )
 };

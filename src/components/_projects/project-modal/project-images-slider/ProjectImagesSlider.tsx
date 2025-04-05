@@ -10,9 +10,13 @@ import {useMediaQuery} from "react-responsive";
 import classNames from "classnames";
 import {TransformComponent, TransformWrapper} from "react-zoom-pan-pinch";
 import cn from "classnames";
+import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
+import ProjectText from "@/components/_projects/project-modal/project-text/ProjectText";
 
 interface Props{
   project: IProject
+  scale: number,
+  handleScale:  React.Dispatch<React.SetStateAction<number>>
 }
 
 // Замените объявление типа в компоненте:
@@ -36,32 +40,26 @@ type zoomFunc = (
         | 'easeInOutQuint'
 ) => void;
 
-const ProjectImagesSlider = ({project}:Props) => {
-  const router= useRouter()
+const ProjectImagesSlider = ({project, scale, handleScale}:Props) => {
   const swiperRef=useRef<SwiperRef | null>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
   const [swiperIsStart, setSwiperIsStart] = useState(true)
   const [swiperIsEnd, setSwiperIsEnd] = useState(false)
   const [activeSlide, setActiveSlide] = useState(1)
+  const [activeImage, setActiveImage] = useState(0)
   const mobileScreen = useMediaQuery({maxWidth: 660});
-  const [scale, setScale] =useState(1)
+  const desktopScreen= useMediaQuery({minWidth: 1024})
+  const [isClient, setIsClient] = useState(false)
 
   function togleSwiper  (){
     setSwiperIsStart(swiperNav.isStart())
-    setSwiperIsEnd(swiperNav.isEnd(1))
+    setSwiperIsEnd(swiperNav.isEnd(desktopScreen? 3: 1))
     setActiveSlide(swiperNav.getActiveIndex()+1)
+    setActiveImage(swiperNav.getActiveIndex())
   }
 
-  useEffect(() => {
-    document.documentElement.style.overflow="hidden"
-
-    return ()=>{
-      document.documentElement.style.overflow=""
-    }
-  }, []);
-
   const scaleIn=(zoomIn: zoomFunc)=>{
-    setScale(prevState => prevState + (prevState<3? 0.5:0))
+    handleScale(prevState => prevState + (prevState<3? 0.5:0))
 
     if ((scale>=1.5 || mobileScreen) && scale<3) {
       zoomIn(0.5)
@@ -70,10 +68,19 @@ const ProjectImagesSlider = ({project}:Props) => {
 
   const scaleOut=(zoomOut: zoomFunc)=>{
     if (scale>1) {
-      setScale(prevState => prevState - 0.5)
+      handleScale(prevState => prevState - 0.5)
       zoomOut(0.5)
     }
   }
+
+  useEffect(() => {
+    setIsClient(true)
+  }, []);
+
+  useEffect(() => {
+    if (scale<=1)
+      setActiveImage(swiperNav.getActiveIndex())
+  }, [scale]);
 
   return (
       <div className="project-images-slider">
@@ -107,7 +114,7 @@ const ProjectImagesSlider = ({project}:Props) => {
                       scale > 1 ?
                           <div className="">
                             <img
-                                src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.images[activeSlide - 1]}`}
+                                src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.images[activeImage]}`}
                                 alt=""/>
                           </div>
                           :<div/>
@@ -118,12 +125,7 @@ const ProjectImagesSlider = ({project}:Props) => {
               </>
           )}
         </TransformWrapper>
-        <button
-            className="project-images-slider__btn project-images-slider__btn--back"
-            onClick={() => scale>1? setScale(1):router.back()}
-        >
-          <ReactSVG src="/Assets/Icons/close.svg"/>
-        </button>
+
         <div className="project-images-slider__control">
           <button
               className={classNames(
@@ -148,19 +150,32 @@ const ProjectImagesSlider = ({project}:Props) => {
           </button>
         </div>
         <Swiper
-            centeredSlides={true}
-            spaceBetween={'45rem'}
-            slidesPerView={mobileScreen ? 1 : 1.45}
+            centeredSlides={!desktopScreen}
+            spaceBetween={'17rem'}
+            slidesPerView={mobileScreen ? 1 : desktopScreen? 3 : 1.45}
             ref={swiperRef}
             onActiveIndexChange={togleSwiper}
+            className="project-images-slider__swiper"
         >
+
+          {
+            (isClient && desktopScreen) &&
+              <SwiperSlide className='project-images-slider__text-slide'>
+                 <ProjectText project={project}/>
+              </SwiperSlide>
+
+          }
           {
             project.images.map((image, index) => (
-                <SwiperSlide key={index} onClick={()=> index===activeSlide-1 && setScale(1.5)}>
+                <SwiperSlide key={index} onClick={()=> {
+                  setActiveImage(index)
+                  handleScale(1.5)
+                }}>
                   <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${image}`} alt=""/>
                 </SwiperSlide>
             ))
           }
+          {(isClient && desktopScreen) && <SwiperSlide/>}
         </Swiper>
       </div>
   );

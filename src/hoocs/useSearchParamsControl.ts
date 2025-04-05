@@ -11,14 +11,14 @@ export const useSearchParamsControl = () => {
   const searchParams = useSearchParams();
 
   const updateUrl = useCallback(
-      (params: URLSearchParams, method: NavigationMethod = 'replace') => {
+      (params: URLSearchParams, method: NavigationMethod = 'replace', scroll?: boolean) => {
         const search = params.toString();
         const queryString = search ? `?${search}` : '';
 
         if (method === 'replace') {
-          router.replace(`${pathname}${queryString}`);
+          router.replace(`${pathname}${queryString}`, {scroll});
         } else {
-          router.push(`${pathname}${queryString}`);
+          router.push(`${pathname}${queryString}`, {scroll});
         }
       },
       [router, pathname]
@@ -58,19 +58,19 @@ export const useSearchParamsControl = () => {
   );
 
   const setMultipleParams = useCallback(
-      (params: Record<string, string | null>, options?: { method?: NavigationMethod }) => {
+      (params: Record<string, string | null>, options?: { method?: NavigationMethod, scroll?: boolean }) => {
         const newParams = new URLSearchParams(searchParams);
 
         // Удаляем только те параметры, которые явно переданы со значением `null`
         Object.entries(params).forEach(([key, value]) => {
-          if (value === null || value === undefined) {
+           if (value === null || value === undefined) {
             newParams.delete(key);
           } else {
             newParams.set(key, value);
           }
         });
 
-        updateUrl(newParams, options?.method);
+        updateUrl(newParams, options?.method, options?.scroll);
       },
       [searchParams, updateUrl]
   );

@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins-and-extends";
+
 .project-images-slider{
 
   img{
@@ -40,7 +42,7 @@
   }
 
   &__btn{
-    width: 44rem;
+    width: 25rem;
     aspect-ratio: 1/1;
     background: #fff;
     box-shadow: 1.34px 2.69px 19.28px 0px #0000001A;
@@ -48,14 +50,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36rem !important;
+    font-size: 20rem !important;
     color: var(--c-green-text) !important;
 
     svg{
-      width: 17rem;
+      width: 10rem;
       height: auto;
       position: relative;
-      top: 2rem;
+      top: 1.2rem;
 
       *{
         stroke: var(--c-green-text);
@@ -64,13 +66,14 @@
 
     &--increase{
       transform: rotate(-45deg);
+      padding-bottom: 1.5rem;
     }
 
     &--decrease{
       &::before{
         content: '';
-        width: 17rem;
-        height: 2.6rem;
+        width: 10rem;
+        height: 1.6rem;
         background: var(--c-green-text);
       }
     }
@@ -78,15 +81,27 @@
 
     &--back{
       position: absolute;
-      right: 30rem;
+      right: var(--p-y);
       top: 25rem;
       z-index: 9;
     }
   }
 
+  &__swiper{
+    margin: 0 var(--p-y) 15rem;
+
+    @include md{
+      margin: 0;
+    }
+  }
+
+  &__text-slide{
+    align-self: flex-end;
+  }
+
   &__scale{
     position: absolute;
-    left: 30rem;
+    left: var(--p-y);
     top: 25rem;
     z-index: 9999;
     display: flex;
@@ -130,7 +145,7 @@
       }
 
       /* Для портретной ориентации (высота > ширины) */
-      @media (orientation: portrait) {
+      @media (min-height: 140vw) {
         img {
           width: auto;
           height: 100vh;

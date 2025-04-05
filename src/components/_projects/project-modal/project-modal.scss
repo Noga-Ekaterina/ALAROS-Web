@@ -2,7 +2,7 @@
 
 .project-modal{
   overflow: hidden;
-  position: fixed;
+  position: fixed !important;
   width: 100vw;
   inset: 0;
   z-index: 999;
@@ -20,47 +20,12 @@
   }
 
   &__content{
-    width: 692rem;
-    margin: 27rem auto;
+    display: none;
+    margin-bottom: 15rem;
 
-    @include sm{
-      width: 306rem;
-      margin: 23rem 60rem 30rem 20rem;
-    }
-
-    *{
-      font-weight: 500;
+    @include md{
+      display: block;
     }
   }
 
-  &__title{
-    font-size: 20rem;
-    font-weight: 400;
-    max-width: 444rem;
-  }
-
-  &__subtitle{
-    display: flex;
-    gap: 28rem;
-    margin-block: 10rem 20rem;
-  }
-
-  &__year{
-    color: #B1C634
-  }
-
-  &__row{
-    display: flex;
-    justify-content: space-between;
-
-    @include sm{
-      flex-direction: column;
-      gap: 40rem;
-    }
-  }
-
-  &__nomination{
-    width: 218rem;
-    color: #B3B3B3;
-  }
 }
