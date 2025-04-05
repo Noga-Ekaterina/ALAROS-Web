@@ -35,7 +35,7 @@ const fetchNominations= unstable_cache(async ()=>{
     return null
 
   return nominationsSProcessing(data.projectsPages[0].nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
-}, ["projects-nominations"], {tags: ["projects-nominations"]})
+}, ["projects-nominations"], {tags: ["ProjectsPage"]})
 
 export async function PUT(request: Request): Promise<NextResponse<RevalidateResponse>> {
   try {
