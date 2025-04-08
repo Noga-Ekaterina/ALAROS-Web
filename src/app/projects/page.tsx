@@ -52,10 +52,11 @@ const Page = async ({searchParams}: Props) => {
   const data= await init(
       typeof year ==="string"? year:undefined,
       typeof nomination ==="string"? nomination:undefined,
-      typeof page==="string"? isNaN(Number(page))? page:"1":"1"
+      typeof page==="string"? !isNaN(Number(page))? page:"1":"1"
   )
 
   if (typeof data==="string" || !data) {
+    revalidateTag("Project")
     revalidateTag("ProjectsPage")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }

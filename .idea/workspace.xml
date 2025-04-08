@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="усовершенствовала замену номинаций">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла лимит проектов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/nonBreakingSpaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/nonBreakingSpaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,31 +206,8 @@
       <workItem from="1743428297101" duration="6694000" />
       <workItem from="1743720751217" duration="43216000" />
       <workItem from="1743868130291" duration="5674000" />
-      <workItem from="1743945655566" duration="466000" />
-    </task>
-    <task id="LOCAL-00042" summary="работа с кэшом">
-      <option name="closed" value="true" />
-      <created>1740436809867</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1740436809867</updated>
-    </task>
-    <task id="LOCAL-00043" summary="переименовала стили и исправила опечатки в путях">
-      <option name="closed" value="true" />
-      <created>1740441251010</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1740441251010</updated>
-    </task>
-    <task id="LOCAL-00044" summary="переписала detalis и сделала прокрутку к якорю при открытии страницы">
-      <option name="closed" value="true" />
-      <created>1740488731102</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1740488731102</updated>
+      <workItem from="1743945655566" duration="2778000" />
+      <workItem from="1744130014008" duration="2055000" />
     </task>
     <task id="LOCAL-00045" summary="дала влемя отрендериться потомкам Detalis">
       <option name="closed" value="true" />
@@ -600,7 +577,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743897480467</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="усовершенствовала замену номинаций">
+      <option name="closed" value="true" />
+      <created>1743946897395</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1743946897396</updated>
+    </task>
+    <task id="LOCAL-00092" summary="фото проектов">
+      <option name="closed" value="true" />
+      <created>1744130349252</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1744130349253</updated>
+    </task>
+    <task id="LOCAL-00093" summary="поменяла лимит проектов">
+      <option name="closed" value="true" />
+      <created>1744130672472</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1744130672472</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,8 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="мелкие правки" />
-    <MESSAGE value="мелкие правки формы" />
     <MESSAGE value="добавила возможность делать detalis открытым поумолчанию и мелкие правки формы" />
     <MESSAGE value="включила слайдер проектов на гл" />
     <MESSAGE value="подделала календарь" />
@@ -654,7 +653,9 @@
     <MESSAGE value="переделала модалку" />
     <MESSAGE value="поставила правильный тег" />
     <MESSAGE value="усовершенствовала замену номинаций" />
-    <option name="LAST_COMMIT_MESSAGE" value="усовершенствовала замену номинаций" />
+    <MESSAGE value="фото проектов" />
+    <MESSAGE value="поменяла лимит проектов" />
+    <option name="LAST_COMMIT_MESSAGE" value="поменяла лимит проектов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
