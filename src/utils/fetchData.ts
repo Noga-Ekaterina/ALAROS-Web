@@ -50,7 +50,7 @@ export const getProjectsQueryStr= (year: undefined| string, nomination: undefine
   return (`
     projectsConnection(
       stage: PUBLISHED,
-      where: {${yearFilter}${nominationFilter}},      first: ${10 * page}, skip: ${10 * (page - 1)}
+      where: {${yearFilter}${nominationFilter}},      first: ${20 * page}, skip: ${20 * (page - 1)}
     ) {
       aggregate {
         count
