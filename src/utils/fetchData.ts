@@ -32,7 +32,7 @@ export const fetchData=async <T>(query: string): Promise<null|string|T>=> {
 
 export const getNewsQueryStr=(page: number)=>(
     `
-            newsAll(orderBy: date_DESC, first: ${10 * page}, skip: ${10 * (page - 1)}) {
+            newsAll(orderBy: date_DESC, first: 10, skip: ${10 * (page - 1)}) {
               date
               cover
               description
@@ -50,7 +50,7 @@ export const getProjectsQueryStr= (year: undefined| string, nomination: undefine
   return (`
     projectsConnection(
       stage: PUBLISHED,
-      where: {${yearFilter}${nominationFilter}},      first: ${20 * page}, skip: ${20 * (page - 1)}
+      where: {${yearFilter}${nominationFilter}},      first: ${20}, skip: ${20 * (page - 1)}
     ) {
       aggregate {
         count
@@ -58,7 +58,7 @@ export const getProjectsQueryStr= (year: undefined| string, nomination: undefine
     }
     projects(
       where: {${yearFilter}${nominationFilter}},
-      first: ${20 * page}, skip: ${20 * (page - 1)}
+      first: ${20 }, skip: ${20 * (page - 1)}
     ){
       name
       nomination
