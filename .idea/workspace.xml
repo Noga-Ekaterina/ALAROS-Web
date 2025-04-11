@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла лимит проектов">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла лимит">
+      <change afterPath="$PROJECT_DIR$/src/components/loader/loader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pagination/pagination.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +29,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -81,11 +92,11 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_festival-participants" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\Loader" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects\project-modal" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Festival-main" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -207,31 +218,9 @@
       <workItem from="1743720751217" duration="43216000" />
       <workItem from="1743868130291" duration="5674000" />
       <workItem from="1743945655566" duration="2778000" />
-      <workItem from="1744130014008" duration="2055000" />
-    </task>
-    <task id="LOCAL-00045" summary="дала влемя отрендериться потомкам Detalis">
-      <option name="closed" value="true" />
-      <created>1740697585135</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1740697585135</updated>
-    </task>
-    <task id="LOCAL-00046" summary="сделала програму фестиваля">
-      <option name="closed" value="true" />
-      <created>1741035352196</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1741035352196</updated>
-    </task>
-    <task id="LOCAL-00047" summary="переверстала ДП">
-      <option name="closed" value="true" />
-      <created>1741108058440</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1741108058440</updated>
+      <workItem from="1744130014008" duration="2832000" />
+      <workItem from="1744290238902" duration="19913000" />
+      <workItem from="1744372194702" duration="10957000" />
     </task>
     <task id="LOCAL-00048" summary="исправила баг открывания detalis при переходе с другой стр">
       <option name="closed" value="true" />
@@ -601,7 +590,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744130672472</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="подправила пагинацию">
+      <option name="closed" value="true" />
+      <created>1744132897053</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1744132897053</updated>
+    </task>
+    <task id="LOCAL-00095" summary="поменяла лимит проектов">
+      <option name="closed" value="true" />
+      <created>1744297489563</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1744297489563</updated>
+    </task>
+    <task id="LOCAL-00096" summary="поменяла лимит">
+      <option name="closed" value="true" />
+      <created>1744299925319</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1744299925319</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,8 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавила возможность делать detalis открытым поумолчанию и мелкие правки формы" />
-    <MESSAGE value="включила слайдер проектов на гл" />
     <MESSAGE value="подделала календарь" />
     <MESSAGE value="чуть подправила стили dropdown" />
     <MESSAGE value="чуть подправила масштабирование" />
@@ -654,8 +665,10 @@
     <MESSAGE value="поставила правильный тег" />
     <MESSAGE value="усовершенствовала замену номинаций" />
     <MESSAGE value="фото проектов" />
+    <MESSAGE value="подправила пагинацию" />
     <MESSAGE value="поменяла лимит проектов" />
-    <option name="LAST_COMMIT_MESSAGE" value="поменяла лимит проектов" />
+    <MESSAGE value="поменяла лимит" />
+    <option name="LAST_COMMIT_MESSAGE" value="поменяла лимит" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,6 +10,7 @@ import SmoothScrolling from "@/app/SmoothScrolling";
 import AnimationPage from "@/app/AnimationPage";
 import Menu from "@/components/menu/Menu";
 import Loading from './loading';
+import Loader from "@/components/loader/Loader";
 
 export default function RootLayout({
   children,
@@ -22,6 +23,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico"/>
       </head>
       <body>
+      <Loader isClient/>
       <Header/>
       <Menu/>
       <Suspense fallback={<Loading />}>

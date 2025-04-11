@@ -1,0 +1,38 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 16rem;
+  margin-bottom: 50rem;
+
+  *{
+    font-size: 14rem;
+    font-weight: 500;
+    color: var(--c-grey);
+  }
+
+  &__page{
+    &--active, &:hover{
+      color: var(--c-dark);
+    }
+  }
+
+  &__arrow{
+    width: 6rem;
+    flex-shrink: 0;
+    transform: translateY(1rem);
+
+    &--next{
+      transform: rotate(180deg);
+    }
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+
+    &:disabled svg *{
+      stroke: var(--c-grey);
+      cursor: default;
+    }
+  }
+}

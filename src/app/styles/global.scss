@@ -56,18 +56,6 @@ html{
   &::-webkit-scrollbar { width: 0 !important }
 }
 
-.loading{
-  background: var(--c-grey-bg-light-2);
-  height: calc(100vh - 43.7rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  *{
-    font-size: 20rem;
-  }
-}
-
 body {
   font-family: 'PT Root VF', sans-serif;
   background: var(--c-grey-bg-light-2);

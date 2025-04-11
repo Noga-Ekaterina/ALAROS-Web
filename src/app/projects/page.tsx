@@ -7,6 +7,7 @@ import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
+import Pagination from "@/components/pagination/Pagination";
 
 
 interface Props{
@@ -71,6 +72,7 @@ const Page = async ({searchParams}: Props) => {
           <ProjectsFilter projectsPage={data.pageData}/>
           <ProjectsList projects={data.projects}/>
         </div>
+        <Pagination count={data.count} size={20}/>
       </AnimationPage>
   );
 };

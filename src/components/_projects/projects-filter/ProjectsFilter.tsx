@@ -6,6 +6,7 @@ import Dropdown from "../../dropdown/Dropdown";
 import {IProjectsPage} from "../../../types/data";
 import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
+import store from "@/store/store";
 
 interface Props{
   projectsPage: IProjectsPage
@@ -22,13 +23,8 @@ const ProjectsFilter = ({projectsPage}:Props) => {
   const nomination= searchParams.get("nomination")
   const [yearValue, setYearValue] = useState(year??"Все года")
   const [nominationsValue, setNominationsValue] = useState(nomination? nominations.find(item=> item.id==nomination)?.title??"неизвестная номинация":"все номинации")
-  const {
-    setParam,
-    deleteParam,
-    clearParams,
-    setMultipleParams,
-    currentParams,
-  } = useSearchParamsControl();
+  const {setMultipleParams} = useSearchParamsControl();
+  const {togleLoading}=store
 
   const handleFilter=()=>{
     const yearValueWithoutText = yearValue.replace(" год", "");
@@ -42,6 +38,9 @@ const ProjectsFilter = ({projectsPage}:Props) => {
         break
       }
     }
+
+    if (yearFilter!=year || nominationFilter!=nomination)
+      togleLoading(true)
 
     setMultipleParams({page:"1", nomination: nominationFilter, year: yearFilter})
   }
@@ -59,6 +58,10 @@ const ProjectsFilter = ({projectsPage}:Props) => {
 
     setYears(yearsResult)
   }, []);
+
+  useEffect(() => {
+    togleLoading(false)
+  }, [year, nomination]);
 
   return (
       <div className="projects-filter">

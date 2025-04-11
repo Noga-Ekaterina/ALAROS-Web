@@ -8,6 +8,7 @@ import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CalendarEvents from "@/components/calendar-events/CalendarEvents";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
+import Pagination from "@/components/pagination/Pagination";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -15,6 +16,11 @@ interface Props{
 
 interface IData{
   newsAll: INewsItem[]
+  newsAllConnection:{
+    aggregate: {
+      count: number
+    }
+  }
 }
 
 const init= unstable_cache(async (page: string)=>{
@@ -22,6 +28,13 @@ const init= unstable_cache(async (page: string)=>{
   const data= await fetchData<IData>( `
           query NewsAllQuery {
             ${getNewsQueryStr(Number(page))}
+            newsAllConnection(
+              stage: PUBLISHED,
+            ) {
+              aggregate {
+                count
+              }
+            }
           }
       `)
 
@@ -29,17 +42,17 @@ const init= unstable_cache(async (page: string)=>{
     return data
   }
 
-  return  data.newsAll
+  return {news: data.newsAll, count: data.newsAllConnection.aggregate.count}
 }, ["news-page"], {tags: ["News", "AllNews"]})
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams
-  const news= await init( typeof page==="string"? isNaN(Number(page))? page:"1":"1")
+  const data= await init( typeof page==="string"? isNaN(Number(page))? page:"1":"1")
   const pageData= await getNewsPageData()
 
-  if (typeof news=="string" || news===null) {
+  if (typeof data=="string" || data===null) {
     revalidateTag("AllNews")
-    return <div>произошла ошибка{news && `: ${news}`}, перезагрузите страницу</div>
+    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 
   if (!pageData|| typeof pageData==="string" ) {
@@ -52,7 +65,8 @@ const Page = async ({searchParams}:Props) => {
         <NewsMainScreen data={pageData}/>
         <div style={{background: "#fff", overflow: "hidden"}}>
           <CalendarEvents title={pageData.calendarEventsTitle}/>
-          <NewsList news={news} pageData={pageData}/>
+          <NewsList news={data.news} pageData={pageData}/>
+          <Pagination count={data.count} size={10}/>
         </div>
       </AnimationPage>
   );
