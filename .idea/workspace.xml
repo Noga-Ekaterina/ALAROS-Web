@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла лимит">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="пагинация и теперь лоадер появляется при изменении параметров запроса">
       <change afterPath="$PROJECT_DIR$/src/components/loader/loader.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/pagination/pagination.scss" afterDir="false" />
@@ -220,15 +220,7 @@
       <workItem from="1743945655566" duration="2778000" />
       <workItem from="1744130014008" duration="2832000" />
       <workItem from="1744290238902" duration="19913000" />
-      <workItem from="1744372194702" duration="10957000" />
-    </task>
-    <task id="LOCAL-00048" summary="исправила баг открывания detalis при переходе с другой стр">
-      <option name="closed" value="true" />
-      <created>1741110015679</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1741110015679</updated>
+      <workItem from="1744372194702" duration="11552000" />
     </task>
     <task id="LOCAL-00049" summary="сделала фото с подписью проекта на главном экране кликакабельным на всех стр">
       <option name="closed" value="true" />
@@ -614,7 +606,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744299925319</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="пагинация и теперь лоадер появляется при изменении параметров запроса">
+      <option name="closed" value="true" />
+      <created>1744389259422</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1744389259422</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="подделала календарь" />
     <MESSAGE value="чуть подправила стили dropdown" />
     <MESSAGE value="чуть подправила масштабирование" />
     <MESSAGE value="замена шрифтов" />
@@ -668,7 +667,8 @@
     <MESSAGE value="подправила пагинацию" />
     <MESSAGE value="поменяла лимит проектов" />
     <MESSAGE value="поменяла лимит" />
-    <option name="LAST_COMMIT_MESSAGE" value="поменяла лимит" />
+    <MESSAGE value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
+    <option name="LAST_COMMIT_MESSAGE" value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
