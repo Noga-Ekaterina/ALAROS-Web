@@ -75,3 +75,55 @@
   justify-content: space-between;
   align-items: center;
 }
+
+// Базовые брейкпоинты
+$breakpoints: (
+        md-book: '(min-width: 640.1px) and (min-height: 80vw)',
+        lg-book: '(min-width: 1024px) and (min-height: 80vw)',
+        xl: '(min-width: 1920px)',
+        xxl: '(min-width: 2560px)',
+        lg: '(max-width: 1919.9px)',
+        md: '(max-width: 1024px)',
+        sm: '(max-width: 640px)',
+) !default;
+
+// Универсальный адаптивный миксин
+@mixin adaptive($properties) {
+  @each $prop, $values in $properties {
+    // Базовое значение
+    #{$prop}: map-get($values, default);
+
+    // Генерация медиазапросов
+    @each $bp-name, $bp-query in $breakpoints {
+      @if map-has-key($values, $bp-name) {
+        @media #{$bp-query} {
+          $value: map-get($values, $bp-name);
+
+          @if type-of($value) == number and unitless($value) {
+            #{$prop}: vu($value, $bp-name);
+          } @else {
+            #{$prop}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Настройки базовых ширины для брейкпоинтов
+$base-widths: (
+        xxl: 2560,
+        xl: 1920,
+        lg: 1024,
+        md: 768,
+        sm: 390,
+) !default;
+
+// Функция для генерации динамических единиц
+@function vu($multiplier: 1, $breakpoint: null) {
+  @if $breakpoint {
+    $base: map-get($base-widths, $breakpoint);
+    @return calc(#{$multiplier} * (100vw / #{$base}));
+  }
+    @return calc(#{$multiplier} * 1rem);
+}

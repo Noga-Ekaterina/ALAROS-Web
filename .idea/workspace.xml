@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="пагинация и теперь лоадер появляется при изменении параметров запроса">
-      <change afterPath="$PROJECT_DIR$/src/components/loader/loader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pagination/Pagination.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pagination/pagination.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="забыла компанент">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-text/project-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-text/project-text.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,15 +213,8 @@
       <workItem from="1743945655566" duration="2778000" />
       <workItem from="1744130014008" duration="2832000" />
       <workItem from="1744290238902" duration="19913000" />
-      <workItem from="1744372194702" duration="11552000" />
-    </task>
-    <task id="LOCAL-00049" summary="сделала фото с подписью проекта на главном экране кликакабельным на всех стр">
-      <option name="closed" value="true" />
-      <created>1741130561691</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1741130561691</updated>
+      <workItem from="1744372194702" duration="25404000" />
+      <workItem from="1744456306110" duration="14973000" />
     </task>
     <task id="LOCAL-00050" summary="сделала фото с подписью проекта на главном экране кликакабельным на всех стр">
       <option name="closed" value="true" />
@@ -614,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744389259422</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="забыла компанент">
+      <option name="closed" value="true" />
+      <created>1744389438402</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1744389438402</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +637,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="чуть подправила стили dropdown" />
     <MESSAGE value="чуть подправила масштабирование" />
     <MESSAGE value="замена шрифтов" />
     <MESSAGE value="сделала календарь на разных стр и мелкие правки" />
@@ -668,7 +661,8 @@
     <MESSAGE value="поменяла лимит проектов" />
     <MESSAGE value="поменяла лимит" />
     <MESSAGE value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
-    <option name="LAST_COMMIT_MESSAGE" value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
+    <MESSAGE value="забыла компанент" />
+    <option name="LAST_COMMIT_MESSAGE" value="забыла компанент" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

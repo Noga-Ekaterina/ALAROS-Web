@@ -1,7 +1,7 @@
 // components/ProjectModalClient.tsx
 'use client'
 
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useCallback, useEffect, useRef, useState} from 'react'
 import { IProject } from "@/types/data"
 import ProjectImagesSlider from "@/components/_projects/project-modal/project-images-slider/ProjectImagesSlider"
 import { diplomas } from "@/variables"
@@ -13,6 +13,7 @@ import {ReactSVG} from "react-svg";
 import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
 import ProjectText from "@/components/_projects/project-modal/project-text/ProjectText";
 import {useSearchParams} from "next/navigation";
+import {debounce} from "next/dist/server/utils";
 
 interface ClientProps {
   project?: IProject | null | string
@@ -28,6 +29,7 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
   const [scale, setScale] =useState(1)
   const {setMultipleParams}=useSearchParamsControl()
   const timer= useRef<null | ReturnType<typeof setTimeout>>(null)
+  const [upEvent, setUpEve ] = useState(false)
 
   function handleBack(){
     if (scale>1)
@@ -47,6 +49,14 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
     if(!el.matches(".project-text, .project-text *, span, project-images-slider__scale-img-wrap, .project-images-slider__scale-img-wrap *, button, button *, img"))
       handleBack()
   }
+
+  const handleClickEsc=useCallback(debounce((event: KeyboardEvent) => {
+    if (event.code === 'Escape') {
+      console.log("esc")
+      handleBack()
+    };
+  }, 300), [upEvent])
+
   useEffect(() => {
     console.log("mount")
     return () => { // <-- функция очистки
@@ -58,9 +68,22 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
   }, []);
 
   useEffect(() => {
+    document.removeEventListener('keyup', handleClickEsc)
+    setUpEve(prevState => !prevState)
+  }, [scale]);
+
+  useEffect(() => {
+    document.addEventListener('keyup', handleClickEsc );
+  }, [handleClickEsc]);
+
+  useEffect(() => {
     if (projectSearch && projectYear)
       setIsOpened(true)
   }, [projectSearch, projectYear]);
+
+  useEffect(() => {
+    !isOpened && document.removeEventListener('keyup', handleClickEsc)
+  }, [isOpened]);
 
   return (
       <AnimationPage isNoWait={true} conditions={isOpened} className="project-modal" onClick={handleClick}>

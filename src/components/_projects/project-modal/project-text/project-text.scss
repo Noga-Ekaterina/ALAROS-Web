@@ -15,12 +15,19 @@
 
   *{
     font-weight: 500;
+
+    @include adaptive((
+            font-size: (default: 9rem, md: 10, sm: 10)
+    ))
   }
 
   &__title{
-    font-size: 20rem;
     font-weight: 400;
     max-width: 444rem;
+
+    @include adaptive((
+            font-size: (default: 13rem, md: 15, sm: 15)
+    ))
   }
 
   &__subtitle{
