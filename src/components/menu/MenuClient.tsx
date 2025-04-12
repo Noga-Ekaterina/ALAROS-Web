@@ -30,8 +30,8 @@ const MenuClient = ({data}:Props) => {
   }
 
   useEffect(() => {
+    setIsMultiPage(false)
     if (pathname==="/") {
-      setIsMultiPage(false)
       setActiveSection(null)
       return
     }
@@ -91,7 +91,12 @@ const MenuClient = ({data}:Props) => {
                 </div>
 
                 <div className="menu__column menu__mini-links">
-                  <div className="menu__column">
+                  <motion.div
+                      key={JSON.stringify(activeSection)}
+                      initial={{opacity: 0,}}
+                      animate={{opacity: 1}}
+                      exit={{opacity: 0}}
+                      transition={{duration: 0.5}} className="menu__column">
                     {
                       activeSection?.subsections.map((subsection, index) => (
                           <div
@@ -103,7 +108,7 @@ const MenuClient = ({data}:Props) => {
                           </div>
                       ))
                     }
-                  </div>
+                  </motion.div>
                   <div className="menu__column">
                     {
                       activeSection?.additionalLinks.map(({html}, index) => (

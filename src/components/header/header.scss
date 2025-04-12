@@ -17,7 +17,7 @@
     }
 
     svg *{
-      stroke: #fff;
+      fill: #fff;
     }
   }
 
@@ -43,9 +43,7 @@
   &__logo{
     width: 14.4rem;
 
-    .header--menu & *{
-      fill: #fff;
-    }
+
   }
 
   &__menu{
@@ -67,5 +65,10 @@
 
   &__search{
     width: 13.8rem;
+
+    .header--menu & *{
+      fill: transparent;
+      stroke: #fff;
+    }
   }
 }

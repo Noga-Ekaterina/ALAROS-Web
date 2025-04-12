@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="забыла компанент">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки в модалке и начала править шрифты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-text/project-text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-text/project-text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/MenuClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MenuClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,15 +213,7 @@
       <workItem from="1744130014008" duration="2832000" />
       <workItem from="1744290238902" duration="19913000" />
       <workItem from="1744372194702" duration="25404000" />
-      <workItem from="1744456306110" duration="14973000" />
-    </task>
-    <task id="LOCAL-00050" summary="сделала фото с подписью проекта на главном экране кликакабельным на всех стр">
-      <option name="closed" value="true" />
-      <created>1741132120578</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1741132120579</updated>
+      <workItem from="1744456306110" duration="22269000" />
     </task>
     <task id="LOCAL-00051" summary="усовершенствовала кэш новостей">
       <option name="closed" value="true" />
@@ -608,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744389438402</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="правки в модалке и начала править шрифты">
+      <option name="closed" value="true" />
+      <created>1744474897056</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1744474897056</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,7 +636,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="чуть подправила масштабирование" />
     <MESSAGE value="замена шрифтов" />
     <MESSAGE value="сделала календарь на разных стр и мелкие правки" />
     <MESSAGE value="подправила фона" />
@@ -662,7 +660,8 @@
     <MESSAGE value="поменяла лимит" />
     <MESSAGE value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
     <MESSAGE value="забыла компанент" />
-    <option name="LAST_COMMIT_MESSAGE" value="забыла компанент" />
+    <MESSAGE value="правки в модалке и начала править шрифты" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки в модалке и начала править шрифты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

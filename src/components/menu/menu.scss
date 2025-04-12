@@ -70,6 +70,10 @@
     @include sm{
       font-size: 68rem;
     }
+
+    *{
+      color: inherit;
+    }
   }
 
   &__subsection-link{
@@ -97,6 +101,7 @@
   }
   &__mini-links{
     gap: 25rem;
+    width: 220rem;
 
     @include md-book{
       align-self: flex-end;

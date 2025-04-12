@@ -44,9 +44,8 @@
   }
 
   &__content{
-    display: none;
     border-top-width: 0;
-    max-height: 155rem;
+    transition: 0.3s;
     position: absolute;
     min-width: 100%;
     background: #fff;
@@ -55,11 +54,15 @@
     box-shadow: 11px 0px 34px 0px rgba(0, 0, 0, 0.2);
 
     .lenis.lenis-smooth {
-      padding: 8rem 10rem;
-      max-height: 155rem;
-    }
-    .open &{
-      display: block;
+      padding-block: 0;
+      padding-inline: 10rem;
+      max-height: 0;
+      transition: 0.3s;
+
+      .open &{
+        padding-block: 8rem;
+        max-height: 155rem;
+      }
     }
   }
 
