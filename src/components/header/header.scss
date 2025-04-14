@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   padding-block: 14rem;
-  z-index: 5;
+  z-index: 7;
   box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 95.3px 0px #0000000D;
 
   &--menu{
@@ -42,18 +42,33 @@
 
   &__logo{
     width: 14.4rem;
+    transition: 0.5s;
 
+    &:hover{
+      transform: scale(1.2);
+    }
 
+    &:active{
+      transition: 0.1s;
+      transform: scale(1);
+    }
   }
 
   &__menu{
-    width: 16.8rem;
+    width: 19.8rem;
+
+    .header--menu & {
+      width: 14rem;
+      position: relative;
+      top: 1rem;
+    }
 
     &-wrapp{
-      width: 83.8rem;
-      font-size: 13rem;
+      font-weight: 500;
+      font-size: 12rem;
       letter-spacing: 0.02em;
       color: var(--c-main);
+      gap: 20rem;
 
       @include flex-sb-c;
 
