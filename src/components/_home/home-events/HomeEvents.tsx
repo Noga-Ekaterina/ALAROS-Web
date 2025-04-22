@@ -14,6 +14,7 @@ interface Props{
 
 const HomeEvents = ({homeData}:Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
+  const bigDesktopScreen = useMediaQuery({minWidth: 2560});
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
@@ -45,6 +46,17 @@ const HomeEvents = ({homeData}:Props) => {
                   }
                   </>
                   :
+                  (bigDesktopScreen && isClient)?
+                      <>
+                        {
+                          homeData.bannersBigDesktop.map((banner, index)=>(
+                              <SwiperSlide key={`banner ${index}`}>
+                                <img src={`/Assets/Pages/Home/Banners/Big-desktop/${banner}`} alt=""/>
+                              </SwiperSlide>
+                          ))
+                        }
+                      </>
+                      :
                   <>
                     {
                       homeData.bannersDesktop.map((banner, index)=>(

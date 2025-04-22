@@ -39,6 +39,12 @@
   text-overflow: ellipsis;
 }
 
+@mixin xxl{
+  @media (min-width: 2560px) {
+    @content
+  }
+}
+
 @mixin lg{
   @media (max-width: 1600px) {
     @content
@@ -78,12 +84,12 @@
 
 // Базовые брейкпоинты
 $breakpoints: (
-        md-book: '(min-width: 640.1px) and (min-height: 80vw)',
-        lg-book: '(min-width: 1024px) and (min-height: 80vw)',
         xl: '(min-width: 1920px)',
         xxl: '(min-width: 2560px)',
         lg: '(max-width: 1919.9px)',
+        lg-book: '(min-width: 1024px) and (min-height: 80vw)',
         md: '(max-width: 1024px)',
+        md-book: '(min-width: 640.1px) and (min-height: 80vw)',
         sm: '(max-width: 640px)',
 ) !default;
 
@@ -112,18 +118,62 @@ $breakpoints: (
 
 // Настройки базовых ширины для брейкпоинтов
 $base-widths: (
-        xxl: 2560,
-        xl: 1920,
-        lg: 1024,
-        md: 768,
-        sm: 390,
+        xxl: (width: 2560, height: 1440),
+        xl: (width: 1920, height: 1080),
+        lg: (width: 1024, height: 600),
+        md: (width: 768, height: 500),
+        sm: (width: 390, height: 900),
 ) !default;
 
 // Функция для генерации динамических единиц
-@function vu($multiplier: 1, $breakpoint: null) {
+@function vu($multiplier: 1, $breakpoint: null, $adaptiveHeight: false) {
   @if $breakpoint {
     $base: map-get($base-widths, $breakpoint);
-    @return calc(#{$multiplier} * (100vw / #{$base}));
+    $value: calc(#{$multiplier} * (100vw / #{map-get($base, "width")}));
+
+    @if $adaptiveHeight{
+      @return min(#{$value}, calc((#{$multiplier} / (#{map-get($base, "height")} / 100))*1vh))
+    }
+
+    @return $value
   }
     @return calc(#{$multiplier} * 1rem);
+}
+
+@mixin standard-font{
+  @include adaptive((
+          font-size: (
+                  default: 13rem,
+                  xxl: 27,
+                  md: 11,
+                  sm: 13
+          )
+  ));
+}
+
+
+@mixin title-font{
+  @include adaptive((
+          font-size: (
+                  default: 42rem,
+                  xxl: 77,
+                  xl: 80,
+                  sm: 28
+          )
+  ));
+
+  font-weight: 300;
+}
+
+@mixin title-small-font{
+  @include adaptive((
+          font-size: (
+                  default: 36rem,
+                  xxl: 55,
+                  xl: 60,
+                  sm: 26
+          )
+  ));
+
+  font-weight: 500;
 }

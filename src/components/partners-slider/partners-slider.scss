@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins-and-extends";
+
 .partners-slider{
   background: var(--c-grey-bg-light);
   padding: 48rem 16rem 41rem;
@@ -12,12 +14,20 @@
 
   &__swiper {
     width: 781rem;
+
+    @include sm{
+      width: 265rem;
+    }
   }
+
   &__slide{
-    height: 51rem;
     width: auto;
     display: flex;
     justify-content: center;
+
+    @include adaptive((
+            height: (default: 51rem, xxl: 92, sm: 40)
+    ));
 
     img{
       height: 100%;

@@ -6,6 +6,8 @@ import {SwiperNavigation} from "../../utils/SwiperNavigation";
 import {IPartner} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {Autoplay} from "swiper/modules";
+import {useMediaQuery} from "react-responsive";
+import {useGetRem} from "@/hoocs/useGetRem";
 
 interface Props{
   title: string
@@ -15,6 +17,9 @@ interface Props{
 const PartnersSliderClient = ({title, partners}:Props) => {
   const swiperRef = useRef<SwiperRef>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
+  const mobileScreen = useMediaQuery({maxWidth: 660});
+  const bigDesktopScreen = useMediaQuery({minWidth: 2560});
+  const rem=useGetRem()
 
   const togleSwiper=(dir?: "next" | "prev")=>{
     if (dir=="next")
@@ -33,8 +38,8 @@ const PartnersSliderClient = ({title, partners}:Props) => {
             <img src="/Assets/Icons/arrow.svg" alt=''/>
           </button>
           <Swiper
-              slidesPerView={5}
-              spaceBetween={"30rem"}
+              slidesPerView={mobileScreen? 3: bigDesktopScreen? 6:5}
+              spaceBetween={15*rem}
               autoplay={{delay: 2000, disableOnInteraction: false}}
               loop={true}
               modules={[Autoplay]}

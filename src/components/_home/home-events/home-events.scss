@@ -22,6 +22,10 @@
     left: 0;
     right: 0;
 
+    @include xxl{
+      top: 33rem;
+    }
+
     svg{
       width: 100%;
       height: auto;
@@ -37,6 +41,10 @@
     width: 340rem;
     position: relative;
 
+    @include xxl{
+      width: vu(579, xxl);
+    }
+
     @include sm{
       width: 100%;
       padding-right: var(--p-y);
@@ -45,24 +53,18 @@
 
   h2{
     color: var(--c-red);
-    font-size: 36rem;
-    font-weight: 500;
 
-    @include sm{
-      font-size: 26rem;
-    }
+    @include title-small-font
   }
 
   p{
-    font-size: 21rem;
-
-    @include sm{
-      font-size: 15rem;
-    }
+    @include adaptive((
+            font-size: (default: 20rem, xxl: 35, sm: 15)
+    ))
   }
 
   p:last-child{
-    font-size: 13rem;
+    @include standard-font;
 
     @include sm{
       position: absolute;
@@ -74,6 +76,10 @@
   &__slider{
     width: calc(100% - 340rem);
     border-top: max(3px, 3rem) solid #E5E5E5;
+
+    @include xxl{
+      width: calc(100% - vu(579, xxl));
+    }
 
     @include sm{
       width: 100%;

@@ -12,12 +12,11 @@
   --c-grey-bg: #D9D9D9;
   --c-grey: #BCBCBC;
   --c-grey-dark: #959595;
-  --p-y: 28rem;
   --w-line: max(1.2px, 1.2rem);
 
-  @include sm{
-    --p-y: 20rem;
-  }
+  @include adaptive((
+          --p-y: (default: 28.5rem, xl: 48, sm: 20)
+  ))
 }
 
 *{
@@ -65,9 +64,9 @@ body {
   max-width: 964rem;
   margin-inline: auto;
 
-  @include sm{
-    max-width: 350rem;
-  }
+  @include adaptive((
+          max-width: (defaul: 967rem, xl: 1824, sm: 350)
+  ))
 }
 
 p{
@@ -213,18 +212,14 @@ span{
   }
 
   &__title{
-    font-size: 42rem;
-    font-weight: 300;
     max-width: 828rem;
 
-    @include sm{
-      font-size: 28rem;
-    }
+    @include title-font;
 
     &--small{
-      font-size: 36rem;
-      font-weight: 500;
       color: var(--c-green-text);
+
+      @include title-small-font;
     }
   }
 

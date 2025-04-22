@@ -1,4 +1,5 @@
 @import "../../../app/styles/mixins-and-extends";
+
 .home-news-slider{
   background: #fff;
   padding-block: 31rem;
@@ -12,7 +13,9 @@
 
 
   &__slide{
-    width: 397rem;
+    @include adaptive((
+            width: (default: 397rem, xxl: 692)
+    ));
 
     &--small{
       .news-item__img{

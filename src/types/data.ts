@@ -26,6 +26,7 @@ export interface IHomeMainScreen{
 
 export interface IHomeBaners{
   bannersDesktop: string[]
+  bannersBigDesktop: string[],
   bannersMobile: string[]
   events: IHtmlString
 }

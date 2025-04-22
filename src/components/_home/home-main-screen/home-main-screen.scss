@@ -10,12 +10,11 @@
       position: relative;
       z-index: 2;
 
-      @include md-book{
-        width: 50%;
-      }
+      @include adaptive((
+              width: (default: 66.5%, xxl: 1866, md-book: 50%, sm: 100%)
+      ));
 
       @include sm{
-        width: 100%;
         min-height: 50%;
       }
 
@@ -61,7 +60,6 @@
 
   &__aside {
     position: relative;
-    width: 33.5%;
     background-color: var(--c-main);
     overflow: hidden;
     padding: 21rem 0 25rem 18rem;
@@ -69,12 +67,11 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include md-book {
-      width: 50%;
-    }
+    @include adaptive((
+            width: (default: 33.5%, xxl: 694, md-book: 50%, sm: 100%)
+    ));
 
     @include sm {
-      width: 100%;
       min-height: 50%;
     }
 
@@ -103,17 +100,23 @@
         display: flex;
         justify-content: flex-end;
         overflow: hidden;
+
+        @include xxl{
+          height: 118%;
+          top: -13%;
+        }
       }
     }
 
     * {
       font-weight: 500;
-      font-size: 13rem;
       letter-spacing: 0.02em;
 
-      @include md-book {
-        font-size: 20rem;
-      }
+      @include standard-font;
+
+      //@include md-book {
+      //  font-size: 20rem;
+      //}
 
       @include sm {
         font-size: min(17rem, 1.889vh);
@@ -123,12 +126,21 @@
 
     h2{
       color: #fff;
-      font-size: min(26rem, 4.333vh);
       line-height: 1.2em;
       letter-spacing: 0.03em;
       font-weight: 300;
       position: absolute;
       top: calc(50% - 3.769em);
+
+      @include adaptive((
+              font-size: (
+                      default: vu(26, lg, true),
+                      xxl:vu(48.67, xxl, true),
+                      //xl: vu(86, xl, true),
+                      sm: vu(33, sm, trus)
+              )
+      ));
+
 
       @include md-book{
         font-size: 37rem;
@@ -137,7 +149,6 @@
       @include sm{
         position: relative;
         top: 0;
-        font-size: min(33rem, 3.667vh);
       }
     }
 
@@ -153,7 +164,10 @@
           color: #ffffff;
           border: var(--w-line) solid #E5E5E5;
           background: var(--c-main);
-          padding: 12rem 35rem;
+
+          @include adaptive((
+                  padding: (default: 12rem 35rem, md: vu(10, md) vu(20, md), md-book: vu(15, md) vu(38, md), sm: 12rem 35rem)
+          ))
         }
 
         &:last-child{
@@ -171,7 +185,6 @@
     }
 
     &-title{
-      font-size: min(50rem, 8.398vh);
       color: #fff;
       text-transform: uppercase;
       font-weight: 500;
@@ -179,12 +192,14 @@
       width: 383rem;
       position: relative;
 
-      @include lg{
-        font-size: min(43rem, 7.167vh);
-      }
-      @include sm{
-        font-size: min(30rem, 3.333vh);
-      }
+      @include adaptive((
+              font-size: (
+                      default: min(43rem, 7.167vh),
+                      xxl:vu(123, xxl, true),
+                      xl: vu(86, xl, true),
+                      sm: min(30rem, 3.333vh)
+              )
+      ));
 
       &-wrapp{
         position: relative;
@@ -198,6 +213,22 @@
           padding-block: 21rem;
         }
 
+
+        &::after{
+          content: '';
+          width: var(--w-line);
+          height: 200%;
+          background: #E5E5E5;
+          position: absolute;
+          top: 0;
+          left: vu(579, xxl);
+          display: none;
+
+          @include xxl{
+            display: block;
+          }
+        }
+
         &::before{
           content: '';
           width: var(--w-line);
@@ -205,7 +236,7 @@
           background: #E5E5E5;
           position: absolute;
           top: 0;
-          left: 340rem;
+          left: 50%;
 
           @include md-book{
             display: none;

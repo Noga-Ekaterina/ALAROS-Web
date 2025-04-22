@@ -7,6 +7,8 @@ import {ReactSVG} from "react-svg";
 import {Swiper, SwiperRef} from "swiper/react";
 import {SwiperNavigation} from "../../utils/SwiperNavigation";
 import SliderClue from "@/components/slider-clue/SliderClue";
+import {useGetRem} from "@/hoocs/useGetRem";
+import {useMediaQuery} from "react-responsive";
 
 interface IProps extends IWithChildren, IWithClass{
   slidesPerView: number
@@ -19,6 +21,9 @@ const BigSlider = (props: IProps) => {
   const swiperNav= new SwiperNavigation(swiperRef)
   const [swiperIsStart, setSwiperIsStart] = useState(true)
   const [swiperIsEnd, setSwiperIsEnd] = useState(false)
+
+  const bigDesktopScreen = useMediaQuery({minWidth: 2560});
+  const rem= useGetRem()
 
   function togleSwiper  (){
     setSwiperIsStart(swiperNav.isStart())
@@ -39,7 +44,7 @@ const BigSlider = (props: IProps) => {
         </button>
         <Swiper
             slidesPerView="auto"
-            spaceBetween={"10rem"}
+            spaceBetween={(bigDesktopScreen? 8:10)*rem}
             ref={swiperRef}
             onActiveIndexChange={togleSwiper}
         >

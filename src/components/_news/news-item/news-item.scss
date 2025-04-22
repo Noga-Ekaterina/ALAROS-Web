@@ -1,15 +1,31 @@
+@import "@/app/styles/mixins-and-extends";
 .news-item{
   display: flex;
   flex-direction: column;
   gap: 15rem;
 
+  >*{
+    @include adaptive((
+            font-size: (
+                    default: 13rem,
+                    xxl: 22,
+                    md: 10,
+                    sm: 13
+            )
+    ));
+  }
+
   &__title{
-    font-size: 17rem;
     height: 44rem;
     font-weight: 300;
     display: flex;
     align-items: flex-end;
+
+    @include adaptive((
+            font-size: (default: 17rem, xxl: 29)
+    ))
   }
+
   &__img{
     width: 100%;
     object-fit: cover;
@@ -18,13 +34,11 @@
   }
 
   &__date{
-    font-size: 10rem;
     font-weight: 600;
     color: #090909;
   }
 
   &__description{
-    font-size: 10rem;
     margin-top: -4rem;
   }
 }
