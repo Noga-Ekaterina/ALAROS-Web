@@ -39,7 +39,7 @@ const SliderClue = ({parentRef}:Props) => {
   }, []);
   return (
       <>
-        <CSSTransition in={isPlay} classNames='slider-clue-content' timeout={1000} unmountOnExit={true}>
+        <CSSTransition in={isPlay} classNames='slider-clue-content' timeout={1100} unmountOnExit={true}>
           <div className="slider-clue-content">
             <ReactSVG src="/Assets/Icons/arrow.svg" className="slider-clue-content__arrow"/>
             <ReactSVG src="/Assets/Icons/hand.svg" className="slider-clue-content__hand"/>

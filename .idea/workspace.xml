@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила размеры на главной">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перевёрстка подвала">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider-clue/slider-clue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-clue/slider-clue.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,15 +218,7 @@
       <workItem from="1745064618667" duration="916000" />
       <workItem from="1745189628614" duration="18110000" />
       <workItem from="1745326167097" duration="15661000" />
-      <workItem from="1745415622291" duration="4699000" />
-    </task>
-    <task id="LOCAL-00056" summary="сделала обработку ошибок">
-      <option name="closed" value="true" />
-      <created>1741356296360</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1741356296360</updated>
+      <workItem from="1745415622291" duration="10416000" />
     </task>
     <task id="LOCAL-00057" summary="сделала обработку ошибок в новоостях">
       <option name="closed" value="true" />
@@ -613,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745349775843</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="перевёрстка подвала">
+      <option name="closed" value="true" />
+      <created>1745426426397</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1745426426397</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="поменяла механику слайдера партнёров" />
     <MESSAGE value="навела порядок в серых" />
     <MESSAGE value="выровняла красные тексты" />
     <MESSAGE value="подправила фильтр" />
@@ -667,7 +665,8 @@
     <MESSAGE value="правки шапки и догруз фото" />
     <MESSAGE value="догруз фото проектов" />
     <MESSAGE value="исправила размеры на главной" />
-    <option name="LAST_COMMIT_MESSAGE" value="исправила размеры на главной" />
+    <MESSAGE value="перевёрстка подвала" />
+    <option name="LAST_COMMIT_MESSAGE" value="перевёрстка подвала" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
