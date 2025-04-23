@@ -5,6 +5,7 @@ export interface IHtmlString{
 }
 
 export interface IFooter{
+  navigationColumn: IHtmlString
   columns: IHtmlString[]
   mobileColumns: number[]
   socials: IHtmlString

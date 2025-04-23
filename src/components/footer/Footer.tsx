@@ -14,6 +14,9 @@ const init= unstable_cache(async ()=>{
   const data= await fetchData<IData>(`
     query MyQuery {
       footers {
+        navigationColumn {
+          html
+        }
         columns {
           html
         }
@@ -44,12 +47,15 @@ const Footer = async () => {
   return (
       <footer className="footer">
         <div className="container footer__container">
+          <div className="footer__item footer__item--1 footer__item--mobile-visible footer__item--mobile-visible-2 footer__navigation">
+            <HtmlProcessing html={data.navigationColumn.html}/>
+          </div>
           {data.columns.map(({html}, index) => (
               <div
                   key={index}
                   className={cn(
                       "footer__item",
-                      `footer__item--${index+1}`,
+                      `footer__item--${index+2}`,
                       data.mobileColumns.includes(index + 1)
                           && `footer__item--mobile-visible footer__item--mobile-visible-${data.mobileColumns.indexOf(index+1)+1}`
                   )}

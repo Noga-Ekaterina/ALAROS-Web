@@ -3,13 +3,22 @@
 .footer{
   position: relative;
   z-index: 3;
-  padding-block: 37rem;
+  padding-block: 17rem 15rem;
   background: var(--c-main);
 
   *{
-    font-size: 13rem;
     line-height: 1.8em;
     color: #fff;
+    font-weight: 300;
+
+    @include adaptive((
+            font-size: (
+                    default: 10rem,
+                    xxl: 20,
+                    md: 8,
+                    sm: 10
+            )
+    ));
   }
 
   &__container{
@@ -35,7 +44,7 @@
     }
 
     &--2{
-      grid-column: 7/span 2;
+      grid-column: 8/span 3;
       grid-row: 1/2;
 
       @include sm{
@@ -46,7 +55,7 @@
     }
 
     &--3 {
-      grid-column: 10/span 2;
+      grid-column: 11/span 2;
     }
 
     @include sm{
@@ -74,16 +83,29 @@
 
   }
 
-  h2{
-    font-size: 25rem;
+  h2, &__navigation *{
     line-height: 1.1em;
     font-weight: 200;
     flex-shrink: 0;
-
+    @include adaptive((
+            font-size: (
+                    default: 16rem,
+                    xxl: 35,
+                    md: 13,
+                    sm: 13
+            )
+    ));
     @include sm{
-      font-size: 23rem;
       width: 138rem;
     }
+  }
+
+  h2{
+    opacity: 0.6;
+  }
+
+  &__navigation p{
+    line-height: 1.5em;
   }
 
   a{

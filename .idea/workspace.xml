@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="догруз фото проектов">
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Big-desktop/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Big-desktop/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Big-desktop/3.png" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="исправила размеры на главной">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/HomeNewsSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/HomeNewsSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partners-slider/PartnersSliderClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partners-slider/PartnersSliderClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partners-slider/partners-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partners-slider/partners-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,15 +218,8 @@
       <workItem from="1744911608099" duration="7586000" />
       <workItem from="1745064618667" duration="916000" />
       <workItem from="1745189628614" duration="18110000" />
-      <workItem from="1745326167097" duration="15142000" />
-    </task>
-    <task id="LOCAL-00055" summary="исправила ошибку с границей">
-      <option name="closed" value="true" />
-      <created>1741282734356</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1741282734356</updated>
+      <workItem from="1745326167097" duration="15661000" />
+      <workItem from="1745415622291" duration="4699000" />
     </task>
     <task id="LOCAL-00056" summary="сделала обработку ошибок">
       <option name="closed" value="true" />
@@ -626,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745191922247</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="исправила размеры на главной">
+      <option name="closed" value="true" />
+      <created>1745349775843</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1745349775843</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -655,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="анимация перхода между стр" />
     <MESSAGE value="поменяла механику слайдера партнёров" />
     <MESSAGE value="навела порядок в серых" />
     <MESSAGE value="выровняла красные тексты" />
@@ -680,7 +666,8 @@
     <MESSAGE value="правки меню и анимация dropdown" />
     <MESSAGE value="правки шапки и догруз фото" />
     <MESSAGE value="догруз фото проектов" />
-    <option name="LAST_COMMIT_MESSAGE" value="догруз фото проектов" />
+    <MESSAGE value="исправила размеры на главной" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправила размеры на главной" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
