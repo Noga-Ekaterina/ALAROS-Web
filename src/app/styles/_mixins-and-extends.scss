@@ -122,6 +122,7 @@ $base-widths: (
         xl: (width: 1920, height: 1080),
         lg: (width: 1024, height: 600),
         md: (width: 768, height: 500),
+        md-book: (width: 768, height: 1024),
         sm: (width: 390, height: 900),
 ) !default;
 
@@ -157,7 +158,7 @@ $base-widths: (
           font-size: (
                   default: 42rem,
                   xxl: 77,
-                  xl: 80,
+                  xl: 60,
                   sm: 28
           )
   ));
@@ -170,7 +171,7 @@ $base-widths: (
           font-size: (
                   default: 36rem,
                   xxl: 55,
-                  xl: 60,
+                  xl: 42,
                   sm: 26
           )
   ));

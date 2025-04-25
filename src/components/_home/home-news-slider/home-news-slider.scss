@@ -6,9 +6,9 @@
 
   &__title{
     color: #6E7A64;
-    font-size: 36rem;
-    font-weight: 500;
     margin-bottom: 20rem;
+
+    @include title-small-font
   }
 
 

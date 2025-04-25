@@ -212,11 +212,12 @@ span{
   }
 
   &__title{
-    max-width: 828rem;
+    max-width: 19.524em;
 
     @include title-font;
 
     &--small{
+      max-width: 22.778em;
       color: var(--c-green-text);
 
       @include title-small-font;
@@ -224,15 +225,26 @@ span{
   }
 
   &__section{
-    padding-top: 9rem;
-    font-size: 16rem;
+    padding-top: 0.505em;
     font-weight: 500;
+
+    @include adaptive((
+            font-size: (default: 16rem, xxl: 35, md: 13, sm: 15)
+    ))
   }
 }
 
 .note{
-  font-size: 9rem;
   color: var(--c-red);
   font-weight: 500;
   line-height: normal;
+
+  @include adaptive((
+          font-size: (
+                  default: 9rem,
+                  xxl: 17,
+                  md-book: 8,
+                  sm: 10
+          )
+  ));
 }
