@@ -2,12 +2,16 @@
   position: fixed;
   inset: 43.7rem 0 0;
   z-index: 6;
-  background: var(--c-grey-bg-light-2);
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 
   *{
     font-size: 20rem;
+  }
+
+  &__icon{
+    width: 150rem;
   }
 }

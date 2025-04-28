@@ -3,6 +3,8 @@ import "./loader.scss"
 import {AnimatePresence, motion} from 'framer-motion'
 import {observer} from "mobx-react-lite"
 import store from "@/store/store";
+import logo from "../../../public/animations/logo.json"
+import Lottie from "lottie-react";
 
 interface Props{
   isClient?: boolean
@@ -21,7 +23,7 @@ function Loader({isClient}: Props) {
                 exit={{opacity: 0}}
                 transition={{duration: 0.2}}
             >
-               <p>Загрузка...</p>
+               <Lottie animationData={logo} loop={true} className="loader__icon"/>
             </motion.div>
         }
       </AnimatePresence>
