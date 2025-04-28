@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="масштаб фестиваля">
-      <change afterPath="$PROJECT_DIR$/public/animations/logo.json" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/loader/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/Loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/loader.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,7 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -125,9 +121,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -227,15 +223,7 @@
       <workItem from="1745668887133" duration="5985000" />
       <workItem from="1745782546074" duration="3760000" />
       <workItem from="1745845437049" duration="20000" />
-      <workItem from="1745874375719" duration="1836000" />
-    </task>
-    <task id="LOCAL-00060" summary="оживила ползунок слайдера и всякие правки">
-      <option name="closed" value="true" />
-      <created>1741821882799</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1741821882799</updated>
+      <workItem from="1745874375719" duration="3646000" />
     </task>
     <task id="LOCAL-00061" summary="сделала плавную прокрутку">
       <option name="closed" value="true" />
@@ -621,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745874677485</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="loader">
+      <option name="closed" value="true" />
+      <created>1745877157144</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1745877157144</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +650,6 @@
     <MESSAGE value="работа с отступами исправление detalis" />
     <MESSAGE value="сделала меню" />
     <MESSAGE value="рефакторинг" />
-    <MESSAGE value="loader" />
     <MESSAGE value="подпрвила меню" />
     <MESSAGE value="замена фото" />
     <MESSAGE value="переделала модалку" />
@@ -675,7 +670,8 @@
     <MESSAGE value="масштаб подсказки слайдера" />
     <MESSAGE value="подправила масштаб загов" />
     <MESSAGE value="масштаб фестиваля" />
-    <option name="LAST_COMMIT_MESSAGE" value="масштаб фестиваля" />
+    <MESSAGE value="loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="loader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
