@@ -19,15 +19,8 @@ const getCols=(arr: IHtmlString[])=>{
     steps.push(
         <div key={`festival-premiya-step-${index}`} className="festival-premiya__step">
           <span className="festival-premiya__num">0{index+1}</span>
-          <div>
+          <div className='festival-premiya__text'>
             <HtmlProcessing html={step.html}/>
-            {
-              // step.note &&
-              //   <>
-              //      <br/>
-              //      <p className="festival-main-premiya__note">{step.note}</p>
-              //   </>
-            }
           </div>
         </div>
     )

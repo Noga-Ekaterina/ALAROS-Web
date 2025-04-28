@@ -18,6 +18,7 @@ const FestivalDiploma = ({pageData, nominations}: Props) => {
         <Detalis
             title={<span>{nonBreakingSpaces(pageData.diplomaTitle)}</span>}
             hash="diploma"
+            isBigGray={true}
         >
           <div className="container">
             <Form inputs={pageData.diplomaInputs} note={pageData.diplomaNote.html} nominations={nominations}/>

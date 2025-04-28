@@ -34,14 +34,19 @@
     }
 
     a{
-      font-size: 20rem;
       font-weight: 400;
+
+      @include standard-font-big;
     }
 
     p{
       font-size: 10rem;
       color: var(--c-grey);
       font-weight: 500;
+
+      @include xxl{
+        font-size: vu(18, xxl);
+      }
     }
   }
 }

@@ -1,10 +1,16 @@
 @import "@/app/styles/mixins-and-extends";
 .festival-price{
   background: var(--c-main);
-  padding-block: 28rem 8rem;
+  padding-bottom: 8rem;
 
   *{
     color: #fff;
+  }
+
+  &__title{
+    @include adaptive((
+            padding-top: (default: 0.6em, xxl: 52, xl: 36, sm: 15 )
+    ));
   }
 
   &__body{
@@ -24,13 +30,13 @@
       padding-bottom: 17rem;
 
       *{
-        font-size: 13rem;
         color: var(--c-green-text);
         font-weight: 400;
+        letter-spacing: 0.01em;
 
-        @include lg{
-          font-size: 16rem;
-        }
+        @include adaptive((
+                font-size: (default: 16rem, xl: 22, xxl: 27)
+        ));
       }
     }
 

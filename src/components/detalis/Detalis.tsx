@@ -13,9 +13,10 @@ interface IProps extends IWithChildren {
   rightElement?: JSX.Element
   hash?: string
   startIsOpen?: boolean
+  isBigGray?: boolean
 }
 
-const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }: IProps) => {
   const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(startIsOpen??false);
   const [isInit, setIsInit] = useState(false)
@@ -27,7 +28,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
 
   // Обработчики с правильными сигнатурами
   const handleEnter = (node: HTMLElement) => {
-    node.style.marginTop = `-${node.scrollHeight}px`;
+    node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
     node.style.overflow = 'hidden';
   };
 
@@ -42,7 +43,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
 
   const handleExit = (node: HTMLElement) => {
     node.style.overflow = 'hidden';
-    node.style.marginTop = `-${node.scrollHeight}px`;
+    node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
   };
 
   const handleExiting = (node: HTMLElement) => {
@@ -62,7 +63,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
       if (contentRef.current){
         const node = contentRef.current;
         if (!isOpen && (hash!==window.location.hash.slice(1) ||isInit)) {
-          node.style.marginTop = `-${node.scrollHeight}px`;
+          node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
           node.style.overflow = 'hidden';
         }else {
           node.style.transition = 'margin-top 500ms ease-in-out'
@@ -77,7 +78,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, children }: IProps) =
 
   return (
       <div className={cn("detalis", { "detalis--opened": isOpen })}>
-        <button className="detalis__btn" onClick={handleClick}>
+        <button className={cn("detalis__btn", {"detalis__btn--big-gray": isBigGray})} onClick={handleClick}>
           {title}
           {rightElement || <span className="detalis__icon">+</span>}
         </button>

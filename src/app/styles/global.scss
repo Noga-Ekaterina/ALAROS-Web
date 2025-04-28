@@ -13,6 +13,7 @@
   --c-grey: #BCBCBC;
   --c-grey-dark: #959595;
   --w-line: max(1.2px, 1.2rem);
+  --w-form-line: max(1px, 1rem);
 
   @include adaptive((
           --p-y: (default: 28.5rem, xl: 48, sm: 20)
@@ -229,7 +230,7 @@ span{
     font-weight: 500;
 
     @include adaptive((
-            font-size: (default: 16rem, xxl: 35, md: 13, sm: 15)
+            font-size: (default: 16rem, xxl: 35, xl: 24, md: 13, sm: 15)
     ))
   }
 }

@@ -1,7 +1,10 @@
+@import "../../app/styles/mixins-and-extends";
+
 .dropdown{
   position: relative;
-  font-size: 13rem;
   user-select: none;
+
+  @include standard-font;
 
   input{
     display: none;
@@ -76,7 +79,7 @@
 
   &__line{
     background: var(--c-grey);
-    width: var(--w-line);
+    width: var(--w-form-line);
     height: 14rem;
     align-self: center;
     flex-shrink: 0;

@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins-and-extends";
+
 .detalis{
   overflow: hidden;
 
@@ -8,6 +10,29 @@
     align-items: center;
     position: relative;
     z-index: 2;
+
+    &--big-gray{
+      padding: vu(16, xl) var(--p-y) vu(23.5, xl);
+      background: var(--c-grey-bg-light);
+
+      @include title-small-font;
+
+      @include xxl{
+        padding: vu(15.5, xxl) var(--p-y) vu(25.5, xxl);
+      }
+
+      @include lg{
+        padding: 17rem var(--p-y) 21rem;
+      }
+
+
+      .detalis__icon{
+        font-size: 36rem;
+        font-weight: 300;
+        position: relative;
+        top: 1rem;
+      }
+    }
   }
 
   &__icon{

@@ -1,17 +1,21 @@
 @import "../../../app/styles/mixins-and-extends";
 
 .festival-juries{
-  padding-block: 30rem 10rem;
+  padding-bottom: 10rem;
   background-image: url("../../../../public/Assets/Pages/Festival-main/bg/juries.svg");
   background-repeat: no-repeat;
   background-size: cover;
 
   &__title{
-    font-size: 36rem;
-    font-weight: 500;
     color: var(--c-red);
     padding-inline: var(--p-y);
     margin-bottom: 40rem;
+
+    @include adaptive((
+            padding-top: (default: 0.6em, xxl: 52, xl: 36, sm: 15 )
+    ));
+
+    @include title-small-font;
   }
 
   &__item{
@@ -29,14 +33,13 @@
   }
 
   &__slide{
-    width: 234rem;
     display: flex;
     flex-direction: column;
     gap: 9rem;
 
-    @include sm{
-      width: 174rem;
-    }
+    @include adaptive((
+            width: (default: 234rem, xxl: 420, xl: 350, sm: 174)
+    ));
   }
 
   &__info{
@@ -60,17 +63,21 @@
       font-size: 13rem;
       color: #fff;
 
-      @include sm{
-        font-size: 10rem;
-      }
+      @include adaptive((
+              font-size: (
+                      default: 13rem,
+                      xxl: 22,
+                      xl: 18,
+                      md: 11,
+                      sm: 10
+              )
+      ));
     }
   }
 
   &__name{
-    font-size: 20rem;
+    margin-bottom: 6rem;
 
-    @include sm{
-      font-size: 15rem;
-    }
+    @include standard-font-big;
   }
 }

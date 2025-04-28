@@ -4,6 +4,11 @@
   background: var(--c-red);
   padding-block: 50rem 5rem;
 
+
+  @include xxl{
+    padding-block: vu(68, xxl) 5rem;
+  }
+
   @include sm{
     padding-block: 28rem 26rem;
   }
@@ -23,18 +28,26 @@
   }
 
   &__text{
-    font-size: 20rem;
-    font-weight: 500;
-    @include sm{
-      font-size: 15rem;
+    @include standard-font-big;
+
+    @include xxl{
+      padding-top: vu(38, xxl);
+    }
+
+    @include lg{
+      font-weight: 500;
     }
 
   }
 
   &__date{
     font-size: 114rem;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 0.85em;
+
+    @include lg{
+      font-weight: 300;
+    }
 
     @include sm{
       font-size: 72rem;

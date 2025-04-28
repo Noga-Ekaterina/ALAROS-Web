@@ -5,9 +5,14 @@
   justify-content: space-between;
   padding: 9rem 15rem 11.5rem 12rem;
 
+  @include xxl{
+    padding: vu(19, xxl) 15rem vu(24.2, xxl) 12rem;
+  }
+
   *{
     color: #ffffff;
-    font-size: 20rem;
+
+    @include standard-font-big;
   }
 
   a u{

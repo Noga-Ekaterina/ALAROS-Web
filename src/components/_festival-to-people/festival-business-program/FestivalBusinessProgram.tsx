@@ -147,7 +147,7 @@ const Session = ({data}: ISessionProps) => {
 const FestivalBusinessProgram = ({pageData}:Props) => {
   return (
       <div className="festival-business-program" id="business-program">
-        <Detalis title={<span>{pageData.businessProgramTitle}</span>} hash="business-program">
+        <Detalis title={<span>{pageData.businessProgramTitle}</span>} hash="business-program" isBigGray={true}>
           {
             pageData.businessProgramSessions.map((session, index) => (
                 <Session key={index} data={session.html}/>

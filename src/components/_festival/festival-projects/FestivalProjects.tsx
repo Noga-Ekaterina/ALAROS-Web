@@ -16,8 +16,6 @@ interface Props{
 const FestivalProjects = ({pageData}:Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
 
-  if (!pageData) return <div/>
-
   return (
       <div className="festival-projects" id="projects">
         <div className="container">

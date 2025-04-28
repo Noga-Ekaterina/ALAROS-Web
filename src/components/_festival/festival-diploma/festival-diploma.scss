@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins-and-extends";
+
 .festival-diploma{
   background: #fff;
   padding-bottom: 8rem;
@@ -6,19 +8,9 @@
 
   .detalis{
     &__btn{
-      padding: 17rem var(--p-y) 21rem;
-      font-size: 36rem;
-      font-weight: 500;
-      background: var(--c-grey-bg-light);
       color: var(--c-green-text);
     }
 
-    &__icon{
-      font-weight: 300;
-      position: relative;
-      top: 1rem;
-    }
-    
     &--opened{
       .detalis__btn{
         background: #fff;

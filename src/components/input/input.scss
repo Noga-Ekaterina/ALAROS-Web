@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   gap: 15rem;
-  border-top: var(--c-grey) solid max(1px, 1rem);
-  padding-block: 9rem;
+  border-top: #E5E5E5 solid var(--w-form-line);
+  padding-block: 10rem 9rem;
 
   &:first-child{
     border-top: none;
@@ -18,8 +18,9 @@
   }
 
   *{
-    font-size: 13rem;
     font-weight: 500;
+
+    @include standard-font;
 
     @include sm{
       font-size: 9rem;
@@ -77,7 +78,7 @@
 
     &-line{
       background: var(--c-grey);
-      width: var(--w-line);
+      width: var(--w-form-line);
       height: 14rem;
       align-self: center;
     }

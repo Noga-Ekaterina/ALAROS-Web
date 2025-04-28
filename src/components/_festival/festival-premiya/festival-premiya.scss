@@ -3,11 +3,16 @@
   padding-block: 32rem 74rem;
 
   &__list{
-    font-size: 13rem;
     display: flex;
     gap: 64rem;
     margin-top: 62rem;
     padding-inline: 80rem 20rem;
+
+    @include standard-font;
+
+    @include xxl{
+      padding-inline: 80rem vu(275, xxl);
+    }
 
     @include sm{
       flex-direction: column;
@@ -28,12 +33,24 @@
     gap: 45rem;
   }
 
+  &__text{
+    >*:not(.note){
+      @include xxl{
+        width: vu(587, xxl);
+      }
+    }
+  }
+
   &__col{
     display: flex;
     gap: 51rem;
     flex-direction: column;
     justify-content: space-between;
     width: calc(50% - 32rem);
+
+    @include xxl{
+      gap: 40rem;
+    }
 
     @include sm{
       width: 100%;

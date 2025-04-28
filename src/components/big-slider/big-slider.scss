@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins-and-extends";
+
 .big-slider{
   position: relative;
 
@@ -5,6 +7,10 @@
     position: absolute;
     width: 10rem;
     top: 170rem;
+
+    @include xxl{
+      top: vu(362, xxl);
+    }
 
     &--prev{
       left: -16rem;

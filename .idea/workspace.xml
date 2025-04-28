@@ -4,10 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перевёрстка подвала">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подправила масштаб загов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider-clue/slider-clue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-clue/slider-clue.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/FestivalBusinessProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/FestivalBusinessProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/festival-projects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/festival-projects.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/big-slider/big-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/big-slider/big-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,23 +240,12 @@
       <workItem from="1745064618667" duration="916000" />
       <workItem from="1745189628614" duration="18110000" />
       <workItem from="1745326167097" duration="15661000" />
-      <workItem from="1745415622291" duration="10416000" />
-    </task>
-    <task id="LOCAL-00057" summary="сделала обработку ошибок в новоостях">
-      <option name="closed" value="true" />
-      <created>1741357321206</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1741357321206</updated>
-    </task>
-    <task id="LOCAL-00058" summary="перенесла очистку кэша при ошибки">
-      <option name="closed" value="true" />
-      <created>1741549459191</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1741549459191</updated>
+      <workItem from="1745415622291" duration="17645000" />
+      <workItem from="1745528413467" duration="6383000" />
+      <workItem from="1745583196354" duration="16690000" />
+      <workItem from="1745668887133" duration="5985000" />
+      <workItem from="1745782546074" duration="3760000" />
+      <workItem from="1745845437049" duration="20000" />
     </task>
     <task id="LOCAL-00059" summary="переименовала файл mixins и сделала кнопку более &quot;живой&quot;">
       <option name="closed" value="true" />
@@ -612,7 +623,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745426426397</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="масштаб подсказки слайдера">
+      <option name="closed" value="true" />
+      <created>1745437295543</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1745437295544</updated>
+    </task>
+    <task id="LOCAL-00107" summary="подправила масштаб загов">
+      <option name="closed" value="true" />
+      <created>1745584548646</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1745584548646</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,8 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="навела порядок в серых" />
-    <MESSAGE value="выровняла красные тексты" />
     <MESSAGE value="подправила фильтр" />
     <MESSAGE value="правки в слайдерах" />
     <MESSAGE value="работа с отступами исправление detalis" />
@@ -666,7 +691,9 @@
     <MESSAGE value="догруз фото проектов" />
     <MESSAGE value="исправила размеры на главной" />
     <MESSAGE value="перевёрстка подвала" />
-    <option name="LAST_COMMIT_MESSAGE" value="перевёрстка подвала" />
+    <MESSAGE value="масштаб подсказки слайдера" />
+    <MESSAGE value="подправила масштаб загов" />
+    <option name="LAST_COMMIT_MESSAGE" value="подправила масштаб загов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

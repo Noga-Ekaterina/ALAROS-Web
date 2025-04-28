@@ -5,7 +5,8 @@
 
   *{
     color: #ffffff;
-    font-size: 20rem;
+
+    @include standard-font-big;
   }
 
   u{
@@ -21,6 +22,10 @@
       padding: 9rem 15rem 11.5rem 12rem;
       background: var(--c-red);
       align-items: stretch;
+
+      @include xxl{
+        padding: vu(19, xxl) 15rem vu(24.2, xxl) 12rem;
+      }
 
       @include sm{
         text-align: left;

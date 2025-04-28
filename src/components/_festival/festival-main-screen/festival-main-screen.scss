@@ -9,12 +9,16 @@
   }
 
   &__block-text{
-    width: 505rem;
+    width: 512rem;
     position: relative;
     display: flex;
     align-items: center;
     background: var(--c-main);
-    padding-inline: 20rem 46rem;
+    padding-inline: var(--p-y) 46rem;
+
+    @include xxl{
+      padding-inline: var(--p-y) vu(39, xxl);
+    }
 
     @include sm{
       height: 57.5%;
@@ -35,23 +39,23 @@
   }
 
   h1{
-    font-size: min(27rem);
     text-transform: uppercase;
     letter-spacing: 0.02em;
     font-weight: 500;
     top: -8rem;
 
-    @include md-book{
-      font-size: 35rem;
-    }
-
-    @include sm{
-      font-size: min(27rem, 3.5vh);
-    }
+    @include adaptive((
+            font-size: (
+                    default: 27rem,
+                    xxl: 60,
+                    md-book: 35rem,
+                    sm: vu(27, sm, true)
+            )
+    ));
   }
   
   &__img-wrapp {
-    width: 517rem;
+    width: 512rem;
     position: relative;
     display: flex;
     overflow: hidden;
@@ -124,18 +128,20 @@
     font-weight: 400;
     line-height: 1.2em;
 
-    @include md{
-      font-size: 22px;
-    }
-
-    @include sm{
-      font-size: min(20rem, 2.222vh);
-    }
+    @include adaptive((
+            font-size: (
+                    default: 25rem,
+                    xxl: 50,
+                    md: 20,
+                    sm: vu(20, sm, true)
+            )
+    ));
   }
 
   p{
-    font-size: 13rem;
     line-height: 1.87em;
     font-weight: 500;
+
+    @include standard-font;
   }
 }
