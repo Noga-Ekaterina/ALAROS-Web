@@ -8,6 +8,10 @@
   align-items: center;
   margin-bottom: 26rem;
 
+  @include xxl{
+    padding: 32rem 16rem 27rem;
+  }
+
   &-title{
     margin-block: 33rem 31rem;
   }
@@ -26,7 +30,7 @@
     justify-content: center;
 
     @include adaptive((
-            height: (default: 51rem, xxl: 92, sm: 40)
+            height: (default: 51rem, xxl: 77, sm: 40)
     ));
 
     img{
