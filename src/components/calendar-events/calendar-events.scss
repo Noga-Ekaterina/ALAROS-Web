@@ -28,15 +28,16 @@
     cursor:  e-resize;
     position: relative;
     overflow: visible;
-    font-size: 14rem;
     user-select: none;
-    width: 35rem;
-    height: 35rem;
+    width: 2.5em;
+    height: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-inline: -0.5px;
     transition: 0.5s;
+
+    @include standard-font;
 
     span {
       width: 100%;
@@ -44,12 +45,12 @@
     }
 
     &--last-week:not(&--active-day, &--active-passed-day) {
-      margin-right: 35rem;
+      margin-right: 2.5em;
       &:after{
         content: '';
         position: absolute;
-        right: calc(-17.5rem +  max(1px, 1rem)/2);
-        height: 22rem;
+        right: calc(-1.25em +  var(--w-line)/2);
+        height: 1.57em;
         border-left: var(--w-line) solid var(--c-grey);
       }
     }
@@ -88,7 +89,7 @@
   &__active-arrow{
     position: absolute;
     bottom: -65%;
-    height: 13rem;
+    height: 37.14%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -96,7 +97,7 @@
 
     svg{
       transform: rotate(90deg);
-      width: 12rem;
+      width: 0.857em;
     }
   }
 
