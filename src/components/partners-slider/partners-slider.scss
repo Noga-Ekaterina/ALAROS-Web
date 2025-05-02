@@ -2,7 +2,7 @@
 
 .partners-slider{
   background: var(--c-grey-bg-light);
-  padding: 48rem 16rem 41rem;
+  padding: 38rem 16rem 31rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@
     justify-content: center;
 
     @include adaptive((
-            height: (default: 51rem, xxl: 77, sm: 40)
+            height: (default: 40rem, xxl: 77, sm: 40)
     ));
 
     img{

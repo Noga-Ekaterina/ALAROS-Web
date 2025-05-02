@@ -38,7 +38,7 @@ const PartnersSliderClient = ({title, partners}:Props) => {
             <img src="/Assets/Icons/arrow.svg" alt=''/>
           </button>
           <Swiper
-              slidesPerView={mobileScreen? 3: bigDesktopScreen? 7:5}
+              slidesPerView={mobileScreen? 3: bigDesktopScreen? 7:6}
               spaceBetween={15*rem}
               autoplay={{delay: 2000, disableOnInteraction: false}}
               loop={true}
