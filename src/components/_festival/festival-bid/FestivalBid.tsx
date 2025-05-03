@@ -19,7 +19,7 @@ const FestivalBid = ({pageData, nominations}: Props) => {
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.bidTitle)}</h2>
           </div>
-          <Form inputs={pageData.bidInputs} note={pageData.bidNote.html} nominations={nominations}/>-
+          <Form inputs={pageData.bidInputs} note={pageData.bidNote.html} nominations={nominations} typeForm="bid"/>
         </div>
       </div>
   );

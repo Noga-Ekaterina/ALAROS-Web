@@ -1,4 +1,3 @@
-import {IEvent, IEventsByYear, IEventsDataYear, INomination} from "../types/data";
 import {getRowsInTable} from "@/utils/getRowsInTable";
 
 export const nominationsSProcessing=(nominations: string)=>{

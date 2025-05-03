@@ -72,6 +72,8 @@ const init= unstable_cache(async ()=>{
                 placeholder
                 values
                 necessarily
+                bidTableColumn
+                diplomaTableColumn
               }
               bidNote {
                 html
@@ -95,6 +97,8 @@ const init= unstable_cache(async ()=>{
                 type
                 values
                 necessarily
+                bidTableColumn
+                diplomaTableColumn
               }
               diplomaNote {
                 html

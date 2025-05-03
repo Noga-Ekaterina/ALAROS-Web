@@ -60,6 +60,19 @@ export interface IFormInput{
   placeholder: string
   necessarily: null|boolean
   values: string[]
+  bidTableColumn: string
+  diplomaTableColumn: string
+}
+
+export type TypeForm = "bid"|"diploma"
+
+export interface IFormData{
+  [key: string]: string
+}
+
+export interface IFormRequest extends IFormData{
+  typeForm: TypeForm
+  recaptcha: string
 }
 
 export interface IEventDate {
