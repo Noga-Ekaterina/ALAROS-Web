@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="подправила размер партнёров">
-      <change afterPath="$PROJECT_DIR$/src/app/api/submit-form/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/getInitialValues.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getNextLetter.ts" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала отправку форм">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/FestivalDiploma.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,15 +226,7 @@
       <workItem from="1745845437049" duration="20000" />
       <workItem from="1745874375719" duration="3646000" />
       <workItem from="1746054982441" duration="35081000" />
-      <workItem from="1746275554033" duration="3292000" />
-    </task>
-    <task id="LOCAL-00067" summary="включила слайдер проектов на гл">
-      <option name="closed" value="true" />
-      <created>1742215690823</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1742215690823</updated>
+      <workItem from="1746275554033" duration="7754000" />
     </task>
     <task id="LOCAL-00068" summary="подделала календарь">
       <option name="closed" value="true" />
@@ -630,7 +612,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746201550978</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="сделала отправку форм">
+      <option name="closed" value="true" />
+      <created>1746290258171</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1746290258171</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,7 +649,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="замена фото" />
     <MESSAGE value="переделала модалку" />
     <MESSAGE value="поставила правильный тег" />
     <MESSAGE value="усовершенствовала замену номинаций" />
@@ -684,7 +673,8 @@
     <MESSAGE value="подправила размер партнёров на xxl" />
     <MESSAGE value="подправила масштаб дней календаря" />
     <MESSAGE value="подправила размер партнёров" />
-    <option name="LAST_COMMIT_MESSAGE" value="подправила размер партнёров" />
+    <MESSAGE value="сделала отправку форм" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала отправку форм" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

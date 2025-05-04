@@ -17,6 +17,13 @@
       background: var(--c-grey-bg-light);
     }
 
+    &--submitting{
+      pointer-events: none;
+      cursor: no-drop;
+      color: var(--c-grey-bg-light);
+      background: var(--c-grey);
+    }
+
     &--sent{
       pointer-events: none;
       background: var(--c-red);

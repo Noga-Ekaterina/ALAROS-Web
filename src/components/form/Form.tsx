@@ -8,7 +8,7 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import cn from "classnames";
 import {getInitialValues} from "@/components/form/getInitialValues";
 import ReCAPTCHA from 'react-google-recaptcha';
-import axios, {AxiosResponse} from "axios";
+import axios from "axios";
 
 interface Props{
   inputs: IFormInput[]
@@ -20,7 +20,6 @@ interface Props{
 
 const Form = ({inputs, note, nominations, typeForm}:Props) => {
   const nameKey= typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
-  const [inputsObj, setInputsObj] = useState<{ [key: string]: string }|null>(null)
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
   const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -28,7 +27,7 @@ const Form = ({inputs, note, nominations, typeForm}:Props) => {
   const initialValues = getInitialValues(inputs, nominations, nameKey);
   const handleSubmit = async (
       values: typeof initialValues,
-      { setSubmitting }: FormikHelpers<typeof initialValues>
+      { setSubmitting, resetForm }: FormikHelpers<typeof initialValues>
   ) => {
     try {
       const token = await recaptchaRef.current?.executeAsync();
@@ -53,8 +52,10 @@ const Form = ({inputs, note, nominations, typeForm}:Props) => {
         throw new Error('Ошибка сервера');
       }
 
+      resetForm({values: initialValues})
+
       setIsSent(true);
-      setTimeout(() => setIsSent(false), 3000);
+      setTimeout(() => setIsSent(false), 4000);
     } catch (error) {
       setIsError(true);
     } finally {
@@ -90,37 +91,49 @@ const Form = ({inputs, note, nominations, typeForm}:Props) => {
 
   return (
       <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
-        <FormikForm className="form">
-          <div>
-            {
-              inputs.map((input)=>(
-                  <Fragment key={input[nameKey]}>
-                    {
-                      (input.type!=="radios" && input.type!=="nominations")?
-                          <Field
-                              name={input[nameKey]}
-                              render={({field}: IField)=> (
-                                  <Input input={input} field={field} />
-                              )}
-                          />:
-                          <Input input={input} field={{name: input[nameKey], value:'',}} nominations={nominations}/>
-                    }
-                  </Fragment>
-              ))
-            }
-            <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                size="invisible"
-            />
-          </div>
-          <div className="form__row">
-            <Field type="submit" value={isSent? "Успешно отправлено": "Отправить"} className={cn({"btn-grey": true,"form__btn": true, "form__btn--error": isError && !isSent, "form__btn--sent": isSent})}/>
-            <div className="note">
-              <HtmlProcessing html={note}/>
-            </div>
-          </div>
-        </FormikForm>
+        {({ isSubmitting,  }) =>(
+            <FormikForm className="form">
+              <div>
+                {
+                  inputs.map((input)=>(
+                      <Fragment key={input[nameKey]}>
+                        {
+                          (input.type!=="radios" && input.type!=="nominations")?
+                              <Field
+                                  name={input[nameKey]}
+                                  render={({field}: IField)=> (
+                                      <Input input={input} field={field} />
+                                  )}
+                              />:
+                              <Input input={input} field={{name: input[nameKey], value:'',}} nominations={nominations}/>
+                        }
+                      </Fragment>
+                  ))
+                }
+                <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                    size="invisible"
+                />
+              </div>
+              <div className="form__row">
+                <Field
+                    type="submit"
+                    value={ isSubmitting? "Отправляется": isSent? "Успешно отправлено": "Отправить"}
+                    className={cn({
+                      "btn-grey": true,
+                      "form__btn": true,
+                      "form__btn--submitting": isSubmitting,
+                      "form__btn--error": isError && !isSent,
+                      "form__btn--sent": isSent,
+                    })}/>
+                <div className="note">
+                  <HtmlProcessing html={note}/>
+                </div>
+              </div>
+            </FormikForm>
+
+        )}
       </Formik>
 
   );
