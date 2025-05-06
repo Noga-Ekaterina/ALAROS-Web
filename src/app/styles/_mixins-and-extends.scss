@@ -118,7 +118,18 @@ $base-widths: (
   ));
 }
 
+@mixin main-title-font {
+  @include adaptive((
+          font-size: (
+                  default: 27rem,
+                  xxl: 60,
+                  md-book: 35rem,
+                  sm: vu(27, sm, true)
+          )
+  ));
 
+  font-weight: 400;
+}
 @mixin title-font{
   @include adaptive((
           font-size: (

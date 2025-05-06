@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала отправку форм">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала указатель, что форма отправляется">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-to-people-main-screen/festival-to-people-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,15 +229,8 @@
       <workItem from="1745845437049" duration="20000" />
       <workItem from="1745874375719" duration="3646000" />
       <workItem from="1746054982441" duration="35081000" />
-      <workItem from="1746275554033" duration="7754000" />
-    </task>
-    <task id="LOCAL-00068" summary="подделала календарь">
-      <option name="closed" value="true" />
-      <created>1742324829392</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1742324829392</updated>
+      <workItem from="1746275554033" duration="8544000" />
+      <workItem from="1746534747310" duration="2472000" />
     </task>
     <task id="LOCAL-00069" summary="чуть подправила стили dropdown">
       <option name="closed" value="true" />
@@ -620,7 +616,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746290258171</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="сделала указатель, что форма отправляется">
+      <option name="closed" value="true" />
+      <created>1746317163422</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1746317163422</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +653,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="переделала модалку" />
     <MESSAGE value="поставила правильный тег" />
     <MESSAGE value="усовершенствовала замену номинаций" />
     <MESSAGE value="фото проектов" />
@@ -674,7 +677,8 @@
     <MESSAGE value="подправила масштаб дней календаря" />
     <MESSAGE value="подправила размер партнёров" />
     <MESSAGE value="сделала отправку форм" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала отправку форм" />
+    <MESSAGE value="сделала указатель, что форма отправляется" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала указатель, что форма отправляется" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

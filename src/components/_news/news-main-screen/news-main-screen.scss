@@ -19,16 +19,11 @@
   }
 
   &__title{
-    font-size: min(27rem);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
-    font-weight: 500;
     position: relative;
     z-index: 2;
 
-    @include md-book{
-      font-size: 35rem;
-    }
+    @include main-title-font
   }
   
   &__img-wrapp{

@@ -38,15 +38,9 @@
   }
 
   h1{
-    font-size: min(27rem);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
-    font-weight: 500;
     top: -8rem;
-
-    @include sm{
-      font-size: min(22rem, 2.444vh);
-    }
+    @include main-title-font
   }
   
   &__img-wrapp {

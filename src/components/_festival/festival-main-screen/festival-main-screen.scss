@@ -40,18 +40,9 @@
 
   h1{
     text-transform: uppercase;
-    letter-spacing: 0.02em;
-    font-weight: 500;
     top: -8rem;
 
-    @include adaptive((
-            font-size: (
-                    default: 27rem,
-                    xxl: 60,
-                    md-book: 35rem,
-                    sm: vu(27, sm, true)
-            )
-    ));
+    @include main-title-font;
   }
   
   &__img-wrapp {
