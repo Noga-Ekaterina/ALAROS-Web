@@ -29,7 +29,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }
   // Обработчики с правильными сигнатурами
   const handleEnter = (node: HTMLElement) => {
     node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
-    node.style.overflow = 'hidden';
+    node.parentElement?.style.setProperty('overflow', "hidden");
   };
 
   const handleEntering = (node: HTMLElement) => {
@@ -38,11 +38,11 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }
   };
 
   const handleEntered = (node: HTMLElement) => {
-    node.style.overflow = 'visible';
+    node.parentElement?.style.setProperty('overflow', 'visible');
   };
 
   const handleExit = (node: HTMLElement) => {
-    node.style.overflow = 'hidden';
+    node.parentElement?.style.setProperty('overflow', "hidden");
     node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
   };
 
@@ -64,7 +64,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }
         const node = contentRef.current;
         if (!isOpen && (hash!==window.location.hash.slice(1) ||isInit)) {
           node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
-          node.style.overflow = 'hidden';
+          node.parentElement?.style.setProperty('overflow', "hidden");
         }else {
           node.style.transition = 'margin-top 500ms ease-in-out'
         }

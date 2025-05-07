@@ -72,12 +72,17 @@
       }
     }
 
-    input:checked+label .dropdown__nomination-item span{
+    input:checked+label .dropdown__nomination-item span, label:hover .dropdown__nomination-item span{
       color: var(--c-red);
     }
 
     label .dropdown__nomination-item span{
       color: var(--c-grey);
+      transition: 0.3s;
+
+      &:active{
+        color: #fff;
+      }
     }
 
     &__line{
