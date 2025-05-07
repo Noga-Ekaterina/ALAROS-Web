@@ -59,6 +59,7 @@ export const getProjectsQueryStr= (year: undefined| string, nomination: undefine
     projects(
       where: {${yearFilter}${nominationFilter}},
       first: ${20 }, skip: ${20 * (page - 1)}
+      orderBy: year_DESC,
     ){
       name
       nomination
