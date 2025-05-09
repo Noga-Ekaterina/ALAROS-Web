@@ -8,6 +8,7 @@ import cn from "classnames";
 import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {Autoplay} from "swiper/modules";
+import Marquee from "react-fast-marquee";
 
 interface Props{
   title: string
@@ -62,44 +63,42 @@ const FestivalJuries = ({juries, title}:Props) => {
       <div className="festival-juries" id="juries">
         <h2 className="festival-juries__title">{title}</h2>
 
-        <Swiper
-            spaceBetween={10*rem}
-            slidesPerView="auto"
-            loop
-            modules={[Autoplay]}
-            autoplay={{delay: 4000, disableOnInteraction: false}}
-        >
-          {
-            slides.map((items, index)=>(
-               <SwiperSlide key={index} className="festival-juries__slide">
-                 {
-                   items.map((item, itemIndex)=>(
-                       <div key={index+itemIndex} className="festival-juries__item"
-                        onClick={()=> openInfo(item)}
-                       >
-                         {
-                           item &&
-                             <>
-                                <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
 
-                                <div className={cn(
-                                    "festival-juries__info",
-                                    isOpenedArr.includes(item) && "festival-juries__info--opened"
-                                )}>
-                                   <div>
-                                      <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>
+        <Marquee direction='left' speed={20} className="festival-juries__running-line__player">
+          <div className="festival-juries__running-line-wrapp">
+
+            {
+              slides.map((items, index)=>(
+                  <div key={index} className="festival-juries__slide">
+                    {
+                      items.map((item, itemIndex)=>(
+                          <div key={index+itemIndex} className="festival-juries__item"
+                               onClick={()=> openInfo(item)}
+                          >
+                            {
+                                item &&
+                                <>
+                                   <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
+
+                                   <div className={cn(
+                                       "festival-juries__info",
+                                       isOpenedArr.includes(item) && "festival-juries__info--opened"
+                                   )}>
+                                      <div>
+                                         <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>
+                                      </div>
+                                      <HtmlProcessing html={item.jobTitle.html}/>
                                    </div>
-                                   <HtmlProcessing html={item.jobTitle.html}/>
-                                </div>
-                             </>
-                         }
-                       </div>
-                   ))
-                 }
-               </SwiperSlide>
-            ))
-          }
-        </Swiper>
+                                </>
+                            }
+                          </div>
+                      ))
+                    }
+                  </div>
+              ))
+            }
+          </div>
+        </Marquee>
       </div>
   );
 };

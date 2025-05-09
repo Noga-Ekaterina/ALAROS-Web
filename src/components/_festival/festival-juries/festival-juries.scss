@@ -18,6 +18,21 @@
     @include title-small-font;
   }
 
+  &__running-line {
+    width: 100%;
+    overflow: hidden;
+
+    &-wrapp {
+      display: inline-flex;
+      flex-direction: row;
+      gap: 9rem;
+    }
+
+    &__player {
+      gap: 9rem;
+    }
+  }
+
   &__item{
     aspect-ratio: 1/1;
     width: 100%;
