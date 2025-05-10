@@ -5,6 +5,9 @@
   gap: 15rem;
 
   >*{
+    color: var(--c-grey);
+    transition: 0.3s;
+
     @include adaptive((
             font-size: (
                     default: 13rem,
@@ -15,7 +18,12 @@
     ));
   }
 
+  &:hover>*{
+    color: var(--c-dark);
+  }
+
   &__title{
+    color: var(--c-dark);
     height: 44rem;
     font-weight: 300;
     display: flex;
@@ -35,7 +43,6 @@
 
   &__date{
     font-weight: 600;
-    color: #090909;
   }
 
   &__description{

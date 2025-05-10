@@ -22,8 +22,6 @@
   }
 
   *{
-    font-weight: 500;
-
     @include standard-font;
 
     @include sm{
@@ -90,16 +88,15 @@
 
   &__dropdown{
     position: relative;
-    top: -4rem;
+    top: -8rem;
     width: 100%;
     height: 6.3em;
   }
 
   .dropdown{
     &__title{
-      padding: 4rem 13rem;
+      padding: 8rem;
       *{
-        font-weight: 500;
         color: var(--c-dark);
       }
 

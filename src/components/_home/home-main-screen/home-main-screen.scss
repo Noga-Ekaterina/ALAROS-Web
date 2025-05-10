@@ -109,9 +109,6 @@
     }
 
     * {
-      font-weight: 500;
-      letter-spacing: 0.02em;
-
       @include standard-font;
 
       //@include md-book {

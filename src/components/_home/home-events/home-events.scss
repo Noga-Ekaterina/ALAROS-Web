@@ -58,12 +58,16 @@
   }
 
   p{
+    font-weight: 300;
+
     @include adaptive((
             font-size: (default: 20rem, xxl: 35, sm: 15)
     ))
   }
 
   p:last-child{
+    font-weight: 400;
+
     @include standard-font;
 
     @include sm{

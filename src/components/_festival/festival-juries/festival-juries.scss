@@ -75,18 +75,19 @@
     }
 
     *{
-      font-size: 13rem;
       color: #fff;
 
-      @include adaptive((
-              font-size: (
-                      default: 13rem,
-                      xxl: 22,
-                      xl: 18,
-                      md: 11,
-                      sm: 10
-              )
-      ));
+      //@include adaptive((
+      //        font-size: (
+      //                default: 13rem,
+      //                xxl: 22,
+      //                xl: 18,
+      //                md: 11,
+      //                sm: 10
+      //        )
+      //));
+
+      @include standard-font-small
     }
   }
 

@@ -7,24 +7,8 @@
     width: vu(480, xxl);
   }
 
-  @mixin small-font{
-    @include adaptive((
-            font-size: (
-                    default: 10rem,
-                    xxl: 18,
-                    xl: 18,
-                    md: 8,
-                    sm: 10
-            )
-    ));
-  }
-
   *{
     @include standard-font;
-  }
-
-  &__diploma{
-    font-weight: 500;
   }
 
   &__img{
@@ -75,13 +59,13 @@
     font-weight: 400;
     width: 156rem;
 
-    @include small-font;
+    @include standard-font-small;
   }
 
   &__nomination{
     color: #959595;
     padding-right: 15rem;
 
-    @include small-font;
+    @include standard-font-small;
   }
 }

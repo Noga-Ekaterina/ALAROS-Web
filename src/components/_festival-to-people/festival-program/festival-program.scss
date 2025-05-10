@@ -8,14 +8,10 @@
   }
 
   &__title{
-    font-size: 36rem;
-    font-weight: 500;
     color: var(--c-red);
     margin-bottom: 62rem;
 
-    @include sm{
-      font-size: 26rem;
-    }
+    @include title-small-font
   }
 
   &__row{

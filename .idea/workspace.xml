@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла лоадер">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла прокрутку жюри">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +98,8 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\Loader" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects\project-modal" />
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\Loader" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Festival-main" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
@@ -230,15 +245,7 @@
       <workItem from="1746275554033" duration="8544000" />
       <workItem from="1746534747310" duration="4700000" />
       <workItem from="1746625270827" duration="2431000" />
-      <workItem from="1746796490321" duration="1791000" />
-    </task>
-    <task id="LOCAL-00071" summary="замена шрифтов">
-      <option name="closed" value="true" />
-      <created>1742494581531</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1742494581531</updated>
+      <workItem from="1746796490321" duration="17114000" />
     </task>
     <task id="LOCAL-00072" summary="сделала календарь на разных стр и мелкие правки">
       <option name="closed" value="true" />
@@ -624,7 +631,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746558942013</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="поменяла прокрутку жюри">
+      <option name="closed" value="true" />
+      <created>1746798460555</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1746798460555</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +668,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="фото проектов" />
     <MESSAGE value="подправила пагинацию" />
     <MESSAGE value="поменяла лимит проектов" />
     <MESSAGE value="поменяла лимит" />
@@ -678,7 +692,8 @@
     <MESSAGE value="сделала указатель, что форма отправляется" />
     <MESSAGE value="подправила главные заги" />
     <MESSAGE value="поменяла лоадер" />
-    <option name="LAST_COMMIT_MESSAGE" value="поменяла лоадер" />
+    <MESSAGE value="поменяла прокрутку жюри" />
+    <option name="LAST_COMMIT_MESSAGE" value="поменяла прокрутку жюри" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

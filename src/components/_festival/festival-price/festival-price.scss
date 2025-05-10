@@ -8,6 +8,8 @@
   }
 
   &__title{
+    font-weight: 400;
+
     @include adaptive((
             padding-top: (default: 0.6em, xxl: 52, xl: 36, sm: 15 )
     ));

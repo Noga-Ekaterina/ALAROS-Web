@@ -9,7 +9,7 @@
   *{
     line-height: 1.8em;
     color: #fff;
-    font-weight: 300;
+    font-weight: 200;
 
     @include adaptive((
             font-size: (
@@ -116,7 +116,6 @@
     padding-top: 32rem;
 
     *{
-      font-weight: 500;
       line-height: 1em;
     }
     p{

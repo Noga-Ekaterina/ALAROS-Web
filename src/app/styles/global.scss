@@ -227,7 +227,7 @@ span{
 
   &__section{
     padding-top: 0.505em;
-    font-weight: 500;
+    font-weight: 400;
 
     @include adaptive((
             font-size: (default: 16rem, xxl: 35, xl: 24, md: 13, sm: 15)
@@ -237,15 +237,17 @@ span{
 
 .note{
   color: var(--c-red);
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 400;
+  line-height: 1.4em;
 
-  @include adaptive((
-          font-size: (
-                  default: 9rem,
-                  xxl: 17,
-                  md-book: 8,
-                  sm: 10
-          )
-  ));
+  //@include adaptive((
+  //        font-size: (
+  //                default: 9rem,
+  //                xxl: 17,
+  //                md-book: 8,
+  //                sm: 10
+  //        )
+  //));
+
+  @include standard-font-small
 }
