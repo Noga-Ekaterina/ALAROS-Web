@@ -1,3 +1,5 @@
+@import "@/app/styles/mixins-and-extends";
+
 .pagination{
   display: flex;
   justify-content: center;
@@ -5,9 +7,9 @@
   margin-bottom: 50rem;
 
   *{
-    font-size: 14rem;
-    font-weight: 500;
     color: var(--c-grey);
+
+    @include standard-font
   }
 
   &__page{
@@ -17,9 +19,9 @@
   }
 
   &__arrow{
-    width: 6rem;
+    width: 0.5em;
     flex-shrink: 0;
-    transform: translateY(1rem);
+    transform: translateY(0.17em);
 
     &--next{
       transform: rotate(180deg);

@@ -1,7 +1,17 @@
+@import "@/app/styles/mixins-and-extends";
+
 .projects-list{
   display: flex;
   flex-wrap: wrap;
-  gap: 20rem 10rem;
+  gap: 20rem 10.5rem;
+
+  @include xxl{
+    gap: 20rem 8rem;
+  }
+
+  @include sm{
+    gap: 20rem 10rem;
+  }
 
   >p{
     width: 100%;

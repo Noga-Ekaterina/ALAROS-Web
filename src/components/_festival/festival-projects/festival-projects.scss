@@ -9,10 +9,8 @@
   }
 
   &__slide{
-    width: 233rem;
-
-    @include xxl{
-      width: vu(480, xxl);
-    }
+    @include adaptive((
+            width: (default: 233rem, xxl: 470, sm: 170)
+    ));
   }
 }

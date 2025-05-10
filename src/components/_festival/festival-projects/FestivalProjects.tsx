@@ -15,6 +15,7 @@ interface Props{
 
 const FestivalProjects = ({pageData}:Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
+  const bigDesktopScreen = useMediaQuery({minWidth: 2560});
 
   return (
       <div className="festival-projects" id="projects">
@@ -26,7 +27,7 @@ const FestivalProjects = ({pageData}:Props) => {
             </div>
           </div>
 
-          <BigSlider slidesPerView={mobileScreen? 2:4}>
+          <BigSlider slidesPerView={mobileScreen? 2: bigDesktopScreen? 5:4}>
             {
               pageData.projects.map(project=>(
                   <SwiperSlide key={`${project.year} ${project.number}`} className="festival-projects__slide">

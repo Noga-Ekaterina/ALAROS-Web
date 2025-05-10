@@ -1,11 +1,9 @@
 @import "@/app/styles/mixins-and-extends";
 
 .project{
-  width: 233rem;
-
-  @include xxl{
-    width: vu(480, xxl);
-  }
+  @include adaptive((
+          width: (default: 233rem, xxl: 470, sm: 170)
+  ));
 
   *{
     @include standard-font;
