@@ -43,17 +43,19 @@ const FestivalPremiya = ({pageData}: Props) => {
   const cols = getCols(pageData.premiyaSteps)
 
   return (
-      <div className="container festival-premiya" id="premiya">
-        <div className="titles-block">
-          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.premiyaTitle)}</h2>
-          <div className="titles-block__section">
-            <HtmlProcessing html={pageData.premiyaRightSignature.html}/>
+      <div className="festival-premiya" id="premiya">
+        <div className="container">
+          <div className="titles-block">
+            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.premiyaTitle)}</h2>
+            <div className="titles-block__section">
+              <HtmlProcessing html={pageData.premiyaRightSignature.html}/>
+            </div>
           </div>
-        </div>
-        <div className="festival-premiya__list">
-          {
-            cols.map(step=>step)
-          }
+          <div className="festival-premiya__list">
+            {
+              cols.map(step => step)
+            }
+          </div>
         </div>
       </div>
   );

@@ -11,6 +11,7 @@
   }
 
   .form &__btn{
+    align-self: start;
 
     &--error{
       color: var(--c-grey);

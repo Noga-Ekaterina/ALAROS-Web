@@ -1,6 +1,11 @@
 @import "../../../app/styles/mixins-and-extends";
 .festival-premiya{
+  background: #fff;
   padding-block: 48rem 85rem;
+
+  @include xxl{
+    padding-block: vu(56, xxl) vu(140, xxl);
+  }
 
   &__list{
     display: flex;
@@ -33,10 +38,15 @@
   &__step{
     display: flex;
     gap: 45rem;
+
+    @include xxl{
+      gap: vu(147, xxl);
+    }
   }
 
   &__text{
     >*:not(.note){
+      line-height: 1.3em;
       @include xxl{
         width: vu(587, xxl);
       }
@@ -50,10 +60,6 @@
     justify-content: space-between;
     width: calc(50% - 32rem);
 
-    @include xxl{
-      gap: 40rem;
-    }
-
     @include sm{
       width: 100%;
     }
@@ -62,6 +68,11 @@
   &__num{
     font-size: 21rem;
     font-weight: 200;
+    font-variant-numeric: tabular-nums;
+
+    @include xxl{
+      font-size: vu(50, xxl);
+    }
   }
 
   .note{

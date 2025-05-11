@@ -40,13 +40,9 @@
     }
 
     p{
-      font-size: 10rem;
       color: var(--c-grey);
-      font-weight: 500;
 
-      @include xxl{
-        font-size: vu(18, xxl);
-      }
+      @include standard-font-small
     }
   }
 }

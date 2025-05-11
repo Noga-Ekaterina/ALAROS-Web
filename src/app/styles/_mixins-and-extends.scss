@@ -153,6 +153,7 @@ $base-widths: (
   ));
 
   font-weight: 300;
+  line-height: 1.05;
 }
 
 @mixin title-small-font{
@@ -173,7 +174,7 @@ $base-widths: (
   text-align: center;
   color: var(--c-dark);
   background: var(--c-grey-bg-light);
-  width: 12.313em;
+  width: 12em;
   padding: 10rem;
 
   @include adaptive((

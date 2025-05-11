@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки шрифтов главной и main festival">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="переверстала алгоритмы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/FestivalProjects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/festival-projects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/festival-projects.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-list/projects-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-list/projects-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pagination/pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination/pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,14 +233,7 @@
       <workItem from="1746534747310" duration="4700000" />
       <workItem from="1746625270827" duration="2431000" />
       <workItem from="1746796490321" duration="22252000" />
-    </task>
-    <task id="LOCAL-00073" summary="подправила фона">
-      <option name="closed" value="true" />
-      <created>1742937168887</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1742937168887</updated>
+      <workItem from="1746966818352" duration="8067000" />
     </task>
     <task id="LOCAL-00074" summary="подправила фона">
       <option name="closed" value="true" />
@@ -626,7 +619,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746891921396</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="переверстала алгоритмы">
+      <option name="closed" value="true" />
+      <created>1746973468641</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1746973468647</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -655,7 +656,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="поменяла лимит проектов" />
     <MESSAGE value="поменяла лимит" />
     <MESSAGE value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
     <MESSAGE value="забыла компанент" />
@@ -680,7 +680,8 @@
     <MESSAGE value="поменяла лоадер" />
     <MESSAGE value="поменяла прокрутку жюри" />
     <MESSAGE value="правки шрифтов главной и main festival" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки шрифтов главной и main festival" />
+    <MESSAGE value="переверстала алгоритмы" />
+    <option name="LAST_COMMIT_MESSAGE" value="переверстала алгоритмы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
