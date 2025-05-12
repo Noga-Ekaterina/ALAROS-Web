@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="переверстала алгоритмы">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="переверстала алгоритмы и почты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,15 +231,7 @@
       <workItem from="1746534747310" duration="4700000" />
       <workItem from="1746625270827" duration="2431000" />
       <workItem from="1746796490321" duration="22252000" />
-      <workItem from="1746966818352" duration="8067000" />
-    </task>
-    <task id="LOCAL-00074" summary="подправила фона">
-      <option name="closed" value="true" />
-      <created>1742941379356</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1742941379356</updated>
+      <workItem from="1746966818352" duration="23088000" />
     </task>
     <task id="LOCAL-00075" summary="анимация перхода между стр">
       <option name="closed" value="true" />
@@ -627,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746973468647</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="переверстала алгоритмы и почты">
+      <option name="closed" value="true" />
+      <created>1746999806240</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1746999806241</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +654,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="поменяла лимит" />
     <MESSAGE value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
     <MESSAGE value="забыла компанент" />
     <MESSAGE value="правки в модалке и начала править шрифты" />
@@ -681,7 +678,8 @@
     <MESSAGE value="поменяла прокрутку жюри" />
     <MESSAGE value="правки шрифтов главной и main festival" />
     <MESSAGE value="переверстала алгоритмы" />
-    <option name="LAST_COMMIT_MESSAGE" value="переверстала алгоритмы" />
+    <MESSAGE value="переверстала алгоритмы и почты" />
+    <option name="LAST_COMMIT_MESSAGE" value="переверстала алгоритмы и почты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -29,9 +29,9 @@ export default function RootLayout({
       <Suspense fallback={<Loading />}>
           <SmoothScrolling root={true}>
             {children}
+            <Footer/>
           </SmoothScrolling>
       </Suspense>
-      <Footer/>
       <ToTop/>
       <Scroll/>
       </body>

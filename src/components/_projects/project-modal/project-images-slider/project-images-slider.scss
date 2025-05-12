@@ -127,7 +127,7 @@
   }
 
   &__scale{
-    position: absolute;
+    position: fixed;
     left: var(--p-y);
     top: 25rem;
     z-index: 9999;
