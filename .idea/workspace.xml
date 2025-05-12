@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="переверстала алгоритмы и почты">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="анимация при перескроле">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,15 +231,7 @@
       <workItem from="1746534747310" duration="4700000" />
       <workItem from="1746625270827" duration="2431000" />
       <workItem from="1746796490321" duration="22252000" />
-      <workItem from="1746966818352" duration="23088000" />
-    </task>
-    <task id="LOCAL-00075" summary="анимация перхода между стр">
-      <option name="closed" value="true" />
-      <created>1742949488245</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1742949488245</updated>
+      <workItem from="1746966818352" duration="32108000" />
     </task>
     <task id="LOCAL-00076" summary="поменяла механику слайдера партнёров">
       <option name="closed" value="true" />
@@ -625,7 +617,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746999806241</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="анимация при перескроле">
+      <option name="closed" value="true" />
+      <created>1747070814488</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1747070814488</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +654,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="пагинация и теперь лоадер появляется при изменении параметров запроса" />
     <MESSAGE value="забыла компанент" />
     <MESSAGE value="правки в модалке и начала править шрифты" />
     <MESSAGE value="правки меню и анимация dropdown" />
@@ -679,7 +678,8 @@
     <MESSAGE value="правки шрифтов главной и main festival" />
     <MESSAGE value="переверстала алгоритмы" />
     <MESSAGE value="переверстала алгоритмы и почты" />
-    <option name="LAST_COMMIT_MESSAGE" value="переверстала алгоритмы и почты" />
+    <MESSAGE value="анимация при перескроле" />
+    <option name="LAST_COMMIT_MESSAGE" value="анимация при перескроле" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

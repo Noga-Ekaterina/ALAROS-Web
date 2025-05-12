@@ -37,6 +37,10 @@
     cursor: pointer;
     transition: 0.3s;
 
+    @include xxl{
+      gap: vu(25, xxl);
+    }
+
     &:hover{
       border-bottom: max(1px, 1rem) solid currentColor;
     }
@@ -88,12 +92,21 @@
   &__arrow{
     width: 14rem;
 
+    @include xxl{
+      width: vu(20, xxl);
+    }
+
     svg{
       width: auto;
       height: 14rem;
       transform: rotate(-90deg);
       position: relative;
       top: 2rem;
+
+      @include xxl{
+        height: vu(20, xxl);
+        top: vu(1, xxl);
+      }
 
       .open &{
         transform: rotate(90deg);

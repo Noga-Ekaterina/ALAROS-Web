@@ -7,6 +7,10 @@
   z-index: 3;
   margin-block: 52rem 35rem;
 
+  @include xxl{
+    gap: vu(5, xxl);
+  }
+
   @include sm{
     flex-wrap: wrap;
     gap: 6rem;
@@ -15,17 +19,19 @@
   *{
     font-size: 13rem;
 
+    @include xxl{
+      font-size: vu(22, xxl);
+    }
+
     @include sm{
       font-size: 18rem;
     }
   }
 
   &__year{
-    width: 102rem;
-
-    @include sm{
-      width: 125rem;
-    }
+    @include adaptive((
+            width: (default: 102rem, xxl: 185 , sm: 125)
+    ));
 
     *{
       font-variant-numeric: tabular-nums;
@@ -33,12 +39,14 @@
   }
 
   &__nomination{
-    width: 710rem;
     position: relative;
     z-index: 3;
 
+    @include adaptive((
+            width: (default: 710rem, xxl: 1952, sm: 100%)
+    ));
+
     @include sm{
-      width: 100%;
       order: -1;
     }
 
@@ -64,21 +72,25 @@
   }
 
   &__btn{
-    width: 145rem;
-    padding: 15rem 14rem 14rem;
+    padding: 1.154em 1.079em 1.079em;
     background: var(--c-green-text);
     color: #fff;
+    text-align: center;
 
-    @include sm{
-      width: 219rem;
-      text-align: center;
+    @include xxl{
+      font-size: vu(25, xxl);
+      padding-block: 0;
     }
+
+    @include adaptive((
+            width: (default: 145rem, xxl: 285, sm: 219)
+    ));
   }
 
   .dropdown{
     &__title{
       background: var(--c-grey-bg);
-      padding: 14rem;
+      padding: 1.079em;
 
       &:hover{
         border-bottom: none;
@@ -87,6 +99,12 @@
       &-text{
         position: relative;
         top: 2rem;
+      }
+    }
+
+    &__arrow svg{
+      @include xxl{
+        top: vu(5, xxl);
       }
     }
 
