@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="анимация при перескроле">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
-    </list>
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="масштаб фильтра и dropdown на xxl" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,15 +226,7 @@
       <workItem from="1746534747310" duration="4700000" />
       <workItem from="1746625270827" duration="2431000" />
       <workItem from="1746796490321" duration="22252000" />
-      <workItem from="1746966818352" duration="32108000" />
-    </task>
-    <task id="LOCAL-00076" summary="поменяла механику слайдера партнёров">
-      <option name="closed" value="true" />
-      <created>1742995828047</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1742995828047</updated>
+      <workItem from="1746966818352" duration="32692000" />
     </task>
     <task id="LOCAL-00077" summary="навела порядок в серых">
       <option name="closed" value="true" />
@@ -625,7 +612,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747070814488</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="масштаб фильтра и dropdown на xxl">
+      <option name="closed" value="true" />
+      <created>1747082268940</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1747082268940</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,7 +649,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="забыла компанент" />
     <MESSAGE value="правки в модалке и начала править шрифты" />
     <MESSAGE value="правки меню и анимация dropdown" />
     <MESSAGE value="правки шапки и догруз фото" />
@@ -679,7 +673,8 @@
     <MESSAGE value="переверстала алгоритмы" />
     <MESSAGE value="переверстала алгоритмы и почты" />
     <MESSAGE value="анимация при перескроле" />
-    <option name="LAST_COMMIT_MESSAGE" value="анимация при перескроле" />
+    <MESSAGE value="масштаб фильтра и dropdown на xxl" />
+    <option name="LAST_COMMIT_MESSAGE" value="масштаб фильтра и dropdown на xxl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
