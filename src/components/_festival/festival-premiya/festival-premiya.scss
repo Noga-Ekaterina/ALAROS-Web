@@ -69,6 +69,10 @@
     justify-content: space-between;
     width: calc(50% - 32rem);
 
+    @include xxl{
+      width: 50%;
+    }
+
     @include sm{
       width: 100%;
     }
