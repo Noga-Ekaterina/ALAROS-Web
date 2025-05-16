@@ -1,23 +1,33 @@
 @import "../../../app/styles/mixins-and-extends";
-.festival-premiya{
+.festival-premiya {
   background: #fff;
-  padding-block: 48rem 85rem;
+  padding-block: 48rem 55rem;
 
-  @include xxl{
+  @include xxl {
     padding-block: vu(56, xxl) vu(140, xxl);
+  }
+
+  .container{
+    padding-left: vu(50, xl);
+    @include lg {
+      padding-left: 0;
+    }
   }
 
   &__list{
     display: flex;
-    gap: 64rem;
     margin-top: 44rem;
-    padding-inline: 80rem 20rem;
+    padding-inline: 68rem 20rem;
     font-weight: 300;
 
     @include standard-font;
 
     @include xxl{
       padding-inline: 80rem vu(275, xxl);
+    }
+
+    @include lg{
+      padding-inline: 80rem 20rem;
     }
 
     @include sm{
@@ -37,11 +47,10 @@
 
   &__step{
     display: flex;
-    gap: 45rem;
 
-    @include xxl{
-      gap: vu(147, xxl);
-    }
+    @include adaptive((
+            gap: (default: 57rem, xxl: 147, xl: 113, sm: 45)
+    ))
   }
 
   &__text{

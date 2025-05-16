@@ -121,7 +121,7 @@ $base-widths: (
 @mixin standard-font-small{
   @include adaptive((
           font-size: (
-                  default: 10rem,
+                  default: 9rem,
                   xxl: 18,
                   xl: 18,
                   md: 8,
