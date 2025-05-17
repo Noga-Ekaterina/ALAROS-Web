@@ -8,7 +8,8 @@ export const fetchData=async <T>(query: string): Promise<null|string|T>=> {
       method: 'POST',
       url: process.env.NEXT_PUBLIC_API_URL,
       headers: {
-        'Authorization': process.env.TOKEN
+        'Authorization': process.env.TOKEN,
+        "cache-control":"no-cache"
       },
       data: {
         query
@@ -46,18 +47,19 @@ export const getNewsQueryStr=(page: number)=>(
 export const getProjectsQueryStr= (year: undefined| string, nomination: undefined |string, page: number)=>{
   const nominationFilter= nomination? `nominationId: "${nomination}"`:''
   const yearFilter= year? `year: ${year}, `:""
+  const where= (year || nomination)? `where: {${yearFilter}${nominationFilter}},`:""
 
   return (`
     projectsConnection(
       stage: PUBLISHED,
-      where: {${yearFilter}${nominationFilter}}
+      ${where}
     ) {
       aggregate {
         count
       }
     }
     projects(
-      where: {${yearFilter}${nominationFilter}},
+      ${where}
       first: ${20 }, skip: ${20 * (page - 1)}
       orderBy: year_DESC,
     ){
