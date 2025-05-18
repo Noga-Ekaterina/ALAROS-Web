@@ -68,14 +68,13 @@ function SmoothScrolling({
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     const currentTouchY = e.touches[0].clientY;
-    const deltaY = currentTouchY - lastTouchY.current;
+    const deltaY = -(currentTouchY - lastTouchY.current);
     lastTouchY.current = currentTouchY;
 
     const el = (e.target as HTMLElement).closest(".lenis.lenis-smooth");
     if (!el) return;
 
     if (enableScrollTransfer) {
-      e.preventDefault();
       handleScrollTransfer(deltaY, el)
     } else {
       const {isTop, isBottom} =isEnd(deltaY, el)
@@ -119,15 +118,6 @@ function SmoothScrolling({
     });
 
     return () => observer.disconnect();
-  }, [lenis]);
-
-  // Анимация Lenis
-  useEffect(() => {
-    const animate = (time: number) => {
-      lenis?.raf(time);
-      requestAnimationFrame(animate);
-    };
-    requestAnimationFrame(animate);
   }, [lenis]);
 
   return (
