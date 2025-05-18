@@ -12,7 +12,7 @@ const Scroll = () => {
     console.log(pathname)
 
     window.scrollTo(0,0)
-    setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 100)
+    setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 200)
   }, [pathname]);
   return (
       <>

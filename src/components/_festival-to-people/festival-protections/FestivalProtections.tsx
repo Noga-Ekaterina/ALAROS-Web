@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import "./festival-protections.scss"
 import Detalis from "../../detalis/Detalis";
@@ -6,6 +7,8 @@ import {createDate, formaterDate} from "../../../utils/date";
 import {IProtectionsDay} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SmoothScrolling from "@/app/SmoothScrolling";
+import {useLenis} from "@studio-freight/react-lenis";
+import {smoothScroll} from "@/utils/smoothScroll";
 
 interface Props {
   title: string
@@ -25,7 +28,7 @@ const FestivalProtections = ({title, protectionsDays}:Props) => {
 
               return(
                   <Detalis title={<span>{formaterDate(item.date)} | {day}</span>} startIsOpen={index===0}>
-                    <SmoothScrolling>
+                    <SmoothScrolling enableScrollTransfer={true}>
                       <HtmlProcessing html={item.protections.html}/>
                     </SmoothScrolling>
                   </Detalis>

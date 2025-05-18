@@ -1,5 +1,4 @@
-  import {ReactNode} from "react";
-import {getMonthNumberOfDays} from "../utils/date";
+import {ReactNode} from "react";
 
 export interface IWithClass {
   className?: string

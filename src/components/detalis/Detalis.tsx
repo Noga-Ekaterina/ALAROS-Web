@@ -69,7 +69,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }
           node.style.transition = 'margin-top 500ms ease-in-out'
         }
       }
-    }, 100)
+    }, 200)
   }, [isOpen, rem]);
 
   useEffect(() => {

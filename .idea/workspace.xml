@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="масштаб фильтра и dropdown на xxl" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла запрос проектов">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Scroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/tehnic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/tehnic.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,30 +236,10 @@
       <workItem from="1746625270827" duration="2431000" />
       <workItem from="1746796490321" duration="22252000" />
       <workItem from="1746966818352" duration="32692000" />
-    </task>
-    <task id="LOCAL-00077" summary="навела порядок в серых">
-      <option name="closed" value="true" />
-      <created>1742998571995</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1742998571995</updated>
-    </task>
-    <task id="LOCAL-00078" summary="навела порядок в серых">
-      <option name="closed" value="true" />
-      <created>1743002157949</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1743002157949</updated>
-    </task>
-    <task id="LOCAL-00079" summary="выровняла красные тексты">
-      <option name="closed" value="true" />
-      <created>1743008598905</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1743008598905</updated>
+      <workItem from="1747343161908" duration="12710000" />
+      <workItem from="1747398542475" duration="19466000" />
+      <workItem from="1747484605974" duration="15202000" />
+      <workItem from="1747570965765" duration="8183000" />
     </task>
     <task id="LOCAL-00080" summary="подправила фильтр">
       <option name="closed" value="true" />
@@ -620,7 +609,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747082268940</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="переверстала алгоритмы">
+      <option name="closed" value="true" />
+      <created>1747431839649</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1747431839649</updated>
+    </task>
+    <task id="LOCAL-00127" summary="переверстала алгоритмы">
+      <option name="closed" value="true" />
+      <created>1747432822819</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1747432822819</updated>
+    </task>
+    <task id="LOCAL-00128" summary="поменяла запрос проектов">
+      <option name="closed" value="true" />
+      <created>1747490073988</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1747490073988</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +662,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки в модалке и начала править шрифты" />
     <MESSAGE value="правки меню и анимация dropdown" />
     <MESSAGE value="правки шапки и догруз фото" />
     <MESSAGE value="догруз фото проектов" />
@@ -670,11 +682,12 @@
     <MESSAGE value="поменяла лоадер" />
     <MESSAGE value="поменяла прокрутку жюри" />
     <MESSAGE value="правки шрифтов главной и main festival" />
-    <MESSAGE value="переверстала алгоритмы" />
     <MESSAGE value="переверстала алгоритмы и почты" />
     <MESSAGE value="анимация при перескроле" />
     <MESSAGE value="масштаб фильтра и dropdown на xxl" />
-    <option name="LAST_COMMIT_MESSAGE" value="масштаб фильтра и dropdown на xxl" />
+    <MESSAGE value="переверстала алгоритмы" />
+    <MESSAGE value="поменяла запрос проектов" />
+    <option name="LAST_COMMIT_MESSAGE" value="поменяла запрос проектов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
