@@ -114,8 +114,8 @@ $base-widths: (
 
 @mixin standard-font-big{
   @include adaptive((
-          font-size: (default: 20rem, xl: 34, xxl: 35, sm: 15)
-  ));
+          font-size: (default: 17rem, xxl: 35, xl: 25, md: 15, sm: 15)
+  ))
 }
 
 @mixin standard-font-small{
@@ -123,7 +123,7 @@ $base-widths: (
           font-size: (
                   default: 9rem,
                   xxl: 18,
-                  xl: 18,
+                  xl: 16,
                   md: 8,
                   sm: 10
           )
@@ -145,7 +145,7 @@ $base-widths: (
 @mixin title-font{
   @include adaptive((
           font-size: (
-                  default: 42rem,
+                  default: 32rem,
                   xxl: 77,
                   xl: 60,
                   sm: 28
@@ -159,9 +159,10 @@ $base-widths: (
 @mixin title-small-font{
   @include adaptive((
           font-size: (
-                  default: 36rem,
+                  default: 23rem,
                   xxl: 55,
                   xl: 45,
+                  md: 27,
                   sm: 26
           )
   ));
@@ -174,16 +175,18 @@ $base-widths: (
   text-align: center;
   color: var(--c-dark);
   background: var(--c-grey-bg-light);
-  width: 12em;
-  padding: 10rem;
+  //padding: 10rem;
+  width: var(--width);
+  line-height: calc(var(--width)/4.25);
 
   @include adaptive((
           font-size: (
-                  default: 16rem,
+                  default: 12rem,
                   xxl: 27,
-                  xl: 25,
+                  xl: 18,
                   sm: 13
-          )
+          ),
+         --width: (default: 174rem, xxl: 320)
   ));
 
   &:hover{

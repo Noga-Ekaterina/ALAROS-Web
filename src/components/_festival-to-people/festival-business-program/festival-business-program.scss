@@ -23,15 +23,15 @@
     }
 
     .container>p:first-child {
-      font-size: 20rem;
       margin-bottom: 17.333rem;
 
+      @include standard-font-big
     }
 
     h2{
-      font-size: 42rem;
-      font-weight: 300;
       max-width: 828rem;
+
+      @include title-font;
 
       @include sm{
         font-size: 28rem;
@@ -39,14 +39,23 @@
       }
 
       ~p{
-        font-size: 13rem;
-        width: 560rem;
-        margin-inline: auto 81.5rem;
+        width: 43.3em;
+        margin-left: 328rem;
         margin-bottom: 17.333rem;
+
+        @include adaptive((
+                font-size: (
+                        default: 10rem,
+                        xxl: 22,
+                        xl: 18,
+                        md: 11,
+                        sm: 13
+                )
+        ));
 
         @include sm{
           width: 100%;
-          margin-inline: 0;
+          margin-left: 0;
         }
 
         + h3, +.festival-business-program__content, + .swiper{
@@ -56,12 +65,12 @@
     }
 
     h3{
-      font-size: 36rem;
+      @include title-small-font;
+
       font-weight: 400;
       margin-bottom: 36rem;
 
       @include sm{
-        font-size: 20rem;
         font-weight: 500;
       }
     }
@@ -69,16 +78,20 @@
 
   &__content{
     display: flex;
-    gap: 94rem;
+    gap: vu(301, xl);
+
+    @include lg{
+      gap: 94rem;
+    }
   }
 
   &__rolle{
-    font-size: 20rem;
     font-weight: 400;
     margin-bottom: 36rem;
 
+    @include standard-font-big;
+
     @include sm{
-      font-size: 15rem;
       font-weight: 400;
       margin-bottom: 20rem;
     }
@@ -88,7 +101,11 @@
     display: flex;
     flex-direction: column;
     gap: 37rem;
-    width: 234rem;
+    width: vu(315, xl);
+
+    @include lg{
+      width: 234rem;
+    }
 
     .session-user__img{
       margin-bottom: 28rem;
@@ -98,10 +115,14 @@
   &__speakers{
     display: flex;
     flex-wrap: wrap;
-    gap: 37rem 85rem;
+    gap: 37rem 91rem;
 
     .session-user{
-      width: 151rem;
+      width: vu(214, xl);
+
+      @include lg{
+        width: 151rem;
+      }
     }
   }
 
@@ -112,7 +133,7 @@
 
 .session-user{
   *{
-    font-size: max(10rem, 10px);
+    @include standard-font-small
   }
 
   &__img{

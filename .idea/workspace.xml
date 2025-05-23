@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поменяла запрос проектов">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="починила скрол на сенсере">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Scroll.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/FestivalProtections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/tehnic.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/tehnic.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/HomeNewsSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/HomeNewsSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,23 +249,10 @@
       <workItem from="1747343161908" duration="12710000" />
       <workItem from="1747398542475" duration="19466000" />
       <workItem from="1747484605974" duration="15202000" />
-      <workItem from="1747570965765" duration="8183000" />
-    </task>
-    <task id="LOCAL-00080" summary="подправила фильтр">
-      <option name="closed" value="true" />
-      <created>1743028735070</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1743028735070</updated>
-    </task>
-    <task id="LOCAL-00081" summary="правки в слайдерах">
-      <option name="closed" value="true" />
-      <created>1743120279937</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1743120279938</updated>
+      <workItem from="1747570965765" duration="12326000" />
+      <workItem from="1747744922550" duration="20505000" />
+      <workItem from="1747865049498" duration="6517000" />
+      <workItem from="1747918240038" duration="19635000" />
     </task>
     <task id="LOCAL-00082" summary="работа с отступами исправление detalis">
       <option name="closed" value="true" />
@@ -633,7 +630,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747490073988</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="сделала чтобы скрол не вис">
+      <option name="closed" value="true" />
+      <created>1747584518785</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1747584518786</updated>
+    </task>
+    <task id="LOCAL-00130" summary="починила скрол на сенсере">
+      <option name="closed" value="true" />
+      <created>1747588061514</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1747588061514</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,8 +675,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки меню и анимация dropdown" />
-    <MESSAGE value="правки шапки и догруз фото" />
     <MESSAGE value="догруз фото проектов" />
     <MESSAGE value="исправила размеры на главной" />
     <MESSAGE value="перевёрстка подвала" />
@@ -687,7 +698,9 @@
     <MESSAGE value="масштаб фильтра и dropdown на xxl" />
     <MESSAGE value="переверстала алгоритмы" />
     <MESSAGE value="поменяла запрос проектов" />
-    <option name="LAST_COMMIT_MESSAGE" value="поменяла запрос проектов" />
+    <MESSAGE value="сделала чтобы скрол не вис" />
+    <MESSAGE value="починила скрол на сенсере" />
+    <option name="LAST_COMMIT_MESSAGE" value="починила скрол на сенсере" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -137,35 +137,32 @@
     display: flex;
 
     &-wrapp{
-      width: 951rem;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       gap: 17rem;
 
-      @include xxl{
-        width: vu(2108, xxl);
-      }
+      @include adaptive((
+              width: (default: 969rem, xxl: 2066, xl: 1743, sm: 100%)
+      ));
 
       @include sm{
-        width: 100%;
         padding: 0 var(--p-y);
         flex-direction: column;
       }
     }
 
     &-slider{
-      width: 582rem;
       margin-inline:0;
 
-      @include sm{
-        width: 100%;
-      }
+      @include adaptive((
+              width: (default: 600rem, xl: 1056, sm: 100%)
+      ));
     }
 
     img{
-      height: 191rem;
-      width: 161rem;
+      height: 177rem;
+      width: 153rem;
       object-fit: cover;
       object-position: center;
 
@@ -184,7 +181,8 @@
     display: flex;
     padding: 18rem 18rem var(--p-y) var(--p-y);
     flex-direction: column;
-    width: 420rem;
+    justify-content: space-between;
+    width: 438rem;
 
     @include lg{
       flex-direction: row;
@@ -194,7 +192,6 @@
       flex-direction: column;
       width: 180rem;
       padding: 15rem;
-      justify-content: space-between;
     }
   }
 
@@ -207,13 +204,12 @@
     align-self: start;
 
     @include adaptive((
-            width: (default: 165rem, xl: 100%, sm: 100%)
+            width: (default: 195rem, xl: 100%, sm: 100%)
     ));
 
     *{
-      @include adaptive((
-              font-size: (default: 20rem, xxl: 35, sm: 15)
-      ))
+      @include standard-font-big
+
     }
   }
 
@@ -229,9 +225,10 @@
     color: var(--c-grey-dark);
 
     @include adaptive((
-            font-size: (default: 11rem, xxl: 22),
-            width: (default: 193rem, xxl: 420, sm: 100%),
+            width: (default: 193rem, xxl: 420, xl: 316, sm: 100%),
     ));
+
+    @include standard-font-small
   }
 
   &__btn{

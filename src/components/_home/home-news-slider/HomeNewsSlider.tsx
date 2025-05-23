@@ -16,7 +16,7 @@ interface Props{
 const HomeNewsSlider = ({title, news}: Props) => {
   const arrIndexSmall= [2, 5, 7, 10]
   const mobileScreen = useMediaQuery({maxWidth: 660});
-  const bigDesktopScreen = useMediaQuery({minWidth: 2560});
+  const bigDesktopScreen = useMediaQuery({minWidth: 1920});
 
   return (
       <div className="home-news-slider">

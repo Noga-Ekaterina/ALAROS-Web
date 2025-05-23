@@ -131,7 +131,7 @@
 
       @include adaptive((
               font-size: (
-                      default: vu(26, lg, true),
+                      default: vu(28, lg, true),
                       xxl:vu(48.67, xxl, true),
                       //xl: vu(86, xl, true),
                       sm: vu(33, sm, trus)
@@ -202,6 +202,7 @@
         position: relative;
         z-index: 3;
         background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(1.0659056901931763px);
         height: 50%;
         padding-inline: var(--p-y);
         padding-block: 10rem;

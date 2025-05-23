@@ -14,7 +14,7 @@
 
   &__slide{
     @include adaptive((
-            width: (default: 397rem, xxl: 692)
+            width: (default: 397rem, xxl: 692, xl: 520)
     ));
 
     &--small{

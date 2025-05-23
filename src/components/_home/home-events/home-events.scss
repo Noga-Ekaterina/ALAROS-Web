@@ -60,9 +60,7 @@
   p{
     font-weight: 300;
 
-    @include adaptive((
-            font-size: (default: 20rem, xxl: 35, sm: 15)
-    ))
+    @include standard-font-big
   }
 
   p:last-child{

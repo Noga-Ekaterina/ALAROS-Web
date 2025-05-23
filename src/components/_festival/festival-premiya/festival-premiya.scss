@@ -7,9 +7,14 @@
     padding-block: vu(56, xxl) vu(140, xxl);
   }
 
+  @include lg{
+    padding-block: 52rem 70rem;
+  }
+
   .container{
     padding-left: vu(50, xl);
-    @include lg {
+
+    @include md {
       padding-left: 0;
     }
   }

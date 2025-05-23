@@ -10,8 +10,9 @@
 
     @include adaptive((
             font-size: (
-                    default: 13rem,
+                    default: 11rem,
                     xxl: 22,
+                    xl: 16,
                     md: 10,
                     sm: 13
             )
@@ -30,7 +31,7 @@
     align-items: flex-end;
 
     @include adaptive((
-            font-size: (default: 17rem, xxl: 29)
+            font-size: (default: 17rem, xxl: 29, xl: 23)
     ))
   }
 

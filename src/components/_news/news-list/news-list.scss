@@ -1,8 +1,12 @@
 @import "../../../app/styles/mixins-and-extends";
 
 .news-list {
-  padding-block: 26rem 32rem;
+  padding-bottom: 32rem;
   position: relative;
+
+  @include lg{
+    padding-top: 26rem;
+  }
 
   *{
     position: relative;
@@ -23,7 +27,11 @@
   }
 
   .titles-block{
-    margin-bottom: 78rem;
+    margin-bottom: 50rem;
+
+    @include lg{
+      margin-bottom: 78rem;
+    }
   }
 
   &__row {

@@ -11,7 +11,7 @@
     font-weight: 400;
 
     @include adaptive((
-            padding-top: (default: 0.6em, xxl: 52, xl: 36, sm: 15 )
+            padding-top: (default: 0.9em, xxl: 52, xl: 36, md: 0.6em, sm: 15 )
     ));
   }
 
@@ -37,7 +37,7 @@
         letter-spacing: 0.01em;
 
         @include adaptive((
-                font-size: (default: 16rem, xl: 22, xxl: 27)
+                font-size: (default: 14rem, xxl: 27, xl: 22, md: 16rem)
         ));
       }
     }

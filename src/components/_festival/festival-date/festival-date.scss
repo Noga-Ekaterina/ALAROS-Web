@@ -33,21 +33,12 @@
     @include xxl{
       padding-top: vu(38, xxl);
     }
-
-    @include lg{
-      font-weight: 500;
-    }
-
   }
 
   &__date{
-    font-size: 114rem;
+    font-size: 112rem;
     font-weight: 200;
     line-height: 0.85em;
-
-    @include lg{
-      font-weight: 300;
-    }
 
     @include sm{
       font-size: 72rem;

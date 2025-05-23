@@ -3,8 +3,20 @@
   background: #fff;
   padding-block: 25rem 50rem;
 
+  @mixin table-font{
+    @include adaptive((
+            font-size: (
+                    default: 12rem,
+                    xxl: 27,
+                    xl: 22,
+                    md: 10,
+                    sm: 13
+            )
+    ));
+  }
+
   *{
-    font-size: 13rem;
+    @include table-font
   }
 
   &__title{
@@ -32,6 +44,8 @@
 
     *{
       color: var(--c-grey);
+
+      @include standard-font-small;
     }
   }
 
@@ -45,21 +59,17 @@
 
   &__day{
     color: var(--c-red);
-    font-weight: 600;
+    font-weight: 500;
   }
 
   &__time{
-    font-size: 10.5rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #0B2719;
-
-    @include sm{
-      font-size: 13rem;
-    }
   }
 
   &__text{
     max-width: 374rem;
+    font-weight: 300;
 
     @include sm{
       width: 293rem;
@@ -79,18 +89,21 @@
     }
 
     *{
-      font-size: 9.6rem;
+      @include standard-font-small
     }
 
     b, strong{
-      font-weight: 600;
+      font-weight: 500;
     }
 
     &__btn {
       padding: 13rem 0 14rem;
       text-align: left;
-      font-weight: 600;
       background: #fff;
+
+      *{
+        font-weight: 500;
+      }
     }
 
     &__icon{
@@ -98,20 +111,23 @@
       font-weight:500;
       color: var(--c-red);
     }
+
+    &__content{
+      padding-bottom: 23rem;
+    }
   }
 
   &__business-program{
     display: flex;
     flex-direction: column;
     gap: 12.48rem;
-    margin-bottom: 31rem;
   }
 
   .detalis &__full-version-business-program{
-    margin-bottom: 23rem;
+    margin-top: 31rem;
 
     *{
-      font-size: 16rem;
+      @include table-font
     }
   }
 
