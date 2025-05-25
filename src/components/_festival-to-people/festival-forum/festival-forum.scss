@@ -5,41 +5,48 @@
 
   &__descriptions{
     display: flex;
-    justify-content: space-between;
-    gap: 62rem;
     margin-top: 70rem;
+
+    @include adaptive((
+            gap: (default: 62rem, xl: 179, sm: 34)
+    ));
+
+    @include lg{
+      justify-content: space-between;
+    }
 
     @include sm{
       flex-direction: column;
-      gap: 34rem;
     }
   }
 
   &__block-text{
     display: flex;
     flex-direction: column;
-    gap: 22rem;
-    max-width: 386rem;
+
+    @include adaptive((
+            max-width: (default: 320rem, xl: 519, md: 280, sm: 302),
+            gap: (default: 20rem, xl: 30)
+    ));
 
     &:first-child{
-      max-width: 306rem;
-
-      @include sm{
-        max-width: 302rem;
-      }
-    }
-
-    @include sm{
-      max-width: 302rem;
+      @include adaptive((
+              max-width: (default: 274rem, xl: 443, md: 237, sm: 302)
+      ));
     }
 
     *{
-      font-size: 13rem;
       letter-spacing: 0.01em;
 
-      @include sm{
-        font-size: 10rem;
-      }
+      @include adaptive((
+              font-size: (
+                      default: 11rem,
+                      xxl: 22,
+                      xl: 16,
+                      md: 10,
+                      sm: 10
+              )
+      ))
     }
 
     a{
@@ -48,25 +55,27 @@
   }
 
   h3{
-    font-size: 20rem;
     font-weight: 500;
     color: var(--c-red);
-    letter-spacing: 0.02em;
+
+    @include standard-font-big
   }
 
   ul li{
     list-style: none;
     display: flex;
     align-items: start;
-    gap: 6rem;
+    position: relative;
+    left: -0.3em;
 
     &:before{
       content: '';
-      width: 3rem;
+      width: 0.3em;
       aspect-ratio: 1/1;
       flex-shrink: 0;
       position: relative;
-      top: 6.5rem;
+      top: 0.65em;
+      left: -0.9em;
       background: var(--c-red);
     }
   }
@@ -76,20 +85,18 @@
   }
 
   &__slider{
-    margin-block: 44rem 85rem;
+    @include adaptive((
+            margin-block: (default: 44rem, xxl: 70, sm: 33)
+    ))
 
-    @include sm{
-      margin-block: 33rem;
-    }
   }
 
   &__slide{
-    width: 398rem;
     aspect-ratio: 398/191;
 
-    @include sm{
-      width: 340rem;
-    }
+    @include adaptive((
+            width: (default: 398rem, xl: 665, sm: 340)
+    ));
 
     img{
       width: 100%;
@@ -100,8 +107,11 @@
   }
 
   &__registraion{
-    width: 197rem;
     padding-top: 40rem;
+
+    @include adaptive((
+            width: (default: 197rem, xl: 247,)
+    ));
 
     @include sm{
       padding-top: 0;
@@ -109,25 +119,14 @@
 
     &-and-program{
       display: flex;
-      gap: 52rem;
       margin-bottom: 62rem;
+
+      @include adaptive((
+              gap: (default: 82rem, xl: 379, md: 38, sm: 34)
+      ));
 
       @include sm{
         flex-direction: column-reverse;
-        gap: 34rem;
-      }
-
-      .festival-forum__block-text{
-        gap: 30rem;
-      }
-    }
-
-    *{
-      font-size: 13rem;
-      letter-spacing: 0.01em;
-
-      @include sm{
-        font-size: 10rem;
       }
     }
 
@@ -138,13 +137,15 @@
 
   &__program{
     display: flex;
-    gap: 14rem;
     margin-top: 22rem;
     align-items: start;
 
+    @include adaptive((
+            gap: (default: 38rem, xxl: 105, xl: 79, sm: 42)
+    ));
+
     @include sm{
       flex-direction: column;
-      gap: 42rem;
     }
   }
 
@@ -157,17 +158,28 @@
 
     &-and-socials{
       display: flex;
-      gap: 90rem;
-      margin-top: 67rem;
+      margin-top: 60rem;
+
+      @include adaptive((
+              gap: (default: 90rem, xxl: 252, sm: 30)
+      ));
 
       @include sm{
         flex-direction: column;
-        gap: 30rem;
       }
 
       &-wrap{
         background: var(--c-grey-bg-light-2);
-        padding-block: 30rem;
+        padding-block: 26rem;
+
+        @include adaptive((
+                padding-block: (default: 26rem, xl: 42)
+        ))
+      }
+
+      *{
+        @include standard-font-small;
+
       }
 
       p{
@@ -200,20 +212,25 @@
 
   &__socials{
     display: flex;
-    gap: 9rem;
+
+    @include adaptive((
+            gap: (default: 85rem, xxl:252, xl: 179, sm: 20)
+    ));
 
     @include sm{
       justify-content: space-between;
-      gap: 20rem;
     }
 
     a, a *{
-      font-size: 20rem;
+      @include standard-font-big
     }
 
     .festival-forum__block-text {
-      width: 230rem;
       gap: 15rem;
+
+      @include adaptive((
+              width: (default: 165rem, xxl: 300, xl: 247,)
+      ))
     }
   }
 }

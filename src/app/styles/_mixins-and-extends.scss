@@ -183,10 +183,10 @@ $base-widths: (
           font-size: (
                   default: 12rem,
                   xxl: 27,
-                  xl: 18,
+                  xl: 20,
                   sm: 13
           ),
-         --width: (default: 174rem, xxl: 320)
+         --width: (default: 174rem, xxl: 320, xl: 247)
   ));
 
   &:hover{

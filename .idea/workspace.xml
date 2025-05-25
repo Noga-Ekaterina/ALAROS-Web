@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="починила скрол на сенсере">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="опять размеры">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-business-program/festival-business-program.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-forum/festival-forum.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-program/festival-program.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-to-people/festival-protections/festival-protections.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/HomeNewsSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/HomeNewsSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,15 +237,11 @@
       <workItem from="1747570965765" duration="12326000" />
       <workItem from="1747744922550" duration="20505000" />
       <workItem from="1747865049498" duration="6517000" />
-      <workItem from="1747918240038" duration="19635000" />
-    </task>
-    <task id="LOCAL-00082" summary="работа с отступами исправление detalis">
-      <option name="closed" value="true" />
-      <created>1743182860260</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1743182860261</updated>
+      <workItem from="1747918240038" duration="20336000" />
+      <workItem from="1748014458255" duration="2075000" />
+      <workItem from="1748091362426" duration="12862000" />
+      <workItem from="1748191751815" duration="4216000" />
+      <workItem from="1748204724312" duration="1213000" />
     </task>
     <task id="LOCAL-00083" summary="сделала меню">
       <option name="closed" value="true" />
@@ -646,7 +627,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747588061514</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="опять размеры">
+      <option name="closed" value="true" />
+      <created>1747960128716</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1747960128716</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +664,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="догруз фото проектов" />
     <MESSAGE value="исправила размеры на главной" />
     <MESSAGE value="перевёрстка подвала" />
     <MESSAGE value="масштаб подсказки слайдера" />
@@ -700,7 +688,8 @@
     <MESSAGE value="поменяла запрос проектов" />
     <MESSAGE value="сделала чтобы скрол не вис" />
     <MESSAGE value="починила скрол на сенсере" />
-    <option name="LAST_COMMIT_MESSAGE" value="починила скрол на сенсере" />
+    <MESSAGE value="опять размеры" />
+    <option name="LAST_COMMIT_MESSAGE" value="опять размеры" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
