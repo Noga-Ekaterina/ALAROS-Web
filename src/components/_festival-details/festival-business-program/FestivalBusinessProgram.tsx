@@ -2,7 +2,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './festival-business-program.scss'
 import HtmlProcessing from "../../HtmlProcessing";
-import {IFestival, IFestivalToPeople, IHtmlString} from "../../../types/data";
+import {IFestival, IFestivalDetails, IHtmlString} from "../../../types/data";
 import {formaterDate} from "../../../utils/date/formaterDate";
 import {useMediaQuery} from "react-responsive";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
@@ -27,7 +27,7 @@ interface IUserCardProps{
 }
 
 interface Props{
-  pageData: IFestivalToPeople
+  pageData: IFestivalDetails
 }
 
 const UserCard=({user}: IUserCardProps)=>{

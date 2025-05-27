@@ -1,20 +1,20 @@
 import React from 'react';
-import FestivalProtections from "@/components/_festival-to-people/festival-protections/FestivalProtections";
-import FestivalBusinessProgram from "@/components/_festival-to-people/festival-business-program/FestivalBusinessProgram";
-import FestivalForum from "@/components/_festival-to-people/festival-forum/FestivalForum";
+import FestivalProtections from "@/components/_festival-details/festival-protections/FestivalProtections";
+import FestivalBusinessProgram from "@/components/_festival-details/festival-business-program/FestivalBusinessProgram";
+import FestivalForum from "@/components/_festival-details/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
-import {IFestival, IFestivalToPeople, IHtmlString, IJury, IProtectionsDay, IFestivalProgramDay} from "@/types/data";
+import {IFestival, IFestivalDetails, IHtmlString, IJury, IProtectionsDay, IFestivalProgramDay} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
-import FestivalToPeopleMainScreen
-  from "@/components/_festival-to-people/festival-to-people-main-screen/FestivalToPeopleMainScreen";
-import FestivalProgram from "@/components/_festival-to-people/festival-program/FestivalProgram";
+import FestivalDetailsMainScreen
+  from "@/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen";
+import FestivalProgram from "@/components/_festival-details/festival-program/FestivalProgram";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 
 interface IData{
-  festivalToPeoples: IFestivalToPeople[]
+  festivalDetailss: IFestivalDetails[]
   festivalPrograms: IFestivalProgramDay[]
   protectionsDays: IProtectionsDay[]
 }
@@ -26,7 +26,7 @@ interface Props{
 const init= unstable_cache(async ()=>{
   const data= await fetchData<IData>(`
           query FestivalQuery {
-            festivalToPeoples {
+            festivalDetailss {
               mainScreenLeftSection {
                 html
               }
@@ -101,14 +101,14 @@ const init= unstable_cache(async ()=>{
     return data
   }
 
-  const {festivalToPeoples,festivalPrograms, protectionsDays}=data
+  const {festivalDetailss,festivalPrograms, protectionsDays}=data
 
-  const result= {pageData: festivalToPeoples[0], festivalProgram: festivalPrograms, protectionsDays}
+  const result= {pageData: festivalDetailss[0], festivalProgram: festivalPrograms, protectionsDays}
 
 
   return result
 },
-    ["festival-to-people"], {tags: ["FestivalToPeople", "Project", "ProtectionsDay", "FestivalProgram"]})
+    ["festival-details"], {tags: ["FestivalDetails", "Project", "ProtectionsDay", "FestivalProgram"]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
@@ -124,7 +124,7 @@ const Page = async ({searchParams}:Props) => {
   return (
       <AnimationPage>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
-        <FestivalToPeopleMainScreen pageData={pageData}/>
+        <FestivalDetailsMainScreen pageData={pageData}/>
         {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
         <FestivalBusinessProgram pageData={pageData}/>
         {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsDays={protectionsDays}/>}

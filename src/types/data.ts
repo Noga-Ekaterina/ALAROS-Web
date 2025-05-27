@@ -170,7 +170,7 @@ export interface IFestivalProgramDay {
   fullVersionBusinessProgram: IHtmlString|null
 }
 
-export interface IFestivalToPeople {
+export interface IFestivalDetails {
   mainScreenLeftSection: IHtmlString
   mainScreenProject: IProject
   isShowFestivalProgram: boolean|null

@@ -3,11 +3,11 @@ import React from 'react';
 import "./festival-forum.scss"
 import HtmlProcessing from "../../HtmlProcessing";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {IFestival, IFestivalToPeople} from "@/types/data";
+import {IFestival, IFestivalDetails} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
-  pageData: IFestivalToPeople
+  pageData: IFestivalDetails
 }
 
 const FestivalForum = ({pageData}:Props) => {
@@ -38,7 +38,7 @@ const FestivalForum = ({pageData}:Props) => {
           {
             pageData.forumImages.map((img, index)=>(
                 <SwiperSlide key={index} className="festival-forum__slide">
-                  <img src={`/Assets/Pages/Festival-to-people/Forum/${img}`} alt=""/>
+                  <img src={`/Assets/Pages/festival-details/Forum/${img}`} alt=""/>
                 </SwiperSlide>
             ))
           }

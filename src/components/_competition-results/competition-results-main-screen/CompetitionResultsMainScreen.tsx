@@ -1,7 +1,7 @@
 import React from 'react';
 import './competition-results-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
-import {ICompetitionResults, IFestival, IFestivalToPeople} from "@/types/data";
+import {ICompetitionResults, IFestival, IFestivalDetails} from "@/types/data";
 import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
 
 interface Props{

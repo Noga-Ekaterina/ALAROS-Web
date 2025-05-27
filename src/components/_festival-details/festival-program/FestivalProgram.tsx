@@ -1,6 +1,6 @@
 import React from 'react';
 import "./festival-program.scss"
-import {IFestival, IFestivalProgramDay, IFestivalToPeople} from "@/types/data";
+import {IFestival, IFestivalProgramDay, IFestivalDetails} from "@/types/data";
 import {getRowsInTable} from "@/utils/getRowsInTable";
 import {createDate, formaterDate} from "@/utils/date";
 import Detalis from "@/components/detalis/Detalis";
@@ -8,7 +8,7 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import {getPrgramTitles, programProcessing} from "./getData";
 
 interface Props{
-  pageData: IFestivalToPeople
+  pageData: IFestivalDetails
   festivalProgram: IFestivalProgramDay[]
 }
 
