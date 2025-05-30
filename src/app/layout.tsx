@@ -11,6 +11,7 @@ import AnimationPage from "@/app/AnimationPage";
 import Menu from "@/components/menu/Menu";
 import Loading from './loading';
 import Loader from "@/components/loader/Loader";
+import Back from "@/components/back/Back";
 
 export default function RootLayout({
   children,
@@ -25,13 +26,14 @@ export default function RootLayout({
       <body>
       <Loader isClient/>
       <Header/>
-      <Menu/>
       <Suspense fallback={<Loading />}>
+          <Menu/>
           <SmoothScrolling root={true}>
             {children}
             <Footer/>
           </SmoothScrolling>
       </Suspense>
+      <Back/>
       <ToTop/>
       <Scroll/>
       </body>

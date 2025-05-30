@@ -65,7 +65,7 @@ const Page = async ({searchParams}: Props) => {
   return (
       <AnimationPage>
         <ProjectModal projects={data.projects} searchParams={searchParams}/>
-        <div className="container" style={{paddingBlock: "32rem", position: "relative", zIndex: 4}}>
+        <div className="container" style={{paddingBlock: "52rem", position: "relative", zIndex: 4}}>
           <div className="titles-block">
             <h1 className="titles-block__title titles-block__title--small">{data.pageData.title}</h1>
           </div>

@@ -70,18 +70,11 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
 
     return result;
   };
-  const router= useRouter()
 
   const body = replaceHtmlSegments(news.body? news.body.html:'')
   
   return (
       <div className="news-article">
-        <button
-            className="news-article__back"
-          onClick={()=>router.back()}
-        >
-          <ReactSVG src="/Assets/Icons/arrow.svg" className="news-article__arr"/>
-        </button>
         <div className="container">
           <div className="news-article__header">
             <p>{formaterDate(news.date)}</p>

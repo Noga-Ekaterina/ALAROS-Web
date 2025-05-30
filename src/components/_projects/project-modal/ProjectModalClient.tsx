@@ -89,7 +89,7 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
       <AnimationPage isNoWait={true} conditions={isOpened} className="project-modal" onClick={handleClick}>
         <SmoothScrolling>
           <button
-              className="project-images-slider__btn project-images-slider__btn--back"
+              className="btn-round project-images-slider__btn project-images-slider__btn--back"
               onClick={handleBack}
           >
             <ReactSVG src="/Assets/Icons/close.svg"/>
