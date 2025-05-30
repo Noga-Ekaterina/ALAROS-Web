@@ -161,11 +161,17 @@
           color: #ffffff;
           border: var(--w-line) solid #E5E5E5;
           background: var(--c-main);
+          transition: 0.5s;
 
           @include adaptive((
                   padding: (default: 12rem 35rem, md: vu(10, md) vu(20, md), md-book: vu(15, md) vu(38, md), sm: 12rem 35rem)
-          ))
+          ));
+
+          &:hover{
+            background: var(--c-green-text);
+          }
         }
+
 
         &:last-child{
           margin-inline: auto;

@@ -4,7 +4,7 @@ import "./festival-date.scss"
 import classNames from "classnames";
 import {IFestival, IHtmlString} from '../../../types/data'
 import HtmlProcessing from "../../HtmlProcessing";
-
+import {motion, AnimatePresence} from "framer-motion";
 interface Props{
   pageData: IFestival
 }
@@ -52,11 +52,17 @@ const FestivalDate = ({pageData}:Props) => {
               }
             </p>
           </div>
-          <div className="festival-date__date">
+          <motion.div
+            key={activeDateIndex}
+            initial={{opacity: 0,}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.5}}
+            className="festival-date__date">
             {
               sections[activeDateIndex] && <HtmlProcessing html={sections[activeDateIndex].date}/>
             }
-          </div>
+          </motion.div>
         </div>
       </div>
   );

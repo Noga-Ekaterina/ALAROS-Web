@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перевёрстка новостей">
-      <change afterPath="$PROJECT_DIR$/src/components/back/Back.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/back/back.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила кнопку назад и сделала круглые кнопки одного стиля">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/FestivalDate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/FestivalDate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/festival-date.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/to-top/ToTop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/ToTop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/to-top/to-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/to-top.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,15 +256,7 @@
       <workItem from="1748362191281" duration="1235000" />
       <workItem from="1748365820095" duration="413000" />
       <workItem from="1748367840960" duration="4614000" />
-      <workItem from="1748623603738" duration="14791000" />
-    </task>
-    <task id="LOCAL-00087" summary="замена фото">
-      <option name="closed" value="true" />
-      <created>1743720837078</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1743720837078</updated>
+      <workItem from="1748623603738" duration="20598000" />
     </task>
     <task id="LOCAL-00088" summary="переделала модалку">
       <option name="closed" value="true" />
@@ -650,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748633083388</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="добавила кнопку назад и сделала круглые кнопки одного стиля">
+      <option name="closed" value="true" />
+      <created>1748643022592</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1748643022592</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="масштаб фестиваля" />
     <MESSAGE value="loader" />
     <MESSAGE value="loader повыше" />
     <MESSAGE value="подправила размер шрифта в блоке пректа" />
@@ -704,7 +703,8 @@
     <MESSAGE value="исправила опечатку" />
     <MESSAGE value="исправила размер" />
     <MESSAGE value="перевёрстка новостей" />
-    <option name="LAST_COMMIT_MESSAGE" value="перевёрстка новостей" />
+    <MESSAGE value="добавила кнопку назад и сделала круглые кнопки одного стиля" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавила кнопку назад и сделала круглые кнопки одного стиля" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -42,16 +42,8 @@
 
   &__logo{
     width: 14.4rem;
-    transition: 0.5s;
 
-    &:hover{
-      transform: scale(1.2);
-    }
-
-    &:active{
-      transition: 0.1s;
-      transform: scale(1);
-    }
+    @include hover-scale;
   }
 
   &__menu{

@@ -206,12 +206,15 @@ $base-widths: (
 }
 
 %link-hover-underline{
+  @extend %link-underline;
+  text-decoration-color: transparent;
+
   &:hover{
-    @extend %link-underline
+    text-decoration-color: currentColor;
   }
 
   &:has(u):hover, &[href^="tel:"]{
-    text-decoration: none;
+    text-decoration-color: transparent;
   }
 }
 
@@ -219,4 +222,17 @@ $base-widths: (
   overflow: hidden;
   text-wrap: nowrap;
   text-overflow: ellipsis;
+}
+
+@mixin hover-scale{
+  transition: 0.5s;
+
+  &:hover{
+    transform: scale(1.2);
+  }
+
+  &:active{
+    transition: 0.1s;
+    transform: scale(1);
+  }
 }

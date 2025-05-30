@@ -28,6 +28,7 @@
   box-sizing: border-box;
   color: var(--c-dark);
   white-space: pre-line;
+  transition: color 0.5s, text-decoration-color 0.5s;
 }
 
 html{
@@ -101,7 +102,7 @@ a {
 }
 
 .link-underline:hover{
-  text-decoration: none;
+  text-decoration-color: transparent;
 }
 
 u{
@@ -110,7 +111,7 @@ u{
   font-weight: inherit;
 
   a &:hover{
-    text-decoration: none;
+    text-decoration-color: transparent;
   }
 }
 
@@ -270,6 +271,8 @@ span{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include hover-scale;
 
   &__arr{
     @include adaptive((

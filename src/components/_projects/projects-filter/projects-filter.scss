@@ -85,6 +85,15 @@
     @include adaptive((
             width: (default: 145rem, xxl: 285, sm: 219)
     ));
+
+    &:hover{
+      background: var(--c-main);
+    }
+
+    &:active{
+      background: #fff;
+    }
+
   }
 
   .dropdown{

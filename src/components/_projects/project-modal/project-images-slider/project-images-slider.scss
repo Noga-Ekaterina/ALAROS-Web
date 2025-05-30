@@ -79,7 +79,15 @@
 
       @include adaptive((
               padding-bottom: (default: 1.5rem, md: 0)
-      ))
+      ));
+
+      &:hover{
+        transform: rotate(-45deg) scale(1.2);
+      }
+
+      &:active{
+        transform: rotate(-45deg) scale(1);
+      }
     }
 
     &--decrease{

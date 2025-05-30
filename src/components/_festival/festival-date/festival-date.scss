@@ -52,10 +52,7 @@
 
   &__btn{
     opacity: 0.5;
-
-    &:hover{
-      text-decoration: none;
-    }
+    transition: 0.5s;
 
     &--disabled{
       opacity: 1;
