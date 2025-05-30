@@ -36,13 +36,18 @@
 
   &__row {
     gap: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 45rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
     @include sm{
       grid-template-columns: 1fr;
     }
+
+    &:last-child{
+      padding-bottom: 0;
+    }
+
     &--large {
       grid-template-columns: 5fr 7fr;
 
