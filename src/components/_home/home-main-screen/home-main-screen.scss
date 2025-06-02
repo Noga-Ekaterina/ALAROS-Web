@@ -138,6 +138,17 @@
               )
       ));
 
+      a{
+        transition: 0.5s;
+
+        &:hover{
+          transform: scale(1.05);
+        }
+
+        &:active{
+          color: transparent;
+        }
+      }
 
       @include md-book{
         font-size: 37rem;
@@ -169,6 +180,10 @@
 
           &:hover{
             background: var(--c-green-text);
+          }
+
+          &:active{
+            background: #fff;
           }
         }
 

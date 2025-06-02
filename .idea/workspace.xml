@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="hovers">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки блока событий и механики">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/SmoothScrolling.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/eventsDataProcessing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/eventsDataProcessing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partners-slider/PartnersSliderClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partners-slider/PartnersSliderClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,15 +250,7 @@
       <workItem from="1748696014486" duration="4692000" />
       <workItem from="1748728793455" duration="5510000" />
       <workItem from="1748806339280" duration="56000" />
-      <workItem from="1748902192773" duration="1641000" />
-    </task>
-    <task id="LOCAL-00089" summary="поставила правильный тег">
-      <option name="closed" value="true" />
-      <created>1743892385037</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1743892385038</updated>
+      <workItem from="1748902192773" duration="4725000" />
     </task>
     <task id="LOCAL-00090" summary="усовершенствовала замену номинаций">
       <option name="closed" value="true" />
@@ -656,7 +636,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748649026770</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="правки блока событий и механики">
+      <option name="closed" value="true" />
+      <created>1748905626411</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1748905626411</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +673,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="loader повыше" />
     <MESSAGE value="подправила размер шрифта в блоке пректа" />
     <MESSAGE value="подправила размер партнёров на xxl" />
     <MESSAGE value="подправила масштаб дней календаря" />
@@ -710,7 +697,8 @@
     <MESSAGE value="перевёрстка новостей" />
     <MESSAGE value="добавила кнопку назад и сделала круглые кнопки одного стиля" />
     <MESSAGE value="hovers" />
-    <option name="LAST_COMMIT_MESSAGE" value="hovers" />
+    <MESSAGE value="правки блока событий и механики" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки блока событий и механики" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
