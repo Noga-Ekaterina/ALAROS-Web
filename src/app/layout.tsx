@@ -28,7 +28,7 @@ export default function RootLayout({
       <Header/>
       <Suspense fallback={<Loading />}>
           <Menu/>
-          <SmoothScrolling root={true}>
+          <SmoothScrolling root noAnimation>
             {children}
             <Footer/>
           </SmoothScrolling>

@@ -58,8 +58,11 @@ function Dropdown({id, value, values, name, handleCheck, className, elements, ar
                          checked={item == value}
                          name={name ?? ""}
                          id={item+id}
+                         onChange={e => {
+                           handleCheck(e)
+                           setIsOpen(false)
+                         }}
                          value={item}
-                         onChange={e => handleCheck(e)}
                      />
                      <label
                          htmlFor={item+id}

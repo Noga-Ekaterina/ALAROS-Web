@@ -8,9 +8,9 @@ export const eventsDataProcessing= (eventsDataYears: IEventsDataYear[])=>{
     const rowsArr= getRowsInTable(table)
 
     return rowsArr.map(row=>{
-      const [start, end, title, place, description, image] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);
+      const [start, end, title, place, description, image, link] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);
 
-      return {start, end, title, place, description, image}
+      return {start, end, title, place, description, image, link}
     })
   }
 
@@ -22,10 +22,7 @@ export const eventsDataProcessing= (eventsDataYears: IEventsDataYear[])=>{
         start: row.start,
         end: row.end
       },
-      title: row.title,
-      place: row.place,
-      description: row.description,
-      image: row.image
+      ...row
     }))
 
     eventsByYear[yearData.year]= eventsYear

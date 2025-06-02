@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  z-index: 3;
 
   @include sm{
     flex-direction: column-reverse;
@@ -16,21 +17,21 @@
   }
 
 
-  &__bg{
-    position: absolute;
-    top: 113rem;
-    left: 0;
-    right: 0;
-
-    @include xxl{
-      top: 33rem;
-    }
-
-    svg{
-      width: 100%;
-      height: auto;
-    }
-  }
+  //&__bg{
+  //  position: absolute;
+  //  top: 113rem;
+  //  left: 0;
+  //  right: 0;
+  //
+  //  @include xxl{
+  //    top: 33rem;
+  //  }
+  //
+  //  svg{
+  //    width: 100%;
+  //    height: auto;
+  //  }
+  //}
 
   &__block-text{
     padding-left: var(--p-y);

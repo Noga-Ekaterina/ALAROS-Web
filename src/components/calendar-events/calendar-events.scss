@@ -9,6 +9,27 @@
     padding-top: 38rem;
   }
 
+
+  &__bg{
+    position: absolute;
+    top: -145rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    @include sm{
+      top: -40rem;
+      right: auto;
+      left: -250rem;
+      width: 900rem;
+    }
+
+    svg{
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .swiper{
     padding-bottom: 24rem;
   }
@@ -133,8 +154,21 @@
   }
 
   &__event{
-    background: #fff;
-    display: flex;
+
+    >a{
+      background: #fff;
+      display: flex;
+      transition: box-shadow 0.5s;
+      box-shadow: -3px 11px 66.6px 0px transparent, 0px 8px 8.6px -6px transparent, 0px 0.5px 95.3px 0px transparent;
+
+      &:hover{
+        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 95.3px 0px #0000000D;
+
+        //box-shadow: 0px 8px 8.6px -6px #00000012;
+        //
+        //box-shadow: 0px 0.5px 95.3px 0px #0000000D;
+      }
+    }
 
     &-wrapp{
       display: flex;
@@ -182,7 +216,7 @@
     padding: 18rem 18rem var(--p-y) var(--p-y);
     flex-direction: column;
     justify-content: space-between;
-    width: 438rem;
+    width: 447rem;
 
     @include lg{
       flex-direction: row;

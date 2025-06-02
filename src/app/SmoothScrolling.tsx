@@ -9,13 +9,15 @@ interface Props extends IWithChildren {
   wrapper?: HTMLDivElement | null;
   root?: boolean;
   enableScrollTransfer?: boolean;
+  noAnimation?: boolean
 }
 
 function SmoothScrolling({
                            children,
                            root,
                            wrapper,
-                           enableScrollTransfer = false
+                           enableScrollTransfer = false,
+                           noAnimation= false
                          }: Props) {
   const lenis = useLenis();
   const touchStartY = useRef(0);
@@ -76,7 +78,7 @@ function SmoothScrolling({
 
     if (enableScrollTransfer) {
       handleScrollTransfer(deltaY, el)
-    } else {
+    } else if (!noAnimation){
       const {isTop, isBottom} =isEnd(deltaY, el)
 
       if (isBottom) {
@@ -93,8 +95,7 @@ function SmoothScrolling({
 
     if (enableScrollTransfer) {
       handleScrollTransfer(e.deltaY, el)
-      return;
-    } else {
+    } else if (!noAnimation){
       const {isTop, isBottom} =isEnd(e.deltaY, el)
       
       if (isBottom) {

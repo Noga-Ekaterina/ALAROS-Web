@@ -1,5 +1,5 @@
 'use client'
-import React, {Fragment, MutableRefObject, useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import "./calendar-events.scss";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import { Mousewheel, FreeMode } from 'swiper/modules';
@@ -279,6 +279,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
 
   return (
       <div className="calendar-events" id="calendar-events">
+        <ReactSVG src="/Assets/Pages/Home/bg/2.svg" className="calendar-events__bg"/>
         <div className="calendar-events__event-wrapp">
           {
             title&&
@@ -314,23 +315,25 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
                 if (event) {
                   return (
                       <SwiperSlide key={`${start.year} ${event.date.start}`} className="calendar-events__event">
-                        <div className="calendar-events__block-text">
-                          <div className="calendar-events__titles">
-                            <h3 className="calendar-events__date">{event.date.start} - {event.date.end}</h3>
-                            <div>
-                              <div className="calendar-events__link">
-                                <HtmlProcessing html={event.title}/>
+                        <a href={event.link}>
+                          <div className="calendar-events__block-text">
+                            <div className="calendar-events__titles">
+                              <h3 className="calendar-events__date">{event.date.start} - {event.date.end}</h3>
+                              <div>
+                                <div className="calendar-events__name">
+                                  <HtmlProcessing html={`<p>${event.title}</p>`}/>
+                                </div>
+                                <p className="calendar-events__plase">{nonBreakingSpaces(event.place)}</p>
                               </div>
-                              <p className="calendar-events__plase">{nonBreakingSpaces(event.place)}</p>
+                            </div>
+                            <div className="calendar-events__description">
+                              <HtmlProcessing html={`<p>${event.description}</p>`}/>
                             </div>
                           </div>
-                          <div className="calendar-events__description">
-                            <HtmlProcessing html={`<p>${event.description}</p>`}/>
-                          </div>
-                        </div>
-                        <img
-                            src={`/Assets/Calendar-events/${start.year}/${event.image}`}
-                            alt=""/>
+                          <img
+                              src={`/Assets/Calendar-events/${start.year}/${event.image}`}
+                              alt=""/>
+                        </a>
                       </SwiperSlide>
                   )
                 }
@@ -341,16 +344,17 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
               className={classNames(
                   "calendar-events__btn",
                   "calendar-events__btn--next",
-                  eventsDays.indexOf(activeEventsDays)==eventsDays.length-1&& "btn--disable"
+                  eventsDays.indexOf(activeEventsDays) == eventsDays.length - 1 && "btn--disable"
               )}
-              onClick={()=>handleClickBtnEvent("next")}
+              onClick={() => handleClickBtnEvent("next")}
           >
             <ReactSVG src="/Assets/Icons/arrow.svg"/>
           </button>
         </div>
-        <div className="calendar-events__calendar" >
+        <div className="calendar-events__calendar">
           <SliderProgress swiperRef={swiperCalendarRef} progressClass="calendar-events__progres"/>
-          <div className="calendar-events__calendar-wrapp"  onWheel={(e) => (e.target as HTMLElement)?.closest(".swiper") && e.stopPropagation()}>
+          <div className="calendar-events__calendar-wrapp"
+               onWheel={(e) => (e.target as HTMLElement)?.closest(".swiper") && e.stopPropagation()}>
             <Dropdown value={activeMonth} values={getMonthesNames()} handleCheck={(e) => setActiveMonth(e.target.value)}
                       name="month" className="calendar-events__month"/>
             <Dropdown value={String(activeYear)} values={years}
