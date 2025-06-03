@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки блока событий и механики">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки ссылок">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/results/results.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/results/results.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,15 +250,7 @@
       <workItem from="1748696014486" duration="4692000" />
       <workItem from="1748728793455" duration="5510000" />
       <workItem from="1748806339280" duration="56000" />
-      <workItem from="1748902192773" duration="4725000" />
-    </task>
-    <task id="LOCAL-00090" summary="усовершенствовала замену номинаций">
-      <option name="closed" value="true" />
-      <created>1743897480467</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1743897480467</updated>
+      <workItem from="1748902192773" duration="6146000" />
     </task>
     <task id="LOCAL-00091" summary="усовершенствовала замену номинаций">
       <option name="closed" value="true" />
@@ -644,7 +636,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748905626411</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="правки ссылок">
+      <option name="closed" value="true" />
+      <created>1748907960714</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1748907960714</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +673,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="подправила размер шрифта в блоке пректа" />
     <MESSAGE value="подправила размер партнёров на xxl" />
     <MESSAGE value="подправила масштаб дней календаря" />
     <MESSAGE value="подправила размер партнёров" />
@@ -698,7 +697,8 @@
     <MESSAGE value="добавила кнопку назад и сделала круглые кнопки одного стиля" />
     <MESSAGE value="hovers" />
     <MESSAGE value="правки блока событий и механики" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки блока событий и механики" />
+    <MESSAGE value="правки ссылок" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки ссылок" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -60,12 +60,9 @@
   }
 
   p{
-    font-size: 16rem;
     line-height: 1.87em;
 
-    @include sm{
-      font-size: 13rem;
-    }
+    @include standard-font
   }
 
   a{

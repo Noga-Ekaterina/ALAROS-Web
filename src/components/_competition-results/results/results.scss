@@ -1,3 +1,5 @@
+@import "../../../app/styles/mixins-and-extends";
+
 .results{
   background: #fff;
   padding-block: 35rem;
@@ -13,8 +15,9 @@
   }
 
   &__btn{
-    font-size: 20rem;
     color: var(--c-grey-dark);
+
+    @include standard-font-big;
 
     &:disabled{
       color: #2A3A2B;
@@ -23,7 +26,7 @@
 
   &__iframe{
     width: 100%;
-    height: min(530rem, calc(100vh - 60rem));
+    height: min(530rem, calc(100vh - 200rem));
     border: none;
   }
 }
