@@ -16,6 +16,8 @@ interface Props{
 
 const MenuClient = ({data}:Props) => {
   const {isMenuOpened, togleMenu} = store;
+  const additionals= data.filter(section=> section.isAdditional)
+  const sections= data.filter(section=> !section.isAdditional)
   const pathname= usePathname()
   const hash= useHash()
   const [activeSection, setActiveSection] = useState<null | IMenuSection>(null)
@@ -31,7 +33,7 @@ const MenuClient = ({data}:Props) => {
 
   useEffect(() => {
     setIsMultiPage(false)
-    if (pathname==="/") {
+    if (pathname==="/" || additionals.find(({section})=> isActiveLink(section))) {
       setActiveSection(null)
       return
     }
@@ -77,7 +79,7 @@ const MenuClient = ({data}:Props) => {
               <div className="container menu__content">
                 <div className="menu__column">
                   {
-                    data.map(section=>(
+                    sections.map(section=>(
                         <div
                             key={section.position}
                             className={cn("menu__section-link", {"yellow": section.position===activeSection?.position})}
@@ -109,19 +111,17 @@ const MenuClient = ({data}:Props) => {
                       ))
                     }
                   </motion.div>
-                  <div className="menu__column">
-                    {
-                      activeSection?.additionalLinks.map(({html}, index) => (
-                          <div
-                              key={index}
-                              className="menu__subsection-link"
-                              onClick={togleMenu}
-                          >
-                            <HtmlProcessing html={html}/>
-                          </div>
-                      ))
-                    }
-                  </div>
+                  {
+                    additionals.map(({section}, index) => (
+                        <div
+                            key={index}
+                            className={cn("menu__subsection-link", {"yellow": isActiveLink(section)})}
+                            onClick={togleMenu}
+                        >
+                          <HtmlProcessing html={section.html}/>
+                        </div>
+                    ))
+                  }
                 </div>
               </div>
             </motion.div>

@@ -20,9 +20,7 @@ const init= unstable_cache(async ()=>{
         subsections {
           html
         }
-        additionalLinks {
-          html
-        } 
+        isAdditional
       }
     }
   `)

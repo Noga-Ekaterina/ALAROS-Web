@@ -15,8 +15,8 @@ export interface IFooter{
 export interface IMenuSection {
   section: IHtmlString;
   subsections: IHtmlString[];
-  additionalLinks: IHtmlString[];
   position: number;
+  isAdditional: boolean
 }
 
 export interface IHomeMainScreen{
