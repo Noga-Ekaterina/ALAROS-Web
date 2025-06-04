@@ -49,10 +49,10 @@
     }
 
     &--large {
-      grid-template-columns: 5fr 7fr;
+      grid-template-columns: 4fr 8fr;
 
       &-reverse{
-        grid-template-columns: 7fr 5fr;
+        grid-template-columns: 8fr 4fr;
       }
 
       @include sm{

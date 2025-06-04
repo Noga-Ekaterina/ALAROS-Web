@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки ссылок">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки стр результатов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/competition-results-main-screen/competition-results-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/results/results.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/results/results.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/festival-business-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/festival-business-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,15 +252,11 @@
       <workItem from="1748696014486" duration="4692000" />
       <workItem from="1748728793455" duration="5510000" />
       <workItem from="1748806339280" duration="56000" />
-      <workItem from="1748902192773" duration="6146000" />
-    </task>
-    <task id="LOCAL-00091" summary="усовершенствовала замену номинаций">
-      <option name="closed" value="true" />
-      <created>1743946897395</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1743946897396</updated>
+      <workItem from="1748902192773" duration="7897000" />
+      <workItem from="1748979222221" duration="21000" />
+      <workItem from="1748980220382" duration="6461000" />
+      <workItem from="1749051645789" duration="1306000" />
+      <workItem from="1749054415939" duration="1763000" />
     </task>
     <task id="LOCAL-00092" summary="фото проектов">
       <option name="closed" value="true" />
@@ -644,7 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748907960714</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="правки стр результатов">
+      <option name="closed" value="true" />
+      <created>1748909622106</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1748909622106</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="подправила размер партнёров на xxl" />
     <MESSAGE value="подправила масштаб дней календаря" />
     <MESSAGE value="подправила размер партнёров" />
     <MESSAGE value="сделала отправку форм" />
@@ -698,7 +703,8 @@
     <MESSAGE value="hovers" />
     <MESSAGE value="правки блока событий и механики" />
     <MESSAGE value="правки ссылок" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки ссылок" />
+    <MESSAGE value="правки стр результатов" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки стр результатов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

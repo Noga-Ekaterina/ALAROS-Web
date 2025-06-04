@@ -170,6 +170,21 @@ $base-widths: (
   font-weight: 500;
 }
 
+
+@mixin title-small-font2{
+  @include adaptive((
+          font-size: (
+                  default: 22rem,
+                  xxl: 38,
+                  xl: 30,
+                  md: 17,
+                  sm: 20
+          )
+  ));
+
+  font-weight: 500;
+}
+
 .btn-grey{
   font-weight: 400 !important;
   text-align: center;
