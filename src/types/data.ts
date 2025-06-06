@@ -129,7 +129,6 @@ export interface INews{
   mainTitle: string
   calendarEventsTitle: string
   newsTitle: string
-  newsRightSignature: IHtmlString
   mainScreenProject: IProject
   allNews: IHtmlString
 }
@@ -139,7 +138,6 @@ export interface IFestival {
   mainScreenSections: IHtmlString
   mainScreenPhoto: string
   premiyaTitle: string
-  premiyaRightSignature: IHtmlString
   premiyaSteps: IHtmlString[]
   priceTitle: string
   priceTable: IHtmlString

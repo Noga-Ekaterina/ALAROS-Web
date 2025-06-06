@@ -47,9 +47,6 @@ const init= unstable_cache(async ()=>{
               }
               mainScreenPhoto
               premiyaTitle
-              premiyaRightSignature{
-                html
-              }
               premiyaSteps {
                 html
               }

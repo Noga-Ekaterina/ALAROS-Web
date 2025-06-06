@@ -89,9 +89,6 @@ export const getNewsPageData= unstable_cache(async ()=>{
               }
               mainTitle
               calendarEventsTitle
-              newsRightSignature {
-                html
-              }
               newsTitle
               mainScreenProject {
                 cover

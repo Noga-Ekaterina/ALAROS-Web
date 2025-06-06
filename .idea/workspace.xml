@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="обновила логику меню">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="заменила проект на фото и предусмотрела если html null">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/festival-details-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/festival-details-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/fetchData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/fetchData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,23 +259,7 @@
       <workItem from="1749051645789" duration="1306000" />
       <workItem from="1749054415939" duration="8927000" />
       <workItem from="1749126727638" duration="3977000" />
-      <workItem from="1749215085813" duration="2776000" />
-    </task>
-    <task id="LOCAL-00094" summary="подправила пагинацию">
-      <option name="closed" value="true" />
-      <created>1744132897053</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1744132897053</updated>
-    </task>
-    <task id="LOCAL-00095" summary="поменяла лимит проектов">
-      <option name="closed" value="true" />
-      <created>1744297489563</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1744297489563</updated>
+      <workItem from="1749215085813" duration="6549000" />
     </task>
     <task id="LOCAL-00096" summary="поменяла лимит">
       <option name="closed" value="true" />
@@ -654,7 +637,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749081214710</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="заменила проект на фото и предусмотрела если html null">
+      <option name="closed" value="true" />
+      <created>1749218344672</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1749218344672</updated>
+    </task>
+    <task id="LOCAL-00144" summary="заменила проект на фото и предусмотрела если html null">
+      <option name="closed" value="true" />
+      <created>1749218750263</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1749218750263</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -683,7 +682,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="сделала отправку форм" />
     <MESSAGE value="сделала указатель, что форма отправляется" />
     <MESSAGE value="подправила главные заги" />
     <MESSAGE value="поменяла лоадер" />
@@ -708,7 +706,8 @@
     <MESSAGE value="правки стр результатов" />
     <MESSAGE value="размер загов и новостей" />
     <MESSAGE value="обновила логику меню" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновила логику меню" />
+    <MESSAGE value="заменила проект на фото и предусмотрела если html null" />
+    <option name="LAST_COMMIT_MESSAGE" value="заменила проект на фото и предусмотрела если html null" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
