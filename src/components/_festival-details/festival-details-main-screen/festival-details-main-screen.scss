@@ -60,6 +60,13 @@
     }
   }
 
+  &__img{
+    position: static;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
   p{
     line-height: 1.87em;
 

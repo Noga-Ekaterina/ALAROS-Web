@@ -7,7 +7,7 @@ import {smoothScroll} from "../utils/smoothScroll";
 import {useGetRem} from "@/hoocs/useGetRem";
 
 interface Props{
-  html: string| JSX.Element[]
+  html: string| JSX.Element[] | null
 }
 
 const HtmlProcessing = ({html}:Props) => {
@@ -56,6 +56,8 @@ const HtmlProcessing = ({html}:Props) => {
 
 
   const parseHtml=()=>{
+
+    if (html===null) return
 
     // Убираем пустые теги <p></p>
     let str = typeof html ==="string"&&

@@ -21,9 +21,12 @@ const FestivalDetailsMainScreen = ({pageData}: Props) => {
           <HtmlProcessing html={pageData.mainScreenLeftSection.html}/>
         </div>
 
-        <MainScreenProject project={pageData.mainScreenProject} className="festival-details-main-screen__img-wrapp"/>
-      </div>
-  );
-};
+        <div className="festival-details-main-screen__img-wrapp">
+          <img src={`/Assets/Pages/Festival-details/${pageData.mainScreenPhoto}`} alt=""
+               className="festival-details-main-screen__img"/>
+        </div>
+        </div>
+        );
+        };
 
-export default FestivalDetailsMainScreen
+        export default FestivalDetailsMainScreen

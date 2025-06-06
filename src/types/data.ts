@@ -173,7 +173,7 @@ export interface IFestivalProgramDay {
 
 export interface IFestivalDetails {
   mainScreenLeftSection: IHtmlString
-  mainScreenProject: IProject
+  mainScreenPhoto: string
   isShowFestivalProgram: boolean|null
   festivalProgramTitle: string
   festivalProgramColumns: IHtmlString

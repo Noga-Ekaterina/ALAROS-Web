@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="размер загов и новостей">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="обновила логику меню">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/MenuClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MenuClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/festival-details-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/festival-details-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,15 +258,9 @@
       <workItem from="1748979222221" duration="21000" />
       <workItem from="1748980220382" duration="6461000" />
       <workItem from="1749051645789" duration="1306000" />
-      <workItem from="1749054415939" duration="8362000" />
-    </task>
-    <task id="LOCAL-00093" summary="поменяла лимит проектов">
-      <option name="closed" value="true" />
-      <created>1744130672472</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1744130672472</updated>
+      <workItem from="1749054415939" duration="8927000" />
+      <workItem from="1749126727638" duration="3977000" />
+      <workItem from="1749215085813" duration="2776000" />
     </task>
     <task id="LOCAL-00094" summary="подправила пагинацию">
       <option name="closed" value="true" />
@@ -649,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749056327710</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="обновила логику меню">
+      <option name="closed" value="true" />
+      <created>1749081214710</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1749081214710</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +683,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="подправила размер партнёров" />
     <MESSAGE value="сделала отправку форм" />
     <MESSAGE value="сделала указатель, что форма отправляется" />
     <MESSAGE value="подправила главные заги" />
@@ -703,7 +707,8 @@
     <MESSAGE value="правки ссылок" />
     <MESSAGE value="правки стр результатов" />
     <MESSAGE value="размер загов и новостей" />
-    <option name="LAST_COMMIT_MESSAGE" value="размер загов и новостей" />
+    <MESSAGE value="обновила логику меню" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновила логику меню" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
