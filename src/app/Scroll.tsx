@@ -9,10 +9,8 @@ const Scroll = () => {
   const getHashPosition= useGetHashPosition()
 
   useEffect(() => {
-    console.log(pathname)
-
     window.scrollTo(0,0)
-    setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 200)
+    setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 1000)
   }, [pathname]);
   return (
       <>

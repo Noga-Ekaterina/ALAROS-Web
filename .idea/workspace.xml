@@ -4,26 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="убрала боковые заги">
-      <change afterPath="$PROJECT_DIR$/public/Documents/Dogovor_FL_Celevoj_vznos.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Documents/Dogovor_uchastnika_festivalya_IP.docx" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="уменьшила стрелку">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/news-article.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-protections/FestivalProtections.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-protections/FestivalProtections.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-protections/festival-protections.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/back/back.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/back/back.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/big-slider/big-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/big-slider/big-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/to-top/to-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/to-top.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Scroll.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,23 +256,7 @@
       <workItem from="1749054415939" duration="8927000" />
       <workItem from="1749126727638" duration="3977000" />
       <workItem from="1749215085813" duration="9962000" />
-      <workItem from="1749298885894" duration="14937000" />
-    </task>
-    <task id="LOCAL-00097" summary="пагинация и теперь лоадер появляется при изменении параметров запроса">
-      <option name="closed" value="true" />
-      <created>1744389259422</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1744389259422</updated>
-    </task>
-    <task id="LOCAL-00098" summary="забыла компанент">
-      <option name="closed" value="true" />
-      <created>1744389438402</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1744389438402</updated>
+      <workItem from="1749298885894" duration="17565000" />
     </task>
     <task id="LOCAL-00099" summary="правки в модалке и начала править шрифты">
       <option name="closed" value="true" />
@@ -667,7 +634,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749252827784</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="ховеры и мелкие правки">
+      <option name="closed" value="true" />
+      <created>1749328728316</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1749328728325</updated>
+    </task>
+    <task id="LOCAL-00147" summary="уменьшила стрелку">
+      <option name="closed" value="true" />
+      <created>1749328810798</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1749328810798</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,8 +679,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="подправила главные заги" />
-    <MESSAGE value="поменяла лоадер" />
     <MESSAGE value="поменяла прокрутку жюри" />
     <MESSAGE value="правки шрифтов главной и main festival" />
     <MESSAGE value="переверстала алгоритмы и почты" />
@@ -721,7 +702,9 @@
     <MESSAGE value="обновила логику меню" />
     <MESSAGE value="заменила проект на фото и предусмотрела если html null" />
     <MESSAGE value="убрала боковые заги" />
-    <option name="LAST_COMMIT_MESSAGE" value="убрала боковые заги" />
+    <MESSAGE value="ховеры и мелкие правки" />
+    <MESSAGE value="уменьшила стрелку" />
+    <option name="LAST_COMMIT_MESSAGE" value="уменьшила стрелку" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

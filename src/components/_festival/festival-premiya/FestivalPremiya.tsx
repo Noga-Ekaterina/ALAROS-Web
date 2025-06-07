@@ -43,7 +43,7 @@ const FestivalPremiya = ({pageData}: Props) => {
   const cols = getCols(pageData.premiyaSteps)
 
   return (
-      <div className="festival-premiya" id="premiya">
+      <div className="festival-premiya" id="algorithm">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{nonBreakingSpaces(pageData.premiyaTitle)}</h2>
