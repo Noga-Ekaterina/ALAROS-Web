@@ -24,8 +24,13 @@
       color: var(--c-red);
       font-weight: 500;
       background: #fff;
+      transition: 0.5s;
 
-      @include standard-font-big
+      @include standard-font-big;
+
+      &:hover{
+        color: #A11E0E;
+      }
     }
 
     &__icon{

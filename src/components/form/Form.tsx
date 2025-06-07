@@ -98,14 +98,14 @@ const Form = ({inputs, note, nominations, typeForm}:Props) => {
                   inputs.map((input)=>(
                       <Fragment key={input[nameKey]}>
                         {
-                          (input.type!=="radios" && input.type!=="nominations")?
+                          (input.type!=="radios" && input.type!=="nominations" && input.type!=="dropdown")?
                               <Field
                                   name={input[nameKey]}
                                   render={({field}: IField)=> (
-                                      <Input input={input} field={field} />
+                                      <Input input={input} field={field} form={typeForm}/>
                                   )}
                               />:
-                              <Input input={input} field={{name: input[nameKey], value:'',}} nominations={nominations}/>
+                              <Input input={input} field={{name: input[nameKey], value:'',}} nominations={nominations} form={typeForm}/>
                         }
                       </Fragment>
                   ))
@@ -113,7 +113,7 @@ const Form = ({inputs, note, nominations, typeForm}:Props) => {
                 <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                    size="invisible"
+                    size="invisible" style={{display: "none"}}
                 />
               </div>
               <div className="form__row">

@@ -7,8 +7,6 @@ import {createDate, formaterDate} from "../../../utils/date";
 import {IProtectionsDay} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SmoothScrolling from "@/app/SmoothScrolling";
-import {useLenis} from "@studio-freight/react-lenis";
-import {smoothScroll} from "@/utils/smoothScroll";
 
 interface Props {
   title: string
@@ -27,7 +25,7 @@ const FestivalProtections = ({title, protectionsDays}:Props) => {
               const {day}=createDate  ({date:new Date(Number(year), Number(month)-1, Number(dayNumber))})
 
               return(
-                  <Detalis title={<span>{formaterDate(item.date)} | {day}</span>} startIsOpen={index===0}>
+                  <Detalis  key={item.date} title={<span>{formaterDate(item.date)} | {day}</span>} startIsOpen={index===0}>
                     <SmoothScrolling enableScrollTransfer={true}>
                       <HtmlProcessing html={item.protections.html}/>
                     </SmoothScrolling>

@@ -100,8 +100,8 @@
       @include adaptive((
               font-size: (
                       default: 13rem,
-                      xxl: 18,
-                      xl: 16,
+                      xxl: 22,
+                      xl: 18,
                       md: 11,
                       sm: 13
               )
@@ -195,6 +195,7 @@
 
     p{
       margin-top: 0.9em;
+      color: var(--c-grey);
 
       @include standard-font-small
     }

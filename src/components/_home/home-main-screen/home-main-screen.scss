@@ -209,6 +209,7 @@
       letter-spacing: 0.02em;
       width: 383rem;
       position: relative;
+      z-index: 2;
 
       @include adaptive((
               font-size: (
@@ -239,6 +240,7 @@
           height: 200%;
           background: #E5E5E5;
           position: absolute;
+          z-index: 1;
           top: 0;
           left: vu(579, xxl);
           display: none;
@@ -254,6 +256,7 @@
           height: 200%;
           background: #E5E5E5;
           position: absolute;
+          z-index: 1;
           top: 0;
           left: 50%;
 

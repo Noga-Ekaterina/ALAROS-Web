@@ -1,6 +1,6 @@
 import React, {Fragment, JSX, useEffect, useState} from 'react';
 import "./input.scss"
-import {IFormInput, INomination} from "../../types/data";
+import {IFormInput, INomination, TypeForm} from "../../types/data";
 import parse from "html-react-parser";
 import Dropdown from "../dropdown/Dropdown";
 import {IField} from "../../types/tehnic";
@@ -10,9 +10,10 @@ import {geNextLetter} from "@/utils/getNextLetter";
 interface IProps extends IField{
   input: IFormInput
   nominations?: INomination[]
+  form: TypeForm
 }
 
-const InputDropdown = ({input, field, nominations}: IProps) => {
+const InputDropdown = ({input, field, nominations, form}: IProps) => {
   // Убираем локальное состояние, используем Formik values
   const values = nominations
       ? nominations.map(nomination => nomination.value)
@@ -45,13 +46,13 @@ const InputDropdown = ({input, field, nominations}: IProps) => {
             nominations={nominations}
             arrow={true}
             className="input__dropdown"
-            id={Math.random()}
+            id={`${form}-${input.name}`}
         />
       </div>
   );
 };
 
-const Input = ({input, field, nominations}: IProps) => {
+const Input = ({input, field, nominations, form}: IProps) => {
   return (
       <>
         {
@@ -92,8 +93,8 @@ const Input = ({input, field, nominations}: IProps) => {
                       </div>
                   )
                   :
-                  input.type=="dropdown" ? <InputDropdown input={input} field={field}/>:
-                      input.type=="nominations" && <InputDropdown input={input} field={field} nominations={nominations}/>
+                  input.type=="dropdown" ? <InputDropdown input={input} field={field} form={form}/>:
+                      input.type=="nominations" && <InputDropdown input={input} field={field} nominations={nominations} form={form}/>
         }
       </>
 

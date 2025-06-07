@@ -8,6 +8,8 @@
     width: 10rem;
     top: 170rem;
 
+    @include hover-scale;
+
     @include xxl{
       top: vu(362, xxl);
     }
@@ -18,7 +20,10 @@
 
     &--next{
       right: -16rem;
-      transform: rotate(180deg);
+
+      svg{
+        transform: rotate(180deg);
+      }
     }
 
     svg{

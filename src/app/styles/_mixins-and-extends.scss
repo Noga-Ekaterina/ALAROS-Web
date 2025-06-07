@@ -239,11 +239,11 @@ $base-widths: (
   text-overflow: ellipsis;
 }
 
-@mixin hover-scale{
+@mixin hover-scale($scale: 1.2){
   transition: 0.5s;
 
   &:hover{
-    transform: scale(1.2);
+    transform: scale($scale);
   }
 
   &:active{

@@ -12,8 +12,9 @@ const NewsItem = ({news}: Props) => {
   return (
       <Link href={`/news/${news.slug}`} className='news-item'>
         <p className="news-item__date">{formaterDate(news.date)}</p>
-        <img src={`http://demo-it-park.ru/alaros/Assets/News/${news.slug}/${news.cover}`} alt=""
-             className="news-item__img"/>
+        <div className="news-item__img">
+          <img src={`http://demo-it-park.ru/alaros/Assets/News/${news.slug}/${news.cover}`} alt=""/>
+        </div>
 
         <p className="news-item__title">{nonBreakingSpaces(news.title)}</p>
         <p className="news-item__description">{nonBreakingSpaces(news.description)}</p>

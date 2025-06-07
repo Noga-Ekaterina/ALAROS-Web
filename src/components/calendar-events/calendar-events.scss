@@ -162,11 +162,7 @@
       box-shadow: -3px 11px 66.6px 0px transparent, 0px 8px 8.6px -6px transparent, 0px 0.5px 95.3px 0px transparent;
 
       &:hover{
-        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 95.3px 0px #0000000D;
-
-        //box-shadow: 0px 8px 8.6px -6px #00000012;
-        //
-        //box-shadow: 0px 0.5px 95.3px 0px #0000000D;
+        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 0.3px 0px #0000000D;
       }
     }
 
@@ -269,7 +265,8 @@
     width: 12rem;
     position: relative;
     top: -12rem;
-    transition: 0.5s;
+
+    @include hover-scale;
 
     @include sm{
       display: none;
@@ -279,7 +276,7 @@
       width: 100%;
       height: auto;
     }
-    &--next{
+    &--next svg{
       transform: rotate(180deg);
     }
   }
