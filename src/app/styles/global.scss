@@ -282,7 +282,7 @@ h1, h2, h3, h4, h5{
 
   &__arr{
     @include adaptive((
-            width: (default: 7rem, xl: 10, md: 18rem, sm: 10 ),
+            width: (default: 7rem, xl: 10, md: 10rem, sm: 10 ),
     ));
     position: relative;
 
