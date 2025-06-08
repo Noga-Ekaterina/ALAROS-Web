@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="уменьшила стрелку">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="улучшила скрол по хешу">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Scroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Scroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-bid/FestivalBid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,15 +266,7 @@
       <workItem from="1749054415939" duration="8927000" />
       <workItem from="1749126727638" duration="3977000" />
       <workItem from="1749215085813" duration="9962000" />
-      <workItem from="1749298885894" duration="17565000" />
-    </task>
-    <task id="LOCAL-00099" summary="правки в модалке и начала править шрифты">
-      <option name="closed" value="true" />
-      <created>1744474897056</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1744474897056</updated>
+      <workItem from="1749298885894" duration="26789000" />
     </task>
     <task id="LOCAL-00100" summary="правки меню и анимация dropdown">
       <option name="closed" value="true" />
@@ -650,7 +652,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749328810798</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="улучшила скрол по хешу">
+      <option name="closed" value="true" />
+      <created>1749333674162</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1749333674162</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="поменяла прокрутку жюри" />
     <MESSAGE value="правки шрифтов главной и main festival" />
     <MESSAGE value="переверстала алгоритмы и почты" />
     <MESSAGE value="анимация при перескроле" />
@@ -704,7 +713,8 @@
     <MESSAGE value="убрала боковые заги" />
     <MESSAGE value="ховеры и мелкие правки" />
     <MESSAGE value="уменьшила стрелку" />
-    <option name="LAST_COMMIT_MESSAGE" value="уменьшила стрелку" />
+    <MESSAGE value="улучшила скрол по хешу" />
+    <option name="LAST_COMMIT_MESSAGE" value="улучшила скрол по хешу" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -718,6 +728,12 @@
           <url>file://$PROJECT_DIR$/src/app/page.tsx</url>
           <line>75</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx</url>
+          <line>33</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

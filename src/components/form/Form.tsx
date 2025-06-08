@@ -16,9 +16,10 @@ interface Props{
   nominations: INomination[]
   typeForm: TypeForm
   bidNumberProjectColumn?: string
+  disabled?: boolean
 }
 
-const Form = ({inputs, note, nominations, typeForm}:Props) => {
+const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
   const nameKey= typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
@@ -93,44 +94,47 @@ const Form = ({inputs, note, nominations, typeForm}:Props) => {
       <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
         {({ isSubmitting,  }) =>(
             <FormikForm className="form">
-              <div>
-                {
-                  inputs.map((input)=>(
-                      <Fragment key={input[nameKey]}>
-                        {
-                          (input.type!=="radios" && input.type!=="nominations" && input.type!=="dropdown")?
-                              <Field
-                                  name={input[nameKey]}
-                                  render={({field}: IField)=> (
-                                      <Input input={input} field={field} form={typeForm}/>
-                                  )}
-                              />:
-                              <Input input={input} field={{name: input[nameKey], value:'',}} nominations={nominations} form={typeForm}/>
-                        }
-                      </Fragment>
-                  ))
-                }
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                    size="invisible" style={{display: "none"}}
-                />
-              </div>
-              <div className="form__row">
-                <Field
-                    type="submit"
-                    value={ isSubmitting? "Отправляется": isSent? "Успешно отправлено": "Отправить"}
-                    className={cn({
-                      "btn-grey": true,
-                      "form__btn": true,
-                      "form__btn--submitting": isSubmitting,
-                      "form__btn--error": isError && !isSent,
-                      "form__btn--sent": isSent,
-                    })}/>
-                <div className="note">
-                  <HtmlProcessing html={note}/>
+              <fieldset disabled={disabled}>
+                <div>
+                  {
+                    inputs.map((input) => (
+                        <Fragment key={input[nameKey]}>
+                          {
+                            (input.type !== "radios" && input.type !== "nominations" && input.type !== "dropdown") ?
+                                <Field
+                                    name={input[nameKey]}
+                                    render={({field}: IField) => (
+                                        <Input input={input} field={field} form={typeForm}/>
+                                    )}
+                                /> :
+                                <Input input={input} field={{name: input[nameKey], value: '',}}
+                                       nominations={nominations} form={typeForm}/>
+                          }
+                        </Fragment>
+                    ))
+                  }
+                  <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                      size="invisible" style={{display: "none"}}
+                  />
                 </div>
-              </div>
+                <div className="form__row">
+                  <Field
+                      type="submit"
+                      value={disabled? "Набор закрыт": isSubmitting ? "Отправляется" : isSent ? "Успешно отправлено" : "Отправить"}
+                      className={cn({
+                        "btn-grey": true,
+                        "form__btn": true,
+                        "form__btn--submitting": isSubmitting,
+                        "form__btn--error": isError && !isSent,
+                        "form__btn--sent": isSent,
+                      })}/>
+                  <div className="note">
+                    <HtmlProcessing html={note}/>
+                  </div>
+                </div>
+              </fieldset>
             </FormikForm>
 
         )}

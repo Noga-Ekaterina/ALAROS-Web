@@ -147,6 +147,7 @@ export interface IFestival {
   bidTitle: string
   bidInputs: IFormInput[]
   bidNote: IHtmlString
+  bidDisabled: boolean
   documentsTitle: string
   documentsLinks: IHtmlString[]
   templates: IHtmlString

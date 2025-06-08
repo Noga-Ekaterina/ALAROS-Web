@@ -2,15 +2,20 @@
 .input{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 2.8em;
   gap: 15rem;
   border-top: #E5E5E5 solid var(--w-form-line);
-  padding-block: 10rem 9rem;
+  color: var(--c-grey);
 
   &:first-child{
     border-top: none;
   }
 
   &--dropdown{
+    height: auto;
+    align-items: stretch;
+    padding-top: .8em;
 
     @include sm{
       flex-direction: column;
@@ -21,7 +26,7 @@
     }
   }
 
-  *{
+  &, *{
     @include standard-font;
 
     @include sm{
@@ -79,8 +84,7 @@
 
 
     &-line{
-      background: var(--c-grey);
-      width: var(--w-form-line);
+      border-left: solid var(--w-form-line) currentColor;
       height: 14rem;
       align-self: center;
     }
@@ -104,6 +108,14 @@
         border-bottom: none !important;
         background: var(--c-grey-bg-light-2);
       }
+    }
+
+    &__line {
+      border-color: currentColor;
+    }
+
+    &__arrow svg *{
+      stroke: currentColor;
     }
 
     &__content{

@@ -10,6 +10,25 @@
     }
   }
 
+  fieldset{
+    border: none;
+
+    &:disabled {
+      *, input::placeholder {
+        color: var(--c-grey-bg) !important;
+      }
+
+      .input, .input *, button{
+        cursor: no-drop !important;
+      }
+
+
+      .form__btn{
+        color: var(--c-grey) !important;
+      }
+    }
+  }
+
   .form &__btn{
     align-self: start;
 

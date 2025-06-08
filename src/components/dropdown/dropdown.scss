@@ -32,10 +32,10 @@
   }
 
   &__title{
+    width: 100%;
     display: flex;
     gap: 15rem;
-    cursor: pointer;
-    transition: 0.3s;
+    text-align: left;
 
     @include xxl{
       gap: vu(25, xxl);
@@ -82,8 +82,7 @@
   }
 
   &__line{
-    background: var(--c-grey);
-    width: var(--w-form-line);
+    border-left: solid var(--w-form-line) var(--c-grey);
     height: 14rem;
     align-self: center;
     flex-shrink: 0;

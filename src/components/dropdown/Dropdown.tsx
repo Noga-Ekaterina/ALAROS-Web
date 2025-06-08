@@ -34,7 +34,7 @@ function Dropdown({id, value, values, name, handleCheck, className, elements, ar
   useClose({ref: dropdownRef, isOpen, setIsOpen});
   return (
       <div className={classNames("dropdown", isOpen && "open", className)} ref={dropdownRef}>
-        <div className="dropdown__title" onClick={()=> setIsOpen(!isOpen)}>
+        <button className="dropdown__title" onClick={()=> setIsOpen(!isOpen)}>
            <span className="dropdown__title-text">{elements? elements[values.indexOf(value)] :years? value.replace(/(года?)/, "") : nominationsElements? nominationsElements[values.indexOf(value)]: value}</span>
 
            {
@@ -45,7 +45,7 @@ function Dropdown({id, value, values, name, handleCheck, className, elements, ar
                  </>
                )
            }
-         </div>
+         </button>
          <div className="dropdown__content"
          >
 

@@ -125,6 +125,11 @@ button, *[type="submit"] {
   font-weight: inherit;
   cursor: pointer;
   transition: 0.3s;
+
+  &:disabled{
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 input{
