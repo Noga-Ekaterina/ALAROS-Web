@@ -152,6 +152,7 @@ export interface IFestival {
   documentsLinks: IHtmlString[]
   templates: IHtmlString
   templatesDownload: IHtmlString
+  templatesDisabled: boolean
   emails: IHtmlString[]
   diplomaTitle: string
   diplomaInputs: IFormInput[]

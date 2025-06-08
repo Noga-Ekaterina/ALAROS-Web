@@ -14,13 +14,14 @@ interface IProps extends IWithChildren {
   hash?: string
   startIsOpen?: boolean
   isBigGray?: boolean
+  disabled?: boolean
 }
 
-const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, children }: IProps) => {
   const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(startIsOpen??false);
   const [isInit, setIsInit] = useState(false)
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLFieldSetElement>(null);
   const rem = useGetRem();
   const lenis = useLenis()
 
@@ -77,8 +78,15 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }
   }, [isOpen]);
 
   return (
-      <div className={cn("detalis", { "detalis--opened": isOpen })}>
-        <button className={cn("detalis__btn", {"detalis__btn--big-gray": isBigGray})} onClick={handleClick}>
+      <div
+          className={cn("detalis", { "detalis--opened": isOpen })}
+          style={{pointerEvents: disabled? "none":"auto"}}
+      >
+        <button
+            className={cn("detalis__btn", {"detalis__btn--big-gray": isBigGray})}
+            onClick={handleClick}
+            disabled={disabled}
+        >
           {title}
           {rightElement || <span className="detalis__icon">+</span>}
         </button>
@@ -93,9 +101,9 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, children }
             onExit={() => contentRef.current && handleExit(contentRef.current)}
             onExiting={() => contentRef.current && handleExiting(contentRef.current)}
         >
-          <div className="detalis__content" ref={contentRef}>
+          <fieldset disabled={!isOpen} className="detalis__content" ref={contentRef}>
             {children}
-          </div>
+          </fieldset>
         </CSSTransition>
       </div>
   );

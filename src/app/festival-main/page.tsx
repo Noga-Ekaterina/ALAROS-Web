@@ -86,6 +86,7 @@ const init= unstable_cache(async ()=>{
               templatesDownload {
                 html
               }
+              templatesDisabled
               emails{
                 html
               }

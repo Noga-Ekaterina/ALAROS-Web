@@ -27,6 +27,7 @@ const FestivalTemplates = ({pageData, nominations}:Props) => {
   return (
       <div className="festival-templates">
         <Detalis
+            disabled={pageData.templatesDisabled}
             title={<HtmlProcessing html={btn.title}/>}
             rightElement={<HtmlProcessing html={`<span class="festival-templates__btn">${isClient? mobileScreen ? "<span>[</span><span class='festival-templates__icon'>+</span><span>]</span>":btn.link:btn.link}</span>`}/>}
         >

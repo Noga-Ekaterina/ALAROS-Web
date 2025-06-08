@@ -11,8 +11,6 @@
   }
 
   fieldset{
-    border: none;
-
     &:disabled {
       *, input::placeholder {
         color: var(--c-grey-bg) !important;
