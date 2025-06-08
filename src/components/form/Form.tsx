@@ -124,7 +124,6 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
                       type="submit"
                       value={disabled? "Набор закрыт": isSubmitting ? "Отправляется" : isSent ? "Успешно отправлено" : "Отправить"}
                       className={cn({
-                        "btn-grey": true,
                         "form__btn": true,
                         "form__btn--submitting": isSubmitting,
                         "form__btn--error": isError && !isSent,

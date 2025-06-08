@@ -28,6 +28,7 @@
   }
 
   .form &__btn{
+    @extend %btn-grey;
     align-self: start;
 
     &--error{

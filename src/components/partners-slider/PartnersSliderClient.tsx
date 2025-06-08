@@ -50,9 +50,9 @@ const PartnersSliderClient = ({title, partners}:Props) => {
               partners.map((partner, index) => (
                   <SwiperSlide key={`${partner.image}-${index}`} className="partners-slider__slide">
                     {
-                      partner.link === "" ? <img src={`/Assets/Pages/Logo-partners/${partner.image}`}/> :
+                      partner.link === "" ? <img src={`/Assets/Pages/Logo-partners/${partner.image}`} alt=""/> :
                           <a href={partner.link} target="_blank">
-                            <img src={`/Assets/Pages/Logo-partners/${partner.image}`}/>
+                            <img src={`/Assets/Pages/Logo-partners/${partner.image}`} alt=""/>
                           </a>
                     }
                   </SwiperSlide>

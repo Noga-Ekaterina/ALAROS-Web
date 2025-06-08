@@ -185,7 +185,7 @@ $base-widths: (
   font-weight: 500;
 }
 
-.btn-grey{
+%btn-grey{
   font-weight: 400 !important;
   text-align: center;
   color: var(--c-dark);
