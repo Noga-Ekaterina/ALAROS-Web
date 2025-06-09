@@ -315,7 +315,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
                 if (event) {
                   return (
                       <SwiperSlide key={`${start.year} ${event.date.start}`} className="calendar-events__event">
-                        <a href={event.link}>
+                        <a href={event.link} target="_blank">
                           <div className="calendar-events__block-text">
                             <div className="calendar-events__titles">
                               <h3 className="calendar-events__date">{event.date.start} - {event.date.end}</h3>
