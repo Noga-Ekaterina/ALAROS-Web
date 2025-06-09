@@ -105,14 +105,14 @@
 
     &--back{
       position: absolute;
-      right: var(--p-y);
+      right: var(--p-x);
       top: 25rem;
       z-index: 9;
     }
   }
 
   &__swiper{
-    margin: 0 var(--p-y) 15rem;
+    margin: 0 var(--p-x) 15rem;
 
     @include md{
       margin: 0;
@@ -126,7 +126,7 @@
 
   &__scale{
     position: fixed;
-    left: var(--p-y);
+    left: var(--p-x);
     top: 25rem;
     z-index: 9999;
     display: flex;

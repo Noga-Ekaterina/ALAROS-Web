@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="доработала ховер события">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/bg/2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/bg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/News/bg/2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/HomeEvents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/NewsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-list/news-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
-    </list>
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="фон событий" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,15 +255,7 @@
       <workItem from="1749215085813" duration="9962000" />
       <workItem from="1749298885894" duration="26789000" />
       <workItem from="1749387876206" duration="8619000" />
-      <workItem from="1749474415612" duration="13325000" />
-    </task>
-    <task id="LOCAL-00105" summary="перевёрстка подвала">
-      <option name="closed" value="true" />
-      <created>1745426426397</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1745426426397</updated>
+      <workItem from="1749474415612" duration="13742000" />
     </task>
     <task id="LOCAL-00106" summary="масштаб подсказки слайдера">
       <option name="closed" value="true" />
@@ -659,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749485267517</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="фон событий">
+      <option name="closed" value="true" />
+      <created>1749505264915</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1749505264915</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="переверстала алгоритмы" />
     <MESSAGE value="поменяла запрос проектов" />
     <MESSAGE value="сделала чтобы скрол не вис" />
     <MESSAGE value="починила скрол на сенсере" />
@@ -713,7 +702,8 @@
     <MESSAGE value="устронила небольшие пробемы" />
     <MESSAGE value="мелкие правки" />
     <MESSAGE value="доработала ховер события" />
-    <option name="LAST_COMMIT_MESSAGE" value="доработала ховер события" />
+    <MESSAGE value="фон событий" />
+    <option name="LAST_COMMIT_MESSAGE" value="фон событий" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

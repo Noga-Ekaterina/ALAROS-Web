@@ -14,10 +14,10 @@
     display: flex;
     align-items: center;
     background: var(--c-main);
-    padding-inline: var(--p-y) 46rem;
+    padding-inline: var(--p-x) 46rem;
 
     @include xxl{
-      padding-inline: var(--p-y) vu(39, xxl);
+      padding-inline: var(--p-x) vu(39, xxl);
     }
 
     @include sm{
@@ -31,7 +31,7 @@
 
     >*:last-child{
       position: absolute;
-      left: var(--p-y);
+      left: var(--p-x);
       bottom: 30rem;
       color: #C3C3C3;
       z-index: 2;

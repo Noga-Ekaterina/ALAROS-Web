@@ -141,7 +141,7 @@
   }
 
   &__main-title{
-    padding-left: var(--p-y);
+    padding-left: var(--p-x);
     width: 340rem;
     align-self: start;
 
@@ -172,7 +172,7 @@
       ));
 
       @include sm{
-        padding: 0 var(--p-y);
+        padding: 0 var(--p-x);
         flex-direction: column;
       }
     }
@@ -211,7 +211,7 @@
 
   &__block-text{
     display: flex;
-    padding: 18rem 18rem var(--p-y) var(--p-y);
+    padding: 18rem 18rem var(--p-x) var(--p-x);
     flex-direction: column;
     justify-content: space-between;
     width: 447rem;

@@ -12,18 +12,18 @@
     z-index: 2;
 
     &--big-gray{
-      padding: vu(29, xl) var(--p-y) vu(36, xl);
+      padding: vu(29, xl) var(--p-x) vu(36, xl);
       background: var(--c-grey-bg-light);
       line-height: 1.05em;
 
       @include title-small-font;
 
       @include xxl{
-        padding: vu(40.5, xxl) var(--p-y) vu(50.5, xxl);
+        padding: vu(40.5, xxl) var(--p-x) vu(50.5, xxl);
       }
 
       @include lg{
-        padding: 17rem var(--p-y) 21rem;
+        padding: 17rem var(--p-x) 21rem;
       }
 
 

@@ -17,7 +17,7 @@
   }
 
   &__block-text{
-    padding-left: var(--p-y);
+    padding-left: var(--p-x);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -31,7 +31,7 @@
 
     @include sm{
       width: 100%;
-      padding-right: var(--p-y);
+      padding-right: var(--p-x);
     }
   }
 
@@ -55,7 +55,7 @@
     @include sm{
       position: absolute;
       bottom: 0;
-      right: var(--p-y);
+      right: var(--p-x);
     }
   }
 
