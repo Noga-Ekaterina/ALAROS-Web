@@ -279,7 +279,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
 
   return (
       <div className="calendar-events" id="calendar-events">
-        <ReactSVG src="/Assets/Pages/Home/bg/2.svg" className="calendar-events__bg"/>
+        <ReactSVG src="/Assets/Calendar-events/bg.svg" className="calendar-events__bg"/>
         <div className="calendar-events__event-wrapp">
           {
             title&&

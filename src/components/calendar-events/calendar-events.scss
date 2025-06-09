@@ -18,7 +18,8 @@
     z-index: -1;
 
     @include sm{
-      top: -40rem;
+      top: auto;
+      bottom: -80rem;
       right: auto;
       left: -250rem;
       width: 900rem;

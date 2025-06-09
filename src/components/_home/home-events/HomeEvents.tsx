@@ -23,7 +23,6 @@ const HomeEvents = ({homeData}:Props) => {
 
   return (
       <div className="home-events">
-        {/*<ReactSVG src="/Assets/Pages/Home/bg/2.svg" className="home-events__bg"/>*/}
       <div className="home-events__block-text">
           <HtmlProcessing html={homeData.events.html}/>
       </div>
