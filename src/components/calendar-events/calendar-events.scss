@@ -30,18 +30,18 @@
     }
   }
 
-  .swiper{
-    padding-bottom: 24rem;
-  }
-
   &__calendar {
     padding-left: 29rem;
-    margin-top: 24rem;
+    margin-top: 44rem;
 
     &-wrapp {
       display: flex;
       gap: 17rem;
       align-items: baseline;
+    }
+
+    &-slider{
+      padding-bottom: 48rem;
     }
   }
 
@@ -155,15 +155,9 @@
 
   &__event{
 
-    >a{
+    >a {
       background: #fff;
       display: flex;
-      transition: box-shadow 0.5s;
-      box-shadow: -3px 11px 66.6px 0px transparent, 0px 8px 8.6px -6px transparent, 0px 0.5px 95.3px 0px transparent;
-
-      &:hover{
-        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 0.3px 0px #0000000D;
-      }
     }
 
     &-wrapp{
@@ -184,6 +178,13 @@
 
     &-slider{
       margin-inline:0;
+      box-shadow: -3px 11px 66.6px 0px transparent, 0px 8px 8.6px -6px transparent, 0px 0.5px 95.3px 0px transparent;
+
+      &:hover{
+        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 05.3px 0px #0000000D;
+      }
+
+      @include hover-scale(1.03);
 
       @include adaptive((
               width: (default: 600rem, xl: 1056, sm: 100%)
@@ -264,7 +265,6 @@
   &__btn{
     width: 12rem;
     position: relative;
-    top: -12rem;
 
     @include hover-scale;
 
