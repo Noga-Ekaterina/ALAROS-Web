@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала блокировку кнопки шаблонов">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="устронила небольшие пробемы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/festival-forum.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partners-slider/PartnersSliderClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partners-slider/PartnersSliderClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,15 +261,8 @@
       <workItem from="1749126727638" duration="3977000" />
       <workItem from="1749215085813" duration="9962000" />
       <workItem from="1749298885894" duration="26789000" />
-      <workItem from="1749387876206" duration="7908000" />
-    </task>
-    <task id="LOCAL-00101" summary="правки шапки и догруз фото">
-      <option name="closed" value="true" />
-      <created>1744633294047</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1744633294048</updated>
+      <workItem from="1749387876206" duration="8619000" />
+      <workItem from="1749474415612" duration="3794000" />
     </task>
     <task id="LOCAL-00102" summary="догруз фото проектов">
       <option name="closed" value="true" />
@@ -656,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749397567814</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="устронила небольшие пробемы">
+      <option name="closed" value="true" />
+      <created>1749401236101</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1749401236101</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="переверстала алгоритмы и почты" />
     <MESSAGE value="анимация при перескроле" />
     <MESSAGE value="масштаб фильтра и dropdown на xxl" />
     <MESSAGE value="переверстала алгоритмы" />
@@ -710,7 +709,8 @@
     <MESSAGE value="уменьшила стрелку" />
     <MESSAGE value="улучшила скрол по хешу" />
     <MESSAGE value="сделала блокировку кнопки шаблонов" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала блокировку кнопки шаблонов" />
+    <MESSAGE value="устронила небольшие пробемы" />
+    <option name="LAST_COMMIT_MESSAGE" value="устронила небольшие пробемы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

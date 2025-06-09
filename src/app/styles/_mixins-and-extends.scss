@@ -193,6 +193,8 @@ $base-widths: (
   //padding: 10rem;
   width: var(--width);
   line-height: calc(var(--width)/4.25);
+  transition: 0.3s;
+  text-decoration: none;
 
   @include adaptive((
           font-size: (
@@ -207,9 +209,10 @@ $base-widths: (
   &:hover{
     background: var(--c-main);
     color: #fff;
+    text-decoration: none;
   }
 
-  &:active{
+  &:active {
     background: #fff;
   }
 }

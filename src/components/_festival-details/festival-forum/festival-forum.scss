@@ -130,8 +130,12 @@
       }
     }
 
-    a{
+    p:first-child a{
       @extend %btn-grey;
+
+      &:hover{
+        text-decoration: none;
+      }
     }
   }
 

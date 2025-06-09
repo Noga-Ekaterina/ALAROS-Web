@@ -15,14 +15,14 @@ interface Props{
 const ProjectsFilter = ({projectsPage}:Props) => {
   const nominations= nominationsSProcessing(projectsPage.nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
   const nominationsValues =nominations.map(({title})=>title )
-  nominationsValues.unshift("все номинации")
+  nominationsValues.unshift("Все номинации")
 
   const [years, setYears] = useState<string[]>([])
   const searchParams= useSearchParams()
   const year= searchParams.get("year")
   const nomination= searchParams.get("nomination")
   const [yearValue, setYearValue] = useState(year??"Все года")
-  const [nominationsValue, setNominationsValue] = useState(nomination? nominations.find(item=> item.id==nomination)?.title??"неизвестная номинация":"все номинации")
+  const [nominationsValue, setNominationsValue] = useState(nomination? nominations.find(item=> item.id==nomination)?.title??"неизвестная номинация":"Все номинации")
   const {setMultipleParams} = useSearchParamsControl();
   const {togleLoading}=store
 

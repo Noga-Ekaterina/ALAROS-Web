@@ -30,7 +30,7 @@
 
   &__year{
     @include adaptive((
-            width: (default: 102rem, xxl: 185 , sm: 125)
+            width: (default: 122rem, xxl: 210 , sm: 155)
     ));
 
     *{
@@ -43,7 +43,7 @@
     z-index: 3;
 
     @include adaptive((
-            width: (default: 710rem, xxl: 1952, sm: 100%)
+            width: (default: 690rem, xxl: 1927, sm: 100%)
     ));
 
     @include sm{
@@ -83,7 +83,7 @@
     }
 
     @include adaptive((
-            width: (default: 145rem, xxl: 285, sm: 219)
+            width: (default: 145rem, xxl: 285, sm: 185)
     ));
 
     &:hover{
@@ -97,6 +97,10 @@
   }
 
   .dropdown{
+    *{
+      text-transform: none;
+    }
+
     &__title{
       background: var(--c-grey-bg);
       padding: 1.079em;
