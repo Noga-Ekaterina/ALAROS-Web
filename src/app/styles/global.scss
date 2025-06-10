@@ -14,6 +14,7 @@
   --c-grey-dark: #959595;
   --w-line: max(1.2px, 1.2rem);
   --w-form-line: max(1px, 1rem);
+  --btn-position-x: calc(var(--p-x) - 6rem);
 
   @include adaptive((
           --p-x: (default: 28.5rem, xl: 48, sm: 20)
@@ -285,7 +286,7 @@ h1, h2, h3, h4, h5{
 
   aspect-ratio: 1/1;
   background: #fff;
-  box-shadow: 1.34px 2.69px 19.28px 0px #0000001A;
+  box-shadow: -2.03px 7.45px 15.78px 0px #0000000D,  0px 5.42px 7.59px -4.06px #00000040, 0px 0.68px 1.96px 0px #00000040;
   border-radius: 50%;
   position: fixed;
   display: flex;

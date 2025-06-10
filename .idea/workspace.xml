@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="фон событий" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="--p-y=&gt;--p-x">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/back/back.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/back/back.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/to-top/to-top.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/to-top.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -255,15 +261,7 @@
       <workItem from="1749215085813" duration="9962000" />
       <workItem from="1749298885894" duration="26789000" />
       <workItem from="1749387876206" duration="8619000" />
-      <workItem from="1749474415612" duration="13742000" />
-    </task>
-    <task id="LOCAL-00106" summary="масштаб подсказки слайдера">
-      <option name="closed" value="true" />
-      <created>1745437295543</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1745437295544</updated>
+      <workItem from="1749474415612" duration="17334000" />
     </task>
     <task id="LOCAL-00107" summary="подправила масштаб загов">
       <option name="closed" value="true" />
@@ -649,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749505264915</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="--p-y=&gt;--p-x">
+      <option name="closed" value="true" />
+      <created>1749505895364</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1749505895364</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +684,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="поменяла запрос проектов" />
     <MESSAGE value="сделала чтобы скрол не вис" />
     <MESSAGE value="починила скрол на сенсере" />
     <MESSAGE value="опять размеры" />
@@ -703,7 +708,8 @@
     <MESSAGE value="мелкие правки" />
     <MESSAGE value="доработала ховер события" />
     <MESSAGE value="фон событий" />
-    <option name="LAST_COMMIT_MESSAGE" value="фон событий" />
+    <MESSAGE value="--p-y=&gt;--p-x" />
+    <option name="LAST_COMMIT_MESSAGE" value="--p-y=&gt;--p-x" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
