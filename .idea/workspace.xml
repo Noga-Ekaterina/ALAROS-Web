@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перевёрстка кнопок в модалке">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="смасштабировала шапку и изменила размер загов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AnimationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AnimationPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/back/back.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/back/back.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/FestivalBusinessProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/FestivalBusinessProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoocs/useGetHashPosition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoocs/useGetHashPosition.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,15 +263,7 @@
       <workItem from="1749298885894" duration="26789000" />
       <workItem from="1749387876206" duration="8619000" />
       <workItem from="1749474415612" duration="18450000" />
-      <workItem from="1749557172677" duration="5983000" />
-    </task>
-    <task id="LOCAL-00108" summary="масштаб фестиваля">
-      <option name="closed" value="true" />
-      <created>1745874677485</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1745874677485</updated>
+      <workItem from="1749557172677" duration="12151000" />
     </task>
     <task id="LOCAL-00109" summary="loader">
       <option name="closed" value="true" />
@@ -659,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749514728684</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="смасштабировала шапку и изменила размер загов">
+      <option name="closed" value="true" />
+      <created>1749563516351</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1749563516351</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +686,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="починила скрол на сенсере" />
     <MESSAGE value="опять размеры" />
     <MESSAGE value="переименовала festival-to-people на festival-details" />
     <MESSAGE value="исправила опечатку" />
@@ -713,7 +710,8 @@
     <MESSAGE value="фон событий" />
     <MESSAGE value="--p-y=&gt;--p-x" />
     <MESSAGE value="перевёрстка кнопок в модалке" />
-    <option name="LAST_COMMIT_MESSAGE" value="перевёрстка кнопок в модалке" />
+    <MESSAGE value="смасштабировала шапку и изменила размер загов" />
+    <option name="LAST_COMMIT_MESSAGE" value="смасштабировала шапку и изменила размер загов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

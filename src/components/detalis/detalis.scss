@@ -1,14 +1,16 @@
 @import "@/app/styles/mixins-and-extends";
 
 .detalis{
-  overflow: hidden;
+  -ms-overflow-y: hidden;
+  -ms-overflow-x: hidden;
+  overflow: clip;
 
   &__btn{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
     z-index: 2;
     text-align: left;
 
@@ -34,6 +36,11 @@
         position: relative;
         top: 1rem;
       }
+    }
+
+    &--sticky{
+      top: var(--header-height);
+      position: sticky;
     }
   }
 

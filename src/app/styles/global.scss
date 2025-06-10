@@ -16,7 +16,7 @@
   --w-form-line: max(1px, 1rem);
   --btn-position-x: calc(var(--p-x) - 6rem);
   --header-scale: 1;
-  --header-height: 43.7rem * var(--header-scale);
+  --header-height: calc(43.7rem * var(--header-scale));
 
   @include md{
     --header-scale: 1.3;

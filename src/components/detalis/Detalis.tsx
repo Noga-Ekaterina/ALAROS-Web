@@ -15,9 +15,10 @@ interface IProps extends IWithChildren {
   startIsOpen?: boolean
   isBigGray?: boolean
   disabled?: boolean
+  isSticky?: boolean
 }
 
-const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, isSticky, children }: IProps) => {
   const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(startIsOpen??false);
   const [isInit, setIsInit] = useState(false)
@@ -83,7 +84,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, 
           style={{pointerEvents: disabled? "none":"auto"}}
       >
         <button
-            className={cn("detalis__btn", {"detalis__btn--big-gray": isBigGray})}
+            className={cn("detalis__btn", {"detalis__btn--sticky": isOpen &&isSticky, "detalis__btn--big-gray": isBigGray})}
             onClick={handleClick}
             disabled={disabled}
         >
@@ -91,20 +92,22 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, 
           {rightElement || <span className="detalis__icon">+</span>}
         </button>
 
-        <CSSTransition
-            in={isOpen}
-            timeout={500}
-            nodeRef={contentRef}
-            onEnter={() => contentRef.current && handleEnter(contentRef.current)}
-            onEntering={() => contentRef.current && handleEntering(contentRef.current)}
-            onEntered={() => contentRef.current && handleEntered(contentRef.current)}
-            onExit={() => contentRef.current && handleExit(contentRef.current)}
-            onExiting={() => contentRef.current && handleExiting(contentRef.current)}
-        >
-          <fieldset disabled={!isOpen} className="detalis__content" ref={contentRef}>
-            {children}
-          </fieldset>
-        </CSSTransition>
+        <div>
+          <CSSTransition
+              in={isOpen}
+              timeout={500}
+              nodeRef={contentRef}
+              onEnter={() => contentRef.current && handleEnter(contentRef.current)}
+              onEntering={() => contentRef.current && handleEntering(contentRef.current)}
+              onEntered={() => contentRef.current && handleEntered(contentRef.current)}
+              onExit={() => contentRef.current && handleExit(contentRef.current)}
+              onExiting={() => contentRef.current && handleExiting(contentRef.current)}
+          >
+            <fieldset disabled={!isOpen} className="detalis__content" ref={contentRef}>
+              {children}
+            </fieldset>
+          </CSSTransition>
+        </div>
       </div>
   );
 };

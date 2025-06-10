@@ -22,7 +22,7 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick }: P
                     exit={{opacity: 0}}
                     transition={{duration: 0.5, ease: 'easeInOut'}}
                     className={className}
-                    style={{overflow: 'hidden'}}
+                    style={{msOverflowX: 'hidden', msOverflowY: "hidden", overflow: "clip"}}
                     onClick={onClick}
                 >
                   {children}
