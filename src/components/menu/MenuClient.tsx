@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {IHtmlString, IMenuSection} from "@/types/data";
 import {observer} from "mobx-react-lite";
 import store from "@/store/store";
@@ -15,25 +15,31 @@ interface Props{
 }
 
 const MenuClient = ({data}:Props) => {
+  const isActiveLink=(link: IHtmlString, section?: IHtmlString)=>{
+    if (pathname==="/")
+      return false
+
+    const regex = /href=["'](.*?)["']/gs;
+    console.log(Array.from(link.html.matchAll(regex)))
+    const [href]=Array.from(link.html.matchAll(regex)).map(m => m[1])
+    const [sectionHref]=section? Array.from(section.html.matchAll(regex)).map(m => m[1]):[]
+
+    return href.startsWith(sectionHref??pathname)
+  }
+
   const {isMenuOpened, togleMenu} = store;
+  const isMenuOpenedRef= useRef(isMenuOpened)
   const additionals= data.filter(section=> section.isAdditional)
   const sections= data.filter(section=> !section.isAdditional)
   const pathname= usePathname()
   const hash= useHash()
   const [activeSection, setActiveSection] = useState<null | IMenuSection>(null)
   const [isMultiPage, setIsMultiPage] = useState(false)
-
-  const isActiveLink=(link: IHtmlString, section?: IHtmlString)=>{
-    const regex = /href=["'](.*?)["']/gs;
-    const [href]=Array.from(link.html.matchAll(regex).map(m => m[1]))
-    const [sectionHref]=section? Array.from(section.html.matchAll(regex).map(m => m[1])):[]
-
-    return href.startsWith(sectionHref??pathname)
-  }
+  const isActiveAddition=additionals.find(({section})=> isActiveLink(section))
 
   useEffect(() => {
     setIsMultiPage(false)
-    if (pathname==="/" || additionals.find(({section})=> isActiveLink(section))) {
+    if (pathname==="/" || isActiveAddition) {
       setActiveSection(null)
       return
     }
@@ -63,6 +69,27 @@ const MenuClient = ({data}:Props) => {
       }
     }
   }, [pathname, isMenuOpened]);
+
+  useEffect(() => {
+    isMenuOpenedRef.current=isMenuOpened
+  }, [isMenuOpened]);
+
+  const handleEsc = useCallback((event: KeyboardEvent) => {
+    if (event.code === 'Escape') {
+      if (isMenuOpenedRef.current)
+        document.removeEventListener('keyup', handleEsc);
+        togleMenu()
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isMenuOpened)
+      document.addEventListener('keyup', handleEsc);
+
+    return () => {
+      document.removeEventListener('keyup', handleEsc);
+    }
+  }, [isMenuOpened]);
 
   return (
       <AnimatePresence> {/* Обёртка для анимаций */}
@@ -112,15 +139,24 @@ const MenuClient = ({data}:Props) => {
                     }
                   </motion.div>
                   {
-                    additionals.map(({section}, index) => (
-                        <div
-                            key={index}
-                            className={cn("menu__subsection-link", {"yellow": isActiveLink(section)})}
-                            onClick={togleMenu}
-                        >
-                          <HtmlProcessing html={section.html}/>
-                        </div>
-                    ))
+                    (activeSection || isActiveAddition)&&
+                      <motion.div
+                          initial={{opacity: 0,}}
+                          animate={{opacity: 1}}
+                          exit={{opacity: 0}}
+                          transition={{duration: 0.5}} className="menu__column">
+                        {
+                          additionals.map(({section}, index) => (
+                              <div
+                                  key={index}
+                                  className={cn("menu__subsection-link", {"yellow": isActiveLink(section)})}
+                                  onClick={togleMenu}
+                              >
+                                <HtmlProcessing html={section.html}/>
+                              </div>
+                          ))
+                        }
+                      </motion.div>
                   }
                 </div>
               </div>
