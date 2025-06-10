@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: calc(100% - 43.7rem);
+    height: calc(100% - var(--header-height));
 
     @include md-book{
       flex-direction: column-reverse;

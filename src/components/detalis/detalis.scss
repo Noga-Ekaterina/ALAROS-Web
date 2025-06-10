@@ -10,6 +10,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    text-align: left;
 
     &--big-gray{
       padding: vu(29, xl) var(--p-x) vu(36, xl);

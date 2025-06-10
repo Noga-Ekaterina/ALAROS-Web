@@ -4,7 +4,7 @@
   background: #fff;
   position: sticky;
   top: 0;
-  padding-block: 14rem;
+  padding-block: calc(14rem * var(--header-scale));
   z-index: 7;
   box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 95.3px 0px #0000000D;
 
@@ -27,7 +27,7 @@
   }
 
   &__left-block{
-    width: 325rem;
+    width: calc(325rem * var(--header-scale));
     @include flex-sb-c;
 
     @include sm{
@@ -41,25 +41,25 @@
   }
 
   &__logo{
-    width: 14.4rem;
+    width: calc(14.4rem * var(--header-scale));
 
     @include hover-scale;
   }
 
   &__menu{
-    width: 19.8rem;
+    width: calc(19.8rem * var(--header-scale));
 
     .header--menu & {
-      width: 14rem;
+      width: calc(14rem * var(--header-scale));
       position: relative;
-      top: 1rem;
+      top: calc(1rem * var(--header-scale));
     }
 
     &-wrapp{
-      font-size: 12rem;
+      font-size: calc(12rem * var(--header-scale));
       letter-spacing: 0.02em;
       color: var(--c-main);
-      gap: 20rem;
+      gap: calc(20rem * var(--header-scale));
 
       @include flex-sb-c;
 
@@ -70,7 +70,7 @@
   }
 
   &__search{
-    width: 13.8rem;
+    width: calc(13.8rem * var(--header-scale));
 
     .header--menu & *{
       fill: transparent;
