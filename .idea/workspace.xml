@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="смасштабировала шапку и изменила размер загов">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="обновила логику меню">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AnimationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AnimationPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/FestivalBusinessProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/FestivalBusinessProgram.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,23 +262,7 @@
       <workItem from="1749298885894" duration="26789000" />
       <workItem from="1749387876206" duration="8619000" />
       <workItem from="1749474415612" duration="18450000" />
-      <workItem from="1749557172677" duration="12151000" />
-    </task>
-    <task id="LOCAL-00109" summary="loader">
-      <option name="closed" value="true" />
-      <created>1745877157144</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1745877157144</updated>
-    </task>
-    <task id="LOCAL-00110" summary="loader повыше">
-      <option name="closed" value="true" />
-      <created>1745947579037</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1745947579037</updated>
+      <workItem from="1749557172677" duration="21583000" />
     </task>
     <task id="LOCAL-00111" summary="подправила размер шрифта в блоке пректа">
       <option name="closed" value="true" />
@@ -657,7 +640,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749563516351</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="сделала фиксацию нопки ДП">
+      <option name="closed" value="true" />
+      <created>1749584731937</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1749584731937</updated>
+    </task>
+    <task id="LOCAL-00159" summary="обновила логику меню">
+      <option name="closed" value="true" />
+      <created>1749597107206</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1749597107206</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +685,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="опять размеры" />
     <MESSAGE value="переименовала festival-to-people на festival-details" />
     <MESSAGE value="исправила опечатку" />
     <MESSAGE value="исправила размер" />
@@ -697,7 +695,6 @@
     <MESSAGE value="правки ссылок" />
     <MESSAGE value="правки стр результатов" />
     <MESSAGE value="размер загов и новостей" />
-    <MESSAGE value="обновила логику меню" />
     <MESSAGE value="заменила проект на фото и предусмотрела если html null" />
     <MESSAGE value="убрала боковые заги" />
     <MESSAGE value="ховеры и мелкие правки" />
@@ -711,7 +708,9 @@
     <MESSAGE value="--p-y=&gt;--p-x" />
     <MESSAGE value="перевёрстка кнопок в модалке" />
     <MESSAGE value="смасштабировала шапку и изменила размер загов" />
-    <option name="LAST_COMMIT_MESSAGE" value="смасштабировала шапку и изменила размер загов" />
+    <MESSAGE value="сделала фиксацию нопки ДП" />
+    <MESSAGE value="обновила логику меню" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновила логику меню" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

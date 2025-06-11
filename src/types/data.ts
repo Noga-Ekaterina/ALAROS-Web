@@ -62,6 +62,7 @@ export interface IFormInput{
   values: string[]
   bidTableColumn: string
   diplomaTableColumn: string
+  clue: string
 }
 
 export type TypeForm = "bid"|"diploma"

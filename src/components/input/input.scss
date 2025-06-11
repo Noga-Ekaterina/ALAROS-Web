@@ -60,6 +60,15 @@
     font-weight: 400;
   }
 
+  &__error, &__clue{
+    min-width: max-content;
+    text-transform: uppercase;
+  }
+
+  &__clue{
+    opacity: 0.4;
+  }
+
   &__error{
     min-width: max-content;
     text-transform: uppercase;
@@ -70,6 +79,10 @@
       &+.input{
         border-top: 0;
       }
+    }
+
+    + .input__clue{
+      display: none;
     }
   }
 

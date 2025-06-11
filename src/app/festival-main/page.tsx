@@ -71,6 +71,7 @@ const init= unstable_cache(async ()=>{
                 necessarily
                 bidTableColumn
                 diplomaTableColumn
+                clue
               }
               bidNote {
                 html
@@ -98,6 +99,7 @@ const init= unstable_cache(async ()=>{
                 necessarily
                 bidTableColumn
                 diplomaTableColumn
+                clue
               }
               diplomaNote {
                 html

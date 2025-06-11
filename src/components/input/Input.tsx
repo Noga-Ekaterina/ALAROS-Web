@@ -70,6 +70,7 @@ const Input = ({input, field, nominations, form}: IProps) => {
                     />
 
                     <ErrorMessage name={field.name} component="span" className="red input__error"/>
+                    <span className="input__clue">{input.clue}</span>
                   </div>
               )
               :
