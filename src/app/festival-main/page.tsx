@@ -8,23 +8,18 @@ import FestivalDocuments from "../../components/_festival/festival-documents/Fes
 import FestivalEmails from "../../components/_festival/festival-emails/FestivalEmails";
 import FestivalDiploma from "../../components/_festival/festival-diploma/FestivalDiploma";
 import FestivalJuries from "../../components/_festival/festival-juries/FestivalJuries";
-import FestivalProtections from "@/components/_festival-details/festival-protections/FestivalProtections";
 import FestivalProjects from "../../components/_festival/festival-projects/FestivalProjects";
-import FestivalBusinessProgram from "@/components/_festival-details/festival-business-program/FestivalBusinessProgram";
-import FestivalForum from "@/components/_festival-details/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
-import {IFestival, IFestivalProgramDay, IHtmlString, IJury, IProtectionsDay} from "@/types/data";
+import {IFestival, IHtmlString,} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
-import FestivalProgram from "@/components/_festival-details/festival-program/FestivalProgram";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 
 interface IData{
   festivalMains: IFestival[]
-  juries: IJury[]
   nominationsS: {
     nominations: IHtmlString
   }[]
@@ -105,6 +100,9 @@ const init= unstable_cache(async ()=>{
                 html
               }
               juriesTitle
+              juries{
+                html
+              }
               projectsTitle
               projectsRightSignature{
                 html
@@ -120,14 +118,6 @@ const init= unstable_cache(async ()=>{
                 images
               }
             }
-            juries {
-              name
-              place
-              image
-              jobTitle {
-                html
-              }
-            }
             nominationsS {
               nominations {
                 html
@@ -138,14 +128,14 @@ const init= unstable_cache(async ()=>{
   if (typeof data==="string" ||!data){
     return data
   }
-  const {festivalMains, juries,nominationsS}=data
+  const {festivalMains, nominationsS}=data
 
-  const result= {pageData: festivalMains[0], juries, nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
+  const result= {pageData: festivalMains[0],nominations: nominationsSProcessing(nominationsS[0].nominations.html)}
 
 
   return result
 },
-    ["festival-main"], {tags: ["FestivalMain", "Jury", "FormInput", "Project", "Nominations"]})
+    ["festival-main"], {tags: ["FestivalMain", "FormInput", "Project", "Nominations"]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
@@ -156,7 +146,7 @@ const Page = async ({searchParams}:Props) => {
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 
-  const {pageData, juries, nominations}= data
+  const {pageData, nominations}= data
   return (
       <AnimationPage>
         <ProjectModal projects={pageData.projects} searchParams={searchParams}/>
@@ -168,7 +158,7 @@ const Page = async ({searchParams}:Props) => {
         <FestivalDocuments pageData={pageData} nominations={nominations}/>
         <FestivalEmails pageData={pageData}/>
         <FestivalDiploma pageData={pageData} nominations={nominations}/>
-        <FestivalJuries title={pageData.juriesTitle} juries={juries}/>
+        <FestivalJuries title={pageData.juriesTitle} juriesDataString={pageData.juries}/>
         <FestivalProjects pageData={pageData}/>
         <PartnersSlider/>
       </AnimationPage>

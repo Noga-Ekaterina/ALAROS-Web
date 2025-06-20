@@ -159,6 +159,7 @@ export interface IFestival {
   diplomaInputs: IFormInput[]
   diplomaNote: IHtmlString
   juriesTitle: string
+  juries: IHtmlString[]
   projectsTitle: string
   projectsRightSignature: IHtmlString
   projects: IProject[]
@@ -206,7 +207,7 @@ export interface IJury{
   name: string
   place: string
   image: string
-  jobTitle: IHtmlString
+  jobTitle: string
 }
 
 export interface IProtectionsDay {
