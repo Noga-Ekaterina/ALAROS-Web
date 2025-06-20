@@ -87,7 +87,7 @@ const AboutPresidium = ({juries, title}:Props) => {
                                       <div>
                                          <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>
                                       </div>
-                                      <HtmlProcessing html={item.jobTitle.html}/>
+                                      <HtmlProcessing html={item.jobTitle}/>
                                    </div>
                                 </>
                             }

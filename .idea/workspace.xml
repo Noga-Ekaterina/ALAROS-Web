@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="добавила подсказку для поля">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="перевёрстка жюри">
       <change afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/getData.ts" afterDir="false" />
@@ -269,15 +269,7 @@
       <workItem from="1749474415612" duration="18450000" />
       <workItem from="1749557172677" duration="21941000" />
       <workItem from="1749655328645" duration="1346000" />
-      <workItem from="1750350219689" duration="19658000" />
-    </task>
-    <task id="LOCAL-00112" summary="подправила размер шрифта в блоке пректа">
-      <option name="closed" value="true" />
-      <created>1745960237707</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1745960237707</updated>
+      <workItem from="1750350219689" duration="19956000" />
     </task>
     <task id="LOCAL-00113" summary="подправила размер партнёров на xxl">
       <option name="closed" value="true" />
@@ -663,7 +655,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749603399588</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="перевёрстка жюри">
+      <option name="closed" value="true" />
+      <created>1750381578776</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1750381578777</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="исправила опечатку" />
     <MESSAGE value="исправила размер" />
     <MESSAGE value="перевёрстка новостей" />
     <MESSAGE value="добавила кнопку назад и сделала круглые кнопки одного стиля" />
@@ -717,7 +716,8 @@
     <MESSAGE value="сделала фиксацию нопки ДП" />
     <MESSAGE value="обновила логику меню" />
     <MESSAGE value="добавила подсказку для поля" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавила подсказку для поля" />
+    <MESSAGE value="перевёрстка жюри" />
+    <option name="LAST_COMMIT_MESSAGE" value="перевёрстка жюри" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
