@@ -4,6 +4,11 @@ export interface IHtmlString{
   html: string
 }
 
+export interface IMapCoordinates {
+  latitude: number;
+  longitude: number;
+}
+
 export interface IFooter{
   navigationColumn: IHtmlString
   columns: IHtmlString[]
@@ -242,3 +247,16 @@ export interface ICompetitionResults{
   resultsTitle: string
   results: IHtmlString
 }
+
+export interface IContacts {
+  title: string;
+  addressesColumns: IHtmlString[];
+  images: string[];
+  contactsColumns: IHtmlString[];
+  socialsIcons: IHtmlString;
+  mapCoordinates: IMapCoordinates;
+  formTitle: string
+  formInputs: IFormInput
+  formEmail: string
+}
+
