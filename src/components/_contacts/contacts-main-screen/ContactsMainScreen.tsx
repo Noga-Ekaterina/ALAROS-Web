@@ -2,7 +2,6 @@ import React from 'react';
 import "./contacts-main-screen.scss"
 import {IContacts} from "@/types/data";
 import HtmlProcessing from "@/components/HtmlProcessing";
-import cn from "classnames";
 
 interface Props{
   data: IContacts

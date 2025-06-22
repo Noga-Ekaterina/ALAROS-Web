@@ -112,6 +112,10 @@ a {
   text-decoration-color: transparent;
 }
 
+.leaflet-control-attribution.leaflet-control{
+  transform: scale(0.1);
+}
+
 u{
   color: inherit;
   font-size: inherit;

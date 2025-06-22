@@ -17,6 +17,7 @@
     "formik": "^2.4.6",
     "framer-motion": "^12.6.0",
     "html-react-parser": "^5.2.2",
+    "leaflet": "^1.9.4",
     "lottie-react": "^2.4.1",
     "mobx-react-lite": "^4.1.0",
     "next": "14.2.3",
@@ -24,6 +25,7 @@
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
     "react-google-recaptcha": "^3.1.0",
+    "react-leaflet": "^4.2.1",
     "react-responsive": "^10.0.0",
     "react-svg": "^16.2.0",
     "react-transition-group": "^4.4.5",
@@ -32,6 +34,7 @@
     "swiper": "^11.2.0"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.18",
     "@types/node": "^20",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",

@@ -1,0 +1,70 @@
+@import "@/app/styles/mixins-and-extends";
+.contacts-addresses-socials{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+
+  *{
+    line-height: 1.3em;
+
+    @include standard-font
+  }
+
+  b, strong{
+    font-weight: 600;
+  }
+
+  &__item{
+    width: 25%;
+    aspect-ratio: 1/1;
+    padding: var(--p-x);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+
+    @include sm{
+      width: 50%;
+    }
+    &--dark{
+      background: var(--c-main);
+
+      *{
+        color: #fff;
+      }
+    }
+  }
+
+  &__text{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.3em;
+  }
+
+  &__map{
+    width: 50%;
+    aspect-ratio: 2/1;
+
+    @include sm{
+      width: 100%;
+    }
+  }
+
+  &__icons{
+    display: flex;
+    gap: 6rem;
+  }
+
+  &__icon{
+    width: 26rem;
+
+    @include hover-scale;
+
+    img{
+      width: 100%;
+    }
+  }
+}
