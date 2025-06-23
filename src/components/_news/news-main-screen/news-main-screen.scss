@@ -44,7 +44,7 @@
       right: 0;
       bottom: 48.2%;
       z-index: 2;
-      border-top: var(--w-line) solid #E5E5E5;
+      border-top: var(--w-line-main-screen) solid #E5E5E5;
     }
 
     &::after{
@@ -54,7 +54,7 @@
       top: 0;
       bottom: 0;
       z-index: 2;
-      border-left: var(--w-line) solid #E5E5E5;
+      border-left: var(--w-line-main-screen) solid #E5E5E5;
     }
   }
 
@@ -71,7 +71,7 @@
     bottom: 8.8%;
     z-index: 4;
     border-radius: 50%;
-    border: var(--w-line) solid #E5E5E5;
+    border: var(--w-line-main-screen) solid #E5E5E5;
 
     @include sm{
       max-height: unset;

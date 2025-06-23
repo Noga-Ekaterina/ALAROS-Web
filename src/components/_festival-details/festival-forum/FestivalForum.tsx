@@ -71,7 +71,7 @@ const FestivalForum = ({pageData}:Props) => {
               <div className="festival-forum__contacts">
                 <img src={`/Assets/Pages/People/${pageData.forumContactsImage}`} alt=""/>
                 <div className="festival-forum__block-text">
-                  <HtmlProcessing html={pageData.forumContacts.html}/>-
+                    <HtmlProcessing html={pageData.forumContacts.html}/>
                 </div>
               </div>
 

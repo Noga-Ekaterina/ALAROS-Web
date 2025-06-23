@@ -37,7 +37,6 @@
   }
 
   &__title{
-    color: var(--c-dark);
     font-weight: 300;
 
     @include standard-font-big
@@ -62,6 +61,7 @@
   }
 
   &__description{
+    font-weight: 300;
     margin-top: -4rem;
   }
 }

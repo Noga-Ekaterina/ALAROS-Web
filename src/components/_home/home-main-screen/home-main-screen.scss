@@ -21,11 +21,11 @@
       &:before{
         content: '';
         width: 100vw;
-        height:var(--w-line);
+        height:var(--w-line-main-screen);
         background: #E5E5E5;
         position: absolute;
         left: 0;
-        top: calc(50% - var(--w-line)/2);
+        top: calc(50% - var(--w-line-main-screen)/2);
         z-index: 5;
       }
 
@@ -33,7 +33,7 @@
         content: '';
         height: 100%;
         width: 0;
-        border-left: var(--w-line) solid #E5E5E5;
+        border-left: var(--w-line-main-screen) solid #E5E5E5;
         position: absolute;
         right: 0;
         top: 0;
@@ -54,7 +54,7 @@
     //left: 50%;
     //bottom: 0;
     z-index: 3;
-    border-top: var(--w-line) solid #E5E5E5;
+    border-top: var(--w-line-main-screen) solid #E5E5E5;
     //background: linear-gradient(to top left, transparent calc(50% - var(--main-screen-line)/2), #E5E5E5 calc(50% - var(--main-screen-line)/2), #E5E5E5 calc(50% + var(--main-screen-line)/2), transparent calc(50% + var(--main-screen-line)/2))  ;
   }
 
@@ -85,7 +85,7 @@
       height: 100%;
       aspect-ratio: 1/1;
       border-radius: 0 50% 50% 0;
-      border: var(--w-line) solid #E5E5E5;
+      border: var(--w-line-main-screen) solid #E5E5E5;
       border-left: none;
 
       &-wrapp {
@@ -170,7 +170,7 @@
 
         &:first-child {
           color: #ffffff;
-          border: var(--w-line) solid #E5E5E5;
+          border: var(--w-line-main-screen) solid #E5E5E5;
           background: var(--c-main);
           transition: 0.5s;
 
@@ -200,6 +200,7 @@
       justify-content: space-between !important;
       width: 100%;
       height: 100%;
+      background: #fff;
     }
 
     &-title{
@@ -215,7 +216,7 @@
               font-size: (
                       default: min(43rem, 7.167vh),
                       xxl:vu(123, xxl, true),
-                      xl: vu(86, xl, true),
+                      xl: vu(100, xl, true),
                       sm: min(30rem, 3.333vh)
               )
       ));
@@ -236,7 +237,7 @@
 
         &::after{
           content: '';
-          width: var(--w-line);
+          width: var(--w-line-main-screen);
           height: 200%;
           background: #E5E5E5;
           position: absolute;
@@ -252,7 +253,7 @@
 
         &::before{
           content: '';
-          width: var(--w-line);
+          width: var(--w-line-main-screen);
           height: 200%;
           background: #E5E5E5;
           position: absolute;

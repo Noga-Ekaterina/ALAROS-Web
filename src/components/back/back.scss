@@ -4,10 +4,5 @@
   z-index: 7;
   top: calc(var(--header-height) + 10rem);
   left: var(--btn-position-x);
-  padding-right: 3rem;
 
-  @include lg{
-    padding-top: 1rem;
-
-  }
 }

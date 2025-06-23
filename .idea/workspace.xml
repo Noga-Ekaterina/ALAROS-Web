@@ -4,17 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="первый экран контактов">
-      <change afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/ContactsAddressesSocials.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/getLinks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/map/Map.tsx" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="второй экран контактов">
+      <change afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-form/ContactsForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-form/contacts-form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/ContactsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/ContactsMainScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/contacts-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/contacts-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/festival-details-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-details-main-screen/festival-details-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/FestivalForum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/FestivalForum.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/festival-forum.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/festival-forum.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-program/festival-program.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-program/festival-program.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-protections/festival-protections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-protections/festival-protections.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-documents/festival-documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-emails/festival-emails.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-projects/festival-projects.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-projects/festival-projects.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-events/home-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-main-screen/home-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/news-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-main-screen/news-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/back/Back.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/back/Back.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/back/back.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/back/back.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider-progress/slider-progress.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-progress/slider-progress.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/to-top/ToTop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/to-top/ToTop.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -61,25 +83,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/src/app/contacts",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Пользователь\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/app/contacts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app\contacts" />
@@ -271,15 +293,8 @@
       <workItem from="1749655328645" duration="1346000" />
       <workItem from="1750350219689" duration="20271000" />
       <workItem from="1750427122841" duration="36538000" />
-      <workItem from="1750595001514" duration="15870000" />
-    </task>
-    <task id="LOCAL-00115" summary="подправила размер партнёров">
-      <option name="closed" value="true" />
-      <created>1746201550978</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1746201550978</updated>
+      <workItem from="1750595001514" duration="39313000" />
+      <workItem from="1750679573729" duration="3014000" />
     </task>
     <task id="LOCAL-00116" summary="сделала отправку форм">
       <option name="closed" value="true" />
@@ -665,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750535224475</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="второй экран контактов">
+      <option name="closed" value="true" />
+      <created>1750619035030</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1750619035030</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="перевёрстка новостей" />
     <MESSAGE value="добавила кнопку назад и сделала круглые кнопки одного стиля" />
     <MESSAGE value="hovers" />
     <MESSAGE value="правки блока событий и механики" />
@@ -719,7 +741,8 @@
     <MESSAGE value="добавила подсказку для поля" />
     <MESSAGE value="перевёрстка жюри" />
     <MESSAGE value="первый экран контактов" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый экран контактов" />
+    <MESSAGE value="второй экран контактов" />
+    <option name="LAST_COMMIT_MESSAGE" value="второй экран контактов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

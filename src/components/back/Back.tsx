@@ -15,7 +15,7 @@ const Back = () => {
           className="btn-round back"
           onClick={() => router.back()}
       >
-        <ReactSVG src="/Assets/Icons/arrow.svg" className="btn-round__arr"/>
+        <ReactSVG src="/Assets/Icons/arrow_round.svg" className="btn-round__arr"/>
       </button>
   );
 };

@@ -44,7 +44,9 @@
   p{
     font-weight: 300;
 
-    @include standard-font-big
+    @include adaptive((
+            font-size: (default: 17rem, xxl: 35, xl: 30, md: 15, sm: 15)
+    ))
   }
 
   p:last-child{

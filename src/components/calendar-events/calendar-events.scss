@@ -73,7 +73,7 @@
         position: absolute;
         right: calc(-1.25em +  var(--w-line)/2);
         height: 1.57em;
-        border-left: var(--w-line) solid var(--c-grey);
+        border-left: var(--w-line-main-screen) solid var(--c-grey);
       }
     }
 
@@ -90,6 +90,10 @@
       background: #75816C;
       color: #fff;
       cursor: pointer;
+
+      &.red *{
+        color: #A11E0E !important;
+      }
     }
 
     &--active-passed-day {
@@ -249,12 +253,13 @@
     color: #B1C634;
     margin-top: 10rem;
 
-    @include standard-font
+    @include standard-font-small
   }
 
   &__description{
     align-self: flex-end;
     color: var(--c-grey-dark);
+    font-weight: 300;
 
     @include adaptive((
             width: (default: 193rem, xxl: 420, xl: 316, sm: 100%),

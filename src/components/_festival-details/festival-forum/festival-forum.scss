@@ -74,7 +74,7 @@
       aspect-ratio: 1/1;
       flex-shrink: 0;
       position: relative;
-      top: 0.65em;
+      top: 0.5em;
       left: -0.9em;
       background: var(--c-red);
     }
@@ -187,10 +187,13 @@
       }
 
       p{
-        color: #959595;
+        color: var(--c-grey-dark);
+        font-weight: 300;
+
 
         a{
           color: var(--c-dark);
+          font-weight: 400;
         }
 
         &:first-child{

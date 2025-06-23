@@ -32,7 +32,7 @@
   &__sections{
     display: flex;
     gap: 36rem;
-    margin-block: 25rem;
+    margin-block: 25rem 35rem;
   }
 
   &__btn{
@@ -46,7 +46,7 @@
   }
 
   &__note{
-    margin-bottom: 25rem;
+    margin-bottom: 35rem;
 
     @include standard-font;
 
@@ -80,6 +80,7 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+      vertical-align: bottom;
     }
   }
 

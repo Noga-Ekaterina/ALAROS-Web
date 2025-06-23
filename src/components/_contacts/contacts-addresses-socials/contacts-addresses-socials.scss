@@ -6,9 +6,14 @@
   z-index: 2;
 
   *{
+    font-weight: 300;
     line-height: 1.3em;
 
-    @include standard-font
+    @include standard-font;
+
+    @include xl{
+      font-size: vu(22, xl);
+    }
   }
 
   b, strong{

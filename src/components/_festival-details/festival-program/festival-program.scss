@@ -78,14 +78,14 @@
 
   .detalis {
     width: 438rem;
-    border-top: var(--w-line) solid var(--c-grey);
+    border-top: var(--w-line) solid var(--c-line);
 
     @include sm{
       width: 323rem;
     }
 
     &:last-child {
-      border-bottom: var(--w-line) solid var(--c-grey);
+      border-bottom: var(--w-line) solid var(--c-line);
     }
 
     *{
@@ -107,8 +107,8 @@
     }
 
     &__icon{
-      font-size: 20rem;
-      font-weight:500;
+      font-size: 23rem;
+      font-weight: 400;
       color: var(--c-red);
     }
 

@@ -23,7 +23,7 @@ const ToTop = () => {
   }, []);
   return (
       <button className="btn-round to-top" onClick={()=> smoothScroll(-window.scrollY)} style={{display: isShow? "flex":"none"}}>
-        <ReactSVG className="btn-round__arr" src="/Assets/Icons/arrow.svg"/>
+        <ReactSVG className="btn-round__arr" src="/Assets/Icons/arrow_round.svg"/>
       </button>
   );
 };

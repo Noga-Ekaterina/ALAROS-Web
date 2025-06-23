@@ -4,6 +4,12 @@
   }
 }
 
+@mixin xl{
+  @media (min-width: 1600px) {
+    @content
+  }
+}
+
 @mixin lg{
   @media (max-width: 1600px) {
     @content

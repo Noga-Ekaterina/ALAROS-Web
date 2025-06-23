@@ -43,7 +43,7 @@
     z-index: 3;
 
     @include adaptive((
-            width: (default: 690rem, xxl: 1927, sm: 100%)
+            width: (default: 690rem, xxl: 1927, xl: 1311, sm: 100%)
     ));
 
     @include sm{
@@ -134,7 +134,7 @@
     }
 
     &__line{
-      border-color: #AAAAAA;
+      border-color:  var(--c-grey);
     }
 
     &__content{
@@ -145,7 +145,7 @@
     }
 
     &__item{
-      border-color: var(--c-grey);
+      border-color: rgba(188,188,188,0.53);
     }
 
     label{

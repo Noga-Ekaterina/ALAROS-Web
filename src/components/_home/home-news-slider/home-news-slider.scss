@@ -27,4 +27,12 @@
       }
     }
   }
+
+  .big-slider__btn{
+    top: 100rem;
+
+    @include lg{
+      top: 170rem;
+    }
+  }
 }

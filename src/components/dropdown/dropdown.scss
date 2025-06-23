@@ -74,7 +74,7 @@
   }
 
   &__item{
-    border-bottom: max(1px, 1rem) solid var(--c-grey-bg-light);
+    border-bottom: var(--w-line) solid var(--c-grey-bg-light);
 
     &:last-child{
       border-bottom-width: 0;
@@ -82,7 +82,8 @@
   }
 
   &__line{
-    border-left: solid var(--w-form-line) var(--c-grey);
+    border-left: solid var(--w-line);
+    border-color: var(--c-grey);
     height: 14rem;
     align-self: center;
     flex-shrink: 0;

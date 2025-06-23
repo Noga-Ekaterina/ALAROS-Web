@@ -1,10 +1,6 @@
 @import "@/app/styles/mixins-and-extends";
 
 .detalis{
-  -ms-overflow-y: hidden;
-  -ms-overflow-x: hidden;
-  overflow: clip;
-
   &__btn{
     width: 100%;
     display: flex;
