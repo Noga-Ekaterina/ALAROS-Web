@@ -48,6 +48,20 @@
       background: var(--c-red);
       color: #fff;
     }
+
+    &-and-warning{
+      display: flex;
+      align-items: start;
+      gap: 20rem;
+    }
+  }
+
+  &__warning{
+    color: var(--c-grey-dark);
+    font-weight: 300;
+    line-height: 1.4em;
+
+    @include standard-font-small
   }
 
   .note{

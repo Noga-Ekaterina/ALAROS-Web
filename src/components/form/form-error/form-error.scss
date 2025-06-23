@@ -1,0 +1,16 @@
+@import "@/app/styles/mixins-and-extends";
+
+.form-error{
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  border: 1.799px solid #D0D0D0;
+  background: rgba(236, 236, 236, 0.30);
+  backdrop-filter: blur(1.5499999523162842px);
+
+  padding: 1.5em 2.5em;
+
+  @include standard-font
+}

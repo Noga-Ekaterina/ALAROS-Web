@@ -69,6 +69,9 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
       req
     )
 
+    if (resp.data.type=="error")
+      throw new Error('Ошибка сервера');
+
     return NextResponse.json({ ok: true });
   }catch (err){
     return NextResponse.json(

@@ -9,6 +9,7 @@ import cn from "classnames";
 import {getInitialValues} from "@/components/form/getInitialValues";
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from "axios";
+import FormError from "@/components/form/form-error/FormError";
 
 interface Props{
   inputs: IFormInput[]
@@ -23,6 +24,7 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
   const nameKey= typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
+  const [isErrorSubmit, setIsErrorSubmit] = useState(false)
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const initialValues = getInitialValues(inputs, nominations, nameKey);
@@ -58,14 +60,14 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
       setIsSent(true);
       setTimeout(() => setIsSent(false), 4000);
     } catch (error) {
-      setIsError(true);
+      setIsErrorSubmit(true);
+
+      setTimeout(()=> setIsErrorSubmit(false), 3000)
     } finally {
       setSubmitting(false);
       recaptchaRef.current?.reset();
     }
   };
-
-
 
   const validate=(values: typeof initialValues)=> {
     const errors: { [key: string]: string } = {}
@@ -91,54 +93,68 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
   }
 
   return (
-      <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
-        {({ isSubmitting,  }) =>(
-            <FormikForm className="form">
-              <fieldset disabled={disabled}>
-                <div>
-                  {
-                    inputs.map((input) => (
-                        <Fragment key={input[nameKey]}>
-                          {
-                            (input.type !== "radios" && input.type !== "nominations" && input.type !== "dropdown") ?
-                                <Field
-                                    name={input[nameKey]}
-                                    render={({field}: IField) => (
-                                        <Input input={input} field={field} form={typeForm}/>
-                                    )}
-                                /> :
-                                <Input input={input} field={{name: input[nameKey], value: '',}}
-                                       nominations={nominations} form={typeForm}/>
-                          }
-                        </Fragment>
-                    ))
-                  }
-                  <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                      size="invisible" style={{display: "none"}}
-                  />
-                </div>
-                <div className="form__row">
-                  <Field
-                      type="submit"
-                      value={disabled? "Набор закрыт": isSubmitting ? "Отправляется" : isSent ? "Успешно отправлено" : "Отправить"}
-                      className={cn({
-                        "form__btn": true,
-                        "form__btn--submitting": isSubmitting,
-                        "form__btn--error": isError && !isSent,
-                        "form__btn--sent": isSent,
-                      })}/>
-                  <div className="note">
-                    <HtmlProcessing html={note}/>
+      <>
+        <Formik initialValues={initialValues} onSubmit={handleSubmit} validate={validate}>
+          {({ isSubmitting,  }) =>(
+              <FormikForm className="form">
+                <fieldset disabled={disabled}>
+                  <div>
+                    {
+                      inputs.map((input) => (
+                          <Fragment key={input[nameKey]}>
+                            {
+                              (input.type !== "radios" && input.type !== "nominations" && input.type !== "dropdown") ?
+                                  <Field
+                                      name={input[nameKey]}
+                                      render={({field}: IField) => (
+                                          <Input input={input} field={field} form={typeForm}/>
+                                      )}
+                                  /> :
+                                  <Input input={input} field={{name: input[nameKey], value: '',}}
+                                         nominations={nominations} form={typeForm}/>
+                            }
+                          </Fragment>
+                      ))
+                    }
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                        size="invisible" style={{display: "none"}}
+                    />
                   </div>
-                </div>
-              </fieldset>
-            </FormikForm>
+                  <div className="form__row">
+                    <div className="form__btn-and-warning">
+                      <Field
+                          type="submit"
+                          value={disabled? "Набор закрыт": isSubmitting ? "Отправляется" : isSent ? "Успешно отправлено" : "Отправить"}
+                          className={cn({
+                            "form__btn": true,
+                            "form__btn--submitting": isSubmitting,
+                            "form__btn--error": isError && !isSent,
+                            "form__btn--sent": isSent,
+                          })}
+                      />
 
-        )}
-      </Formik>
+                      <div className="form__warning">
+                        Отправляя форму, <br/>
+                        вы соглашаетесь на обработку <br/>
+                        персональных данных
+                      </div>
+                    </div>
+                    <div className="note">
+                      <HtmlProcessing html={note}/>
+                    </div>
+                  </div>
+                </fieldset>
+              </FormikForm>
 
+          )}
+        </Formik>
+
+        {
+          isErrorSubmit && <FormError/>
+        }
+      </>
   );
 };
 

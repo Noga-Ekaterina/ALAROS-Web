@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="визуальные правки и догруз материалов">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="догруз материалов">
+      <change afterPath="$PROJECT_DIR$/src/components/form/form-error/FormError.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/form-error/form-error.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/submit-form/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/submit-form/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,15 +269,7 @@
       <workItem from="1750350219689" duration="20271000" />
       <workItem from="1750427122841" duration="36538000" />
       <workItem from="1750595001514" duration="39313000" />
-      <workItem from="1750679573729" duration="4379000" />
-    </task>
-    <task id="LOCAL-00118" summary="подправила главные заги">
-      <option name="closed" value="true" />
-      <created>1746539765142</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1746539765143</updated>
+      <workItem from="1750679573729" duration="13330000" />
     </task>
     <task id="LOCAL-00119" summary="поменяла лоадер">
       <option name="closed" value="true" />
@@ -657,7 +655,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750685977066</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="догруз материалов">
+      <option name="closed" value="true" />
+      <created>1750686874721</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1750686874721</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hovers" />
     <MESSAGE value="правки блока событий и механики" />
     <MESSAGE value="правки ссылок" />
     <MESSAGE value="правки стр результатов" />
@@ -711,7 +716,8 @@
     <MESSAGE value="первый экран контактов" />
     <MESSAGE value="второй экран контактов" />
     <MESSAGE value="визуальные правки и догруз материалов" />
-    <option name="LAST_COMMIT_MESSAGE" value="визуальные правки и догруз материалов" />
+    <MESSAGE value="догруз материалов" />
+    <option name="LAST_COMMIT_MESSAGE" value="догруз материалов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

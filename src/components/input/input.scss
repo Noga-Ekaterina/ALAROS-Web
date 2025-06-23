@@ -74,7 +74,7 @@
     text-transform: uppercase;
 
     .input:has(&){
-      border-block: var(--c-red) solid rgba(var(--c-grey), 0.5);
+      border-block: var(--c-red) solid var(--w-line);
 
       &+.input{
         border-top: 0;
