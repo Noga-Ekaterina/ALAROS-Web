@@ -12,6 +12,7 @@ import Menu from "@/components/menu/Menu";
 import Loading from './loading';
 import Loader from "@/components/loader/Loader";
 import Back from "@/components/back/Back";
+import Cookie from "@/components/cookie/Cookie";
 
 export default function RootLayout({
   children,
@@ -34,6 +35,7 @@ export default function RootLayout({
           </SmoothScrolling>
       </Suspense>
       <Back/>
+      <Cookie/>
       <ToTop/>
       <Scroll/>
       </body>

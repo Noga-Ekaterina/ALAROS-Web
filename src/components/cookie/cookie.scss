@@ -1,0 +1,41 @@
+@import "@/app/styles/mixins-and-extends";
+
+.cookie{
+  background: #fff;
+  position: fixed;
+  z-index: 5;
+  bottom: 20rem;
+  left: var(--btn-position-x);
+  padding: 10rem 10rem 10rem 14rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 20rem;
+
+  @include sm{
+    flex-direction: column;
+  }
+
+  *{
+    @include standard-font-small
+  }
+
+  &__text{
+    color: var(--c-grey);
+  }
+
+  &__btns{
+    align-self: flex-end;
+    display: flex;
+  }
+
+  &__btn{
+    width: 10em;
+    background: var(--c-grey-bg-light);
+    padding: 0.8em;
+
+    &--dark{
+      color: #fff;
+      background: var(--c-main);
+    }
+  }
+}
