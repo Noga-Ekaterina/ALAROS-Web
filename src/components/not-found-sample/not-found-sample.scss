@@ -1,0 +1,53 @@
+@import "@/app/styles/mixins-and-extends";
+
+.not-found-sample{
+  padding-top: 47rem;
+  min-height: calc(100vh - var(--header-height));
+  width: 100%;
+  overflow: hidden;
+
+  &__title{
+    @include title-font
+  }
+
+  &__subtitle{
+    color: var(--c-grey);
+    margin-top: 0.5em;
+    @include standard-font-big
+  }
+
+  &__main-text{
+    color: #fff;
+    position: relative;
+    left: -0.16em;
+    top: 0.16em;
+    line-height: 0.5em;
+    vertical-align: bottom;
+    letter-spacing: -0.01em;
+
+    @include adaptive((
+            font-size: (
+                    default: 586rem,
+                    xxl: 1307,
+                    xl: 1049,
+                    md: 526,
+                    sm: 480
+            )
+    ));
+
+    @include sm{
+      display: none;
+    }
+
+    &--sm{
+      display: none;
+
+      @include sm{
+        display: block;
+        line-height: 0.7em;
+        top: 0;
+        margin-top: 20rem;
+      }
+    }
+  }
+}

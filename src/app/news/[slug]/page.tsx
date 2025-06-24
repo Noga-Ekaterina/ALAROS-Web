@@ -7,6 +7,7 @@ import NewsArticle from "@/app/news/[slug]/NewsArticle";
 import {revalidateTag, unstable_cache} from "next/cache";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
+import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 
 interface Props{
   params: {
@@ -61,7 +62,14 @@ const Page = async ({params}:Props) => {
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
 
-  if (news === undefined) return <div>новость не найдена</div>
+  if (news === undefined){
+    return (
+        <AnimationPage>
+          <NotFoundSample title={`Тут ничего \nне нашлось`} mainText={"404"} mainTextMobile={`40\n04`}/>
+
+        </AnimationPage>
+    )
+  }
 
   return (
       <AnimationPage>

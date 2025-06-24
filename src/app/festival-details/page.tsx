@@ -12,6 +12,7 @@ import FestivalDetailsMainScreen
 import FestivalProgram from "@/components/_festival-details/festival-program/FestivalProgram";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
+import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 
 interface IData{
   festivalDetailss: IFestivalDetails[]
@@ -30,6 +31,7 @@ const init= unstable_cache(async ()=>{
               mainScreenLeftSection {
                 html
               }
+              isShowAllContent
               mainScreenPhoto
               isShowFestivalProgram
               festivalProgramTitle
@@ -114,10 +116,17 @@ const Page = async ({searchParams}:Props) => {
   return (
       <AnimationPage>
         <FestivalDetailsMainScreen pageData={pageData}/>
-        {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
-        <FestivalBusinessProgram pageData={pageData}/>
-        {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsDays={protectionsDays}/>}
-        <FestivalForum pageData={pageData}/>
+        {
+          pageData.isShowAllContent?
+              <>
+                {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
+                <FestivalBusinessProgram pageData={pageData}/>
+                {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsDays={protectionsDays}/>}
+                <FestivalForum pageData={pageData}/>
+              </>
+              :
+              <NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>
+        }
       </AnimationPage>
 
   );

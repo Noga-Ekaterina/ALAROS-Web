@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="догруз материалов">
-      <change afterPath="$PROJECT_DIR$/src/components/form/form-error/FormError.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/form-error/form-error.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="обработка ошибки при отправке и добавила предупреждение">
+      <change afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/not-found-sample/NotFoundSample.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/not-found-sample/not-found-sample.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/submit-form/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/submit-form/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +86,11 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\animations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\yandex-map" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Contacts" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects\project-modal" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\Loader" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -269,15 +269,7 @@
       <workItem from="1750350219689" duration="20271000" />
       <workItem from="1750427122841" duration="36538000" />
       <workItem from="1750595001514" duration="39313000" />
-      <workItem from="1750679573729" duration="13330000" />
-    </task>
-    <task id="LOCAL-00119" summary="поменяла лоадер">
-      <option name="closed" value="true" />
-      <created>1746558942013</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1746558942013</updated>
+      <workItem from="1750679573729" duration="25958000" />
     </task>
     <task id="LOCAL-00120" summary="поменяла прокрутку жюри">
       <option name="closed" value="true" />
@@ -663,7 +655,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750686874721</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="обработка ошибки при отправке и добавила предупреждение">
+      <option name="closed" value="true" />
+      <created>1750706613237</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1750706613237</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки блока событий и механики" />
     <MESSAGE value="правки ссылок" />
     <MESSAGE value="правки стр результатов" />
     <MESSAGE value="размер загов и новостей" />
@@ -717,7 +716,8 @@
     <MESSAGE value="второй экран контактов" />
     <MESSAGE value="визуальные правки и догруз материалов" />
     <MESSAGE value="догруз материалов" />
-    <option name="LAST_COMMIT_MESSAGE" value="догруз материалов" />
+    <MESSAGE value="обработка ошибки при отправке и добавила предупреждение" />
+    <option name="LAST_COMMIT_MESSAGE" value="обработка ошибки при отправке и добавила предупреждение" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
