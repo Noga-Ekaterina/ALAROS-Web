@@ -47,7 +47,7 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
             const caption = captions[imgIndex];
             slides.push(
                 <SwiperSlide key={`image-${img}`} className="news-article__slide">
-                  <img src={`http://demo-it-park.ru/alaros/Assets/News/${slug}/${img}`} alt={caption} />
+                  <img src={`/Assets/News/${slug}/${img}`} alt={caption} />
                   <p>{caption}</p>
                 </SwiperSlide>
             );
@@ -84,7 +84,7 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
           <p className="news-article__description">{  nonBreakingSpaces(news.description)}</p>
           <div className="news-article__main">
             <div className="news-article__aside">
-              <img src={`http://demo-it-park.ru/alaros/Assets/News/${slug}/${news.cover}`} alt=""/>
+              <img src={`/Assets/News/${slug}/${news.cover}`} alt=""/>
               <div className="news-article__link news-article__link--md">
                 <HtmlProcessing html={allNews}/>
               </div>

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="обработка ошибки при отправке и добавила предупреждение">
-      <change afterPath="$PROJECT_DIR$/src/components/cookie/Cookie.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cookie/cookie.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="попап куков">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects\project-modal" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -123,9 +122,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -267,15 +266,7 @@
       <workItem from="1750427122841" duration="36538000" />
       <workItem from="1750595001514" duration="39313000" />
       <workItem from="1750679573729" duration="25958000" />
-      <workItem from="1750755212970" duration="7458000" />
-    </task>
-    <task id="LOCAL-00120" summary="поменяла прокрутку жюри">
-      <option name="closed" value="true" />
-      <created>1746798460555</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1746798460555</updated>
+      <workItem from="1750755212970" duration="8783000" />
     </task>
     <task id="LOCAL-00121" summary="правки шрифтов главной и main festival">
       <option name="closed" value="true" />
@@ -661,7 +652,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750706613237</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="попап куков">
+      <option name="closed" value="true" />
+      <created>1750768208987</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1750768208987</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +689,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки ссылок" />
     <MESSAGE value="правки стр результатов" />
     <MESSAGE value="размер загов и новостей" />
     <MESSAGE value="заменила проект на фото и предусмотрела если html null" />
@@ -715,7 +713,8 @@
     <MESSAGE value="визуальные правки и догруз материалов" />
     <MESSAGE value="догруз материалов" />
     <MESSAGE value="обработка ошибки при отправке и добавила предупреждение" />
-    <option name="LAST_COMMIT_MESSAGE" value="обработка ошибки при отправке и добавила предупреждение" />
+    <MESSAGE value="попап куков" />
+    <option name="LAST_COMMIT_MESSAGE" value="попап куков" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
