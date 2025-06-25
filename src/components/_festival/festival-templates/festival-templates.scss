@@ -35,6 +35,10 @@
 
       &:disabled{
         background: var(--c-grey-bg);
+
+        +div{
+          height: 0;
+        }
       }
 
       >*:first-child{
