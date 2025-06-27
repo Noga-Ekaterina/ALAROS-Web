@@ -12,6 +12,11 @@
     border-top: none;
   }
 
+  &:last-child:not(.input--dropdown){
+    border-bottom: var(--c-line) solid var(--w-line);
+    margin-bottom: 40rem;
+  }
+
   &--dropdown{
     height: auto;
     align-items: stretch;
@@ -74,7 +79,8 @@
     text-transform: uppercase;
 
     .input:has(&){
-      border-block: var(--c-red) solid var(--w-line);
+      border-top: var(--c-red) solid var(--w-line);
+      border-bottom: var(--c-red) solid var(--w-line) !important;
 
       &+.input{
         border-top: 0;

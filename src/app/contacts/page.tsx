@@ -6,7 +6,7 @@ import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import ContactsMainScreen from "@/components/_contacts/contacts-main-screen/ContactsMainScreen";
 import ContactsAddressesSocials from "@/components/_contacts/contacts-addresses-socials/ContactsAddressesSocials";
-
+import ContactsForm from "@/components/_contacts/contacts-form/ContactsForm";
 
 interface IData{
   contactss: IContacts[]
@@ -38,8 +38,8 @@ const init= unstable_cache(async ()=>{
           clue
           type
           necessarily
+          emailType
         }
-        formEmail
         socialsIcons {
           html
         }
@@ -53,7 +53,7 @@ const init= unstable_cache(async ()=>{
 
   return data? data.contactss[0] : null
 
-  }, ["contacts-page"], {tags: ["Contacts"]})
+  }, ["contacts-page"], {tags: ["Contacts", "FormInput"]})
 
 const Page = async ({searchParams}:Props) => {
   const pageData= await init()
@@ -67,6 +67,7 @@ const Page = async ({searchParams}:Props) => {
       <AnimationPage>
         <ContactsMainScreen data={pageData}/>
         <ContactsAddressesSocials data={pageData}/>
+        <ContactsForm title={pageData.formTitle} inputs={pageData.formInputs}/>
       </AnimationPage>
   );
 };

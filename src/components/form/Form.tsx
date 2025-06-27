@@ -1,3 +1,4 @@
+'use client'
 import React, {Fragment, useEffect, useRef, useState} from 'react';
 import "./form.scss"
 import {Field, Form as FormikForm, Formik, FormikHelpers, useFormik} from "formik";
@@ -13,21 +14,21 @@ import FormError from "@/components/form/form-error/FormError";
 
 interface Props{
   inputs: IFormInput[]
-  note: string
-  nominations: INomination[]
+  note?: string
+  nominations?: INomination[]
   typeForm: TypeForm
   bidNumberProjectColumn?: string
   disabled?: boolean
 }
 
 const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
-  const nameKey= typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
+  const nameKey= typeForm=="email"? "emailType" : typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
   const [isErrorSubmit, setIsErrorSubmit] = useState(false)
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
-  const initialValues = getInitialValues(inputs, nominations, nameKey);
+  const initialValues = getInitialValues(inputs, nameKey, nominations);
   const handleSubmit = async (
       values: typeof initialValues,
       { setSubmitting, resetForm }: FormikHelpers<typeof initialValues>
@@ -42,13 +43,15 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
 
       // Исправляем типы и структуру запроса
       const response = await axios.post<{ ok: boolean }>(
-          '/api/submit-form',
+          typeForm=="email"? '/api/contact':'/api/submit-form',
           {
             ...values,
             recaptcha: token,
             typeForm
           } as IFormRequest
       );
+
+      console.log(response)
 
       // Правильная проверка ответа
       if (response.status !== 200 || !response.data.ok) {
@@ -116,12 +119,13 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
                           </Fragment>
                       ))
                     }
-                    <ReCAPTCHA
-                        ref={recaptchaRef}
-                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                        size="invisible" style={{display: "none"}}
-                    />
                   </div>
+
+                  <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                      size="invisible" style={{display: "none"}}
+                  />
                   <div className="form__row">
                     <div className="form__btn-and-warning">
                       <Field
@@ -141,9 +145,13 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
                         персональных данных
                       </div>
                     </div>
-                    <div className="note">
-                      <HtmlProcessing html={note}/>
-                    </div>
+
+                    {
+                        note &&
+                        <div className="note">
+                           <HtmlProcessing html={note}/>
+                        </div>
+                    }
                   </div>
                 </fieldset>
               </FormikForm>

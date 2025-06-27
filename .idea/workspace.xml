@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="попап куков">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="мелкие правки">
+      <change afterPath="$PROJECT_DIR$/src/app/api/contact/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/getInitialValues.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/getInitialValues.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -82,11 +88,11 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\animations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\yandex-map" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Contacts" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_projects\project-modal" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -266,31 +272,11 @@
       <workItem from="1750427122841" duration="36538000" />
       <workItem from="1750595001514" duration="39313000" />
       <workItem from="1750679573729" duration="25958000" />
-      <workItem from="1750755212970" duration="8783000" />
-    </task>
-    <task id="LOCAL-00121" summary="правки шрифтов главной и main festival">
-      <option name="closed" value="true" />
-      <created>1746891921394</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1746891921396</updated>
-    </task>
-    <task id="LOCAL-00122" summary="переверстала алгоритмы">
-      <option name="closed" value="true" />
-      <created>1746973468641</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1746973468647</updated>
-    </task>
-    <task id="LOCAL-00123" summary="переверстала алгоритмы и почты">
-      <option name="closed" value="true" />
-      <created>1746999806240</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1746999806241</updated>
+      <workItem from="1750755212970" duration="12050000" />
+      <workItem from="1750871238044" duration="14921000" />
+      <workItem from="1750947428732" duration="5002000" />
+      <workItem from="1750959500529" duration="1033000" />
+      <workItem from="1751051892790" duration="359000" />
     </task>
     <task id="LOCAL-00124" summary="анимация при перескроле">
       <option name="closed" value="true" />
@@ -660,7 +646,31 @@
       <option name="project" value="LOCAL" />
       <updated>1750768208987</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="news">
+      <option name="closed" value="true" />
+      <created>1750781690110</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1750781690110</updated>
+    </task>
+    <task id="LOCAL-00171" summary="news">
+      <option name="closed" value="true" />
+      <created>1750784353102</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1750784353102</updated>
+    </task>
+    <task id="LOCAL-00172" summary="мелкие правки">
+      <option name="closed" value="true" />
+      <created>1750891715847</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1750891715848</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -689,7 +699,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки стр результатов" />
     <MESSAGE value="размер загов и новостей" />
     <MESSAGE value="заменила проект на фото и предусмотрела если html null" />
     <MESSAGE value="убрала боковые заги" />
@@ -698,7 +707,6 @@
     <MESSAGE value="улучшила скрол по хешу" />
     <MESSAGE value="сделала блокировку кнопки шаблонов" />
     <MESSAGE value="устронила небольшие пробемы" />
-    <MESSAGE value="мелкие правки" />
     <MESSAGE value="доработала ховер события" />
     <MESSAGE value="фон событий" />
     <MESSAGE value="--p-y=&gt;--p-x" />
@@ -714,7 +722,9 @@
     <MESSAGE value="догруз материалов" />
     <MESSAGE value="обработка ошибки при отправке и добавила предупреждение" />
     <MESSAGE value="попап куков" />
-    <option name="LAST_COMMIT_MESSAGE" value="попап куков" />
+    <MESSAGE value="news" />
+    <MESSAGE value="мелкие правки" />
+    <option name="LAST_COMMIT_MESSAGE" value="мелкие правки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

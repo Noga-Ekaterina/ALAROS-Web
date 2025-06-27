@@ -59,6 +59,8 @@ export interface ILinkColor extends ILink{
   color: string
 }
 
+export type EmailInputType= "name"|"phone"|"city"|"email"|"message"|"subject"
+
 export interface IFormInput{
   name: string
   type: HTMLInputTypeAttribute |"radios"|"dropdown"|"nominations"
@@ -68,9 +70,10 @@ export interface IFormInput{
   bidTableColumn: string
   diplomaTableColumn: string
   clue: string
+  emailType: EmailInputType
 }
 
-export type TypeForm = "bid"|"diploma"
+export type TypeForm = "bid"|"diploma"|"email"
 
 export interface IFormData{
   [key: string]: string
@@ -257,7 +260,6 @@ export interface IContacts {
   socialsIcons: IHtmlString;
   mapCoordinates: IMapCoordinates;
   formTitle: string
-  formInputs: IFormInput
-  formEmail: string
+  formInputs: IFormInput[]
 }
 

@@ -1,0 +1,12 @@
+@import "@/app/styles/mixins-and-extends";
+
+.contacts-form{
+  padding-block: 30rem;
+
+  &__title{
+    margin-bottom: 20rem;
+    color: var(--c-red);
+
+    @include title-small-font
+  }
+}
