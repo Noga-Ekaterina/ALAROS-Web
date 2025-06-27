@@ -76,7 +76,7 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
     const errors: { [key: string]: string } = {}
 
     for (const key in values) {
-      const value = values[key]
+      const value = values[key].trim()
       const input = inputs.find(item => item[nameKey] == key)
 
       if (!input) continue
@@ -86,7 +86,7 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
 
       if (input.necessarily && value === "")
         errors[key] = "заполните поле"
-      else if ((input.type === "tel" && !regexTel.test(value)) || (input.type === "email" && !regexEmail.test(value)))
+      else if (value !=="" && ((input.type === "tel" && !regexTel.test(value)) || (input.type === "email" && !regexEmail.test(value))))
         errors[key] = "неверный формат"
     }
 
