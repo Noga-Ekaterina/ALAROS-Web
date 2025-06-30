@@ -40,7 +40,7 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     if (__typename==="Project")
       revalidateTag(`project-${data.year}-${data.number}`)
 
-    await axios.post("http://alaros.ru/api/cache", request)
+    await axios.post("http://alaros.ru/api/cache", body)
 
     return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {
