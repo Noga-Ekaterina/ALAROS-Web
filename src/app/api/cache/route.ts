@@ -1,6 +1,7 @@
 // app/api/revalidate/route.ts
 import { revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
+import axios from "axios";
 
 interface RevalidateRequest {
   data:{
@@ -38,6 +39,8 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
 
     if (__typename==="Project")
       revalidateTag(`project-${data.year}-${data.number}`)
+
+    await axios.post("http://alaros.ru/api/cache", request)
 
     return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {
