@@ -11,6 +11,10 @@
       color: var(--c-green-text);
     }
 
+    &__content{
+      padding-bottom: 3-0rem;
+    }
+
     &--opened{
       .detalis__btn{
         background: #fff;

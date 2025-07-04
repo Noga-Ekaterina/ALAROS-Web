@@ -65,13 +65,13 @@
     position: static;
     color: var(--c-green-text) !important;
 
-    svg{
-      @include adaptive((
-              width: (default: 10rem, md: 18rem ),
-              top: (default: 1.2rem, md: 2rem)
-      ));
+    >div{
+      height: 100%;
+    }
 
-      height: auto;
+    svg{
+      width: 100%;
+      height: 100%;
       position: relative;
 
       *{
@@ -81,6 +81,7 @@
 
     &--increase{
       transform: rotate(-45deg);
+      padding: 0;
 
       @include adaptive((
               padding-bottom: (default: 1.5rem, md: 0)
@@ -112,6 +113,7 @@
       position: absolute;
       left: var(--btn-position-x);
       z-index: 9;
+      padding: 0;
 
       @include adaptive((
               top: (default: 18rem, md: 8.5rem)

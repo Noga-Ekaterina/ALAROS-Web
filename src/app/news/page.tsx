@@ -47,7 +47,7 @@ const init= unstable_cache(async (page: string)=>{
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams
-  const data= await init( typeof page==="string"? isNaN(Number(page))? page:"1":"1")
+  const data= await init( typeof page==="string"? !isNaN(Number(page))? page:"1":"1")
   const pageData= await getNewsPageData()
 
   if (typeof data=="string" || data===null) {
@@ -63,7 +63,7 @@ const Page = async ({searchParams}:Props) => {
       <AnimationPage>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <NewsMainScreen data={pageData}/>
-        <div style={{background: "#fff", overflow: "hidden"}}>
+        <div style={{ overflow: "hidden"}}>
           <CalendarEvents title={pageData.calendarEventsTitle}/>
           <NewsList news={data.news} pageData={pageData}/>
           <Pagination count={data.count} size={10}/>

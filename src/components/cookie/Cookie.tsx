@@ -7,7 +7,6 @@ const Cookie = () => {
   const [isShow, setIsShow] = useState(true)
 
   useEffect(() => {
-    console.log( localStorage?.getItem("agreementCookie"))
     const agreementCookieLocal= localStorage?.getItem("agreementCookie") === "true" || false
 
     setIsShow(!agreementCookieLocal)

@@ -34,7 +34,9 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
       { setSubmitting, resetForm }: FormikHelpers<typeof initialValues>
   ) => {
     try {
-      const token = await recaptchaRef.current?.executeAsync();
+      const token = await recaptchaRef.current?.executeAsync().catch((error) => {
+        throw new Error(`reCAPTCHA error: ${error.message}`);
+      });
 
       // Добавляем проверку наличия токена
       if (!token) {
@@ -64,6 +66,7 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
       setTimeout(() => setIsSent(false), 4000);
     } catch (error) {
       setIsErrorSubmit(true);
+      console.log(error)
 
       setTimeout(()=> setIsErrorSubmit(false), 3000)
     } finally {
@@ -76,10 +79,10 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
     const errors: { [key: string]: string } = {}
 
     for (const key in values) {
-      const value = values[key].trim()
       const input = inputs.find(item => item[nameKey] == key)
 
       if (!input) continue
+      const value = (key in values) ? input.type=="number"? values[key] : values[key]?.trim() || '' : '';
 
       const regexTel = /^\+[\d\s\-]*$/;
       const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

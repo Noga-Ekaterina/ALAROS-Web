@@ -319,7 +319,12 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
                         <a href={event.link} target="_blank">
                           <div className="calendar-events__block-text">
                             <div className="calendar-events__titles">
-                              <h3 className="calendar-events__date">{event.date.start} - {event.date.end}</h3>
+                              <h3 className="calendar-events__date">
+                                {event.date.start}
+                                {
+                                  (event.date.end !="" && event.date.end!=event.date.start) && <> - {event.date.end}</>
+                                }
+                              </h3>
                               <div>
                                 <div className="calendar-events__name">
                                   <HtmlProcessing html={`<p>${event.title}</p>`}/>

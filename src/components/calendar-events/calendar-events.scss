@@ -163,6 +163,10 @@
     >a {
       background: #fff;
       display: flex;
+
+      &:hover{
+        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 05.3px 0px #0000000D;
+      }
     }
 
     &-wrapp{
@@ -184,10 +188,6 @@
     &-slider{
       margin-inline:0;
       box-shadow: -3px 11px 66.6px 0px transparent, 0px 8px 8.6px -6px transparent, 0px 0.5px 95.3px 0px transparent;
-
-      &:hover{
-        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 05.3px 0px #0000000D;
-      }
 
       @include hover-scale(1.03);
 
@@ -216,13 +216,9 @@
   &__block-text{
     display: flex;
     padding: 18rem 18rem var(--p-x) var(--p-x);
-    flex-direction: column;
     justify-content: space-between;
     width: 447rem;
-
-    @include lg{
-      flex-direction: row;
-    }
+    row-gap: 15rem;
 
     @include sm{
       flex-direction: column;
@@ -240,7 +236,7 @@
     align-self: start;
 
     @include adaptive((
-            width: (default: 195rem, xl: 100%, sm: 100%)
+            width: (default: 195rem, xxl: 392, xl: 318, sm: 100%)
     ));
 
     *{
@@ -253,7 +249,7 @@
     color: #B1C634;
     margin-top: 10rem;
 
-    @include standard-font-small
+    @include standard-font
   }
 
   &__description{
@@ -273,8 +269,8 @@
     position: relative;
 
     @include hover-scale;
-
     @include sm{
+
       display: none;
     }
 

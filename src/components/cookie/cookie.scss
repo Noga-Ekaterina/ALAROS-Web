@@ -33,9 +33,17 @@
     background: var(--c-grey-bg-light);
     padding: 0.8em;
 
+    &:hover{
+      background: var(--c-grey-bg)
+    }
+
     &--dark{
       color: #fff;
       background: var(--c-main);
+
+      &:hover{
+        background: var(--c-green-text)
+      }
     }
   }
 }

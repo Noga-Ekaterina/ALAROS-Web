@@ -16,7 +16,7 @@ interface Props{
 const Pagination = ({count, size}:Props) => {
   const pages= Math.ceil(count/size)
   const searchParams= useSearchParams()
-  const page= Number(searchParams.get("page"))??1
+  const page= !searchParams.get("page")? 1:Number(searchParams.get("page"))??1
   const {setParam}=useSearchParamsControl()
   const {togleLoading}=store
 
