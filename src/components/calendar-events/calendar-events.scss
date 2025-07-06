@@ -219,25 +219,22 @@
     justify-content: space-between;
     width: 447rem;
     row-gap: 15rem;
+    flex-direction: column;
 
     @include sm{
-      flex-direction: column;
       width: 180rem;
       padding: 15rem;
     }
   }
 
   &__titles{
+    width: 100%;
     min-height: 93rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 25rem;
     align-self: start;
-
-    @include adaptive((
-            width: (default: 195rem, xxl: 392, xl: 318, sm: 100%)
-    ));
 
     *{
       @include standard-font-big

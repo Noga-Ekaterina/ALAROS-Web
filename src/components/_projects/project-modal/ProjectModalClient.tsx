@@ -100,7 +100,7 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
               className="btn-round project-images-slider__btn project-images-slider__btn--back"
               onClick={handleBack}
           >
-            <ReactSVG src="/Assets/Icons/close.svg" />
+            <ReactSVG src="/Assets/Icons/close_round.svg" />
           </button>
           {isInvalidParams ? (
               <div key="invalid-params" className="project-modal__error">

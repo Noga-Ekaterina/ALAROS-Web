@@ -29,7 +29,7 @@
 
   &__year{
     @include adaptive((
-            width: (default: 122rem, xxl: 210 , sm: 155)
+            width: (default: 122rem, xxl: 250 , sm: 155)
     ));
 
     *{
@@ -42,7 +42,7 @@
     z-index: 3;
 
     @include adaptive((
-            width: (default: 690rem, xxl: 1927, xl: 1311, sm: 100%)
+            width: (default: 690rem, xxl: 1887, xl: 1311, sm: 100%)
     ));
 
     @include sm{
