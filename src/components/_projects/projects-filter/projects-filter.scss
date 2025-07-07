@@ -17,11 +17,13 @@
   }
 
   *{
+    letter-spacing: 0.01em;
+
     @include adaptive((
             font-size: (
                     default: 12rem,
-                    xxl: 27,
-                    xl: 20,
+                    xxl: 25,
+                    xl: 18,
                     sm: 13
             ),
     ));
@@ -29,7 +31,7 @@
 
   &__year{
     @include adaptive((
-            width: (default: 122rem, xxl: 250 , sm: 155)
+            width: (default: 111rem, xxl: 234, xl: 179, sm: 155)
     ));
 
     *{
@@ -42,7 +44,7 @@
     z-index: 3;
 
     @include adaptive((
-            width: (default: 690rem, xxl: 1887, xl: 1311, sm: 100%)
+            width: (default: 694rem, xxl: 1862, xl: 1376, sm: 100%)
     ));
 
     @include sm{
@@ -61,27 +63,18 @@
       &__title-text{
         @extend %text-overflow-ellipsis
       }
-      &__line{
-        @include sm{
-          height: auto;
-          align-self: stretch;
-        }
-      }
     }
   }
 
   &__btn{
-    padding: 1.154em 1.079em 1.079em;
+    padding: 0 1.079em;
+    height: var(--h-btn);
     background: var(--c-green-text);
     color: #fff;
     text-align: center;
 
-    @include xxl{
-      padding-block: 0;
-    }
-
     @include adaptive((
-            width: (default: 145rem, xxl: 285, sm: 185)
+            width: (default: 150rem, xxl: 322, xl: 247, sm: 185)
     ));
 
     &:hover{
@@ -101,7 +94,14 @@
 
     &__title{
       background: var(--c-grey-bg);
-      padding: 1.079em;
+      padding: 0 1.079em;
+      height: var(--h-btn);
+      align-items: center;
+      gap: 14rem;
+
+      @include xxl{
+        gap: vu(25, xxl);
+      }
 
       &:hover{
         border-bottom: none;
@@ -109,13 +109,13 @@
 
       &-text{
         position: relative;
-        top: 2rem;
+        line-height: 1em;
       }
     }
 
     &__arrow svg{
       @include xxl{
-        top: vu(5, xxl);
+        //top: vu(5, xxl);
       }
     }
 
@@ -132,7 +132,15 @@
     }
 
     &__line{
-      border-color:  var(--c-grey);
+      border-color: #AAAAAA;
+    }
+
+    &__arrow {
+      width: 10rem;
+
+      svg{
+        height: 10rem;
+      }
     }
 
     &__content{

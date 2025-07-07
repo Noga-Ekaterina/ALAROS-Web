@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки">
-      <change afterPath="$PROJECT_DIR$/public/Assets/Icons/close_round.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Icons/close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Icons/close.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
     </list>
@@ -289,15 +286,7 @@
       <workItem from="1751674952083" duration="380000" />
       <workItem from="1751725256285" duration="40000" />
       <workItem from="1751748390014" duration="375000" />
-      <workItem from="1751810848751" duration="3723000" />
-    </task>
-    <task id="LOCAL-00131" summary="опять размеры">
-      <option name="closed" value="true" />
-      <created>1747960128716</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1747960128716</updated>
+      <workItem from="1751810848751" duration="24071000" />
     </task>
     <task id="LOCAL-00132" summary="переименовала festival-to-people на festival-details">
       <option name="closed" value="true" />
@@ -683,7 +672,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751748725482</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="правки">
+      <option name="closed" value="true" />
+      <created>1751821494699</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1751821494700</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

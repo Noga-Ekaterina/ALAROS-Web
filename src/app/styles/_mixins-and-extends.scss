@@ -198,15 +198,16 @@ $base-widths: (
   background: var(--c-grey-bg-light);
   //padding: 10rem;
   width: var(--width);
-  line-height: calc(var(--width)/4.25);
+  line-height: var(--h-btn);
+  letter-spacing: 0.01em;
   transition: 0.3s;
   text-decoration: none;
 
   @include adaptive((
           font-size: (
                   default: 12rem,
-                  xxl: 27,
-                  xl: 20,
+                  xxl: 25,
+                  xl: 18,
                   sm: 13
           ),
          --width: (default: 174rem, xxl: 320, xl: 247)
