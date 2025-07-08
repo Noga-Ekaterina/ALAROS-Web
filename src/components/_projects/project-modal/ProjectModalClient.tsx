@@ -13,6 +13,7 @@ import {ReactSVG} from "react-svg";
 import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
 import ProjectText from "@/components/_projects/project-modal/project-text/ProjectText";
 import {useSearchParams} from "next/navigation";
+import ProjectNotFound from "@/components/_projects/project-modal/project-not-found/ProjectNotFound";
 
 interface ClientProps {
   project?: IProject | null | string
@@ -95,25 +96,15 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
 
   return (
       <AnimationPage isNoWait={true} conditions={isOpened} className="project-modal" onClick={handleClick}>
-        <SmoothScrolling>
+        <SmoothScrolling noAnimation={(isInvalidParams || project === undefined || typeof project === "string" || project === null)}>
           <button
               className="btn-round project-images-slider__btn project-images-slider__btn--back"
               onClick={handleBack}
           >
             <ReactSVG src="/Assets/Icons/close_round.svg" />
           </button>
-          {isInvalidParams ? (
-              <div key="invalid-params" className="project-modal__error">
-                Некорректные параметры запроса
-              </div>
-          ) : project === undefined ? (
-              <div key="not-found" className="project-modal__error">
-                <span>Проект не найден</span>
-              </div>
-          ) : typeof project === "string" || project === null ? (
-              <div key="error" className="project-modal__error">
-                Произошла ошибка{project && `: ${project}`}, перезагрузите страницу
-              </div>
+          {(isInvalidParams || project === undefined || typeof project === "string" || project === null) ? (
+              <ProjectNotFound/>
           ) : (
               <>
                 <ProjectImagesSlider project={project} scale={scale} handleScale={setScale} />

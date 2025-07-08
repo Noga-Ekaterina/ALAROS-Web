@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки кнопок и фильтра">
-      <change afterPath="$PROJECT_DIR$/src/components/calendar-events/Event.tsx" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки календаря">
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-not-found/ProjectNotFound.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-not-found/project-not-found.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -285,15 +285,7 @@
       <workItem from="1751674952083" duration="380000" />
       <workItem from="1751725256285" duration="40000" />
       <workItem from="1751748390014" duration="375000" />
-      <workItem from="1751810848751" duration="41665000" />
-    </task>
-    <task id="LOCAL-00133" summary="исправила опечатку">
-      <option name="closed" value="true" />
-      <created>1748374233732</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1748374233732</updated>
+      <workItem from="1751810848751" duration="46014000" />
     </task>
     <task id="LOCAL-00134" summary="исправила размер">
       <option name="closed" value="true" />
@@ -679,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751926402076</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="правки календаря">
+      <option name="closed" value="true" />
+      <created>1751996497332</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1751996497332</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +708,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="сделала блокировку кнопки шаблонов" />
     <MESSAGE value="устронила небольшие пробемы" />
     <MESSAGE value="доработала ховер события" />
     <MESSAGE value="фон событий" />
@@ -733,7 +732,8 @@
     <MESSAGE value="удалила обход" />
     <MESSAGE value="правки" />
     <MESSAGE value="правки кнопок и фильтра" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки кнопок и фильтра" />
+    <MESSAGE value="правки календаря" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки календаря" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
