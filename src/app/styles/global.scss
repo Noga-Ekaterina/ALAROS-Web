@@ -324,4 +324,41 @@ h1, h2, h3, h4, h5{
       height: auto;
     }
   }
+
+
+  &--increase{
+    transform: rotate(-45deg);
+    padding: 0;
+
+    &:hover{
+      transform: rotate(-45deg) scale(1.2);
+    }
+
+    &:active{
+      transform: rotate(-45deg) scale(1);
+    }
+
+    div{
+      height: 100%;
+      width: 100%;
+    }
+
+    svg{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  &--decrease{
+    &::before{
+      content: '';
+
+      @include adaptive((
+              width: (default: 10rem, md: 18rem ),
+              height: (default: 1.63rem, md: 2.7rem)
+      ));
+      background: var(--c-green-text);
+    }
+  }
 }

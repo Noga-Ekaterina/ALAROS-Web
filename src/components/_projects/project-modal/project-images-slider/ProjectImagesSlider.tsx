@@ -89,13 +89,13 @@ const ProjectImagesSlider = ({project, scale, handleScale}:Props) => {
               <>
                 <div className="project-images-slider__scale">
                   <button
-                      className="btn-round project-images-slider__btn project-images-slider__btn--increase"
+                      className="btn-round project-images-slider__btn btn-round--increase"
                       onClick={()=> scaleIn(zoomIn)}
                   >
                     <ReactSVG src="/Assets/Icons/close_round.svg"/>
                   </button>
                   <button
-                      className="btn-round project-images-slider__btn project-images-slider__btn--decrease"
+                      className="btn-round project-images-slider__btn btn-round--decrease"
                       onClick={()=>scaleOut(zoomOut)}
                   />
                 </div>

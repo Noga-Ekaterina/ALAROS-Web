@@ -6,6 +6,7 @@ import L from 'leaflet';
 import { IWithClass } from "@/types/tehnic";
 import { IMapCoordinates } from "@/types/data";
 import { useEffect, useState } from 'react';
+import ZoomControl from "@/components/map/zoom-control/ZoomControl";
 
 // Фикс для иконок маркеров
 const DefaultIcon = L.icon({
@@ -38,13 +39,14 @@ const GrayMap = ({ coordinatesObj, className }: Props) => {
             zoom={16}
             style={{ height: '100%', width: '100%' }}
             className="bg-gray-100 grayscale-map"
+            zoomControl={false}
         >
           <TileLayer
               url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
               attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={coordinates}>
-          </Marker>
+          <Marker position={coordinates}/>
+          <ZoomControl/>
         </MapContainer>
       </div>
   );

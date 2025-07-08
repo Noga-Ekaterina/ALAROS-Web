@@ -1,0 +1,13 @@
+.zoom-control{
+  position: absolute;
+  z-index: 9999;
+  right: var(--p-x);
+  bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  .btn-round {
+    position: static;
+  }
+}

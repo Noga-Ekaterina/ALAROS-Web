@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки календаря">
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-not-found/ProjectNotFound.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-not-found/project-not-found.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="проект не найден">
+      <change afterPath="$PROJECT_DIR$/src/components/map/zoom-control/ZoomControl.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/map/zoom-control/zoom-control.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/ProjectModalClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/map/Map.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,26 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/public/Assets/Icons",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.start.executor": "Run",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/public/Assets/Icons&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Icons" />
@@ -285,15 +288,8 @@
       <workItem from="1751674952083" duration="380000" />
       <workItem from="1751725256285" duration="40000" />
       <workItem from="1751748390014" duration="375000" />
-      <workItem from="1751810848751" duration="46014000" />
-    </task>
-    <task id="LOCAL-00134" summary="исправила размер">
-      <option name="closed" value="true" />
-      <created>1748627047325</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1748627047325</updated>
+      <workItem from="1751810848751" duration="46397000" />
+      <workItem from="1752005755674" duration="4864000" />
     </task>
     <task id="LOCAL-00135" summary="перевёрстка новостей">
       <option name="closed" value="true" />
@@ -679,7 +675,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751996497332</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="проект не найден">
+      <option name="closed" value="true" />
+      <created>1752004388297</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1752004388297</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +712,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="устронила небольшие пробемы" />
     <MESSAGE value="доработала ховер события" />
     <MESSAGE value="фон событий" />
     <MESSAGE value="--p-y=&gt;--p-x" />
@@ -733,7 +736,8 @@
     <MESSAGE value="правки" />
     <MESSAGE value="правки кнопок и фильтра" />
     <MESSAGE value="правки календаря" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки календаря" />
+    <MESSAGE value="проект не найден" />
+    <option name="LAST_COMMIT_MESSAGE" value="проект не найден" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
