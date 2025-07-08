@@ -14,6 +14,7 @@ import {eventsDataProcessing} from "./eventsDataProcessing";
 import HtmlProcessing from "../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SliderProgress from "@/components/slider-progress/SliderProgress";
+import Event from "@/components/calendar-events/Event";
 
 interface Props{
   title?: string
@@ -316,30 +317,14 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
                 if (event) {
                   return (
                       <SwiperSlide key={`${start.year} ${event.date.start}`} className="calendar-events__event">
-                        <a href={event.link} target="_blank">
-                          <div className="calendar-events__block-text">
-                            <div className="calendar-events__titles">
-                              <h3 className="calendar-events__date">
-                                {event.date.start}
-                                {
-                                  (event.date.end !="" && event.date.end!=event.date.start) && <> - {event.date.end}</>
-                                }
-                              </h3>
-                              <div>
-                                <div className="calendar-events__name">
-                                  <HtmlProcessing html={`<p>${event.title}</p>`}/>
-                                </div>
-                                <p className="calendar-events__plase">{nonBreakingSpaces(event.place)}</p>
-                              </div>
-                            </div>
-                            <div className="calendar-events__description">
-                              <HtmlProcessing html={`<p>${event.description}</p>`}/>
-                            </div>
-                          </div>
-                          <img
-                              src={`/Assets/Calendar-events/${start.year}/${event.image}`}
-                              alt=""/>
-                        </a>
+                        {
+                          event.link != "" ?
+                              <a href={event.link} target="_blank">
+                                <Event event={event} year={start.year}/>
+                              </a>
+                              :
+                              <Event event={event} year={start.year}/>
+                        }
                       </SwiperSlide>
                   )
                 }

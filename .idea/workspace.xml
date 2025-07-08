@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки кнопок и фильтра">
+      <change afterPath="$PROJECT_DIR$/src/components/calendar-events/Event.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -286,15 +285,7 @@
       <workItem from="1751674952083" duration="380000" />
       <workItem from="1751725256285" duration="40000" />
       <workItem from="1751748390014" duration="375000" />
-      <workItem from="1751810848751" duration="24071000" />
-    </task>
-    <task id="LOCAL-00132" summary="переименовала festival-to-people на festival-details">
-      <option name="closed" value="true" />
-      <created>1748369144671</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1748369144671</updated>
+      <workItem from="1751810848751" duration="41665000" />
     </task>
     <task id="LOCAL-00133" summary="исправила опечатку">
       <option name="closed" value="true" />
@@ -680,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751821494700</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="правки кнопок и фильтра">
+      <option name="closed" value="true" />
+      <created>1751926402076</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1751926402076</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +708,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="улучшила скрол по хешу" />
     <MESSAGE value="сделала блокировку кнопки шаблонов" />
     <MESSAGE value="устронила небольшие пробемы" />
     <MESSAGE value="доработала ховер события" />
@@ -734,14 +732,15 @@
     <MESSAGE value="обход" />
     <MESSAGE value="удалила обход" />
     <MESSAGE value="правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки" />
+    <MESSAGE value="правки кнопок и фильтра" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки кнопок и фильтра" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx</url>
-          <line>364</line>
+          <line>349</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

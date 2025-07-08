@@ -1,5 +1,13 @@
 @import "../../app/styles/mixins-and-extends";
 .calendar-events{
+  @mixin font-content{
+    @include standard-font-small;
+
+    @include xxl{
+      font-size: vu(22, xxl);
+    }
+  }
+
   margin-bottom: 44rem;
   position: relative;
   z-index: 2;
@@ -159,14 +167,17 @@
   }
 
   &__event{
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
-    >a {
+    &-content {
       background: #fff;
       display: flex;
-
-      &:hover{
-        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 05.3px 0px #0000000D;
-      }
+      width: 100%;
+      height: 100%;
     }
 
     &-wrapp{
@@ -192,82 +203,138 @@
       @include hover-scale(1.03);
 
       @include adaptive((
-              width: (default: 600rem, xl: 1056, sm: 100%)
+              width: (default: 600rem, xl: 1056, sm: 100%),
+              height: (default: 195rem, xxl: 450, xl: 324, md: 148, sm: 235)
       ));
+
+      &:hover{
+        box-shadow: -3px 11px 66.6px 0px #0000000D, 0px 8px 8.6px -6px #00000012, 0px 0.5px 05.3px 0px #0000000D;
+      }
     }
 
     img{
-      height: 177rem;
+      height: 100%;
       width: 153rem;
       object-fit: cover;
       object-position: center;
 
+      @include md{
+        width: vu(122, md);
+      }
+
       @include sm{
         width: 170rem;
-        height: 235rem;
       }
     }
   }
 
-  &__date{
+  &__date {
     font-weight: 300;
   }
 
   &__block-text{
     display: flex;
-    padding: 18rem 18rem var(--p-x) var(--p-x);
+    padding: 16rem 18rem 18rem 22rem;
     justify-content: space-between;
-    width: 447rem;
-    row-gap: 15rem;
+    width: calc(100% - 153rem);
     flex-direction: column;
+    line-height: 1.2;
+
+    @include xxl{
+      padding: 18rem 18rem 20rem 22rem;
+    }
+
+    @include lg{
+      width: 447rem;
+    }
 
     @include sm{
       width: 180rem;
       padding: 15rem;
+      row-gap: 15rem;
     }
   }
 
   &__titles{
     width: 100%;
-    min-height: 93rem;
+    min-height: calc(100% - 3.55em);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 25rem;
     align-self: start;
 
-    *{
-      @include standard-font-big
+    @include font-content;
 
+    @include sm{
+      min-height: 93rem;
+    }
+
+    >*{
+      @include standard-font-big;
+
+      @include xl{
+        font-size: vu(30, xl);
+      }
+
+      @include xxl{
+        font-size: vu(35, xxl);
+     }
+    }
+  }
+
+  &__name {
+    @include md{
+      font-size: vu(13, md);
+    }
+
+    @include sm{
+      font-size: 15rem;
     }
   }
 
   &__plase{
     color: #B1C634;
-    margin-top: 10rem;
+    margin-top: 0.5em;
 
-    @include standard-font
+    @include font-content
   }
 
   &__description{
     align-self: flex-end;
     color: var(--c-grey-dark);
     font-weight: 300;
+    margin-top: -1.25em;
+    max-height: 4.8em;
+    overflow: hidden;
+    position: relative;
+    padding-right: 0.9em;
+    margin-left: -0.8em;
+
+    @include font-content;
 
     @include adaptive((
             width: (default: 193rem, xxl: 420, xl: 316, sm: 100%),
     ));
 
-    @include standard-font-small
+    /* Многоточие */
+    &.truncated::after {
+      content: '...';
+      position: absolute;
+      bottom: 0;
+      left: min(calc(var(--last-line-width, 100%) + 0.1em), calc(100% - 0.8em));
+      background: var(--bg-color, #fff);
+      z-index: 2;
+    }
   }
 
   &__btn{
     width: 12rem;
     position: relative;
+    top: 2rem;
 
     @include hover-scale;
     @include sm{
-
       display: none;
     }
 
