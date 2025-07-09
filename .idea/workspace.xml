@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="проект не найден">
-      <change afterPath="$PROJECT_DIR$/src/components/map/zoom-control/ZoomControl.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/map/zoom-control/zoom-control.scss" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="кнопки карты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/ProjectImagesSlider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project-modal/project-images-slider/project-images-slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/map/Map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/map/Map.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,15 +283,7 @@
       <workItem from="1751725256285" duration="40000" />
       <workItem from="1751748390014" duration="375000" />
       <workItem from="1751810848751" duration="46397000" />
-      <workItem from="1752005755674" duration="4864000" />
-    </task>
-    <task id="LOCAL-00135" summary="перевёрстка новостей">
-      <option name="closed" value="true" />
-      <created>1748633083387</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1748633083388</updated>
+      <workItem from="1752005755674" duration="5616000" />
     </task>
     <task id="LOCAL-00136" summary="добавила кнопку назад и сделала круглые кнопки одного стиля">
       <option name="closed" value="true" />
@@ -683,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752004388297</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="кнопки карты">
+      <option name="closed" value="true" />
+      <created>1752010943855</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1752010943855</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +706,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="доработала ховер события" />
     <MESSAGE value="фон событий" />
     <MESSAGE value="--p-y=&gt;--p-x" />
     <MESSAGE value="перевёрстка кнопок в модалке" />
@@ -737,7 +730,8 @@
     <MESSAGE value="правки кнопок и фильтра" />
     <MESSAGE value="правки календаря" />
     <MESSAGE value="проект не найден" />
-    <option name="LAST_COMMIT_MESSAGE" value="проект не найден" />
+    <MESSAGE value="кнопки карты" />
+    <option name="LAST_COMMIT_MESSAGE" value="кнопки карты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

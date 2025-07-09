@@ -32,8 +32,6 @@ const Event = ({ event, year }: Props) => {
           const rects = range.getClientRects();
           const lastLineRect = rects[4];
 
-          console.log(rects)
-
           if (lastLineRect) {
             setLastLineWidth(lastLineRect.width);
           }

@@ -20,7 +20,6 @@ const MenuClient = ({data}:Props) => {
       return false
 
     const regex = /href=["'](.*?)["']/gs;
-    console.log(Array.from(link.html.matchAll(regex)))
     const [href]=Array.from(link.html.matchAll(regex)).map(m => m[1])
     const [sectionHref]=section? Array.from(section.html.matchAll(regex)).map(m => m[1]):[]
 
