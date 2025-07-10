@@ -57,7 +57,7 @@ const Event = ({ event, year }: Props) => {
               {event.date.start}
               {(event.date.end != "" && event.date.end != event.date.start) && <> - {event.date.end}</>}
             </h3>
-            <div>
+            <div className="calendar-events__name-and-plase">
               <div className="calendar-events__name">
                 <HtmlProcessing html={`<p>${event.title}</p>`} />
               </div>
@@ -74,14 +74,11 @@ const Event = ({ event, year }: Props) => {
               } as React.CSSProperties}
           >
             <div ref={textRef}>
-              <HtmlProcessing html={`<div>${event.description}</div>`} />
+              <HtmlProcessing html={`<p>${event.description}</p>`} />
             </div>
           </div>
         </div>
-        <img
-            src={`/Assets/Calendar-events/${year}/${event.image}`}
-            alt={event.title}
-        />
+        <img src={`/Assets/Calendar-events/${year}/${event.image}`} alt=""/>
       </div>
   );
 };

@@ -1,13 +1,5 @@
 @import "../../app/styles/mixins-and-extends";
 .calendar-events{
-  @mixin font-content{
-    @include standard-font-small;
-
-    @include xxl{
-      font-size: vu(22, xxl);
-    }
-  }
-
   margin-bottom: 44rem;
   position: relative;
   z-index: 2;
@@ -230,6 +222,7 @@
 
   &__date {
     font-weight: 300;
+    height: 1.2em;
   }
 
   &__block-text{
@@ -239,6 +232,16 @@
     width: calc(100% - 153rem);
     flex-direction: column;
     line-height: 1.2;
+
+    @include adaptive((
+            --f-content: (
+                    default: 9rem,
+                    xxl: 22,
+                    xl: 16,
+                    md: 8,
+                    sm: 10
+            )
+    ));
 
     @include xxl{
       padding: 18rem 18rem 20rem 22rem;
@@ -257,14 +260,13 @@
 
   &__titles{
     width: 100%;
-    min-height: calc(100% - 3.55em);
+    min-height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 25rem;
     align-self: start;
-
-    @include font-content;
+    font-size: var(--f-content);
 
     @include sm{
       min-height: 93rem;
@@ -284,25 +286,35 @@
   }
 
   &__name {
-    @include md{
-      font-size: vu(13, md);
-    }
+    &-and-plase{
+      --gap: calc(var(--f-content)*0.7);
+      --lines: 2;
 
-    @include sm{
-      font-size: 15rem;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--gap);
+      min-height: calc(var(--lines) * 1.2em + var(--gap) + var(--f-content) * 1.2);
+
+      @include md{
+        font-size: vu(13, md);
+      }
+
+      @include sm{
+        font-size: 15rem;
+        --lines: 5;
+      }
     }
   }
 
   &__plase{
     color: #B1C634;
-    margin-top: 0.5em;
-
-    @include font-content
+    font-size: var(--f-content);
   }
 
   &__description{
     align-self: flex-end;
-    color: var(--c-grey-dark);
     font-weight: 300;
     margin-top: -1.25em;
     max-height: 4.8em;
@@ -310,12 +322,15 @@
     position: relative;
     padding-right: 0.9em;
     margin-left: -0.8em;
-
-    @include font-content;
+    font-size: var(--f-content);
 
     @include adaptive((
             width: (default: 193rem, xxl: 420, xl: 316, sm: 100%),
     ));
+
+    *{
+      color: var(--c-grey-dark);
+    }
 
     /* Многоточие */
     &.truncated::after {
