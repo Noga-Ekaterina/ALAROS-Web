@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="кнопки карты">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="центрировала заг в событии">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_home/home-news-slider/home-news-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/calendar-events.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/map/zoom-control/zoom-control.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/map/zoom-control/zoom-control.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/partners-slider/partners-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partners-slider/partners-slider.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,14 +290,11 @@
       <workItem from="1751748390014" duration="375000" />
       <workItem from="1751810848751" duration="46397000" />
       <workItem from="1752005755674" duration="5616000" />
-    </task>
-    <task id="LOCAL-00136" summary="добавила кнопку назад и сделала круглые кнопки одного стиля">
-      <option name="closed" value="true" />
-      <created>1748643022592</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1748643022592</updated>
+      <workItem from="1752099772058" duration="16000" />
+      <workItem from="1752151323366" duration="9218000" />
+      <workItem from="1752236448083" duration="5000" />
+      <workItem from="1752241785646" duration="4481000" />
+      <workItem from="1752271496413" duration="1170000" />
     </task>
     <task id="LOCAL-00137" summary="hovers">
       <option name="closed" value="true" />
@@ -677,7 +680,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752010943855</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="центрировала заг в событии">
+      <option name="closed" value="true" />
+      <created>1752177204445</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1752177204445</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="фон событий" />
     <MESSAGE value="--p-y=&gt;--p-x" />
     <MESSAGE value="перевёрстка кнопок в модалке" />
     <MESSAGE value="смасштабировала шапку и изменила размер загов" />
@@ -731,7 +741,8 @@
     <MESSAGE value="правки календаря" />
     <MESSAGE value="проект не найден" />
     <MESSAGE value="кнопки карты" />
-    <option name="LAST_COMMIT_MESSAGE" value="кнопки карты" />
+    <MESSAGE value="центрировала заг в событии" />
+    <option name="LAST_COMMIT_MESSAGE" value="центрировала заг в событии" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,14 +2,14 @@
 
 .partners-slider{
   background: var(--c-grey-bg-light);
-  padding: 38rem 16rem 31rem;
+  padding: 38rem 15rem 31rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 26rem;
 
   @include xxl{
-    padding: 32rem 16rem 27rem;
+    padding: 32rem 15.6rem 27rem;
   }
 
   &-title{
