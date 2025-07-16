@@ -71,6 +71,7 @@ const init= unstable_cache(async ()=>{
               bidNote {
                 html
               }
+              bidDateColumn
               bidDisabled
               documentsTitle
               documentsLinks {

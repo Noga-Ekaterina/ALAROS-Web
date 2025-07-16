@@ -11,17 +11,18 @@ import {getInitialValues} from "@/components/form/getInitialValues";
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from "axios";
 import FormError from "@/components/form/form-error/FormError";
+import {createDate} from "@/utils/date";
 
 interface Props{
   inputs: IFormInput[]
   note?: string
   nominations?: INomination[]
   typeForm: TypeForm
-  bidNumberProjectColumn?: string
+  dateColumn?: string
   disabled?: boolean
 }
 
-const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
+const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props) => {
   const nameKey= typeForm=="email"? "emailType" : typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
@@ -43,14 +44,22 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
         throw new Error('reCAPTCHA не пройдена');
       }
 
+      const request: IFormRequest={
+        ...values,
+        recaptcha: token,
+        typeForm
+      }
+
+      if (dateColumn){
+        const {dayNumber, monthNumber, yearShort}= createDate()
+
+        request[dateColumn]= `${dayNumber}.${monthNumber}.${yearShort}`
+      }
+
       // Исправляем типы и структуру запроса
       const response = await axios.post<{ ok: boolean }>(
           typeForm=="email"? '/api/contact':'/api/submit-form',
-          {
-            ...values,
-            recaptcha: token,
-            typeForm
-          } as IFormRequest
+          request
       );
 
       console.log(response)
