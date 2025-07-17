@@ -17,19 +17,14 @@ const FestivalTemplates = ({pageData, nominations}:Props) => {
   const [btn]= getBtns([pageData.templates])
   const [value, setValue] = useState(nominations[0].value)
   const values = nominations.map(nomination=> nomination.value)
-  const mobileScreen = useMediaQuery({maxWidth: 660});
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
 
   return (
       <div className="festival-templates">
         <Detalis
             disabled={pageData.templatesDisabled}
             title={<HtmlProcessing html={btn.title}/>}
-            rightElement={<HtmlProcessing html={`<span class="festival-templates__btn">${isClient? mobileScreen ? "<span>[</span><span class='festival-templates__icon'>+</span><span>]</span>":btn.link:btn.link}</span>`}/>}
+            rightElement={btn.link}
+            isBtnBg
         >
           <HtmlProcessing html={`<span class="festival-templates__subtitle">${btn.link}</span>`}/>
           <div className="festival-templates__content">

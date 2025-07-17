@@ -19,38 +19,7 @@
   }
 
   .detalis{
-    &__btn{
-      padding: 9rem 15rem 11.5rem 12rem;
-      background: var(--c-red);
-      align-items: stretch;
-
-      @include xxl{
-        padding: vu(19, xxl) 15rem vu(24.2, xxl) 12rem;
-      }
-
-      @include sm{
-        text-align: left;
-        //padding: 10rem 15rem 4rem;
-      }
-
-      &:disabled{
-        background: var(--c-grey-bg);
-
-        +div{
-          height: 0;
-        }
-      }
-
-      >*:first-child{
-        position: relative;
-        top: -0.5rem;
-        line-height: 1.5em;
-
-        @include sm{
-          top: 0;
-        }
-      }
-    }
+    background: var(--c-red);
   }
 
   &__content{
@@ -100,36 +69,6 @@
 
     &__arrow svg *{
       stroke: #fff;
-    }
-  }
-
-  &__btn{
-    transition: 0.5s;
-    position: relative;
-
-    @include sm{
-      display: flex;
-      align-items: start;
-      top: 0.5rem;
-    }
-
-    .detalis--opened &{
-      opacity: 0.5;
-
-      @include sm{
-        opacity: 1;
-      }
-    }
-  }
-
-  &__icon{
-    transition: 0.5s;
-    transform: rotate(0);
-    position: relative;
-    top: 2rem;
-
-    .detalis--opened &{
-      transform: rotate(405deg);
     }
   }
 

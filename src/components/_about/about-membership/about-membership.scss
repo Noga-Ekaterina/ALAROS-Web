@@ -1,0 +1,22 @@
+@import "@/app/styles/mixins-and-extends";
+
+.about-membership{
+  background: var(--c-main);
+
+  *{
+    color: #fff;
+    font-weight: 300;
+
+    @include standard-font-big
+  }
+
+  .detalis{
+    background: inherit;
+  }
+
+  &__content {
+    display: flex;
+    gap: 27rem;
+    padding: 15rem;
+  }
+}

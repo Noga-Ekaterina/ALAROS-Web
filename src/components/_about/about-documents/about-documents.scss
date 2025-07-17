@@ -1,0 +1,20 @@
+@import "@/app/styles/mixins-and-extends";
+
+.about-documents{
+  background: #fff;
+  padding-block: 35rem;
+
+  &__btns{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__btn{
+    background: var(--c-main);
+
+    &:first-child{
+      background: var(--c-green-text);
+    }
+  }
+}

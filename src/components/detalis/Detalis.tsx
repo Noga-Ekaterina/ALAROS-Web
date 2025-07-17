@@ -7,18 +7,21 @@ import cn from "classnames";
 import { useGetRem } from "../../hoocs/useGetRem";
 import {useHash} from "@/hoocs/useHash";
 import {useLenis} from "@studio-freight/react-lenis";
+import HtmlProcessing from "@/components/HtmlProcessing";
+import {useMediaQuery} from "react-responsive";
 
 interface IProps extends IWithChildren {
   title: JSX.Element
-  rightElement?: JSX.Element
+  rightElement?: JSX.Element|string
   hash?: string
   startIsOpen?: boolean
   isBigGray?: boolean
+  isBtnBg?: boolean
   disabled?: boolean
   isSticky?: boolean
 }
 
-const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, isSticky, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, disabled, isSticky, children }: IProps) => {
   const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(startIsOpen??false);
   const [isInit, setIsInit] = useState(false)
@@ -26,6 +29,12 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, 
   const rem = useGetRem();
   const lenis = useLenis()
 
+  const mobileScreen = useMediaQuery({maxWidth: 660});
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
   const handleClick = () => setIsOpen(!isOpen);
 
   // Обработчики с правильными сигнатурами
@@ -84,12 +93,17 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, disabled, 
           style={{pointerEvents: disabled? "none":"auto"}}
       >
         <button
-            className={cn("detalis__btn", {"detalis__btn--sticky": isOpen &&isSticky, "detalis__btn--big-gray": isBigGray})}
+            className={cn("detalis__btn", {"detalis__btn--sticky": isOpen &&isSticky, "detalis__btn--big-gray": isBigGray, "detalis__btn--btn-bg": isBtnBg})}
             onClick={handleClick}
             disabled={disabled}
         >
           {title}
-          {rightElement || <span className="detalis__icon">+</span>}
+          {
+            isBtnBg ?
+                <HtmlProcessing html={`<span class="detalis__right-element">${isClient? mobileScreen ? "<span>[</span><span class='detalis__icon'>+</span><span>]</span>":rightElement:rightElement}</span>`}/>
+                :
+                rightElement || <span className="detalis__icon">+</span>
+          }
         </button>
 
         <div>

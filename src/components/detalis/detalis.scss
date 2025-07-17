@@ -1,4 +1,4 @@
-@import "@/app/styles/mixins-and-extends";
+  @import "@/app/styles/mixins-and-extends";
 
 .detalis{
   &__btn{
@@ -34,6 +34,48 @@
       }
     }
 
+    &--btn-bg{
+      padding: 9rem 15rem 11.5rem 12rem;
+      gap: 18rem;
+      background: inherit;
+      align-items: stretch;
+
+      @include xxl{
+        padding: vu(19, xxl) 15rem vu(24.2, xxl) 12rem;
+      }
+
+      @include sm{
+        text-align: left;
+        align-items: center;
+        //padding: 10rem 15rem 4rem;
+      }
+
+      &:disabled{
+        background: var(--c-grey-bg);
+
+        +div{
+          height: 0;
+        }
+      }
+
+      >*:first-child{
+        position: relative;
+        top: -0.5rem;
+        line-height: 1.5em;
+
+        @extend %text-overflow-ellipsis;
+
+        @include sm{
+          top: 0;
+        }
+      }
+
+      .detalis__icon{
+        position: relative;
+        top: 1rem;
+      }
+    }
+
     &--sticky{
       top: var(--header-height);
       position: sticky;
@@ -49,7 +91,29 @@
     }
   }
 
+  &__right-element{
+    transition: 0.5s;
+    position: relative;
+    opacity: 1;
 
-  &__content{
+    @include sm{
+      display: flex;
+      align-items: start;
+      top: 0.5rem;
+    }
+
+    *{
+      @include sm{
+        font-size: 15rem;
+      }
+    }
+
+    .detalis--opened &{
+      opacity: 0.5;
+
+      @include sm{
+        opacity: 1;
+      }
+    }
   }
 }

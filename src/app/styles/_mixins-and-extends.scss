@@ -120,7 +120,7 @@ $base-widths: (
 
 @mixin standard-font-big{
   @include adaptive((
-          font-size: (default: 17rem, xxl: 35, xl: 25, md: 15, sm: 15)
+          font-size: (default: 17rem, xxl: 35, xl: 25, md: 15, sm: 20)
   ))
 }
 

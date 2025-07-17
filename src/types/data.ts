@@ -264,3 +264,47 @@ export interface IContacts {
   formInputs: IFormInput[]
 }
 
+export interface IAbout {
+  mainScreenLeftSection: IHtmlString
+  mainScreenProject: IProject
+
+  // Main About Section
+  mainAboutTitle: string;
+  mainAboutImage: string;
+  mainAboutText: IHtmlString;
+  mainAboutLinks: IHtmlString[]; // Multiple values
+
+  documentsLinks: IHtmlString[]
+  // Membership Section
+  membership: IHtmlString;
+  membershipLinks: IHtmlString[]; // Multiple values
+
+  // History Section
+  historyTitle: string;
+  historyContent: IHtmlString[]; // Multiple values
+  historyAdditions: IHtmlString[]; // Multiple values
+
+  // People Section
+  peopleTitle: string;
+
+  // Management Section
+  managementTitle: string;
+  management: IHtmlString[]; // Multiple values
+
+  // Presidium Section
+  presidiumTitle: string;
+  presidium: IHtmlString;
+
+  lifeTitle: string;
+  life: IHtmlString;
+
+  // Press Section
+  pressTitle: string;
+  press: IHtmlString;
+
+  // Map Section
+  mapTitle: string;
+  mapTopColumns: IHtmlString[]; // Multiple values
+  mapPlaces: IMapCoordinates[]
+  mapBottomColumns: IHtmlString[]; // Multiple values
+}

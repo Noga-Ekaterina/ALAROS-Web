@@ -1,15 +1,12 @@
 'use client'
-import React, {JSX, useEffect} from 'react';
+import React from 'react';
 import {INewsItem} from "@/types/data";
 import Link from "next/link";
 import HtmlProcessing from "@/components/HtmlProcessing";
-import parse from 'html-react-parser';
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Mousewheel} from "swiper/modules";
-import {ReactSVG} from "react-svg";
 import {formaterDate} from "@/utils/date";
 import {useRouter} from "next/navigation";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import TextAndImages from "@/components/TextAndImages";
 
 interface Props{
   slug: string
@@ -18,61 +15,6 @@ interface Props{
 }
 
 const NewsArticle = ({news, slug, allNews}:Props) => {
-  const replaceHtmlSegments = (html: string): JSX.Element[] => {
-    const patternImgs = /<h2>IMG<\/h2><table><tbody>(.*?)<\/tbody><\/table>/gs;
-    const segments: string[] = html.split(patternImgs);
-    const result: JSX.Element[] = [];
-
-
-    segments.forEach((segment, index) => {
-      if (index % 2 === 0) {
-        const replaceTd= segment.replaceAll(/<td>(.*?)<\/td><td><p>-<\/p><\/td>/g, "<td colspan='2'>$1</td>")
-        const jsx= parse(replaceTd)
-        if (typeof jsx==="object"){
-          if (Array.isArray(jsx))
-            result.push(...jsx);
-          else
-            result.push(jsx)
-        }
-
-      } else {
-        const rows: string = segment;
-        const rowMatches=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/g))
-        if (rowMatches) {
-          const slides: JSX.Element[]=[]
-          const images = Array.from(rowMatches[0][1].matchAll(rowMatches[0][1].includes("<p>")? /<td><p>(.*?)<\/p><\/td>/g : /<td>(.*?)<\/td>/g)).map(m => m[1].trim());
-          const captions = Array.from(rowMatches[1][1].matchAll(rowMatches[1][1].includes("<p>")? /<td><p>(.*?)<\/p><\/td>/g : /<td>(.*?)<\/td>/g)).map(m => m[1].trim());
-
-          images.forEach((img, imgIndex)=>{
-            const caption = captions[imgIndex];
-            slides.push(
-                <SwiperSlide key={`image-${img}`} className="news-article__slide">
-                  <img src={`/Assets/News/${slug}/${img}`} alt={caption} />
-                  <p>{caption}</p>
-                </SwiperSlide>
-            );
-          })
-
-          result.push(
-              <Swiper
-                  slidesPerView="auto"
-                  spaceBetween={"10rem"}
-                  className="news-article__slider"
-              >
-                {
-                  slides.map(slide=>slide)
-                }
-              </Swiper>
-          )
-        }
-      }
-    });
-
-    return result;
-  };
-
-  const body = replaceHtmlSegments(news.body? news.body.html:'')
-  
   return (
       <div className="news-article">
         <div className="container">
@@ -91,7 +33,7 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
             </div>
             <div className="news-article__body">
               {
-                  body && <HtmlProcessing html={body}/>
+                  <TextAndImages html={news.body? news.body.html:""} path={`/Assets/News/${slug}`} className="news-article__slide"/>
               }
             </div>
           </div>

@@ -6,6 +6,32 @@
   position: relative;
   overflow: hidden;
 
+  &--grid{
+    $size: calc(100%/3 - var(--w-line-main-screen) / 2);
+
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      z-index: 2;
+    }
+
+    &::after{
+      top: 0;
+      bottom: 0;
+      left: $size;
+      right: $size;
+      border-inline: var(--w-line-main-screen) solid var(--c-line);
+    }
+
+    &::before{
+      top: $size;
+      bottom: $size;
+      left: 0;
+      right: 0;
+      border-block: var(--w-line-main-screen) solid var(--c-line);
+    }
+  }
+
   &:hover &__img{
     transform: scale(1.02);
   }
@@ -27,7 +53,7 @@
     font-weight: 300;
     max-width: 242rem;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
     @include lg{
       font-size: 10rem;

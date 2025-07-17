@@ -1,0 +1,51 @@
+@import "@/app/styles/mixins-and-extends";
+
+.about-main-screen{
+  &__block-text{
+    width: 512rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--c-yellow);
+    padding-inline: var(--p-x) 46rem;
+
+    @include sm{
+      height: 57.5%;
+    }
+
+    *{
+      position: relative;
+      z-index: 2;
+    }
+
+    >*:last-child{
+      position: absolute;
+      left: var(--p-x);
+      bottom: 30rem;
+    }
+  }
+
+  h1{
+    text-transform: uppercase;
+    top: -8rem;
+    @include main-title-font
+  }
+  
+  &__img-wrapp {
+    width: 512rem;
+
+    @include sm{
+      height: 42.5%;
+    }
+  }
+
+  p{
+    line-height: 1.87em;
+
+    @include standard-font
+  }
+
+  a{
+    font-weight: 500;
+  }
+}

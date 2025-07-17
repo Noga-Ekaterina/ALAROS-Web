@@ -3,6 +3,7 @@
 .link-block{
   display: flex;
   justify-content: space-between;
+  gap: 18rem;
   padding: 9rem 15rem 11.5rem 12rem;
 
   @include xxl{
@@ -25,6 +26,10 @@
     position: relative;
     top: -0.5rem;
 
+    &, >*{
+      @extend %text-overflow-ellipsis;
+    }
+
     @include sm{
       top: 0;
     }
@@ -33,21 +38,26 @@
   &__link{
     position: relative;
     top: 0.5rem;
+
+    *{
+      @include sm{
+        font-size: 15rem;
+      }
+    }
   }
 
   &__icon{
     display: flex;
   }
   &__arrow{
-    width: 14rem;
+    width: 8rem;
 
     svg{
       width: auto;
-      height: 14rem;
+      height: 8rem;
       transform: rotate(-90deg);
       position: relative;
-      top: 3rem;
-      left: 3rem;
+      left: 1.4rem;
 
       *{
         stroke: currentColor;

@@ -11,16 +11,17 @@ import cn from "classnames";
 
 interface Props extends IWithClass, IWithChildren{
   project: IProject
+  isShowGrid?: boolean
 }
 
-const MainScreenProject = ({className, project, children}:Props) => {
+const MainScreenProject = ({className, project, isShowGrid, children}:Props) => {
   const searchParams= useSearchParams()
   const pathname= usePathname()
   return (
       <Link
           href={buildLink(pathname, searchParams, {project: String(project.number), projectYear: String(project.year)})}
           scroll={false}
-          className={cn("main-screen-project", className)}
+          className={cn("main-screen-project", {"main-screen-project--grid": isShowGrid}, className)}
       >
         {children}
         <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt="" className="main-screen-project__img"/>
