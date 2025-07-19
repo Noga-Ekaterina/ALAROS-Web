@@ -6,7 +6,7 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import {formaterDate} from "@/utils/date";
 import {useRouter} from "next/navigation";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-import TextAndImages from "@/components/TextAndImages";
+import TextAndImagesSliders from "@/components/text-and-images-sliders/TextAndImagesSliders";
 
 interface Props{
   slug: string
@@ -33,7 +33,7 @@ const NewsArticle = ({news, slug, allNews}:Props) => {
             </div>
             <div className="news-article__body">
               {
-                  <TextAndImages html={news.body? news.body.html:""} path={`/Assets/News/${slug}`} className="news-article__slide"/>
+                  <TextAndImagesSliders html={news.body? news.body.html:""} path={`/Assets/News/${slug}`} className="news-article__slide"/>
               }
             </div>
           </div>

@@ -192,13 +192,6 @@
 
   &__slide{
     width: 314rem;
-
-    p{
-      margin-top: 0.9em;
-      color: var(--c-grey);
-
-      @include standard-font-small
-    }
   }
 
   &__link{

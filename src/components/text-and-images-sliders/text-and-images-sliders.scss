@@ -1,0 +1,17 @@
+@import "@/app/styles/mixins-and-extends";
+
+.images-slider{
+  position: relative;
+
+  img{
+    width: 100%;
+  }
+
+  p{
+    margin-top: 0.9em;
+    line-height: normal;
+    color: var(--c-grey);
+
+    @include standard-font-small
+  }
+}

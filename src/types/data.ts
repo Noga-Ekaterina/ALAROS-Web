@@ -305,6 +305,6 @@ export interface IAbout {
   // Map Section
   mapTitle: string;
   mapTopColumns: IHtmlString[]; // Multiple values
-  mapPlaces: IMapCoordinates[]
+  map: string
   mapBottomColumns: IHtmlString[]; // Multiple values
 }

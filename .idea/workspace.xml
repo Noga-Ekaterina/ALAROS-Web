@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки кнопок">
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/About/bg/1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TextAndImages.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-documents/AboutDocuments.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-documents/about-documents.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-history/AboutHistory.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-history/Year.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-main-screen/AboutMainScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-main-screen/abouts-main-screen.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-main/AboutMain.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-main/about-main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-membership/AboutMembership.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-membership/about-membership.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/news/[slug]/NewsArticle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/FestivalTemplates.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/main-screen-project/MainScreenProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/MainScreenProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/main-screen-project/main-screen-project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/Detalis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/detalis/detalis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/detalis/detalis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/link-block/link-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/link-block/link-block.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
-    </list>
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="блок истории" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -82,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/public/Assets/Icons&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/public/Assets/Pages/About/History/Additions&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,18 +73,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\About\History\Additions" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Icons" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app\contacts" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Documents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\text-and-images-sliders" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\yandex-map" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Contacts" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Calendar-events" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -316,39 +289,11 @@
       <workItem from="1752241785646" duration="4481000" />
       <workItem from="1752271496413" duration="1170000" />
       <workItem from="1752768037757" duration="12000" />
-      <workItem from="1752770465274" duration="772000" />
-    </task>
-    <task id="LOCAL-00137" summary="hovers">
-      <option name="closed" value="true" />
-      <created>1748649026770</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1748649026770</updated>
-    </task>
-    <task id="LOCAL-00138" summary="правки блока событий и механики">
-      <option name="closed" value="true" />
-      <created>1748905626411</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1748905626411</updated>
-    </task>
-    <task id="LOCAL-00139" summary="правки ссылок">
-      <option name="closed" value="true" />
-      <created>1748907960714</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1748907960714</updated>
-    </task>
-    <task id="LOCAL-00140" summary="правки стр результатов">
-      <option name="closed" value="true" />
-      <created>1748909622106</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1748909622106</updated>
+      <workItem from="1752770465274" duration="8032000" />
+      <workItem from="1752790353029" duration="8389000" />
+      <workItem from="1752842932896" duration="15000" />
+      <workItem from="1752848575789" duration="17490000" />
+      <workItem from="1752929168303" duration="7854000" />
     </task>
     <task id="LOCAL-00141" summary="размер загов и новостей">
       <option name="closed" value="true" />
@@ -710,7 +655,39 @@
       <option name="project" value="LOCAL" />
       <updated>1752177204445</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="about start">
+      <option name="closed" value="true" />
+      <created>1752771311566</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1752771311566</updated>
+    </task>
+    <task id="LOCAL-00187" summary="загрузила фото">
+      <option name="closed" value="true" />
+      <created>1752856749888</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1752856749888</updated>
+    </task>
+    <task id="LOCAL-00188" summary="блок истории">
+      <option name="closed" value="true" />
+      <created>1752963074628</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1752963074628</updated>
+    </task>
+    <task id="LOCAL-00189" summary="блок истории">
+      <option name="closed" value="true" />
+      <created>1752963254989</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1752963254989</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,9 +716,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="--p-y=&gt;--p-x" />
-    <MESSAGE value="перевёрстка кнопок в модалке" />
-    <MESSAGE value="смасштабировала шапку и изменила размер загов" />
     <MESSAGE value="сделала фиксацию нопки ДП" />
     <MESSAGE value="обновила логику меню" />
     <MESSAGE value="добавила подсказку для поля" />
@@ -764,7 +738,10 @@
     <MESSAGE value="проект не найден" />
     <MESSAGE value="кнопки карты" />
     <MESSAGE value="центрировала заг в событии" />
-    <option name="LAST_COMMIT_MESSAGE" value="центрировала заг в событии" />
+    <MESSAGE value="about start" />
+    <MESSAGE value="загрузила фото" />
+    <MESSAGE value="блок истории" />
+    <option name="LAST_COMMIT_MESSAGE" value="блок истории" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

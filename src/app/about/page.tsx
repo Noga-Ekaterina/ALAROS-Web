@@ -77,10 +77,7 @@ const init= unstable_cache(async ()=>{
         mapTopColumns {
           html
         }
-        mapPlaces {
-          latitude
-          longitude
-        }
+        map
         mapBottomColumns {
           html
         }

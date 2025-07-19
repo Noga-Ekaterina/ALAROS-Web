@@ -1,17 +1,20 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import "./slider-clue.scss"
 import {CSSTransition} from "react-transition-group";
 import {ReactSVG} from "react-svg";
 
 interface Props{
-  parentRef:  React.MutableRefObject<null>
+  parentRef?:  React.MutableRefObject<null | HTMLElement>
 }
 
 const SliderClue = ({parentRef}:Props) => {
+  const containerRef=useRef<null|HTMLDivElement>(null)
   const [isPlay, setIsPlay] = useState(false)
 
   useEffect(() => {
+    const parent=parentRef?.current || containerRef.current
+
     const observer = new IntersectionObserver(
         ([entry]) => {
           // Запускаем анимацию, когда элемент появляется в viewport
@@ -26,19 +29,19 @@ const SliderClue = ({parentRef}:Props) => {
         }
     );
 
-    if (parentRef.current) {
-      observer.observe(parentRef.current);
+    if (parent) {
+      observer.observe(parent);
     }
 
 
     return () => {
-      if (parentRef.current) {
-        observer.unobserve(parentRef.current);
+      if (parent) {
+        observer.unobserve(parent);
       }
     };
-  }, []);
+  }, [containerRef.current]);
   return (
-      <>
+      <div ref={containerRef}>
         <CSSTransition in={isPlay} classNames='slider-clue-content' timeout={1100} unmountOnExit={true}>
           <div className="slider-clue-content">
             <ReactSVG src="/Assets/Icons/arrow.svg" className="slider-clue-content__arrow"/>
@@ -51,7 +54,7 @@ const SliderClue = ({parentRef}:Props) => {
           <div className="slider-clue-elipse">
           </div>
         </CSSTransition>
-      </>
+      </div>
   );
 };
 
