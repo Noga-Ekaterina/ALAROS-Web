@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="блок истории">
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/getData.ts" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="блок президиума и правки жюри">
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/about-life.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/getData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/competition-results/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/competition-results/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/contacts-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/contacts-main-screen.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/getData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/getData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,34 +63,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-presidium&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "jsx.switch.disabled": "true",
+    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-life",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-life" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-presidium" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\About\History\Additions" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Icons" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app\contacts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\text-and-images-sliders" />
@@ -306,15 +307,8 @@
       <workItem from="1752842932896" duration="15000" />
       <workItem from="1752848575789" duration="17490000" />
       <workItem from="1752929168303" duration="10921000" />
-      <workItem from="1753014213409" duration="9267000" />
-    </task>
-    <task id="LOCAL-00142" summary="обновила логику меню">
-      <option name="closed" value="true" />
-      <created>1749081214710</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1749081214710</updated>
+      <workItem from="1753014213409" duration="10238000" />
+      <workItem from="1753047229365" duration="6577000" />
     </task>
     <task id="LOCAL-00143" summary="заменила проект на фото и предусмотрела если html null">
       <option name="closed" value="true" />
@@ -700,7 +694,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752963536900</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="блок президиума и правки жюри">
+      <option name="closed" value="true" />
+      <created>1753028102156</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1753028102157</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,7 +731,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="сделала фиксацию нопки ДП" />
     <MESSAGE value="обновила логику меню" />
     <MESSAGE value="добавила подсказку для поля" />
     <MESSAGE value="перевёрстка жюри" />
@@ -754,7 +755,8 @@
     <MESSAGE value="about start" />
     <MESSAGE value="загрузила фото" />
     <MESSAGE value="блок истории" />
-    <option name="LAST_COMMIT_MESSAGE" value="блок истории" />
+    <MESSAGE value="блок президиума и правки жюри" />
+    <option name="LAST_COMMIT_MESSAGE" value="блок президиума и правки жюри" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

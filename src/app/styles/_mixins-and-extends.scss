@@ -106,11 +106,12 @@ $base-widths: (
     @return calc(#{$multiplier} * 1rem);
 }
 
-@mixin standard-font{
+@mixin standard-font($small: false){
   @include adaptive((
           font-size: (
-                  default: 13rem,
+                  default: if($small, 12rem, 13rem),
                   xxl: 27,
+                  xl: if($small, 22, 25),
                   md: 11,
                   sm: 13
           )

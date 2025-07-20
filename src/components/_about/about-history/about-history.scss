@@ -161,7 +161,7 @@
     flex-direction: column;
     gap: 1.3em;
 
-    @include standard-font;
+    @include standard-font(true);
 
     @include sm{
       font-size: 10rem;

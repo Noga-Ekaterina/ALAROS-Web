@@ -48,7 +48,7 @@
   &__note{
     margin-bottom: 35rem;
 
-    @include standard-font;
+    @include standard-font(true);
 
     @include adaptive((
             width: (default: 262rem, xxl: 656, xl: 490, sm: 242)

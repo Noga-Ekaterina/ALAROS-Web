@@ -16,11 +16,7 @@
 
   *{
     font-weight: 300;
-    @include standard-font;
-
-    @include xl{
-      font-size: vu(22, xl);
-    }
+    @include standard-font(true);
   }
 
   b, strong{

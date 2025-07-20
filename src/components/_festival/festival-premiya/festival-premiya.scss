@@ -25,7 +25,7 @@
     padding-inline: 68rem 20rem;
     font-weight: 300;
 
-    @include standard-font;
+    @include standard-font(true);
 
     @include xxl{
       padding-inline: 80rem vu(275, xxl);
