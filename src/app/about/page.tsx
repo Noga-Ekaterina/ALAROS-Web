@@ -9,6 +9,7 @@ import AboutMainScreen from "@/components/_about/about-main-screen/AboutMainScre
 import AboutDocuments from "@/components/_about/about-documents/AboutDocuments";
 import AboutMain from "@/components/_about/about-main/AboutMain";
 import AboutHistory from "@/components/_about/about-history/AboutHistory";
+import AboutPresidium from "@/components/_about/about-presidium/AboutPresidium";
 
 interface IData{
   abouts: IAbout[]
@@ -109,6 +110,7 @@ const MyComponent = async () => {
         <AboutMain pageData={pageData}/>
         <AboutDocuments pageData={pageData}/>
         <AboutHistory pageData={pageData}/>
+        <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium.html}/>
       </AnimationPage>
   );
 };

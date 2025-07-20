@@ -1,5 +1,5 @@
 import React from 'react';
-import {ICompetitionResults, IFestival, IHtmlString, IJury} from "@/types/data";
+import {ICompetitionResults, IFestival, IHtmlString, IUser} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";

@@ -3,7 +3,7 @@ import FestivalProtections from "@/components/_festival-details/festival-protect
 import FestivalBusinessProgram from "@/components/_festival-details/festival-business-program/FestivalBusinessProgram";
 import FestivalForum from "@/components/_festival-details/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
-import {IFestival, IFestivalDetails, IHtmlString, IJury, IProtectionsDay, IFestivalProgramDay} from "@/types/data";
+import {IFestival, IFestivalDetails, IHtmlString, IUser, IProtectionsDay, IFestivalProgramDay} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";

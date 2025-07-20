@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react';
 import "./about-presidium.scss"
-import {IFestival, IJury} from "../../../types/data";
+import {IFestival, IUser} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
@@ -9,58 +9,52 @@ import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {Autoplay} from "swiper/modules";
 import Marquee from "react-fast-marquee";
+import {getData} from "@/components/_about/about-presidium/getData";
+import {number} from "prop-types";
 
 interface Props{
   title: string
-  juries: IJury[]
+  data: string
 }
 
-type TItem= IJury|null|undefined
+type TItem= IUser|null|undefined
 
-const getSlides=(juries: IJury[])=>{
+const getSlides=(users: IUser[])=>{
   let newIndex=0
 
   const result: TItem[][]=[]
 
-  for (let i = 0; i < juries.length; i++){
-    const item=juries[newIndex]
+  for (let i = 0; i < users.length; i++){
+    const item=users[newIndex]
 
     if (!item)
       break
 
-    if ((i+1) % 3===0){
-      result.push([item, null])
-      newIndex++
-    } else if (i % 3===0 && i!=0){
-      result.push([null, item])
-      newIndex++
-    } else{
-      result.push([item, juries[newIndex+1]])
-      newIndex=newIndex+2
-    }
+    result.push([item, users[newIndex+1]])
+    newIndex=newIndex+2
   }
 
   return result
 }
 
-const AboutPresidium = ({juries, title}:Props) => {
-  const slides= getSlides(juries)
-  const rem=useGetRem()
-  const [isOpenedArr, setIsOpenedArr] = useState<IJury[]>([])
+const AboutPresidium = ({data, title}:Props) => {
+  const users= getData(data)
+  const slides= getSlides(users)
+  const [isOpenedArr, setIsOpenedArr] = useState<Record<number, number[]>>({})
 
-  const openInfo=(item: TItem)=>{
-    if (!item) return
-
-    if (!isOpenedArr.includes(item))
-      setIsOpenedArr(prevState => [...prevState, item])
+  const openInfo=(slideIndex: number, item: number)=>{
+    const slide= isOpenedArr[slideIndex]? [...isOpenedArr[slideIndex]]:[]
+    if (!slide.includes(item))
+      setIsOpenedArr(prevState => ({...prevState, [slideIndex]: [...slide, item]}))
     else {
-      const index= isOpenedArr.indexOf(item)
-      setIsOpenedArr(prevState => prevState.splice(index, 1))
+      const index= slide.indexOf(item)
+      slide.splice(index, 1)
+      setIsOpenedArr(prevState => ({...prevState, [slideIndex]: slide}))
     }
   }
 
   return (
-      <div className="about-presidium" id="juries">
+      <div className="about-presidium" id="users">
         <h2 className="about-presidium__title">{title}</h2>
 
 
@@ -73,7 +67,7 @@ const AboutPresidium = ({juries, title}:Props) => {
                     {
                       items.map((item, itemIndex)=>(
                           <div key={index+itemIndex} className="about-presidium__item"
-                               onClick={()=> openInfo(item)}
+                               onClick={()=> openInfo(index, itemIndex)}
                           >
                             {
                                 item &&
@@ -82,12 +76,12 @@ const AboutPresidium = ({juries, title}:Props) => {
 
                                    <div className={cn(
                                        "about-presidium__info",
-                                       isOpenedArr.includes(item) && "about-presidium__info--opened"
+                                       isOpenedArr[index]?.includes(itemIndex) && "about-presidium__info--opened"
                                    )}>
                                       <div>
                                          <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>
                                       </div>
-                                      <HtmlProcessing html={item.jobTitle}/>
+                                        <HtmlProcessing html={`<p>${item.jobTitle}</p>`}/>
                                    </div>
                                 </>
                             }

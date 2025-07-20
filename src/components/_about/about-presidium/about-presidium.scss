@@ -53,7 +53,7 @@
     gap: 9rem;
 
     @include adaptive((
-            width: (default: 234rem, xxl: 420, xl: 350, sm: 174)
+            width: (default: 186rem, xxl: 420, xl: 350, md: 155, sm: 174)
     ));
   }
 
@@ -70,7 +70,7 @@
     justify-content: space-between;
     padding: 12rem;
     
-    &--opened, .festival-juries__item:hover &{
+    &--opened, .about-presidium__item:hover &{
       top: 0;
     }
 

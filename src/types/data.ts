@@ -213,7 +213,7 @@ export interface INomination{
   value: string
 }
 
-export interface IJury{
+export interface IUser {
   name: string
   place: string
   image: string

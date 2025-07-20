@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react';
 import "./festival-juries.scss"
-import {IFestival, IHtmlString, IJury} from "../../../types/data";
+import {IFestival, IHtmlString, IUser} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
@@ -11,26 +11,29 @@ import {Autoplay} from "swiper/modules";
 import Marquee from "react-fast-marquee";
 import {getData} from "@/components/_festival/festival-juries/getData";
 import {motion} from "framer-motion";
+import {useMediaQuery} from "react-responsive";
 
 interface Props{
   title: string
   juriesDataString: IHtmlString[]
 }
 
-type TItem= IJury|null|undefined
 
 const FestivalJuries = ({juriesDataString, title}:Props) => {
   const sections=getData(juriesDataString)
   const [activeSection, setActiveSection] = useState(0)
   const rem=useGetRem()
   const [isOpenedArr, setIsOpenedArr] = useState<number[]>([])
+  const bigDesktopScreen = useMediaQuery({minWidth: 1920});
 
   const openInfo=(item: number)=>{
     if (!isOpenedArr.includes(item))
       setIsOpenedArr(prevState => [...prevState, item])
     else {
       const index= isOpenedArr.indexOf(item)
-      setIsOpenedArr(prevState => prevState.splice(index, 1))
+      const result=[...isOpenedArr]
+      result.splice(index, 1)
+      setIsOpenedArr(result)
     }
   }
 
@@ -62,7 +65,7 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
             <p className="festival-juries__note">
               {nonBreakingSpaces(sections[activeSection].note)}
             </p>
-            <Swiper slidesPerView="auto" spaceBetween={10*rem}>
+              <Swiper slidesPerView="auto" spaceBetween={(bigDesktopScreen? 9.45:8.28)*rem}>
               {
                 sections[activeSection].juries.map((item, itemIndex) => (
                     <SwiperSlide key={itemIndex} className="festival-juries__slide"
