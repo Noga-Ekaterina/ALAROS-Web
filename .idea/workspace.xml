@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="блок президиума и правки жюри">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки шрифтов">
       <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/about-life.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/getData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/_mixins-and-extends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-addresses-socials/contacts-addresses-socials.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/contacts-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/contacts-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/festival-premiya.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,27 +57,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "jsx.switch.disabled": "true",
-    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-life",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.start.executor": "Run",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-life&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-life" />
@@ -308,15 +302,10 @@
       <workItem from="1752848575789" duration="17490000" />
       <workItem from="1752929168303" duration="10921000" />
       <workItem from="1753014213409" duration="10238000" />
-      <workItem from="1753047229365" duration="6577000" />
-    </task>
-    <task id="LOCAL-00143" summary="заменила проект на фото и предусмотрела если html null">
-      <option name="closed" value="true" />
-      <created>1749218344672</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1749218344672</updated>
+      <workItem from="1753047229365" duration="7240000" />
+      <workItem from="1753100672559" duration="13911000" />
+      <workItem from="1753199294090" duration="1077000" />
+      <workItem from="1753200601576" duration="3889000" />
     </task>
     <task id="LOCAL-00144" summary="заменила проект на фото и предусмотрела если html null">
       <option name="closed" value="true" />
@@ -702,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753028102157</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="правки шрифтов">
+      <option name="closed" value="true" />
+      <created>1753055040586</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1753055040593</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -731,7 +728,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="обновила логику меню" />
     <MESSAGE value="добавила подсказку для поля" />
     <MESSAGE value="перевёрстка жюри" />
     <MESSAGE value="первый экран контактов" />
@@ -756,7 +752,8 @@
     <MESSAGE value="загрузила фото" />
     <MESSAGE value="блок истории" />
     <MESSAGE value="блок президиума и правки жюри" />
-    <option name="LAST_COMMIT_MESSAGE" value="блок президиума и правки жюри" />
+    <MESSAGE value="правки шрифтов" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки шрифтов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

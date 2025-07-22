@@ -1,0 +1,101 @@
+@import "@/app/styles/mixins-and-extends";
+
+.about-life{
+  padding-block: 52rem;
+
+  @include sm{
+    padding-block: 32rem;
+  }
+
+  &__signature{
+    width: 50%;
+    margin-block: 57rem 36rem;
+
+    @include standard-font(true);
+
+    @include sm{
+      width: 100%;
+    }
+  }
+
+  &__progress{
+    margin-bottom: 20rem;
+  }
+  
+  &__slider{
+    position: relative;
+  }
+
+  &__slide{
+    width: 25%;
+
+    @include sm{
+      width: 100%;
+    }
+
+    &--horizontal{
+      width: 39.6%;
+
+      @include sm{
+        width: 265rem;
+      }
+
+      img{
+        aspect-ratio: 3/2;
+      }
+
+      &-small{
+        width: 25.9%;
+
+        @include sm{
+          width: 197rem;
+        }
+
+        img{
+          aspect-ratio: 3/2;
+        }
+      }
+    }
+
+    &--vertical{
+      width: 18.8%;
+
+      @include sm{
+        width: 141rem;
+      }
+
+      img{
+        aspect-ratio: 2/3;
+      }
+    }
+
+    &--square{
+      width: 23.5%;
+
+      @include sm{
+        width: 177rem;
+      }
+
+      img{
+        aspect-ratio: 1/1;
+      }
+    }
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p{
+      color: var(--c-grey);
+      margin-top: 0.9em;
+
+      @include standard-font-small;
+
+      @include sm{
+        font-size: 8rem;
+      }
+    }
+  }
+}
