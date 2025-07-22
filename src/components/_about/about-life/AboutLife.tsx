@@ -7,7 +7,6 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {getData} from "@/components/_about/about-life/getData";
 import SliderProgress from "@/components/slider-progress/SliderProgress";
-import cn from "classnames";
 import {useMediaQuery} from "react-responsive";
 import {useGetRem} from "@/hoocs/useGetRem";
 import SliderClue from "@/components/slider-clue/SliderClue";
@@ -26,7 +25,7 @@ const AboutLife = ({pageData}: Props) => {
   return (
       <div className="about-life container">
         <div className="titles-block">
-          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.lifeTitle)}</h2>
+          <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.lifeTitle)}</h2>
         </div>
 
         <div className="about-life__signature">
