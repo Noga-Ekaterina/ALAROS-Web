@@ -296,6 +296,7 @@ export interface IAbout {
   presidium: IHtmlString;
 
   lifeTitle: string;
+  lifeSignature: IHtmlString
   life: IHtmlString;
 
   // Press Section

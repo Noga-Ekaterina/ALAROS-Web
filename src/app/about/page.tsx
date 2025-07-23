@@ -10,6 +10,7 @@ import AboutDocuments from "@/components/_about/about-documents/AboutDocuments";
 import AboutMain from "@/components/_about/about-main/AboutMain";
 import AboutHistory from "@/components/_about/about-history/AboutHistory";
 import AboutPresidium from "@/components/_about/about-presidium/AboutPresidium";
+import AboutLife from "@/components/_about/about-life/AboutLife";
 
 interface IData{
   abouts: IAbout[]
@@ -70,6 +71,9 @@ const init= unstable_cache(async ()=>{
           html
         }
         lifeTitle
+        lifeSignature {
+          html
+        }
         pressTitle
         press {
           html
@@ -111,6 +115,7 @@ const MyComponent = async () => {
         <AboutDocuments pageData={pageData}/>
         <AboutHistory pageData={pageData}/>
         <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium.html}/>
+        <AboutLife pageData={pageData}/>
       </AnimationPage>
   );
 };
