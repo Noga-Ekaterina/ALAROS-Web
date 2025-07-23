@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки шрифтов">
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/about-life.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_about/about-life/getData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Press/ALAROS_2025_Techtreb.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-press/about-press.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-press/getData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-life/about-life.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-life/about-life.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-life&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-press&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -80,11 +81,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-press" />
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Press" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-life" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-presidium" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\About\History\Additions" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Icons" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\text-and-images-sliders" />
@@ -305,23 +306,9 @@
       <workItem from="1753047229365" duration="7240000" />
       <workItem from="1753100672559" duration="13911000" />
       <workItem from="1753199294090" duration="1077000" />
-      <workItem from="1753200601576" duration="3889000" />
-    </task>
-    <task id="LOCAL-00144" summary="заменила проект на фото и предусмотрела если html null">
-      <option name="closed" value="true" />
-      <created>1749218750263</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1749218750263</updated>
-    </task>
-    <task id="LOCAL-00145" summary="убрала боковые заги">
-      <option name="closed" value="true" />
-      <created>1749252827784</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1749252827784</updated>
+      <workItem from="1753200601576" duration="4661000" />
+      <workItem from="1753213314233" duration="10211000" />
+      <workItem from="1753274158624" duration="1126000" />
     </task>
     <task id="LOCAL-00146" summary="ховеры и мелкие правки">
       <option name="closed" value="true" />
@@ -699,7 +686,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753055040593</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="блок жизни">
+      <option name="closed" value="true" />
+      <created>1753205896777</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1753205896777</updated>
+    </task>
+    <task id="LOCAL-00194" summary="правки шрифтов">
+      <option name="closed" value="true" />
+      <created>1753216309175</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1753216309175</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -728,7 +731,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="добавила подсказку для поля" />
     <MESSAGE value="перевёрстка жюри" />
     <MESSAGE value="первый экран контактов" />
     <MESSAGE value="второй экран контактов" />
@@ -752,6 +754,7 @@
     <MESSAGE value="загрузила фото" />
     <MESSAGE value="блок истории" />
     <MESSAGE value="блок президиума и правки жюри" />
+    <MESSAGE value="блок жизни" />
     <MESSAGE value="правки шрифтов" />
     <option name="LAST_COMMIT_MESSAGE" value="правки шрифтов" />
   </component>
