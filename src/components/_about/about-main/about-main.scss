@@ -1,3 +1,77 @@
-.about-main{
-  
+@import "@/app/styles/mixins-and-extends";
+
+.about-main {
+    padding-top: 35rem;
+    position: relative;
+    background: #fff;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__col {
+        width: 40%;
+        flex-shrink: 0;
+    }
+
+    &__text {
+        margin-top: 35rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3em;
+        @include standard-font(true);
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 35rem;
+        margin-top: 20rem;
+
+        a {
+            @include standard-font-big;
+        }
+    }
+
+    &__img {
+        position: relative;
+        top: -25rem;
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+    }
+
+    @include sm {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__col {
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        &__text {
+            margin-top: 90vw;
+        }
+
+        &__img {
+            position: absolute;
+            width: 100vw;
+            transform: scale(1.2);
+            left: 23rem;
+            top: 85rem;
+        }
+
+
+    }
 }
