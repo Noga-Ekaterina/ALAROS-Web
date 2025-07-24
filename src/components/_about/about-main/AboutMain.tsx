@@ -21,7 +21,7 @@ const AboutMain = ({ pageData }: Props) => {
           </div>
 
           <div className="about-main__text">
-            {nonBreakingSpaces(pageData.mainAboutText.html)}
+            <HtmlProcessing html={pageData.mainAboutText.html} />
           </div>
           <div className="about-main__row">
             {pageData.mainAboutLinks.map((btn, idx) => (
