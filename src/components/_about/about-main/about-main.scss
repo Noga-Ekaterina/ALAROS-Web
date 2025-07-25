@@ -28,7 +28,7 @@
         display: flex;
         align-items: center;
         gap: 35rem;
-        margin-top: 20rem;
+        margin-top: 42rem;
 
         a {
             @include standard-font-big;
@@ -37,7 +37,7 @@
 
     &__img {
         position: relative;
-        top: -25rem;
+        top: -20rem;
         width: 50%;
 
         img {
@@ -45,6 +45,17 @@
             height: auto;
             object-fit: contain;
             display: block;
+        }
+    }
+
+    @include md {
+        &__col {
+            width: 50%;
+        }
+
+        &__img {
+            right: -35rem;
+            top: -5rem;
         }
     }
 
@@ -69,6 +80,7 @@
             width: 100vw;
             transform: scale(1.2);
             left: 23rem;
+            right: initial;
             top: 80rem;
         }
 
