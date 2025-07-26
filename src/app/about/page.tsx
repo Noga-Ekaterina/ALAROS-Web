@@ -12,6 +12,7 @@ import AboutHistory from "@/components/_about/about-history/AboutHistory";
 import AboutPresidium from "@/components/_about/about-presidium/AboutPresidium";
 import AboutLife from "@/components/_about/about-life/AboutLife";
 import AboutPress from "@/components/_about/about-press/AboutPress";
+import AboutMap from '@/components/_about/about-map/AboutMap';
 
 interface IData{
   abouts: IAbout[]
@@ -118,6 +119,7 @@ const MyComponent = async () => {
         <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium.html}/>
         <AboutLife pageData={pageData}/>
         <AboutPress pageData={pageData}/>
+        <AboutMap pageData={pageData}/>
       </AnimationPage>
   );
 };
