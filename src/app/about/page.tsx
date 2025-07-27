@@ -13,6 +13,7 @@ import AboutPresidium from "@/components/_about/about-presidium/AboutPresidium";
 import AboutLife from "@/components/_about/about-life/AboutLife";
 import AboutPress from "@/components/_about/about-press/AboutPress";
 import AboutMap from '@/components/_about/about-map/AboutMap';
+import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 
 interface IData{
   abouts: IAbout[]
@@ -85,7 +86,10 @@ const init= unstable_cache(async ()=>{
           html
         }
         map
-        mapBottomColumns {
+        mapInfoColumns {
+          html
+        }
+        mapBottom {
           html
         }
       }
@@ -120,6 +124,7 @@ const MyComponent = async () => {
         <AboutLife pageData={pageData}/>
         <AboutPress pageData={pageData}/>
         <AboutMap pageData={pageData}/>
+        <PartnersSlider/>
       </AnimationPage>
   );
 };

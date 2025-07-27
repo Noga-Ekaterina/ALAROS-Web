@@ -23,34 +23,36 @@ const AboutLife = ({pageData}: Props) => {
   const rem= useGetRem()
 
   return (
-      <div className="about-life container">
-        <div className="titles-block">
-          <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.lifeTitle)}</h2>
-        </div>
+      <div className="about-life">
+        <div className="container">
+          <div className="titles-block">
+            <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.lifeTitle)}</h2>
+          </div>
 
-        <div className="about-life__signature">
-          <HtmlProcessing html={pageData.lifeSignature.html}/>
-        </div>
+          <div className="about-life__signature">
+            <HtmlProcessing html={pageData.lifeSignature.html}/>
+          </div>
 
-        <SliderProgress swiperRef={swiperRef} progressClass="about-life__progress"/>
-        <div className="about-life__slider">
-          <Swiper
-              slidesPerView="auto"
-              spaceBetween={(bigDesktopScreen ? 8 : 10) * rem} ref={swiperRef}
-          >
-            {
-              slides.map((slide, index)=>(
-                  <SwiperSlide
-                      key={index}
-                      className={`about-life__slide about-life__slide--${slide.size}`}
-                  >
-                    <img src={`/Assets/Pages/About/Life/${slide.image}`} alt=""/>
-                    <HtmlProcessing html={`<p>${slide.caption}</p>`}/>
-                  </SwiperSlide>
-              ))
-            }
-          </Swiper>
-          <SliderClue/>
+          <SliderProgress swiperRef={swiperRef} progressClass="about-life__progress"/>
+          <div className="about-life__slider">
+            <Swiper
+                slidesPerView="auto"
+                spaceBetween={(bigDesktopScreen ? 8 : 10) * rem} ref={swiperRef}
+            >
+              {
+                slides.map((slide, index) => (
+                    <SwiperSlide
+                        key={index}
+                        className={`about-life__slide about-life__slide--${slide.size}`}
+                    >
+                      <img src={`/Assets/Pages/About/Life/${slide.image}`} alt=""/>
+                      <HtmlProcessing html={`<p>${slide.caption}</p>`}/>
+                    </SwiperSlide>
+                ))
+              }
+            </Swiper>
+            <SliderClue/>
+          </div>
         </div>
       </div>
   );

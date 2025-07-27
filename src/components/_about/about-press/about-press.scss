@@ -1,10 +1,12 @@
 @import "@/app/styles/mixins-and-extends";
 
 .about-press{
-  display: flex;
-  flex-direction: column;
-  gap: 35rem;
   padding-bottom: 50rem;
+  background: #fff;
+
+  .titles-block{
+    margin-bottom: 35rem;
+  }
 
   &__slide{
     @include adaptive((

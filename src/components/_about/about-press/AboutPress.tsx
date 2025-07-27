@@ -18,35 +18,37 @@ const AboutPress = ({pageData}: Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
 
   return (
-      <div className="about-press container">
-        <div className="titles-block">
-          <h2 className="titles-block__title">{nonBreakingSpaces(pageData.pressTitle)}</h2>
-        </div>
+      <div className="about-press">
+        <div className="container">
+          <div className="titles-block">
+            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.pressTitle)}</h2>
+          </div>
 
-        <BigSlider slidesPerView={mobileScreen? 2:4}>
-          {
-            slides.map((slide, index)=>(
-                <SwiperSlide
-                    key={index}
-                    className="about-press__slide"
-                >
-                  <a href={slide.link} target="_blank" className="about-press__item">
-                    <div className="about-press__img">
-                      <img src={`/Press/${slide.image}`} alt=""/>
+          <BigSlider slidesPerView={mobileScreen ? 2 : 4}>
+            {
+              slides.map((slide, index) => (
+                  <SwiperSlide
+                      key={index}
+                      className="about-press__slide"
+                  >
+                    <a href={slide.link} target="_blank" className="about-press__item">
+                      <div className="about-press__img">
+                        <img src={`/Press/${slide.image}`} alt=""/>
 
-                      <div className="about-press__hover-block">
-                        <span>Читать</span>
+                        <div className="about-press__hover-block">
+                          <span>Читать</span>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="about-press__caption">
-                      <HtmlProcessing html={`<p>${slide.caption}</p>`}/>
-                    </div>
-                  </a>
-                </SwiperSlide>
-            ))
-          }
-        </BigSlider>
+                      <div className="about-press__caption">
+                        <HtmlProcessing html={`<p>${slide.caption}</p>`}/>
+                      </div>
+                    </a>
+                  </SwiperSlide>
+              ))
+            }
+          </BigSlider>
+        </div>
       </div>
   );
 };

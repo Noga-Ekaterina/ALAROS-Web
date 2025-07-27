@@ -307,5 +307,6 @@ export interface IAbout {
   mapTitle: string;
   mapTopColumns: IHtmlString[]; // Multiple values
   map: string
-  mapBottomColumns: IHtmlString[]; // Multiple values
+  mapInfoColumns: IHtmlString[]; // Multiple values
+  mapBottom: IHtmlString
 }

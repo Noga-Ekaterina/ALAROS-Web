@@ -1,112 +1,120 @@
 @import "@/app/styles/mixins-and-extends";
 
 .about-map {
-    padding-top: 42rem;
-    padding-bottom: 35rem;
-    position: relative;
-    z-index: 1;
-    background: #fff;
+  padding-top: 42rem;
+  padding-bottom: 35rem;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  overflow: hidden;
 
-    &__line {
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: auto;
-        left: 0;
-        bottom: 0;
-        object-fit: contain;
+  &__line {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: -100rem;
+    object-fit: contain;
+  }
+
+  &__title {
+    color: var(--c-red);
+    margin-bottom: 42rem;
+
+    @include title-small-font;
+  }
+
+  h3 {
+    color: var(--c-green-text);
+    margin-bottom: 16rem;
+    font-weight: 500;
+
+    @include standard-font-big
+  }
+
+  b, strong{
+    font-weight: 600;
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 96rem;
+
+    &-col {
+      @include standard-font(true);
+
+      &:first-child {
+        max-width: 232rem;
+      }
+
+      &:last-child {
+        max-width: 452rem;
+      }
     }
+  }
 
-    &__title {
-        color: var(--c-red);
-        font-size: 23rem;
-        line-height: 28rem;
-        letter-spacing: 0.02em;
-        font-weight: 500;
-        margin-bottom: 42rem;
+  &__map{
+    width: 100%;
+  }
+
+  &__info {
+    margin-top: 82rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14rem;
+
+    &-col {
+      p {
+        line-height: 1.4em;
+        @include standard-font-small;
+        margin-bottom: 1.4em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 48rem;
+    @include standard-font(true);
+  }
+
+  @include sm {
+    &__line {
+      height: 716rem;
+      width: auto;
+      left: -270rem;
+      bottom: 0;
     }
 
     &__top {
-        display: flex;
-        align-items: flex-start;
-        gap: 96rem;
+      flex-direction: column;
+      gap: 32rem;
+      margin-bottom: 16rem;
 
-        &-col {
-            @include standard-font(true);
+      &-col {
+        width: 100%;
 
-            &:first-child {
-                max-width: 232rem;
-            }
-
-            &:last-child {
-                max-width: 452rem;
-            }
+        &:first-child, &:last-child {
+          max-width: 100%;
         }
+      }
     }
 
     &__info {
-        margin-top: 82rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14rem;
+      margin-top: 16rem;
+      grid-template-columns: 1fr;
+      gap: 36rem;
 
-        &-col {
-            h3 {
-                font-size: 17rem;
-                line-height: 19rem;
-                letter-spacing: 0.02em;
-                color: var(--c-green-text);
-                margin-bottom: 16rem;
-                font-weight: 500;
-            }
-
-            p {
-                @include standard-font-small;
-                margin-bottom: 16rem;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
+      &-col {
+        &:nth-child(2) {
+          padding-left: 120rem;
         }
+      }
     }
-
-    &__bottom {
-        margin-top: 48rem;
-        @include standard-font(true);
-    }
-
-    @include sm {
-        &__line {
-            height: 716rem;
-            width: auto;
-            left: -270rem;
-        }
-
-        &__top {
-            flex-direction: column;
-            gap: 32rem;
-            margin-bottom: 16rem;
-
-            &-col {
-                width: 100%;
-                
-                &:first-child, &:last-child {
-                    max-width: 100%;
-                }
-            }
-        }
-
-        &__info {
-            margin-top: 16rem;
-            grid-template-columns: 1fr;
-            gap: 36rem;
-
-            &-col {
-                &:nth-child(2) {
-                    padding-left: 120rem;
-                }
-            }
-        }
-    }
+  }
 }

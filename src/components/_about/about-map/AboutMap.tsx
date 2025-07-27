@@ -23,30 +23,28 @@ const AboutMap = ({ pageData }: Props) => {
 
         <div className="about-map__top">
           {pageData.mapTopColumns.map((col, idx) => (
-            <div className="about-map__top-col" key={idx}>
-              <HtmlProcessing html={col.html} />
-            </div>
+              <div className="about-map__top-col" key={idx}>
+                <HtmlProcessing html={col.html}/>
+              </div>
           ))}
         </div>
 
+        <img
+            src={`/Assets/Pages/About/${pageData.map}`}
+            className="about-map__map"
+            alt=""
+        />
+
         <div className="about-map__info">
-          {pageData.mapBottomColumns.map((col, idx) => (
-            <div className="about-map__info-col" key={idx}>
-              <HtmlProcessing html={col.html} />
-            </div>
+          {pageData.mapInfoColumns.map((col, idx) => (
+              <div className="about-map__info-col" key={idx}>
+                <HtmlProcessing html={col.html}/>
+              </div>
           ))}
         </div>
 
         <div className="about-map__bottom">
-          <p>
-            Дополнительную информацию по поводу <br />
-            членства можно получить по&nbsp;адресу&nbsp;
-            <a href="mailto:alarosinfo@gmail.com" className="red">
-              <u>
-                <strong>alarosinfo@gmail.com</strong>
-              </u>
-            </a>
-          </p>
+          <HtmlProcessing html={pageData.mapBottom.html}/>
         </div>
       </div>
     </div>
