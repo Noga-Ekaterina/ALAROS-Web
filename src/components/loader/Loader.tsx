@@ -5,6 +5,7 @@ import {observer} from "mobx-react-lite"
 import store from "@/store/store";
 import logo from "../../../public/animations/logo.json"
 import dynamic from 'next/dynamic';
+import {useEffect} from "react";
 
 // Динамически загружаем Lottie только на клиенте
 const Lottie = dynamic(
@@ -17,14 +18,21 @@ interface Props{
 }
 
 function Loader({isClient}: Props) {
-  const {isLoading} = store;
+  const {isLoading, noIsFirstOpen, chekedIsFirstOpen} = store;
+
+  useEffect(() => {
+    return ()=>{
+      if (!noIsFirstOpen)
+        chekedIsFirstOpen()
+    }
+  }, []);
 
   return (
       <AnimatePresence mode="wait">
         {(!isClient || isLoading) && (
             <motion.div
                 className="loader"
-                initial={{opacity: 0}}
+                initial={{opacity: noIsFirstOpen? 0:1}}
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
                 transition={{duration: 0.2}}
