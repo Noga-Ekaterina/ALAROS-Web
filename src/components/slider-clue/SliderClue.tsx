@@ -6,14 +6,15 @@ import {ReactSVG} from "react-svg";
 
 interface Props{
   parentRef?:  React.MutableRefObject<null | HTMLElement>
+  threshold?: number
 }
 
-const SliderClue = ({parentRef}:Props) => {
+const SliderClue = ({parentRef, threshold}:Props) => {
   const containerRef=useRef<null|HTMLDivElement>(null)
   const [isPlay, setIsPlay] = useState(false)
 
   useEffect(() => {
-    const parent=parentRef?.current || containerRef.current
+    const parent=parentRef?.current || containerRef.current?.parentElement
 
     const observer = new IntersectionObserver(
         ([entry]) => {
@@ -25,7 +26,7 @@ const SliderClue = ({parentRef}:Props) => {
         },
         {
           root: null, // Используем viewport как область отслеживания
-          threshold: 0.8 // Срабатывает, когда 80% элемента видно
+          threshold: threshold || 0.8
         }
     );
 

@@ -51,7 +51,7 @@ const AboutLife = ({pageData}: Props) => {
                 ))
               }
             </Swiper>
-            <SliderClue/>
+            <SliderClue threshold={0.65}/>
           </div>
         </div>
       </div>

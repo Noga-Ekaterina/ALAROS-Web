@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="довела до ума блок с картой и поменяла фон">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки загрузки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/Loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,7 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Contacts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -152,9 +152,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
       </list>
@@ -336,15 +336,7 @@
       <workItem from="1753213314233" duration="10211000" />
       <workItem from="1753274158624" duration="1126000" />
       <workItem from="1753629539123" duration="8746000" />
-      <workItem from="1753704512524" duration="1075000" />
-    </task>
-    <task id="LOCAL-00147" summary="уменьшила стрелку">
-      <option name="closed" value="true" />
-      <created>1749328810798</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1749328810798</updated>
+      <workItem from="1753704512524" duration="4057000" />
     </task>
     <task id="LOCAL-00148" summary="улучшила скрол по хешу">
       <option name="closed" value="true" />
@@ -730,7 +722,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753637933546</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="правки загрузки">
+      <option name="closed" value="true" />
+      <created>1753706114677</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1753706114677</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,7 +759,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="первый экран контактов" />
     <MESSAGE value="второй экран контактов" />
     <MESSAGE value="визуальные правки и догруз материалов" />
     <MESSAGE value="догруз материалов" />
@@ -784,7 +783,8 @@
     <MESSAGE value="блок жизни" />
     <MESSAGE value="правки шрифтов" />
     <MESSAGE value="довела до ума блок с картой и поменяла фон" />
-    <option name="LAST_COMMIT_MESSAGE" value="довела до ума блок с картой и поменяла фон" />
+    <MESSAGE value="правки загрузки" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки загрузки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
