@@ -117,7 +117,7 @@ const Page = async ({searchParams}:Props) => {
       <AnimationPage>
         <FestivalDetailsMainScreen pageData={pageData}/>
         {
-          true?
+          pageData.isShowAllContent?
               <>
                 {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
                 <FestivalBusinessProgram pageData={pageData}/>
