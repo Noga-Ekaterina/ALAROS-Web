@@ -9,7 +9,7 @@ interface Props {
 
 const AboutMap = ({ pageData }: Props) => {
   return (
-    <div className="about-map">
+    <div className="about-map" id="map">
       <img
         src="/Assets/Pages/About/bg/2.svg"
         className="about-map__line"

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="регулирование уровня появления подсказки">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="фотки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-documents/AboutDocuments.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-documents/AboutDocuments.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-membership/AboutMembership.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-membership/AboutMembership.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/AboutHistory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/AboutHistory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-main/AboutMain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-main/AboutMain.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-map/AboutMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-map/AboutMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,23 +339,7 @@
       <workItem from="1753213314233" duration="10211000" />
       <workItem from="1753274158624" duration="1126000" />
       <workItem from="1753629539123" duration="8746000" />
-      <workItem from="1753704512524" duration="6553000" />
-    </task>
-    <task id="LOCAL-00149" summary="сделала блокировку кнопки шаблонов">
-      <option name="closed" value="true" />
-      <created>1749397567814</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1749397567814</updated>
-    </task>
-    <task id="LOCAL-00150" summary="устронила небольшие пробемы">
-      <option name="closed" value="true" />
-      <created>1749401236101</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1749401236101</updated>
+      <workItem from="1753704512524" duration="8602000" />
     </task>
     <task id="LOCAL-00151" summary="мелкие правки">
       <option name="closed" value="true" />
@@ -732,7 +717,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753709177964</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="блкировка кнопки">
+      <option name="closed" value="true" />
+      <created>1753789156410</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1753789156410</updated>
+    </task>
+    <task id="LOCAL-00199" summary="фотки">
+      <option name="closed" value="true" />
+      <created>1753792763521</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1753792763521</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,8 +762,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="визуальные правки и догруз материалов" />
-    <MESSAGE value="догруз материалов" />
     <MESSAGE value="обработка ошибки при отправке и добавила предупреждение" />
     <MESSAGE value="попап куков" />
     <MESSAGE value="news" />
@@ -786,7 +785,9 @@
     <MESSAGE value="довела до ума блок с картой и поменяла фон" />
     <MESSAGE value="правки загрузки" />
     <MESSAGE value="регулирование уровня появления подсказки" />
-    <option name="LAST_COMMIT_MESSAGE" value="регулирование уровня появления подсказки" />
+    <MESSAGE value="блкировка кнопки" />
+    <MESSAGE value="фотки" />
+    <option name="LAST_COMMIT_MESSAGE" value="фотки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

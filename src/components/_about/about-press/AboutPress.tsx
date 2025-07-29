@@ -18,7 +18,7 @@ const AboutPress = ({pageData}: Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
 
   return (
-      <div className="about-press">
+      <div className="about-press" id="press">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{nonBreakingSpaces(pageData.pressTitle)}</h2>

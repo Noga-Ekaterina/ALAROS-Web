@@ -23,7 +23,7 @@ const AboutLife = ({pageData}: Props) => {
   const rem= useGetRem()
 
   return (
-      <div className="about-life">
+      <div className="about-life" id="life">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.lifeTitle)}</h2>

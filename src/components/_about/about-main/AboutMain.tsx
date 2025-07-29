@@ -11,7 +11,7 @@ interface Props {
 
 const AboutMain = ({ pageData }: Props) => {
   return (
-    <div className="about-main">
+    <div className="about-main" id="main">
       <div className="container">
         <div className="about-main__col">
           <div className="titles-block">

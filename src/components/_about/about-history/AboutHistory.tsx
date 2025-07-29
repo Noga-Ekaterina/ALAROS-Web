@@ -11,7 +11,7 @@ interface Props{
 
 const AboutHistory = ({pageData}: Props) => {
   return (
-      <div className="about-history">
+      <div className="about-history" id="history">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{nonBreakingSpaces(pageData.historyTitle)}</h2>
