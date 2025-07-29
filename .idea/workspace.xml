@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки загрузки">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="регулирование уровня появления подсказки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider-clue/SliderClue.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-documents/AboutDocuments.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-documents/AboutDocuments.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-membership/AboutMembership.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-membership/AboutMembership.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,15 +338,7 @@
       <workItem from="1753213314233" duration="10211000" />
       <workItem from="1753274158624" duration="1126000" />
       <workItem from="1753629539123" duration="8746000" />
-      <workItem from="1753704512524" duration="4057000" />
-    </task>
-    <task id="LOCAL-00148" summary="улучшила скрол по хешу">
-      <option name="closed" value="true" />
-      <created>1749333674162</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1749333674162</updated>
+      <workItem from="1753704512524" duration="6553000" />
     </task>
     <task id="LOCAL-00149" summary="сделала блокировку кнопки шаблонов">
       <option name="closed" value="true" />
@@ -730,7 +724,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753706114677</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="регулирование уровня появления подсказки">
+      <option name="closed" value="true" />
+      <created>1753709177964</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1753709177964</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -759,7 +761,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="второй экран контактов" />
     <MESSAGE value="визуальные правки и догруз материалов" />
     <MESSAGE value="догруз материалов" />
     <MESSAGE value="обработка ошибки при отправке и добавила предупреждение" />
@@ -784,7 +785,8 @@
     <MESSAGE value="правки шрифтов" />
     <MESSAGE value="довела до ума блок с картой и поменяла фон" />
     <MESSAGE value="правки загрузки" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки загрузки" />
+    <MESSAGE value="регулирование уровня появления подсказки" />
+    <option name="LAST_COMMIT_MESSAGE" value="регулирование уровня появления подсказки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

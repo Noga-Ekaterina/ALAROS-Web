@@ -26,7 +26,7 @@ const AboutDocuments = ({pageData}: Props) => {
               })
             }
 
-            <AboutMembership membership={pageData.membership} membershipLinks={pageData.membershipLinks}/>
+            <AboutMembership membership={pageData.membership} membershipLinks={pageData.membershipLinks} isDisabled={pageData.membershipDisabled}/>
           </div>
         </div>
       </div>

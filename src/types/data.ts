@@ -278,6 +278,7 @@ export interface IAbout {
   // Membership Section
   membership: IHtmlString;
   membershipLinks: IHtmlString[]; // Multiple values
+  membershipDisabled: boolean
 
   // History Section
   historyTitle: string;

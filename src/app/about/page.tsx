@@ -54,6 +54,7 @@ const init= unstable_cache(async ()=>{
         membershipLinks {
           html
         }
+        membershipDisabled
         historyTitle
         historyContent {
           html

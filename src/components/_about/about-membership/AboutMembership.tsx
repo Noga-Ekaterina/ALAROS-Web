@@ -8,9 +8,10 @@ import Detalis from "@/components/detalis/Detalis";
 interface Props{
   membership: IHtmlString;
   membershipLinks: IHtmlString[];
+  isDisabled: boolean
 }
 
-const AboutMembership = ({membership, membershipLinks}: Props) => {
+const AboutMembership = ({membership, membershipLinks, isDisabled}: Props) => {
   const [btn]= getBtns([membership])
 
   return (
@@ -19,6 +20,7 @@ const AboutMembership = ({membership, membershipLinks}: Props) => {
             title={<HtmlProcessing html={btn.title}/>}
             rightElement={btn.link}
             isBtnBg
+            disabled={isDisabled}
         >
           <div className="about-membership__content">
             {
