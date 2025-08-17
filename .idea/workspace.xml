@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="проставила id">
-      <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="закрыла красный фестиваль">
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-management/AboutManagement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-management/about-management.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/_about/about-management/getUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/nonBreakingSpaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/nonBreakingSpaces.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +25,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -83,6 +92,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-press&quot;,
@@ -96,7 +106,7 @@
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright.filetypes.SCSS&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -151,8 +161,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
       </list>
@@ -334,15 +344,15 @@
       <workItem from="1753213314233" duration="10211000" />
       <workItem from="1753274158624" duration="1126000" />
       <workItem from="1753629539123" duration="8746000" />
-      <workItem from="1753704512524" duration="8913000" />
-    </task>
-    <task id="LOCAL-00152" summary="мелкие правки">
-      <option name="closed" value="true" />
-      <created>1749481122771</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1749481122771</updated>
+      <workItem from="1753704512524" duration="9541000" />
+      <workItem from="1753878974505" duration="22000" />
+      <workItem from="1754941045121" duration="1279000" />
+      <workItem from="1755291250327" duration="3505000" />
+      <workItem from="1755342604358" duration="15100000" />
+      <workItem from="1755430300305" duration="14000" />
+      <workItem from="1755432831786" duration="362000" />
+      <workItem from="1755433834002" duration="547000" />
+      <workItem from="1755447480760" duration="18165000" />
     </task>
     <task id="LOCAL-00153" summary="доработала ховер события">
       <option name="closed" value="true" />
@@ -728,7 +738,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753806273218</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="закрыла красный фестиваль">
+      <option name="closed" value="true" />
+      <created>1753806610188</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1753806610188</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -757,7 +775,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="попап куков" />
     <MESSAGE value="news" />
     <MESSAGE value="мелкие правки" />
     <MESSAGE value="контактная форма" />
@@ -782,7 +799,8 @@
     <MESSAGE value="блкировка кнопки" />
     <MESSAGE value="фотки" />
     <MESSAGE value="проставила id" />
-    <option name="LAST_COMMIT_MESSAGE" value="проставила id" />
+    <MESSAGE value="закрыла красный фестиваль" />
+    <option name="LAST_COMMIT_MESSAGE" value="закрыла красный фестиваль" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -799,7 +817,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/dropdown/Dropdown.tsx</url>
-          <line>33</line>
+          <line>11</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

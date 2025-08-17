@@ -1,0 +1,225 @@
+@import "@/app/styles/mixins-and-extends";
+
+.about-management{
+  position: relative;
+  z-index: 2;
+  margin-bottom: 15rem;
+
+  &__main-title{
+    width: 41.7%;
+    padding-block: 30rem 43rem;
+
+    @include sm{
+      width: 100%;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25rem;
+    margin-top: 30rem;
+
+    @include sm{
+      flex-direction: column;
+    }
+  }
+
+  &__user{
+    display: flex;
+    gap: 10rem;
+    align-items: start;
+    width: 67%;
+    padding-right: 10rem;
+
+    @include adaptive((
+            --min-h: (default: 325rem, xxl: 815, sm: 202)
+    ));
+
+    &:nth-child(even){
+      width: 33%;
+      padding-right: 0;
+
+      @include adaptive((
+              --min-h: (default: 193rem, xxl: 487, sm: 140)
+      ));
+    }
+
+    &:nth-child(odd) {
+      @include sm{
+        flex-direction: column;
+      }
+    }
+
+    @include sm{
+      width: 100% !important;
+    }
+  }
+
+  &__img{
+    width: 100%;
+    height: var(--min-h);
+    object-fit: cover;
+    object-position: center;
+
+    .about-management__user:nth-child(odd) & {
+      @include sm{
+        width: 50%;
+      }
+    }
+
+    &-and-details{
+      width: 36.8%;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15rem 10rem;
+
+      @include sm{
+        width: 100%;
+        flex-direction: row;
+        align-items: start;
+      }
+
+      .about-management__user:nth-child(even) &{
+        width: 50%;
+
+        @include sm{
+          width: 33.3%;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  &__text{
+    line-height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2em;
+    justify-content: space-between;
+    min-height: var(--min-h);
+
+
+    @include adaptive((
+            font-size: (
+                    default: 9rem,
+                    xxl: 22,
+                    xl: 18,
+                    md: 9,
+                    sm: 10
+            )
+    ));
+
+    .top, .bottom{
+      display: flex;
+      flex-direction: column;
+      gap: 1.3em;
+    }
+
+    h3{
+      line-height: 1.18em;
+      font-weight: 500;
+
+      @include standard-font-big;
+
+      @include sm{
+        font-size: 15rem;
+      }
+    }
+
+    h4{
+      line-height: 1.1em;
+      font-weight: 500;
+      color: var(--c-red);
+
+      @include standard-font(true);
+
+      @include sm{
+        font-size: 10rem;
+      }
+    }
+
+    .signature{
+      color: var(--c-grey-dark);
+      align-self: start;
+
+      @include standard-font-small;
+
+
+      @include sm{
+        font-size: 8rem;
+      }
+    }
+  }
+
+  &__details{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+
+  .dropdown {
+    border-top: #BEBCBB solid var(--w-line);
+
+    &:first-child{
+      border-bottom: #BEBCBB solid var(--w-line);
+    }
+
+    &__title {
+      height: var(--h-btn);
+      align-items: center;
+      gap: 14rem;
+      font-weight: 600;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+
+
+    &__content {
+      background: var(--c-grey-bg-light-2);
+      box-shadow: 14px 19px 26.6px -25px rgba(0, 0, 0, 0.20);
+
+      p{
+        padding-block: 1.1em;
+        border-top: var(--c-grey-bg) solid var(--w-line);
+
+        &:first-child{
+          border-top: none;
+        }
+      }
+    }
+
+    a{
+      color: var(--c-red);
+
+      &[href$=".pdf"], &[href$=".PDF"]{
+        &::after{
+          content: '.PDF';
+        }
+      }
+    }
+
+    &.open{
+
+      .lenis.lenis-smooth {
+        max-height: 277rem;
+      }
+    }
+  }
+
+
+  &__icon{
+    transition: 0.5s;
+    transform: rotate(0);
+    color: var(--c-red);
+    font-size: 23rem;
+    font-weight: 400;
+
+    .open &{
+      transform: rotate(405deg);
+    }
+  }
+}

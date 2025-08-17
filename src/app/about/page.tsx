@@ -14,6 +14,7 @@ import AboutLife from "@/components/_about/about-life/AboutLife";
 import AboutPress from "@/components/_about/about-press/AboutPress";
 import AboutMap from '@/components/_about/about-map/AboutMap';
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
+import AboutManagement from "@/components/_about/about-management/AboutManagement";
 
 interface IData{
   abouts: IAbout[]
@@ -121,6 +122,7 @@ const MyComponent = async () => {
         <AboutMain pageData={pageData}/>
         <AboutDocuments pageData={pageData}/>
         <AboutHistory pageData={pageData}/>
+        <AboutManagement pageData={pageData}/>
         <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium.html}/>
         <AboutLife pageData={pageData}/>
         <AboutPress pageData={pageData}/>
