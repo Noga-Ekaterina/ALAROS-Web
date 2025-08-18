@@ -28,6 +28,7 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
   const [isError, setIsError] = useState(true)
   const [isErrorSubmit, setIsErrorSubmit] = useState(false)
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [key, setKey] = useState(0)
 
   const initialValues = getInitialValues(inputs, nameKey, nominations);
   const handleSubmit = async (
@@ -70,6 +71,7 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
       }
 
       resetForm({values: initialValues})
+      setKey(prevState => prevState+1)
 
       setIsSent(true);
       setTimeout(() => setIsSent(false), 4000);
@@ -113,7 +115,7 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
           {({ isSubmitting,  }) =>(
               <FormikForm className="form">
                 <fieldset disabled={disabled}>
-                  <div>
+                  <div key={key}>
                     {
                       inputs.map((input) => (
                           <Fragment key={input[nameKey]}>
