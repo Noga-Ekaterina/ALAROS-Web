@@ -55,19 +55,24 @@ const AboutPresidium = ({data, title}:Props) => {
 
   return (
       <div className="about-presidium" id="users">
-        <h2 className="about-presidium__title">{title}</h2>
+        <img
+            src="/Assets/Pages/About/bg/2.svg"
+            className="about-presidium__bg"
+            alt=""
+        />
 
+        <h2 className="about-presidium__title">{title}</h2>
 
         <Marquee direction='left' speed={20} className="about-presidium__running-line__player">
           <div className="about-presidium__running-line-wrapp">
 
             {
-              slides.map((items, index)=>(
+              slides.map((items, index) => (
                   <div key={index} className="about-presidium__slide">
                     {
-                      items.map((item, itemIndex)=>(
-                          <div key={index+itemIndex} className="about-presidium__item"
-                               onClick={()=> openInfo(index, itemIndex)}
+                      items.map((item, itemIndex) => (
+                          <div key={index + itemIndex} className="about-presidium__item"
+                               onClick={() => openInfo(index, itemIndex)}
                           >
                             {
                                 item &&
@@ -79,9 +84,10 @@ const AboutPresidium = ({data, title}:Props) => {
                                        isOpenedArr[index]?.includes(itemIndex) && "about-presidium__info--opened"
                                    )}>
                                       <div>
-                                         <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p className="yellow">{nonBreakingSpaces(item.place)}</p>
+                                         <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p
+                                          className="yellow">{nonBreakingSpaces(item.place)}</p>
                                       </div>
-                                        <HtmlProcessing html={`<p>${item.jobTitle}</p>`}/>
+                                      <HtmlProcessing html={`<p>${item.jobTitle}</p>`}/>
                                    </div>
                                 </>
                             }

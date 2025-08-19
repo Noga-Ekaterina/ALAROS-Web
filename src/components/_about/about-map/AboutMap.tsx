@@ -11,7 +11,7 @@ const AboutMap = ({ pageData }: Props) => {
   return (
     <div className="about-map" id="map">
       <img
-        src="/Assets/Pages/About/bg/2.svg"
+        src="/Assets/Pages/About/bg/3.svg"
         className="about-map__line"
         alt=""
       />

@@ -17,7 +17,7 @@
   &__content{
     display: flex;
     flex-wrap: wrap;
-    row-gap: 25rem;
+    row-gap: 40rem;
     margin-top: 30rem;
 
     @include sm{
@@ -166,6 +166,19 @@
       border-bottom: #BEBCBB solid var(--w-line);
     }
 
+    *{
+
+      @include adaptive((
+              font-size: (
+                      default: 9rem,
+                      xxl: 27,
+                      xl: 18,
+                      md: 9,
+                      sm: 10
+              )
+      ));
+    }
+
     &__title {
       height: var(--h-btn);
       align-items: center;
@@ -215,7 +228,7 @@
     transition: 0.5s;
     transform: rotate(0);
     color: var(--c-red);
-    font-size: 23rem;
+    font-size: 23rem !important;
     font-weight: 400;
 
     .open &{

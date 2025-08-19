@@ -2,9 +2,21 @@
 
 .about-presidium{
   padding-bottom: 10rem;
-  background-image: url("../../../../public/Assets/Pages/Festival-main/bg/juries.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+
+  &__bg{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    right: -2vw;
+    bottom: 0;
+
+    @include sm{
+      width: 178vw;
+      bottom: 58vw;
+      right: -43vw;
+    }
+  }
 
   &__title{
     color: var(--c-red);
