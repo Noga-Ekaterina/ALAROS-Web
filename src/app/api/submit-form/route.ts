@@ -49,7 +49,7 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     const data = await response.json();
 
     if (!data.success) {
-      throw new Error()
+      throw new Error("ошибка капчи")
     }
     //Здесь обработайте данные формы
 
@@ -70,10 +70,11 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     )
 
     if (resp.data.type=="error")
-      throw new Error('Ошибка сервера');
+      throw new Error(`Ошибка сервера: ${resp.data.message}`);
 
     return NextResponse.json({ ok: true });
   }catch (err){
+    console.log(err)
     return NextResponse.json(
         {ok: false},
         { status: 400 }
