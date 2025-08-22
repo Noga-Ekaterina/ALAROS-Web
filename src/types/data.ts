@@ -71,6 +71,7 @@ export interface IFormInput{
   diplomaTableColumn: string
   clue: string
   emailType: EmailInputType
+  maxValue?: number
 }
 
 export type TypeForm = "bid"|"diploma"|"email"

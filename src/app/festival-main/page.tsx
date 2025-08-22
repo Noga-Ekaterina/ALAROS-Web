@@ -67,6 +67,7 @@ const init= unstable_cache(async ()=>{
                 bidTableColumn
                 diplomaTableColumn
                 clue
+                maxValue
               }
               bidNote {
                 html
@@ -96,6 +97,7 @@ const init= unstable_cache(async ()=>{
                 bidTableColumn
                 diplomaTableColumn
                 clue
+                maxValue
               }
               diplomaNote {
                 html

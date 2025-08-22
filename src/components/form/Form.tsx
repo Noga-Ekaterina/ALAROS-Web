@@ -102,6 +102,8 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
         errors[key] = "заполните поле"
       else if (value !=="" && ((input.type === "tel" && !regexTel.test(value)) || (input.type === "email" && !regexEmail.test(value))))
         errors[key] = "неверный формат"
+      else if (input.maxValue && value.length>input.maxValue)
+        errors[key]= `максимум ${input.maxValue} символов`
     }
 
     setIsError(Object.keys(errors).length > 0)

@@ -39,6 +39,7 @@ const init= unstable_cache(async ()=>{
           type
           necessarily
           emailType
+          maxValue
         }
         socialsIcons {
           html

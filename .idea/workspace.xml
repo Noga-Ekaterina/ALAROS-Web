@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="улучшила сброс формы">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="вывод ошибки в логи">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/bg/2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/bg/3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-management/about-management.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-management/about-management.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-map/AboutMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-map/AboutMap.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,31 +350,9 @@
       <workItem from="1755447480760" duration="18165000" />
       <workItem from="1755518871613" duration="14000" />
       <workItem from="1755543495307" duration="5358000" />
-      <workItem from="1755604986343" duration="1997000" />
-    </task>
-    <task id="LOCAL-00154" summary="фон событий">
-      <option name="closed" value="true" />
-      <created>1749505264915</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1749505264915</updated>
-    </task>
-    <task id="LOCAL-00155" summary="--p-y=&gt;--p-x">
-      <option name="closed" value="true" />
-      <created>1749505895364</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1749505895364</updated>
-    </task>
-    <task id="LOCAL-00156" summary="перевёрстка кнопок в модалке">
-      <option name="closed" value="true" />
-      <created>1749514728684</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1749514728684</updated>
+      <workItem from="1755604986343" duration="3836000" />
+      <workItem from="1755774542421" duration="1509000" />
+      <workItem from="1755867189204" duration="2664000" />
     </task>
     <task id="LOCAL-00157" summary="смасштабировала шапку и изменила размер загов">
       <option name="closed" value="true" />
@@ -745,7 +722,31 @@
       <option name="project" value="LOCAL" />
       <updated>1755545333052</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="правки блока руководства">
+      <option name="closed" value="true" />
+      <created>1755617645250</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1755617645250</updated>
+    </task>
+    <task id="LOCAL-00204" summary="загрузка фона">
+      <option name="closed" value="true" />
+      <created>1755622015545</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1755622015545</updated>
+    </task>
+    <task id="LOCAL-00205" summary="вывод ошибки в логи">
+      <option name="closed" value="true" />
+      <created>1755781226628</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1755781226629</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,9 +775,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="мелкие правки" />
-    <MESSAGE value="контактная форма" />
-    <MESSAGE value="правки валидации формы" />
     <MESSAGE value="обход" />
     <MESSAGE value="удалила обход" />
     <MESSAGE value="правки" />
@@ -799,7 +797,10 @@
     <MESSAGE value="проставила id" />
     <MESSAGE value="закрыла красный фестиваль" />
     <MESSAGE value="улучшила сброс формы" />
-    <option name="LAST_COMMIT_MESSAGE" value="улучшила сброс формы" />
+    <MESSAGE value="правки блока руководства" />
+    <MESSAGE value="загрузка фона" />
+    <MESSAGE value="вывод ошибки в логи" />
+    <option name="LAST_COMMIT_MESSAGE" value="вывод ошибки в логи" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
