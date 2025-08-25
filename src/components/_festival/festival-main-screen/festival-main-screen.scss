@@ -31,10 +31,14 @@
 
     >*:last-child{
       position: absolute;
-      left: var(--p-x);
+      left: 0;
+      right: 0;
       bottom: 30rem;
+      padding-inline: var(--p-x);
       color: #C3C3C3;
       z-index: 2;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -65,6 +69,10 @@
     @include md-book{
       height: 66%;
     }
+
+    @include sm{
+      max-height: max(0px, calc(100% - 50vw));
+    }
   }
 
   &__btns{
@@ -82,9 +90,14 @@
     height: 50%;
     table-layout: fixed;
     border-collapse: collapse;
+    flex-shrink: 0;
 
     @include md-book{
       height: 34%;
+    }
+
+    @include sm{
+      height: 50vw;
     }
   }
 
@@ -115,7 +128,6 @@
   }
 
   h2{
-    font-size: 25rem;
     font-weight: 300;
     line-height: 1.2em;
 
@@ -124,7 +136,7 @@
                     default: 25rem,
                     xxl: 50,
                     md: 20,
-                    sm: vu(20, sm, true)
+                    sm: 20
             )
     ));
   }

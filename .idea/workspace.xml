@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="вывод ошибки в логи">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="открыла красный фестиваль">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/festival-main/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-main/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,23 +353,8 @@
       <workItem from="1755543495307" duration="5358000" />
       <workItem from="1755604986343" duration="3836000" />
       <workItem from="1755774542421" duration="1509000" />
-      <workItem from="1755867189204" duration="2664000" />
-    </task>
-    <task id="LOCAL-00157" summary="смасштабировала шапку и изменила размер загов">
-      <option name="closed" value="true" />
-      <created>1749563516351</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1749563516351</updated>
-    </task>
-    <task id="LOCAL-00158" summary="сделала фиксацию нопки ДП">
-      <option name="closed" value="true" />
-      <created>1749584731937</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1749584731937</updated>
+      <workItem from="1755867189204" duration="3371000" />
+      <workItem from="1756127401765" duration="5381000" />
     </task>
     <task id="LOCAL-00159" summary="обновила логику меню">
       <option name="closed" value="true" />
@@ -746,7 +732,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755781226629</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="сделала ограничение на кол-во символв">
+      <option name="closed" value="true" />
+      <created>1755870935547</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1755870935547</updated>
+    </task>
+    <task id="LOCAL-00207" summary="открыла красный фестиваль">
+      <option name="closed" value="true" />
+      <created>1756128141490</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1756128141491</updated>
+    </task>
+    <option name="localTasksCounter" value="208" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,8 +777,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="обход" />
-    <MESSAGE value="удалила обход" />
     <MESSAGE value="правки" />
     <MESSAGE value="правки кнопок и фильтра" />
     <MESSAGE value="правки календаря" />
@@ -800,7 +800,9 @@
     <MESSAGE value="правки блока руководства" />
     <MESSAGE value="загрузка фона" />
     <MESSAGE value="вывод ошибки в логи" />
-    <option name="LAST_COMMIT_MESSAGE" value="вывод ошибки в логи" />
+    <MESSAGE value="сделала ограничение на кол-во символв" />
+    <MESSAGE value="открыла красный фестиваль" />
+    <option name="LAST_COMMIT_MESSAGE" value="открыла красный фестиваль" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -50,6 +50,13 @@
       }
     }
 
+    &__title {
+
+      &:hover{
+        border-bottom: none;
+      }
+    }
+
     input:checked+label .dropdown__nomination-item span, label:hover .dropdown__nomination-item span{
       color: var(--c-red);
     }

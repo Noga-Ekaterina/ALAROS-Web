@@ -84,8 +84,7 @@
   &__line{
     border-left: solid var(--w-line);
     border-color: var(--c-grey);
-    height: 14rem;
-    align-self: center;
+    align-self: stretch;
     flex-shrink: 0;
   }
 

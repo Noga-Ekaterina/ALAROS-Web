@@ -26,6 +26,8 @@ const FestivalPrice = ({pageData}:Props) => {
             <div className="festival-price__running-line-wrapp">
               <HtmlProcessing html={pageData.priceRunningLine.html}/>
               <HtmlProcessing html={pageData.priceRunningLine.html}/>
+              <HtmlProcessing html={pageData.priceRunningLine.html}/>
+              <HtmlProcessing html={pageData.priceRunningLine.html}/>
             </div>
           </Marquee>
         </div>
