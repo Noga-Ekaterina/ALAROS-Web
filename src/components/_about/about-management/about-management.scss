@@ -129,7 +129,7 @@
     }
 
     h4{
-      line-height: 1.1em;
+      line-height: 1.18em;
       font-weight: 500;
       color: var(--c-red);
 
@@ -142,6 +142,7 @@
 
     .signature{
       color: var(--c-grey-dark);
+      line-height: 1.4em;
       align-self: start;
 
       @include standard-font-small;
@@ -196,7 +197,8 @@
       box-shadow: 14px 19px 26.6px -25px rgba(0, 0, 0, 0.20);
 
       p{
-        padding-block: 1.1em;
+        line-height: 1.3em;
+        padding-block: 1.43em 1.82em;
         border-top: var(--c-grey-bg) solid var(--w-line);
 
         &:first-child{
