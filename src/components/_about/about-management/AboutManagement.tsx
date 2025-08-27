@@ -10,7 +10,7 @@ interface Props{
 
 const AboutManagement = ({pageData}: Props) => {
   return (
-      <div className="about-management container">
+      <div className="about-management container" id="management">
         <div className="titles-block">
           <h2 className="titles-block__title about-management__main-title">{nonBreakingSpaces(pageData.peopleTitle)}</h2>
         </div>

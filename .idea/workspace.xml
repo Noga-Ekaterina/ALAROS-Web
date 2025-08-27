@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки блока руководства">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поставил видео через фрейм">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/AdditionItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/AdditionItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-management/AboutManagement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-management/AboutManagement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,15 +355,7 @@
       <workItem from="1756211419052" duration="5199000" />
       <workItem from="1756235216033" duration="542000" />
       <workItem from="1756298803826" duration="609000" />
-      <workItem from="1756312998459" duration="1114000" />
-    </task>
-    <task id="LOCAL-00162" summary="перевёрстка жюри">
-      <option name="closed" value="true" />
-      <created>1750381773014</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1750381773014</updated>
+      <workItem from="1756312998459" duration="2300000" />
     </task>
     <task id="LOCAL-00163" summary="первый экран контактов">
       <option name="closed" value="true" />
@@ -749,7 +741,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756223039882</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="поставил видео через фрейм">
+      <option name="closed" value="true" />
+      <created>1756314672663</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1756314672663</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,7 +778,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки календаря" />
     <MESSAGE value="проект не найден" />
     <MESSAGE value="кнопки карты" />
     <MESSAGE value="центрировала заг в событии" />
@@ -803,7 +802,8 @@
     <MESSAGE value="правки фестиваля" />
     <MESSAGE value="добавила отступ" />
     <MESSAGE value="правки блока руководства" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки блока руководства" />
+    <MESSAGE value="поставил видео через фрейм" />
+    <option name="LAST_COMMIT_MESSAGE" value="поставил видео через фрейм" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
