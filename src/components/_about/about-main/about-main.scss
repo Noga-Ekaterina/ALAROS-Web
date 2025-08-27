@@ -1,18 +1,19 @@
 @import "@/app/styles/mixins-and-extends";
 
 .about-main {
-    padding-top: 35rem;
+    padding-top: 40rem;
+    margin-bottom: -15rem;
     position: relative;
     background: #fff;
 
     .container {
         display: flex;
-        align-items: center;
         justify-content: space-between;
     }
 
     &__col {
-        width: 40%;
+        width: 100%;
+        max-width: 420rem;
         flex-shrink: 0;
     }
 
@@ -22,13 +23,14 @@
         flex-direction: column;
         gap: 1.3em;
         @include standard-font(true);
+        line-height: 16rem;
     }
 
     &__row {
         display: flex;
         align-items: center;
         gap: 35rem;
-        margin-top: 42rem;
+        margin-top: 26rem;
 
         a {
             @include standard-font-big;
@@ -38,7 +40,7 @@
     &__img {
         position: relative;
         top: -20rem;
-        width: 50%;
+        width: 510rem;
 
         img {
             width: 100%;
@@ -49,13 +51,22 @@
     }
 
     @include md {
+        margin-bottom: 0;
+
         &__col {
             width: 50%;
+            max-width: initial;
         }
 
         &__img {
             right: -35rem;
             top: -5rem;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__text {
+            line-height: 1.3em;
         }
     }
 
