@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="открыла красный фестиваль">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки блока руководства">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/FestivalPrice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-templates/festival-templates.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/projects-filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/dropdown.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/AdditionItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/AdditionItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,31 +351,11 @@
       <workItem from="1755604986343" duration="3836000" />
       <workItem from="1755774542421" duration="1509000" />
       <workItem from="1755867189204" duration="3371000" />
-      <workItem from="1756127401765" duration="5381000" />
-    </task>
-    <task id="LOCAL-00159" summary="обновила логику меню">
-      <option name="closed" value="true" />
-      <created>1749597107206</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1749597107206</updated>
-    </task>
-    <task id="LOCAL-00160" summary="добавила подсказку для поля">
-      <option name="closed" value="true" />
-      <created>1749603399588</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1749603399588</updated>
-    </task>
-    <task id="LOCAL-00161" summary="перевёрстка жюри">
-      <option name="closed" value="true" />
-      <created>1750381578776</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1750381578777</updated>
+      <workItem from="1756127401765" duration="6623000" />
+      <workItem from="1756211419052" duration="5199000" />
+      <workItem from="1756235216033" duration="542000" />
+      <workItem from="1756298803826" duration="609000" />
+      <workItem from="1756312998459" duration="1114000" />
     </task>
     <task id="LOCAL-00162" summary="перевёрстка жюри">
       <option name="closed" value="true" />
@@ -748,7 +725,31 @@
       <option name="project" value="LOCAL" />
       <updated>1756128141491</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="правки фестиваля">
+      <option name="closed" value="true" />
+      <created>1756142203346</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1756142203346</updated>
+    </task>
+    <task id="LOCAL-00209" summary="добавила отступ">
+      <option name="closed" value="true" />
+      <created>1756143785523</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1756143785523</updated>
+    </task>
+    <task id="LOCAL-00210" summary="правки блока руководства">
+      <option name="closed" value="true" />
+      <created>1756223039882</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1756223039882</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -777,8 +778,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="правки" />
-    <MESSAGE value="правки кнопок и фильтра" />
     <MESSAGE value="правки календаря" />
     <MESSAGE value="проект не найден" />
     <MESSAGE value="кнопки карты" />
@@ -797,12 +796,14 @@
     <MESSAGE value="проставила id" />
     <MESSAGE value="закрыла красный фестиваль" />
     <MESSAGE value="улучшила сброс формы" />
-    <MESSAGE value="правки блока руководства" />
     <MESSAGE value="загрузка фона" />
     <MESSAGE value="вывод ошибки в логи" />
     <MESSAGE value="сделала ограничение на кол-во символв" />
     <MESSAGE value="открыла красный фестиваль" />
-    <option name="LAST_COMMIT_MESSAGE" value="открыла красный фестиваль" />
+    <MESSAGE value="правки фестиваля" />
+    <MESSAGE value="добавила отступ" />
+    <MESSAGE value="правки блока руководства" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки блока руководства" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -824,7 +825,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/form/Form.tsx</url>
-          <line>88</line>
+          <line>89</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
