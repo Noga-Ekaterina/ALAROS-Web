@@ -1,20 +1,24 @@
 'use client'
 import React from 'react';
-import "./form-error.scss"
+import "./alert.scss"
 import {motion} from "framer-motion";
 
-const FormError = () => {
+interface Props{
+  message: string
+}
+
+const Alert = ({message}:Props) => {
   return (
       <motion.div
           initial={{opacity: 0,}}
           animate={{opacity: 1}}
           exit={{opacity: 0}}
           transition={{duration: 0.5}}
-          className="form-error"
+          className="alert"
       >
-        Ошибка отправки формы
+        {message}
       </motion.div>
       );
 };
 
-export default FormError;
+export default Alert;

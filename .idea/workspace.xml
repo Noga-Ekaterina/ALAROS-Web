@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="поставил видео через фрейм">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="сделала копирование текста">
+      <change afterPath="$PROJECT_DIR$/src/components/CopyText.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-management/AboutManagement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-management/AboutManagement.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form-error/FormError.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert/Alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/form-error/form-error.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/alert/alert.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +23,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -113,11 +117,11 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\About\History\Additions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\text-and-images-sliders" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\yandex-map" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Contacts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -154,8 +158,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
       </list>
@@ -355,15 +359,7 @@
       <workItem from="1756211419052" duration="5199000" />
       <workItem from="1756235216033" duration="542000" />
       <workItem from="1756298803826" duration="609000" />
-      <workItem from="1756312998459" duration="2300000" />
-    </task>
-    <task id="LOCAL-00163" summary="первый экран контактов">
-      <option name="closed" value="true" />
-      <created>1750535224475</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1750535224475</updated>
+      <workItem from="1756312998459" duration="8425000" />
     </task>
     <task id="LOCAL-00164" summary="второй экран контактов">
       <option name="closed" value="true" />
@@ -749,7 +745,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756314672663</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="проставила id">
+      <option name="closed" value="true" />
+      <created>1756317624761</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1756317624761</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,7 +782,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="проект не найден" />
     <MESSAGE value="кнопки карты" />
     <MESSAGE value="центрировала заг в событии" />
     <MESSAGE value="about start" />
@@ -792,7 +795,6 @@
     <MESSAGE value="регулирование уровня появления подсказки" />
     <MESSAGE value="блкировка кнопки" />
     <MESSAGE value="фотки" />
-    <MESSAGE value="проставила id" />
     <MESSAGE value="закрыла красный фестиваль" />
     <MESSAGE value="улучшила сброс формы" />
     <MESSAGE value="загрузка фона" />
@@ -803,7 +805,9 @@
     <MESSAGE value="добавила отступ" />
     <MESSAGE value="правки блока руководства" />
     <MESSAGE value="поставил видео через фрейм" />
-    <option name="LAST_COMMIT_MESSAGE" value="поставил видео через фрейм" />
+    <MESSAGE value="проставила id" />
+    <MESSAGE value="сделала копирование текста" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделала копирование текста" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

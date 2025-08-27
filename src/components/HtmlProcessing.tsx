@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {useGetHashPosition} from "../hoocs/useGetHashPosition";
 import {smoothScroll} from "../utils/smoothScroll";
 import {useGetRem} from "@/hoocs/useGetRem";
+import CopyText from "@/components/CopyText";
 
 interface Props{
   html: string| JSX.Element[] | null
@@ -43,6 +44,8 @@ const HtmlProcessing = ({html}:Props) => {
         return React.createElement("a", { to: props.href, onClick: handleHashed, ...props }, props.children);
       else if (props.href === 'text')
         return React.createElement("span", { className: props.className, key }, props.children);
+      else if (props.href.startsWith("copy:"))
+        return React.createElement(CopyText, { text: props.href.replace("copy:", ""), className: props.className}, props.children);
     }
 
     if (props && props.children) {
