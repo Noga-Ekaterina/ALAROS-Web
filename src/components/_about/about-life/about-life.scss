@@ -13,6 +13,7 @@
     margin-block: 57rem 36rem;
 
     @include standard-font(true);
+    font-weight: 300;
 
     @include sm{
       width: 100%;
