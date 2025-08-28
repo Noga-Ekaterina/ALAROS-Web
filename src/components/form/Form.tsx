@@ -10,7 +10,7 @@ import cn from "classnames";
 import {getInitialValues} from "@/components/form/getInitialValues";
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from "axios";
-import FormError from "@/components/form/form-error/FormError";
+import Alert from "@/components/alert/Alert";
 import {createDate} from "@/utils/date";
 
 interface Props{
@@ -176,7 +176,7 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
         </Formik>
 
         {
-          isErrorSubmit && <FormError/>
+          isErrorSubmit && <Alert message="Ошибка отправки формы"/>
         }
       </>
   );

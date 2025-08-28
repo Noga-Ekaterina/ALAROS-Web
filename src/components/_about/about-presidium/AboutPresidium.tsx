@@ -54,7 +54,7 @@ const AboutPresidium = ({data, title}:Props) => {
   }
 
   return (
-      <div className="about-presidium" id="users">
+      <div className="about-presidium" id="presidium">
         <img
             src="/Assets/Pages/About/bg/2.svg"
             className="about-presidium__bg"
