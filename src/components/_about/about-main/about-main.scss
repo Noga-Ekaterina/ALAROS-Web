@@ -24,6 +24,7 @@
         gap: 1.3em;
         @include standard-font(true);
         line-height: 16rem;
+        font-weight: 300;
     }
 
     &__row {
