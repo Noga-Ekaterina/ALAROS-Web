@@ -136,4 +136,6 @@ export const metadata: Metadata = {
   title: "АЛАРОС | О нас",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default MyComponent;

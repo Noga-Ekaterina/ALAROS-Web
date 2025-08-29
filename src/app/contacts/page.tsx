@@ -77,4 +77,6 @@ export const metadata: Metadata = {
   title: "АЛАРОС | Контакты",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default Page;

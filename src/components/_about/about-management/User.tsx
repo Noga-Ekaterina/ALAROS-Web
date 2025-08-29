@@ -10,7 +10,7 @@ interface Props{
 
 const User = ({data}: Props) => {
   const {image, html, details}=getUser(data)
-  console.log(details)
+
   return (
       <div className="about-management__user">
         <div className="about-management__img-and-details">

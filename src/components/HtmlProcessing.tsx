@@ -45,7 +45,7 @@ const HtmlProcessing = ({html}:Props) => {
       else if (props.href === 'text')
         return React.createElement("span", { className: props.className, key }, props.children);
       else if (props.href.startsWith("copy:"))
-        return React.createElement(CopyText, { text: props.href.replace("copy:", ""), className: props.className}, props.children);
+        return React.createElement(CopyText, { text: props.href.replace("copy:", ""), className: props.className, key}, props.children);
     }
 
     if (props && props.children) {
