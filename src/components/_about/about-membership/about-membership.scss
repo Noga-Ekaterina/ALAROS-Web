@@ -18,5 +18,10 @@
     display: flex;
     gap: 27rem;
     padding: 15rem;
+
+    @include sm{
+      gap: 10rem;
+      justify-content: space-between;
+    }
   }
 }

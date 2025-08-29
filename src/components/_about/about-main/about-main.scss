@@ -2,7 +2,6 @@
 
 .about-main {
     padding-top: 40rem;
-    margin-bottom: -15rem;
     position: relative;
     background: #fff;
 
@@ -23,7 +22,7 @@
         flex-direction: column;
         gap: 1.3em;
         @include standard-font(true);
-        line-height: 16rem;
+        line-height: 1.3em;
         font-weight: 300;
     }
 

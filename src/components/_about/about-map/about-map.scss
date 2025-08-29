@@ -43,6 +43,8 @@
     gap: 96rem;
 
     &-col {
+      font-weight: 300;
+
       @include standard-font(true);
 
       &:first-child {
@@ -80,6 +82,8 @@
 
   &__bottom {
     margin-top: 48rem;
+    font-weight: 300;
+
     @include standard-font(true);
   }
 

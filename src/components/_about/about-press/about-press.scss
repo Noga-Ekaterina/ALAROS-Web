@@ -59,17 +59,16 @@
 
   &__caption{
     color: var(--c-grey);
-    line-height: 16rem;
+    line-height: 1.3em;
     padding-top: 1em;
     border-top: solid var(--w-line) var(--c-grey-bg);
     margin-top: 0.7em;
-    font-weight: 600;
+    font-weight: 500;
 
     @include standard-font(true);
 
     @include sm{
       font-size: 10rem;
-      line-height: 12rem;
     }
 
     .about-press__item:hover & {
