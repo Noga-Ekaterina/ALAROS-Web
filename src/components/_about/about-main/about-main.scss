@@ -1,100 +1,116 @@
 @import "@/app/styles/mixins-and-extends";
 
 .about-main {
-    padding-top: 40rem;
-    position: relative;
-    background: #fff;
+  padding-top: 40rem;
+  position: relative;
+  background: #fff;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 100%;
+    max-width: 420rem;
+    flex-shrink: 0;
+
+    @include xl{
+      margin-top: 22rem;
     }
+  }
+
+  &__text {
+    margin-top: 35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    @include standard-font(true);
+    line-height: 1.3em;
+    font-weight: 300;
+
+    @include xl{
+      margin-top: 30rem;
+    }
+
+    @include xxl{
+      margin-top: 35rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 35rem;
+    margin-top: 26rem;
+
+    a {
+      @include standard-font-big;
+    }
+  }
+
+  &__img {
+    position: relative;
+    top: -20rem;
+    width: 510rem;
+    margin-top: -10rem;
+
+    @include xl {
+      margin-top: -20rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  @include md {
+    padding-bottom: 45rem;
 
     &__col {
-        width: 100%;
-        max-width: 420rem;
-        flex-shrink: 0;
-    }
-
-    &__text {
-        margin-top: 35rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.3em;
-        @include standard-font(true);
-        line-height: 1.3em;
-        font-weight: 300;
-    }
-
-    &__row {
-        display: flex;
-        align-items: center;
-        gap: 35rem;
-        margin-top: 26rem;
-
-        a {
-            @include standard-font-big;
-        }
+      width: 50%;
+      max-width: initial;
     }
 
     &__img {
-        position: relative;
-        top: -20rem;
-        width: 510rem;
-
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            display: block;
-        }
+      margin-top: 0;
+      right: -35rem;
+      //top: -5rem;
+      display: flex;
+      align-items: flex-end;
     }
 
-    @include md {
-        margin-bottom: 0;
+    &__text {
+      line-height: 1.3em;
+    }
+  }
 
-        &__col {
-            width: 50%;
-            max-width: initial;
-        }
-
-        &__img {
-            right: -35rem;
-            top: -5rem;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        &__text {
-            line-height: 1.3em;
-        }
+  @include sm {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    @include sm {
-        .container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        &__col {
-            width: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        &__text {
-            margin-top: 90vw;
-        }
-
-        &__img {
-            position: absolute;
-            width: 100vw;
-            transform: scale(1.2);
-            left: 23rem;
-            right: initial;
-            top: 80rem;
-        }
-
-
+    &__col {
+      width: 100%;
+      position: relative;
+      z-index: 2;
     }
+
+    &__text {
+      margin-top: 92vw;
+    }
+
+    &__img {
+      position: absolute;
+      width: 100vw;
+      transform: scale(1.2);
+      left: 23rem;
+      right: initial;
+      top: 80rem;
+    }
+  }
 }

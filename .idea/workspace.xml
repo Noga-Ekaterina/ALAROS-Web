@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки о нас">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="тех правки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HtmlProcessing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/bg/2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/bg/2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-documents/about-documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-documents/about-documents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/about-history.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-main/about-main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-main/about-main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-diploma/festival-diploma.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +126,7 @@
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\yandex-map" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -156,9 +159,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
       </list>
@@ -361,15 +364,9 @@
       <workItem from="1756312998459" duration="8425000" />
       <workItem from="1756467669844" duration="58000" />
       <workItem from="1756471490849" duration="4398000" />
-      <workItem from="1756483091879" duration="333000" />
-    </task>
-    <task id="LOCAL-00164" summary="второй экран контактов">
-      <option name="closed" value="true" />
-      <created>1750619035030</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1750619035030</updated>
+      <workItem from="1756483091879" duration="2332000" />
+      <workItem from="1756553474230" duration="2928000" />
+      <workItem from="1756639789301" duration="10109000" />
     </task>
     <task id="LOCAL-00165" summary="визуальные правки и догруз материалов">
       <option name="closed" value="true" />
@@ -755,7 +752,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756317624761</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="тех правки">
+      <option name="closed" value="true" />
+      <created>1756483566632</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1756483566632</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,7 +789,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="кнопки карты" />
     <MESSAGE value="центрировала заг в событии" />
     <MESSAGE value="about start" />
     <MESSAGE value="загрузила фото" />
@@ -809,7 +813,8 @@
     <MESSAGE value="поставил видео через фрейм" />
     <MESSAGE value="проставила id" />
     <MESSAGE value="сделала копирование текста" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделала копирование текста" />
+    <MESSAGE value="тех правки" />
+    <option name="LAST_COMMIT_MESSAGE" value="тех правки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
