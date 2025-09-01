@@ -36,7 +36,11 @@
   }
 
   .dropdown{
-    width: 777rem;
+    width: 824rem;
+
+    @include xxl{
+      width: 777rem;
+    }
 
     @include sm{
       width: 100%;
