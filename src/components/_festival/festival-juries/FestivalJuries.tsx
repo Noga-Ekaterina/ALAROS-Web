@@ -12,6 +12,7 @@ import Marquee from "react-fast-marquee";
 import {getData} from "@/components/_festival/festival-juries/getData";
 import {motion} from "framer-motion";
 import {useMediaQuery} from "react-responsive";
+import SmoothScrolling from "@/app/SmoothScrolling";
 
 interface Props{
   title: string
@@ -43,17 +44,20 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
         <div className="container">
           <h2 className="festival-juries__title">{title}</h2>
 
-          <div className="festival-juries__sections">
+          <Swiper slidesPerView="auto" spaceBetween={35*rem} className="festival-juries__sections">
             {
               sections.map(({section}, index) => (
-                  <button key={index} className="festival-juries__btn link-underline" disabled={index === activeSection}
-                          onClick={() => {
-                            setActiveSection(index)
-                            setIsOpenedArr([])
-                          }}>{section}</button>
+                  <SwiperSlide key={index} style={{width: "fit-content"}}>
+                    <button  className="festival-juries__btn link-underline"
+                            disabled={index === activeSection}
+                            onClick={() => {
+                              setActiveSection(index)
+                              setIsOpenedArr([])
+                            }}>{section}</button>
+                  </SwiperSlide>
               ))
             }
-          </div>
+          </Swiper>
 
           <motion.div
               key={activeSection}
@@ -81,7 +85,9 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
                                     "festival-juries__info",
                                     isOpenedArr.includes(itemIndex) && "festival-juries__info--opened"
                                 )}>
-                                   <p>{nonBreakingSpaces(item.jobTitle)}</p>
+                                   <SmoothScrolling enableScrollTransfer={true}>
+                                    <p>{nonBreakingSpaces(item.jobTitle)}</p>
+                                   </SmoothScrolling>
                                 </div>
 
                              </div>
