@@ -11,6 +11,10 @@
     right: 0;
     height: 135%;
     z-index: 1;
+
+    @include sm{
+      bottom: 70vw;
+    }
   }
 
   .container{
@@ -42,6 +46,14 @@
       font-size: vu(25, xl);
     }
 
+    @include xxl{
+      font-size: vu(35, xxl);
+    }
+
+    @include sm{
+      font-size: 15rem;
+    }
+
     &:disabled{
       color: #2A3A2B;
     }
@@ -49,12 +61,18 @@
 
   &__note{
     line-height: 1.3em;
-    margin-bottom: 35rem;
-
-    @include standard-font(true);
+    margin-bottom: 38rem;
+    font-weight: 500;
 
     @include adaptive((
-            width: (default: 262rem, xxl: 656, xl: 490, sm: 242)
+            width: (default: 262rem, xxl: 656, xl: 490, sm: 242),
+            font-size: (
+                    default: 14rem,
+                    xxl: 30,
+                    xl: 25,
+                    md: 11,
+                    sm: 13
+            )
     ));
   }
 
@@ -69,7 +87,15 @@
     *{
       font-weight: 500;
 
-      @include standard-font-small
+      @include standard-font-small;
+
+      @include xl{
+        font-size: vu(18, xl);
+      }
+
+      @include xxl{
+        font-size: vu(25, xxl);
+      }
     }
   }
 
@@ -120,15 +146,15 @@
     margin-top: 0.8em;
     margin-bottom: 0.5em;
 
-    @include standard-font;
-
-    @include lg{
-      font-size: 12rem;
-    }
-
-    @include xxl{
-      font-size: vu(25, xxl);
-    }
+    @include adaptive((
+            font-size: (
+                    default: 12rem,
+                    xxl: 25,
+                    xl: 25,
+                    md: 11,
+                    sm: 15
+            )
+    ))
   }
 
   &__place{
