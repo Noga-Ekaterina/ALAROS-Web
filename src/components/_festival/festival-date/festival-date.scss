@@ -28,6 +28,8 @@
   }
 
   &__text{
+    line-height: 1.23em;
+
     @include standard-font-big;
 
     @include xxl{
