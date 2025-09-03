@@ -34,8 +34,12 @@ const UserCard=({user}: IUserCardProps)=>{
   return(
       <div className="session-user">
         <img src={`/Assets/Pages/People/${user.image}`} alt="" className="session-user__img"/>
-        <p className="session-user__name">{nonBreakingSpaces(user.name)}</p>
-        <p>{nonBreakingSpaces(user.jobTitle)}</p>
+        <div className="session-user__name">
+          <p>{nonBreakingSpaces(user.name)}</p>
+        </div>
+        <div className="session-user__jobTitle">
+          <p>{nonBreakingSpaces(user.jobTitle)}</p>
+        </div>
       </div>
   )
 }

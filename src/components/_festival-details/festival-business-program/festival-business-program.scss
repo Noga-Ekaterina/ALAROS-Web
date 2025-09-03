@@ -41,11 +41,12 @@
       ~p{
         width: 43.3em;
         margin-left: 328rem;
-        margin-bottom: 17.333rem;
+        margin-bottom: 1.3em;
+        line-height: 1.3em;
 
         @include adaptive((
                 font-size: (
-                        default: 10rem,
+                        default: 11rem,
                         xxl: 22,
                         xl: 18,
                         md: 11,
@@ -139,7 +140,7 @@
   &__img{
     width: 100%;
     aspect-ratio: 1/1;
-    margin-bottom: 22rem;
+    margin-bottom: 2.5em;
   }
 
   &__name{
@@ -149,5 +150,9 @@
     @include sm{
       margin-bottom: 5rem;
     }
+  }
+
+  &__jobTitle{
+    font-weight: 300;
   }
 }
