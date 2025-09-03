@@ -192,6 +192,7 @@ export interface IFestivalDetails {
   festivalProgramColumns: IHtmlString
   isShowProtectionsDays: boolean
   protectionsTitle: string
+  protectionsRightSignature: IHtmlString
   businessProgramTitle: string
   businessProgramSessions: IHtmlString[]
   forumTitle: string

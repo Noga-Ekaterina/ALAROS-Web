@@ -40,6 +40,9 @@ const init= unstable_cache(async ()=>{
               }
               isShowProtectionsDays
               protectionsTitle
+              protectionsRightSignature {
+                html
+              }
               businessProgramTitle
               businessProgramSessions {
                 html
@@ -121,7 +124,7 @@ const Page = async ({searchParams}:Props) => {
               <>
                 {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
                 <FestivalBusinessProgram pageData={pageData}/>
-                {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsDays={protectionsDays}/>}
+                {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsRightSignature={pageData.protectionsRightSignature} protectionsDays={protectionsDays}/>}
                 <FestivalForum pageData={pageData}/>
               </>
               :
