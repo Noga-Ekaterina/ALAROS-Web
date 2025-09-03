@@ -231,7 +231,8 @@
 
   &__block-text{
     display: flex;
-    padding: 16rem 18rem 18rem 22rem;
+    padding-inline: 18rem  22rem;
+    padding-block: var(--p-t) var(--p-b);
     justify-content: space-between;
     width: calc(100% - 153rem);
     flex-direction: column;
@@ -244,11 +245,13 @@
                     xl: 16,
                     md: 9,
                     sm: 10
-            )
+            ),
+            --p-t: (default: 16rem, xxl: 42, xl: 28, sm: 15),
+            --p-b: (default: 18rem, xxl: 46, xl: 33, sm: 15)
     ));
 
     @include xxl{
-      padding: 18rem 18rem 20rem 22rem;
+      padding-inline: 18rem 22rem;
     }
 
     @include lg{
@@ -264,13 +267,17 @@
 
   &__titles{
     width: 100%;
-    min-height: 50%;
+    min-height: calc(50% + var(--p-t) + var(--p-b));
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 25rem;
     align-self: start;
     font-size: var(--f-content);
+
+    @include xxl{
+      min-height: calc(50% + var(--p-t) / 1.44 + var(--p-b));
+    }
 
     @include sm{
       min-height: 93rem;
