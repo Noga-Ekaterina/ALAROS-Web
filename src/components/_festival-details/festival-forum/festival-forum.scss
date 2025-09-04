@@ -128,6 +128,11 @@
       @include sm{
         flex-direction: column-reverse;
       }
+
+      *{
+        line-height: 1.3em;
+
+      }
     }
 
     p:first-child a{
@@ -174,11 +179,7 @@
 
       &-wrap{
         background: var(--c-grey-bg-light-2);
-        padding-block: 26rem;
-
-        @include adaptive((
-                padding-block: (default: 26rem, xl: 42)
-        ))
+        padding-block: 26rem 70rem;
       }
 
       *{
