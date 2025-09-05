@@ -39,6 +39,15 @@ const fetchNominations= unstable_cache(async ()=>{
 
 export async function PUT(request: Request): Promise<NextResponse<RevalidateResponse>> {
   try {
+    const token= request.headers.get("Token")
+
+    if (!token || token!= process.env.PROJECT_NOMINATION_TOKEN){
+      return NextResponse.json(
+          { error: "token not corect" },
+          { status: 401 }
+      );
+    };
+
     const body = (await request.json()) as RevalidateRequest;
 
     if (!body.data.nomination){
