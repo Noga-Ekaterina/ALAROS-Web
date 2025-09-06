@@ -211,19 +211,9 @@
       }
 
       >p, ul{
-        width: 78%;
-
-        @include xl{
-          width: 83.4%;
-        }
-
-        @include xxl{
-          width: 75.5%;
-        }
-
-        @include sm{
-          width: 100%;
-        }
+        @include adaptive((
+                width: (default: 540rem, xxl: 1204, xl: 1058, sm: 100%)
+        ))
       }
     }
   }

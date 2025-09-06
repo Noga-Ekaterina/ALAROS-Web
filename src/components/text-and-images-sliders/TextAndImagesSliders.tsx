@@ -15,7 +15,7 @@ interface Props extends IWithClass{
 
 const TextAndImagesSliders = ({html, path, className}: Props) => {
   const patternImgs = /<h2>IMG<\/h2><table><tbody>(.*?)<\/tbody><\/table>/gs;
-  const segments: string[] = html.split(patternImgs);
+  const segments: string[] = html.replaceAll("^", "&nbsp;").split(patternImgs);
   const result: JSX.Element[] = [];
 
 
