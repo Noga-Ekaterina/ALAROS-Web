@@ -28,6 +28,7 @@
 
   &__container{
     display: flex;
+    justify-content: space-between;
     padding-block: 100rem 40rem;
 
     @include sm{
@@ -158,7 +159,7 @@
   }
 
   &__content{
-    width: 75%;
+    width: 74%;
     display: flex;
     flex-direction: column;
     gap: 1.3em;
@@ -178,7 +179,6 @@
   &__year{
     font-size: 21rem;
     font-weight: 300;
-    font-variant-numeric: tabular-nums;
 
     @include xxl{
       font-size: vu(50, xxl);
@@ -211,7 +211,15 @@
       }
 
       >p, ul{
-        width: 87.5%;
+        width: 78%;
+
+        @include xl{
+          width: 83.4%;
+        }
+
+        @include xxl{
+          width: 75.5%;
+        }
 
         @include sm{
           width: 100%;
@@ -221,7 +229,15 @@
   }
 
   &__slide{
-    width: 87.5%;
+    width: 78%;
+
+    @include xl{
+      width: 70.4%;
+    }
+
+    @include xxl{
+      width: 75.5%;
+    }
 
     @include sm{
       width: 100%;
