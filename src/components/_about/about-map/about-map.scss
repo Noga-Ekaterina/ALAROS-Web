@@ -43,6 +43,7 @@
     gap: 96rem;
 
     &-col {
+      line-height: 1.3em;
       font-weight: 300;
 
       @include standard-font(true);
@@ -83,6 +84,7 @@
   &__bottom {
     margin-top: 48rem;
     font-weight: 300;
+    line-height: 1.3em;
 
     @include standard-font(true);
   }
