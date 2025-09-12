@@ -4,13 +4,14 @@
   position: fixed;
   top: 50vh;
   left: 50vw;
-  z-index: 99999;
+  z-index: 99999999;
   transform: translate(-50%, -50%);
-  border: 1.799px solid #D0D0D0;
-  background: rgba(236, 236, 236, 0.65);
-  backdrop-filter: blur(1.5499999523162842px);
-
+  background: #FFF;
+  box-shadow: 3px 4px 9.6px 0 rgba(0, 0, 0, 0.15), 10px 10px 47.8px 0 rgba(0, 0, 0, 0.10);
   padding: 1.5em 2.5em;
+  color: var(--c-red) !important;
+  text-transform: uppercase;
+  font-weight: 400 !important;
 
-  @include standard-font
+  @include standard-font-big
 }
