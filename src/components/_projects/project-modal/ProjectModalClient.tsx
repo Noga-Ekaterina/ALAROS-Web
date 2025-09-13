@@ -1,18 +1,15 @@
-// components/ProjectModalClient.tsx
+/// components/ProjectModalClient.tsx
 'use client'
 
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { IProject } from "@/types/data"
 import ProjectImagesSlider from "@/components/_projects/project-modal/project-images-slider/ProjectImagesSlider"
-import { diplomas } from "@/variables"
-import { nonBreakingSpaces } from "@/utils/nonBreakingSpaces"
 import SmoothScrolling from "@/app/SmoothScrolling"
 import "./project-modal.scss"
 import AnimationPage from "@/app/AnimationPage";
 import {ReactSVG} from "react-svg";
-import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
 import ProjectText from "@/components/_projects/project-modal/project-text/ProjectText";
-import {useSearchParams} from "next/navigation";
+import {useRouter, useSearchParams} from "next/navigation";
 import ProjectNotFound from "@/components/_projects/project-modal/project-not-found/ProjectNotFound";
 
 interface ClientProps {
@@ -27,7 +24,7 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
   const projectSearch = searchParams.get("project")
   const [isOpened, setIsOpened] = useState(!!(projectSearch && projectYear && startIsOpened))
   const [scale, setScale] = useState(1)
-  const { setMultipleParams } = useSearchParamsControl()
+  const router= useRouter()
   const timer = useRef<null | ReturnType<typeof setTimeout>>(null)
 
   // Рефы для актуальных значений
@@ -49,10 +46,10 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
     } else {
       setIsOpened(false);
       timer.current = setTimeout(() => {
-        setMultipleParams({ project: null, projectYear: null }, { scroll: false });
+        router.back()
       }, 500);
     }
-  }, [setMultipleParams]);
+  }, []);
 
   const handleEsc = useCallback((event: KeyboardEvent) => {
     if (event.code === 'Escape') {

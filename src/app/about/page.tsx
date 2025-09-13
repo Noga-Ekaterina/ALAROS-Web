@@ -15,9 +15,14 @@ import AboutPress from "@/components/_about/about-press/AboutPress";
 import AboutMap from '@/components/_about/about-map/AboutMap';
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AboutManagement from "@/components/_about/about-management/AboutManagement";
+import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 
 interface IData{
   abouts: IAbout[]
+}
+
+interface Props{
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const init= unstable_cache(async ()=>{
@@ -107,7 +112,7 @@ const init= unstable_cache(async ()=>{
 }, ["about"], {tags: ["About", "Project"]})
 
 
-const MyComponent = async () => {
+const MyComponent = async ({searchParams}:Props) => {
   const pageData= await init()
 
   if (typeof pageData==="string" || !pageData) {
@@ -117,7 +122,7 @@ const MyComponent = async () => {
 
   return (
       <AnimationPage>
-        {/*<NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>*/}
+        <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <AboutMainScreen pageData={pageData}/>
         <AboutMain pageData={pageData}/>
         <AboutDocuments pageData={pageData}/>
