@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import "./results.scss"
 import {ICompetitionResults} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
@@ -20,7 +20,7 @@ const getResultsData=(table: string)=>{
 }
 
 const Results = ({pageData}:Props) => {
-  const results= getResultsData(pageData.results.html)
+  const results= useMemo(() => getResultsData(pageData.results.html), [])
   const [activeYear, setActiveYear] = useState(results[results.length-1].year)
   return (
       <div className="results">

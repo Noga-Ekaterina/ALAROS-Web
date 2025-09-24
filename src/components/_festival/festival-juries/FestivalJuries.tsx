@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import "./festival-juries.scss"
 import {IFestival, IHtmlString, IUser} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -21,7 +21,7 @@ interface Props{
 
 
 const FestivalJuries = ({juriesDataString, title}:Props) => {
-  const sections=getData(juriesDataString)
+  const sections=useMemo(()=>getData(juriesDataString), [])
   const [activeSection, setActiveSection] = useState(0)
   const rem=useGetRem()
   const [isOpenedArr, setIsOpenedArr] = useState<number[]>([])

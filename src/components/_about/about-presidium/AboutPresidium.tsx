@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import "./about-presidium.scss"
 import {IFestival, IUser} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -38,7 +38,7 @@ const getSlides=(users: IUser[])=>{
 }
 
 const AboutPresidium = ({data, title}:Props) => {
-  const users= getData(data)
+  const users= useMemo(()=>getData(data), [])
   const slides= getSlides(users)
   const [isOpenedArr, setIsOpenedArr] = useState<Record<number, number[]>>({})
 

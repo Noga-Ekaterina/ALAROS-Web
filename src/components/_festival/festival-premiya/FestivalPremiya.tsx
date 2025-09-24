@@ -1,5 +1,5 @@
 'use client'
-import React, {JSX, useEffect, useState} from 'react';
+import React, {JSX, useEffect, useMemo, useState} from 'react';
 import "./festival-premiya.scss"
 import {observer} from "mobx-react-lite";
 import parse from "html-react-parser";
@@ -40,7 +40,7 @@ const getCols=(arr: IHtmlString[])=>{
 }
 
 const FestivalPremiya = ({pageData}: Props) => {
-  const cols = getCols(pageData.premiyaSteps)
+  const cols = useMemo(()=>getCols(pageData.premiyaSteps), [])
 
   return (
       <div className="festival-premiya" id="algorithm">

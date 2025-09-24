@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки увеличела ширину номинаций в шаблонах">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="правки выхода с модалки">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_08_2025_14_44_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_08_2025_14_44__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Irina_Gennadievna_Ivanova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Irina_Gennadievna_Ivanova.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/festival-details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/festival-details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_competition-results/results/Results.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_competition-results/results/Results.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/FestivalBusinessProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/FestivalBusinessProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-program/FestivalProgram.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-program/FestivalProgram.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-date/FestivalDate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-date/FestivalDate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/festival-juries.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-premiya/FestivalPremiya.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/projects-filter/ProjectsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/text-and-images-sliders/TextAndImagesSliders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/text-and-images-sliders/TextAndImagesSliders.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,111 +376,18 @@
       <workItem from="1756553474230" duration="2928000" />
       <workItem from="1756639789301" duration="10429000" />
       <workItem from="1756726954223" duration="34000" />
-      <workItem from="1756729551401" duration="9234000" />
-    </task>
-    <task id="LOCAL-00167" summary="догруз материалов">
-      <option name="closed" value="true" />
-      <created>1750686874721</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1750686874721</updated>
-    </task>
-    <task id="LOCAL-00168" summary="обработка ошибки при отправке и добавила предупреждение">
-      <option name="closed" value="true" />
-      <created>1750706613237</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1750706613237</updated>
-    </task>
-    <task id="LOCAL-00169" summary="попап куков">
-      <option name="closed" value="true" />
-      <created>1750768208987</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1750768208987</updated>
-    </task>
-    <task id="LOCAL-00170" summary="news">
-      <option name="closed" value="true" />
-      <created>1750781690110</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1750781690110</updated>
-    </task>
-    <task id="LOCAL-00171" summary="news">
-      <option name="closed" value="true" />
-      <created>1750784353102</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1750784353102</updated>
-    </task>
-    <task id="LOCAL-00172" summary="мелкие правки">
-      <option name="closed" value="true" />
-      <created>1750891715847</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1750891715848</updated>
-    </task>
-    <task id="LOCAL-00173" summary="контактная форма">
-      <option name="closed" value="true" />
-      <created>1751052457171</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1751052457171</updated>
-    </task>
-    <task id="LOCAL-00174" summary="правки валидации формы">
-      <option name="closed" value="true" />
-      <created>1751053513991</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1751053513992</updated>
-    </task>
-    <task id="LOCAL-00175" summary="обход">
-      <option name="closed" value="true" />
-      <created>1751296231364</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1751296231364</updated>
-    </task>
-    <task id="LOCAL-00176" summary="обход">
-      <option name="closed" value="true" />
-      <created>1751298880675</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1751298880675</updated>
-    </task>
-    <task id="LOCAL-00177" summary="удалила обход">
-      <option name="closed" value="true" />
-      <created>1751379558076</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1751379558076</updated>
-    </task>
-    <task id="LOCAL-00178" summary="правки">
-      <option name="closed" value="true" />
-      <created>1751667729485</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1751667729485</updated>
-    </task>
-    <task id="LOCAL-00179" summary="правки">
-      <option name="closed" value="true" />
-      <created>1751748725474</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1751748725482</updated>
+      <workItem from="1756729551401" duration="11458000" />
+      <workItem from="1756819009664" duration="11561000" />
+      <workItem from="1756900571773" duration="8919000" />
+      <workItem from="1756993554014" duration="3612000" />
+      <workItem from="1757091580771" duration="3480000" />
+      <workItem from="1757160586931" duration="7658000" />
+      <workItem from="1757590401542" duration="1901000" />
+      <workItem from="1757593110983" duration="1308000" />
+      <workItem from="1757688664195" duration="4144000" />
+      <workItem from="1757870305605" duration="24000" />
+      <workItem from="1758010376733" duration="1647000" />
+      <workItem from="1758719383089" duration="6778000" />
     </task>
     <task id="LOCAL-00180" summary="правки">
       <option name="closed" value="true" />
@@ -759,7 +677,111 @@
       <option name="project" value="LOCAL" />
       <updated>1756732764970</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="правки жюри и догруз фото">
+      <option name="closed" value="true" />
+      <created>1756745353066</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1756745353067</updated>
+    </task>
+    <task id="LOCAL-00217" summary="правки жюри">
+      <option name="closed" value="true" />
+      <created>1756830031589</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1756830031589</updated>
+    </task>
+    <task id="LOCAL-00218" summary="увеличела междустрочие возле даты">
+      <option name="closed" value="true" />
+      <created>1756830401443</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1756830401443</updated>
+    </task>
+    <task id="LOCAL-00219" summary="уменьшила отступ под именем жюри">
+      <option name="closed" value="true" />
+      <created>1756831141520</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1756831141520</updated>
+    </task>
+    <task id="LOCAL-00220" summary="выравнивание зага календаря">
+      <option name="closed" value="true" />
+      <created>1756904528271</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1756904528271</updated>
+    </task>
+    <task id="LOCAL-00221" summary="правки ДП">
+      <option name="closed" value="true" />
+      <created>1756928728306</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1756928728306</updated>
+    </task>
+    <task id="LOCAL-00222" summary="правки форума">
+      <option name="closed" value="true" />
+      <created>1757002044212</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1757002044212</updated>
+    </task>
+    <task id="LOCAL-00223" summary="сделала проверку токена при устоановки id номинации">
+      <option name="closed" value="true" />
+      <created>1757095328103</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1757095328104</updated>
+    </task>
+    <task id="LOCAL-00224" summary="поправила ширину контента истории">
+      <option name="closed" value="true" />
+      <created>1757165558150</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1757165558150</updated>
+    </task>
+    <task id="LOCAL-00225" summary="поправила ширину текста истории">
+      <option name="closed" value="true" />
+      <created>1757168328088</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1757168328088</updated>
+    </task>
+    <task id="LOCAL-00226" summary="мелкие правки">
+      <option name="closed" value="true" />
+      <created>1757688782024</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1757688782024</updated>
+    </task>
+    <task id="LOCAL-00227" summary="правки попапа">
+      <option name="closed" value="true" />
+      <created>1757690050884</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1757690050884</updated>
+    </task>
+    <task id="LOCAL-00228" summary="правки выхода с модалки">
+      <option name="closed" value="true" />
+      <created>1757776335995</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1757776335996</updated>
+    </task>
+    <option name="localTasksCounter" value="229" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -788,19 +810,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="загрузила фото" />
-    <MESSAGE value="блок истории" />
-    <MESSAGE value="блок президиума и правки жюри" />
-    <MESSAGE value="блок жизни" />
-    <MESSAGE value="правки шрифтов" />
-    <MESSAGE value="довела до ума блок с картой и поменяла фон" />
-    <MESSAGE value="правки загрузки" />
-    <MESSAGE value="регулирование уровня появления подсказки" />
-    <MESSAGE value="блкировка кнопки" />
-    <MESSAGE value="фотки" />
-    <MESSAGE value="закрыла красный фестиваль" />
-    <MESSAGE value="улучшила сброс формы" />
-    <MESSAGE value="загрузка фона" />
     <MESSAGE value="вывод ошибки в логи" />
     <MESSAGE value="сделала ограничение на кол-во символв" />
     <MESSAGE value="открыла красный фестиваль" />
@@ -813,7 +822,20 @@
     <MESSAGE value="тех правки" />
     <MESSAGE value="правки о нас и отступ после формы" />
     <MESSAGE value="правки увеличела ширину номинаций в шаблонах" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки увеличела ширину номинаций в шаблонах" />
+    <MESSAGE value="правки жюри и догруз фото" />
+    <MESSAGE value="правки жюри" />
+    <MESSAGE value="увеличела междустрочие возле даты" />
+    <MESSAGE value="уменьшила отступ под именем жюри" />
+    <MESSAGE value="выравнивание зага календаря" />
+    <MESSAGE value="правки ДП" />
+    <MESSAGE value="правки форума" />
+    <MESSAGE value="сделала проверку токена при устоановки id номинации" />
+    <MESSAGE value="поправила ширину контента истории" />
+    <MESSAGE value="поправила ширину текста истории" />
+    <MESSAGE value="мелкие правки" />
+    <MESSAGE value="правки попапа" />
+    <MESSAGE value="правки выхода с модалки" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки выхода с модалки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

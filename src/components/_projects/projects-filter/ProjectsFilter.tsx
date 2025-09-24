@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import "./projects-filter.scss"
 import {useSearchParams} from "next/navigation";
 import Dropdown from "../../dropdown/Dropdown";
@@ -13,9 +13,15 @@ interface Props{
 }
 
 const ProjectsFilter = ({projectsPage}:Props) => {
-  const nominations= nominationsSProcessing(projectsPage.nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
-  const nominationsValues =nominations.map(({title})=>title )
-  nominationsValues.unshift("Все номинации")
+  const nominations= useMemo(() => (
+      nominationsSProcessing(projectsPage.nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
+  ), [])
+  const nominationsValues = useMemo(() => {
+    const result=nominations.map(({title})=>title )
+    result.unshift("Все номинации")
+
+    return result
+  }, [])
 
   const [years, setYears] = useState<string[]>([])
   const searchParams= useSearchParams()

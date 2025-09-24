@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useMemo} from 'react';
 import "./about-press.scss"
 import {IAbout} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
@@ -14,7 +14,7 @@ interface Props{
 }
 
 const AboutPress = ({pageData}: Props) => {
-  const slides= getData(pageData.press.html)
+  const slides= useMemo(()=> getData(pageData.press.html), [])
   const mobileScreen = useMediaQuery({maxWidth: 660});
 
   return (

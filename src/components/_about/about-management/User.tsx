@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useMemo} from 'react';
 import {getUser} from "@/components/_about/about-management/getUser";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import Dropdown from "@/components/dropdown/Dropdown";
@@ -9,7 +9,7 @@ interface Props{
 }
 
 const User = ({data}: Props) => {
-  const {image, html, details}=getUser(data)
+  const {image, html, details}= useMemo(()=> getUser(data), [])
 
   return (
       <div className="about-management__user">

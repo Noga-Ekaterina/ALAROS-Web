@@ -1,5 +1,5 @@
 'use client'
-import React, {useRef} from 'react';
+import React, {useMemo, useRef} from 'react';
 import "./about-life.scss"
 import {IAbout} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
@@ -16,7 +16,7 @@ interface Props{
 }
 
 const AboutLife = ({pageData}: Props) => {
-  const slides= getData(pageData.life.html)
+  const slides= useMemo(()=> getData(pageData.life.html), [])
   const swiperRef=useRef<SwiperRef | null>(null);
 
   const bigDesktopScreen = useMediaQuery({minWidth: 2560});

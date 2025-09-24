@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import './festival-business-program.scss'
 import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival, IFestivalDetails, IHtmlString} from "../../../types/data";
@@ -47,7 +47,7 @@ const UserCard=({user}: IUserCardProps)=>{
 const Session = ({data}: ISessionProps) => {
   const {speakers
   , speakersTitle, moderatorsTitle, moderators, text
-  }= getSectionData(data)
+  }= useMemo(() => getSectionData(data), [])
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const usersSwiperRef=useRef<SwiperRef | null>(null);
   const rolleSwiperRef=useRef<SwiperRef | null>(null);

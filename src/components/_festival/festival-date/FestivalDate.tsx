@@ -1,5 +1,5 @@
 'use client'
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useMemo, useState} from 'react';
 import "./festival-date.scss"
 import classNames from "classnames";
 import {IFestival, IHtmlString} from '../../../types/data'
@@ -21,7 +21,7 @@ const getSections=(arr: IHtmlString[])=>{
   })}
 
 const FestivalDate = ({pageData}:Props) => {
-  const sections= getSections(pageData.dateSections)
+  const sections= useMemo(() => getSections(pageData.dateSections), [])
   const [activeDateIndex, setActiveDateIndex] = useState(0)
 
   if (!pageData) return <div/>

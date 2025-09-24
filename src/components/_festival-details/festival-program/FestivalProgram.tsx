@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, {useMemo} from 'react';
 import "./festival-program.scss"
 import {IFestival, IFestivalProgramDay, IFestivalDetails} from "@/types/data";
 import {getRowsInTable} from "@/utils/getRowsInTable";
@@ -13,8 +14,8 @@ interface Props{
 }
 
 const FestivalProgram = ({pageData, festivalProgram}:Props) => {
-  const titles= getPrgramTitles(pageData.festivalProgramColumns.html)
-  const programDays= programProcessing(festivalProgram)
+  const titles= useMemo(() => getPrgramTitles(pageData.festivalProgramColumns.html), [])
+  const programDays= useMemo(() => programProcessing(festivalProgram), [])
 
   return (
       <div className="festival-program" id="festival-program">
