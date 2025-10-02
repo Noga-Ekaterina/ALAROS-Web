@@ -74,12 +74,16 @@ const SliderProgress = ({ swiperRef, progressClass }: SliderProgressProps) => {
 
   // Обработчики событий мыши
   const onMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault()
+
     handleDragStart(e.clientX);
-    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mousemove', onMouseMove, { passive: false });
     document.addEventListener('mouseup', onMouseUp);
   }, [])
 
   const onMouseMove = useCallback((e: MouseEvent) => {
+    e.preventDefault()
+
     handleDragMove(e.clientX);
   }, [])
   const onMouseUp = useCallback(() => {
@@ -90,12 +94,18 @@ const SliderProgress = ({ swiperRef, progressClass }: SliderProgressProps) => {
 
   // Обработчики событий касания
   const onTouchStart = useCallback((e: React.TouchEvent) => {
+    e.preventDefault()
+
     handleDragStart(e.touches[0].clientX);
-    document.addEventListener('touchmove', onTouchMove);
+    document.addEventListener('touchmove', onTouchMove, { passive: false });
     document.addEventListener('touchend', onTouchEnd);
   }, []);
 
-  const onTouchMove = useCallback((e: TouchEvent) => handleDragMove(e.touches[0].clientX), [])
+  const onTouchMove = useCallback((e: TouchEvent) => {
+    e.preventDefault()
+
+    handleDragMove(e.touches[0].clientX)
+  }, [])
   const onTouchEnd = useCallback(() => {
     handleDragEnd();
     document.removeEventListener('touchmove', onTouchMove);
