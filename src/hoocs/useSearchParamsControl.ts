@@ -28,11 +28,11 @@ export const useSearchParamsControl = () => {
       (
           key: string,
           value: string,
-          options?: { method?: NavigationMethod }
+          options?: { method?: NavigationMethod, scroll?: boolean}
       ) => {
         const newParams = new URLSearchParams(searchParams);
         newParams.set(key, value);
-        updateUrl(newParams, options?.method);
+        updateUrl(newParams, options?.method, options?.scroll);
       },
       [searchParams, updateUrl]
   );

@@ -66,7 +66,7 @@ const Page = async ({searchParams}:Props) => {
         <div style={{ overflow: "hidden"}}>
           <CalendarEvents title={pageData.calendarEventsTitle}/>
           <NewsList news={data.news} pageData={pageData}/>
-          <Pagination count={data.count} size={10}/>
+          <Pagination count={data.count} size={10} hash="#news-list"/>
         </div>
       </AnimationPage>
   );

@@ -7,22 +7,29 @@ import {useSearchParams} from "next/navigation";
 import classNames from "classnames";
 import {ReactSVG} from "react-svg";
 import store from "@/store/store";
+import {useGetHashPosition} from "@/hoocs/useGetHashPosition";
+import {smoothScroll} from "@/utils/smoothScroll";
 
 interface Props{
   count: number
   size: number
+  hash?: string
 }
 
-const Pagination = ({count, size}:Props) => {
+const Pagination = ({count, size, hash}:Props) => {
   const pages= Math.ceil(count/size)
   const searchParams= useSearchParams()
   const page= !searchParams.get("page")? 1:Number(searchParams.get("page"))??1
   const {setParam}=useSearchParamsControl()
   const {togleLoading}=store
+  const getHashPosition= useGetHashPosition()
 
   const handleClick=(page: string)=> {
     togleLoading(true)
-    setParam("page", page)
+    setParam("page", page, {scroll: !hash})
+
+    if (hash)
+      setTimeout(()=>smoothScroll(getHashPosition(hash)), 200)
   }
 
   useEffect(() => {
@@ -44,6 +51,7 @@ const Pagination = ({count, size}:Props) => {
                   <button
                       key={index}
                       className={cn("pagination__page",{"pagination__page--active": index + 1 == (page > 0 ? page : 1)})}
+                      disabled={index + 1 == (page > 0 ? page : 1)}
                       onClick={() => handleClick(String(index + 1))}>
                     0{index + 1}
                   </button>
@@ -51,6 +59,7 @@ const Pagination = ({count, size}:Props) => {
               :
               <button
                   className={cn("pagination__page",{"pagination__page--active": page == 1})}
+                  disabled={page==1}
                   onClick={() => handleClick('1')}>
                 01
               </button>
@@ -81,6 +90,7 @@ const Pagination = ({count, size}:Props) => {
                           <button
                               key={index}
                               className={cn("pagination__page", {"pagination__page--active": el == (page > 0 ? page : 1)})}
+                              disabled={el == (page > 0 ? page : 1)}
                               onClick={() => handleClick(String(el))}
                           >
                             {`${el < 10 ? "0" : ''}${el}`}
