@@ -1,5 +1,5 @@
 'use client'
-import React, {Fragment, useMemo, useState} from 'react';
+import React, {Fragment, useEffect, useMemo, useRef, useState} from 'react';
 import "./festival-date.scss"
 import classNames from "classnames";
 import {IFestival, IHtmlString} from '../../../types/data'
@@ -23,8 +23,21 @@ const getSections=(arr: IHtmlString[])=>{
 const FestivalDate = ({pageData}:Props) => {
   const sections= useMemo(() => getSections(pageData.dateSections), [])
   const [activeDateIndex, setActiveDateIndex] = useState(0)
+  const timeoutRef= useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  if (!pageData) return <div/>
+  useEffect(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+
+    timeoutRef.current=setTimeout(()=>{
+      setActiveDateIndex(prevState => prevState===sections.length-1? 0: prevState+1)
+    }, 4000)
+
+    return ()=>{
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+
+  }, [activeDateIndex]);
+
   return (
       <div className='festival-date' id="date">
         <div className="container">
