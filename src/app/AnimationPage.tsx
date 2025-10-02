@@ -17,9 +17,9 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick }: P
           (conditions== undefined || conditions)&& (
                 <motion.div
                     key={JSON.stringify(conditions)}
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    exit={{opacity: 0}}
+                    initial={{opacity: 0, pointerEvents: "none"}}
+                    animate={{opacity: 1, pointerEvents: "auto"}}
+                    exit={{opacity: 0, pointerEvents: "none"}}
                     transition={{duration: 0.5, ease: 'easeInOut'}}
                     className={className}
                     style={{msOverflowX: 'hidden', msOverflowY: "hidden", overflow: "clip"}}
