@@ -7,17 +7,23 @@
   &__bg{
     position: absolute;
     z-index: -1;
-    width: 94vw;
-    right: -1vw;
+    width: 93vw;
+    right: -2vw;
     bottom: 1vw;
 
     @include xl{
-      bottom: -1vw;
+      bottom: 0.6vw;
       right: -2vw;
     }
 
     @include xxl{
-      bottom: -3vw;
+      bottom: -2.5vw;
+      right: -1vw;
+    }
+
+    @include md{
+      right: -5vw;
+      bottom: 5vw;
     }
 
     @include sm{
