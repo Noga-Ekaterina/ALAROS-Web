@@ -44,7 +44,7 @@ const init = (year: string, number: string) => unstable_cache(
 
 const ProjectModal = async ({projects, searchParams}: Props) => {
   const {project, projectYear} = searchParams
-  const isInvalidParams = typeof project !== "string" || typeof projectYear !== "string"
+  const isInvalidParams = typeof project !== "string" || typeof projectYear !== "string" || isNaN(Number(project)) || isNaN(Number(projectYear))
 
   let projectItem: IProject | string | null | undefined
   if (!isInvalidParams) {

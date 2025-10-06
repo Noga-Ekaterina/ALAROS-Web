@@ -48,6 +48,15 @@ const init=  (slug: string)=>(
 
 const Page = async ({params}:Props) => {
   const slug= params.slug
+
+  if (slug.length>=256){
+    return (
+        <AnimationPage>
+          <NotFoundSample title={`Тут ничего \nне нашлось`} mainText={"404"} mainTextMobile={`40\n04`}/>
+        </AnimationPage>
+    )
+  }
+
   const getData= init(slug)
   const news= await getData(slug)
   const pageData= await getNewsPageData()
@@ -66,7 +75,6 @@ const Page = async ({params}:Props) => {
     return (
         <AnimationPage>
           <NotFoundSample title={`Тут ничего \nне нашлось`} mainText={"404"} mainTextMobile={`40\n04`}/>
-
         </AnimationPage>
     )
   }
