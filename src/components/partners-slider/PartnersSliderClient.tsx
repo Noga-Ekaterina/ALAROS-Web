@@ -40,7 +40,7 @@ const PartnersSliderClient = ({title, partners}:Props) => {
           <Swiper
               slidesPerView={mobileScreen? 3: bigDesktopScreen? 7:6}
               spaceBetween={15*rem}
-              autoplay={{delay: 1000, disableOnInteraction: false}}
+              autoplay={{delay: 2000, disableOnInteraction: false}}
               loop={true}
               modules={[Autoplay]}
               className="partners-slider__swiper"
