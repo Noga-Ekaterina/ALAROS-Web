@@ -197,8 +197,10 @@
       box-shadow: 14px 19px 26.6px -25px rgba(0, 0, 0, 0.20);
 
       p{
+        --p-y: calc((var(--h-btn) - 1.4em) / 2);
         line-height: 1.3em;
-        padding-block: 1.43em 1.82em;
+        //padding-block: 1.43em 1.82em;
+        padding-block: calc(var(--p-y) - 0.2em) calc(var(--p-y) + 0.2em);
         border-top: var(--c-grey-bg) solid var(--w-line);
 
         &:first-child{
