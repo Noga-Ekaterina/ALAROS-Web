@@ -67,7 +67,7 @@
     }
 
     @include sm{
-      font-size: 68rem;
+      font-size: vu(60, sm, true);
     }
 
     *{
@@ -104,6 +104,11 @@
 
     @include md-book{
       align-self: flex-end;
+    }
+
+    @include sm{
+      min-height: 218rem;
+      justify-content: flex-end;
     }
   }
 }
