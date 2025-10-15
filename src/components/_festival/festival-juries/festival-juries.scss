@@ -128,8 +128,14 @@
     justify-content: flex-end;
     padding: 9rem 6rem;
 
-    &--opened, .festival-juries__slide:hover &{
+    &--opened{
       opacity: 1;
+    }
+
+    @include hover{
+      .festival-juries__slide:hover &{
+        opacity: 1;
+      }
     }
 
     *{

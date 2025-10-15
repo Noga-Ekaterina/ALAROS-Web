@@ -78,9 +78,10 @@
     display: flex;
     flex-direction: column;
     gap: 9rem;
+    width: var(--size);
 
     @include adaptive((
-            width: (default: 186rem, xxl: 420, xl: 350, md: 155, sm: 174)
+            --size: (default: 186rem, xxl: 420, xl: 350, md: 155, sm: 174)
     ));
   }
 
@@ -92,13 +93,24 @@
     left: 0;
     top: -100%;
     transition: 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 12rem;
-    
-    &--opened, .about-presidium__item:hover &{
+
+    &--opened{
       top: 0;
+    }
+
+    @include hover{
+      .about-presidium__item:hover &{
+        top: 0;
+      }
+    }
+
+    .lenis__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12rem;
+      padding: 12rem;
+      min-height: var(--size);
     }
 
     *{

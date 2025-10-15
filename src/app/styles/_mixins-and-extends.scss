@@ -46,6 +46,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
 
 // Базовые брейкпоинты
 $breakpoints: (

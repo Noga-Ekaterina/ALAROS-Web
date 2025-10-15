@@ -11,6 +11,7 @@ import {Autoplay} from "swiper/modules";
 import Marquee from "react-fast-marquee";
 import {getData} from "@/components/_about/about-presidium/getData";
 import {number} from "prop-types";
+import SmoothScrolling from "@/app/SmoothScrolling";
 
 interface Props{
   title: string
@@ -83,11 +84,13 @@ const AboutPresidium = ({data, title}:Props) => {
                                        "about-presidium__info",
                                        isOpenedArr[index]?.includes(itemIndex) && "about-presidium__info--opened"
                                    )}>
-                                      <div>
-                                         <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p
-                                          className="yellow">{nonBreakingSpaces(item.place)}</p>
-                                      </div>
-                                      <HtmlProcessing html={`<p>${item.jobTitle}</p>`}/>
+                                      <SmoothScrolling enableScrollTransfer>
+                                         <div>
+                                            <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p
+                                             className="yellow">{nonBreakingSpaces(item.place)}</p>
+                                         </div>
+                                         <HtmlProcessing html={`<p>${item.jobTitle}</p>`}/>
+                                      </SmoothScrolling>
                                    </div>
                                 </>
                             }
