@@ -28,6 +28,10 @@
     border-spacing: 0 13rem;
     text-align: left;
 
+    @include sm{
+      width: 100%;
+    }
+
     th{
       padding-bottom: 17rem;
 
