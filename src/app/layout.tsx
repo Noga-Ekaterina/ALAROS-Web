@@ -1,6 +1,6 @@
 import "swiper/css"
 import "./styles/global.scss"
-import type { Metadata } from "next";
+import type {Metadata, Viewport} from "next";
 import Header from "@/components/header/Header";
 import { Suspense } from 'react';
 import ToTop from "@/components/to-top/ToTop";
@@ -14,6 +14,12 @@ import Loader from "@/components/loader/Loader";
 import Back from "@/components/back/Back";
 import Cookie from "@/components/cookie/Cookie";
 
+export const viewport: Viewport= {
+  width: "derive-width",
+  height: "derive-height",
+  initialScale: 1,
+  maximumScale: 1
+}
 export default function RootLayout({
   children,
 }: Readonly<{
