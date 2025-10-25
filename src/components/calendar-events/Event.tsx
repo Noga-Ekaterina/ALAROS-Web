@@ -55,7 +55,7 @@ const Event = ({ event, year }: Props) => {
           <div className="calendar-events__titles">
             <h3 className="calendar-events__date">
               {event.date.start}
-              {(event.date.end != "" && event.date.end != event.date.start) && <> - {event.date.end}</>}
+              {(event.date.end != "" && event.date.end != event.date.start) && <span className="calendar-events__date-end"> - {event.date.end}</span>}
             </h3>
             <div className="calendar-events__name-and-plase">
               <div className="calendar-events__name">
