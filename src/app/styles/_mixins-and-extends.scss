@@ -96,6 +96,15 @@ $base-widths: (
         sm: (width: 390, height: 900),
 ) !default;
 
+@function svh($value: 1, $str: false){
+  @if($str){
+    @return #{'var(--vh) * #{$value}'}
+  }
+  @else {
+    @return calc(var(--vh) * $value)
+  }
+}
+
 // Функция для генерации динамических единиц
 @function vu($multiplier: 1, $breakpoint: null, $adaptiveHeight: false) {
   @if $breakpoint {
@@ -103,7 +112,7 @@ $base-widths: (
     $value: calc(#{$multiplier} * (100vw / #{map-get($base, "width")}));
 
     @if $adaptiveHeight{
-      @return min(#{$value}, calc((#{$multiplier} / (#{map-get($base, "height")} / 100))*1vh))
+      @return min(#{$value}, calc((#{$multiplier} / (#{map-get($base, "height")} / 100))*svh()))
     }
 
     @return $value
