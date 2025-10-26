@@ -21,7 +21,7 @@
     }
 
     @include sm{
-      height: 57.5%;
+      height: 56%;
     }
 
     *{
@@ -39,6 +39,10 @@
       z-index: 2;
       display: flex;
       justify-content: space-between;
+
+      @include sm{
+        bottom: 20rem;
+      }
     }
   }
 
@@ -57,7 +61,7 @@
     flex-direction: column;
 
     @include sm {
-      height: 42.5%;
+      height: 44%;
     }
   }
 

@@ -34,6 +34,10 @@
       left: var(--p-x);
       bottom: 30rem;
       color: #C3C3C3;
+
+      @include sm{
+        bottom: 20rem;
+      }
     }
   }
 

@@ -134,7 +134,7 @@
                       default: vu(28, lg, true),
                       xxl:vu(48.67, xxl, true),
                       //xl: vu(86, xl, true),
-                      sm: vu(33, sm, trus)
+                      sm: vu(33, sm, true)
               )
       ));
 
@@ -156,7 +156,7 @@
 
       @include sm{
         position: relative;
-        top: 0;
+        top: -0.2em;
       }
     }
 

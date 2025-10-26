@@ -22,6 +22,10 @@
       position: absolute;
       left: var(--p-x);
       bottom: 30rem;
+
+      @include sm{
+        bottom: 20rem;
+      }
     }
   }
 
