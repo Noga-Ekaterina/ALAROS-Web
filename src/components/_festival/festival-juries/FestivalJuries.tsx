@@ -13,6 +13,7 @@ import {getData} from "@/components/_festival/festival-juries/getData";
 import {motion} from "framer-motion";
 import {useMediaQuery} from "react-responsive";
 import SmoothScrolling from "@/app/SmoothScrolling";
+import SliderClue from "@/components/slider-clue/SliderClue";
 
 interface Props{
   title: string
@@ -21,6 +22,7 @@ interface Props{
 
 
 const FestivalJuries = ({juriesDataString, title}:Props) => {
+  const mobileScreen = useMediaQuery({maxWidth: 660});
   const sections=useMemo(()=>getData(juriesDataString), [])
   const [activeSection, setActiveSection] = useState(0)
   const rem=useGetRem()
@@ -69,40 +71,45 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
             <p className="festival-juries__note">
               {nonBreakingSpaces(sections[activeSection].note)}
             </p>
+
+            <div className="festival-juries__slider-wrapp">
               <Swiper slidesPerView="auto" spaceBetween={(bigDesktopScreen? 9.45:8.28)*rem}>
-              {
-                sections[activeSection].juries.map((item, itemIndex) => (
-                    <SwiperSlide key={itemIndex} className="festival-juries__slide"
-                                 onClick={() => openInfo(itemIndex)}
-                    >
-                      {
-                          item &&
-                          <>
-                             <div className="festival-juries__img-wrap">
-                                <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
+                {
+                  sections[activeSection].juries.map((item, itemIndex) => (
+                      <SwiperSlide key={itemIndex} className="festival-juries__slide"
+                                   onClick={() => openInfo(itemIndex)}
+                      >
+                        {
+                            item &&
+                            <>
+                               <div className="festival-juries__img-wrap">
+                                  <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
 
-                                <div className={cn(
-                                    "festival-juries__info",
-                                    isOpenedArr.includes(itemIndex) && "festival-juries__info--opened"
-                                )}>
-                                   <SmoothScrolling enableScrollTransfer={true}>
-                                    <p>{nonBreakingSpaces(item.jobTitle)}</p>
-                                   </SmoothScrolling>
-                                </div>
+                                  <div className={cn(
+                                      "festival-juries__info",
+                                      isOpenedArr.includes(itemIndex) && "festival-juries__info--opened"
+                                  )}>
+                                     <SmoothScrolling enableScrollTransfer={true}>
+                                        <p>{nonBreakingSpaces(item.jobTitle)}</p>
+                                     </SmoothScrolling>
+                                  </div>
 
-                             </div>
+                               </div>
 
-                             <div>
-                                <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p>
-                                <p
-                                    className="festival-juries__place">{nonBreakingSpaces(item.place)}</p>
-                             </div>
-                          </>
-                      }
-                    </SwiperSlide>
-                ))
-              }
-            </Swiper>
+                               <div>
+                                  <p className="festival-juries__name">{nonBreakingSpaces(item.name)}</p>
+                                  <p
+                                      className="festival-juries__place">{nonBreakingSpaces(item.place)}</p>
+                               </div>
+                            </>
+                        }
+                      </SwiperSlide>
+                  ))
+                }
+              </Swiper>
+
+              {(mobileScreen || sections[activeSection].juries.length>7) && <SliderClue/>}
+            </div>
           </motion.div>
 
         </div>

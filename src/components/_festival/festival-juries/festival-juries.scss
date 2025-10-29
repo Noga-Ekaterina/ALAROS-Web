@@ -76,6 +76,10 @@
     ));
   }
 
+  &__slider-wrapp{
+    position: relative;
+  }
+
   &__slide{
     overflow: hidden;
     position: relative;
