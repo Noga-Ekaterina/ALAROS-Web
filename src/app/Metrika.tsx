@@ -1,34 +1,21 @@
 'use client'
-import React, {useEffect} from 'react';
-import ym, {YMInitializer} from "react-yandex-metrika";
-import {usePathname} from "next/navigation";
+import React, { useCallback, useEffect } from 'react';
+import ym, { YMInitializer } from "react-yandex-metrika";
+import { usePathname, useSearchParams } from "next/navigation";
 import store from "@/store/store";
-import {observer} from "mobx-react-lite";
+import { observer } from "mobx-react-lite";
+import {usePageViews, YandexMetrika} from "@mrr_97/next-yandex-metrika";
 
 const Metrika = () => {
   const pathname = usePathname();
-  const {isCookie}=store
+  const searchParams = useSearchParams();
+  const { isCookie } = store;
 
-  // Отправляем событие "hit" при изменении маршрута
-  useEffect(() => {
-    if (isCookie && pathname) {
-      ym("hit", pathname);
-    }
-  }, [isCookie, pathname]);
+  usePageViews()
 
   return (
-      <YMInitializer
-          accounts={[104943173]}
-          options={{
-            defer: true,
-            webvisor: true,
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-          }}
-          version="2"
-      />
-  );
+      <YandexMetrika yid={104943173}/>
+  )
 };
 
 export default observer(Metrika);
