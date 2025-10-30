@@ -4,6 +4,7 @@ class Store {
   isMenuOpened = false;
   isLoading= false;
   noIsFirstOpen= false
+  isCookie = false
 
   constructor() {
     makeAutoObservable(this);
@@ -19,6 +20,10 @@ class Store {
 
   chekedIsFirstOpen=()=>{
     this.noIsFirstOpen=true
+  }
+
+  setIsCookie=(value: boolean)=>{
+    this.isCookie=value
   }
 }
 

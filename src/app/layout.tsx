@@ -13,6 +13,7 @@ import Loading from './loading';
 import Loader from "@/components/loader/Loader";
 import Back from "@/components/back/Back";
 import Cookie from "@/components/cookie/Cookie";
+import Metrika from "@/app/Metrika";
 
 export const viewport: Viewport= {
   width: "derive-width",
@@ -42,6 +43,9 @@ export default function RootLayout({
       </Suspense>
       <Back/>
       <Cookie/>
+      <Suspense>
+        <Metrika/>
+      </Suspense>
       <ToTop/>
       <Scroll/>
       </body>

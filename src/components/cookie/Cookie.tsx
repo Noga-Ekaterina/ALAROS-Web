@@ -2,13 +2,16 @@
 import React, {useEffect, useState} from 'react';
 import "./cookie.scss"
 import {motion} from "framer-motion";
+import store from "@/store/store";
 
 const Cookie = () => {
   const [isShow, setIsShow] = useState(true)
+  const {setIsCookie}=store
 
   useEffect(() => {
     const agreementCookieLocal= localStorage?.getItem("agreementCookie") === "true" || false
 
+    setIsCookie(agreementCookieLocal)
     setIsShow(!agreementCookieLocal)
   }, []);
   if (!isShow) return null
