@@ -50,10 +50,11 @@
     }
 
     @include sm{
-      flex-direction: column;
-      justify-content: flex-end;
+      flex-direction: column-reverse;
+      justify-content: space-between;
       align-items: stretch;
       gap: 18%;
+      padding-top: 52rem;
     }
   }
 
@@ -67,7 +68,7 @@
     }
 
     @include sm{
-      font-size: vu(60, sm, true);
+      font-size: vu(77, sm, true);
     }
 
     *{
@@ -85,7 +86,7 @@
     }
 
     @include sm{
-      font-size: 20rem;
+      font-size: 23rem;
     }
 
     a:hover{
@@ -107,8 +108,7 @@
     }
 
     @include sm{
-      min-height: 218rem;
-      justify-content: flex-end;
+      width: 250rem;
     }
   }
 }
