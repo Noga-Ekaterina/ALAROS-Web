@@ -19,16 +19,14 @@ interface RevalidateResponse {
 
 export async function POST(request: Request): Promise<NextResponse<RevalidateResponse>> {
   try {
-    // Логируем весь запрос
-    console.log('Request received:', request);
-
     // Получаем данные из тела запроса
     const body = (await request.json()) as RevalidateRequest;
-    console.log('Request body:', body);
 
     const {__typename, newsPage, ...data } = body.data
 
     revalidateTag(__typename)
+
+    console.log(`revalidate tag: ${__typename}`)
 
     if (newsPage)
       revalidateTag("NewsPage")
@@ -42,7 +40,7 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {
     // Логируем ошибку
-    console.error('Error in revalidate route:', error);
+    console.error('Error in revalidate tag:', error);
 
     // Обрабатываем ошибки
     return NextResponse.json(
