@@ -43,9 +43,7 @@ export default function RootLayout({
       </Suspense>
       <Back/>
       <Cookie/>
-      <Suspense>
-        <Metrika/>
-      </Suspense>
+      <Metrika/>
       <ToTop/>
       <Scroll/>
       </body>
