@@ -13,4 +13,10 @@
             width: (default: 233rem, xxl: 470, xl: 441, sm: 170)
     ));
   }
+
+  .big-slider__btn {
+    @include sm {
+      top: 130rem;
+    }
+  }
 }
