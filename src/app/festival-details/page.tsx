@@ -47,6 +47,7 @@ const init= unstable_cache(async ()=>{
               businessProgramSessions {
                 html
               }
+              isShowForum
               forumTitle
               forumRightSignature {
                 html
@@ -125,7 +126,7 @@ const Page = async ({searchParams}:Props) => {
                 {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
                 <FestivalBusinessProgram pageData={pageData}/>
                 {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsRightSignature={pageData.protectionsRightSignature} protectionsDays={protectionsDays}/>}
-                <FestivalForum pageData={pageData}/>
+                {pageData.isShowForum && <FestivalForum pageData={pageData}/>}
               </>
               :
               <NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>

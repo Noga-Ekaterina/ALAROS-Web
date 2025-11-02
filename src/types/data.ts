@@ -195,6 +195,7 @@ export interface IFestivalDetails {
   protectionsRightSignature: IHtmlString
   businessProgramTitle: string
   businessProgramSessions: IHtmlString[]
+  isShowForum: boolean
   forumTitle: string
   forumRightSignature: IHtmlString
   forumDescriptionBlocks: IHtmlString[]
