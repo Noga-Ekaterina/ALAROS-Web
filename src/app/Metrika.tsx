@@ -14,9 +14,8 @@ const Metrika = () => {
   if (!isCookie) return null
 
   return (
-      <Suspense>
-        <YandexMetrika yid={Number(process.env.NEXT_PUBLIC_YANDEX_ID)}/>
-      </Suspense>
+      <YandexMetrika yid={Number(process.env.NEXT_PUBLIC_YANDEX_ID)}/>
+
   )
 };
 

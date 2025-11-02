@@ -37,7 +37,7 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
                   const {dayShort} = createDate({date: new Date(Number(year), Number(month) - 1, Number(dayNumber))})
 
                   return day.scheduleObjs.map((item, index) => (
-                      <div className="festival-program__row">
+                      <div className="festival-program__row" key={`${day.date}-${item.time}-${index}`}>
                         <span
                             className="festival-program__day">{index === 0 && <>{formaterDate(day.date)} | {dayShort}</>}</span>
                         <span className="festival-program__time">{item.time}</span>
