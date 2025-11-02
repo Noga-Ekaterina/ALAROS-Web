@@ -41,7 +41,7 @@
         letter-spacing: 0.01em;
 
         @include adaptive((
-                font-size: (default: 14rem, xxl: 27, xl: 22, md: 16rem)
+                font-size: (default: 14rem, xxl: 27, xl: 22, md: 16rem, sm: 15)
         ));
       }
     }

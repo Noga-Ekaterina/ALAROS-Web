@@ -3,10 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.8em;
+  min-height: 2.8em;
   gap: 15rem;
   border-top: var(--c-line) solid var(--w-line);
   color: var(--c-grey);
+
+  @include sm{
+    padding-block: .8em;
+    flex-wrap: wrap;
+  }
 
   &:first-child{
     border-top: none;
@@ -35,7 +40,7 @@
     @include standard-font;
 
     @include sm{
-      font-size: 9rem;
+      font-size: 14.57rem;
     }
   }
 
@@ -55,6 +60,8 @@
       color: var(--c-grey);
       text-transform: uppercase;
       font-weight: 400;
+
+      @extend %text-overflow-ellipsis
     }
   }
 
@@ -63,6 +70,10 @@
     color: var(--c-grey);
     text-transform: uppercase;
     font-weight: 400;
+
+    @include sm{
+      min-width: unset;
+    }
   }
 
   &__error, &__clue{
@@ -72,11 +83,19 @@
 
   &__clue{
     opacity: 0.4;
+
+    @include sm{
+      display: none;
+    }
   }
 
   &__error{
     min-width: max-content;
     text-transform: uppercase;
+
+    @include sm{
+      display: none;
+    }
 
     .input:has(&){
       border-top: var(--c-red) solid var(--w-line);

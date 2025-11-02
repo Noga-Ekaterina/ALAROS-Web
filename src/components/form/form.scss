@@ -1,5 +1,7 @@
 @import "@/app/styles/mixins-and-extends";
 .form{
+  max-width: inherit;
+
   &__row{
     display: flex;
     justify-content: space-between;
@@ -11,6 +13,9 @@
   }
 
   fieldset{
+    min-inline-size: 0;
+    max-width: inherit;
+
     &:disabled {
       *, input::placeholder {
         color: var(--c-grey-bg) !important;
