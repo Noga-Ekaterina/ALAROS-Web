@@ -33,6 +33,7 @@ const Cookie = () => {
         <div className="cookie__btns">
           <button className="cookie__btn cookie__btn--dark" onClick={()=> {
             setIsShow(false)
+            setIsCookie(true)
             localStorage.setItem("agreementCookie", "true")
           }}>Принять</button>
           <button className="cookie__btn" onClick={()=> setIsShow(false)}>Отклонить</button>
