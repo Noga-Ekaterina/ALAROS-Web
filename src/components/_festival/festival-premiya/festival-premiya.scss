@@ -24,14 +24,17 @@
     margin-top: 44rem;
     padding-inline: 68rem 20rem;
     font-weight: 300;
+    column-gap: 6%;
 
     @include standard-font(true);
 
     @include xxl{
+      column-gap: 0;
       padding-inline: 80rem vu(275, xxl);
     }
 
     @include lg{
+      column-gap: 0;
       padding-inline: 80rem 20rem;
     }
 
@@ -75,6 +78,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: calc(50% - 32rem);
+
+    @include xl{
+      width: calc(44% - 32rem);
+    }
 
     @include xxl{
       width: 50%;
