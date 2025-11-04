@@ -119,26 +119,29 @@ const MenuClient = ({data}:Props) => {
                 </div>
 
                 <div className="menu__column menu__mini-links">
-                  <motion.div
-                      key={JSON.stringify(activeSection)}
-                      initial={{opacity: 0,}}
-                      animate={{opacity: 1}}
-                      exit={{opacity: 0}}
-                      transition={{duration: 0.5}} className="menu__column">
-                    {
-                      activeSection?.subsections.map((subsection, index) => (
-                          <div
-                              key={index}
-                              className={cn("menu__subsection-link", {"yellow": isMultiPage&&isActiveLink(subsection)})}
-                              onClick={togleMenu}
-                          >
-                            <HtmlProcessing html={subsection.html}/>
-                          </div>
-                      ))
-                    }
-                  </motion.div>
                   {
-                    (activeSection || isActiveAddition)&&
+                      activeSection && activeSection.subsections.length > 0 && <motion.div
+                          key={JSON.stringify(activeSection)}
+                          initial={{opacity: 0,}}
+                          animate={{opacity: 1}}
+                          exit={{opacity: 0}}
+                          transition={{duration: 0.5}} className="menu__column">
+                        {
+                          activeSection.subsections.map((subsection, index) => (
+                              <div
+                                  key={index}
+                                  className={cn("menu__subsection-link", {"yellow": isMultiPage && isActiveLink(subsection)})}
+                                  onClick={togleMenu}
+                              >
+                                <HtmlProcessing html={subsection.html}/>
+                              </div>
+                          ))
+                        }
+                      </motion.div>
+                  }
+
+                  {
+                      (activeSection || isActiveAddition) &&
                       <motion.div
                           initial={{opacity: 0,}}
                           animate={{opacity: 1}}

@@ -18,6 +18,10 @@
   *{
     font-weight: 300;
     @include standard-font(true);
+
+    @include sm{
+      font-size: 12rem;
+    }
   }
 
   b, strong{
