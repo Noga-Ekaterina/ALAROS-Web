@@ -154,7 +154,9 @@
     }
 
     @include sm{
-      padding-left: 0;
+      width: 100%;
+      flex-shrink: 0;
+      padding-left: calc(var(--p-x) - 4rem);
     }
   }
 
@@ -188,7 +190,8 @@
 
       @include sm{
         padding: 0 4rem;
-        gap: 7rem;
+        gap: 24rem 6rem;
+        flex-wrap: wrap;
       }
     }
 
@@ -199,7 +202,7 @@
       @include hover-scale(1.03);
 
       @include adaptive((
-              width: (default: 600rem, xl: 1056, sm: 100%),
+              width: (default: 600rem, xl: 1056, sm: 350),
               height: (default: 195rem, xxl: 450, xl: 324, md: 148, sm: 235)
       ));
 

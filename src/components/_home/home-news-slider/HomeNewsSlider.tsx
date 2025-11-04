@@ -33,7 +33,7 @@ const HomeNewsSlider = ({title, news}: Props) => {
                             arrIndexSmall.includes(index + 1) && "home-news-slider__slide--small"
                         )}
                     >
-                      <NewsItem news={news}/>
+                      <NewsItem news={news} small/>
                     </SwiperSlide>
                 ))
             }

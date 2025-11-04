@@ -30,13 +30,13 @@
 }
 
 @mixin md-book{
-  @media (min-width: 640.1px) and (min-height: 80vw){
+  @media (min-width: 660.1px) and (min-height: 80vw){
     @content
   }
 }
 
 @mixin sm{
-  @media (max-width: 640px) {
+  @media (max-width: 660px) {
     @content
   }
 }
@@ -59,8 +59,8 @@ $breakpoints: (
         lg: '(max-width: 1919.9px)',
         lg-book: '(min-width: 1024px) and (min-height: 80vw)',
         md: '(max-width: 1024px)',
-        md-book: '(min-width: 640.1px) and (min-height: 80vw)',
-        sm: '(max-width: 640px)',
+        md-book: '(min-width: 660.1px) and (min-height: 80vw)',
+        sm: '(max-width: 660px)',
 ) !default;
 
 // Универсальный адаптивный миксин
