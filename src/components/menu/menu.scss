@@ -53,7 +53,6 @@
       flex-direction: column-reverse;
       justify-content: space-between;
       align-items: stretch;
-      gap: 18%;
       padding-top: 52rem;
     }
   }
@@ -86,7 +85,7 @@
     }
 
     @include sm{
-      font-size: 23rem;
+      font-size: 20rem;
     }
 
     a:hover{
