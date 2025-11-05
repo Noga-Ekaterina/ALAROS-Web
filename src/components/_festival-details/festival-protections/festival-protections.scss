@@ -35,6 +35,13 @@
       font-weight: 400;
     }
 
+    >div{
+      @include sm{
+        overflow-x: auto;
+
+      }
+    }
+
     &--opened{
       table{
         overflow-x: auto;
@@ -139,7 +146,7 @@
     }
   }
 
-  .lenis.lenis-smooth {
+  .lenis {
     max-height: 316rem;
     margin-top: 18rem;
   }
