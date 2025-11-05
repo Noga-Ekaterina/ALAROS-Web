@@ -27,7 +27,7 @@
   }
 
   &__left-block{
-    width: calc(325rem * var(--header-scale));
+    width: calc(317rem * var(--header-scale));
     @include flex-sb-c;
 
     @include sm{
@@ -50,7 +50,7 @@
     width: calc(19.8rem * var(--header-scale));
 
     .header--menu & {
-      width: calc(12rem * var(--header-scale));
+      width: calc(14rem * var(--header-scale));
       position: relative;
       top: calc(1rem * var(--header-scale));
     }

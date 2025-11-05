@@ -28,9 +28,13 @@ const Header = ({className, isMenuOpened}: Props) => {
           </div>
 
 
-          <button className="header__search">
-            <ReactSVG src="/Assets/Icons/search.svg"/>
-          </button>
+          {/*<button className="header__search">*/}
+          {/*  <ReactSVG src="/Assets/Icons/search.svg"/>*/}
+          {/*</button>*/}
+
+          <Link href="/contacts" className="header__logo" onClick={()=> isMenuOpened && togleMenu()}>
+            <ReactSVG src="/Assets/Icons/contacts.svg"/>
+          </Link>
         </div>
       </header>
   );
