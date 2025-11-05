@@ -13,6 +13,8 @@
 
   @include sm{
     flex-direction: column;
+    padding: 7rem 8rem;
+    gap: 28rem;
   }
 
   *{
@@ -20,23 +22,42 @@
   }
 
   &__text{
-    color: var(--c-grey);
+    color: var(--c-grey-dark);
+    line-height: 1.3em;
   }
 
   &__btns{
     align-self: flex-end;
     display: flex;
+    gap: 4rem;
+    position: relative;
+    top: 6rem;
+
+    @include sm{
+      top: 0;
+    }
   }
 
   &__btn{
-    width: 10em;
+    width: 10.5em;
     background: var(--c-grey-bg-light);
-    padding: 0.8em;
+    padding: 0.7em;
 
     &:hover{
       background: var(--c-grey-bg)
     }
 
+    @mixin standard-font-small{
+      @include adaptive((
+              font-size: (
+                      default: 7.5rem,
+                      xxl: 15,
+                      xl: 13,
+                      md: 9,
+                      sm: 8
+              )
+      ));
+    }
     &--dark{
       color: #fff;
       background: var(--c-main);
