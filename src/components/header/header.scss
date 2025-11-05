@@ -60,6 +60,8 @@
       letter-spacing: 0.02em;
       color: var(--c-main);
       gap: calc(20rem * var(--header-scale));
+      position: relative;
+      top: calc(0rem * var(--header-scale));
 
       @include flex-sb-c;
 
@@ -76,5 +78,13 @@
       fill: transparent;
       stroke: #fff;
     }
+  }
+
+  &__contacts{
+    width: calc(14.4rem * var(--header-scale));
+    position: relative;
+    top: calc(-0.5rem * var(--header-scale));
+
+    @include hover-scale;
   }
 }

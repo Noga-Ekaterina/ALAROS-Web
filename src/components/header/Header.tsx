@@ -32,7 +32,7 @@ const Header = ({className, isMenuOpened}: Props) => {
           {/*  <ReactSVG src="/Assets/Icons/search.svg"/>*/}
           {/*</button>*/}
 
-          <Link href="/contacts" className="header__logo" onClick={()=> isMenuOpened && togleMenu()}>
+          <Link href="/contacts" className="header__contacts" onClick={()=> isMenuOpened && togleMenu()}>
             <ReactSVG src="/Assets/Icons/contacts.svg"/>
           </Link>
         </div>
