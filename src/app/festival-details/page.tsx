@@ -121,12 +121,12 @@ const Page = async ({searchParams}:Props) => {
       <AnimationPage>
         <FestivalDetailsMainScreen pageData={pageData}/>
         {
-          true?
+          pageData.isShowAllContent?
               <>
                 {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
                 <FestivalBusinessProgram pageData={pageData}/>
                 {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsRightSignature={pageData.protectionsRightSignature} protectionsDays={protectionsDays}/>}
-                {pageData.isShowForum && <FestivalForum pageData={pageData}/>}
+                {true && <FestivalForum pageData={pageData}/>}
               </>
               :
               <NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>
