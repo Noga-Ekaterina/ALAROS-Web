@@ -12,6 +12,7 @@ import {useMediaQuery} from "react-responsive";
 
 interface IProps extends IWithChildren, IWithClass{
   slidesPerView: number
+  spaceBetween?: number
 }
 
 const BigSlider = (props: IProps) => {
@@ -44,7 +45,7 @@ const BigSlider = (props: IProps) => {
         </button>
         <Swiper
             slidesPerView="auto"
-            spaceBetween={(bigDesktopScreen? 8:10)*rem}
+            spaceBetween={props.spaceBetween || (bigDesktopScreen? 8:10)*rem}
             ref={swiperRef}
             onActiveIndexChange={togleSwiper}
         >

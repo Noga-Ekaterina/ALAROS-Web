@@ -8,6 +8,7 @@ import {useMediaQuery} from "react-responsive";
 import BigSlider from "@/components/big-slider/BigSlider";
 import {SwiperSlide} from "swiper/react";
 import HtmlProcessing from "@/components/HtmlProcessing";
+import {useGetRem} from "@/hoocs/useGetRem";
 
 interface Props{
   pageData: IAbout
@@ -16,6 +17,9 @@ interface Props{
 const AboutPress = ({pageData}: Props) => {
   const slides= useMemo(()=> getData(pageData.press.html), [])
   const mobileScreen = useMediaQuery({maxWidth: 660});
+  const bigDesktopScreen = useMediaQuery({minWidth: 2560});
+  const rem= useGetRem()
+
 
   return (
       <div className="about-press" id="press">
@@ -24,7 +28,7 @@ const AboutPress = ({pageData}: Props) => {
             <h2 className="titles-block__title">{nonBreakingSpaces(pageData.pressTitle)}</h2>
           </div>
 
-          <BigSlider slidesPerView={mobileScreen ? 2 : 4}>
+          <BigSlider slidesPerView={mobileScreen ? 2 : 4} spaceBetween={(bigDesktopScreen? 8: mobileScreen? 7:10)*rem}>
             {
               slides.map((slide, index) => (
                   <SwiperSlide

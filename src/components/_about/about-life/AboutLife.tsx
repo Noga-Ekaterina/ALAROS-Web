@@ -19,6 +19,7 @@ const AboutLife = ({pageData}: Props) => {
   const slides= useMemo(()=> getData(pageData.life.html), [])
   const swiperRef=useRef<SwiperRef | null>(null);
 
+  const mobileScreen = useMediaQuery({maxWidth: 660});
   const bigDesktopScreen = useMediaQuery({minWidth: 2560});
   const rem= useGetRem()
 
@@ -37,7 +38,8 @@ const AboutLife = ({pageData}: Props) => {
           <div className="about-life__slider">
             <Swiper
                 slidesPerView="auto"
-                spaceBetween={(bigDesktopScreen ? 8 : 10) * rem} ref={swiperRef}
+                spaceBetween={(bigDesktopScreen? 8: mobileScreen? 7:10)*rem}
+                ref={swiperRef}
             >
               {
                 slides.map((slide, index) => (

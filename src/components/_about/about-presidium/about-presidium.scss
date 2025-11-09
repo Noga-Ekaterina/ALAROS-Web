@@ -53,10 +53,18 @@
       display: inline-flex;
       flex-direction: row;
       gap: 9rem;
+
+      @include sm{
+        gap: 7rem;
+      }
     }
 
     &__player {
       gap: 9rem;
+
+      @include sm{
+        gap: 7rem;
+      }
     }
   }
 
@@ -83,6 +91,10 @@
     @include adaptive((
             --size: (default: 186rem, xxl: 420, xl: 350, md: 155, sm: 174)
     ));
+
+    @include sm{
+      gap: 7rem;
+    }
   }
 
   &__info{
