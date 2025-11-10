@@ -26,17 +26,14 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
   const sections=useMemo(()=>getData(juriesDataString), [])
   const [activeSection, setActiveSection] = useState(0)
   const rem=useGetRem()
-  const [isOpenedArr, setIsOpenedArr] = useState<number[]>([])
+  const [isOpened, setIsOpened] = useState<number | null>(null)
   const bigDesktopScreen = useMediaQuery({minWidth: 1920});
 
   const openInfo=(item: number)=>{
-    if (!isOpenedArr.includes(item))
-      setIsOpenedArr(prevState => [...prevState, item])
+    if (isOpened!=item)
+      setIsOpened(item)
     else {
-      const index= isOpenedArr.indexOf(item)
-      const result=[...isOpenedArr]
-      result.splice(index, 1)
-      setIsOpenedArr(result)
+      setIsOpened(null)
     }
   }
 
@@ -54,7 +51,7 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
                             disabled={index === activeSection}
                             onClick={() => {
                               setActiveSection(index)
-                              setIsOpenedArr([])
+                              setIsOpened(null)
                             }}>{section}</button>
                   </SwiperSlide>
               ))
@@ -87,7 +84,7 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
 
                                   <div className={cn(
                                       "festival-juries__info",
-                                      isOpenedArr.includes(itemIndex) && "festival-juries__info--opened"
+                                      isOpened===itemIndex && "festival-juries__info--opened"
                                   )}>
                                      <SmoothScrolling enableScrollTransfer={true}>
                                         <p>{nonBreakingSpaces(item.jobTitle)}</p>

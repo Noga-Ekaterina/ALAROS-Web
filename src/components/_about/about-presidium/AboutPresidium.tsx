@@ -41,16 +41,13 @@ const getSlides=(users: IUser[])=>{
 const AboutPresidium = ({data, title}:Props) => {
   const users= useMemo(()=>getData(data), [])
   const slides= getSlides(users)
-  const [isOpenedArr, setIsOpenedArr] = useState<Record<number, number[]>>({})
+  const [isOpened, setIsOpened] = useState<[number, number] | null>(null)
 
-  const openInfo=(slideIndex: number, item: number)=>{
-    const slide= isOpenedArr[slideIndex]? [...isOpenedArr[slideIndex]]:[]
-    if (!slide.includes(item))
-      setIsOpenedArr(prevState => ({...prevState, [slideIndex]: [...slide, item]}))
-    else {
-      const index= slide.indexOf(item)
-      slide.splice(index, 1)
-      setIsOpenedArr(prevState => ({...prevState, [slideIndex]: slide}))
+  const openInfo=(newSlide: number, newItem: number)=>{
+    if (!isOpened || isOpened[0]!=newSlide || isOpened[1]!=newItem){
+      setIsOpened([newSlide, newItem])
+    }else {
+      setIsOpened(null)
     }
   }
 
@@ -82,7 +79,7 @@ const AboutPresidium = ({data, title}:Props) => {
 
                                    <div className={cn(
                                        "about-presidium__info",
-                                       isOpenedArr[index]?.includes(itemIndex) && "about-presidium__info--opened"
+                                       isOpened &&isOpened[0]===index && isOpened[1]===itemIndex && "about-presidium__info--opened"
                                    )}>
                                       <SmoothScrolling enableScrollTransfer>
                                          <div>
