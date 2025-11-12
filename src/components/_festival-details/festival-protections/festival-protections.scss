@@ -140,33 +140,36 @@
 
   td, th{
     overflow: hidden;
-    *{
+    &, *{
       text-align: left;
 
       @extend %text-overflow-ellipsis
     }
   }
 
-  th *{
+  th, th *{
     color: var(--c-grey);
 
     @include standard-font-small;
   }
 
   td{
-    &:first-child *{
-      font-weight: 600;
+    &:first-child {
+      &, * {
+        font-weight: 600;
 
-      @include sm{
-        font-weight: 500;
+        @include sm {
+          font-weight: 500;
+        }
       }
     }
+    &:nth-child(2) {
+      &, * {
+        text-align: center;
 
-    &:nth-child(2) *{
-      text-align: center;
-
-      @include xxl{
-        text-align: left;
+        @include xxl {
+          text-align: left;
+        }
       }
     }
   }
