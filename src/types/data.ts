@@ -225,6 +225,7 @@ export interface IUser {
 
 export interface IProtectionsDay {
   date: string
+  place: string
   protections: IHtmlString
 }
 

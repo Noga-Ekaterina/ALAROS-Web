@@ -31,15 +31,16 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}
               const {day}=createDate  ({date:new Date(Number(year), Number(month)-1, Number(dayNumber))})
 
               return(
-                  <Detalis  key={item.date} title={<span>{formaterDate(item.date)} | {day}</span>} startIsOpen={index===0}>
+                  <Detalis  key={`${item.date}-${item.place}`} title={<p className="festival-protections__title-item">
+                    <span>{formaterDate(item.date)} | {day}</span> <span className="festival-protections__place">{item.place}</span></p>} startIsOpen={index === 0}>
                     <SmoothScrolling enableScrollTransfer={true}>
                       <HtmlProcessing html={item.protections.html}/>
                     </SmoothScrolling>
                   </Detalis>
-              )
-            })
-          }
-        </div>
+                    )
+                  })
+            }
+            </div>
       </div>
   );
 };

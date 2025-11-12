@@ -6,8 +6,29 @@
   &__title{
     color: #2A3A2B;
     padding-bottom: 36rem;
+
+    &-item{
+      width: 100%;
+      flex-shrink: 9;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
+  &__place{
+    width: 224rem;
+
+    @extend %text-overflow-ellipsis;
+
+    @include lg{
+      width: 222rem;
+    }
+
+    @include sm{
+      width: 130rem;
+      padding-right: 15rem;
+    }
+  }
 
   .detalis {
     border-top: var(--w-line) solid var(--c-line);
@@ -24,6 +45,10 @@
       transition: 0.5s;
 
       @include standard-font-big;
+
+      @include sm{
+        font-size: 15rem;
+      }
 
       &:hover{
         color: #A11E0E;
