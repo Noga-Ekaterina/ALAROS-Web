@@ -7,6 +7,7 @@ import {createDate, formaterDate} from "../../../utils/date";
 import {IHtmlString, IProtectionsDay} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SmoothScrolling from "@/app/SmoothScrolling";
+import HorizontalScrollSection from "@/app/HorizontalScrollSection";
 
 interface Props {
   title: string
@@ -34,7 +35,9 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}
                   <Detalis  key={`${item.date}-${item.place}`} title={<p className="festival-protections__title-item">
                     <span>{formaterDate(item.date)} | {day}</span> <span className="festival-protections__place">{item.place}</span></p>} startIsOpen={index === 0}>
                     <SmoothScrolling enableScrollTransfer={true}>
-                      <HtmlProcessing html={item.protections.html}/>
+                      <HorizontalScrollSection>
+                        <HtmlProcessing html={item.protections.html}/>
+                      </HorizontalScrollSection>
                     </SmoothScrolling>
                   </Detalis>
                     )

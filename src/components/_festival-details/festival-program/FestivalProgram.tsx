@@ -7,6 +7,7 @@ import {createDate, formaterDate} from "@/utils/date";
 import Detalis from "@/components/detalis/Detalis";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import {getPrgramTitles, programProcessing} from "./getData";
+import HorizontalScrollSection from "@/app/HorizontalScrollSection";
 
 interface Props{
   pageData: IFestivalDetails
@@ -22,7 +23,7 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
         <div className="container">
           <h2 className="festival-program__title">{pageData.festivalProgramTitle}</h2>
 
-          <div className="festival-program__content">
+          <HorizontalScrollSection className="festival-program__content">
             <div className="festival-program__row festival-program__header">
               <span>{titles.day}</span>
               <span>{titles.time}</span>
@@ -63,7 +64,7 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
                 })
               }
             </div>
-          </div>
+          </HorizontalScrollSection>
         </div>
       </div>
   );

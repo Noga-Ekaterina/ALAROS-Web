@@ -60,11 +60,9 @@
       font-weight: 400;
     }
 
-    >div{
-      @include sm{
-        overflow-x: auto;
-
-      }
+    >div, &__content{
+      width: 100%;
+      min-inline-size: 0;
     }
 
     &--opened{
@@ -83,9 +81,8 @@
   }
 
   table{
-    width: 100%;
-    overflow-x: hidden;
-    display: block;
+    min-width: 734rem;
+
     >*{
       display: block;
     }
