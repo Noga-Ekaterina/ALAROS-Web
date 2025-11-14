@@ -216,6 +216,9 @@
 
     img{
       width: 70rem;
+      object-fit: cover;
+      object-position: center;
+      aspect-ratio: 3/4;
     }
   }
 

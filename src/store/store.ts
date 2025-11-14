@@ -5,6 +5,7 @@ class Store {
   isLoading= false;
   noIsFirstOpen= false
   isCookie = false
+  isBack= false
 
   constructor() {
     makeAutoObservable(this);
@@ -24,6 +25,10 @@ class Store {
 
   setIsCookie=(value: boolean)=>{
     this.isCookie=value
+  }
+
+  setIsBack=(value: boolean)=>{
+    this.isBack=value
   }
 }
 

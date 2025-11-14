@@ -1,15 +1,33 @@
 'use client'
-import React from 'react';
+import React, {useEffect} from 'react';
 import { AnimatePresence, motion } from "framer-motion"
 import {IWithChildren, IWithClass} from "@/types/tehnic";
+import {useGetHashPosition} from "@/hoocs/useGetHashPosition";
+import {smoothScroll} from "@/utils/smoothScroll";
+import store from "@/store/store";
 
 interface Props extends IWithChildren, IWithClass{
   conditions?: boolean
   isNoWait?: boolean
   onClick?: (e:  React.MouseEvent<HTMLDivElement, MouseEvent>)=> void
+  isModal?: boolean
 }
 
-const AnimationPage = ({ children, conditions, className, isNoWait, onClick }: Props) => {
+const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isModal }: Props) => {
+  const getHashPosition= useGetHashPosition()
+  const {isBack, setIsBack}=store
+
+  useEffect(() => {
+    if (isModal) return
+
+    if (isBack){
+      setIsBack(false)
+      return;
+    }
+
+    window.scrollTo(0,0)
+    setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 500)
+  }, []);
 
   return (
       <AnimatePresence mode={isNoWait ? 'sync' : 'wait'}>

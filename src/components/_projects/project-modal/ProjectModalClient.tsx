@@ -92,7 +92,7 @@ const ProjectModalClient = ({ project, startIsOpened, isInvalidParams }: ClientP
   };
 
   return (
-      <AnimationPage isNoWait={true} conditions={isOpened} className="project-modal" onClick={handleClick}>
+      <AnimationPage isNoWait isModal conditions={isOpened} className="project-modal" onClick={handleClick}>
         <SmoothScrolling noAnimation={(isInvalidParams || project === undefined || typeof project === "string" || project === null)}>
           <button
               className="btn-round project-images-slider__btn project-images-slider__btn--back"
