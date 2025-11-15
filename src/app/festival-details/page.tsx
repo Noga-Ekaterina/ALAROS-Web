@@ -88,7 +88,7 @@ const init= unstable_cache(async ()=>{
             protectionsDays(orderBy: date_ASC) {
               date
               place
-              protections {
+              table {
                 html
               }
             }

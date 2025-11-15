@@ -123,15 +123,19 @@
   tr{
     min-width: 734rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 6fr 3fr;
+    grid-template-columns: repeat(4, 1fr) 5fr 3fr;
     align-items: baseline;
     gap: 6rem;
     transition: 0.3s;
     padding-block: 3rem;
     padding-inline: 5rem;
 
+    @include xxl{
+      grid-template-columns: repeat(3, 2fr) 1fr 11fr 6fr;
+    }
+
     @include lg{
-      grid-template-columns: 1.1fr repeat(2, 1fr) 5.9fr 3fr;
+      grid-template-columns: 1.1fr repeat(3, 1fr) 4.9fr 3fr;
     }
   }
 

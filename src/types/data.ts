@@ -226,7 +226,7 @@ export interface IUser {
 export interface IProtectionsDay {
   date: string
   place: string
-  protections: IHtmlString
+  table: IHtmlString
 }
 
 export type TDiploma= "gold" |"silver"|"bronze"|"president"|"grandPrix"

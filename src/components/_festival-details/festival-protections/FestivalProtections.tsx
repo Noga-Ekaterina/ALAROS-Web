@@ -12,7 +12,7 @@ import HorizontalScrollSection from "@/app/HorizontalScrollSection";
 interface Props {
   title: string
   protectionsDays: IProtectionsDay[]
-  protectionsRightSignature: IHtmlString
+  protectionsRightSignature: IHtmlString | null
 }
 
 const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}:Props) => {
@@ -22,7 +22,7 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small festival-protections__title">{nonBreakingSpaces(title)}</h2>
             <div className="titles-block__section">
-              <HtmlProcessing html={protectionsRightSignature.html}/>
+              <HtmlProcessing html={protectionsRightSignature?.html}/>
             </div>
           </div>
 
@@ -36,7 +36,7 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}
                     <span>{formaterDate(item.date)} | {day}</span> <span className="festival-protections__place">{item.place}</span></p>} startIsOpen={index === 0}>
                     <SmoothScrolling enableScrollTransfer={true}>
                       <HorizontalScrollSection>
-                        <HtmlProcessing html={item.protections.html}/>
+                        <HtmlProcessing html={item.table?.html}/>
                       </HorizontalScrollSection>
                     </SmoothScrolling>
                   </Detalis>

@@ -8,7 +8,7 @@ import {useGetRem} from "@/hoocs/useGetRem";
 import CopyText from "@/components/CopyText";
 
 interface Props{
-  html: string| JSX.Element[] | null
+  html: string| JSX.Element[] | null |undefined
 }
 
 const HtmlProcessing = ({html}:Props) => {
