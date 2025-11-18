@@ -9,7 +9,7 @@
     gap: 35rem;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 8rem;
+    margin-block: 8rem 9rem;
 
     @include sm{
       margin-top: 0;
@@ -64,6 +64,7 @@
     }
 
     &, p{
+      font-weight: 300;
 
       @include adaptive((
               font-size: (default: 17rem, xxl: 35, xl: 30, md: 15, sm: 15)
@@ -71,6 +72,7 @@
     }
 
     p:last-child{
+      font-weight: 400;
       @include adaptive((
               font-size: (default: 11rem, xxl: 27, xl: 25, md: 9, sm: 11)
       ));
