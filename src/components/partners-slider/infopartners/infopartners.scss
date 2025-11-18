@@ -1,0 +1,83 @@
+@import "@/app/styles/mixins-and-extends";
+
+.infopartners {
+  padding-block: 15rem;
+  background: #fff;
+
+  .partners-slider{
+    background: none;
+    gap: 35rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 8rem;
+
+    @include sm{
+      margin-top: 0;
+      padding-top: 13rem;
+      gap: 25rem
+    }
+
+    &__swiper {
+      @include adaptive((
+              width: (default: 715rem, xl: 1193, xxl: 1761, sm: 280)
+      ));
+
+
+    }
+
+    &__slide {
+      @include adaptive((
+              --h: (default: 32rem, xl: 55, xxl: 77, sm: 25)
+      ));
+    }
+  }
+
+  &__row{
+    padding-inline: var(--p-x);
+    background: #FFF;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 50%);
+    margin-top: 30rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm{
+      margin-top: 45rem;
+      flex-direction: column;
+    }
+  }
+
+  &__block-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15rem;
+    position: relative;
+    flex-shrink: 0;
+
+    @include adaptive((
+            top: (default: -0.8em, xxl: -24, xl: -0.2em, sm: -29)
+    ));
+
+
+    @include sm{
+      width: 100%;
+    }
+
+    &, p{
+
+      @include adaptive((
+              font-size: (default: 17rem, xxl: 35, xl: 30, md: 15, sm: 15)
+      ))
+    }
+
+    p:last-child{
+      @include adaptive((
+              font-size: (default: 11rem, xxl: 27, xl: 25, md: 9, sm: 11)
+      ));
+
+      @include lg{
+        font-weight: 500;
+      }
+    }
+  }
+}

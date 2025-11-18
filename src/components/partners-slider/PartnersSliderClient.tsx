@@ -10,11 +10,10 @@ import {useMediaQuery} from "react-responsive";
 import {useGetRem} from "@/hoocs/useGetRem";
 
 interface Props{
-  title: string
   partners: IPartner[]
 }
 
-const PartnersSliderClient = ({title, partners}:Props) => {
+const PartnersSliderClient = ({partners}:Props) => {
   const swiperRef = useRef<SwiperRef>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
   const mobileScreen = useMediaQuery({maxWidth: 660});
@@ -30,9 +29,6 @@ const PartnersSliderClient = ({title, partners}:Props) => {
 
   return (
       <>
-        <div className="container titles-block partners-slider-title">
-          <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(title)}</h2>
-        </div>
         <div className="partners-slider">
           <button className="partners-slider__btn partners-slider__btn--prev" onClick={() => togleSwiper("prev")}>
             <img src="/Assets/Icons/arrow.svg" alt=''/>

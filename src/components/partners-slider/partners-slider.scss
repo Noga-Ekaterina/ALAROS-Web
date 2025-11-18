@@ -29,7 +29,6 @@
     display: flex;
     justify-content: center;
     height: var(--h);
-    max-width: calc(var(--h) *3);
 
     @include adaptive((
             --h: (default: 40rem, xxl: 77, sm: 40)

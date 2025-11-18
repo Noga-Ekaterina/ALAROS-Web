@@ -13,6 +13,7 @@ import FestivalProgram from "@/components/_festival-details/festival-program/Fes
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
+import InfopartnersSlider from "@/components/partners-slider/infopartners/InfopartnersSlider";
 
 interface IData{
   festivalDetailss: IFestivalDetails[]
@@ -127,6 +128,7 @@ const Page = async ({searchParams}:Props) => {
                 {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
                 <FestivalBusinessProgram pageData={pageData}/>
                 {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsRightSignature={pageData.protectionsRightSignature} protectionsDays={protectionsDays}/>}
+                <InfopartnersSlider/>
                 {pageData.isShowForum && <FestivalForum pageData={pageData}/>}
               </>
               :

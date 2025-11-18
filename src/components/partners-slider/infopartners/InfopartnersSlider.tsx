@@ -1,20 +1,25 @@
 import React from 'react';
+import "./infopartners.scss"
 import PartnersSliderClient from "@/components/partners-slider/PartnersSliderClient";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
-import {IPartnersSlider} from "@/types/data";
+import {IInfopartnersSlider} from "@/types/data";
 import {partnersProcessing} from "@/components/partners-slider/partnersProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import HtmlProcessing from "@/components/HtmlProcessing";
 
 interface IData{
-  partnersSliders: IPartnersSlider[]
+  partnersSliders: IInfopartnersSlider[]
 }
 
 const init= unstable_cache(async ()=>{
   const data: IData|null|string= await fetchData(`
     query MyQuery {
       partnersSliders {
-        title
+        infopartnersTitle
+        infopartnersText{
+          html
+        }
         partners {
           html
         }
@@ -26,12 +31,12 @@ const init= unstable_cache(async ()=>{
     return data
   }
 
-  const {title, partners}= data.partnersSliders[0]
+  const {infopartnersTitle, infopartnersText, partners}= data.partnersSliders[0]
 
-  return {title, partners: partnersProcessing(partners.html)}
-}, ["partners-slider"], {tags: ["PartnersSlider"]})
+  return {title: infopartnersTitle, text: infopartnersText, partners: partnersProcessing(partners.html)}
+}, ["infopartners-slider"], {tags: ["PartnersSlider"]})
 
-const PartnersSlider = async () => {
+const InfopartnersSlider = async () => {
   const data=  await init()
 
   if (typeof data==="string" || !data) {
@@ -40,13 +45,18 @@ const PartnersSlider = async () => {
   }
 
   return (
-      <>
-        <div className="container titles-block partners-slider-title">
+      <div className="infopartners">
+        <div className="container titles-block">
           <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(data.title)}</h2>
         </div>
-        <PartnersSliderClient partners={data.partners}/>
-      </>
+        <div className="infopartners__row">
+          <div className="infopartners__block-text">
+            <HtmlProcessing html={data.text.html}/>
+          </div>
+          <PartnersSliderClient partners={data.partners}/>
+        </div>
+      </div>
   )
 };
 
-export default PartnersSlider;
+export default InfopartnersSlider;

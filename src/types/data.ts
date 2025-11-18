@@ -50,6 +50,12 @@ export interface IPartnersSlider {
   partners: IHtmlString
 }
 
+export interface IInfopartnersSlider {
+  infopartnersTitle: string;
+  infopartnersText: IHtmlString
+  partners: IHtmlString
+}
+
 export interface ILink {
   text: string
   href: string
