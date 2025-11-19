@@ -16,6 +16,10 @@
     background: var(--c-main);
     padding-inline: 20rem 46rem;
 
+    @include xxl{
+      padding-inline: 20rem 116rem;
+    }
+
     @include md-book{
       width: 576rem;
     }
