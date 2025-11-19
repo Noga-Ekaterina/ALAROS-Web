@@ -31,6 +31,14 @@
     grid-template-columns: repeat(2, 2fr) 6fr 2fr;
     align-items: baseline;
     gap: 17rem;
+
+    &--business-program +&--business-program{
+      margin-top: -13rem;
+
+      .detalis{
+        border-top: 0;
+      }
+    }
   }
 
   &__content{
@@ -77,14 +85,10 @@
 
   .detalis {
     width: 438rem;
-    border-top: var(--w-line) solid var(--c-line);
+    border-block: var(--w-line) solid var(--c-line);
 
     @include sm{
       width: 323rem;
-    }
-
-    &:last-child {
-      border-bottom: var(--w-line) solid var(--c-line);
     }
 
     *{
