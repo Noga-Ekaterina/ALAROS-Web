@@ -53,7 +53,7 @@ export interface IPartnersSlider {
 export interface IInfopartnersSlider {
   infopartnersTitle: string;
   infopartnersText: IHtmlString
-  partners: IHtmlString
+  infopartners: IHtmlString
 }
 
 export interface ILink {

@@ -6,28 +6,29 @@
 
   .partners-slider{
     background: none;
-    gap: 35rem;
     padding-left: 0;
     padding-right: 0;
     margin-block: 8rem 9rem;
 
+    @include adaptive((
+            gap: (default: 18rem, xl: 89, xxl: 72, sm: 15)
+    ));
+
     @include sm{
       margin-top: 0;
       padding-top: 13rem;
-      gap: 25rem
     }
 
     &__swiper {
       @include adaptive((
-              width: (default: 715rem, xl: 1193, xxl: 1761, sm: 280)
+              width: (default: 747rem, xl: 1200, xxl: 1817, sm: 296)
       ));
-
 
     }
 
     &__slide {
       @include adaptive((
-              --h: (default: 32rem, xl: 55, xxl: 77, sm: 25)
+              --h: (default: 45rem, xl: 72, xxl: 97, sm: 36)
       ));
     }
   }
@@ -36,12 +37,14 @@
     padding-inline: var(--p-x);
     background: #FFF;
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(239, 239, 239, 1) 50%);
-    margin-top: 30rem;
     display: flex;
     justify-content: space-between;
 
+    @include adaptive((
+            margin-top: (default: 30rem, xl: 68, xxl: 66, sm: 45)
+    ));
+
     @include sm{
-      margin-top: 45rem;
       flex-direction: column;
     }
   }

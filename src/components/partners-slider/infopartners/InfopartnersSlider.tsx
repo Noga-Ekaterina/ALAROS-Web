@@ -20,7 +20,7 @@ const init= unstable_cache(async ()=>{
         infopartnersText{
           html
         }
-        partners {
+        infopartners {
           html
         }
       }
@@ -31,9 +31,9 @@ const init= unstable_cache(async ()=>{
     return data
   }
 
-  const {infopartnersTitle, infopartnersText, partners}= data.partnersSliders[0]
+  const {infopartnersTitle, infopartnersText, infopartners}= data.partnersSliders[0]
 
-  return {title: infopartnersTitle, text: infopartnersText, partners: partnersProcessing(partners.html)}
+  return {title: infopartnersTitle, text: infopartnersText, partners: partnersProcessing(infopartners.html)}
 }, ["infopartners-slider"], {tags: ["PartnersSlider"]})
 
 const InfopartnersSlider = async () => {
@@ -47,13 +47,13 @@ const InfopartnersSlider = async () => {
   return (
       <div className="infopartners">
         <div className="container titles-block">
-          <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(data.title)}</h2>
+          <h2 className="titles-block__title titles-block__title--small grey">{nonBreakingSpaces(data.title)}</h2>
         </div>
         <div className="infopartners__row">
           <div className="infopartners__block-text">
             <HtmlProcessing html={data.text.html}/>
           </div>
-          <PartnersSliderClient partners={data.partners}/>
+          <PartnersSliderClient partners={data.partners} slidesPerViewMobile={4} slidesPerView={7} slidesPerViewBigDesktop={8}/>
         </div>
       </div>
   )

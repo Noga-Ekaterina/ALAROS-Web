@@ -17,10 +17,14 @@
   }
 
   &__swiper {
-    width: 781rem;
+    width: 884rem;
+
+    @include xxl{
+      width: vu(2256, xxl);
+    }
 
     @include sm{
-      width: 265rem;
+      width: 297rem;
     }
   }
 
@@ -31,7 +35,7 @@
     height: var(--h);
 
     @include adaptive((
-            --h: (default: 40rem, xxl: 77, sm: 40)
+            --h: (default: 71rem, xxl: 155, sm: 86)
     ));
 
     a{

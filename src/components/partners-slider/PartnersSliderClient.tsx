@@ -11,9 +11,12 @@ import {useGetRem} from "@/hoocs/useGetRem";
 
 interface Props{
   partners: IPartner[]
+  slidesPerView?: number
+  slidesPerViewMobile?: number
+  slidesPerViewBigDesktop?: number
 }
 
-const PartnersSliderClient = ({partners}:Props) => {
+const PartnersSliderClient = ({partners, slidesPerView=6, slidesPerViewMobile=2, slidesPerViewBigDesktop=7}:Props) => {
   const swiperRef = useRef<SwiperRef>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
   const mobileScreen = useMediaQuery({maxWidth: 660});
@@ -34,7 +37,7 @@ const PartnersSliderClient = ({partners}:Props) => {
             <img src="/Assets/Icons/arrow.svg" alt=''/>
           </button>
           <Swiper
-              slidesPerView={mobileScreen? 3: bigDesktopScreen? 7:6}
+              slidesPerView={mobileScreen? slidesPerViewMobile: bigDesktopScreen? slidesPerViewBigDesktop:slidesPerView}
               spaceBetween={15*rem}
               autoplay={{delay: 2000, disableOnInteraction: false}}
               loop={true}
