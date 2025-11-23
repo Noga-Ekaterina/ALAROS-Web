@@ -202,6 +202,7 @@ export interface IFestivalDetails {
   businessProgramTitle: string
   businessProgramSessions: IHtmlString[]
   isShowForum: boolean
+  isShowInfopartners: boolean
   forumTitle: string
   forumRightSignature: IHtmlString
   forumDescriptionBlocks: IHtmlString[]
