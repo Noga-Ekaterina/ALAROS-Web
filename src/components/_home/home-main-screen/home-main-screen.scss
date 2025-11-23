@@ -122,7 +122,7 @@
       //}
 
       @include sm {
-        font-size: min(17rem, 1.889vh);
+        font-size: 14rem;
       }
     }
 
@@ -185,9 +185,11 @@
           border: var(--w-line-main-screen) solid var(--c-line);
           background: var(--c-main);
           transition: 0.5s;
+          text-align: center;
 
           @include adaptive((
-                  padding: (default: 12rem 35rem, md: vu(10, md) vu(20, md), md-book: vu(15, md) vu(38, md), sm: 12rem 35rem)
+                  padding: (default: 12rem, xxl: 30, md: 10, md-book: 15, sm: 12),
+                  width: (default: 173rem, xxl: 365, md: 130, md-book: 182, sm: 189)
           ));
 
           &:hover{
