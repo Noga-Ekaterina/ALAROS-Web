@@ -184,7 +184,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
       setEventsDays(events)
 
       // Находим индекс ближайшего события
-      const nextEventEndDayIndex = daysWithEvents.findIndex(day => day.endEvent&&
+      let nextEventEndDayIndex = daysWithEvents.findIndex(day => day.endEvent&&
           (
               (day.year > today.year) ||
               (day.year === today.year && day.monthNumber > today.monthNumber) ||
@@ -199,6 +199,13 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
           )
       );
 
+      if (nextEventEndDayIndex==-1){
+        nextEventEndDayIndex = daysWithEvents.findLastIndex(day => day.endEvent)
+      }
+
+      if (nextEventStartDayIndex==-1){
+        nextEventStartDayIndex=daysWithEvents.findLastIndex(day => day.startEvent)
+      }
 
       let nextEventDayIndex=0
 
@@ -213,9 +220,9 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
 
       // console.log(nextEventEndDayIndex)
       // console.log(nextEventStartDayIndex)
-      setNextEventIndex(nextEventDayIndex !== -1 ? nextEventDayIndex : daysWithEvents.length - 1);
+      setNextEventIndex(nextEventDayIndex);
 
-      swiperCalendarNav.goToSlide(nextEventStartDayIndex - 4)
+      swiperCalendarNav.goToSlide(nextEventStartDayIndex)
 
       setDays(daysWithEvents);
       // console.log(daysWithEvents)
