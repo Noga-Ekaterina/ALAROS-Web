@@ -41,7 +41,7 @@ const NewsItem = ({news, small}: Props) => {
       <Link href={`/news/${news.slug}`} className='news-item'>
         <p className="news-item__date">{formaterDate(news.date)}</p>
         <div className="news-item__img">
-          <img src={`/Assets/News/${news.slug}/${news.cover}`} alt=""/>
+          <img src={`/Assets/News/${news.slug}/${news.cover}`} alt="" loading="lazy"/>
         </div>
 
         <p className="news-item__title">{nonBreakingSpaces(news.title)}</p>

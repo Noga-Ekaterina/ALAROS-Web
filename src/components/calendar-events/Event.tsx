@@ -78,7 +78,7 @@ const Event = ({ event, year }: Props) => {
             </div>
           </div>
         </div>
-        <img src={`/Assets/Calendar-events/${year}/${event.image}`} alt=""/>
+        <img src={`/Assets/Calendar-events/${year}/${event.image}`} alt="" loading="lazy"/>
       </div>
   );
 };

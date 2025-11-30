@@ -26,7 +26,7 @@ const Project = ({project}: Props) => {
         <p style={{color}} className="project__diploma">{text}</p>
 
         <div className="project__img">
-          <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt=""/>
+          <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt="" loading='lazy'/>
 
           <p className="project__year">{project.year}</p>
 

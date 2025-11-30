@@ -75,7 +75,7 @@ const AboutPresidium = ({data, title}:Props) => {
                             {
                                 item &&
                                 <>
-                                   <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
+                                   <img src={`/Assets/Pages/People/${item.image}`} alt="" loading="lazy"/>
 
                                    <div className={cn(
                                        "about-presidium__info",

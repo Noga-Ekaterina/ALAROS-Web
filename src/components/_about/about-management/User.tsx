@@ -14,7 +14,7 @@ const User = ({data}: Props) => {
   return (
       <div className="about-management__user">
         <div className="about-management__img-and-details">
-          <img src={`/Assets/Pages/People/${image}`} alt="" className="about-management__img"/>
+          <img src={`/Assets/Pages/People/${image}`} alt="" className="about-management__img" loading="lazy"/>
 
           <div className="about-management__details">
             {

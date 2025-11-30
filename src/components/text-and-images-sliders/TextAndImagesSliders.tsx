@@ -42,7 +42,7 @@ const TextAndImagesSliders = ({html, path, className}: Props) => {
             const caption = captions[imgIndex];
             slides.push(
                 <SwiperSlide key={`image-${img}`} className={className}>
-                  <img src={`${path}/${img}`} alt=""/>
+                  <img src={`${path}/${img}`} alt="" loading="lazy"/>
                   <HtmlProcessing html={`<p>${caption}</p>`}/>
                 </SwiperSlide>
             );

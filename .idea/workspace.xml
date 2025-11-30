@@ -4,62 +4,208 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="догруз фото, правки фестиваля, граница на проектах для проверки в сафари">
+    <list default="true" id="f1280fc9-ac7c-43ad-8123-57320b76ef7e" name="Changes" comment="возможность скрытия инфопартнёров">
       <change afterPath="$PROJECT_DIR$/.next.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/0001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/01ce8ef5703db52495910300cb4474165a7e24bc.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/WhatsApp Image 2025-07-14 at 19.40.37.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/Контейнерная площадка Питомник Вашутино .jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Logo-partners/Cvetovodstvo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/Logo-partners/Genios-loci.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Bugaev.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/АксеноваАнна.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/АлексееваИрина.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БасарияЗураб.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БерезуцкийДмитрий.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БересневаМарина.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БычковаЮлия.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ВоронинаОльга.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГершелисЕлена.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГолосоваЕлена.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГолубеваКсения.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГрицанОльга.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ДиваковаМарина.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЕрзинИван.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ИвановаАнна.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/КанунниковаЛариса.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЛапшинАндрей.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЛапшинАндрей2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МоринаМарина.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МуренецЕвгения.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ОжеговаЕкатерина.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Пудова.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СадковДмитрий.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СафароваГульнара.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СтукаловОлег.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СуровенковАндрей.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Талалайкина.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ХмарикАлександр.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ХохловОльга.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/24-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/XXXL.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/News/16-natsionalnaya-premiya-rossii-po-landshaftnoy-arhitekture/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Александр Руденко.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Алексеева.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Анна-Минакова.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Богинская.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Боков.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/БысоваЮлия.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Вовк.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Грицан.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Дарья-шорина.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Добашин.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Ефимкин.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Игнатьева.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Илья-Курбатов.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Илья-Черпасов.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Климова.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Концевая-Анна.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Лупина.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Максимова.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Мария-Игнатьева.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Новикова.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Павел-Степанцов.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Петр Лари.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Попов.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Пудова.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Ретеюм.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Руденко-наталья.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Рыбкина.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Саргина-Оксана.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Семенкова.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Семенова.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Сергей Георгиевский (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Смирнов Илья.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Сонина.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Таисия.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Талалайкина.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Упелниек.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Урожаева.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Федотова.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Фетисов.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Финогенов.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Фокина.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Чихарев.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Шумаков.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/Эльвира-Довлетярова2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/гарсия (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/канунникова.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Business-program/саянов.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Бекешева.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БысоваЮлия.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Дёмина.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЗайцеваАлёна.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ИвановаИрина.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МаркитановаЕлена.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЧереватенкоИрина.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Assets/Projects/2023/Project_85/cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Documents/Anons-17-jule.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Documents/Ustav-novyj_2022g.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Documents/slovosochetanie_landshaftnaja_arkhitektura-1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Documents/ВЫБОР_НОМИНАЦИИ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Documents/КАРТОЧКА_АЛАРОС.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/1.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/1.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/1.3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/1.4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/1.5.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/1.6.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/10.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/10.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/11.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/11.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/12.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/12.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/12.3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/12.4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/13.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/14.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/15.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/16.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/17.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/18.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/18.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/18.3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/18.4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/19.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/2.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/2.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/20.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/21.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/22.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/23.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/24.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/3.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/3.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/3.3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/3.4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/3.5.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/3.6.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/4.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/4.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/5.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/5.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/5.3.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/5.4.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/6.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/6.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/7.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/8.1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/8.2.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Templates/9.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/111_csecollege.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/111_csecollege.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/2-6_sm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/2-6_sm.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/green.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Calendar-events/2025/green.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Logo-partners/L BURO.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Logo-partners/L BURO.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Aksenova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Aksenova.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Anna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Anna.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Irina_Gennadievna_Ivanova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Irina_Gennadievna_Ivanova.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Ivanova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Ivanova.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/History/1974/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/History/1974/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/History/1974/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/History/1974/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/History/1991/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/History/1991/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/History/1991/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/History/1991/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/Life/2013.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/Life/2013.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/Life/2024_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/Life/2024_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/About/Life/2024_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/About/Life/2024_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Contacts/2U8A5991-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Contacts/2U8A5991-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Contacts/2U8A7032-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Contacts/2U8A7032-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Contacts/2U8A7502-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Contacts/2U8A7502-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Main.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Festival-main/Main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Big-desktop/Banner announcement long 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Big-desktop/Banner announcement long 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Desktop/Banner announcement 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Desktop/Banner announcement 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Mobile/Banner mobile 3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/Home/Banners/Mobile/Banner mobile 3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/Logo-partners/Logo SULAGE.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Alexey_Yuryevich_Vorobyov.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Alexey_Yuryevich_Vorobyov.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Anna_Sergeevna_Kurbatova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Anna_Sergeevna_Kurbatova.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Anton_Vladimirovich_Finogenov.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Anton_Vladimirovich_Finogenov.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Beresneva_Marina_Andreevna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Beresneva_Marina_Andreevna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Bysova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Bysova.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Divakova.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Divakova.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Dmytry.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Dmytry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Gay_Imz.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Gay_Imz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Guk_Alexey_Ivanovich.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Guk_Alexey_Ivanovich.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Ivan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Ivan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/АксеноваАнна.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/АксеноваАнна.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/АлексееваИрина.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/АлексееваИрина.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БасарияЗураб.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БасарияЗураб.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БерезуцкийДмитрий.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БерезуцкийДмитрий.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БересневаМарина.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БересневаМарина.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БычковаЮлия.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/БычковаЮлия.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ВоронинаОльга.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ВоронинаОльга.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГарсияРубен.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГарсияРубен.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГершелисЕлена.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГершелисЕлена.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГолосоваЕлена.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГолосоваЕлена.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГолубеваКсения.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГолубеваКсения.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГрицанОльга.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ГрицанОльга.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ДиваковаМарина.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ДиваковаМарина.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ДмитриеваКристина.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ДмитриеваКристина.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЕрзинИван.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЕрзинИван.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ИвановаАнна.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ИвановаАнна.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/КанунниковаЛариса.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/КанунниковаЛариса.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЛапшинАндрей.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЛапшинАндрей.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МоринаМарина.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МоринаМарина.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МуренецЕвгения.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/МуренецЕвгения.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ОжеговаЕкатерина.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ОжеговаЕкатерина.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Пудова.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Пудова.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СадковДмитрий.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СадковДмитрий.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СаяновАлексей.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СаяновАлексей.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СтукаловОлег.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СтукаловОлег.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СуровенковАндрей.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/СуровенковАндрей.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Талалайкина.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/Талалайкина.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ХмарикАлександр.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ХмарикАлександр.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ХохловОльга.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ХохловОльга.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЩепелеваАнна.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Jurynew/ЩепелеваАнна.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Larisa_Viktorovna_Kanunnikova.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Larisa_Viktorovna_Kanunnikova.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Leontyeva_Lidiya_Aleksandrovna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Leontyeva_Lidiya_Aleksandrovna.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-main-screen/festival-main-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-price/festival-price.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partners-slider/partners-slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partners-slider/partners-slider.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Morina_Marina_Richardovna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Morina_Marina_Richardovna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Natalia_Evgenievna_Ivanovskaya.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Natalia_Evgenievna_Ivanovskaya.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Olga_Evgenievna_Gritsan.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Olga_Evgenievna_Gritsan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Sadkov.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Sadkov.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Sergey_Andreevich_Georgievsky.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Sergey_Andreevich_Georgievsky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Tolovenkova_Daria_Valerievna.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Tolovenkova_Daria_Valerievna.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Valeria_Mikhailovna_Livshits.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Valeria_Mikhailovna_Livshits.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Vitaly_Rudolfovich_Lutz.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Vitaly_Rudolfovich_Lutz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Pages/People/Voronina.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Pages/People/Voronina.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Projects/2023/Project_32/cover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Projects/2023/Project_32/cover.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Projects/2023/Project_85/cover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Documents/ALAROS_2025_Techtreb.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/Documents/ALAROS_2025_Techtreb.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Press/GeniusLoci.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Press/GeniusLoci.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Press/Kronshtadt.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Press/Kronshtadt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Press/RUDN.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Press/RUDN.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-history/AdditionItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-history/AdditionItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-life/AboutLife.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-management/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/AboutPresidium.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-presidium/about-presidium.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-press/AboutPress.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_about/about-press/about-press.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_about/about-press/about-press.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/ContactsMainScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_contacts/contacts-main-screen/ContactsMainScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-business-program/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/FestivalForum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival-details/festival-forum/FestivalForum.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_festival/festival-juries/FestivalJuries.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_news/news-item/NewsItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_projects/project/Project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/calendar-events/Event.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendar-events/Event.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/text-and-images-sliders/TextAndImagesSliders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/text-and-images-sliders/TextAndImagesSliders.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,9 +216,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="SCSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -137,43 +283,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "jsx.switch.disabled": "true",
-    "last_opened_file_path": "C:/Users/Пользователь/Desktop/work/alaros/src/components/_about/about-press",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.start.executor": "Run",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "copyright.filetypes.SCSS",
-    "ts.external.directory.path": "C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jsx.switch.disabled&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/work/alaros/public/Assets/Projects/2023/Project_85&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright.filetypes.SCSS&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Пользователь\\Desktop\\work\\alaros\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Projects\2023\Project_85" />
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\Logo-partners" />
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\partners-slider\infopartners" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-press" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Press" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-life" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\_about\about-presidium" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages\About\History\Additions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\app" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\text-and-images-sliders" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components" />
       <recent name="C:\Users\Пользователь\Desktop\work\alaros\public\Assets\Pages" />
-      <recent name="C:\Users\Пользователь\Desktop\work\alaros\src\components\yandex-map" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -447,401 +593,428 @@
       <workItem from="1760708178458" duration="1286000" />
       <workItem from="1761068277843" duration="12000" />
       <workItem from="1761223396527" duration="3659000" />
-      <workItem from="1761309330693" duration="4295000" />
+      <workItem from="1761309330693" duration="4628000" />
+      <workItem from="1761398380731" duration="11316000" />
+      <workItem from="1761484230078" duration="10646000" />
+      <workItem from="1761764462973" duration="1380000" />
+      <workItem from="1761831900706" duration="11573000" />
+      <workItem from="1761913360173" duration="16537000" />
+      <workItem from="1762082573853" duration="16635000" />
+      <workItem from="1762176366412" duration="7915000" />
+      <workItem from="1762253902824" duration="33084000" />
+      <workItem from="1762341784059" duration="20164000" />
+      <workItem from="1762438012147" duration="3572000" />
+      <workItem from="1762516468923" duration="5706000" />
+      <workItem from="1762620546989" duration="12000" />
+      <workItem from="1762703634227" duration="4794000" />
+      <workItem from="1762791268064" duration="3084000" />
+      <workItem from="1762891052218" duration="5084000" />
+      <workItem from="1762947982573" duration="3573000" />
+      <workItem from="1763119625380" duration="9155000" />
+      <workItem from="1763228540167" duration="2024000" />
+      <workItem from="1763402598404" duration="6517000" />
+      <workItem from="1763467324222" duration="14996000" />
+      <workItem from="1763554844036" duration="6095000" />
+      <workItem from="1763843107096" duration="5062000" />
+      <workItem from="1763899375356" duration="14219000" />
+      <workItem from="1764075879573" duration="664000" />
+      <workItem from="1764420428692" duration="17000" />
+      <workItem from="1764431829115" duration="9352000" />
+      <workItem from="1764504327735" duration="2915000" />
     </task>
-    <task id="LOCAL-00192" summary="правки шрифтов">
+    <task id="LOCAL-00241" summary="догруз фото, правки фестиваля, граница на проектах для проверки в сафари">
       <option name="closed" value="true" />
-      <created>1753055040586</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
+      <created>1761322422356</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
       <option name="project" value="LOCAL" />
-      <updated>1753055040593</updated>
+      <updated>1761322422356</updated>
     </task>
-    <task id="LOCAL-00193" summary="блок жизни">
+    <task id="LOCAL-00242" summary="сделала равномерные отступы в слайдере партнёров">
       <option name="closed" value="true" />
-      <created>1753205896777</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
+      <created>1761401452433</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
       <option name="project" value="LOCAL" />
-      <updated>1753205896777</updated>
+      <updated>1761401452433</updated>
     </task>
-    <task id="LOCAL-00194" summary="правки шрифтов">
+    <task id="LOCAL-00243" summary="правки календаря на мобиле">
       <option name="closed" value="true" />
-      <created>1753216309175</created>
-      <option name="number" value="00194" />
-      <option name="presentableId" value="LOCAL-00194" />
+      <created>1761408624089</created>
+      <option name="number" value="00243" />
+      <option name="presentableId" value="LOCAL-00243" />
       <option name="project" value="LOCAL" />
-      <updated>1753216309175</updated>
+      <updated>1761408624089</updated>
     </task>
-    <task id="LOCAL-00195" summary="довела до ума блок с картой и поменяла фон">
+    <task id="LOCAL-00244" summary="запретила масштабирование">
       <option name="closed" value="true" />
-      <created>1753637933544</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
+      <created>1761409908879</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
       <option name="project" value="LOCAL" />
-      <updated>1753637933546</updated>
+      <updated>1761409908879</updated>
     </task>
-    <task id="LOCAL-00196" summary="правки загрузки">
+    <task id="LOCAL-00245" summary="догруз фото, добавила svh">
       <option name="closed" value="true" />
-      <created>1753706114677</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
+      <created>1761496741596</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
       <option name="project" value="LOCAL" />
-      <updated>1753706114677</updated>
+      <updated>1761496741596</updated>
     </task>
-    <task id="LOCAL-00197" summary="регулирование уровня появления подсказки">
+    <task id="LOCAL-00246" summary="установила метрику">
       <option name="closed" value="true" />
-      <created>1753709177964</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
+      <created>1761837235789</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
       <option name="project" value="LOCAL" />
-      <updated>1753709177964</updated>
+      <updated>1761837235789</updated>
     </task>
-    <task id="LOCAL-00198" summary="блкировка кнопки">
+    <task id="LOCAL-00247" summary="попытка фикс метрику">
       <option name="closed" value="true" />
-      <created>1753789156410</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
+      <created>1761847249927</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
       <option name="project" value="LOCAL" />
-      <updated>1753789156410</updated>
+      <updated>1761847249927</updated>
     </task>
-    <task id="LOCAL-00199" summary="фотки">
+    <task id="LOCAL-00248" summary="добавила скролл в проект и ключи">
       <option name="closed" value="true" />
-      <created>1753792763521</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
+      <created>1761943221087</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
       <option name="project" value="LOCAL" />
-      <updated>1753792763521</updated>
+      <updated>1761943221087</updated>
     </task>
-    <task id="LOCAL-00200" summary="проставила id">
+    <task id="LOCAL-00249" summary="добавила скрытие форума">
       <option name="closed" value="true" />
-      <created>1753806273217</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
+      <created>1762084264839</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
       <option name="project" value="LOCAL" />
-      <updated>1753806273218</updated>
+      <updated>1762084264839</updated>
     </task>
-    <task id="LOCAL-00201" summary="закрыла красный фестиваль">
+    <task id="LOCAL-00250" summary="добавила обработку согласия">
       <option name="closed" value="true" />
-      <created>1753806610188</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
+      <created>1762087557595</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
       <option name="project" value="LOCAL" />
-      <updated>1753806610188</updated>
+      <updated>1762087557595</updated>
     </task>
-    <task id="LOCAL-00202" summary="улучшила сброс формы">
+    <task id="LOCAL-00251" summary="метрика только на клиенте и добавила ключи">
       <option name="closed" value="true" />
-      <created>1755545333051</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
+      <created>1762089844333</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
       <option name="project" value="LOCAL" />
-      <updated>1755545333052</updated>
+      <updated>1762089844333</updated>
     </task>
-    <task id="LOCAL-00203" summary="правки блока руководства">
+    <task id="LOCAL-00252" summary="подняла стрелки слайдера проектов на мобиле">
       <option name="closed" value="true" />
-      <created>1755617645250</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
+      <created>1762090559402</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
       <option name="project" value="LOCAL" />
-      <updated>1755617645250</updated>
+      <updated>1762090559402</updated>
     </task>
-    <task id="LOCAL-00204" summary="загрузка фона">
+    <task id="LOCAL-00253" summary="вернула в слайдер кривые отступы">
       <option name="closed" value="true" />
-      <created>1755622015545</created>
-      <option name="number" value="00204" />
-      <option name="presentableId" value="LOCAL-00204" />
+      <created>1762094212095</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
       <option name="project" value="LOCAL" />
-      <updated>1755622015545</updated>
+      <updated>1762094212095</updated>
     </task>
-    <task id="LOCAL-00205" summary="вывод ошибки в логи">
+    <task id="LOCAL-00254" summary="убрала лишнии логи сервера">
       <option name="closed" value="true" />
-      <created>1755781226628</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
+      <created>1762094539051</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
       <option name="project" value="LOCAL" />
-      <updated>1755781226629</updated>
+      <updated>1762094539051</updated>
     </task>
-    <task id="LOCAL-00206" summary="сделала ограничение на кол-во символв">
+    <task id="LOCAL-00255" summary="правки меню на мобиле">
       <option name="closed" value="true" />
-      <created>1755870935547</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
+      <created>1762113677564</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
       <option name="project" value="LOCAL" />
-      <updated>1755870935547</updated>
+      <updated>1762113677564</updated>
     </task>
-    <task id="LOCAL-00207" summary="открыла красный фестиваль">
+    <task id="LOCAL-00256" summary="передача согласия в mbox при клике">
       <option name="closed" value="true" />
-      <created>1756128141490</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
+      <created>1762182608576</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
       <option name="project" value="LOCAL" />
-      <updated>1756128141491</updated>
+      <updated>1762182608576</updated>
     </task>
-    <task id="LOCAL-00208" summary="правки фестиваля">
+    <task id="LOCAL-00257" summary="изменила сборку">
       <option name="closed" value="true" />
-      <created>1756142203346</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
+      <created>1762255420283</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
       <option name="project" value="LOCAL" />
-      <updated>1756142203346</updated>
+      <updated>1762255420283</updated>
     </task>
-    <task id="LOCAL-00209" summary="добавила отступ">
+    <task id="LOCAL-00258" summary="поправила ширину колонок на xl">
       <option name="closed" value="true" />
-      <created>1756143785523</created>
-      <option name="number" value="00209" />
-      <option name="presentableId" value="LOCAL-00209" />
+      <created>1762256823244</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
       <option name="project" value="LOCAL" />
-      <updated>1756143785523</updated>
+      <updated>1762256823244</updated>
     </task>
-    <task id="LOCAL-00210" summary="правки блока руководства">
+    <task id="LOCAL-00259" summary="поправила меню">
       <option name="closed" value="true" />
-      <created>1756223039882</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
+      <created>1762258073542</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
       <option name="project" value="LOCAL" />
-      <updated>1756223039882</updated>
+      <updated>1762258073542</updated>
     </task>
-    <task id="LOCAL-00211" summary="поставил видео через фрейм">
+    <task id="LOCAL-00260" summary="поправила отстпы в форме на мобиле">
       <option name="closed" value="true" />
-      <created>1756314672663</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
+      <created>1762266271084</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
       <option name="project" value="LOCAL" />
-      <updated>1756314672663</updated>
+      <updated>1762266271084</updated>
     </task>
-    <task id="LOCAL-00212" summary="проставила id">
+    <task id="LOCAL-00261" summary="поправила календарь и обрезка новостей на мобиле">
       <option name="closed" value="true" />
-      <created>1756317624761</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
+      <created>1762269539960</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
       <option name="project" value="LOCAL" />
-      <updated>1756317624761</updated>
+      <updated>1762269539960</updated>
     </task>
-    <task id="LOCAL-00213" summary="тех правки">
+    <task id="LOCAL-00262" summary="поправила гл экран гл страницы мобиле">
       <option name="closed" value="true" />
-      <created>1756483566632</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
+      <created>1762274335752</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
       <option name="project" value="LOCAL" />
-      <updated>1756483566632</updated>
+      <updated>1762274335752</updated>
     </task>
-    <task id="LOCAL-00214" summary="правки о нас и отступ после формы">
+    <task id="LOCAL-00263" summary="поправила контакты и сделала чтобы в меню не было пустого блока">
       <option name="closed" value="true" />
-      <created>1756661841243</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
+      <created>1762284950849</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
       <option name="project" value="LOCAL" />
-      <updated>1756661841244</updated>
+      <updated>1762284950849</updated>
     </task>
-    <task id="LOCAL-00215" summary="правки увеличела ширину номинаций в шаблонах">
+    <task id="LOCAL-00264" summary="на каждый день ДП отдельный блок">
       <option name="closed" value="true" />
-      <created>1756732764970</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
+      <created>1762298587131</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
       <option name="project" value="LOCAL" />
-      <updated>1756732764970</updated>
+      <updated>1762298587131</updated>
     </task>
-    <task id="LOCAL-00216" summary="правки жюри и догруз фото">
+    <task id="LOCAL-00265" summary="правки шапки">
       <option name="closed" value="true" />
-      <created>1756745353066</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
+      <created>1762352679815</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
       <option name="project" value="LOCAL" />
-      <updated>1756745353067</updated>
+      <updated>1762352679815</updated>
     </task>
-    <task id="LOCAL-00217" summary="правки жюри">
+    <task id="LOCAL-00266" summary="правка кук">
       <option name="closed" value="true" />
-      <created>1756830031589</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
+      <created>1762357578615</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
       <option name="project" value="LOCAL" />
-      <updated>1756830031589</updated>
+      <updated>1762357578615</updated>
     </task>
-    <task id="LOCAL-00218" summary="увеличела междустрочие возле даты">
+    <task id="LOCAL-00267" summary="добавил х-скролл защитам">
       <option name="closed" value="true" />
-      <created>1756830401443</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
+      <created>1762360038333</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
       <option name="project" value="LOCAL" />
-      <updated>1756830401443</updated>
+      <updated>1762360038333</updated>
     </task>
-    <task id="LOCAL-00219" summary="уменьшила отступ под именем жюри">
+    <task id="LOCAL-00268" summary="правки шапки и кук">
       <option name="closed" value="true" />
-      <created>1756831141520</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
+      <created>1762360505364</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
       <option name="project" value="LOCAL" />
-      <updated>1756831141520</updated>
+      <updated>1762360505364</updated>
     </task>
-    <task id="LOCAL-00220" summary="выравнивание зага календаря">
+    <task id="LOCAL-00269" summary="правки шапки и ключила вебвизор">
       <option name="closed" value="true" />
-      <created>1756904528271</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
+      <created>1762365579927</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
       <option name="project" value="LOCAL" />
-      <updated>1756904528271</updated>
+      <updated>1762365579928</updated>
     </task>
-    <task id="LOCAL-00221" summary="правки ДП">
+    <task id="LOCAL-00270" summary="мелки правки и открыла форум">
       <option name="closed" value="true" />
-      <created>1756928728306</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
+      <created>1762461698004</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
       <option name="project" value="LOCAL" />
-      <updated>1756928728306</updated>
+      <updated>1762461698004</updated>
     </task>
-    <task id="LOCAL-00222" summary="правки форума">
+    <task id="LOCAL-00271" summary="догруз фото">
       <option name="closed" value="true" />
-      <created>1757002044212</created>
-      <option name="number" value="00222" />
-      <option name="presentableId" value="LOCAL-00222" />
+      <created>1762525686680</created>
+      <option name="number" value="00271" />
+      <option name="presentableId" value="LOCAL-00271" />
       <option name="project" value="LOCAL" />
-      <updated>1757002044212</updated>
+      <updated>1762525686681</updated>
     </task>
-    <task id="LOCAL-00223" summary="сделала проверку токена при устоановки id номинации">
+    <task id="LOCAL-00272" summary="догруз фото">
       <option name="closed" value="true" />
-      <created>1757095328103</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
+      <created>1762525774263</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
       <option name="project" value="LOCAL" />
-      <updated>1757095328104</updated>
+      <updated>1762525774263</updated>
     </task>
-    <task id="LOCAL-00224" summary="поправила ширину контента истории">
+    <task id="LOCAL-00273" summary="обрезка фото">
       <option name="closed" value="true" />
-      <created>1757165558150</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
+      <created>1762529405511</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
       <option name="project" value="LOCAL" />
-      <updated>1757165558150</updated>
+      <updated>1762529405511</updated>
     </task>
-    <task id="LOCAL-00225" summary="поправила ширину текста истории">
+    <task id="LOCAL-00274" summary="обрезка фото">
       <option name="closed" value="true" />
-      <created>1757168328088</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
+      <created>1762529945424</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
       <option name="project" value="LOCAL" />
-      <updated>1757168328088</updated>
+      <updated>1762529945424</updated>
     </task>
-    <task id="LOCAL-00226" summary="мелкие правки">
+    <task id="LOCAL-00275" summary="правки отступов и сборки">
       <option name="closed" value="true" />
-      <created>1757688782024</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
+      <created>1762709560069</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
       <option name="project" value="LOCAL" />
-      <updated>1757688782024</updated>
+      <updated>1762709560069</updated>
     </task>
-    <task id="LOCAL-00227" summary="правки попапа">
+    <task id="LOCAL-00276" summary="добавила место защиты">
       <option name="closed" value="true" />
-      <created>1757690050884</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
+      <created>1762948237255</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
       <option name="project" value="LOCAL" />
-      <updated>1757690050884</updated>
+      <updated>1762948237257</updated>
     </task>
-    <task id="LOCAL-00228" summary="правки выхода с модалки">
+    <task id="LOCAL-00277" summary="правки стилей">
       <option name="closed" value="true" />
-      <created>1757776335995</created>
-      <option name="number" value="00228" />
-      <option name="presentableId" value="LOCAL-00228" />
+      <created>1762950393056</created>
+      <option name="number" value="00277" />
+      <option name="presentableId" value="LOCAL-00277" />
       <option name="project" value="LOCAL" />
-      <updated>1757776335996</updated>
+      <updated>1762950393056</updated>
     </task>
-    <task id="LOCAL-00229" summary="блокировка кликов до появления контента">
+    <task id="LOCAL-00278" summary="правки скролла по хешу">
       <option name="closed" value="true" />
-      <created>1759405279591</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
+      <created>1763124939511</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
       <option name="project" value="LOCAL" />
-      <updated>1759405279591</updated>
+      <updated>1763124939511</updated>
     </task>
-    <task id="LOCAL-00230" summary="автопереключение даты">
+    <task id="LOCAL-00279" summary="сделала блок инфопартнёров">
       <option name="closed" value="true" />
-      <created>1759407492041</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
+      <created>1763481072603</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
       <option name="project" value="LOCAL" />
-      <updated>1759407492041</updated>
+      <updated>1763481072604</updated>
     </task>
-    <task id="LOCAL-00231" summary="сделала чтобы пагинация перебрасывала не только вверх, но и к блоку">
+    <task id="LOCAL-00280" summary="правки инфопартнёров">
       <option name="closed" value="true" />
-      <created>1759413863123</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
+      <created>1763494109533</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
       <option name="project" value="LOCAL" />
-      <updated>1759413863123</updated>
+      <updated>1763494109533</updated>
     </task>
-    <task id="LOCAL-00232" summary="сделала чтобы при перетаскивании ползунка ничего не выделялось">
+    <task id="LOCAL-00281" summary="правки жирности загов">
       <option name="closed" value="true" />
-      <created>1759419655047</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
+      <created>1763557993700</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
       <option name="project" value="LOCAL" />
-      <updated>1759419655047</updated>
+      <updated>1763557993700</updated>
     </task>
-    <task id="LOCAL-00233" summary="подвинула фон управления">
+    <task id="LOCAL-00282" summary="убрала отступ меежду ДП">
       <option name="closed" value="true" />
-      <created>1759499656461</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
+      <created>1763562454555</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
       <option name="project" value="LOCAL" />
-      <updated>1759499656461</updated>
+      <updated>1763562454555</updated>
     </task>
-    <task id="LOCAL-00234" summary="поправила линию в календаре">
+    <task id="LOCAL-00283" summary="правки гл экранов на xxl">
       <option name="closed" value="true" />
-      <created>1759779118283</created>
-      <option name="number" value="00234" />
-      <option name="presentableId" value="LOCAL-00234" />
+      <created>1763566908217</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
       <option name="project" value="LOCAL" />
-      <updated>1759779118283</updated>
+      <updated>1763566908217</updated>
     </task>
-    <task id="LOCAL-00235" summary="сделала доп. проверку параметров">
+    <task id="LOCAL-00284" summary="правки партнёров">
       <option name="closed" value="true" />
-      <created>1759780467628</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
+      <created>1763848193116</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
       <option name="project" value="LOCAL" />
-      <updated>1759780467628</updated>
+      <updated>1763848193116</updated>
     </task>
-    <task id="LOCAL-00236" summary="замедлила слайдер партнёров">
+    <task id="LOCAL-00285" summary="правки календаря">
       <option name="closed" value="true" />
-      <created>1760016569419</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
+      <created>1763902696615</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
       <option name="project" value="LOCAL" />
-      <updated>1760016569429</updated>
+      <updated>1763902696615</updated>
     </task>
-    <task id="LOCAL-00237" summary="уменьшила отступы в выпадашках управления">
+    <task id="LOCAL-00286" summary="правки кнопки гл">
       <option name="closed" value="true" />
-      <created>1760362583544</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
+      <created>1763905518866</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
       <option name="project" value="LOCAL" />
-      <updated>1760362583544</updated>
+      <updated>1763905518866</updated>
     </task>
-    <task id="LOCAL-00238" summary="поправила меню на мобиле">
+    <task id="LOCAL-00287" summary="правки контактов форума">
       <option name="closed" value="true" />
-      <created>1760540959161</created>
-      <option name="number" value="00238" />
-      <option name="presentableId" value="LOCAL-00238" />
+      <created>1763912502740</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
       <option name="project" value="LOCAL" />
-      <updated>1760540959161</updated>
+      <updated>1763912502740</updated>
     </task>
-    <task id="LOCAL-00239" summary="сделала скрол у президиума и убрала ховер наа сенцере">
+    <task id="LOCAL-00288" summary="правки экрана заглушки">
       <option name="closed" value="true" />
-      <created>1760545288662</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
+      <created>1763913976435</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
       <option name="project" value="LOCAL" />
-      <updated>1760545288662</updated>
+      <updated>1763913976435</updated>
     </task>
-    <task id="LOCAL-00240" summary="догруз фото, правки фестиваля, граница на проектах для проверки в сафари">
+    <task id="LOCAL-00289" summary="возможность скрытия инфопартнёров">
       <option name="closed" value="true" />
-      <created>1761322102863</created>
-      <option name="number" value="00240" />
-      <option name="presentableId" value="LOCAL-00240" />
+      <created>1763916137213</created>
+      <option name="number" value="00289" />
+      <option name="presentableId" value="LOCAL-00289" />
       <option name="project" value="LOCAL" />
-      <updated>1761322102864</updated>
+      <updated>1763916137213</updated>
     </task>
-    <option name="localTasksCounter" value="241" />
+    <option name="localTasksCounter" value="290" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -871,39 +1044,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="правки жюри и догруз фото" />
-    <MESSAGE value="правки жюри" />
-    <MESSAGE value="увеличела междустрочие возле даты" />
-    <MESSAGE value="уменьшила отступ под именем жюри" />
-    <MESSAGE value="выравнивание зага календаря" />
-    <MESSAGE value="правки ДП" />
-    <MESSAGE value="правки форума" />
-    <MESSAGE value="сделала проверку токена при устоановки id номинации" />
-    <MESSAGE value="поправила ширину контента истории" />
-    <MESSAGE value="поправила ширину текста истории" />
-    <MESSAGE value="мелкие правки" />
-    <MESSAGE value="правки попапа" />
-    <MESSAGE value="правки выхода с модалки" />
-    <MESSAGE value="блокировка кликов до появления контента" />
-    <MESSAGE value="автопереключение даты" />
-    <MESSAGE value="сделала чтобы пагинация перебрасывала не только вверх, но и к блоку" />
-    <MESSAGE value="сделала чтобы при перетаскивании ползунка ничего не выделялось" />
-    <MESSAGE value="подвинула фон управления" />
-    <MESSAGE value="поправила линию в календаре" />
-    <MESSAGE value="сделала доп. проверку параметров" />
-    <MESSAGE value="замедлила слайдер партнёров" />
-    <MESSAGE value="уменьшила отступы в выпадашках управления" />
-    <MESSAGE value="поправила меню на мобиле" />
-    <MESSAGE value="сделала скрол у президиума и убрала ховер наа сенцере" />
-    <MESSAGE value="догруз фото, правки фестиваля, граница на проектах для проверки в сафари" />
-    <option name="LAST_COMMIT_MESSAGE" value="догруз фото, правки фестиваля, граница на проектах для проверки в сафари" />
+    <MESSAGE value="поправила контакты и сделала чтобы в меню не было пустого блока" />
+    <MESSAGE value="на каждый день ДП отдельный блок" />
+    <MESSAGE value="правки шапки" />
+    <MESSAGE value="правка кук" />
+    <MESSAGE value="добавил х-скролл защитам" />
+    <MESSAGE value="правки шапки и кук" />
+    <MESSAGE value="правки шапки и ключила вебвизор" />
+    <MESSAGE value="мелки правки и открыла форум" />
+    <MESSAGE value="догруз фото" />
+    <MESSAGE value="обрезка фото" />
+    <MESSAGE value="правки отступов и сборки" />
+    <MESSAGE value="добавила место защиты" />
+    <MESSAGE value="правки стилей" />
+    <MESSAGE value="правки скролла по хешу" />
+    <MESSAGE value="сделала блок инфопартнёров" />
+    <MESSAGE value="правки инфопартнёров" />
+    <MESSAGE value="правки жирности загов" />
+    <MESSAGE value="убрала отступ меежду ДП" />
+    <MESSAGE value="правки гл экранов на xxl" />
+    <MESSAGE value="правки партнёров" />
+    <MESSAGE value="правки календаря" />
+    <MESSAGE value="правки кнопки гл" />
+    <MESSAGE value="правки контактов форума" />
+    <MESSAGE value="правки экрана заглушки" />
+    <MESSAGE value="возможность скрытия инфопартнёров" />
+    <option name="LAST_COMMIT_MESSAGE" value="возможность скрытия инфопартнёров" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/calendar-events/CalendarEventsClient.tsx</url>
-          <line>349</line>
+          <line>356</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -922,8 +1095,8 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/cookie/Cookie.tsx</url>
-          <line>6</line>
+          <url>file://$PROJECT_DIR$/src/components/big-slider/BigSlider.tsx</url>
+          <line>22</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

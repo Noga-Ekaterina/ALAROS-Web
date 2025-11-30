@@ -30,7 +30,7 @@ const ContactsMainScreen = ({data}: Props) => {
             data.images.map((img, index) => (
                 <div
                     className={`contacts-main-screen__img contacts-main-screen__img--${index + 1}`} key={index}>
-                  <img src={`/Assets/Pages/Contacts/${img}`} alt=""/>
+                  <img src={`/Assets/Pages/Contacts/${img}`} alt="" loading="lazy"/>
                 </div>
             ))
           }

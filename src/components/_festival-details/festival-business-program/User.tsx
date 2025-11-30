@@ -9,7 +9,7 @@ interface IProps{
 const UserCard=({user}: IProps)=>{
   return(
       <div className="session-user">
-        <img src={`/Assets/Pages/People/${user.image}`} alt="" className="session-user__img"/>
+        <img src={`/Assets/Pages/People/${user.image}`} alt="" className="session-user__img" loading="lazy"/>
         <div className="session-user__name">
           <p>{nonBreakingSpaces(user.name)}</p>
         </div>

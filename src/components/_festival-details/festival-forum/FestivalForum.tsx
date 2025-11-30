@@ -38,7 +38,7 @@ const FestivalForum = ({pageData}:Props) => {
           {
             pageData.forumImages.map((img, index)=>(
                 <SwiperSlide key={index} className="festival-forum__slide">
-                  <img src={`/Assets/Pages/Festival-details/Forum/${img}`} alt=""/>
+                  <img src={`/Assets/Pages/Festival-details/Forum/${img}`} alt="" loading="lazy"/>
                 </SwiperSlide>
             ))
           }

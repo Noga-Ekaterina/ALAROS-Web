@@ -47,7 +47,7 @@ const AboutLife = ({pageData}: Props) => {
                         key={index}
                         className={`about-life__slide about-life__slide--${slide.size}`}
                     >
-                      <img src={`/Assets/Pages/About/Life/${slide.image}`} alt=""/>
+                      <img src={`/Assets/Pages/About/Life/${slide.image}`} alt="" loading="lazy"/>
                       <HtmlProcessing html={`<p>${slide.caption}</p>`}/>
                     </SwiperSlide>
                 ))

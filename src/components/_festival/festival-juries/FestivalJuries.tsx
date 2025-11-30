@@ -73,14 +73,15 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
               <Swiper slidesPerView="auto" spaceBetween={(bigDesktopScreen? 9.45:8.28)*rem}>
                 {
                   sections[activeSection].juries.map((item, itemIndex) => (
-                      <SwiperSlide key={itemIndex} className="festival-juries__slide"
-                                   onClick={() => openInfo(itemIndex)}
+                      <SwiperSlide
+                          key={itemIndex} className="festival-juries__slide"
+                          onClick={() => openInfo(itemIndex)}
                       >
                         {
                             item &&
                             <>
                                <div className="festival-juries__img-wrap">
-                                  <img src={`/Assets/Pages/People/${item.image}`} alt=""/>
+                                  <img src={`/Assets/Pages/People/${item.image}`} alt="" loading="lazy"/>
 
                                   <div className={cn(
                                       "festival-juries__info",

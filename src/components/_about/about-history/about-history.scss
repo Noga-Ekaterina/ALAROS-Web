@@ -114,6 +114,7 @@
       width: 50%;
       vertical-align: bottom;
       margin-bottom: -1em;
+      background: var(--c-grey-bg-light);
 
       @include sm{
         width: 100%;

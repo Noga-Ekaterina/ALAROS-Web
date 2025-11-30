@@ -37,7 +37,7 @@ const AboutPress = ({pageData}: Props) => {
                   >
                     <a href={slide.link} target="_blank" className="about-press__item">
                       <div className="about-press__img">
-                        <img src={`/Press/${slide.image}`} alt=""/>
+                        <img src={`/Press/${slide.image}`} alt="" loading="lazy"/>
 
                         <div className="about-press__hover-block">
                           <span>Читать</span>
