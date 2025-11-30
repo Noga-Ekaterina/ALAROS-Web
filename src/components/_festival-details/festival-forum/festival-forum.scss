@@ -94,6 +94,7 @@
 
   &__slide{
     aspect-ratio: 398/191;
+    background: var(--c-grey-bg-light);
 
     @include adaptive((
             width: (default: 398rem, xl: 665, sm: 340)
