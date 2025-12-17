@@ -11,7 +11,7 @@ export const useSearchParamsControl = () => {
   const searchParams = useSearchParams();
 
   const updateUrl = useCallback(
-      (params: URLSearchParams, method: NavigationMethod = 'replace', scroll?: boolean) => {
+      (params: URLSearchParams, method: NavigationMethod = 'push', scroll?: boolean) => {
         const search = params.toString();
         const queryString = search ? `?${search}` : '';
 

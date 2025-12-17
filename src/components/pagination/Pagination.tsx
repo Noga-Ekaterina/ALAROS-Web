@@ -46,8 +46,8 @@ const Pagination = ({count, size, hash}:Props) => {
           <ReactSVG src="/Assets/Icons/arrow.svg"/>
         </button>
         {
-          (pages>0 && page < 5) ?
-              Array.from({length: pages <= 3 ? pages : pages === 4 ? 4 : 3}, (_, index) => (
+          (pages>0 && (pages<=5 || page < 4)) ?
+              Array.from({length: pages <= 5 ? pages : 3}, (_, index) => (
                   <button
                       key={index}
                       className={cn("pagination__page",{"pagination__page--active": index + 1 == (page > 0 ? page : 1)})}
@@ -65,14 +65,12 @@ const Pagination = ({count, size, hash}:Props) => {
               </button>
         }
         {
-            (pages > 4 ) &&
+            (pages > 5 ) &&
             <>
               {
-                (page > 3 && page < pages-3) ?
+                (page > 3 && page < pages-2) ?
                     <>
-                      {
-                          page > 4 && <span>...</span>
-                      }
+                      <span>...</span>
 
                       <span className="pagination__page pagination__page--active">{`${page < 10 ? "0" : ''}${page}`}</span>
 
@@ -83,8 +81,8 @@ const Pagination = ({count, size, hash}:Props) => {
                     : <span>...</span>
               }
               {
-                (page>=pages-3) ?
-                    Array.from({length: page== pages-3? 4:3}, (_, index) => {
+                (page>=pages-2) ?
+                    Array.from({length: 3}, (_, index) => {
                       const el= pages - (page== pages-3? 3:2)+index
                       return (
                           <button
