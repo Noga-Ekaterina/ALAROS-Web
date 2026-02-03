@@ -22,6 +22,7 @@ const ProjectsFilter = ({projectsPage}:Props) => {
 
     return result
   }, [])
+  console.log(nominations)
 
   const [years, setYears] = useState<string[]>([])
   const searchParams= useSearchParams()

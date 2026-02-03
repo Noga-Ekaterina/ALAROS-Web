@@ -97,6 +97,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
     if (!calendarEvents) return
 
     const data= eventsDataProcessing(calendarEvents)
+    console.log(data)
     setEventsByYear(data)
     setYears(Object.keys(data))
   }, [calendarEvents]);

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mrr_97/next-yandex-metrika": "^1.0.1",
+    "@strapi/client": "^1.6.0",
     "@studio-freight/lenis": "^1.0.42",
     "@studio-freight/react-lenis": "^0.0.47",
     "@types/nodemailer": "^6.4.17",

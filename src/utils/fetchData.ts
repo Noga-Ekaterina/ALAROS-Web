@@ -2,7 +2,7 @@ import axios, {AxiosError} from "axios";
 import {INews, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 
-export const fetchData=async <T>(query: string): Promise<null|string|T>=> {
+export const  fetchData=async <T>(query: string): Promise<null|string|T>=> {
   try{
     const resp= await axios({
       method: 'POST',

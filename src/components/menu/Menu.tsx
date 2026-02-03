@@ -3,34 +3,17 @@ import "./menu.scss"
 import MenuClient from "@/components/menu/MenuClient";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
-import {IMenuSection} from "@/types/data";
-
-interface IData{
-  menuSections: IMenuSection[]
-}
+import {IMenu} from "@/types/data";
+import {fetchSingle} from "@/utils/strapFetch";
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-    query MyQuery {
-      menuSections(orderBy: position_ASC) {
-        position
-        section {
-          html
-        }
-        subsections {
-          html
-        }
-        isAdditional
-      }
-    }
-  `)
-
+  const data= await fetchSingle<IMenu>("menu")
   if (typeof data==="string" || !data){
     return data
   }
 
-  return data.menuSections
-}, ["menu"], {tags: ["MenuSection"]})
+  return data
+}, ["menu"], {tags: ["menu"]})
 
 const Menu = async () => {
   const data= await init()

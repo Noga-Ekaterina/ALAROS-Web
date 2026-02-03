@@ -4,24 +4,31 @@ export interface IHtmlString{
   html: string
 }
 
+export interface IHtml{
+  text: string
+}
+
 export interface IMapCoordinates {
   latitude: number;
   longitude: number;
 }
 
 export interface IFooter{
-  navigationColumn: IHtmlString
-  columns: IHtmlString[]
-  mobileColumns: number[]
-  socials: IHtmlString
+  navigationColumn: string
+  columns: IHtml[]
+  mobileColumn: number
+  socials: string
   socialsColumn: number
 }
 
 export interface IMenuSection {
-  section: IHtmlString;
-  subsections: IHtmlString[];
-  position: number;
-  isAdditional: boolean
+  section: string;
+  subsections: IHtml[];
+}
+
+export interface IMenu{
+  sections: IMenuSection[]
+  additionals: IHtml[]
 }
 
 export interface IHomeMainScreen{
