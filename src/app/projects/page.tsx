@@ -8,6 +8,7 @@ import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import Pagination from "@/components/pagination/Pagination";
+import {fetchColection} from "@/utils/strapFetch";
 
 
 interface Props{
@@ -46,7 +47,33 @@ const init=unstable_cache( async (year: undefined| string, nomination: undefined
     count: data.projectsConnection.aggregate.count
   }
 },
-    ["projects"], {tags: ["Project", "ProjectsPage"]})
+    ["projects-page"], {tags: [ "projects-page"]})
+
+const getProjects=unstable_cache( async (year: undefined| string, nomination: undefined |string, page: string)=>{
+  const filters: Record<string, unknown>={}
+
+  if (year)
+    filters.year={"$eq": year}
+
+  if (nomination)
+    filters.nomination={id:{"$eq": nomination}}
+
+  const data= await fetchColection<IProject>({
+    name: 'projects',
+    sort: "year:desc",
+    filters,
+    pagination:{
+      pageSize: 20,
+      page: Number(page)
+    }
+  })
+
+  if (typeof data==="string" || !data) {
+    return data
+  }
+  return data
+},
+["projects"], {tags: ["project"]})
 
 const Page = async ({searchParams}: Props) => {
   const {page, nomination, year}= searchParams
@@ -56,9 +83,19 @@ const Page = async ({searchParams}: Props) => {
       typeof page==="string"? !isNaN(Number(page))? page:"1":"1"
   )
 
+  const projectsData=await getProjects(
+      typeof year ==="string"? year:undefined,
+      typeof nomination ==="string"? nomination:undefined,
+      typeof page==="string"? !isNaN(Number(page))? page:"1":"1"
+  )
+
+  if (typeof projectsData==="string" || !projectsData) {
+    revalidateTag("Project")
+    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+  }
+
   if (typeof data==="string" || !data) {
     revalidateTag("Project")
-    revalidateTag("ProjectsPage")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 
@@ -70,9 +107,9 @@ const Page = async ({searchParams}: Props) => {
             <h1 className="titles-block__title titles-block__title--small">{data.pageData.title}</h1>
           </div>
           <ProjectsFilter projectsPage={data.pageData}/>
-          <ProjectsList projects={data.projects}/>
+          <ProjectsList projects={projectsData.data}/>
         </div>
-        <Pagination count={data.count} size={20}/>
+        <Pagination pages={projectsData.meta.pagination.pageCount}/>
       </AnimationPage>
   );
 };

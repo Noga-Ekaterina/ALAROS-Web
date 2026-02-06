@@ -8,6 +8,7 @@ import {usePathname, useSearchParams} from "next/navigation";
 import {buildLink} from "@/utils/buildLink";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SmoothScrolling from "@/app/SmoothScrolling";
+import Image from "@/components/Image";
 
 interface Props{
   project: IProject
@@ -26,7 +27,7 @@ const Project = ({project}: Props) => {
         <p style={{color}} className="project__diploma">{text}</p>
 
         <div className="project__img">
-          <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt="" loading='lazy'/>
+          <Image image={project.cover} size="small" mediaSizes={{tablet:'xs'}}/>
 
           <p className="project__year">{project.year}</p>
 
@@ -37,7 +38,7 @@ const Project = ({project}: Props) => {
             </SmoothScrolling>
           </div>
         </div>
-        <p className="project__nomination">{project.nomination && nonBreakingSpaces(project.nomination)}</p>
+        <p className="project__nomination">{project.nomination && nonBreakingSpaces(project.nomination.textInProjects)}</p>
       </Link>
   );
 };

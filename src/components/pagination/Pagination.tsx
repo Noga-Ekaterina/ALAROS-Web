@@ -11,13 +11,11 @@ import {useGetHashPosition} from "@/hoocs/useGetHashPosition";
 import {smoothScroll} from "@/utils/smoothScroll";
 
 interface Props{
-  count: number
-  size: number
+  pages: number
   hash?: string
 }
 
-const Pagination = ({count, size, hash}:Props) => {
-  const pages= Math.ceil(count/size)
+const Pagination = ({pages, hash}:Props) => {
   const searchParams= useSearchParams()
   const page= !searchParams.get("page")? 1:Number(searchParams.get("page"))??1
   const {setParam}=useSearchParamsControl()

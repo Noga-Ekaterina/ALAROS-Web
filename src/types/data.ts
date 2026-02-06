@@ -3,6 +3,36 @@ import {HTMLInputTypeAttribute} from "react";
 export interface IHtmlString{
   html: string
 }
+export type IImageSize = 'xxl' | 'xl' | 'large' | 'medium' | 'small' | 'xs' | 'thumbnail';
+
+export interface IImageFormat {
+  url: string;
+  width: number;
+  height: number;
+  size: number; // в байтах
+  mime?: string;
+  ext?: string;
+}
+
+export interface IImage {
+  id: number;
+  url: string;
+  alternativeText?: string;
+  caption?: string;
+  width: number;
+  height: number;
+  size: number; // размер оригинала в байтах
+  formats: {
+    xxl?: IImageFormat;
+    xl?: IImageFormat;
+    large?: IImageFormat;
+    medium?: IImageFormat;
+    small?: IImageFormat;
+    xs?: IImageFormat;
+    thumbnail?: IImageFormat;
+  };
+}
+
 
 export interface IHtml{
   text: string
@@ -251,10 +281,12 @@ export interface IProject{
   name: string
   diploma: TDiploma
   winner: string
-  nomination: string|null
+  nomination: null|{
+    textInProjects: string|null
+  }
   nominationId: string|null
-  cover: string
-  images: string[]
+  cover: IImage
+  images: IImage[]
   signature: null|string
 }
 
