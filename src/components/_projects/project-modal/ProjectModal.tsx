@@ -2,41 +2,26 @@ import React from 'react';
 import "./project-modal.scss"
 import {IProject} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
-import ProjectImagesSlider from "@/components/_projects/project-modal/project-images-slider/ProjectImagesSlider";
-import {diplomas} from "@/variables";
-import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-import SmoothScrolling from "@/app/SmoothScrolling";
-import AnimationPage from "@/app/AnimationPage";
 import ProjectModalClient from "@/components/_projects/project-modal/ProjectModalClient";
+import {fetchColection} from "@/utils/strapFetch";
 
 interface Props {
   projects: IProject[]
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-interface IData {
-  projects: IProject[]
-}
-
 const init = (year: string, number: string) => unstable_cache(
     async () => {
-      const data = await fetchData<IData>(`
-      query ProjectQuery {
-        projects(where: {year: ${year}, number: ${number}}) {
-          name
-          nomination
-          number
-          diploma
+      const data = await fetchColection<IProject>({
+        name: "projects",
+        filters:{
+          number,
           year
-          winner
-          images
         }
-      }`
-      )
+      })
 
       if (typeof data === "string" || !data) return data
-      return data.projects[0] || undefined
+      return data.data[0] || undefined
     },
     [`project-${year}-${number}`],
     {tags: [`project-${year}-${number}`]}
