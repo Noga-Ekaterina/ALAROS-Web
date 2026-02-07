@@ -12,6 +12,7 @@ import {TransformComponent, TransformWrapper} from "react-zoom-pan-pinch";
 import cn from "classnames";
 import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
 import ProjectText from "@/components/_projects/project-modal/project-text/ProjectText";
+import Image from "@/components/Image";
 
 interface Props{
   project: IProject
@@ -113,9 +114,7 @@ const ProjectImagesSlider = ({project, scale, handleScale}:Props) => {
                     {
                       scale > 1 ?
                           <div className="">
-                            <img
-                                src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.images[activeImage]}`}
-                                alt=""/>
+                            <Image image={project.images[activeImage]}/>
                           </div>
                           :<div/>
                     }
@@ -171,7 +170,7 @@ const ProjectImagesSlider = ({project, scale, handleScale}:Props) => {
                   setActiveImage(index)
                   handleScale(1.5)
                 }}>
-                  <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${image}`} alt=""/>
+                  <Image image={image}/>
                 </SwiperSlide>
             ))
           }

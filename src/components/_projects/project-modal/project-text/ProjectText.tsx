@@ -31,7 +31,7 @@ const ProjectText = ({project}:Props) => {
           <p>{nonBreakingSpaces(project.winner)}</p>
           {project.nomination && (
               <p className="project-text__nomination">
-                {nonBreakingSpaces(project.nomination)}
+                {nonBreakingSpaces(project.nomination.textInProjects)}
               </p>
           )}
         </div>

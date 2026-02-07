@@ -13,23 +13,20 @@ interface Props{
 }
 
 const ProjectsFilter = ({projectsPage}:Props) => {
-  const nominations= useMemo(() => (
-      nominationsSProcessing(projectsPage.nominations.html).map(nomination=> ({id: nomination.number, title: nomination.title}))
-  ), [])
   const nominationsValues = useMemo(() => {
-    const result=nominations.map(({title})=>title )
+    const result=projectsPage.nominations.map(({name})=>name )
     result.unshift("Все номинации")
 
     return result
   }, [])
-  console.log(nominations)
+  console.log(projectsPage.nominations)
 
   const [years, setYears] = useState<string[]>([])
   const searchParams= useSearchParams()
   const year= searchParams.get("year")
   const nomination= searchParams.get("nomination")
   const [yearValue, setYearValue] = useState(year??"Все года")
-  const [nominationsValue, setNominationsValue] = useState(nomination? nominations.find(item=> item.id==nomination)?.title??"неизвестная номинация":"Все номинации")
+  const [nominationsValue, setNominationsValue] = useState(nomination? projectsPage.nominations.find(item=> item.id.toString()==nomination)?.name??"неизвестная номинация":"Все номинации")
   const {setMultipleParams} = useSearchParamsControl();
   const {togleLoading}=store
 
@@ -39,9 +36,9 @@ const ProjectsFilter = ({projectsPage}:Props) => {
 
     let nominationFilter: null|string=null
 
-    for (let nomination of nominations) {
-      if (nomination.title===nominationsValue){
-        nominationFilter= nomination.id
+    for (let nomination of projectsPage.nominations) {
+      if (nomination.name===nominationsValue){
+        nominationFilter= nomination.id.toString()
         break
       }
     }

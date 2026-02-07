@@ -290,10 +290,15 @@ export interface IProject{
   signature: null|string
 }
 
+export interface INominationFilter{
+  name: string
+  id: number
+}
+
 export interface IProjectsPage{
   title: string
   years: string
-  nominations: IHtmlString
+  nominations: INominationFilter[]
 }
 
 export interface ICompetitionResults{
