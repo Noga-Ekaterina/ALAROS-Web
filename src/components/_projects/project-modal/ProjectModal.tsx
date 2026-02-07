@@ -15,8 +15,8 @@ const init = (year: string, number: string) => unstable_cache(
       const data = await fetchColection<IProject>({
         name: "projects",
         filters:{
-          number,
-          year
+          number: {"$eq": number},
+          year: {"$eq": year}
         }
       })
 
