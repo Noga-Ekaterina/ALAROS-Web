@@ -134,22 +134,19 @@ export interface IEventDate {
 };
 
 export interface IEvent {
-  date: IEventDate;
+  start: string;
+  end: string;
   title: string
   description: string;
   place: string;
-  image: string
+  image: IImage
   link: string
 };
 
 export interface IEventsDataYear {
   year: number
-  events: IHtmlString
+  events: IEvent[]
 }
-
-export interface IEventsByYear {
-  [year: string]: IEvent[];
-};
 
 export interface INewsItem {
   title: string

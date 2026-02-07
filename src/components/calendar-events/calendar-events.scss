@@ -310,6 +310,7 @@
       --gap: calc(var(--f-content)*0.7);
       --lines: 2;
 
+      width: 75%;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
@@ -319,6 +320,7 @@
 
       @include md{
         font-size: vu(13, md);
+        width: 100%;
       }
 
       @include sm{

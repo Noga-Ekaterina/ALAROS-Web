@@ -1,20 +1,22 @@
 'use client'
 import React, { useRef, useEffect, useState } from 'react';
 import { IEvent } from "@/types/data";
-import HtmlProcessing from "@/components/HtmlProcessing";
 import { nonBreakingSpaces } from "@/utils/nonBreakingSpaces";
+import {formaterDate} from "@/utils/date";
+import Image from "@/components/Image";
 
 interface Props {
   event: IEvent;
-  year: number;
 }
 
-const Event = ({ event, year }: Props) => {
+const Event = ({ event }: Props) => {
   const descRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const [isTruncated, setIsTruncated] = useState(false);
   const lineHeight=1.2;
   const [lastLineWidth, setLastLineWidth] = useState(0);
+  const dateStart=formaterDate(event.start)
+  const dateEnd=formaterDate(event.end)
 
   useEffect(() => {
     if (!descRef.current || !textRef.current) return;
@@ -54,12 +56,12 @@ const Event = ({ event, year }: Props) => {
         <div className="calendar-events__block-text">
           <div className="calendar-events__titles">
             <h3 className="calendar-events__date">
-              {event.date.start}
-              {(event.date.end != "" && event.date.end != event.date.start) && <span className="calendar-events__date-end"> - {event.date.end}</span>}
+              {dateStart}
+              {( dateEnd != dateStart) && <span className="calendar-events__date-end"> - {dateEnd}</span>}
             </h3>
             <div className="calendar-events__name-and-plase">
               <div className="calendar-events__name">
-                <HtmlProcessing html={`<p>${event.title}</p>`} />
+                {nonBreakingSpaces(event.title)}
               </div>
               <p className="calendar-events__plase">{nonBreakingSpaces(event.place)}</p>
             </div>
@@ -74,11 +76,13 @@ const Event = ({ event, year }: Props) => {
               } as React.CSSProperties}
           >
             <div ref={textRef}>
-              <HtmlProcessing html={`<p>${event.description}</p>`} />
+              <p>
+                {nonBreakingSpaces(event.description)}
+              </p>
             </div>
           </div>
         </div>
-        <img src={`/Assets/Calendar-events/${year}/${event.image}`} alt="" loading="lazy"/>
+        <Image image={event.image} size='small'/>
       </div>
   );
 };

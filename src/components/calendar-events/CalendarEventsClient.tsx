@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import "./calendar-events.scss";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import { Mousewheel, FreeMode } from 'swiper/modules';
@@ -9,9 +9,7 @@ import { IDay } from "../../types/tehnic";
 import {ReactSVG} from "react-svg";
 import Dropdown from "../dropdown/Dropdown";
 import {SwiperNavigation} from "../../utils/SwiperNavigation";
-import {IEventsByYear, IEventsDataYear} from "../../types/data";
-import {eventsDataProcessing} from "./eventsDataProcessing";
-import HtmlProcessing from "../HtmlProcessing";
+import {IEvent, IEventsDataYear} from "../../types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SliderProgress from "@/components/slider-progress/SliderProgress";
 import Event from "@/components/calendar-events/Event";
@@ -28,8 +26,17 @@ interface ICalendarDay extends IDay {
 }
 
 const CalendarEventsClient = ({title, calendarEvents}:Props) => {
-  const [eventsByYear, setEventsByYear] = useState<null | IEventsByYear>(null)
-  const [years, setYears] = useState<string[]>([])
+  const {eventsByYear, years} = useMemo(()=>{
+    const eventsByYear: Record<string, IEvent[]>={}
+    const years: string[]=[]
+
+    calendarEvents.forEach(item=>{
+      eventsByYear[item.year]=item.events
+      years.push(item.year.toString())
+    })
+
+    return {eventsByYear, years}
+  }, [])
   const [days, setDays] = useState<ICalendarDay[]>([]);
   const [nextEventIndex, setNextEventIndex] = useState(0); // Индекс ближайшего события
   const [eventsDays, setEventsDays] = useState<ICalendarDay[][]>([])
@@ -93,14 +100,6 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
     }
   }
 
-  useEffect(() => {
-    if (!calendarEvents) return
-
-    const data= eventsDataProcessing(calendarEvents)
-    console.log(data)
-    setEventsByYear(data)
-    setYears(Object.keys(data))
-  }, [calendarEvents]);
 
   useEffect(() => {
     if (eventsByYear) {
@@ -120,12 +119,12 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
         const eventsForYear = eventsByYear[year];
 
         eventsForYear.forEach(event => {
-          const startDate = event.date.start.split('.');
-          const endDate = event.date.end.split('.');
+          const startDate = event.start.split('-');
+          const endDate = event.end.split('-');
 
-          const startDay = Number(startDate[0]);
+          const startDay = Number(startDate[2]);
           const startMonth = Number(startDate[1]);
-          const endDay = Number(endDate[0]);
+          const endDay = Number(endDate[2]);
           const endMonth = Number(endDate[1]);
           const eventDays: ICalendarDay[] = []
 
@@ -314,9 +313,9 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
             {
               eventsStart.map(start => {
                 const event = eventsByYear && eventsByYear[start.year].find(event => {
-                  const startDate = event.date.start.split('.');
+                  const startDate = event.start.split('-');
 
-                  const startDay = Number(startDate[0]);
+                  const startDay = Number(startDate[2]);
                   const startMonth = Number(startDate[1])
 
                   return start.dayNumber == startDay && start.monthNumber == startMonth
@@ -324,14 +323,14 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
 
                 if (event) {
                   return (
-                      <SwiperSlide key={`${start.year} ${event.date.start}`} className="calendar-events__event">
+                      <SwiperSlide key={`${event.start}`} className="calendar-events__event">
                         {
-                          event.link != "" ?
+                          event.link?
                               <a href={event.link} target="_blank">
-                                <Event event={event} year={start.year}/>
+                                <Event event={event}/>
                               </a>
                               :
-                              <Event event={event} year={start.year}/>
+                              <Event event={event}/>
                         }
                       </SwiperSlide>
                   )

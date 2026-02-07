@@ -1,8 +1,8 @@
 import React from 'react';
 import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import CalendarEventsClient from "@/components/calendar-events/CalendarEventsClient";
+import {fetchColection} from "@/utils/strapFetch";
 
 
 interface IData{
@@ -14,21 +14,19 @@ interface Props{
 }
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-          query MyQuery {
-            eventsYears {
-              year
-              events {
-                html
-              }
-            }
-          }`)
+  const data= await fetchColection<IEventsDataYear>({
+    name: "events-years",
+    sort: "year",
+    pagination:{
+      pageSize: 100
+    }
+  })
 
   if (typeof data==="string" || !data){
     return data
   }
 
-  return data.eventsYears
+  return data
 }, ["events-years"], {tags: ["EventsYear"]})
 
 const CalendarEvents = async ({title}: Props) => {
@@ -39,7 +37,7 @@ const CalendarEvents = async ({title}: Props) => {
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 
-  return <CalendarEventsClient title={title} calendarEvents={data}/>
+  return <CalendarEventsClient title={title} calendarEvents={data.data}/>
 };
 
 export default CalendarEvents;
