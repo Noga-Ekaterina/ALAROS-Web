@@ -4,14 +4,14 @@ import "./festival-premiya.scss"
 import {observer} from "mobx-react-lite";
 import parse from "html-react-parser";
 import HtmlProcessing from "../../HtmlProcessing";
-import {IFestival, IHtmlString} from "@/types/data";
+import {IFestival, IHtmlString, IPremiyaStep} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   pageData: IFestival
 }
 
-const getCols=(arr: IHtmlString[])=>{
+const getCols=(arr: IPremiyaStep[])=>{
 
   const steps: JSX.Element[]=[]
 
@@ -20,7 +20,12 @@ const getCols=(arr: IHtmlString[])=>{
         <div key={`festival-premiya-step-${index}`} className="festival-premiya__step">
           <span className="festival-premiya__num">0{index+1}</span>
           <div className='festival-premiya__text'>
-            <HtmlProcessing html={step.html}/>
+            <HtmlProcessing html={step.text}/>
+
+            {
+              step.note&&
+                <div className="note">{nonBreakingSpaces(step.note)}</div>
+            }
           </div>
         </div>
     )

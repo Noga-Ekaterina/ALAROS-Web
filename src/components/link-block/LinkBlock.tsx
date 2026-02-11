@@ -18,13 +18,13 @@ const LinkBlock = ({title, link, mobileIcon, className}:Props) => {
   const getLinkElement=(mobile: boolean)=>{
     const jsx= parse(link)
     const icon= (
-        <span className="link-block__icon">
+        <div className="link-block__icon">
           [
           {
             mobileIcon || <ReactSVG src='/Assets/Icons/arrow.svg' className="link-block__arrow"/>
           }
           ]
-        </span>
+        </div>
     )
     return (
         <>
@@ -47,8 +47,8 @@ const LinkBlock = ({title, link, mobileIcon, className}:Props) => {
 
   return (
       <div className={cn("link-block", className)}>
-        <span className="link-block__title"><HtmlProcessing html={title}/></span>
-        <span className="link-block__link">{linkElement}</span>
+        <div className="link-block__title">{title}</div>
+        <div className="link-block__link">{linkElement}</div>
       </div>
   );
 };

@@ -5,7 +5,7 @@ import {useClose} from "../../hoocs/useClose";
 import classNames from "classnames";
 import {IWithClass} from "../../types/tehnic";
 import {ReactSVG} from "react-svg";
-import {INomination} from "@/types/data";
+import {IFestivalNomination} from "@/types/data";
 import SmoothScrolling from "@/app/SmoothScrolling";
 import HtmlProcessing from "@/components/HtmlProcessing";
 
@@ -20,7 +20,7 @@ type DataProps = IWithClass & {
   rightElement?: JSX.Element|string
   years?: boolean;
   handleCheck: (e: ChangeEvent<HTMLInputElement>) => void;
-  nominations?: INomination[];
+  nominations?: IFestivalNomination[];
 };
 
 type ChildrenProps = IWithClass & {
@@ -42,7 +42,7 @@ function Dropdown(props: Props) {
 
   // Обработка номинаций только для DataProps
   const nominationsElements = !isNoForm && props.nominations
-      ? props.nominations.map((nomination: INomination) => (
+      ? props.nominations.map((nomination: IFestivalNomination) => (
           <span className="dropdown__nomination-item" key={nomination.number}>
           <span>{nomination.number}</span>
           <HtmlProcessing html={`<span>${nomination.title}</span>`}/>

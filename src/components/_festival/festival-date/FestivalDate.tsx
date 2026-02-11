@@ -5,23 +5,12 @@ import classNames from "classnames";
 import {IFestival, IHtmlString} from '../../../types/data'
 import HtmlProcessing from "../../HtmlProcessing";
 import {motion, AnimatePresence} from "framer-motion";
+import {formaterDate} from "@/utils/date";
 interface Props{
   pageData: IFestival
 }
 
-const getSections=(arr: IHtmlString[])=>{
-
-  return arr.map(section=>{
-    let str= section.html.replace("<p>", "")
-    str=str.replace("<\/p>", '')
-
-    const [title, date]= str.split(/:\s?/)
-
-    return ({title: `<span>${title}</span>`, date: `<span>${date}</span>`})
-  })}
-
 const FestivalDate = ({pageData}:Props) => {
-  const sections= useMemo(() => getSections(pageData.dateSections), [])
   const [activeDateIndex, setActiveDateIndex] = useState(0)
   const timeoutRef= useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -29,7 +18,7 @@ const FestivalDate = ({pageData}:Props) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current)
 
     timeoutRef.current=setTimeout(()=>{
-      setActiveDateIndex(prevState => prevState===sections.length-1? 0: prevState+1)
+      setActiveDateIndex(prevState => prevState===pageData.dateSections.length-1? 0: prevState+1)
     }, 4000)
 
     return ()=>{
@@ -42,10 +31,10 @@ const FestivalDate = ({pageData}:Props) => {
       <div className='festival-date' id="date">
         <div className="container">
           <div className="festival-date__text">
-            <HtmlProcessing html={pageData.dateText.html}/>
+            {pageData.dateText}
             <p className="festival-date__btns">
               {
-                sections.map((section, index)=>(
+                pageData.dateSections.map((section, index)=>(
                     <Fragment key={index}>
                       <button
                         className={classNames(
@@ -54,11 +43,11 @@ const FestivalDate = ({pageData}:Props) => {
                         )}
                         onClick={()=> setActiveDateIndex(index)}
                       >
-                        <HtmlProcessing html={section.title}/>
+                        {section.title}
                       </button>
 
                       {
-                        index<sections.length-1 && <span>|</span>
+                        index<pageData.dateSections.length-1 && <span>|</span>
                       }
                     </Fragment>
                 ))
@@ -73,7 +62,7 @@ const FestivalDate = ({pageData}:Props) => {
             transition={{duration: 0.5}}
             className="festival-date__date">
             {
-              sections[activeDateIndex] && <HtmlProcessing html={sections[activeDateIndex].date}/>
+              pageData.dateSections[activeDateIndex] && formaterDate(pageData.dateSections[activeDateIndex].date)
             }
           </motion.div>
         </div>

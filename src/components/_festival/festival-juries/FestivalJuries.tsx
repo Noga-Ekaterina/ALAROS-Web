@@ -1,29 +1,25 @@
 'use client'
 import React, {useEffect, useMemo, useState} from 'react';
 import "./festival-juries.scss"
-import {IFestival, IHtmlString, IUser} from "../../../types/data";
+import {IFestival, IHtmlString, IJuriesCommited, IUser} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
-import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-import {Autoplay} from "swiper/modules";
-import Marquee from "react-fast-marquee";
-import {getData} from "@/components/_festival/festival-juries/getData";
 import {motion} from "framer-motion";
 import {useMediaQuery} from "react-responsive";
 import SmoothScrolling from "@/app/SmoothScrolling";
 import SliderClue from "@/components/slider-clue/SliderClue";
+import Image from "@/components/Image";
 
 interface Props{
   title: string
-  juriesDataString: IHtmlString[]
+  juriesCommiteds: IJuriesCommited[]
 }
 
 
-const FestivalJuries = ({juriesDataString, title}:Props) => {
+const FestivalJuries = ({juriesCommiteds, title}:Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
-  const sections=useMemo(()=>getData(juriesDataString), [])
   const [activeSection, setActiveSection] = useState(0)
   const rem=useGetRem()
   const [isOpened, setIsOpened] = useState<number | null>(null)
@@ -45,14 +41,14 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
 
           <Swiper slidesPerView="auto" spaceBetween={35*rem} className="festival-juries__sections">
             {
-              sections.map(({section}, index) => (
+              juriesCommiteds.map(({name}, index) => (
                   <SwiperSlide key={index} style={{width: "fit-content"}}>
                     <button  className="festival-juries__btn link-underline"
                             disabled={index === activeSection}
                             onClick={() => {
                               setActiveSection(index)
                               setIsOpened(null)
-                            }}>{section}</button>
+                            }}>{name}</button>
                   </SwiperSlide>
               ))
             }
@@ -66,13 +62,13 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
               transition={{duration: 0.5}}
           >
             <p className="festival-juries__note">
-              {nonBreakingSpaces(sections[activeSection].note)}
+              {nonBreakingSpaces(juriesCommiteds[activeSection].note)}
             </p>
 
             <div className="festival-juries__slider-wrapp">
               <Swiper slidesPerView="auto" spaceBetween={(bigDesktopScreen? 9.45:8.28)*rem}>
                 {
-                  sections[activeSection].juries.map((item, itemIndex) => (
+                  juriesCommiteds[activeSection].juries.map((item, itemIndex) => (
                       <SwiperSlide
                           key={itemIndex} className="festival-juries__slide"
                           onClick={() => openInfo(itemIndex)}
@@ -81,7 +77,13 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
                             item &&
                             <>
                                <div className="festival-juries__img-wrap">
-                                  <img src={`/Assets/Pages/People/${item.image}`} alt="" loading="lazy"/>
+                                  <Image
+                                      image={item.image}
+                                      size={"xs"}
+                                      mediaSizes={{
+                                        bigDesktop: "small"
+                                      }}
+                                  />
 
                                   <div className={cn(
                                       "festival-juries__info",
@@ -106,7 +108,7 @@ const FestivalJuries = ({juriesDataString, title}:Props) => {
                 }
               </Swiper>
 
-              {(mobileScreen || sections[activeSection].juries.length>7) && <SliderClue/>}
+              {(mobileScreen || juriesCommiteds[activeSection].juries.length>7) && <SliderClue/>}
             </div>
           </motion.div>
 

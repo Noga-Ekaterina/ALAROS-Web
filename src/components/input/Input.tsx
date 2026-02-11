@@ -1,6 +1,6 @@
 import React, {Fragment, JSX, useEffect, useState} from 'react';
 import "./input.scss"
-import {IFormInput, INomination, TypeForm} from "../../types/data";
+import {IFormInput, IFestivalNomination, TypeForm} from "../../types/data";
 import parse from "html-react-parser";
 import Dropdown from "../dropdown/Dropdown";
 import {IField} from "../../types/tehnic";
@@ -9,27 +9,27 @@ import {geNextLetter} from "@/utils/getNextLetter";
 
 interface IProps extends IField{
   input: IFormInput
-  nominations?: INomination[]
+  nominations?: IFestivalNomination[]
   form: TypeForm
 }
 
 const InputDropdown = ({input, field, nominations, form}: IProps) => {
   // Убираем локальное состояние, используем Formik values
   const values = nominations
-      ? nominations.map(nomination => nomination.value)
+      ? nominations.map(nomination => nomination.title)
       : input.values;
-  const [value, setValue] = useState(nominations? nominations[0].value:input.type[0])
+  const [value, setValue] = useState(nominations? nominations[0].title:input.type[0])
 
   // Получаем текущие значения из Formik
   const { setFieldValue } = useFormikContext();
 
   const handleChange = (selectedValue: string) => {
     setValue(selectedValue)
-    const selectedNomination = nominations?.find(n => n.value === selectedValue);
+    const selectedNomination = nominations?.find(n => n.title === selectedValue);
 
     if (selectedNomination) {
       // Обновляем оба поля в Formik
-      setFieldValue(field.name, selectedNomination.number.replaceAll(".", ","));
+      setFieldValue(field.name, selectedNomination.number.toString().replaceAll(".", ","));
       setFieldValue(geNextLetter(field.name), selectedNomination.title);
     }else
       setFieldValue(field.name, selectedValue);

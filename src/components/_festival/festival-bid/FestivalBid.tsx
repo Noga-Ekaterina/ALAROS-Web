@@ -1,16 +1,15 @@
 'use client'
 import React, {JSX, useEffect, useState} from 'react';
 import "./festival-bid.scss"
-import {IFestival, INomination} from "@/types/data";
+import {IFestival, IFestivalNomination} from "@/types/data";
 import Form from "@/components/form/Form";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   pageData: IFestival
-  nominations: INomination[]
 }
 
-const FestivalBid = ({pageData, nominations}: Props) => {
+const FestivalBid = ({pageData}: Props) => {
 
 
   return (
@@ -26,7 +25,7 @@ const FestivalBid = ({pageData, nominations}: Props) => {
               {nonBreakingSpaces(pageData.bidTitle)}
             </h2>
           </div>
-          <Form inputs={pageData.bidInputs} note={pageData.bidNote.html} nominations={nominations} typeForm="bid" disabled={pageData.bidDisabled} dateColumn={pageData.bidDateColumn}/>
+          <Form inputs={pageData.bidInputs} note={pageData.bidNote} nominations={pageData.nominations} typeForm="bid" disabled={pageData.bidDisabled} dateColumn={pageData.bidDateColumn}/>
         </div>
       </div>
   );

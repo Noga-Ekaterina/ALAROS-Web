@@ -5,7 +5,6 @@ import {useSearchParams} from "next/navigation";
 import Dropdown from "../../dropdown/Dropdown";
 import {IProjectsPage} from "../../../types/data";
 import {useSearchParamsControl} from "@/hoocs/useSearchParamsControl";
-import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import store from "@/store/store";
 
 interface Props{
@@ -19,7 +18,6 @@ const ProjectsFilter = ({projectsPage}:Props) => {
 
     return result
   }, [])
-  console.log(projectsPage.nominations)
 
   const [years, setYears] = useState<string[]>([])
   const searchParams= useSearchParams()

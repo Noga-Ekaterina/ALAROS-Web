@@ -18,16 +18,16 @@ const FestivalPrice = ({pageData}:Props) => {
             <h2 className="titles-block__title titles-block__title--small festival-price__title">{nonBreakingSpaces(pageData.priceTitle)}</h2>
           </div>
           <div className="festival-price__body">
-            <HtmlProcessing html={pageData.priceTable.html}/>
+            <HtmlProcessing html={pageData.priceTable}/>
           </div>
         </div>
         <div className="festival-price__running-line">
           <Marquee direction='left' className="festival-price__running-line__player">
             <div className="festival-price__running-line-wrapp">
-              <HtmlProcessing html={pageData.priceRunningLine.html}/>
-              <HtmlProcessing html={pageData.priceRunningLine.html}/>
-              <HtmlProcessing html={pageData.priceRunningLine.html}/>
-              <HtmlProcessing html={pageData.priceRunningLine.html}/>
+              <HtmlProcessing html={pageData.priceRunningLine}/>
+              <HtmlProcessing html={pageData.priceRunningLine}/>
+              <HtmlProcessing html={pageData.priceRunningLine}/>
+              <HtmlProcessing html={pageData.priceRunningLine}/>
             </div>
           </Marquee>
         </div>

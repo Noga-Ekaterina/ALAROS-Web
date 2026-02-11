@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import {IFormRequest, TypeForm} from "@/types/data";
 import {unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
-import {nominationsSProcessing} from "@/utils/nominationsProcessing";
 import axios from "axios";
 
 interface RevalidateResponse {

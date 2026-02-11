@@ -14,14 +14,17 @@ export interface IImageFormat {
   ext?: string;
 }
 
-export interface IImage {
+export interface IFile{
   id: number;
   url: string;
+  size: number; // размер оригинала в байтах
+}
+
+export interface IImage extends IFile{
   alternativeText?: string;
   caption?: string;
   width: number;
   height: number;
-  size: number; // размер оригинала в байтах
   formats: {
     xxl?: IImageFormat;
     xl?: IImageFormat;
@@ -36,6 +39,11 @@ export interface IImage {
 
 export interface IHtml{
   text: string
+}
+
+export interface IButtonBlock{
+  right: string
+  left: string
 }
 
 export interface IMapCoordinates {
@@ -169,10 +177,9 @@ export interface ITitlesBlock{
   section?: string | ILink
 }
 
-export interface IStep{
+export interface IPremiyaStep {
   text: string
-  links: ILinkColor[]
-  note?: string[]
+  note?: string
 }
 
 export interface INews{
@@ -183,35 +190,47 @@ export interface INews{
   allNews: IHtmlString
 }
 
+export interface IFestivalDate{
+  title: string
+  date: string
+}
+
+export interface IJuriesCommited{
+  name: string
+  note: string
+  juries: IUser[]
+}
+
 export interface IFestival {
-  mainScreenLeftSection: IHtmlString
-  mainScreenSections: IHtmlString
-  mainScreenPhoto: string
+  mainScreenLeftSection: string
+  mainScreenSections: IHtml[]
+  mainScreenPhoto: IImage
   premiyaTitle: string
-  premiyaSteps: IHtmlString[]
+  premiyaSteps: IPremiyaStep[]
   priceTitle: string
-  priceTable: IHtmlString
-  priceRunningLine: IHtmlString
-  dateText: IHtmlString
-  dateSections: IHtmlString[]
+  priceTable: string
+  priceRunningLine: string
+  dateText: string
+  dateSections: IFestivalDate[]
+  nominations: IFestivalNomination[]
   bidTitle: string
   bidInputs: IFormInput[]
-  bidNote: IHtmlString
+  bidNote: string | null
   bidDateColumn: string
   bidDisabled: boolean
   documentsTitle: string
-  documentsLinks: IHtmlString[]
-  templates: IHtmlString
-  templatesDownload: IHtmlString
+  documentsLinks: IButtonBlock[]
+  templates: IButtonBlock
+  templatesDownload: string
   templatesDisabled: boolean
-  emails: IHtmlString[]
+  emails: IHtml[]
   diplomaTitle: string
   diplomaInputs: IFormInput[]
-  diplomaNote: IHtmlString
+  diplomaNote: string|null
   juriesTitle: string
-  juries: IHtmlString[]
+  juriesCommited: IJuriesCommited[]
   projectsTitle: string
-  projectsRightSignature: IHtmlString
+  projectsRightSignature: string
   projects: IProject[]
 }
 
@@ -250,17 +269,16 @@ export interface IFestivalDetails {
   forumSocials: IHtmlString[]
 }
 
-export interface INomination{
-  number: string
+export interface IFestivalNomination {
+  number: number
   title: string
-  link: string
-  value: string
+  file: IFile|null
 }
 
 export interface IUser {
   name: string
   place: string
-  image: string
+  image: IImage
   jobTitle: string
 }
 

@@ -12,8 +12,8 @@ const FestivalEmails = ({pageData}:Props) => {
       <div className="festival-emails">
         <div className="container festival-emails__container">
           {
-            pageData.emails.map(({html})=>(
-                <div className='festival-emails__item'><HtmlProcessing html={html}/></div>
+            pageData.emails.map(({text}, index)=>(
+                <div className='festival-emails__item' key={index}><HtmlProcessing html={text}/></div>
             ))
           }
         </div>
