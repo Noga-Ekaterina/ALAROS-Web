@@ -8,6 +8,7 @@ import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {Autoplay} from "swiper/modules";
 import {useMediaQuery} from "react-responsive";
 import {useGetRem} from "@/hoocs/useGetRem";
+import Image from "@/components/Image";
 
 interface Props{
   partners: IPartner[]
@@ -47,11 +48,11 @@ const PartnersSliderClient = ({partners, slidesPerView=6, slidesPerViewMobile=2,
           >
             {
               partners.map((partner, index) => (
-                  <SwiperSlide key={`${partner.image}-${index}`} className="partners-slider__slide">
+                  <SwiperSlide key={index} className="partners-slider__slide">
                     {
-                      partner.link === "" ? <img src={`/Assets/Pages/Logo-partners/${partner.image}`} alt=""/> :
+                      (!partner.link ||partner.link === "") ? <Image image={partner.image}/> :
                           <a href={partner.link} target="_blank">
-                            <img src={`/Assets/Pages/Logo-partners/${partner.image}`} alt=""/>
+                            <Image image={partner.image}/>
                           </a>
                     }
                   </SwiperSlide>

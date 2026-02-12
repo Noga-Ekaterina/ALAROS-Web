@@ -100,7 +100,7 @@ const Image: React.FC<Props> = ({
     setIsClient(true)
   }, []);
 
-  const optimalImage = isClient? getOptimalImage() : image.formats.thumbnail|| image;
+  const optimalImage = isClient? getOptimalImage() : image.formats?.thumbnail|| image;
   const finalAlt = alt || image.alternativeText || '';
 
   return (

@@ -1,35 +1,20 @@
 import React from 'react';
 import PartnersSliderClient from "@/components/partners-slider/PartnersSliderClient";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import {IPartnersSlider} from "@/types/data";
 import {partnersProcessing} from "@/components/partners-slider/partnersProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-
-interface IData{
-  partnersSliders: IPartnersSlider[]
-}
+import {fetchSingle} from "@/utils/strapFetch";
 
 const init= unstable_cache(async ()=>{
-  const data: IData|null|string= await fetchData(`
-    query MyQuery {
-      partnersSliders {
-        title
-        partners {
-          html
-        }
-      }
-    }
-  `)
+  const data= await fetchSingle<IPartnersSlider>("partners-slider")
 
   if (typeof data==="string" || !data){
     return data
   }
 
-  const {title, partners}= data.partnersSliders[0]
-
-  return {title, partners: partnersProcessing(partners.html)}
-}, ["partners-slider"], {tags: ["PartnersSlider"]})
+  return data
+}, ["partners-slider"], {tags: ["partners-slider"]})
 
 const PartnersSlider = async () => {
   const data=  await init()

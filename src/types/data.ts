@@ -87,12 +87,12 @@ export interface IHomeData extends IHomeMainScreen, IHomeBaners{
 }
 
 export interface IPartner {
-  image: string;
-  link: string;
+  image: IImage;
+  link: string|null;
 }
 export interface IPartnersSlider {
   title: string;
-  partners: IHtmlString
+  partners: IPartner[]
 }
 
 export interface IInfopartnersSlider {
