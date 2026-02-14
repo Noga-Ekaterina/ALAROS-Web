@@ -9,47 +9,20 @@ import Results from "@/components/_competition-results/results/Results";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
-
-
-interface IData{
-  competitionResultsS: ICompetitionResults[]
-}
+import {fetchSingle} from '@/utils/strapFetch';
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-    query MyQuery {
-      competitionResultsS {
-        mainScreenLeftSection {
-          html
-        }
-        mainScreenProject {
-          cover
-          diploma
-          images
-          name
-          nomination
-          number
-          signature
-          winner
-          year
-        }
-        resultsTitle
-        results {
-          html
-        }
-      }
-    }
-  `)
+  const data= await fetchSingle<ICompetitionResults>("competition-results")
 
-  if (typeof data==="string"){
+  if (!data || typeof data==="string"){
     return data
   }
 
-  return data? data.competitionResultsS[0] : null
+  return data
 
   }, ["competition-results"], {tags: ["CompetitionResults", "Project"]})
 

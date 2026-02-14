@@ -2,21 +2,13 @@ import React, {memo, useEffect, useState} from 'react';
 import { useMediaQuery } from 'react-responsive'
 import {IImage, IImageSize} from "@/types/data";
 import {useBreakpoints} from "@/hoocs/useBreakpoints";
-
+import { IMediaSizes } from '@/types/data';
 // Типы
-export interface MediaSizes {
-  mobile?: IImageSize;
-  tablet?: IImageSize;
-  laptop?: IImageSize;
-  desktop?: IImageSize;
-  bigDesktop?: IImageSize;
-}
-
 
 export interface Props {
   image: IImage;
   size?: IImageSize;
-  mediaSizes?: MediaSizes;
+  mediaSizes?: IMediaSizes;
   className?: string;
   alt?: string;
   loading?: 'lazy' | 'eager';

@@ -11,18 +11,8 @@ interface Props{
   pageData: ICompetitionResults
 }
 
-const getResultsData=(table: string)=>{
-  const rows= getRowsInTable(table)
-
-  return rows.map(row=>{
-    const [year, link] = Array.from(row.matchAll(/<td>(?:<p>)?(.*?)(?:<\/p>)?<\/td>/gs)).map(m => m[1]);
-
-    return {year, link}
-  })
-}
-
 const Results = ({pageData}:Props) => {
-  const results= useMemo(() => getResultsData(pageData.results.html), [])
+  const results= pageData.results
   const [activeYear, setActiveYear] = useState(results[results.length-1].year)
   const rem=useGetRem()
 

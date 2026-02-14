@@ -36,6 +36,13 @@ export interface IImage extends IFile{
   };
 }
 
+export interface IMediaSizes {
+  mobile?: IImageSize;
+  tablet?: IImageSize;
+  laptop?: IImageSize;
+  desktop?: IImageSize;
+  bigDesktop?: IImageSize;
+}
 
 export interface IHtml{
   text: string
@@ -316,11 +323,16 @@ export interface IProjectsPage{
   nominations: INominationFilter[]
 }
 
+export interface ICompetitionResultsYear{
+  year: number
+  link: string
+}
+
 export interface ICompetitionResults{
-  mainScreenLeftSection: IHtmlString
+  mainScreenLeftSection: string
   mainScreenProject: IProject
   resultsTitle: string
-  results: IHtmlString
+  results: ICompetitionResultsYear[]
 }
 
 export interface IContacts {
