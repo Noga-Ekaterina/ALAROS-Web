@@ -1,60 +1,22 @@
 import React from 'react';
 import {IContacts} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import ContactsMainScreen from "@/components/_contacts/contacts-main-screen/ContactsMainScreen";
 import ContactsAddressesSocials from "@/components/_contacts/contacts-addresses-socials/ContactsAddressesSocials";
 import ContactsForm from "@/components/_contacts/contacts-form/ContactsForm";
-
-interface IData{
-  contactss: IContacts[]
-}
+import { fetchSingle } from '@/utils/strapFetch';
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-    query MyQuery {
-      contactss {
-        title
-        addressesColumns {
-          html
-        }
-        images
-        contactsColumns {
-          html
-        }
-        mapCoordinates {
-          latitude
-          longitude
-        }
-        formTitle
-        formInputs {
-          placeholder
-          clue
-          type
-          necessarily
-          emailType
-          maxValue
-        }
-        socialsIcons {
-          html
-        }
-      }
-    }
-  `)
+  const data= await fetchSingle<IContacts>("contacts")
+  return data
 
-  if (typeof data==="string"){
-    return data
-  }
-
-  return data? data.contactss[0] : null
-
-  }, ["contacts-page"], {tags: ["Contacts", "FormInput"]})
+  }, ["contacts-page"], {tags: ["contacts", "input"]})
 
 const Page = async ({searchParams}:Props) => {
   const pageData= await init()

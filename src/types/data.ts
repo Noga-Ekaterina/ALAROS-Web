@@ -14,6 +14,16 @@ export interface IImageFormat {
   ext?: string;
 }
 
+export interface IImageFormats  {
+  xxl?: IImageFormat;
+  xl?: IImageFormat;
+  large?: IImageFormat;
+  medium?: IImageFormat;
+  small?: IImageFormat;
+  xs?: IImageFormat;
+  thumbnail?: IImageFormat;
+}
+
 export interface IFile{
   id: number;
   url: string;
@@ -25,15 +35,7 @@ export interface IImage extends IFile{
   caption?: string;
   width: number;
   height: number;
-  formats: {
-    xxl?: IImageFormat;
-    xl?: IImageFormat;
-    large?: IImageFormat;
-    medium?: IImageFormat;
-    small?: IImageFormat;
-    xs?: IImageFormat;
-    thumbnail?: IImageFormat;
-  };
+  formats: null | IImageFormats;
 }
 
 export interface IMediaSizes {
@@ -108,13 +110,9 @@ export interface IInfopartnersSlider {
   infopartners: IHtmlString
 }
 
-export interface ILink {
-  text: string
-  href: string
-}
-
-export interface ILinkColor extends ILink{
-  color: string
+export interface IIconLink {
+  link: string;
+  icon: IImage
 }
 
 export type EmailInputType= "name"|"phone"|"city"|"email"|"message"|"subject"
@@ -177,11 +175,6 @@ export interface INewsItem {
 
 export interface INewsPages {
   [pages: string]: INewsItem[]
-}
-
-export interface ITitlesBlock{
-  title: string
-  section?: string | ILink
 }
 
 export interface IPremiyaStep {
@@ -334,13 +327,12 @@ export interface ICompetitionResults{
   results: ICompetitionResultsYear[]
 }
 
-export interface IContacts {
+export interface IContacts extends IMapCoordinates{
   title: string;
-  addressesColumns: IHtmlString[];
-  images: string[];
-  contactsColumns: IHtmlString[];
-  socialsIcons: IHtmlString;
-  mapCoordinates: IMapCoordinates;
+  addressesColumns: IHtml[];
+  images: IImage[];
+  contactsColumns: IHtml[];
+  socialsIcons: IIconLink[];
   formTitle: string
   formInputs: IFormInput[]
 }

@@ -1,5 +1,5 @@
+"use client"
 import React, {memo, useEffect, useState} from 'react';
-import { useMediaQuery } from 'react-responsive'
 import {IImage, IImageSize} from "@/types/data";
 import {useBreakpoints} from "@/hoocs/useBreakpoints";
 import { IMediaSizes } from '@/types/data';
@@ -53,7 +53,7 @@ const Image: React.FC<Props> = ({
     const targetSize = getSizeForBreakpoint();
 
     // Проверяем наличие формата
-    const format = targetSize && image.formats[targetSize];
+    const format = (image.formats && targetSize) && image.formats[targetSize];
 
     if (!format) {
       // Формат отсутствует, используем оригинал

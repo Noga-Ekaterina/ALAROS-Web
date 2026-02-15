@@ -3,8 +3,8 @@ import "./contacts-addresses-socials.scss"
 import {IContacts} from "@/types/data";
 import HtmlProcessing from "@/components/HtmlProcessing";
 // import Map from "@/components/map/Map";
-import {getLinks} from "@/components/_contacts/contacts-addresses-socials/getLinks";
 import dynamic from "next/dynamic";
+import Image from '@/components/Image';
 
 const Map = dynamic(
     () => import('@/components/map/Map'),
@@ -19,20 +19,18 @@ interface Props{
 }
 
 const ContactsAddressesSocials = ({data}: Props) => {
-  const links= getLinks(data.socialsIcons.html)
-
   return (
       <div className="contacts-addresses-socials">
         <div className="contacts-addresses-socials__item">
           <div className="contacts-addresses-socials__text">
-            <HtmlProcessing html={data.contactsColumns[0].html}/>
+            <HtmlProcessing html={data.contactsColumns[0].text}/>
           </div>
 
           <div className="contacts-addresses-socials__icons">
             {
-              links.map(({link, icon})=>(
-                  <a href={link} target="_blank" key={icon} className="contacts-addresses-socials__icon">
-                    <img src={`/Assets/Icons/${icon}`} alt=""/>
+              data.socialsIcons.map(({link, icon})=>(
+                  <a href={link} target="_blank" key={icon.id} className="contacts-addresses-socials__icon">
+                    <Image image={icon} size='thumbnail'/>
                   </a>
               ))
             }
@@ -41,11 +39,11 @@ const ContactsAddressesSocials = ({data}: Props) => {
 
         <div className="contacts-addresses-socials__item contacts-addresses-socials__item--dark">
           <div className="contacts-addresses-socials__text">
-            <HtmlProcessing html={data.contactsColumns[1].html}/>
+            <HtmlProcessing html={data.contactsColumns[1].text}/>
           </div>
         </div>
 
-        <Map coordinatesObj={data.mapCoordinates} className="contacts-addresses-socials__map"/>
+        {/* <Map coordinatesObj={data.mapCoordinates} className="contacts-addresses-socials__map"/> */}
       </div>
   );
 };
