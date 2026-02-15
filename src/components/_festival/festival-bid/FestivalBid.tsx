@@ -25,7 +25,7 @@ const FestivalBid = ({pageData}: Props) => {
               {nonBreakingSpaces(pageData.bidTitle)}
             </h2>
           </div>
-          <Form inputs={pageData.bidInputs} note={pageData.bidNote} nominations={pageData.nominations} typeForm="bid" disabled={pageData.bidDisabled} dateColumn={pageData.bidDateColumn}/>
+          <Form inputs={pageData.bidInputs} note={pageData.bidNote} nominations={pageData.nominations} typeForm="bid" disabled={pageData.bidDisabled}/>
         </div>
       </div>
   );

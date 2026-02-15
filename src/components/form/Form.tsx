@@ -19,11 +19,10 @@ interface Props{
   note?: string|null
   nominations?: IFestivalNomination[]
   typeForm: TypeForm
-  dateColumn?: string
   disabled?: boolean
 }
 
-const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props) => {
+const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
   const nameKey= typeForm=="email"? "emailType" : typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
@@ -50,12 +49,6 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
         ...values,
         recaptcha: token,
         typeForm
-      }
-
-      if (dateColumn){
-        const {dayNumber, monthNumber, yearShort}= createDate()
-
-        request[dateColumn]= `${dayNumber}.${monthNumber}.${yearShort}`
       }
 
       // Исправляем типы и структуру запроса

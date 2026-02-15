@@ -223,7 +223,6 @@ export interface IFestival {
   bidTitle: string
   bidInputs: IFormInput[]
   bidNote: string | null
-  bidDateColumn: string
   bidDisabled: boolean
   documentsTitle: string
   documentsLinks: IButtonBlock[]

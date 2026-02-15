@@ -3,35 +3,25 @@ import {IFormRequest, TypeForm} from "@/types/data";
 import {unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
 import axios from "axios";
+import { createDate } from '@/utils/date';
+import { fetchSingle } from '@/utils/strapFetch';
 
 interface RevalidateResponse {
   ok: boolean
 }
 
-interface ILinks{
-  festivalMains: {
-    bidTableLink: string
-    diplomaTableLink: string
-    bidNumberProjectColumn: string
-  }[]
+interface ITablesData{
+  bidTableLink: string
+  diplomaTableLink: string
+  bidNumberProjectColumn: string
+  bidDateColumn: string 
 }
 
 const getLinks= unstable_cache(async ()=>{
-      const data= await fetchData<ILinks>(`
-          query FestivalQuery {
-            festivalMains {
-              bidTableLink
-              diplomaTableLink
-              bidNumberProjectColumn
-            }
-          }`)
-
-      if (typeof data==="string" ||!data){
-        return data
-      }
-      return data.festivalMains[0]
-    },
-    ["forms-link"], {tags: ["FestivalMain"]}
+  const data= await fetchSingle<ITablesData>("tadles-data")
+  return data
+},
+["forms-link"], {tags: ["tables-data"]}
 )
 
 
@@ -60,8 +50,14 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
 
     const req= form
 
-    if (typeForm==="bid")
+    if (typeForm==="bid"){
       req.bidNumberProjectColumn= tablesData.bidNumberProjectColumn
+      if (tablesData.bidDateColumn){
+        const {dayNumber, monthNumber, yearShort}= createDate()
+
+        req[tablesData.bidDateColumn]= `${dayNumber}.${monthNumber}.${yearShort}`
+      }
+    }
 
     const resp= await axios.post(
       tablesData[linkKey],
