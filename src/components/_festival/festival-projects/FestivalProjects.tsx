@@ -23,7 +23,7 @@ const FestivalProjects = ({pageData}:Props) => {
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.projectsTitle)}</h2>
             <div className="titles-block__section">
-              <HtmlProcessing html={pageData.projectsRightSignature.html}/>
+              <HtmlProcessing html={pageData.projectsRightSignature}/>
             </div>
           </div>
 

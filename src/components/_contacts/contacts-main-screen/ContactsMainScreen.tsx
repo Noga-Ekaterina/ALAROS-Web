@@ -2,6 +2,7 @@ import React from 'react';
 import "./contacts-main-screen.scss"
 import {IContacts} from "@/types/data";
 import HtmlProcessing from "@/components/HtmlProcessing";
+import Image from '@/components/Image';
 
 interface Props{
   data: IContacts
@@ -16,9 +17,9 @@ const ContactsMainScreen = ({data}: Props) => {
 
           <div className="contacts-main-screen__addresses">
             {
-              data.addressesColumns.map(({html}, index) => (
+              data.addressesColumns.map(({text}, index) => (
                   <div className="contacts-main-screen__column" key={index}>
-                    <HtmlProcessing html={html}/>
+                    <HtmlProcessing html={text}/>
                   </div>
               ))
             }
@@ -30,7 +31,14 @@ const ContactsMainScreen = ({data}: Props) => {
             data.images.map((img, index) => (
                 <div
                     className={`contacts-main-screen__img contacts-main-screen__img--${index + 1}`} key={index}>
-                  <img src={`/Assets/Pages/Contacts/${img}`} alt="" loading="lazy"/>
+                  <Image 
+                    image={img}
+                    size='xs'
+                    mediaSizes={{
+                      bigDesktop: "small",
+                      desktop: "small"
+                    }}
+                  />
                 </div>
             ))
           }

@@ -5,8 +5,6 @@ import FestivalForum from "@/components/_festival-details/festival-forum/Festiva
 import {fetchData} from "@/utils/fetchData";
 import {IFestival, IFestivalDetails, IHtmlString, IUser, IProtectionsDay, IFestivalProgramDay} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {nominationsSProcessing} from "@/utils/nominationsProcessing";
-import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import FestivalDetailsMainScreen
   from "@/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen";
 import FestivalProgram from "@/components/_festival-details/festival-program/FestivalProgram";

@@ -1,27 +1,26 @@
 import React from 'react';
 import "./zoom-control.scss"
-import { useMap } from 'react-leaflet';
-import {ReactSVG} from "react-svg";
+import { ReactSVG } from "react-svg";
 
-const ZoomControl = () => {
-  const map = useMap();
+interface ZoomControlProps {
+  onZoomIn: () => void;
+  onZoomOut: () => void;
+}
 
-  const zoomIn = () => map.zoomIn();
-  const zoomOut = () => map.zoomOut();
-
+const ZoomControl = ({ onZoomIn, onZoomOut }: ZoomControlProps) => {
   return (
-      <div className="zoom-control">
-        <button
-            className="btn-round btn-round--increase"
-            onClick={zoomIn}
-        >
-          <ReactSVG src="/Assets/Icons/close_round.svg"/>
-        </button>
-        <button
-            className="btn-round btn-round--decrease"
-            onClick={zoomOut}
-        />
-      </div>
+    <div className="zoom-control">
+      <button
+        className="btn-round btn-round--increase"
+        onClick={onZoomIn}
+      >
+        <ReactSVG src="/Assets/Icons/close_round.svg"/>
+      </button>
+      <button
+        className="btn-round btn-round--decrease"
+        onClick={onZoomOut}
+      />
+    </div>
   );
 };
 

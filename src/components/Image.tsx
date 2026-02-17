@@ -1,22 +1,14 @@
-import React, { memo } from 'react';
-import { useMediaQuery } from 'react-responsive'
-import { IImage, IImageSize } from "@/types/data";
-import { useBreakpoints } from "@/hoocs/useBreakpoints";
-
+"use client"
+import React, {memo, useEffect, useState} from 'react';
+import {IImage, IImageSize} from "@/types/data";
+import {useBreakpoints} from "@/hoocs/useBreakpoints";
+import { IMediaSizes } from '@/types/data';
 // Типы
-export interface MediaSizes {
-  mobile?: IImageSize;
-  tablet?: IImageSize;
-  laptop?: IImageSize;
-  desktop?: IImageSize;
-  bigDesktop?: IImageSize;
-}
-
 
 export interface Props {
   image: IImage;
   size?: IImageSize;
-  mediaSizes?: MediaSizes;
+  mediaSizes?: IMediaSizes;
   className?: string;
   alt?: string;
   loading?: 'lazy' | 'eager';
@@ -37,7 +29,6 @@ const Image: React.FC<Props> = ({
 }) => {
   const breakpoints = useBreakpoints();
 
-  console.log(image)
   // Определяем размер на основе медиа-запросов
   const getSizeForBreakpoint = (): IImageSize | undefined => {
     if (!mediaSizes) return size;
@@ -62,7 +53,7 @@ const Image: React.FC<Props> = ({
     const targetSize = getSizeForBreakpoint();
 
     // Проверяем наличие формата
-    const format = targetSize && image.formats[targetSize];
+    const format = (image.formats && targetSize) && image.formats[targetSize];
 
     if (!format) {
       // Формат отсутствует, используем оригинал
@@ -95,7 +86,13 @@ const Image: React.FC<Props> = ({
     };
   };
 
-  const optimalImage = getOptimalImage();
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, []);
+
+  const optimalImage = isClient? getOptimalImage() : image.formats?.thumbnail|| image;
   const finalAlt = alt || image.alternativeText || '';
 
   return (

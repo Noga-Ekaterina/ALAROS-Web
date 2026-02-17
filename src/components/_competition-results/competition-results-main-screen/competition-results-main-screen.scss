@@ -3,9 +3,10 @@
 .competition-results-main-screen{
   $bh: calc(1vh - 0.6rem);
   display: flex;
+  color: #fff;
 
   *{
-    color: #fff;
+    color: inherit;
   }
 
   &__block-text{

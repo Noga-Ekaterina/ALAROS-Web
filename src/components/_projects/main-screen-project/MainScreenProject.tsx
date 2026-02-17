@@ -2,19 +2,29 @@
 import React from 'react';
 import "./main-screen-project.scss"
 import {IWithChildren, IWithClass} from "@/types/tehnic";
-import {IProject} from "@/types/data";
+import {IImageSize, IMediaSizes, IProject} from "@/types/data";
 import {buildLink} from "@/utils/buildLink";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import Link from "next/link";
 import {usePathname, useSearchParams} from "next/navigation";
 import cn from "classnames";
+import Image from '@/components/Image';
 
 interface Props extends IWithClass, IWithChildren{
   project: IProject
   isShowGrid?: boolean
+  size?: IImageSize;
+  mediaSizes?: IMediaSizes;
 }
 
-const MainScreenProject = ({className, project, isShowGrid, children}:Props) => {
+const MainScreenProject = ({
+  className, 
+  project, 
+  isShowGrid, 
+  children,
+  size="small",
+  mediaSizes
+}:Props) => {
   const searchParams= useSearchParams()
   const pathname= usePathname()
   return (
@@ -24,7 +34,18 @@ const MainScreenProject = ({className, project, isShowGrid, children}:Props) => 
           className={cn("main-screen-project", {"main-screen-project--grid": isShowGrid}, className)}
       >
         {children}
-        <img src={`/Assets/Projects/${project.year}/Project_${project.number}/${project.cover}`} alt="" className="main-screen-project__img"/>
+        <Image 
+          image={project.cover} 
+          className="main-screen-project__img" 
+          size={size} 
+          mediaSizes={{
+            bigDesktop: "xl",
+            desktop: "large",
+            laptop: "large",
+            tablet: "medium",
+            ...mediaSizes
+          }}
+        />
         <div className="main-screen-project__signature-wrapp">
           <strong className="main-screen-project__signature">{project.signature && nonBreakingSpaces(project.signature)}</strong>
         </div>

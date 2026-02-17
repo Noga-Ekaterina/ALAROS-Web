@@ -14,7 +14,7 @@ const CompetitionResultsMainScreen = ({pageData}: Props) => {
         <div className="competition-results-main-screen__block-text">
           <div className="main-screen__bg" style={{backgroundImage: 'url("/Assets/Pages/Competition-results/bg/1.svg")'}}/>
 
-          <HtmlProcessing html={pageData.mainScreenLeftSection.html}/>
+          <HtmlProcessing html={pageData.mainScreenLeftSection}/>
         </div>
 
         <MainScreenProject project={pageData.mainScreenProject} className="competition-results-main-screen__img-wrapp"/>

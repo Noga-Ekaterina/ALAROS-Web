@@ -3,9 +3,10 @@
 .festival-main-screen{
   $bh: calc(1vh - 0.6rem);
   display: flex;
+  color: #fff;
 
   *{
-    color: #fff;
+    color: inherit;
   }
 
   &__block-text{
@@ -79,13 +80,10 @@
     }
   }
 
-  table{
-    border: none;
+  &__row-block{
     height: 50%;
-    table-layout: fixed;
-    border-collapse: collapse;
     flex-shrink: 0;
-    display: block;
+    display: flex;
 
     @include md-book{
       height: 34%;
@@ -96,20 +94,10 @@
     }
   }
 
-  tbody{
-    display: block;
-    height: 100%;
-  }
-
-  tr{
-    height: 100%;
-    display: flex;
-  }
-
-  td{
+  &__buttons-block{
     width: 50%;
     padding: 20rem 25rem 30rem;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;

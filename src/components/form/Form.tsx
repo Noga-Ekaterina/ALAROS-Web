@@ -4,7 +4,7 @@ import "./form.scss"
 import {Field, Form as FormikForm, Formik, FormikHelpers, useFormik} from "formik";
 import {IField} from "@/types/tehnic";
 import Input from "@/components/input/Input";
-import {IFormInput, IFormRequest, INomination, TypeForm} from "@/types/data";
+import {IFormInput, IFormRequest, IFestivalNomination, TypeForm} from "@/types/data";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import cn from "classnames";
 import {getInitialValues} from "@/components/form/getInitialValues";
@@ -12,17 +12,17 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import axios from "axios";
 import Alert from "@/components/alert/Alert";
 import {createDate} from "@/utils/date";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   inputs: IFormInput[]
-  note?: string
-  nominations?: INomination[]
+  note?: string|null
+  nominations?: IFestivalNomination[]
   typeForm: TypeForm
-  dateColumn?: string
   disabled?: boolean
 }
 
-const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props) => {
+const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
   const nameKey= typeForm=="email"? "emailType" : typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
@@ -49,12 +49,6 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
         ...values,
         recaptcha: token,
         typeForm
-      }
-
-      if (dateColumn){
-        const {dayNumber, monthNumber, yearShort}= createDate()
-
-        request[dateColumn]= `${dayNumber}.${monthNumber}.${yearShort}`
       }
 
       // Исправляем типы и структуру запроса
@@ -108,6 +102,8 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
 
     setIsError(Object.keys(errors).length > 0)
 
+    console.log(errors)
+
     return errors
   }
 
@@ -119,21 +115,26 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
                 <fieldset disabled={disabled}>
                   <div key={key}>
                     {
-                      inputs.map((input) => (
-                          <Fragment key={input[nameKey]}>
-                            {
-                              (input.type !== "radios" && input.type !== "nominations" && input.type !== "dropdown") ?
-                                  <Field
-                                      name={input[nameKey]}
-                                      render={({field}: IField) => (
-                                          <Input input={input} field={field} form={typeForm}/>
-                                      )}
-                                  /> :
-                                  <Input input={input} field={{name: input[nameKey], value: '',}}
-                                         nominations={nominations} form={typeForm}/>
-                            }
-                          </Fragment>
-                      ))
+                      inputs.map((input) => {
+                        if (input[nameKey]){
+                          return (
+                              <Fragment key={input[nameKey]}>
+                                {
+                                  (input.type !== "radios" && input.type !== "nominations" && input.type !== "dropdown") ?
+                                      <Field
+                                          name={input[nameKey]}
+                                          render={({field}: IField) => (
+                                              <Input input={input} field={field} form={typeForm}/>
+                                          )}
+                                      />
+                                      :
+                                      <Input input={input} field={{name: input[nameKey], value: '',}}
+                                             nominations={nominations} form={typeForm}/>
+                                }
+                              </Fragment>
+                          )
+                        }
+                      })
                     }
                   </div>
 
@@ -165,7 +166,7 @@ const Form = ({inputs, note, nominations, typeForm, dateColumn, disabled}:Props)
                     {
                         note &&
                         <div className="note">
-                           <HtmlProcessing html={note}/>
+                          {nonBreakingSpaces(note)}
                         </div>
                     }
                   </div>

@@ -1,7 +1,7 @@
-import {IFormData, IFormInput, INomination} from "@/types/data";
+import {IFormData, IFormInput, IFestivalNomination} from "@/types/data";
 import {geNextLetter} from "@/utils/getNextLetter";
 
-export const getInitialValues=(inputs: IFormInput[], nameKey: "bidTableColumn" |"diplomaTableColumn"| "emailType", nominations?: INomination[],):IFormData=>{
+export const getInitialValues=(inputs: IFormInput[], nameKey: "bidTableColumn" |"diplomaTableColumn"| "emailType", nominations?: IFestivalNomination[],):IFormData=>{
   const result: IFormData={}
 
   inputs.forEach((input)=>{
@@ -10,7 +10,7 @@ export const getInitialValues=(inputs: IFormInput[], nameKey: "bidTableColumn" |
     if (!input.values || (input.values.length==0 && input.type!=='nominations')){
       result[name]=''
     }else if (input.type==='nominations' && nominations) {
-      result[name] = nominations[0].number.replace(".", ",")
+      result[name] = nominations[0].number.toString().replace(".", ",")
       result[geNextLetter(name)] = nominations[0].title
     }
     else
