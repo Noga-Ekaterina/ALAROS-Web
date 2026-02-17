@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {formaterDate} from "@/utils/date";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {useMediaQuery} from "react-responsive";
+import Image from '@/components/Image';
 
 interface Props {
   news: INewsItem
@@ -37,11 +38,12 @@ const NewsItem = ({news, small}: Props) => {
     setDescription(`${result}...`)
   }, [mobileScreen, small, news])
 
+  
   return (
       <Link href={`/news/${news.slug}`} className='news-item'>
         <p className="news-item__date">{formaterDate(news.date)}</p>
         <div className="news-item__img">
-          <img src={`/Assets/News/${news.slug}/${news.cover}`} alt="" loading="lazy"/>
+          <Image loading="lazy" image={news.cover} />
         </div>
 
         <p className="news-item__title">{nonBreakingSpaces(news.title)}</p>

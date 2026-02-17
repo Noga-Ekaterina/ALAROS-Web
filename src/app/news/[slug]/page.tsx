@@ -1,13 +1,14 @@
 import React, { JSX} from 'react';
 import "./news-article.scss"
 import {INews, INewsItem} from "../../../types/data";
-import {fetchData, getNewsPageData} from "@/utils/fetchData";
+import {getNewsPageData} from "@/utils/fetchData";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
 import {revalidateTag, unstable_cache} from "next/cache";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
+import {fetchColection} from "@/utils/strapFetch";
 
 interface Props{
   params: {
@@ -15,36 +16,21 @@ interface Props{
   }
 }
 
-interface IData{
-  news: null| INewsItem
-}
+const init = (slug: string) =>
+  (unstable_cache(
+    async (slug) => {
+      const data = await fetchColection<INewsItem>({
+        name: 'newss',
+        filters: {
+          slug: { "$eq": slug }
+        }
+      })
 
-const init=  (slug: string)=>(
-    unstable_cache(async (slug: string)=>{
-
-      const data= await fetchData<IData>( `
-                query NewsItemQuery {
-                  news(where: {slug: "${slug}"}) {
-                    date
-                    description
-                    title
-                    cover
-                    slug
-                    place
-                    body {
-                      html
-                    }
-                  }
-                }`)
-
-
-      if (typeof data==="string" || !data){
-        return data
-      }
-
-      return data.news??undefined
-    }, ["news-article"], {tags: [`news-${slug}`]})
-)
+      return data?.data[0] ?? undefined
+    },
+    ["news-article", slug],
+    { tags: [`news-${slug}`] }
+  ))
 
 const Page = async ({params}:Props) => {
   const slug= params.slug
@@ -57,8 +43,9 @@ const Page = async ({params}:Props) => {
     )
   }
 
-  const getData= init(slug)
-  const news= await getData(slug)
+  const news = await init(slug)(slug);
+  console.log("article", news);
+  
   const pageData= await getNewsPageData()
 
   if (typeof news=="string" || news===null) {

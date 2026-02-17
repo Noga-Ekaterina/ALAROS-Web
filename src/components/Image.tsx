@@ -1,7 +1,7 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import { useMediaQuery } from 'react-responsive'
-import {IImage, IImageSize} from "@/types/data";
-import {useBreakpoints} from "@/hoocs/useBreakpoints";
+import { IImage, IImageSize } from "@/types/data";
+import { useBreakpoints } from "@/hoocs/useBreakpoints";
 
 // Типы
 export interface MediaSizes {
@@ -26,15 +26,15 @@ export interface Props {
 
 
 const Image: React.FC<Props> = ({
-                                                           image,
-                                                           size,
-                                                           mediaSizes,
-                                                           className,
-                                                           alt,
-                                                           loading = 'lazy',
-                                                           onLoad,
-                                                           onError,
-                                                         }) => {
+  image,
+  size,
+  mediaSizes,
+  className,
+  alt,
+  loading = 'lazy',
+  onLoad,
+  onError,
+}) => {
   const breakpoints = useBreakpoints();
 
   console.log(image)
@@ -99,14 +99,14 @@ const Image: React.FC<Props> = ({
   const finalAlt = alt || image.alternativeText || '';
 
   return (
-      <img
-          src={`${process.env.NEXT_PUBLIC_IMAGES_URL}${optimalImage.url}`}
-          alt={finalAlt}
-          className={className}
-          loading={loading}
-          onLoad={onLoad}
-          onError={onError}
-      />
+    <img
+      src={`${process.env.NEXT_PUBLIC_IMAGES_URL}${optimalImage.url}`}
+      alt={finalAlt}
+      className={className}
+      loading={loading}
+      onLoad={onLoad}
+      onError={onError}
+    />
   );
 };
 

@@ -3,72 +3,69 @@ import {JSX, useMemo} from "react";
 import "./text-and-images-sliders.scss"
 import parse from 'html-react-parser';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Mousewheel} from "swiper/modules";
 import {IWithClass} from "@/types/tehnic";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import SliderClue from "@/components/slider-clue/SliderClue";
+import {IContentComponent} from "@/types/data";
+import Image from "../Image";
 
 interface Props extends IWithClass{
-  html: string
+  html: IContentComponent[];
   path: string
 }
 
 const TextAndImagesSliders = ({html, path, className}: Props) => {
   const result= useMemo(() => {
-    const patternImgs = /<h2>IMG<\/h2><table><tbody>(.*?)<\/tbody><\/table>/gs;
-    const segments: string[] = html.replaceAll("^", "&nbsp;").split(patternImgs);
+    if (!html || html.length === 0) {
+      return [];
+    }
+
     const result: JSX.Element[] = [];
 
-    segments.forEach((segment, index) => {
-      if (index % 2 === 0) {
-        const replaceTd= segment.replaceAll(/<td>(.*?)<\/td><td><p>-<\/p><\/td>/g, "<td colspan='2'>$1</td>")
-        const jsx= parse(replaceTd)
-        if (typeof jsx==="object"){
-          if (Array.isArray(jsx))
+    html.forEach((component) => {
+      const componentType = component.__component;
+      console.log("COMPONENT", component);
+      
+
+      if (componentType === 'conten.slider' && component.images) {
+        const slides: JSX.Element[] = component.images.map((image, imgIndex) => {
+          const caption = image.caption || '';
+          
+          return (
+            <SwiperSlide key={`image-${component.id}-${imgIndex}`} className={className}>
+              <Image image={image} alt={image.alternativeText || ''} loading="lazy" />
+              {caption && <HtmlProcessing html={`<p>${caption}</p>`}/>}
+            </SwiperSlide>
+          );
+        });
+
+        result.push(
+          <div key={`slider-${component.id}`} className="images-slider">
+            <Swiper
+              slidesPerView="auto"
+              spaceBetween={"10rem"}
+              className="news-article__slider"
+            >
+              {slides}
+            </Swiper>
+            {slides.length > 1 && <SliderClue/>}
+          </div>
+        );
+      } else if (componentType === 'conten.text-light' && component.text) {
+        const replaceTd = component.text.replaceAll(/<td>(.*?)<\/td><td><p>-<\/p><\/td>/g, "<td colspan='2'>$1</td>");
+        const jsx = parse(replaceTd);
+        
+        if (typeof jsx === "object") {
+          if (Array.isArray(jsx)) {
             result.push(...jsx);
-          else
-            result.push(jsx)
-        }
-
-      } else {
-        const rows: string = segment;
-        const rowMatches=Array.from(rows.matchAll(/<tr>(.*?)<\/tr>/g))
-        if (rowMatches) {
-          const slides: JSX.Element[]=[]
-          const images = Array.from(rowMatches[0][1].matchAll(rowMatches[0][1].includes("<p>")? /<td><p>(.*?)<\/p><\/td>/g : /<td>(.*?)<\/td>/g)).map(m => m[1].trim());
-          const captions = Array.from(rowMatches[1][1].matchAll(rowMatches[1][1].includes("<p>")? /<td><p>(.*?)<\/p><\/td>/g : /<td>(.*?)<\/td>/g)).map(m => m[1].trim());
-
-          images.forEach((img, imgIndex)=>{
-            const caption = captions[imgIndex];
-            slides.push(
-                <SwiperSlide key={`image-${img}`} className={className}>
-                  <img src={`${path}/${img}`} alt="" loading="lazy"/>
-                  <HtmlProcessing html={`<p>${caption}</p>`}/>
-                </SwiperSlide>
-            );
-          })
-
-          result.push(
-              <div className="images-slider">
-                <Swiper
-                    slidesPerView="auto"
-                    spaceBetween={"10rem"}
-                    className="news-article__slider"
-                >
-                  {
-                    slides.map(slide=>slide)
-                  }
-                </Swiper>
-                {
-                    slides.length>1 && <SliderClue/>
-                }
-              </div>
-          )
+          } else {
+            result.push(jsx);
+          }
         }
       }
     });
 
-    return result
+    return result;
   }, [html, path, className])
 
   return <HtmlProcessing html={result}/>

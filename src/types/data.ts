@@ -19,6 +19,7 @@ export interface IImage {
   url: string;
   alternativeText?: string;
   caption?: string;
+  name?: string;
   width: number;
   height: number;
   size: number; // размер оригинала в байтах
@@ -148,16 +149,21 @@ export interface IEventsDataYear {
   events: IEvent[]
 }
 
+export interface IContentComponent {
+  __component?: string;
+  id: number;
+  text?: string;
+  images?: IImage[];
+}
+
 export interface INewsItem {
   title: string
-  cover: string
+  cover: IImage
   description: string
   slug: string
   date: string
-  place: string| null
-  body:{
-    html: string
-  }
+  place: string | null
+  body: IContentComponent[]
 }
 
 export interface INewsPages {
