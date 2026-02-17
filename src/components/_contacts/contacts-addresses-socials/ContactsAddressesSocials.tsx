@@ -43,7 +43,7 @@ const ContactsAddressesSocials = ({data}: Props) => {
           </div>
         </div>
 
-        {/* <Map coordinatesObj={data.mapCoordinates} className="contacts-addresses-socials__map"/> */}
+        <Map coordinates={[data.longitude, data.latitude]} className="contacts-addresses-socials__map"/>
       </div>
   );
 };
