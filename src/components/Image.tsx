@@ -18,15 +18,15 @@ export interface Props {
 
 
 const Image: React.FC<Props> = ({
-                                                           image,
-                                                           size,
-                                                           mediaSizes,
-                                                           className,
-                                                           alt,
-                                                           loading = 'lazy',
-                                                           onLoad,
-                                                           onError,
-                                                         }) => {
+  image,
+  size,
+  mediaSizes,
+  className,
+  alt,
+  loading = 'lazy',
+  onLoad,
+  onError,
+}) => {
   const breakpoints = useBreakpoints();
 
   // Определяем размер на основе медиа-запросов
@@ -96,14 +96,14 @@ const Image: React.FC<Props> = ({
   const finalAlt = alt || image.alternativeText || '';
 
   return (
-      <img
-          src={`${process.env.NEXT_PUBLIC_IMAGES_URL}${optimalImage.url}`}
-          alt={finalAlt}
-          className={className}
-          loading={loading}
-          onLoad={onLoad}
-          onError={onError}
-      />
+    <img
+      src={`${process.env.NEXT_PUBLIC_IMAGES_URL}${optimalImage.url}`}
+      alt={finalAlt}
+      className={className}
+      loading={loading}
+      onLoad={onLoad}
+      onError={onError}
+    />
   );
 };
 

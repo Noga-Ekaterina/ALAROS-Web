@@ -1,7 +1,6 @@
 import React from 'react';
 import NewsMainScreen from "../../components/_news/news-main-screen/NewsMainScreen";
 import NewsList from "../../components/_news/news-list/NewsList";
-import {fetchData, getNewsPageData, getNewsQueryStr} from "@/utils/fetchData";
 import {INews, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
@@ -9,45 +8,48 @@ import CalendarEvents from "@/components/calendar-events/CalendarEvents";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import Pagination from "@/components/pagination/Pagination";
+import { fetchColection, fetchSingle } from '@/utils/strapFetch';
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-interface IData{
-  newsAll: INewsItem[]
-  newsAllConnection:{
-    aggregate: {
-      count: number
-    }
-  }
-}
+const init = (page: string) =>
+  (unstable_cache(
+    async () => {
+      const pageNumber = Number(page) || 1;
+      const data = await fetchColection<INewsItem>({
+        name: 'newss',
+        pagination: {
+          page: pageNumber,
+          pageSize: 10
+        },
+        sort: "date:desc"
+      })
 
-const init= unstable_cache(async (page: string)=>{
+      if (!data) {
+        return null;
+      }
+      
+      return { 
+        news: data.data, 
+        pageCount: data.meta.pagination.pageCount 
+      }
+    },
+    ["news-page", page],
+    { tags: ["News", "AllNews"] }
+  ))
 
-  const data= await fetchData<IData>( `
-          query NewsAllQuery {
-            ${getNewsQueryStr(Number(page))}
-            newsAllConnection(
-              stage: PUBLISHED,
-            ) {
-              aggregate {
-                count
-              }
-            }
-          }
-      `)
+const getNewsPageData = unstable_cache(async ()=>{
+  const data = await fetchSingle<any>("news-page")
 
-  if (typeof data==="string"|| !data){
-    return data
-  }
-
-  return {news: data.newsAll, count: data.newsAllConnection.aggregate.count}
-}, ["news-page"], {tags: ["News", "AllNews"]})
+  return data
+}, ["news-page-data"], {tags: ["NewsPage"]})
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams
-  const data= await init( typeof page==="string"? !isNaN(Number(page))? page:"1":"1")
+  const pageParam = typeof page==="string"? !isNaN(Number(page))? page:"1":"1"
+  const data= await init(pageParam)()
   const pageData= await getNewsPageData()
 
   if (typeof data=="string" || data===null) {
@@ -66,7 +68,7 @@ const Page = async ({searchParams}:Props) => {
         <div style={{ overflow: "hidden"}}>
           <CalendarEvents title={pageData.calendarEventsTitle}/>
           <NewsList news={data.news} pageData={pageData}/>
-          <Pagination count={data.count} size={10} hash="#news-list"/>
+          <Pagination pages={data.pageCount} hash="#news-list"/>
         </div>
       </AnimationPage>
   );

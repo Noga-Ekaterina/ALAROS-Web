@@ -39,5 +39,7 @@ export const fetchColection= async <T>({name, ...query}: {name: string} & IQury)
     } as any)
 
     return response as unknown as {data: T[], meta: IMeta}
-  }catch (e){}
+  }catch (e){
+    console.error(e)
+  }
 }
