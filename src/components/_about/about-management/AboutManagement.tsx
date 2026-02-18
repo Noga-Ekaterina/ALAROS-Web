@@ -1,14 +1,17 @@
 import React from 'react';
 import "./about-management.scss"
-import {IAbout} from "@/types/data";
+import {IAbout, IManagement} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import User from "@/components/_about/about-management/User";
 
 interface Props{
   pageData: IAbout
+  management: IManagement[] | undefined
 }
 
-const AboutManagement = ({pageData}: Props) => {
+const AboutManagement = ({pageData, management}: Props) => {
+  if (!management) return
+
   return (
       <div className="about-management container" id="management">
         <div className="titles-block">
@@ -20,8 +23,8 @@ const AboutManagement = ({pageData}: Props) => {
 
         <div className="about-management__content">
           {
-            pageData.management.map(({html}, index)=>(
-                <User data={html} key={index}/>
+            management.map((item, index)=>(
+                <User data={item} key={index}/>
             ))
           }
         </div>

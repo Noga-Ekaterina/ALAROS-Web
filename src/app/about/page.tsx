@@ -4,7 +4,7 @@ import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import type {Metadata} from "next";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchData} from "@/utils/fetchData";
-import {IAbout, IHistoryYear} from "@/types/data";
+import {IAbout, IHistoryYear, IManagement} from "@/types/data";
 import AboutMainScreen from "@/components/_about/about-main-screen/AboutMainScreen";
 import AboutDocuments from "@/components/_about/about-documents/AboutDocuments";
 import AboutMain from "@/components/_about/about-main/AboutMain";
@@ -40,9 +40,21 @@ const getHistory=unstable_cache(async ()=>{
   return data
 }, ["history-years"], {tags: ["history-year"]})
 
+
+const getManagements=unstable_cache(async ()=>{
+  const data= await fetchColection<IManagement>({
+    name: "managements",
+    sort: "position:asc",
+    pagination:{
+      pageSize: 100
+    }
+  })
+
+  return data
+}, ["managements"], {tags: ["management"]})
+
 const MyComponent = async ({searchParams}:Props) => {
-  const [pageData, history]= await Promise.all([getPageData(), getHistory()])
-  console.log(history)
+  const [pageData, history, management]= await Promise.all([getPageData(), getHistory(), getManagements()])
 
   if (typeof pageData==="string" || !pageData) {
     revalidateTag("CompetitionResults")
@@ -56,7 +68,7 @@ const MyComponent = async ({searchParams}:Props) => {
         <AboutMain pageData={pageData}/>
         <AboutDocuments pageData={pageData}/>
         <AboutHistory title={pageData.historyTitle} data={history?.data}/>
-        {/*<AboutManagement pageData={pageData}/>*/}
+        <AboutManagement pageData={pageData} management={management?.data}/>
         <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium}/>
         <AboutLife pageData={pageData}/>
         <AboutPress pageData={pageData}/>

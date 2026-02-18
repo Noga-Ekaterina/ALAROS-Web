@@ -280,11 +280,14 @@ export interface IFestivalNomination {
   file: IFile|null
 }
 
-export interface IWorker {
+export interface IHuman {
   name: string
-  place: string
   image: IImage
   jobTitle: string
+}
+
+export interface IWorker extends IHuman{
+  place: string
 }
 
 export interface IProtectionsDay {
@@ -416,4 +419,16 @@ export interface IHistoryYear{
   year: number
   body: IContentComponent[]
   additions?: IHistoryAddition[]
+}
+
+export interface IDetails{
+  title: string
+  content: string
+}
+
+export interface IManagement extends IHuman{
+  id: number
+  signature: string
+  description: string
+  details: IDetails[]
 }
