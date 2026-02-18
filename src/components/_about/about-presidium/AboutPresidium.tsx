@@ -1,26 +1,22 @@
 'use client'
 import React, {useEffect, useMemo, useState} from 'react';
 import "./about-presidium.scss"
-import {IFestival, IUser} from "../../../types/data";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {useGetRem} from "../../../hoocs/useGetRem";
+import { IWorker} from "../../../types/data";
 import cn from "classnames";
 import HtmlProcessing from "../../HtmlProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-import {Autoplay} from "swiper/modules";
 import Marquee from "react-fast-marquee";
-import {getData} from "@/components/_about/about-presidium/getData";
-import {number} from "prop-types";
 import SmoothScrolling from "@/app/SmoothScrolling";
+import Image from "@/components/Image";
 
 interface Props{
   title: string
-  data: string
+  data: IWorker[]
 }
 
-type TItem= IUser|null|undefined
+type TItem= IWorker|null|undefined
 
-const getSlides=(users: IUser[])=>{
+const getSlides=(users: IWorker[])=>{
   let newIndex=0
 
   const result: TItem[][]=[]
@@ -39,8 +35,7 @@ const getSlides=(users: IUser[])=>{
 }
 
 const AboutPresidium = ({data, title}:Props) => {
-  const users= useMemo(()=>getData(data), [])
-  const slides= getSlides(users)
+  const slides= getSlides(data)
   const [isOpened, setIsOpened] = useState<[number, number] | null>(null)
 
   const openInfo=(newSlide: number, newItem: number)=>{
@@ -59,7 +54,7 @@ const AboutPresidium = ({data, title}:Props) => {
             alt=""
         />
 
-        <h2 className="about-presidium__title">{title}</h2>
+        <h2 className="about-presidium__title">{nonBreakingSpaces(title)}</h2>
 
         <Marquee direction='left' speed={20} className="about-presidium__running-line__player">
           <div className="about-presidium__running-line-wrapp">
@@ -75,7 +70,11 @@ const AboutPresidium = ({data, title}:Props) => {
                             {
                                 item &&
                                 <>
-                                   <img src={`/Assets/Pages/People/${item.image}`} alt="" loading="lazy"/>
+                                   <Image
+                                    image={item.image}
+                                    size="xs"
+                                    mediaSizes={{bigDesktop: "small"}}
+                                   />
 
                                    <div className={cn(
                                        "about-presidium__info",

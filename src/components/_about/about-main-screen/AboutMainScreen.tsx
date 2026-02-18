@@ -14,7 +14,7 @@ const AboutMainScreen = ({pageData}: Props) => {
         <div className="about-main-screen__block-text">
           <div className="main-screen__bg" style={{backgroundImage: 'url("/Assets/Pages/About/bg/1.svg")'}}/>
 
-          <HtmlProcessing html={pageData.mainScreenLeftSection.html}/>
+          <HtmlProcessing html={pageData.mainScreenLeftSection}/>
         </div>
 
         <MainScreenProject project={pageData.mainScreenProject} className="about-main-screen__img-wrapp" isShowGrid/>

@@ -198,7 +198,7 @@ export interface IFestivalDate{
 export interface IJuriesCommited{
   name: string
   note: string
-  juries: IUser[]
+  juries: IWorker[]
 }
 
 export interface IFestival {
@@ -274,7 +274,7 @@ export interface IFestivalNomination {
   file: IFile|null
 }
 
-export interface IUser {
+export interface IWorker {
   name: string
   place: string
   image: IImage
@@ -337,20 +337,31 @@ export interface IContacts extends IMapCoordinates{
   formInputs: IFormInput[]
 }
 
+export interface ILifeItem{
+  image: IImage;
+  size: 'horizontal' |'horizontal-small' | 'vertical' | 'square'
+}
+
+export interface IPress{
+  image: IImage,
+  caption: string,
+  link: string
+}
+
 export interface IAbout {
-  mainScreenLeftSection: IHtmlString
+  mainScreenLeftSection: string
   mainScreenProject: IProject
 
   // Main About Section
   mainAboutTitle: string;
-  mainAboutImage: string;
-  mainAboutText: IHtmlString;
-  mainAboutLinks: IHtmlString[]; // Multiple values
+  mainAboutImage: IImage;
+  mainAboutText: string
+  mainAboutLinks: IHtml[]; // Multiple values
 
-  documentsLinks: IHtmlString[]
+  documentsLinks: IButtonBlock[]
   // Membership Section
-  membership: IHtmlString;
-  membershipLinks: IHtmlString[]; // Multiple values
+  membership: IButtonBlock;
+  membershipLinks: IHtml[]; // Multiple values
   membershipDisabled: boolean
 
   // History Section
@@ -367,20 +378,20 @@ export interface IAbout {
 
   // Presidium Section
   presidiumTitle: string;
-  presidium: IHtmlString;
+  presidium: IWorker[];
 
   lifeTitle: string;
-  lifeSignature: IHtmlString
-  life: IHtmlString;
+  lifeSignature: string
+  life: ILifeItem[]
 
   // Press Section
   pressTitle: string;
-  press: IHtmlString;
+  press: IPress[];
 
   // Map Section
   mapTitle: string;
-  mapTopColumns: IHtmlString[]; // Multiple values
-  map: string
-  mapInfoColumns: IHtmlString[]; // Multiple values
-  mapBottom: IHtmlString
+  mapTopColumns: IHtml[]; // Multiple values
+  map: IImage
+  mapInfoColumns: IHtml[]; // Multiple values
+  mapBottom: string
 }

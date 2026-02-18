@@ -16,100 +16,17 @@ import AboutMap from '@/components/_about/about-map/AboutMap';
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AboutManagement from "@/components/_about/about-management/AboutManagement";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
-
-interface IData{
-  abouts: IAbout[]
-}
+import {fetchSingle} from "@/utils/strapFetch";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-    query MyQuery {
-      abouts {
-        mainScreenLeftSection {
-          html
-        }
-        mainScreenProject {
-          cover
-          diploma
-          images
-          name
-          nomination
-          number
-          signature
-          year
-          winner
-        }
-        mainAboutTitle
-        mainAboutText {
-          html
-        }
-        mainAboutLinks {
-          html
-        }
-        mainAboutImage
-        documentsLinks {
-          html
-        }
-        membership {
-          html
-        }
-        membershipLinks {
-          html
-        }
-        membershipDisabled
-        historyTitle
-        historyContent {
-          html
-        }
-        historyAdditions {
-          html
-        }
-        peopleTitle
-        managementTitle
-        management {
-          html
-        }
-        presidiumTitle
-        presidium {
-          html
-        }
-        life {
-          html
-        }
-        lifeTitle
-        lifeSignature {
-          html
-        }
-        pressTitle
-        press {
-          html
-        }
-        mapTitle
-        mapTopColumns {
-          html
-        }
-        map
-        mapInfoColumns {
-          html
-        }
-        mapBottom {
-          html
-        }
-      }
-    }
-  `)
+  const data= await fetchSingle<IAbout>("about")
 
-  if (typeof data==="string"){
-    return data
-  }
-
-  return data? data.abouts[0] : null
-
-}, ["about"], {tags: ["About", "Project"]})
+  return data
+}, ["about"], {tags: ["about", "project"]})
 
 
 const MyComponent = async ({searchParams}:Props) => {
@@ -126,9 +43,9 @@ const MyComponent = async ({searchParams}:Props) => {
         <AboutMainScreen pageData={pageData}/>
         <AboutMain pageData={pageData}/>
         <AboutDocuments pageData={pageData}/>
-        <AboutHistory pageData={pageData}/>
-        <AboutManagement pageData={pageData}/>
-        <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium.html}/>
+        {/*<AboutHistory pageData={pageData}/>*/}
+        {/*<AboutManagement pageData={pageData}/>*/}
+        <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium}/>
         <AboutLife pageData={pageData}/>
         <AboutPress pageData={pageData}/>
         <AboutMap pageData={pageData}/>

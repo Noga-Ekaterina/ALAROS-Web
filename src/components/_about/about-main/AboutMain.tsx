@@ -4,6 +4,7 @@ import { IAbout } from "@/types/data";
 import { nonBreakingSpaces } from "@/utils/nonBreakingSpaces";
 import { getBtns } from "@/utils/getBtns";
 import HtmlProcessing from "@/components/HtmlProcessing";
+import Image from "@/components/Image";
 
 interface Props {
   pageData: IAbout;
@@ -21,16 +22,24 @@ const AboutMain = ({ pageData }: Props) => {
           </div>
 
           <div className="about-main__text">
-            <HtmlProcessing html={pageData.mainAboutText.html} />
+            <HtmlProcessing html={pageData.mainAboutText} />
           </div>
           <div className="about-main__row">
             {pageData.mainAboutLinks.map((btn, idx) => (
-              <HtmlProcessing html={btn.html} key={idx} />
+              <HtmlProcessing html={btn.text} key={idx} />
             ))}
           </div>
         </div>
         <div className="about-main__img">
-          <img src={`/Assets/Pages/About/${pageData.mainAboutImage}`} alt="" />
+          <Image
+              image={pageData.mainAboutImage}
+              size="small"
+              mediaSizes={{
+                bigDesktop: "xl",
+                desktop: "large",
+                laptop: "medium"
+              }}
+          />
         </div>
       </div>
     </div>

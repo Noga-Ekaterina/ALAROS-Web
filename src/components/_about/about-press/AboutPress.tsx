@@ -9,13 +9,13 @@ import BigSlider from "@/components/big-slider/BigSlider";
 import {SwiperSlide} from "swiper/react";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import {useGetRem} from "@/hoocs/useGetRem";
+import Image from "@/components/Image";
 
 interface Props{
   pageData: IAbout
 }
 
 const AboutPress = ({pageData}: Props) => {
-  const slides= useMemo(()=> getData(pageData.press.html), [])
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const bigDesktopScreen = useMediaQuery({minWidth: 2560});
   const rem= useGetRem()
@@ -30,14 +30,21 @@ const AboutPress = ({pageData}: Props) => {
 
           <BigSlider slidesPerView={mobileScreen ? 2 : 4} spaceBetween={(bigDesktopScreen? 8: mobileScreen? 7:10)*rem}>
             {
-              slides.map((slide, index) => (
+              pageData.press.map((slide, index) => (
                   <SwiperSlide
                       key={index}
                       className="about-press__slide"
                   >
                     <a href={slide.link} target="_blank" className="about-press__item">
                       <div className="about-press__img">
-                        <img src={`/Press/${slide.image}`} alt="" loading="lazy"/>
+                        <Image
+                          image={slide.image}
+                          size="xs"
+                          mediaSizes={{
+                            bigDesktop: "medium",
+                            desktop: "small"
+                          }}
+                        />
 
                         <div className="about-press__hover-block">
                           <span>Читать</span>
@@ -45,7 +52,7 @@ const AboutPress = ({pageData}: Props) => {
                       </div>
 
                       <div className="about-press__caption">
-                        <HtmlProcessing html={`<p>${slide.caption}</p>`}/>
+                        <p>{nonBreakingSpaces(slide.caption)}</p>
                       </div>
                     </a>
                   </SwiperSlide>

@@ -2,7 +2,6 @@
 import React from 'react';
 import "./about-documents.scss"
 import {IAbout} from "@/types/data";
-import {getBtns} from "@/utils/getBtns";
 import LinkBlock from "@/components/link-block/LinkBlock";
 import AboutMembership from "@/components/_about/about-membership/AboutMembership";
 
@@ -11,17 +10,15 @@ interface Props{
 }
 
 const AboutDocuments = ({pageData}: Props) => {
-  const btns= getBtns(pageData.documentsLinks)
-
 
   return (
       <div className="about-documents" id="documents">
         <div className="container">
           <div className="about-documents__btns">
             {
-              btns.map((btn, index)=>{
+              pageData.documentsLinks.map((btn, index)=>{
                 return (
-                    <LinkBlock title={btn.title} link={btn.link} className="about-documents__btn" key={index}/>
+                    <LinkBlock title={btn.left} link={btn.right} className="about-documents__btn" key={index}/>
                 )
               })
             }

@@ -2,6 +2,7 @@ import { IAbout } from "@/types/data";
 import "./about-map.scss";
 import { nonBreakingSpaces } from "@/utils/nonBreakingSpaces";
 import HtmlProcessing from "@/components/HtmlProcessing";
+import Image from "@/components/Image";
 
 interface Props {
   pageData: IAbout;
@@ -24,27 +25,26 @@ const AboutMap = ({ pageData }: Props) => {
         <div className="about-map__top">
           {pageData.mapTopColumns.map((col, idx) => (
               <div className="about-map__top-col" key={idx}>
-                <HtmlProcessing html={col.html}/>
+                <HtmlProcessing html={col.text}/>
               </div>
           ))}
         </div>
 
-        <img
-            src={`/Assets/Pages/About/${pageData.map}`}
+        <Image
+            image={pageData.map}
             className="about-map__map"
-            alt=""
         />
 
         <div className="about-map__info">
           {pageData.mapInfoColumns.map((col, idx) => (
               <div className="about-map__info-col" key={idx}>
-                <HtmlProcessing html={col.html}/>
+                <HtmlProcessing html={col.text}/>
               </div>
           ))}
         </div>
 
         <div className="about-map__bottom">
-          <HtmlProcessing html={pageData.mapBottom.html}/>
+          <HtmlProcessing html={pageData.mapBottom}/>
         </div>
       </div>
     </div>

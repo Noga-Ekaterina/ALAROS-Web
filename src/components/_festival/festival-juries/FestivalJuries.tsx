@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useMemo, useState} from 'react';
 import "./festival-juries.scss"
-import {IFestival, IHtmlString, IJuriesCommited, IUser} from "../../../types/data";
+import {IFestival, IHtmlString, IJuriesCommited, IWorker} from "../../../types/data";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useGetRem} from "../../../hoocs/useGetRem";
 import cn from "classnames";
