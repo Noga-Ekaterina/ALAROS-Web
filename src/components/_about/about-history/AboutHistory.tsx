@@ -1,36 +1,42 @@
 import React from 'react';
 import "./about-history.scss"
-import {IAbout} from "@/types/data";
+import {IAbout, IHistoryYear} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import Year from "@/components/_about/about-history/Year";
 import AdditionItem from "@/components/_about/about-history/AdditionItem";
+import additionItem from "@/components/_about/about-history/AdditionItem";
 
 interface Props{
-  pageData: IAbout
+  title: string,
+  data: IHistoryYear[]|undefined
 }
 
-const AboutHistory = ({pageData}: Props) => {
+const AboutHistory = ({title, data}: Props) => {
+  if (!data) return
+
   return (
       <div className="about-history" id="history">
         <div className="container">
           <div className="titles-block">
-            <h2 className="titles-block__title">{nonBreakingSpaces(pageData.historyTitle)}</h2>
+            <h2 className="titles-block__title">{nonBreakingSpaces(title)}</h2>
           </div>
         </div>
         
         <div className="about-history__container">
-          <div className="about-history__additions">
+          <div className="about-history__additions-mobile">
             {
-              pageData.historyAdditions.map(({html}, index)=>(
-                  <AdditionItem data={html} key={index}/>
+              data.map((item, index)=>(
+                  item.additions?.map(additionItem=>(
+                      <AdditionItem data={additionItem.body} key={additionItem.id}/>
+                  ))
               ))
             }
           </div>
           
           <div className="about-history__content">
             {
-              pageData.historyContent.map(({html}, index)=>(
-                  <Year data={html} key={index}/>
+              data.map((item, index)=>(
+                  <Year data={item} key={index}/>
               ))
             }
           </div>

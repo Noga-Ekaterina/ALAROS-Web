@@ -1,20 +1,34 @@
 import React from 'react';
 import TextAndImagesSliders from "@/components/text-and-images-sliders/TextAndImagesSliders";
+import {IHistoryYear} from "@/types/data";
+import AdditionItem from "@/components/_about/about-history/AdditionItem";
+import cn from "classnames";
 
 interface Props{
-  data: string
+  data: IHistoryYear
 }
 
 const Year = ({data}: Props) => {
-  const patternYear= /^<h1>(.*?)<\/h1>/
-  const result = data.match(patternYear);
-  const year=result? result[1]:""
-
   return (
       <div className="about-history__year-wrap">
-        <div className="about-history__year">{year}</div>
+        <div
+            className={cn(
+                "about-history__additions-desctop",
+                {"about-history__additions-desctop--padding": data.additions?.length}
+            )}
+        >
+          {
+            data.additions?.map(additionItem=>(
+                <AdditionItem data={additionItem.body} key={additionItem.id}/>
+            ))
+          }
+        </div>
+
         <div className="about-history__year-content">
-          <TextAndImagesSliders html={data.replace(patternYear, "")} path={`/Assets/Pages/About/History/${year}`} className="about-history__slide"/>
+          <div className="about-history__year">{data.year}</div>
+          <div className="about-history__year-text-content">
+            <TextAndImagesSliders html={data.body} className="about-history__slide"/>
+          </div>
         </div>
       </div>
   );

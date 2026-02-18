@@ -34,7 +34,7 @@ const NewsArticle = ({ news, slug, allNews }: Props) => {
           </div>
           <div className="news-article__body">
             {
-              <TextAndImagesSliders html={news?.body || []} path={`/Assets/News/${slug}`} className="news-article__slide" />
+              <TextAndImagesSliders html={news?.body || []} className="news-article__slide" />
             }
           </div>
         </div>

@@ -372,8 +372,6 @@ export interface IAbout {
 
   // History Section
   historyTitle: string;
-  historyContent: IHtmlString[]; // Multiple values
-  historyAdditions: IHtmlString[]; // Multiple values
 
   // People Section
   peopleTitle: string;
@@ -400,4 +398,22 @@ export interface IAbout {
   map: IImage
   mapInfoColumns: IHtml[]; // Multiple values
   mapBottom: string
+}
+export interface IHistoryAdditionComponent {
+  __component?: string
+  id: number
+  text?: string
+  image?: IImage
+  link: string
+}
+
+export interface IHistoryAddition {
+  id: number
+  body: IHistoryAdditionComponent[]
+}
+
+export interface IHistoryYear{
+  year: number
+  body: IContentComponent[]
+  additions?: IHistoryAddition[]
 }

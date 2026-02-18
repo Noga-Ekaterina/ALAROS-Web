@@ -11,10 +11,9 @@ import Image from "../Image";
 
 interface Props extends IWithClass{
   html: IContentComponent[];
-  path: string
 }
 
-const TextAndImagesSliders = ({html, path, className}: Props) => {
+const TextAndImagesSliders = ({html, className}: Props) => {
   const result= useMemo(() => {
     if (!html || html.length === 0) {
       return [];
@@ -24,8 +23,7 @@ const TextAndImagesSliders = ({html, path, className}: Props) => {
 
     html.forEach((component) => {
       const componentType = component.__component;
-      console.log("COMPONENT", component);
-      
+
 
       if (componentType === 'conten.slider' && component.images) {
         const slides: JSX.Element[] = component.images.map((image, imgIndex) => {
@@ -52,7 +50,9 @@ const TextAndImagesSliders = ({html, path, className}: Props) => {
           </div>
         );
       } else if (componentType === 'conten.text-light' && component.text) {
-        const replaceTd = component.text.replaceAll(/<td>(.*?)<\/td><td><p>-<\/p><\/td>/g, "<td colspan='2'>$1</td>");
+        const replaceTd = component.text.replaceAll(/<td>(.*?)<\/td><td><p>-<\/p><\/td>/g, "<td colspan='2'>$1</td>")
+            .replaceAll("^", "&nbsp;");
+
         const jsx = parse(replaceTd);
         
         if (typeof jsx === "object") {
@@ -66,7 +66,7 @@ const TextAndImagesSliders = ({html, path, className}: Props) => {
     });
 
     return result;
-  }, [html, path, className])
+  }, [html, className])
 
   return <HtmlProcessing html={result}/>
 };

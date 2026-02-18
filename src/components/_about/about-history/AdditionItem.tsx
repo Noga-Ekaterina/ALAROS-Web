@@ -1,21 +1,51 @@
-import React from 'react';
+import React, {JSX, useMemo} from 'react';
 import HtmlProcessing from "@/components/HtmlProcessing";
+import {IHistoryAdditionComponent} from "@/types/data";
+import Image from "@/components/Image";
+import parse from "html-react-parser";
 
 interface Props{
-  data: string
+  data: IHistoryAdditionComponent[]
 }
 
 const AdditionItem = ({data}: Props) => {
-  const html = data.replace(
-      /<h1>(IMG)<\/h1>\s*<p>(.*?)<\/p>/gi,
-      (match, type, path) => {
-        return `<img src="/Assets/Pages/About/History/Additions/${path}" loading="lazy">`;
-      })
-      .replace("<iframe", '<iframe loading="lazy" ');
+  const result= useMemo(() => {
+    if (!data || data.length === 0) {
+      return [];
+    }
+
+    const result: JSX.Element[] = [];
+
+    data.forEach((component) => {
+      const componentType = component.__component;
+
+
+      if (componentType === 'conten.image' && component.image) {
+        result.push(<Image image={component.image} size="xs"/>)
+      }else if (componentType === 'conten.video' && component.link) {
+        result.push(<iframe src={component.link}/>)
+      }else if (componentType === 'conten.text-light' && component.text) {
+        const replaceTd = component.text.replaceAll("^", "&nbsp;");
+
+        const jsx = parse(replaceTd);
+
+        if (typeof jsx === "object") {
+          if (Array.isArray(jsx)) {
+            result.push(...jsx);
+          } else {
+            result.push(jsx);
+          }
+        }
+      }
+    });
+
+    return result;
+  }, [data])
+
 
   return (
       <div className="about-history__addition">
-        <HtmlProcessing html={html}/>
+        <HtmlProcessing html={result}/>
       </div>
   );
 };

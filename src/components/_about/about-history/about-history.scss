@@ -37,20 +37,34 @@
     }
   }
 
-  &__additions{
+  &__additions-desctop{
     width: 25%;
     padding-left: var(--p-x);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-block: 18vw;
 
     @include sm{
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 44rem var(--p-x);
-      row-gap: 44rem;
+      display: none;
+    }
+
+    &--padding{
+      padding-block: 75rem;
+    }
+  }
+
+  &__additions-mobile {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 44rem var(--p-x);
+    row-gap: 44rem;
+
+    display: none;
+
+    @include sm{
+      display: flex;
     }
   }
 
@@ -149,7 +163,7 @@
     }
   }
 
-  .video{
+  iframe{
     @include adaptive((
             --width: (default: 236rem, xxl: 697, sm: 350)
     ));
@@ -160,7 +174,7 @@
   }
 
   &__content{
-    width: 74%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.3em;
@@ -169,10 +183,6 @@
 
     @include sm{
       font-size: 10rem;
-    }
-
-    @include sm{
-      width: 100%;
       padding-inline: var(--p-x);
     }
   }
@@ -187,19 +197,26 @@
 
     @include sm{
       font-size: 15rem;
+      width: 100%;
     }
 
     &-wrap{
       display: flex;
       justify-content: space-between;
+    }
+
+    &-content {
+      width: 74%;
+      display: flex;
+      justify-content: space-between;
 
       @include sm{
+        width: 100%;
         flex-direction: column;
         gap: 1.3em;
       }
     }
-
-    &-content{
+    &-text-content{
       width: 88.9%;
       line-height: 1.3em;
       display: flex;
@@ -220,14 +237,14 @@
   }
 
   &__slide{
-    width: 78%;
+    width: 80%;
 
     @include xl{
-      width: 70.4%;
+      width: 72%;
     }
 
     @include xxl{
-      width: 75.5%;
+      width: 77.5%;
     }
 
     @include sm{
