@@ -1,4 +1,6 @@
 import { strapi } from '@strapi/client';
+import {unstable_cache} from "next/cache";
+import {INewsItem} from "@/types/data";
 
 interface IMeta{
   "pagination": {
@@ -43,3 +45,27 @@ export const fetchColection= async <T>({name, ...query}: {name: string} & IQury)
     console.error(e)
   }
 }
+
+export const getNews =unstable_cache(async (page: string) => {
+    const pageNumber = Number(page) || 1;
+    const data = await fetchColection<INewsItem>({
+      name: 'newss',
+      pagination: {
+        page: pageNumber,
+        pageSize: 10
+      },
+      sort: "date:desc"
+    })
+
+    if (!data) {
+      return null;
+    }
+
+    return {
+      news: data.data,
+      pageCount: data.meta.pagination.pageCount
+    }
+  },
+  ["news-page"],
+  { tags: ["News", "AllNews"] }
+)

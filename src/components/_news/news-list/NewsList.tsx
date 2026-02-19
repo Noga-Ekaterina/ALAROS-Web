@@ -4,7 +4,7 @@ import './news-list.scss';
 
 import cn from 'classnames';
 import { useMediaQuery } from 'react-responsive';
-import {INews, INewsItem} from "../../../types/data";
+import {IMediaSizes, INews, INewsItem} from "../../../types/data";
 import {observer} from "mobx-react-lite";
 import NewsItem from "../news-item/NewsItem";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
@@ -16,10 +16,16 @@ interface Props{
   pageData: INews
 }
 
+const bigMediaSizes: IMediaSizes={
+  bigDesktop: "xxl",
+  desktop: "xl",
+  laptop: "medium",
+  tablet: "small"
+}
+
 const NewsList: FC<Props> = ({news, pageData}) => {
   const [baseChunkSize, setBaseChunkSize] = useState(3);
   const mobileScreen = useMediaQuery({maxWidth: 640});
-  const [isBigItem, setIsBigItem] = useState(false)
 
   const getModifiedList = (data: any[]) => {
     const chunkSizes = [baseChunkSize, mobileScreen? baseChunkSize: baseChunkSize+1]; // Чередование размеров порций
@@ -89,9 +95,11 @@ const NewsList: FC<Props> = ({news, pageData}) => {
           <h2 className="titles-block__title">{nonBreakingSpaces(pageData.newsTitle)}</h2>
         </div>
         {itemsGrid.map((row, rowIndex) => {
+          const reverse=rowIndex % 3==0 && rowIndex%2==0
           const rowClass = cn(
             "news-list__row",
-            (row.length == baseChunkSize) && 'news-list__row--large', (rowIndex % 3==0 && rowIndex%2==0) &&'news-list__row--large-reverse',
+            (row.length == baseChunkSize) && 'news-list__row--large',
+            (reverse) &&'news-list__row--large-reverse',
           )
 
           return (
@@ -100,7 +108,15 @@ const NewsList: FC<Props> = ({news, pageData}) => {
 
               {row.map((item: INewsItem, index: number) => {
                 return (
-                  <NewsItem news={item} key={`news-list-item-${index}`}/>
+                  <NewsItem
+                      news={item}
+                      key={`news-list-item-${index}`}
+                      mediaSizes={
+                        (
+                            (index===0 && reverse) ||
+                            (index===1 && !reverse && row.length===baseChunkSize)
+                        )? bigMediaSizes:undefined}
+                  />
                 );
               })}
 

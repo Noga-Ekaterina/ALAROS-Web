@@ -8,40 +8,15 @@ import CalendarEvents from "@/components/calendar-events/CalendarEvents";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import Pagination from "@/components/pagination/Pagination";
-import { fetchColection, fetchSingle } from '@/utils/strapFetch';
+import {fetchColection, fetchSingle, getNews} from '@/utils/strapFetch';
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-const init = (page: string) =>
-  (unstable_cache(
-    async () => {
-      const pageNumber = Number(page) || 1;
-      const data = await fetchColection<INewsItem>({
-        name: 'newss',
-        pagination: {
-          page: pageNumber,
-          pageSize: 10
-        },
-        sort: "date:desc"
-      })
-
-      if (!data) {
-        return null;
-      }
-      
-      return { 
-        news: data.data, 
-        pageCount: data.meta.pagination.pageCount 
-      }
-    },
-    ["news-page", page],
-    { tags: ["News", "AllNews"] }
-  ))
 
 const getNewsPageData = unstable_cache(async ()=>{
-  const data = await fetchSingle<any>("news-page")
+  const data = await fetchSingle<INews>("news-page")
 
   return data
 }, ["news-page-data"], {tags: ["NewsPage"]})
@@ -49,8 +24,7 @@ const getNewsPageData = unstable_cache(async ()=>{
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams
   const pageParam = typeof page==="string"? !isNaN(Number(page))? page:"1":"1"
-  const data= await init(pageParam)()
-  const pageData= await getNewsPageData()
+  const [pageData, data]= await Promise.all([getNewsPageData(), getNews(pageParam)])
 
   if (typeof data=="string" || data===null) {
     revalidateTag("AllNews")

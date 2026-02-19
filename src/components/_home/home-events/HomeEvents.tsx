@@ -7,6 +7,7 @@ import {useMediaQuery} from "react-responsive";
 import {ReactSVG} from "react-svg";
 import HtmlProcessing from "../../HtmlProcessing";
 import {IHomeData} from "@/types/data";
+import Image from "@/components/Image";
 
 interface Props{
   homeData: IHomeData
@@ -24,7 +25,7 @@ const HomeEvents = ({homeData}:Props) => {
   return (
       <div className="home-events">
       <div className="home-events__block-text">
-          <HtmlProcessing html={homeData.events.html}/>
+          <HtmlProcessing html={homeData.events}/>
       </div>
         <div className='home-events__slider'>
           <Swiper
@@ -39,7 +40,7 @@ const HomeEvents = ({homeData}:Props) => {
                   {
                     homeData.bannersMobile.map((banner, index)=>(
                         <SwiperSlide key={`mob banner ${index}`}>
-                          <img src={`/Assets/Pages/Home/Banners/Mobile/${banner}`} alt=""/>
+                          <Image image={banner}/>
                         </SwiperSlide>
                     ))
                   }
@@ -50,7 +51,7 @@ const HomeEvents = ({homeData}:Props) => {
                         {
                           homeData.bannersBigDesktop.map((banner, index)=>(
                               <SwiperSlide key={`banner ${index}`}>
-                                <img src={`/Assets/Pages/Home/Banners/Big-desktop/${banner}`} alt=""/>
+                                <Image image={banner}/>
                               </SwiperSlide>
                           ))
                         }
@@ -60,7 +61,7 @@ const HomeEvents = ({homeData}:Props) => {
                     {
                       homeData.bannersDesktop.map((banner, index)=>(
                           <SwiperSlide key={`banner ${index}`}>
-                            <img src={`/Assets/Pages/Home/Banners/Desktop/${banner}`} alt=""/>
+                            <Image image={banner}/>
                           </SwiperSlide>
                       ))
                     }

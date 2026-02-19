@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import "./news-item.scss"
-import {INewsItem} from "../../../types/data";
+import {IImageSize, IMediaSizes, INewsItem} from "../../../types/data";
 import Link from 'next/link';
 import {formaterDate} from "@/utils/date";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
@@ -10,8 +10,15 @@ import Image from '@/components/Image';
 interface Props {
   news: INewsItem
   small?: boolean
+  size?: IImageSize;
+  mediaSizes?: IMediaSizes;
 }
-const NewsItem = ({news, small}: Props) => {
+const NewsItem = ({
+    news,
+    small,
+    size= 'small',
+    mediaSizes
+}: Props) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const [description, setDescription] = useState(news.description)
 
@@ -43,7 +50,15 @@ const NewsItem = ({news, small}: Props) => {
       <Link href={`/news/${news.slug}`} className='news-item'>
         <p className="news-item__date">{formaterDate(news.date)}</p>
         <div className="news-item__img">
-          <Image loading="lazy" image={news.cover} />
+          <Image
+              image={news.cover}
+              size={size}
+              mediaSizes={{
+                bigDesktop: "large",
+                desktop: "medium",
+                tablet: "xs"
+              }}
+          />
         </div>
 
         <p className="news-item__title">{nonBreakingSpaces(news.title)}</p>

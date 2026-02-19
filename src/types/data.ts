@@ -81,15 +81,15 @@ export interface IMenu{
 
 export interface IHomeMainScreen{
   mainTitle: string
-  mainSection: IHtmlString
+  mainSection: string
   projects: IProject[]
 }
 
 export interface IHomeBaners{
-  bannersDesktop: string[]
-  bannersBigDesktop: string[],
-  bannersMobile: string[]
-  events: IHtmlString
+  bannersDesktop: IImage[]
+  bannersBigDesktop: IImage[],
+  bannersMobile: IImage[]
+  events: string
 }
 
 export interface IHomeData extends IHomeMainScreen, IHomeBaners{

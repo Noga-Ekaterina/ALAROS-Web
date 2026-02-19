@@ -53,7 +53,15 @@ const HomeMainScreen = ({homeData}: Props) => {
             {
               homeData.projects.map(project=>(
                   <SwiperSlide key={`${project.year}-${project.number}`}>
-                    <MainScreenProject project={project} className="home-main-screen__slide-content" >
+                    <MainScreenProject
+                        project={project}
+                        className="home-main-screen__slide-content"
+                        mediaSizes={{
+                          bigDesktop: 'xxl',
+                          desktop: "xl",
+                          laptop: "large"
+                        }}
+                    >
                       <div className="home-main-screen__slide-title-wrapp">
                         <h2 className='home-main-screen__slide-title'>{nonBreakingSpaces(homeData.mainTitle)}</h2>
                       </div>
@@ -71,7 +79,7 @@ const HomeMainScreen = ({homeData}: Props) => {
 
           <div className="main-screen__bg" style={{backgroundImage: 'url("/Assets/Pages/Home/bg/1.svg")'}}/>
 
-          <HtmlProcessing html={homeData.mainSection.html}/>
+          <HtmlProcessing html={homeData.mainSection}/>
         </aside>
       </div>
   );

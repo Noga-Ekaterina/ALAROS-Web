@@ -11,6 +11,7 @@ import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
+import {fetchSingle, getNews} from "@/utils/strapFetch";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -22,56 +23,19 @@ interface IData{
 }
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-          query MyQuery {
-            homes {
-              mainTitle
-              mainSection {
-                html
-              }
-              projects {
-                name
-                nomination
-                number
-                diploma
-                year
-                winner
-                cover
-                images
-                signature
-              }
-              bannersDesktop
-              bannersBigDesktop
-              bannersMobile
-              events {
-                html
-              }
-              newsTitle
-            }
-            ${getNewsQueryStr(1)}
-          }`)
+  const data= await fetchSingle<IHomeData>("home")
 
-  if (typeof data==="string" || !data){
-    return data
-  }
-
-  const {homes, newsAll}=data
-
-  const result={homeData: homes[0], news: newsAll}
-
-  return result
-}, ["home"], {tags: ["Home", "Project", "News"]})
+  return data
+}, ["home"], {tags: ["Home", "Project" ]})
 
 const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams
-  const data=  await init()
+  const [homeData, news]=  await Promise.all([init(), getNews('1')])
 
-  if (typeof data==="string" || !data) {
+  if (typeof homeData==="string" || !homeData) {
     revalidateTag("Home")
-    return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
+    return <div>произошла ошибка{homeData && `: ${homeData}`}, перезагрузите страницу</div>
   }
-
-  const {homeData, news}= data
 
   return (
       <AnimationPage>
@@ -79,7 +43,7 @@ const Home = async ({searchParams}:Props) => {
         <HomeMainScreen homeData={homeData}/>
         <HomeEvents homeData={homeData}/>
         <CalendarEvents/>
-        <HomeNewsSlider title={homeData.newsTitle} news={news}/>
+        <HomeNewsSlider title={homeData.newsTitle} news={news?.news}/>
         <PartnersSlider/>
       </AnimationPage>
   );

@@ -65,7 +65,8 @@ const HtmlProcessing = ({html}:Props) => {
     // Убираем пустые теги <p></p>
     let str = typeof html ==="string"&&
         html.replace("<p></p>", '')
-            .replaceAll("^", "&nbsp;");
+            .replaceAll("^", "&nbsp;")
+            .replaceAll("~", "<br>");
 
     const jsx = str? parse(str):html
 

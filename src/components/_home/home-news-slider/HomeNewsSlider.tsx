@@ -9,7 +9,7 @@ import {useMediaQuery} from "react-responsive";
 import {INewsItem} from "@/types/data";
 
 interface Props{
-  news: INewsItem[]
+  news: INewsItem[] |undefined
   title: string
 }
 
@@ -17,6 +17,8 @@ const HomeNewsSlider = ({title, news}: Props) => {
   const arrIndexSmall= [2, 5, 7, 10]
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const bigDesktopScreen = useMediaQuery({minWidth: 1920});
+
+  if (!news) return
 
   return (
       <div className="home-news-slider">
