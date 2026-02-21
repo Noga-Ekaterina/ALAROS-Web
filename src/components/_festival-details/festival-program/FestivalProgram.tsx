@@ -2,13 +2,12 @@
 import React, {useMemo} from 'react';
 import "./festival-program.scss"
 import {IFestival, IFestivalProgramDay, IFestivalDetails} from "@/types/data";
-import {getRowsInTable} from "@/utils/getRowsInTable";
 import {createDate, formaterDate} from "@/utils/date";
 import Detalis from "@/components/detalis/Detalis";
 import HtmlProcessing from "@/components/HtmlProcessing";
-import {getPrgramTitles, programProcessing} from "./getData";
 import HorizontalScrollSection from "@/app/HorizontalScrollSection";
 import cn from "classnames";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
 interface Props{
   pageData: IFestivalDetails
@@ -16,8 +15,7 @@ interface Props{
 }
 
 const FestivalProgram = ({pageData, festivalProgram}:Props) => {
-  const titles= useMemo(() => getPrgramTitles(pageData.festivalProgramColumns.html), [])
-  const programDays= useMemo(() => programProcessing(festivalProgram), [])
+  const titles= useMemo(() => [...pageData.festivalProgramColumns].slice(0,4), [])
 
   return (
       <div className="festival-program" id="festival-program">
@@ -26,23 +24,23 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
 
           <HorizontalScrollSection className="festival-program__content">
             <div className="festival-program__row festival-program__header">
-              <span>{titles.day}</span>
-              <span>{titles.time}</span>
-              <span>{titles.title}</span>
-              <span>{titles.place}</span>
+              {
+                titles.map((str, index)=>(
+                    <span key={index}>{nonBreakingSpaces(str)}</span>
+                ))
+              }
             </div>
 
             <div className="festival-program__body">
               {
-                programDays.map(day => {
-                  const [year, month, dayNumber] = day.date.split("-")
-                  const {dayShort} = createDate({date: new Date(Number(year), Number(month) - 1, Number(dayNumber))})
+                festivalProgram.map(day => {
+                  const {dayShort} = createDate({date: new Date(day.date)})
 
-                  return day.scheduleObjs.map((item, index) => (
+                  return day.events.map((item, index) => (
                       <div
                           className={cn(
                               "festival-program__row",
-                              {"festival-program__row--business-program": !(day.businessProgramPosition != index + 1 || !day.businessProgram)}
+                              {"festival-program__row--business-program": item.businessProgram}
                           )}
                           key={`${day.date}-${item.time}-${index}`}
                       >
@@ -51,22 +49,26 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
                         <span className="festival-program__time">{item.time}</span>
                         <div>
                           {
-                            (day.businessProgramPosition != index + 1 || !day.businessProgram) ?
-                                <div className="festival-program__text"><HtmlProcessing
-                                    html={`<span>${item.title}</span>`}/></div> :
-                                <Detalis title={<div className="festival-program__text"><HtmlProcessing
-                                    html={`<span>${item.title}</span>`}/></div>}>
+                            (!item.businessProgram) ?
+                                <div className="festival-program__text">
+                                  <span>{nonBreakingSpaces(item.title)}</span>
+                                </div>
+                                :
+                                <Detalis
+                                    title={<div className="festival-program__text"><HtmlProcessing
+                                    html={`<span>${item.title}</span>`}/></div>}
+                                >
                                   <div className="festival-program__text festival-program__business-program">
-                                    <HtmlProcessing html={day.businessProgram.html}/>
+                                    <HtmlProcessing html={item.businessProgram}/>
                                   </div>
 
-                                  {day.fullVersionBusinessProgram &&
+                                  {item.fullVersionBusinessProgram &&
                                       <div className="festival-program__full-version-business-program"><HtmlProcessing
-                                          html={day.fullVersionBusinessProgram.html}/></div>}
+                                          html={item.fullVersionBusinessProgram}/></div>}
                                 </Detalis>
                           }
                         </div>
-                        <span className="festival-program__place">{item.place}</span>
+                        <span className="festival-program__place">{nonBreakingSpaces(item.place)}</span>
                       </div>))
                 })
               }

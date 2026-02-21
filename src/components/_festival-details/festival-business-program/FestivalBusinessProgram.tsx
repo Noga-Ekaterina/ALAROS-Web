@@ -10,7 +10,6 @@ import {SwiperNavigation} from "../../../utils/SwiperNavigation";
 import {Mousewheel} from "swiper/modules";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import Detalis from "@/components/detalis/Detalis";
-import {getDaysData, getSessionData, getUsers} from "./getData";
 import UserCard from "@/components/_festival-details/festival-business-program/User";
 import Day from "@/components/_festival-details/festival-business-program/Day";
 
@@ -19,12 +18,12 @@ interface Props{
 }
 
 const FestivalBusinessProgram = ({pageData}:Props) => {
-  const days = useMemo(() => getDaysData(pageData.businessProgramSessions), []);
+  // const days = useMemo(() => getDaysData(pageData.businessProgramSessions), []);
   return (
       <div className="festival-business-program" id="business-program">
         {
-          days.map((day)=>(
-              <Day title={pageData.businessProgramTitle} {...day} key={day.date.join("-")}/>
+          pageData.businessProgram.map((day)=>(
+              <Day title={pageData.businessProgramTitle} {...day} key={day.date}/>
           ))
         }
       </div>

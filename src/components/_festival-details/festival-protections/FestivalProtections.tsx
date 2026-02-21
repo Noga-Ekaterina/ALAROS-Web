@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useMemo} from 'react';
 import "./festival-protections.scss"
 import Detalis from "../../detalis/Detalis";
 import HtmlProcessing from "../../HtmlProcessing";
@@ -8,21 +8,24 @@ import {IHtmlString, IProtectionsDay} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SmoothScrolling from "@/app/SmoothScrolling";
 import HorizontalScrollSection from "@/app/HorizontalScrollSection";
+import cn from "classnames";
 
 interface Props {
   title: string
   protectionsDays: IProtectionsDay[]
-  protectionsRightSignature: IHtmlString | null
+  protectionsRightSignature: string | null
+  protectionsColumns: string[]
 }
 
-const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}:Props) => {
+const FestivalProtections = ({title, protectionsDays, protectionsRightSignature, protectionsColumns}:Props) => {
+  const titles=useMemo(()=> [...protectionsColumns].slice(0, 6), [])
   return (
       <div className="festival-protections" id="protections">
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small festival-protections__title">{nonBreakingSpaces(title)}</h2>
             <div className="titles-block__section">
-              <HtmlProcessing html={protectionsRightSignature?.html}/>
+              <HtmlProcessing html={protectionsRightSignature}/>
             </div>
           </div>
 
@@ -36,7 +39,40 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature}
                     <span>{formaterDate(item.date)} | {day}</span> <span className="festival-protections__place">{item.place}</span></p>} startIsOpen={index === 0}>
                     <SmoothScrolling enableScrollTransfer={true}>
                       <HorizontalScrollSection>
-                        <HtmlProcessing html={item.table?.html}/>
+                        <table>
+                          <thead>
+                            <tr>
+                              {
+                                titles.map((str, titleIndex)=>(
+                                    <th key={titleIndex}>{nonBreakingSpaces(str)}</th>
+                                ))
+                              }
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {
+                            item.protections.map((protection, protectionIndex)=>(
+                                <tr key={protectionIndex} className={cn({"grey": protection.isBreak})}>
+                                  <td>{protection.time}</td>
+                                  {
+                                    protection.isBreak?
+                                        <td>{protection.breakTitle}</td>
+                                    :
+                                        <>
+                                          <td className="red">
+                                            {protection.isOnline &&"online"}
+                                          </td>
+                                          <td>{protection.number}</td>
+                                          <td>{protection.nomination}</td>
+                                          <td>{protection.name}</td>
+                                          <td>{protection.winner}</td>
+                                        </>
+                                  }
+                                </tr>
+                            ))
+                          }
+                          </tbody>
+                        </table>
                       </HorizontalScrollSection>
                     </SmoothScrolling>
                   </Detalis>

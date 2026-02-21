@@ -1,15 +1,21 @@
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import React from "react";
-import {IUser} from "@/types/data";
+import {IHuman} from "@/types/data";
+import Image from "@/components/Image";
 
 interface IProps{
-  user: Omit<IUser, "place">
+  user: IHuman
+  isBig?: boolean
 }
 
-const UserCard=({user}: IProps)=>{
+const UserCard=({user, isBig}: IProps)=>{
   return(
       <div className="session-user">
-        <img src={`/Assets/Pages/People/${user.image}`} alt="" className="session-user__img" loading="lazy"/>
+        <Image
+            image={user.image}
+            size='xs'
+            mediaSizes={isBig? {bigDesktop: "small"} : undefined}
+            className="session-user__img"/>
         <div className="session-user__name">
           <p>{nonBreakingSpaces(user.name)}</p>
         </div>

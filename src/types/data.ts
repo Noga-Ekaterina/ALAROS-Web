@@ -107,8 +107,8 @@ export interface IPartnersSlider {
 
 export interface IInfopartnersSlider {
   infopartnersTitle: string;
-  infopartnersText: IHtmlString
-  infopartners: IHtmlString
+  infopartnersText: string
+  infopartners: IPartner[]
 }
 
 export interface IIconLink {
@@ -239,39 +239,61 @@ export interface IFestival {
   projects: IProject[]
 }
 
-export interface IFestivalProgramDay {
-  date: string
-  schedule: IHtmlString
-  businessProgram: IHtmlString|null
-  businessProgramPosition: number|null
-  fullVersionBusinessProgram: IHtmlString|null
+export interface IFestivalProgramEvent {
+  time: string
+  title: string
+  place: string
+  businessProgram: string|null
+  fullVersionBusinessProgram: string|null
 }
 
-export interface IFestivalDetails {
-  mainScreenLeftSection: IHtmlString
-  mainScreenPhoto: string
+export interface IFestivalProgramDay {
+  date: string
+  events: IFestivalProgramEvent[]
+}
+
+export interface IBusinessProgramSession{
+  time: string
+  title: string
+  description: string
+  moderatorTitle: string
+  moderator: IHuman
+  speakersTitle: string
+  speakers: IHuman[]
+}
+
+export interface IBusinessProgramDay {
+  date: string
+  sections: IBusinessProgramSession[]
+}
+
+export interface IFestivalDetails extends IInfopartnersSlider{
+  mainScreenLeftSection: string
+  mainScreenPhoto: IImage
   isShowAllContent: boolean
   isShowFestivalProgram: boolean|null
   festivalProgramTitle: string
-  festivalProgramColumns: IHtmlString
+  festivalProgramColumns: string
+  festivalProgram: IFestivalProgramDay[]
+  businessProgramTitle: string
+  businessProgram: IBusinessProgramDay[]
   isShowProtectionsDays: boolean
   protectionsTitle: string
-  protectionsRightSignature: IHtmlString
-  businessProgramTitle: string
-  businessProgramSessions: IHtmlString[]
+  protectionsRightSignature: string
+  protectionsColumns: string[]
+  protectionsDays: IProtectionsDay[]
   isShowForum: boolean
   isShowInfopartners: boolean
   forumTitle: string
-  forumRightSignature: IHtmlString
-  forumDescriptionBlocks: IHtmlString[]
-  forumImages: string[]
-  forumRegistration: IHtmlString
+  forumRightSignature: string
+  forumDescriptionBlocks: IHtml[]
+  forumImages: IImage[]
+  forumRegistration: string
   forumProgramTitle: string
-  forumProgram: IHtmlString[]
+  forumProgram: IHtml[]
   forumContactsTitle: string
-  forumContactsImage: string
-  forumContacts: IHtmlString
-  forumSocials: IHtmlString[]
+  forumContact: IHumanContact
+  forumSocials: IHtml[]
 }
 
 export interface IFestivalNomination {
@@ -290,10 +312,34 @@ export interface IWorker extends IHuman{
   place: string
 }
 
+export interface IHumanContact extends IHuman{
+  links: IHtml[]
+}
+
+interface IProtectionBase {
+  time: string;
+}
+
+interface IProtectionBreak extends IProtectionBase {
+  isBreak: true;
+  breakTitle: string
+}
+
+interface IProtectionWork extends IProtectionBase {
+  isBreak: false;
+  isOnline: boolean
+  number: number
+  nomination: number
+  name: string
+  winner: string
+}
+
+type Protection = IProtectionBreak | IProtectionWork;
+
 export interface IProtectionsDay {
   date: string
   place: string
-  table: IHtmlString
+  protections: Protection[]
 }
 
 export type TDiploma= "gold" |"silver"|"bronze"|"president"|"grandPrix"

@@ -1,14 +1,15 @@
 'use client'
 import React, {useEffect, useMemo, useRef, useState} from "react";
-import {getSessionData} from "@/components/_festival-details/festival-business-program/getData";
 import {useMediaQuery} from "react-responsive";
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "@/utils/SwiperNavigation";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import UserCard from "@/components/_festival-details/festival-business-program/User";
 import {Mousewheel} from "swiper/modules";
+import {IBusinessProgramSession} from "@/types/data";
+import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 
-const Session = ({speakers, speakersTitle, moderatorsTitle, moderators, text}: ReturnType<typeof getSessionData>) => {
+const Session = ({speakers, speakersTitle, moderatorTitle, moderator, title, date, time, description}: IBusinessProgramSession & {date?: string}) => {
   const mobileScreen = useMediaQuery({maxWidth: 660});
   const usersSwiperRef=useRef<SwiperRef | null>(null);
   const rolleSwiperRef=useRef<SwiperRef | null>(null);
@@ -20,7 +21,7 @@ const Session = ({speakers, speakersTitle, moderatorsTitle, moderators, text}: R
 
     const activeUser= usersSwiperRef.current.swiper.activeIndex
 
-    if (activeUser+1>moderators.length){
+    if (activeUser==0){
       rolleSwiperNav.goToSlide(2)
     }else {
       rolleSwiperNav.goToSlide(0)
@@ -35,19 +36,21 @@ const Session = ({speakers, speakersTitle, moderatorsTitle, moderators, text}: R
   return(
       <div className="festival-business-program__session">
         <div className="container">
-          {/*<h3 className="festival-business-program__title">{mainTitle}</h3>*/}
-          <HtmlProcessing html={text ||""}/>
+          <p className="grey">
+            {date && `${date} | `}
+            {time}
+          </p>
+          <h2>{nonBreakingSpaces(title)}</h2>
+          <HtmlProcessing html={description ||""}/>
 
           {
             (isClient&&!mobileScreen) ?
                 <div className="festival-business-program__content">
                   <div className="">
-                    <h4 className="festival-business-program__rolle">{moderatorsTitle}</h4>
+                    <h4 className="festival-business-program__rolle">{moderatorTitle}</h4>
                     <div className="festival-business-program__moderators">
                       {
-                        moderators.map(moderator => (
-                            <UserCard key={moderator.name} user={moderator}/>
-                        ))
+                        <UserCard user={moderator} isBig/>
                       }
                     </div>
                   </div>
@@ -71,7 +74,7 @@ const Session = ({speakers, speakersTitle, moderatorsTitle, moderators, text}: R
                       ref={rolleSwiperRef}
                   >
                     <SwiperSlide className="festival-business-program__slide">
-                      <h4 className="festival-business-program__rolle">{moderatorsTitle}</h4>
+                      <h4 className="festival-business-program__rolle">{moderatorTitle}</h4>
 
                     </SwiperSlide>
                     <SwiperSlide className="festival-business-program__slide">
@@ -87,13 +90,9 @@ const Session = ({speakers, speakersTitle, moderatorsTitle, moderators, text}: R
                       modules={[Mousewheel]}
                       onActiveIndexChange={handleSwiper}
                   >
-                    {
-                      moderators.map(moderator => (
-                          <SwiperSlide key={moderator.name} className="festival-business-program__slide">
-                            <UserCard user={moderator}/>
-                          </SwiperSlide>
-                      ))
-                    }
+                    <SwiperSlide className="festival-business-program__slide">
+                      <UserCard user={moderator}/>
+                    </SwiperSlide>
                     {
                       speakers.map(speaker => (
                           <SwiperSlide key={speaker.name} className="festival-business-program__slide">

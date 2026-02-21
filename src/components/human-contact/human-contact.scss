@@ -1,0 +1,67 @@
+@import "@/app/styles/mixins-and-extends";
+
+.human-contact{
+  display: flex;
+  gap: 9rem;
+  width: 388rem;
+  max-width: 100%;
+
+  *{
+    @include standard-font-small;
+    font-size: 10rem;
+
+    @include xxl{
+      font-size: vu(27, xxl);
+    }
+  }
+
+  img{
+    width: 70rem;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 3/4
+  }
+
+  p{
+    a{
+      color: var(--c-dark);
+      font-weight: 400;
+    }
+  }
+
+  &__block-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name{
+    color: var(--c-dark);
+    font-weight: 600;
+
+    @include sm{
+      font-size: 15rem;
+      font-weight: 500;
+    }
+  }
+
+  &__job-title{
+    color: var(--c-grey-dark);
+    font-weight: 300;
+    padding-bottom: 9rem;
+
+    @include xxl{
+      padding-bottom: vu(28, xxl);
+    }
+
+    @include sm{
+      padding-bottom: 21rem;
+    }
+  }
+
+  &__links{
+    display: flex;
+    column-gap: 32rem;
+    margin-bottom: -0.25em;
+  }
+}

@@ -1,17 +1,20 @@
 import Detalis from "@/components/detalis/Detalis";
 import React from "react";
 import Session from "./Session";
-import {IDay} from "./getData";
-import {createDate} from "@/utils/date";
+import {createDate, formaterDate} from "@/utils/date";
+import {IBusinessProgramDay} from "@/types/data";
 
-const FestivalBusinessProgram = ({date, sessions, title}:IDay & {title: string}) => {
-  const {day}=createDate({date: new Date(`${date[2]}-${date[1]}-${date[0]}`)})
+const FestivalBusinessProgram
+    = ({date, sections, title}:IBusinessProgramDay & {title: string}) => {
+  const {day}=createDate({date: new Date(date)})
+  const formatDate=formaterDate(date)
+  const dateId= formatDate.replaceAll('.', '-')
   return (
-      <div id={`business-program-${date.join("-")}`}>
-          <Detalis title={<span>{title} {day}</span>} hash={`business-program-${date.join("-")}`} isBigGray={true} isSticky={true}>
+      <div id={`business-program-${dateId}`}>
+          <Detalis title={<span>{title} {day}</span>} hash={`business-program-${dateId}`} isBigGray={true} isSticky={true}>
           {
-            sessions.map((session, index) => (
-                <Session key={index} {...session}/>
+            sections.map((session, index) => (
+                <Session key={index} {...session} date={index==0? formatDate:undefined}/>
             ))
           }
         </Detalis>

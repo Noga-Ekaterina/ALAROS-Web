@@ -161,13 +161,8 @@
   }
 
   &__contacts{
-    display: flex;
-    align-items: start;
-    gap: 9rem;
-    width: 388rem;
-    max-width: 100%;
 
-    &-and-socials{
+    &-and-socials {
       display: flex;
       margin-top: 60rem;
 
@@ -175,73 +170,20 @@
               gap: (default: 90rem, xxl: 252, sm: 30)
       ));
 
-      @include sm{
+      @include sm {
         flex-direction: column;
       }
 
-      &-wrap{
+      &-wrap {
         background: var(--c-grey-bg-light-2);
         padding-block: 26rem 70rem;
       }
 
-      *{
+      * {
         @include standard-font-small;
         font-size: 10rem;
       }
-
-      p{
-        color: var(--c-grey-dark);
-        font-weight: 300;
-        &:first-child {
-          padding-bottom: 9rem;
-
-          @include md {
-            padding-bottom: 5rem;
-          }
-
-          @include sm {
-            padding-bottom: 9rem;
-          }
-        }
-      }
     }
-
-    img{
-      width: 70rem;
-      object-fit: cover;
-      object-position: center;
-      aspect-ratio: 1/1;
-    }
-
-    .festival-forum__block-text{
-      justify-content: space-between;
-      height: 70rem;
-      gap: 10rem;
-      line-height: 1.1em;
-    }
-
-    p{
-      a{
-        color: var(--c-dark);
-        font-weight: 400;
-      }
-
-      &:first-child{
-        margin-top: -0.3em;
-
-        b{
-          color: var(--c-dark);
-          font-weight: 600;
-        }
-      }
-
-      &:last-child{
-        display: flex;
-        column-gap: 32rem;
-        margin-bottom: -0.25em;
-      }
-    }
-
   }
 
   &__socials{
@@ -261,7 +203,26 @@
 
     .festival-forum__block-text {
       gap: 15rem;
+      justify-content: space-between;
+      height: 70rem;
+      line-height: 1.1em;
 
+      p {
+        color: var(--c-grey-dark);
+        font-weight: 300;
+
+        &:first-child {
+          padding-bottom: 9rem;
+
+          @include md {
+            padding-bottom: 5rem;
+          }
+
+          @include sm {
+            padding-bottom: 9rem;
+          }
+        }
+      }
       @include adaptive((
               width: (default: 165rem, xxl: 300, xl: 247,)
       ))

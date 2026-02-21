@@ -3,7 +3,7 @@ import FestivalProtections from "@/components/_festival-details/festival-protect
 import FestivalBusinessProgram from "@/components/_festival-details/festival-business-program/FestivalBusinessProgram";
 import FestivalForum from "@/components/_festival-details/festival-forum/FestivalForum";
 import {fetchData} from "@/utils/fetchData";
-import {IFestival, IFestivalDetails, IHtmlString, IUser, IProtectionsDay, IFestivalProgramDay} from "@/types/data";
+import {IFestival, IFestivalDetails} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import FestivalDetailsMainScreen
   from "@/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen";
@@ -12,98 +12,16 @@ import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import InfopartnersSlider from "@/components/partners-slider/infopartners/InfopartnersSlider";
-
-interface IData{
-  festivalDetailss: IFestivalDetails[]
-  festivalPrograms: IFestivalProgramDay[]
-  protectionsDays: IProtectionsDay[]
-}
+import {fetchSingle} from "@/utils/strapFetch";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const init= unstable_cache(async ()=>{
-  const data= await fetchData<IData>(`
-          query FestivalQuery {
-            festivalDetailss {
-              mainScreenLeftSection {
-                html
-              }
-              isShowAllContent
-              mainScreenPhoto
-              isShowFestivalProgram
-              festivalProgramTitle
-              festivalProgramColumns {
-                html
-              }
-              isShowProtectionsDays
-              protectionsTitle
-              protectionsRightSignature {
-                html
-              }
-              businessProgramTitle
-              businessProgramSessions {
-                html
-              }
-              isShowInfopartners
-              isShowForum
-              forumTitle
-              forumRightSignature {
-                html
-              }
-              forumImages
-              forumDescriptionBlocks {
-                html
-              }
-              forumRegistration {
-                html
-              }
-              forumProgramTitle
-              forumProgram {
-                html
-              }
-              forumContactsTitle
-              forumContactsImage
-              forumContacts {
-                html
-              }
-              forumSocials {
-                html
-              }
-            }
-            festivalPrograms(orderBy: date_ASC) {
-              date
-              schedule {
-                html
-              }
-              businessProgram {
-                html
-              }
-              businessProgramPosition
-              fullVersionBusinessProgram{
-                html
-              }
-            }
-            protectionsDays(orderBy: date_ASC) {
-              date
-              place
-              table {
-                html
-              }
-            }
-          }`)
+  const data= await fetchSingle<IFestivalDetails>("festival-details")
 
-  if (typeof data==="string"||!data){
-    return data
-  }
-
-  const {festivalDetailss,festivalPrograms, protectionsDays}=data
-
-  const result= {pageData: festivalDetailss[0], festivalProgram: festivalPrograms, protectionsDays}
-
-
-  return result
+  return data
 },
     ["festival-details"], {tags: ["FestivalDetails", "ProtectionsDay", "FestivalProgram"]})
 
@@ -117,18 +35,17 @@ const Page = async ({searchParams}:Props) => {
   }
 
 
-  const {pageData, festivalProgram, protectionsDays, }= data
   return (
       <AnimationPage>
-        <FestivalDetailsMainScreen pageData={pageData}/>
+        <FestivalDetailsMainScreen pageData={data}/>
         {
-          pageData.isShowAllContent?
+          data.isShowAllContent?
               <>
-                {pageData.isShowFestivalProgram && <FestivalProgram pageData={pageData} festivalProgram={festivalProgram}/>}
-                <FestivalBusinessProgram pageData={pageData}/>
-                {pageData.isShowProtectionsDays && <FestivalProtections title={pageData.protectionsTitle} protectionsRightSignature={pageData.protectionsRightSignature} protectionsDays={protectionsDays}/>}
-                {pageData.isShowInfopartners && <InfopartnersSlider/>}
-                {pageData.isShowForum && <FestivalForum pageData={pageData}/>}
+                {data.isShowFestivalProgram && <FestivalProgram pageData={data} festivalProgram={data.festivalProgram}/>}
+                <FestivalBusinessProgram pageData={data}/>
+                {data.isShowProtectionsDays && <FestivalProtections title={data.protectionsTitle} protectionsRightSignature={data.protectionsRightSignature} protectionsDays={data.protectionsDays} protectionsColumns={data.protectionsColumns}/>}
+                {data.isShowInfopartners && <InfopartnersSlider {...data}/>}
+                {data.isShowForum && <FestivalForum pageData={data}/>}
               </>
               :
               <NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>
