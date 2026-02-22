@@ -1,7 +1,6 @@
 import React from 'react';
-import {ICompetitionResults, IFestival, IHtmlString, IUser} from "@/types/data";
+import {ICompetitionResults} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CompetitionResultsMainScreen
   from "@/components/_competition-results/competition-results-main-screen/CompetitionResultsMainScreen";

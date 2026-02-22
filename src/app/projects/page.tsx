@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectsFilter from "../../components/_projects/projects-filter/ProjectsFilter";
 import ProjectsList from "../../components/_projects/projects-list/ProjectsList";
-import {fetchData, getProjectsQueryStr} from "@/utils/fetchData";
 import {IProject, IProjectsPage} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";

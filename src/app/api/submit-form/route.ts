@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import {IFormRequest, TypeForm} from "@/types/data";
 import {unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import axios from "axios";
 import { createDate } from '@/utils/date';
 import { fetchSingle } from '@/utils/strapFetch';

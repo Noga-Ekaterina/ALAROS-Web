@@ -2,7 +2,6 @@ import React from 'react';
 import "./menu.scss"
 import MenuClient from "@/components/menu/MenuClient";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import {IMenu} from "@/types/data";
 import {fetchSingle} from "@/utils/strapFetch";
 

@@ -22,6 +22,9 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     // Получаем данные из тела запроса
     const body = (await request.json()) as RevalidateRequest;
 
+    console.log(body)
+    return NextResponse.json({ success: true, revalidated: true, });
+
     const {__typename, newsPage, ...data } = body.data
 
     revalidateTag(__typename)

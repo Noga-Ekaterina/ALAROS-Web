@@ -10,12 +10,10 @@ import TextAndImagesSliders from "@/components/text-and-images-sliders/TextAndIm
 import Image from '@/components/Image';
 
 interface Props {
-  slug: string
   news: INewsItem
-  allNews: string
 }
 
-const NewsArticle = ({ news, slug, allNews }: Props) => {
+const NewsArticle = ({ news, }: Props) => {
   return (
     <div className="news-article">
       <div className="container">
@@ -29,7 +27,7 @@ const NewsArticle = ({ news, slug, allNews }: Props) => {
           <div className="news-article__aside">
             <Image image={news.cover} />
             <div className="news-article__link news-article__link--md">
-              <HtmlProcessing html={allNews} />
+              <a title="/news" href="/news"><u>Лента новостей</u></a>
             </div>
           </div>
           <div className="news-article__body">
@@ -40,7 +38,7 @@ const NewsArticle = ({ news, slug, allNews }: Props) => {
         </div>
 
         <div className="news-article__link news-article__link--sm">
-          <HtmlProcessing html={allNews} />
+          <a title="/news" href="/news"><u>Лента новостей</u></a>
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ import AnimationPage from "@/app/AnimationPage";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import type {Metadata} from "next";
 import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import {IAbout, IHistoryYear, IManagement} from "@/types/data";
 import AboutMainScreen from "@/components/_about/about-main-screen/AboutMainScreen";
 import AboutDocuments from "@/components/_about/about-documents/AboutDocuments";

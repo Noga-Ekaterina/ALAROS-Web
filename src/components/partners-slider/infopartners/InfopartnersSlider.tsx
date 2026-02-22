@@ -1,10 +1,7 @@
 import React from 'react';
 import "./infopartners.scss"
 import PartnersSliderClient from "@/components/partners-slider/PartnersSliderClient";
-import {revalidateTag, unstable_cache} from "next/cache";
-import {fetchData} from "@/utils/fetchData";
 import {IInfopartnersSlider} from "@/types/data";
-import {partnersProcessing} from "@/components/partners-slider/partnersProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import HtmlProcessing from "@/components/HtmlProcessing";
 

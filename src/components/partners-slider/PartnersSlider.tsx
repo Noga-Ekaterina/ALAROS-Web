@@ -2,7 +2,6 @@ import React from 'react';
 import PartnersSliderClient from "@/components/partners-slider/PartnersSliderClient";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {IPartnersSlider} from "@/types/data";
-import {partnersProcessing} from "@/components/partners-slider/partnersProcessing";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {fetchSingle} from "@/utils/strapFetch";
 

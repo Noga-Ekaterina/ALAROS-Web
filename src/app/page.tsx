@@ -3,8 +3,6 @@ import HomeMainScreen from "../components/_home/home-main-screen/HomeMainScreen"
 import HomeEvents from "../components/_home/home-events/HomeEvents";
 import CalendarEvents from "@/components/calendar-events/CalendarEvents";
 import HomeNewsSlider from "../components/_home/home-news-slider/HomeNewsSlider";
-import LogosSlider from "@/components/partners-slider/PartnersSliderClient";
-import {fetchData, getNewsQueryStr} from "@/utils/fetchData";
 import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
@@ -15,11 +13,6 @@ import {fetchSingle, getNews} from "@/utils/strapFetch";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
-}
-
-interface IData{
-  homes: IHomeData[]
-  newsAll: INewsItem[]
 }
 
 const init= unstable_cache(async ()=>{

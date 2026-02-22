@@ -9,7 +9,6 @@ import FestivalEmails from "../../components/_festival/festival-emails/FestivalE
 import FestivalDiploma from "../../components/_festival/festival-diploma/FestivalDiploma";
 import FestivalJuries from "../../components/_festival/festival-juries/FestivalJuries";
 import FestivalProjects from "../../components/_festival/festival-projects/FestivalProjects";
-import {fetchData} from "@/utils/fetchData";
 import {IFestival, IHtmlString,} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
