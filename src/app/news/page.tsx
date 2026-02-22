@@ -19,7 +19,7 @@ const getNewsPageData = unstable_cache(async ()=>{
   const data = await fetchSingle<INews>("news-page")
 
   return data
-}, ["news-page-data"], {tags: ["NewsPage"]})
+}, ["news-page-data"], {tags: ["news-page"]})
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams
@@ -27,12 +27,12 @@ const Page = async ({searchParams}:Props) => {
   const [pageData, data]= await Promise.all([getNewsPageData(), getNews(pageParam)])
 
   if (typeof data=="string" || data===null) {
-    revalidateTag("AllNews")
+    revalidateTag("news")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 
   if (!pageData|| typeof pageData==="string" ) {
-    revalidateTag("NewsPage")
+    revalidateTag("news-page")
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
   return (

@@ -14,16 +14,6 @@ interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-interface IData{
-  projects: IProject[]
-  projectsConnection:{
-    aggregate: {
-      count: number
-    }
-  }
-  projectsPages: IProjectsPage[]
-}
-
 const getPage=unstable_cache( async ()=>{
   const data= await fetchSingle<IProjectsPage>("projects-page")
 

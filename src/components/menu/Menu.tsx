@@ -18,7 +18,7 @@ const Menu = async () => {
   const data= await init()
 
   if (typeof data==="string" || !data) {
-    revalidateTag("Footer")
+    revalidateTag("menu")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 

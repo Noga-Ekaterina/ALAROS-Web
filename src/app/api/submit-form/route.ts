@@ -17,7 +17,7 @@ interface ITablesData{
 }
 
 const getLinks= unstable_cache(async ()=>{
-  const data= await fetchSingle<ITablesData>("tadles-data")
+  const data= await fetchSingle<ITablesData>("tables-data")
   return data
 },
 ["forms-link"], {tags: ["tables-data"]}

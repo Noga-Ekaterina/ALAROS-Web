@@ -17,13 +17,6 @@ import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import {fetchSingle} from "@/utils/strapFetch";
 
-interface IData{
-  festivalMains: IFestival[]
-  nominationsS: {
-    nominations: IHtmlString
-  }[]
-}
-
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
 }
@@ -31,20 +24,16 @@ interface Props{
 const init= unstable_cache(async ()=>{
   const data= await fetchSingle<IFestival>("festival-main")
 
-  if (typeof data==="string" ||!data){
-    return data
-  }
-
   return data
 },
-    ["festival-main"], {tags: ["FestivalMain", "FormInput", "Project", "Nominations"]})
+    ["festival-main"], {tags: ["festival-main", "input", "project"]})
 
 const Page = async ({searchParams}:Props) => {
   const {preview}=searchParams
   const data=  await init()
 
   if (typeof data==="string" || !data) {
-    revalidateTag("FestivalMain")
+    revalidateTag("festival-main")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 

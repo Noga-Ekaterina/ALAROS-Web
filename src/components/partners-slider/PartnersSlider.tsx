@@ -19,7 +19,7 @@ const PartnersSlider = async () => {
   const data=  await init()
 
   if (typeof data==="string" || !data) {
-    revalidateTag("PartnersSlider")
+    revalidateTag("partners-slider")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 

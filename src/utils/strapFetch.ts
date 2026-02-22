@@ -67,5 +67,5 @@ export const getNews =unstable_cache(async (page: string) => {
     }
   },
   ["news-page"],
-  { tags: ["News", "AllNews"] }
+  { tags: ["news",] }
 )

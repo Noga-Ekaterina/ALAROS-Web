@@ -56,7 +56,7 @@ const MyComponent = async ({searchParams}:Props) => {
   const [pageData, history, management]= await Promise.all([getPageData(), getHistory(), getManagements()])
 
   if (typeof pageData==="string" || !pageData) {
-    revalidateTag("CompetitionResults")
+    revalidateTag("about")
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
 

@@ -19,14 +19,14 @@ const init= unstable_cache(async ()=>{
   const data= await fetchSingle<IHomeData>("home")
 
   return data
-}, ["home"], {tags: ["Home", "Project" ]})
+}, ["home"], {tags: ["home", "project" ]})
 
 const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams
   const [homeData, news]=  await Promise.all([init(), getNews('1')])
 
   if (typeof homeData==="string" || !homeData) {
-    revalidateTag("Home")
+    revalidateTag("home")
     return <div>произошла ошибка{homeData && `: ${homeData}`}, перезагрузите страницу</div>
   }
 

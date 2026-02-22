@@ -28,6 +28,7 @@ export interface IFile{
   id: number;
   url: string;
   size: number; // размер оригинала в байтах
+  updatedAt: string
 }
 
 export interface IImage extends IFile{

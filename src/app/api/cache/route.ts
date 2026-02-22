@@ -3,11 +3,8 @@ import { revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 
 interface RevalidateRequest {
-  data:{
-    __typename: string
-    newsPage: any
-    [key: string]: string
-  }
+  model: string
+  entry: Record<string, string>
 }
 
 interface RevalidateResponse {
@@ -23,22 +20,18 @@ export async function POST(request: Request): Promise<NextResponse<RevalidateRes
     const body = (await request.json()) as RevalidateRequest;
 
     console.log(body)
-    return NextResponse.json({ success: true, revalidated: true, });
 
-    const {__typename, newsPage, ...data } = body.data
+    const {model, entry} = body
 
-    revalidateTag(__typename)
+    revalidateTag(model)
 
-    console.log(`revalidate tag: ${__typename}`)
+    console.log(`revalidate tag: ${model}`)
 
-    if (newsPage)
-      revalidateTag("NewsPage")
+    if (model==="news")
+      revalidateTag(`news-${entry.slug}`)
 
-    if (__typename==="News")
-      revalidateTag(`news-${data.slug}`)
-
-    if (__typename==="Project")
-      revalidateTag(`project-${data.year}-${data.number}`)
+    if (model==="project")
+      revalidateTag(`project-${entry.year}-${entry.number}`)
 
     return NextResponse.json({ success: true, revalidated: true, });
   } catch (error) {

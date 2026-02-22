@@ -14,13 +14,13 @@ const init= unstable_cache(async ()=>{
   }
 
   return data
-}, ["footer"], {tags: ["Footer"]})
+}, ["footer"], {tags: ["footer"]})
 
 const Footer = async () => {
   const data= await init()
 
   if (typeof data==="string" || !data) {
-    revalidateTag("Footer")
+    revalidateTag("footer")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 

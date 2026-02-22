@@ -97,7 +97,7 @@ const Image: React.FC<Props> = ({
 
   return (
     <img
-      src={`${process.env.NEXT_PUBLIC_IMAGES_URL}${optimalImage.url}`}
+      src={`${process.env.NEXT_PUBLIC_IMAGES_URL}${optimalImage.url}?date=${image.updatedAt}`}
       alt={finalAlt}
       className={className}
       loading={loading}

@@ -23,13 +23,13 @@ const init= unstable_cache(async ()=>{
 
   return data
 
-  }, ["competition-results"], {tags: ["CompetitionResults", "Project"]})
+  }, ["competition-results"], {tags: ["competition-results", "project"]})
 
 const Page = async ({searchParams}:Props) => {
   const pageData= await init()
 
   if (typeof pageData==="string" || !pageData) {
-    revalidateTag("CompetitionResults")
+    revalidateTag("competition-results")
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
 
