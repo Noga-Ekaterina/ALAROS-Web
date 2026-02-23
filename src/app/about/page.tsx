@@ -16,6 +16,7 @@ import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AboutManagement from "@/components/_about/about-management/AboutManagement";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import {fetchColection, fetchSingle} from "@/utils/strapFetch";
+import {domain} from "@/variables";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -79,6 +80,9 @@ const MyComponent = async ({searchParams}:Props) => {
 
 export const metadata: Metadata = {
   title: "АЛАРОС | О нас",
+  alternates:{
+    canonical: `${domain}/about`
+  }
 };
 
 export const dynamic = 'force-dynamic';

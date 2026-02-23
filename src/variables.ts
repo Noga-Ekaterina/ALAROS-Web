@@ -1,3 +1,4 @@
+export const domain= "https://alaros.ru"
 export const diplomas={
   bronze:{
     text: 'Бронзовый диплом',

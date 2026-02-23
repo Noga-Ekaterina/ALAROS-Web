@@ -16,6 +16,7 @@ import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import {fetchSingle} from "@/utils/strapFetch";
+import {domain} from "@/variables";
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -58,6 +59,9 @@ const Page = async ({searchParams}:Props) => {
 
 export const metadata: Metadata = {
   title: "АЛАРОС | Фестиваль",
+  alternates:{
+    canonical: `${domain}/festival-main`
+  }
 };
 
 export default Page;

@@ -2,6 +2,7 @@ import React from 'react';
 import AnimationPage from "@/app/AnimationPage";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import type {Metadata} from "next";
+import {domain} from "@/variables";
 
 const MyComponent = () => {
   return (
@@ -13,6 +14,9 @@ const MyComponent = () => {
 
 export const metadata: Metadata = {
   title: "АЛАРОС | Партнеры",
+  alternates:{
+    canonical: `${domain}/partners`
+  }
 };
 
 export default MyComponent;
