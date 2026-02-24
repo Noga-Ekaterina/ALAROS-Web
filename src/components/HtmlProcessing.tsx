@@ -36,14 +36,15 @@ const HtmlProcessing = ({html}:Props) => {
     const props = {...element.props, key};
 
     if (element.type === 'a') {
-      if (props.className?.includes('download'))
-        return React.createElement("a", {...props, className: props.className.replace("download", ''), download: true}, props.children);
+      if (props.download) {
+        let href: string=props.href
+        href=`${href}${href.includes("?")? "&":"?"}download=1`
+        return React.createElement("a", {...props, href}, props.children);
+      }
       else if (props.href.startsWith('/') && !props.download)
         return React.createElement(Link, { href: props.href, ...props }, props.children);
       else if (props.href.startsWith('#') && !props.download)
         return React.createElement("a", { to: props.href, onClick: handleHashed, ...props }, props.children);
-      else if (props.href === 'text')
-        return React.createElement("span", { className: props.className, key }, props.children);
       else if (props.href.startsWith("copy:"))
         return React.createElement(CopyText, { text: props.href.replace("copy:", ""), className: props.className, key}, props.children);
     }
