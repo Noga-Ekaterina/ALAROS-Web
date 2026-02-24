@@ -20,7 +20,7 @@ const init= unstable_cache(async ()=>{
   const data= await fetchSingle<IHomeData>("home")
 
   return data
-}, ["home"], {tags: ["home", "project" ]})
+}, ["home"], {tags: ["home", "project", "nomination-projects"]})
 
 const Home = async ({searchParams}:Props) => {
   const {preview}=searchParams

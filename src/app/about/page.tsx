@@ -38,8 +38,7 @@ const getHistory=unstable_cache(async ()=>{
   })
 
   return data
-}, ["history-years"], {tags: ["history-year"]})
-
+}, ["history-years"], {tags: ["history-year", "history-addition"]})
 
 const getManagements=unstable_cache(async ()=>{
   const data= await fetchColection<IManagement>({

@@ -19,7 +19,7 @@ const getNewsPageData = unstable_cache(async ()=>{
   const data = await fetchSingle<INews>("news-page")
 
   return data
-}, ["news-page-data"], {tags: ["news-page"]})
+}, ["news-page-data"], {tags: ["news-page", "project", "nomination-projects"]})
 
 const Page = async ({searchParams}:Props) => {
   const {page}=searchParams

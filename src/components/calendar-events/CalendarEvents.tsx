@@ -16,7 +16,7 @@ interface Props{
 const init= unstable_cache(async ()=>{
   const data= await fetchColection<IEventsDataYear>({
     name: "events-years",
-    sort: "year",
+    sort: "year:asc",
     pagination:{
       pageSize: 100
     }
@@ -27,13 +27,13 @@ const init= unstable_cache(async ()=>{
   }
 
   return data
-}, ["events-years"], {tags: ["EventsYear"]})
+}, ["events-years"], {tags: ["events-year"]})
 
 const CalendarEvents = async ({title}: Props) => {
   const data=  await init()
 
   if (typeof data==="string" || !data) {
-    revalidateTag("Home")
+    revalidateTag("events-year")
     return <div>произошла ошибка{data && `: ${data}`}, перезагрузите страницу</div>
   }
 

@@ -22,7 +22,7 @@ const getPage=unstable_cache( async ()=>{
   }
   return data
 },
-    ["projects-page"], {tags: [ "projects-page"]})
+    ["projects-page"], {tags: [ "projects-page", "nomination-projects"]})
 
 const getProjects=unstable_cache( async (year: undefined| string, nomination: undefined |string, page: string)=>{
   const filters: Record<string, unknown>={}
@@ -48,7 +48,7 @@ const getProjects=unstable_cache( async (year: undefined| string, nomination: un
   }
   return data
 },
-["projects"], {tags: ["project"]})
+["projects"], {tags: ["project", "nomination-projects"]})
 
 const Page = async ({searchParams}: Props) => {
   const {page, nomination, year}= searchParams
