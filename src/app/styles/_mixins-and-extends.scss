@@ -54,9 +54,9 @@
 
 // Базовые брейкпоинты
 $breakpoints: (
-        xl: '(min-width: 1920px)',
+        xl: '(min-width: 1600px)',
         xxl: '(min-width: 2560px)',
-        lg: '(max-width: 1919.9px)',
+        lg: '(max-width: 1599.9px)',
         lg-book: '(min-width: 1024px) and (min-height: 80vw)',
         md: '(max-width: 1024px)',
         md-book: '(min-width: 660.1px) and (min-height: 80vw)',

@@ -479,3 +479,29 @@ export interface IManagement extends IHuman{
   description: string
   details: IDetails[]
 }
+
+export interface IPartners{
+  mainScreenLeftSection: string
+  mainScreenProject: IProject
+
+  clubTitle: string
+  clubText: string
+  clubPartners: IPartner[]
+
+  documentsLinks: IButtonBlock[]
+  documentsPartners: IButtonBlock;
+  documentsPartnersLinks: IHtml[]; // Multiple values
+  documentsPartnersDisabled: boolean
+
+  contactsTitle: string
+  contacts: IHumanContact[]
+  contactsEmail: string
+
+  lifeTitle: string;
+  lifeSignatures: IHtml[]
+  life: ILifeItem[]
+
+  eventsTitle: string
+  events: IHtml[]
+  isShowEvents: boolean
+}

@@ -182,6 +182,10 @@
       * {
         @include standard-font-small;
         font-size: 10rem;
+
+        @include xxl{
+          font-size: vu(22, xxl);
+        }
       }
     }
   }

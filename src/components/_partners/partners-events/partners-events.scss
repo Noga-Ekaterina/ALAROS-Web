@@ -1,0 +1,99 @@
+@import "@/app/styles/mixins-and-extends";
+
+.partners-events{
+  background: #fff;
+  padding-bottom: 47rem;
+
+  &__text-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 70rem;
+    row-gap: 25rem;
+
+    @include sm{
+      flex-direction: column;
+    }
+  }
+
+  &__block-text{
+    display: flex;
+    flex-direction: column;
+
+    @include adaptive((
+            max-width: (default: 237rem, xxl: 588, xl: 429, md: 170, sm: 220),
+            gap: (default: 20rem, xl: 30)
+    ));
+
+    @include sm{
+      &:nth-child(4n + 1),
+      &:nth-child(4n + 2) {
+        align-self: start;
+      }
+
+      // Чётные пары: 3–4, 7–8, 11–12, ...
+      &:nth-child(4n + 3),
+      &:nth-child(4n + 4) {
+        align-self: end;
+      }
+
+      &:nth-child(4n + 2),
+      &:nth-child(4n + 4){
+        padding-top: 20rem;
+      }
+    }
+
+    *{
+      letter-spacing: 0.01em;
+
+      @include adaptive((
+              font-size: (
+                      default: 11rem,
+                      xxl: 22,
+                      xl: 16,
+                      md: 10,
+                      sm: 10
+              )
+      ))
+    }
+
+    a{
+      @extend %link-hover-underline
+    }
+  }
+
+  h3{
+    font-weight: 500;
+    color: var(--c-red);
+
+    @include standard-font-big;
+
+    @include sm{
+      font-size: 15rem;
+    }
+  }
+
+  ul li{
+    list-style: none;
+    display: flex;
+    align-items: start;
+    position: relative;
+    left: -0.3em;
+
+    &:before{
+      content: '';
+      width: 0.3em;
+      aspect-ratio: 1/1;
+      flex-shrink: 0;
+      position: relative;
+      top: 0.5em;
+      left: -0.9em;
+      background: var(--c-red);
+    }
+  }
+
+  strong{
+    font-weight: 600;
+  }
+
+}

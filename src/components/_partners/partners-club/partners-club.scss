@@ -1,0 +1,73 @@
+@import "@/app/styles/mixins-and-extends";
+
+.partners-club{
+  position: relative;
+  background: #fff;
+  padding-top: 45rem;
+  overflow: hidden;
+
+  &__bg{
+    position: absolute;
+    right: -8%;
+    width: 110%;
+    top: 55rem;
+
+    @include lg{
+      right: 0;
+      width: 990rem;
+      top: 142rem;
+    }
+
+    @include xxl{
+      top: 40rem;
+    }
+  }
+
+  .container{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__text{
+    @include standard-font(true);
+    grid-column: 7/12;
+
+    @include xl{
+      grid-column: 6/11;
+    }
+
+    @include md{
+      grid-column: 7/13;
+    }
+
+    @include sm{
+      grid-column: 1/13;
+      font-size: 15rem;
+    }
+
+    @include xxl{
+      grid-column: 5/10;
+    }
+
+    &-wrap{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      @include adaptive((
+              margin-block: (default: 80rem, xl: 136,)
+      ))
+    }
+  }
+
+  .partners-slider{
+    padding-top: 0;
+    margin-bottom: 0;
+    background: none;
+    position: relative;
+  }
+
+  .documents{
+    position: relative;
+    background: none;
+  }
+}

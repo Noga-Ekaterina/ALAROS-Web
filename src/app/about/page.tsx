@@ -5,11 +5,11 @@ import type {Metadata} from "next";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {IAbout, IHistoryYear, IManagement} from "@/types/data";
 import AboutMainScreen from "@/components/_about/about-main-screen/AboutMainScreen";
-import AboutDocuments from "@/components/_about/about-documents/AboutDocuments";
+import Documents from "@/components/documents/Documents";
 import AboutMain from "@/components/_about/about-main/AboutMain";
 import AboutHistory from "@/components/_about/about-history/AboutHistory";
 import AboutPresidium from "@/components/_about/about-presidium/AboutPresidium";
-import AboutLife from "@/components/_about/about-life/AboutLife";
+import Life from "@/components/life/Life";
 import AboutPress from "@/components/_about/about-press/AboutPress";
 import AboutMap from '@/components/_about/about-map/AboutMap';
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
@@ -26,7 +26,7 @@ const getPageData= unstable_cache(async ()=>{
   const data= await fetchSingle<IAbout>("about")
 
   return data
-}, ["about"], {tags: ["about", "project"]})
+}, ["about"], {tags: ["about", "project", "nomination-projects"]})
 
 const getHistory=unstable_cache(async ()=>{
   const data= await fetchColection<IHistoryYear>({
@@ -65,11 +65,11 @@ const MyComponent = async ({searchParams}:Props) => {
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <AboutMainScreen pageData={pageData}/>
         <AboutMain pageData={pageData}/>
-        <AboutDocuments pageData={pageData}/>
+        <Documents links={pageData.documentsLinks} buttonDetails={pageData.membership} linksDetails={pageData.membershipLinks} isDisabledDetails={pageData.membershipDisabled}/>
         <AboutHistory title={pageData.historyTitle} data={history?.data}/>
         <AboutManagement pageData={pageData} management={management?.data}/>
         <AboutPresidium title={pageData.presidiumTitle} data={pageData.presidium}/>
-        <AboutLife pageData={pageData}/>
+        <Life title={pageData.lifeTitle} signatures={pageData.lifeSignature} life={pageData.life}/>
         <AboutPress pageData={pageData}/>
         <AboutMap pageData={pageData}/>
         <PartnersSlider/>

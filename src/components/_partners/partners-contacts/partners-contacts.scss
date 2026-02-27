@@ -1,0 +1,79 @@
+@import "@/app/styles/mixins-and-extends";
+
+.partners-contacts{
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+  padding-block: 35rem 43rem;
+
+  &__content{
+    margin-top: 55rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include sm{
+      flex-direction: column;
+      align-items: stretch;
+      gap: 66rem;
+    }
+  }
+
+  &__people{
+    display: flex;
+    gap: 9rem;
+
+    @include xxl{
+      gap: vu(20, xxl);
+    }
+
+    @include sm{
+      flex-direction: column;
+      gap: 35rem;
+    }
+  }
+
+  .human-contact{
+   @include adaptive((
+            width: (default: 313rem, xxl: 784, xl: 462)
+    ))
+  }
+
+  &__email{
+    width: 220rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+
+    @include md{
+      width: 238rem;
+    }
+
+    @include xl{
+      width: vu(446, xl);
+      padding-right: vu(122, xl);
+    }
+
+    @include xxl{
+      width: vu(532, xxl);
+      padding-right: vu(66, xxl);
+    }
+
+    a{
+      font-weight: 400;
+
+      @include standard-font-big;
+    }
+
+    p{
+      color: var(--c-grey-dark);
+      font-weight: 300;
+
+      @include standard-font-small;
+
+      font-size: 10rem;
+
+      @include xxl{
+        font-size: vu(22, xxl);
+      }
+    }
+  }
+}
