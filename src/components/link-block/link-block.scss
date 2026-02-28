@@ -26,10 +26,6 @@
     position: relative;
     top: -0.5rem;
 
-    &, >*{
-      @extend %text-overflow-ellipsis;
-    }
-
     @include sm{
       top: 0;
     }
@@ -63,5 +59,9 @@
         stroke: currentColor;
       }
     }
+  }
+
+  &__running-line {
+    gap: 26rem;
   }
 }
