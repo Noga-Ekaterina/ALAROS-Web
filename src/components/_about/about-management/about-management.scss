@@ -210,7 +210,7 @@
     }
 
     a{
-      &[href$=".pdf"] span, &[href$=".PDF"] span{
+      &[href$=".pdf"] u, &[href$=".PDF"] u{
         &::after{
           content: '.PDF';
         }
