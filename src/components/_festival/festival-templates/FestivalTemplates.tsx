@@ -31,7 +31,7 @@ const FestivalTemplates = ({pageData}:Props) => {
           <div className="festival-templates__content">
             <Dropdown id={'templates'} value={value} values={values} handleCheck={e => {setValue(e.target.value)}} nominations={pageData.nominations} arrow={true}/>
 
-            <a href={`${process.env.NEXT_PUBLIC_IMAGES_URL}${curenrItem?.file?.url}`} className={(!curenrItem || !curenrItem.file)? 'festival-templates__link-disabled':''} download><HtmlProcessing html={pageData.templatesDownload}/></a>
+            <a href={`${process.env.NEXT_PUBLIC_IMAGES_URL}${curenrItem?.file?.url}?date=${curenrItem?.file?.updatedAt}&download=1`} className={(!curenrItem || !curenrItem.file)? 'festival-templates__link-disabled':''} download><HtmlProcessing html={pageData.templatesDownload}/></a>
           </div>
         </Detalis>
       </div>

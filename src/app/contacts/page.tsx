@@ -22,7 +22,7 @@ const Page = async ({searchParams}:Props) => {
   const pageData= await init()
 
   if (typeof pageData==="string" || !pageData) {
-    revalidateTag("CompetitionResults")
+    revalidateTag("contacts")
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
 

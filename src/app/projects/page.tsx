@@ -61,12 +61,12 @@ const Page = async ({searchParams}: Props) => {
   )
 
   if (typeof projectsData==="string" || !projectsData) {
-    revalidateTag("Project")
+    revalidateTag("project")
     return <div>произошла ошибка{projectsPage && `: ${projectsPage}`}, перезагрузите страницу</div>
   }
 
   if (typeof projectsPage==="string" || !projectsPage) {
-    revalidateTag("Project")
+    revalidateTag("projects-page")
     return <div>произошла ошибка{projectsPage && `: ${projectsPage}`}, перезагрузите страницу</div>
   }
 
