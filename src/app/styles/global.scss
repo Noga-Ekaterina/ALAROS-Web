@@ -147,6 +147,11 @@ u{
   }
 }
 
+sub, sup{
+  color: inherit;
+  font-size: 0.75em;
+  font-weight: inherit;
+}
 
 fieldset {
   border: none;
