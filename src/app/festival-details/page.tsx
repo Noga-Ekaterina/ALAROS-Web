@@ -44,7 +44,7 @@ const Page = async ({searchParams}:Props) => {
                 <FestivalBusinessProgram pageData={data}/>
                 {data.isShowProtectionsDays && <FestivalProtections title={data.protectionsTitle} protectionsRightSignature={data.protectionsRightSignature} protectionsDays={data.protectionsDays} protectionsColumns={data.protectionsColumns}/>}
                 {data.isShowInfopartners && <InfopartnersSlider {...data}/>}
-                {!data.isShowForum && <FestivalForum pageData={data}/>}
+                {data.isShowForum && <FestivalForum pageData={data}/>}
               </>
               :
               <NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>
