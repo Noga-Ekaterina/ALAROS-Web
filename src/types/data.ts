@@ -288,10 +288,10 @@ export interface IFestivalDetails extends IInfopartnersSlider{
   forumTitle: string
   forumRightSignature: string
   forumDescriptionBlocks: IHtml[]
-  forumImages: IImage[]
+  forumSlider: ILifeItem[]
   forumRegistration: string
   forumProgramTitle: string
-  forumProgram: IHtml[]
+  forumProgram: IHtml
   forumContactsTitle: string
   forumContact: IHumanContact
   forumSocials: IHtml[]

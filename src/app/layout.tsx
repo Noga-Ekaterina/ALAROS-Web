@@ -36,7 +36,9 @@ export default function RootLayout({
       <Suspense fallback={<Loading />}>
           <Menu/>
           <SmoothScrolling root noAnimation>
-            {children}
+            <div style={{minHeight: "100vh"}}>
+              {children}
+            </div>
             <Footer/>
           </SmoothScrolling>
       </Suspense>

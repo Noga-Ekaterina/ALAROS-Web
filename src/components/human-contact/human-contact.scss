@@ -4,7 +4,7 @@
   display: flex;
   gap: 9rem;
   width: 388rem;
-  max-width: 100%;
+  max-width: 82%;
 
   *{
     @include standard-font-small;
@@ -13,13 +13,21 @@
     @include xxl{
       font-size: vu(27, xxl);
     }
+
+    @include sm {
+      font-size: 10rem;
+    }
   }
 
   img{
     width: 70rem;
     object-fit: cover;
     object-position: center;
-    aspect-ratio: 3/4
+    aspect-ratio: 3/4;
+
+    @include sm {
+      width: 109rem;
+    }
   }
 
   p{
@@ -37,11 +45,12 @@
 
   &__name{
     color: var(--c-dark);
-    font-weight: 600;
+    font-weight: 500;
+
+    @include standard-font-big;
 
     @include sm{
       font-size: 15rem;
-      font-weight: 500;
     }
   }
 

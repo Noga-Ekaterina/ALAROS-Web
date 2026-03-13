@@ -2,22 +2,73 @@
 
 .festival-forum{
   background: #fff;
-  padding-top: 15rem;
+  padding-block: 15rem 9rem;
+
+  --h: calc((70rem/3)*4);
 
   &__descriptions{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     margin-top: 70rem;
+    row-gap: 15rem;
 
-    @include adaptive((
-            gap: (default: 62rem, xl: 179, sm: 34)
-    ));
+    @include standard-font(true);
 
-    @include lg{
-      justify-content: space-between;
+    @include md {
+      font-size: vu(9, md);
     }
 
-    @include sm{
-      flex-direction: column;
+    @include sm {
+      font-size: 10rem;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include xxl{
+      grid-template-columns: repeat(24, 1fr);
+    }
+
+    .festival-forum__block-text{
+      &:first-child{
+        grid-column: 1/6;
+
+        @include xxl{
+          grid-column: 1/10;
+        }
+
+        @include sm{
+          grid-column: 1/-2;
+        }
+      }
+
+      &:nth-child(2){
+        grid-column: 7/10;
+
+        @include xxl{
+          grid-column: 14/20;
+        }
+
+        @include md {
+          grid-column: 7/11;
+          padding-right: 30rem;
+        }
+
+        @include sm{
+          grid-column: 1/-2;
+          padding-right: 0;
+        }
+      }
+
+      &:nth-child(3){
+        grid-column: 11/-1;
+        
+        @include xxl{
+          grid-column: 21/24;
+        }
+
+        @include sm{
+          grid-column: 1/-2;
+        }
+      }
     }
   }
 
@@ -26,28 +77,11 @@
     flex-direction: column;
 
     @include adaptive((
-            max-width: (default: 320rem, xl: 519, md: 280, sm: 302),
-            gap: (default: 20rem, xl: 30)
+            // max-width: (default: 320rem, xl: 519, md: 280, sm: 302),
     ));
-
-    &:first-child{
-      @include adaptive((
-              max-width: (default: 274rem, xl: 443, md: 237, sm: 302)
-      ));
-    }
 
     *{
       letter-spacing: 0.01em;
-
-      @include adaptive((
-              font-size: (
-                      default: 11rem,
-                      xxl: 22,
-                      xl: 16,
-                      md: 10,
-                      sm: 10
-              )
-      ))
     }
 
     a{
@@ -58,6 +92,10 @@
   h3{
     font-weight: 500;
     color: var(--c-red);
+
+    @include adaptive((
+            margin-bottom: (default: 20rem, xl: 30, sm: 15)
+    ));
 
     @include standard-font-big
   }
@@ -85,53 +123,45 @@
     font-weight: 600;
   }
 
-  &__slider{
-    @include adaptive((
-            margin-block: (default: 44rem, xxl: 70, sm: 33)
-    ))
-
-  }
-
-  &__slide{
-    aspect-ratio: 398/191;
-    background: var(--c-grey-bg-light);
-
-    @include adaptive((
-            width: (default: 398rem, xl: 665, sm: 340)
-    ));
-
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
   &__registraion{
-    padding-top: 40rem;
+    flex-direction: row;
+    align-items: center;
 
     @include adaptive((
-            width: (default: 197rem, xl: 247,)
+            gap: (default: 10rem, xl: 30)
     ));
 
     @include sm{
       padding-top: 0;
+      flex-direction: column;
+      align-items: start;
+      gap: 15rem;
+      width: 170rem;
     }
 
     &-and-program{
       display: flex;
-      margin-bottom: 62rem;
+      grid-column: 1/5;
+      flex-direction: column-reverse;
 
       @include adaptive((
-              gap: (default: 82rem, xl: 379, md: 38, sm: 34)
+              gap: (default: 30rem, md: 38, sm: 34)
       ));
 
-      @include sm{
-        flex-direction: column-reverse;
+      @include xxl{
+        grid-column: 1/9;
       }
 
-      *{
+      @include md {
+        grid-column: 1/6;
+      }
+
+      @include sm{
+        grid-column: 1/-2;
+        padding-inline: var(--p-x);
+      }
+
+      .festival-forum__block-text *{
         line-height: 1.3em;
 
       }
@@ -144,19 +174,53 @@
         text-decoration: none;
       }
     }
+
+    p:last-child {
+      &, *{
+        @include standard-font-small;
+
+        @include xxl {
+          font-size: vu(22, xxl);
+        }
+      }
+    }
   }
 
   &__program{
-    display: flex;
-    margin-top: 22rem;
-    align-items: start;
+    min-height: var(--h);
 
-    @include adaptive((
-            gap: (default: 38rem, xxl: 105, xl: 79, sm: 42)
-    ));
+    @include sm {
+      min-height: unset;
+    }
 
+    &-and-contacts{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      padding-inline: var(--p-x);
+      background: linear-gradient(-90deg, #F8F8F8 0%, #FFF 66.82%);
+      padding-block: 18rem;
+
+      @include standard-font(true);
+
+      @include md {
+        font-size: vu(9, md);
+      }
+
+      @include sm {
+        background: none;
+        padding-inline: 0;
+        grid-template-columns: repeat(6, 1fr);
+        padding-block: 0;
+      }
+      
+      @include xxl{
+        grid-template-columns: repeat(24, 1fr);
+      }
+    }
+    
     @include sm{
       flex-direction: column;
+      font-size: 10rem;
     }
   }
 
@@ -164,19 +228,35 @@
 
     &-and-socials {
       display: flex;
-      margin-top: 60rem;
-
-      @include adaptive((
-              gap: (default: 90rem, xxl: 252, sm: 30)
-      ));
+      padding-top: 0.3em;
 
       @include sm {
+        gap: 30rem;
+        padding-top: 0;
         flex-direction: column;
       }
 
       &-wrap {
-        background: var(--c-grey-bg-light-2);
-        padding-block: 26rem 70rem;
+        grid-column: 7/-1;
+
+        @include xxl{
+          grid-column: 14/-2;
+        }
+
+        @include sm{
+          background: var(--c-grey-bg-light-2);
+          padding-block: 26rem 70rem;
+          padding-inline: var(--p-x);
+          grid-column: 1/-1;
+          margin-top: 34rem;
+        }
+
+        h3{
+          @include sm {
+            margin-bottom: 30rem;
+            width: 83.33;
+          }
+        }
       }
 
       * {
@@ -192,24 +272,37 @@
 
   &__socials{
     display: flex;
-
-    @include adaptive((
-            gap: (default: 85rem, xxl:252, xl: 179, sm: 20)
-    ));
+    flex-direction: column;
 
     @include sm{
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
 
     a, a *{
-      @include standard-font-big
+      @include standard-font-big;
+
+      font-size: 13rem;
     }
 
     .festival-forum__block-text {
       gap: 15rem;
-      justify-content: space-between;
+      justify-content: end;
       height: 70rem;
       line-height: 1.1em;
+
+      @include adaptive((
+              width: (default: 145rem, xxl: 300, xl: 247, md: 115, sm: 170)
+      ));
+
+      &:first-child{
+        min-height: var(--h);
+
+        @include sm {
+          min-height: unset;
+        }
+      }
 
       p {
         color: var(--c-grey-dark);
@@ -227,9 +320,7 @@
           }
         }
       }
-      @include adaptive((
-              width: (default: 165rem, xxl: 300, xl: 247,)
-      ))
+
     }
   }
 }

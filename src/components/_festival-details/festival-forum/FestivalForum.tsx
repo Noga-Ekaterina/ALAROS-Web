@@ -7,6 +7,7 @@ import {IFestival, IFestivalDetails} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import Image from "@/components/Image";
 import HumanContact from "@/components/human-contact/HumanContact";
+import Life from '@/components/life/Life';
 
 interface Props{
   pageData: IFestivalDetails
@@ -32,21 +33,9 @@ const FestivalForum = ({pageData}:Props) => {
             }
           </div>
         </div>
-        <Swiper
-            slidesPerView="auto"
-            spaceBetween={"10rem"}
-            className="festival-forum__slider"
-        >
-          {
-            pageData.forumImages.map((img, index)=>(
-                <SwiperSlide key={index} className="festival-forum__slide">
-                  <Image image={img}/>
-                </SwiperSlide>
-            ))
-          }
-        </Swiper>
+        <Life isNotText life={pageData.forumSlider}/>
 
-        <div className="container">
+        <div className="festival-forum__program-and-contacts">
           <div className="festival-forum__registraion-and-program">
             <div className="festival-forum__registraion festival-forum__block-text">
               <HtmlProcessing html={pageData.forumRegistration}/>
@@ -54,20 +43,13 @@ const FestivalForum = ({pageData}:Props) => {
             <div className="">
               <h3>{nonBreakingSpaces(pageData.forumProgramTitle)}</h3>
               <div className="festival-forum__program">
-                {
-                  pageData.forumProgram.map((block, index)=>(
-                      <div key={index} className="festival-forum__block-text">
-                        <HtmlProcessing html={block.text}/>
-                      </div>
-                  ))
-                }
+                <div className="festival-forum__block-text">
+                  <HtmlProcessing html={pageData.forumProgram.text}/>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="festival-forum__contacts-and-socials-wrap">
-          <div className="container">
+          <div className="festival-forum__contacts-and-socials-wrap">
             <h3>{nonBreakingSpaces(pageData.forumContactsTitle)}</h3>
             <div className="festival-forum__contacts-and-socials">
               <HumanContact {...pageData.forumContact}/>
