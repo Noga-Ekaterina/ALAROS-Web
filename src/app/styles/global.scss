@@ -186,6 +186,19 @@ input{
   }
 }
 
+
+ol li {
+  list-style: none;
+  counter-increment: num;
+  display: flex;
+  gap: 0.7em;
+
+  &::before{
+    content: counter(num) '.';
+    width: 1.08em;
+  }
+}
+
 .btn-grey {
   @extend %btn-grey;
 }

@@ -134,17 +134,6 @@
       *{
         line-height: 1.3em;
       }
-
-      li {
-        counter-increment: num;
-        display: flex;
-        gap: 0.7em;
-
-        &::before{
-          content: counter(num) '.';
-          width: 1.08em;
-        }
-      }
     }
 
     ul{
