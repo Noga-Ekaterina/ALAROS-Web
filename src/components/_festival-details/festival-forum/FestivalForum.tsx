@@ -16,6 +16,7 @@ interface Props{
 const FestivalForum = ({pageData}:Props) => {
   return (
       <div className="festival-forum" id="forum">
+        <img src="/Assets/Pages\Festival-details\bg\2.svg" alt="" className="festival-forum__bg" />
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{nonBreakingSpaces(pageData.forumTitle)}</h2>

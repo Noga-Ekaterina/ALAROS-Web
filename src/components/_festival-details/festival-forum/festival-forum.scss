@@ -2,9 +2,37 @@
 
 .festival-forum{
   background: #fff;
-  padding-block: 15rem 9rem;
+  padding-block: 25rem 9rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: -15rem;
 
   --h: calc((70rem/3)*4);
+
+  >*{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bg{
+    position: absolute;
+    top: -204rem;
+    right: 0;
+    width: calc(100% - 320rem);
+    z-index: 1;
+
+    @include sm{
+      display: none;
+    }
+  }
+
+  .titles-block__title{
+    max-width: 404rem;
+  }
+
+  .life{
+    background: none;
+  }
 
   &__descriptions{
     display: grid;
@@ -21,6 +49,7 @@
     @include sm {
       font-size: 10rem;
       grid-template-columns: repeat(6, 1fr);
+      margin-top: 40rem;
     }
 
     @include xxl{
