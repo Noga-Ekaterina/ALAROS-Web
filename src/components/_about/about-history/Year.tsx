@@ -27,7 +27,16 @@ const Year = ({data}: Props) => {
         <div className="about-history__year-content">
           <div className="about-history__year">{data.year}</div>
           <div className="about-history__year-text-content">
-            <TextAndImagesSliders html={data.body} className="about-history__slide"/>
+            <TextAndImagesSliders 
+              html={data.body} 
+              className="about-history__slide"
+              size='small'
+              mediaSizes={{
+                bigDesktop: "xl",
+                desktop: "large",
+                laptop: "medium",
+              }}
+            />
           </div>
         </div>
       </div>

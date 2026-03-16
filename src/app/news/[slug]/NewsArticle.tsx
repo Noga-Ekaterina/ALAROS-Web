@@ -25,14 +25,31 @@ const NewsArticle = ({ news, }: Props) => {
         <p className="news-article__description">{nonBreakingSpaces(news.description)}</p>
         <div className="news-article__main">
           <div className="news-article__aside">
-            <Image image={news.cover} />
+            <Image 
+              image={news.cover}
+              size='small'
+              mediaSizes={{
+                bigDesktop: "xl",
+                desktop: "large",
+                laptop: "medium",
+              }}
+            />
             <div className="news-article__link news-article__link--md">
               <a title="/news" href="/news"><u>Лента новостей</u></a>
             </div>
           </div>
           <div className="news-article__body">
             {
-              <TextAndImagesSliders html={news?.body || []} className="news-article__slide" />
+              <TextAndImagesSliders  
+                html={news?.body || []}
+                className="news-article__slide"
+                size='small'
+                mediaSizes={{
+                  bigDesktop: "xl",
+                  desktop: "large",
+                  laptop: "medium",
+                }}
+            />
             }
           </div>
         </div>

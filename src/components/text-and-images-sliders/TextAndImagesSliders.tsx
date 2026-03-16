@@ -6,14 +6,16 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {IWithClass} from "@/types/tehnic";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import SliderClue from "@/components/slider-clue/SliderClue";
-import {IContentComponent} from "@/types/data";
+import {IContentComponent, IImageSize, IMediaSizes} from "@/types/data";
 import Image from "../Image";
 
 interface Props extends IWithClass{
   html: IContentComponent[];
+  size?: IImageSize;
+  mediaSizes?: IMediaSizes;
 }
 
-const TextAndImagesSliders = ({html, className}: Props) => {
+const TextAndImagesSliders = ({html, size, mediaSizes, className}: Props) => {
   const result= useMemo(() => {
     if (!html || html.length === 0) {
       return [];
@@ -31,7 +33,7 @@ const TextAndImagesSliders = ({html, className}: Props) => {
           
           return (
             <SwiperSlide key={`image-${component.id}-${imgIndex}`} className={className}>
-              <Image image={image} alt={image.alternativeText || ''} loading="lazy" />
+              <Image image={image} size={size} mediaSizes={mediaSizes} />
               {caption && <HtmlProcessing html={`<p>${caption}</p>`}/>}
             </SwiperSlide>
           );
