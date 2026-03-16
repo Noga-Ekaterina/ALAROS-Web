@@ -21,7 +21,7 @@ const Session = ({speakers, speakersTitle, moderatorTitle, moderator, title, dat
 
     const activeUser= usersSwiperRef.current.swiper.activeIndex
 
-    if (activeUser==0){
+    if (activeUser>0){
       rolleSwiperNav.goToSlide(2)
     }else {
       rolleSwiperNav.goToSlide(0)
