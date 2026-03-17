@@ -34,6 +34,12 @@ const HtmlProcessing = ({html}:Props) => {
     const uniqueId = element.props?.id || element.key ||element.props?.className || element.props?.href || `key-${index}`; // Используем id или href, если доступны
     const key = `${uniqueId}-${element.type}-${index}`; // Уникальный ключ на основе id/href и типа элемента
     const props = {...element.props, key};
+    
+    const color: undefined|string=props.style?.color
+
+    if(color &&(color=="#000" ||color=="#000000" || color==="rgb(0, 0, 0)") ){
+      delete props.style?.color
+    }
 
     if (element.type === 'a') {
       if (props.download) {
