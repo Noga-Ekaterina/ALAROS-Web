@@ -6,7 +6,7 @@ import { IMediaSizes } from '@/types/data';
 // Типы
 
 export interface Props {
-  image: IImage;
+  image?: IImage;
   size?: IImageSize;
   mediaSizes?: IMediaSizes;
   className?: string;
@@ -28,6 +28,14 @@ const Image: React.FC<Props> = ({
   onError,
 }) => {
   const breakpoints = useBreakpoints();
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, []);
+
+  if(!image)
+    return <img src='' className=''/>
 
   // Определяем размер на основе медиа-запросов
   const getSizeForBreakpoint = (): IImageSize | undefined => {
@@ -86,11 +94,6 @@ const Image: React.FC<Props> = ({
     };
   };
 
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, []);
 
   const optimalImage = isClient? getOptimalImage() : image.formats?.thumbnail|| image;
   const finalAlt = alt || image.alternativeText || '';
