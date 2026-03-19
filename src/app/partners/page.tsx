@@ -14,6 +14,7 @@ import PartnersClub from "@/components/_partners/partners-club/PartnersClub";
 import PartnersContacts from "@/components/_partners/partners-contacts/PartnersContacts";
 import Life from "@/components/life/Life";
 import PartnersEvents from "@/components/_partners/partners-events/PartnersEvents";
+import InfopartnersSlider from '@/components/partners-slider/infopartners/InfopartnersSlider';
 
 interface Props{
   searchParams: { [key: string]: string | string[] | undefined }
@@ -39,6 +40,7 @@ const MyComponent = async ({searchParams}: Props) => {
         <PartnersClub pageData={pageData}/>
         <PartnersContacts pageData={pageData}/>
         <Life title={pageData.lifeTitle} signatures={pageData.lifeSignatures} life={pageData.life}/>
+        {pageData.isShowInfopartners && <InfopartnersSlider />}
         {pageData.isShowEvents && <PartnersEvents pageData={pageData}/>}
         <PartnersSlider/>
       </AnimationPage>

@@ -43,7 +43,7 @@ const Page = async ({searchParams}:Props) => {
                 {data.isShowFestivalProgram && <FestivalProgram pageData={data} festivalProgram={data.festivalProgram}/>}
                 <FestivalBusinessProgram pageData={data}/>
                 {data.isShowProtectionsDays && <FestivalProtections title={data.protectionsTitle} protectionsRightSignature={data.protectionsRightSignature} protectionsDays={data.protectionsDays} protectionsColumns={data.protectionsColumns}/>}
-                {data.isShowInfopartners && <InfopartnersSlider {...data}/>}
+                {data.isShowInfopartners && <InfopartnersSlider />}
                 {data.isShowForum && <FestivalForum pageData={data}/>}
               </>
               :
