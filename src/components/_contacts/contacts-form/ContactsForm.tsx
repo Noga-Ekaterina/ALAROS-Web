@@ -6,14 +6,15 @@ import Form from "@/components/form/Form";
 interface Props{
   title: string
   inputs: IFormInput[]
+  agreement: string
 }
 
-const ContactsForm = ({title, inputs}: Props) => {
+const ContactsForm = ({title, inputs, agreement}: Props) => {
   return (
       <div className="contacts-form container">
         <h2 className="contacts-form__title">{title}</h2>
 
-        <Form inputs={inputs} typeForm="email"/>
+        <Form inputs={inputs} typeForm="email" agreement={agreement} />
       </div>
   );
 };

@@ -32,6 +32,39 @@
     }
   }
 
+  &__agreement{
+    @include standard-font(true);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 20rem;
+
+    input{
+      display: none;
+    }
+
+    &-checkbox{
+      width: 0.95em;
+      aspect-ratio: 1/1;
+      border:solid #000 var(--w-line);
+      position: relative;
+
+      input:checked + &{
+
+        &::after{
+          content: "";
+          border:solid #fff var(--w-line);
+          display: block;
+          height: 100%;
+          width: 100%;
+          box-sizing: border-box;
+          background: var(--c-red);
+        }
+      } 
+    }
+  }
+
   .form &__btn{
     @extend %btn-grey;
     align-self: start;

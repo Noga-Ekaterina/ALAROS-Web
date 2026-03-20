@@ -20,7 +20,7 @@ const FestivalDiploma = ({pageData}: Props) => {
             isBigGray={true}
         >
           <div className="container">
-            <Form inputs={pageData.diplomaInputs} note={pageData.diplomaNote} nominations={pageData.nominations} typeForm="diploma"/>
+            <Form inputs={pageData.diplomaInputs} note={pageData.diplomaNote} nominations={pageData.nominations} typeForm="diploma" agreement={pageData.diplomaAgreement}/>
           </div>
         </Detalis>
       </div>

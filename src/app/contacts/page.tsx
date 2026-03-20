@@ -30,7 +30,7 @@ const Page = async ({searchParams}:Props) => {
       <AnimationPage>
         <ContactsMainScreen data={pageData}/>
         <ContactsAddressesSocials data={pageData}/>
-        <ContactsForm title={pageData.formTitle} inputs={pageData.formInputs}/>
+        <ContactsForm title={pageData.formTitle} inputs={pageData.formInputs} agreement={pageData.formAgreement} />
       </AnimationPage>
   );
 };

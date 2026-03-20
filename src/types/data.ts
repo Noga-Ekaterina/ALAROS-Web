@@ -223,6 +223,7 @@ export interface IFestival {
   bidTitle: string
   bidInputs: IFormInput[]
   bidNote: string | null
+  bidAgreement: string
   bidDisabled: boolean
   documentsTitle: string
   documentsLinks: IButtonBlock[]
@@ -233,6 +234,7 @@ export interface IFestival {
   diplomaTitle: string
   diplomaInputs: IFormInput[]
   diplomaNote: string|null
+  diplomaAgreement: string
   juriesTitle: string
   juriesCommited: IJuriesCommited[]
   projectsTitle: string
@@ -391,6 +393,7 @@ export interface IContacts extends IMapCoordinates{
   socialsIcons: IIconLink[];
   formTitle: string
   formInputs: IFormInput[]
+  formAgreement: string
 }
 
 export interface ILifeItem{

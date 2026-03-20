@@ -20,10 +20,13 @@ interface Props{
   nominations?: IFestivalNomination[]
   typeForm: TypeForm
   disabled?: boolean
+  agreement: string
 }
 
-const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
+const Form = ({inputs, note, nominations, typeForm, disabled, agreement}:Props) => {
   const nameKey= typeForm=="email"? "emailType" : typeForm=="bid"? "bidTableColumn" :"diplomaTableColumn"
+  const [isAgreement, setIsAgreement] = useState(false);
+  const [isShowAgreement, setIsShowAgreement] = useState(false);
   const [isSent, setIsSent] = useState(false)
   const [isError, setIsError] = useState(true)
   const [isErrorSubmit, setIsErrorSubmit] = useState(false)
@@ -31,10 +34,16 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
   const [key, setKey] = useState(0)
 
   const initialValues = getInitialValues(inputs, nameKey, nominations);
+
   const handleSubmit = async (
       values: typeof initialValues,
       { setSubmitting, resetForm }: FormikHelpers<typeof initialValues>
   ) => {
+    if (!isAgreement) {
+      setIsShowAgreement(true)
+      setTimeout(()=> setIsShowAgreement(false), 3000)
+      return
+    }
     try {
       const token = await recaptchaRef.current?.executeAsync().catch((error) => {
         throw new Error(`reCAPTCHA error: ${error.message}`);
@@ -102,8 +111,6 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
 
     setIsError(Object.keys(errors).length > 0)
 
-    console.log(errors)
-
     return errors
   }
 
@@ -143,6 +150,17 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
                       sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
                       size="invisible" style={{display: "none"}}
                   />
+
+                  {
+                    !disabled &&
+                      <label className="form__agreement" htmlFor={`${typeForm}-agreement`}>
+                        <input type="checkbox" name="agreement" id={`${typeForm}-agreement`} onChange={(e)=> setIsAgreement(e.target.checked)}/>
+                        <div className="form__agreement-checkbox">
+                        </div>
+                        <HtmlProcessing html={agreement}/>
+                      </label>
+                  }
+
                   <div className="form__row">
                     <div className="form__btn-and-warning">
                       <Field
@@ -155,12 +173,6 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
                             "form__btn--sent": isSent,
                           })}
                       />
-
-                      <div className="form__warning">
-                        Отправляя форму, <br/>
-                        вы соглашаетесь на обработку <br/>
-                        персональных данных
-                      </div>
                     </div>
 
                     {
@@ -175,6 +187,10 @@ const Form = ({inputs, note, nominations, typeForm, disabled}:Props) => {
 
           )}
         </Formik>
+        
+        {
+          isShowAgreement && <Alert message="Необходимо ознакомиться с условиями"/>
+        }
 
         {
           isErrorSubmit && <Alert message="Ошибка отправки формы"/>
