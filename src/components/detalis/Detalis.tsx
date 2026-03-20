@@ -100,9 +100,17 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
           {title}
           {
             isBtnBg ?
-                <HtmlProcessing html={`<span class="detalis__right-element">${isClient? mobileScreen ? "<span>[</span><span class='detalis__icon'>+</span><span>]</span>":rightElement:rightElement}</span>`}/>
-                :
-                rightElement || <span className="detalis__icon">+</span>
+              <div className="detalis__right-element">
+                {isClient && mobileScreen ?
+                    <>
+                      <span>[</span><span className='detalis__icon'>+</span><span>]</span>
+                    </>
+                  :
+                  typeof rightElement === "string" ? <HtmlProcessing html={rightElement} /> : rightElement
+                }
+              </div>
+            :
+              rightElement || <span className="detalis__icon">+</span>
           }
         </button>
 

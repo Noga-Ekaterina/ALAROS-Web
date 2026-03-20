@@ -14,17 +14,23 @@
     background: inherit;
   }
 
+  u{
+    &:hover{
+      text-decoration-color: transparent;
+    }
+  }
+
   &__content {
     display: flex;
     gap: 27rem;
     padding: 15rem;
+    flex-wrap: wrap;
 
     @include sm{
       gap: 10rem;
       justify-content: space-between;
     }
   }
-
 
   &__running-line {
     gap: 26rem;

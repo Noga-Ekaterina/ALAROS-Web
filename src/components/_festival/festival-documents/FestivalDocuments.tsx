@@ -6,6 +6,7 @@ import {getBtns} from "@/utils/getBtns";
 import FestivalTemplates from "@/components/_festival/festival-templates/FestivalTemplates";
 import LinkBlock from "@/components/link-block/LinkBlock";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
+import DocumentsDetails from '@/components/documents-details/DocumentsDetails ';
 
 interface Props{
   pageData: IFestival
@@ -29,6 +30,7 @@ const FestivalDocuments = ({pageData}: Props) => {
                 )
               })
             }
+            <DocumentsDetails button={pageData.documentsDetails} links={pageData.documentsDetailsLinks} isDisabled={pageData.documentsDetailsDisabled}/>  
             <FestivalTemplates pageData={pageData}/>
           </div>
         </div>

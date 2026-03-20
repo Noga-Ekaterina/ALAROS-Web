@@ -227,6 +227,9 @@ export interface IFestival {
   bidDisabled: boolean
   documentsTitle: string
   documentsLinks: IButtonBlock[]
+  documentsDetails: IButtonBlock
+  documentsDetailsLinks: IHtml[]; // Multiple values
+  documentsDetailsDisabled: boolean
   templates: IButtonBlock
   templatesDownload: string
   templatesDisabled: boolean
