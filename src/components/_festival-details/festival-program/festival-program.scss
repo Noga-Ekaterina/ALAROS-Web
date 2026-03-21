@@ -31,14 +31,55 @@
     grid-template-columns: repeat(2, 2fr) 6fr 2fr;
     align-items: baseline;
     gap: 17rem;
+    position: relative;
+
+    &--start-day{
+      padding-top: 13rem;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-top: var(--w-line) solid var(--c-grey-bg-light);
+        pointer-events: none;
+        transform: translateY(-100%);
+      }
+
+      &:first-child{
+        padding-top: 0;
+
+        &::before{
+          display: none;
+        }
+      }
+    }
+
+    &--business-program + &--start-day{
+      padding-top: 0;
+      
+      &::before{
+        top: -13rem;
+      }
+    }
 
     &--business-program +&--business-program{
       margin-top: -13rem;
+
+      &::before{
+        top: 0;
+      }
+
+      .festival-program__event::before{
+        display: none;
+      }
 
       .detalis{
         border-top: 0;
       }
     }
+
   }
 
   &__content{
@@ -69,6 +110,33 @@
     font-weight: 500;
   }
 
+  &__event{
+    position: relative;
+    z-index: 2;
+    &::before, &::after{
+      content: "";
+      position: absolute;
+      width: calc(438rem + 8rem);
+      left: -4rem;
+      height: var(--w-line);
+      background: #fff;
+      pointer-events: none;
+      
+      @include sm {
+        width: calc(323rem + 8rem);
+      }
+    }
+    &::before{
+      top: 0;
+      transform: translateY(-100%); 
+    }
+    
+    &::after{
+      bottom: 0;
+    }
+
+  }
+
   &__time{
     font-weight: 500;
     color: #0B2719;
@@ -85,7 +153,9 @@
 
   .detalis {
     width: 438rem;
-    border-block: var(--w-line) solid var(--c-line);
+    border-block: var(--w-line) solid #BEBCBB;
+    position: relative;
+    z-index: 2;
 
     @include sm{
       width: 323rem;

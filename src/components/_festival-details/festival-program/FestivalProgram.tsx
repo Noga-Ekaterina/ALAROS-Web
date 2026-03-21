@@ -40,14 +40,17 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
                       <div
                           className={cn(
                               "festival-program__row",
-                              {"festival-program__row--business-program": item.businessProgram}
+                              {
+                                "festival-program__row--business-program": item.businessProgram,
+                                "festival-program__row--start-day": index === 0
+                              }
                           )}
                           key={`${day.date}-${item.time}-${index}`}
                       >
                         <span
                             className="festival-program__day">{index === 0 && <>{formaterDate(day.date)} | {dayShort}</>}</span>
                         <span className="festival-program__time">{item.time}</span>
-                        <div>
+                        <div className="festival-program__event">
                           {
                             (!item.businessProgram) ?
                                 <div className="festival-program__text">
