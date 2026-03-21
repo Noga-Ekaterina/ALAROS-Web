@@ -64,8 +64,8 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature,
                                           </td>
                                           <td>{protection.number}</td>
                                           <td>{protection.nomination}</td>
-                                          <td>{protection.name}</td>
                                           <td>{protection.winner}</td>
+                                          <td>{protection.name}</td>
                                         </>
                                   }
                                 </tr>
