@@ -23,7 +23,7 @@ interface Props{
 const init=unstable_cache(async ()=>{
   const data=await fetchSingle<IPartners>("partners")
   return data
-}, ["partners-page"], {tags: ["partners", "project", "nomination-projects"]})
+}, ["partners-page"], {tags: ["partners"]})
 
 const MyComponent = async ({searchParams}: Props) => {
   const pageData= await init()
@@ -35,7 +35,6 @@ const MyComponent = async ({searchParams}: Props) => {
 
   return (
       <AnimationPage>
-        <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <PartnersMainScreen pageData={pageData}/>
         <PartnersClub pageData={pageData}/>
         <PartnersContacts pageData={pageData}/>

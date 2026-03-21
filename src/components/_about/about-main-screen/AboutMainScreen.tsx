@@ -1,7 +1,7 @@
 import React from 'react';
 import './abouts-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
-import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
+import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";
 import {IAbout} from "@/types/data";
 
 interface Props{
@@ -17,7 +17,7 @@ const AboutMainScreen = ({pageData}: Props) => {
           <HtmlProcessing html={pageData.mainScreenLeftSection}/>
         </div>
 
-        <MainScreenProject project={pageData.mainScreenProject} className="about-main-screen__img-wrapp" isShowGrid/>
+        <MainScreenImageLink item={pageData.mainScreenProject} className="about-main-screen__img-wrapp" isShowGrid/>
       </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import './news-main-screen.scss'
 import {INews} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
+import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";
 interface Props{
   data: INews
 }
@@ -14,9 +14,9 @@ const NewsMainScreen = ({data}: Props) => {
           <h1 className="news-main-screen__title">{nonBreakingSpaces(data.mainTitle)}</h1>
         </div>
 
-        <MainScreenProject project={data.mainScreenProject} className="news-main-screen__img-wrapp">
+        <MainScreenImageLink item={data.mainScreenProject} className="news-main-screen__img-wrapp">
         <div className="news-main-screen__elipse"></div>
-        </MainScreenProject>
+        </MainScreenImageLink>
       </div>
   );
 };

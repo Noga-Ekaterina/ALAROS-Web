@@ -2,7 +2,7 @@ import React from 'react';
 import './competition-results-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
 import {ICompetitionResults, IFestival, IFestivalDetails} from "@/types/data";
-import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
+import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";
 
 interface Props{
   pageData: ICompetitionResults
@@ -17,7 +17,7 @@ const CompetitionResultsMainScreen = ({pageData}: Props) => {
           <HtmlProcessing html={pageData.mainScreenLeftSection}/>
         </div>
 
-        <MainScreenProject project={pageData.mainScreenProject} className="competition-results-main-screen__img-wrapp"/>
+        <MainScreenImageLink item={pageData.mainScreenProject} className="competition-results-main-screen__img-wrapp"/>
       </div>
   );
 };

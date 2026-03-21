@@ -11,7 +11,7 @@ import project from "@/components/_projects/project/Project";
 import {useSearchParams} from "next/navigation";
 import {buildLink} from "@/utils/buildLink";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
-import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
+import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";
 import {useGetRem} from "@/hoocs/useGetRem";
 import {useMediaQuery} from "react-responsive";
 
@@ -53,8 +53,8 @@ const HomeMainScreen = ({homeData}: Props) => {
             {
               homeData.projects.map(project=>(
                   <SwiperSlide key={`${project.year}-${project.number}`}>
-                    <MainScreenProject
-                        project={project}
+                    <MainScreenImageLink
+                        item={project}
                         className="home-main-screen__slide-content"
                         mediaSizes={{
                           bigDesktop: 'xxl',
@@ -66,7 +66,7 @@ const HomeMainScreen = ({homeData}: Props) => {
                         <h2 className='home-main-screen__slide-title'>{nonBreakingSpaces(homeData.mainTitle)}</h2>
                       </div>
                       <div className="home-main-screen__diagonal" style={{width: `${diagonalWidth}px`, transform: ` rotate(${diagonalDeg}deg)`, right: block.current? `-${diagonalRight}px`:''}}></div>
-                    </MainScreenProject>
+                    </MainScreenImageLink>
                   </SwiperSlide>
               ))
             }

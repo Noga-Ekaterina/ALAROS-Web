@@ -486,9 +486,15 @@ export interface IManagement extends IHuman{
   details: IDetails[]
 }
 
+export interface IMainScreenImage{
+  image: IImage
+  signature: string
+  link: string
+}
+
 export interface IPartners{
   mainScreenLeftSection: string
-  mainScreenProject: IProject
+  mainScreenImages: IMainScreenImage[]
 
   clubTitle: string
   clubText: string

@@ -7,7 +7,7 @@ import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import Link from "next/link";
 import {buildLink} from "@/utils/buildLink";
 import {useSearchParams} from "next/navigation";
-import MainScreenProject from "@/components/_projects/main-screen-project/MainScreenProject";
+import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";
 import Image from "@/components/Image";
 
 interface Props{

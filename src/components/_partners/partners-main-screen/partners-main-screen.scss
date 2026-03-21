@@ -1,6 +1,19 @@
 @import "@/app/styles/mixins-and-extends";
 
 .partners-main-screen{
+  &__slider{
+    width: 100%;
+    height: 100%;
+
+    &-wrapp{
+      width: 512rem;
+
+      @include sm{
+        height: 42.5%;
+      }
+    }
+  }
+
   &__block-text{
     width: 512rem;
     position: relative;
@@ -38,10 +51,11 @@
   }
   
   &__img-wrapp {
-    width: 512rem;
+    width: 100%;
+    height: 100%;
 
     @include sm{
-      height: 42.5%;
+      min-height: 100%;
     }
   }
 
