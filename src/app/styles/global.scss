@@ -91,12 +91,8 @@ body {
 }
 
 .container{
-  max-width: 964rem;
+  max-width: calc(100vw - var(--p-x)*2);
   margin-inline: auto;
-
-  @include adaptive((
-          max-width: (defaul: 967rem, xl: 1824, sm: 350)
-  ))
 }
 
 p{
