@@ -1,0 +1,55 @@
+.detalis-clue{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  &__icon{
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.detalis-clue-hint{
+  --scale: 0;
+
+  position: absolute;
+  left: 48%;
+  top: 49%;
+  width: 1.4em;
+  height: 1.4em;
+  transform: translate(-50%, -50%) scale(var(--scale));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 1800ms, transform 1200ms;
+
+  &__bg{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    // background: rgba(215, 212, 212, 0.2);
+  }
+
+  &__icon{
+    position: relative;
+    width: 1em;
+    height: 1em;
+    z-index: 1;
+
+    svg{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &-enter-active, &-enter-done, &-exit{
+    opacity: 0;
+    --scale: 5;
+  }
+}

@@ -9,6 +9,7 @@ import {useHash} from "@/hoocs/useHash";
 import {useLenis} from "@studio-freight/react-lenis";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import {useMediaQuery} from "react-responsive";
+import DetalisClue from "@/components/detalis/DetalisClue";
 
 interface IProps extends IWithChildren {
   title: JSX.Element
@@ -19,9 +20,10 @@ interface IProps extends IWithChildren {
   isBtnBg?: boolean
   disabled?: boolean
   isSticky?: boolean
+  showClue?: boolean
 }
 
-const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, disabled, isSticky, children }: IProps) => {
+const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, disabled, isSticky, showClue, children }: IProps) => {
   const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(startIsOpen??false);
   const [isInit, setIsInit] = useState(false)
@@ -87,6 +89,8 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
     setTimeout(()=>lenis?.resize(), 1000)
   }, [isOpen]);
 
+  const defaultTrigger = showClue ? <DetalisClue disabled={disabled} isOpen={isOpen} /> : <span className="detalis__icon">+</span>
+
   return (
       <div
           className={cn("detalis", { "detalis--opened": isOpen })}
@@ -102,15 +106,13 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
             isBtnBg ?
               <div className="detalis__right-element">
                 {isClient && mobileScreen ?
-                    <>
-                      <span>[</span><span className='detalis__icon'>+</span><span>]</span>
-                    </>
+                    showClue ? <DetalisClue disabled={disabled} isOpen={isOpen} /> : <><span>[</span><span className='detalis__icon'>+</span><span>]</span></>
                   :
-                  typeof rightElement === "string" ? <HtmlProcessing html={rightElement} /> : rightElement
+                  typeof rightElement === "string" ? <HtmlProcessing html={rightElement} /> : rightElement || defaultTrigger
                 }
               </div>
             :
-              rightElement || <span className="detalis__icon">+</span>
+              rightElement || defaultTrigger
           }
         </button>
 

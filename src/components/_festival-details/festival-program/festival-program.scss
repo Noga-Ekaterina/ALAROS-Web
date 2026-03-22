@@ -161,10 +161,6 @@
       width: 323rem;
     }
 
-    *{
-      @include standard-font-small
-    }
-
     b, strong{
       font-weight: 500;
     }
@@ -179,7 +175,8 @@
       }
     }
 
-    &__icon{
+    &__icon, 
+    &-clue{
       font-size: 23rem;
       font-weight: 400;
       color: var(--c-red);
@@ -187,6 +184,10 @@
 
     &__content{
       padding-bottom: 23rem;
+      
+      *{
+        @include standard-font-small
+      }
     }
   }
 

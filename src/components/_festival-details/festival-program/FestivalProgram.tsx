@@ -58,6 +58,7 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
                                 </div>
                                 :
                                 <Detalis
+                                    showClue={true}
                                     title={<div className="festival-program__text"><HtmlProcessing
                                     html={`<span>${item.title}</span>`}/></div>}
                                 >
