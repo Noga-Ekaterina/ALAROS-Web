@@ -30,7 +30,15 @@
     margin-bottom: 16rem;
     font-weight: 500;
 
-    @include standard-font-big
+    @include standard-font-big;
+
+    @include xxl {
+      font-size: vu(40, xxl);
+    }
+
+    &, *{
+      line-height: 1.1;
+    }
   }
 
   b, strong{
