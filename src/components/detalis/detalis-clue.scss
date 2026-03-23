@@ -9,6 +9,10 @@
     position: relative;
     z-index: 2;
   }
+
+  *{
+    color: inherit;
+  }
 }
 
 .detalis-clue-hint{
@@ -45,6 +49,10 @@
       width: 100%;
       height: auto;
       display: block;
+
+      *{
+        fill: currentColor;
+      }
     }
   }
 
