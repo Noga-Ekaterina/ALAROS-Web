@@ -120,22 +120,13 @@
   }
 
   h3{
-    font-weight: 500;
     color: var(--c-red);
-
-    &, *{
-      line-height: 1.1;
-    }
 
     @include adaptive((
             margin-bottom: (default: 20rem, xl: 30, sm: 15)
     ));
 
-    @include standard-font-big;
-
-    @include xxl {
-      font-size: vu(40, xxl);
-    }
+    @include heading3
   }
 
   ul li{

@@ -28,17 +28,8 @@
   h3 {
     color: var(--c-green-text);
     margin-bottom: 16rem;
-    font-weight: 500;
 
-    @include standard-font-big;
-
-    @include xxl {
-      font-size: vu(40, xxl);
-    }
-
-    &, *{
-      line-height: 1.1;
-    }
+    @include heading3
   }
 
   b, strong{

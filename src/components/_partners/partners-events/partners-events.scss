@@ -47,15 +47,7 @@
       line-height: 1.4em;
       letter-spacing: 0.01em;
 
-      @include adaptive((
-              font-size: (
-                      default: 11rem,
-                      xxl: 22,
-                      xl: 16,
-                      md: 10,
-                      sm: 10
-              )
-      ))
+      @include standard-font-small
     }
 
     a{
@@ -64,18 +56,9 @@
   }
 
   h3{
-    font-weight: 500;
     color: var(--c-red);
 
-    &,*{
-      line-height: 1.1;
-    }
-
-    @include standard-font-big;
-    
-    @include xxl {
-      font-size: vu(40, xxl);
-    }
+    @include heading3;
 
     @include sm{
       font-size: 15rem;

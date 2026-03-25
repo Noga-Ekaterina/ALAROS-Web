@@ -213,6 +213,20 @@ $base-widths: (
   font-weight: 500;
 }
 
+@mixin heading3{
+  font-weight: 400;
+    
+  &, *{
+    line-height: 1.1;
+  }
+
+  @include standard-font-big;
+
+  @include xxl {
+    font-size: vu(40, xxl);
+  } 
+}
+
 %btn-grey{
   font-weight: 400 !important;
   text-align: center;
