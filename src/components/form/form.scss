@@ -32,6 +32,11 @@
     }
   }
 
+  &__inputs{
+    position: relative;
+    z-index: 2;
+  }
+
   &__agreement{
     @include standard-font(true);
     cursor: pointer;

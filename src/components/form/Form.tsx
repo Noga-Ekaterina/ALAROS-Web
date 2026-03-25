@@ -120,7 +120,7 @@ const Form = ({inputs, note, nominations, typeForm, disabled, agreement}:Props) 
           {({ isSubmitting,  }) =>(
               <FormikForm className="form">
                 <fieldset disabled={disabled}>
-                  <div key={key}>
+                  <div key={key} className='form__inputs'>
                     {
                       inputs.map((input) => {
                         if (input[nameKey]){

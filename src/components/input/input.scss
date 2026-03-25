@@ -17,9 +17,16 @@
     border-top: none;
   }
 
-  &:last-child:not(.input--dropdown){
-    border-bottom: var(--c-line) solid var(--w-line);
-    margin-bottom: 40rem;
+  &:last-child{
+    margin-bottom: 36rem;
+
+    &:not(.input--dropdown){
+      border-bottom: var(--c-line) solid var(--w-line);
+    }
+
+    .dropdown__title{
+      padding-bottom: 0;
+    }
   }
 
   &--dropdown{
@@ -130,14 +137,8 @@
   }
 
   &__dropdown{
-    position: relative;
-    top: -8rem;
+    margin-top: -8rem;
     width: 100%;
-    height: 6.3em;
-
-    @include sm{
-      height: 9.45em;
-    }
   }
 
   .dropdown{
