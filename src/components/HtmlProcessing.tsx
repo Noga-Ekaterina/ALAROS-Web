@@ -6,17 +6,19 @@ import {useGetHashPosition} from "../hoocs/useGetHashPosition";
 import {smoothScroll} from "../utils/smoothScroll";
 import {useGetRem} from "@/hoocs/useGetRem";
 import CopyText from "@/components/CopyText";
+import { usePathname } from "next/navigation";
 
 interface Props{
   html: string| JSX.Element[] | null |undefined
 }
 
 const HtmlProcessing = ({html}:Props) => {
-  const rem= useGetRem()
+  const pathname=usePathname()
   const getHashPosition= useGetHashPosition()
 
   const handleHashed=useCallback((event:  React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
     event.preventDefault()
+    console.log("hash")
 
     const targetElement = event.target as HTMLElement;
 
@@ -39,18 +41,22 @@ const HtmlProcessing = ({html}:Props) => {
 
     if(color &&(color=="#000" ||color=="#000000" || color==="rgb(0, 0, 0)") ){
       delete props.style?.color
-    }
+    } 
 
     if (element.type === 'a') {
       if (props.download) {
         let href: string=props.href
         href=`${href}${href.includes("?")? "&":"?"}download=1`
         return React.createElement("a", {...props, href}, props.children);
+      } 
+      else if (props.href.startsWith(pathname) && props.href.includes('#') && !props.download){
+        const index=props.href.indexOf("#")
+        return React.createElement("a", { ...props, href: props.href.substring(index), onClick: handleHashed, }, props.children);
       }
       else if (props.href.startsWith('/') && !props.download)
         return React.createElement(Link, { href: props.href, ...props }, props.children);
       else if (props.href.startsWith('#') && !props.download)
-        return React.createElement("a", { to: props.href, onClick: handleHashed, ...props }, props.children);
+        return React.createElement("a", { onClick: handleHashed, ...props }, props.children);
       else if (props.href.startsWith("copy:"))
         return React.createElement(CopyText, { text: props.href.replace("copy:", ""), className: props.className, key}, props.children);
     }
