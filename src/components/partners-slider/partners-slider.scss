@@ -6,7 +6,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10rem;
+
+  @include adaptive((
+    margin-bottom: (default: 9rem, xxl: 20, xl: 15)
+  ));
 
   @include xxl{
     padding: 32rem 15.6rem 27rem;
