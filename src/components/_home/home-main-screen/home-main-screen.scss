@@ -21,8 +21,7 @@
       &:before{
         content: '';
         width: 100vw;
-        height:var(--w-line-main-screen);
-        background: var(--c-line);
+        border-top:var(--w-line-main-screen) solid var(--c-line);
         position: absolute;
         left: 0;
         top: calc(50% - var(--w-line-main-screen)/2);
@@ -258,9 +257,8 @@
 
         &::after{
           content: '';
-          width: var(--w-line-main-screen);
+          border-left: var(--w-line-main-screen) solid var(--c-line);
           height: 200%;
-          background: var(--c-line);
           position: absolute;
           z-index: 1;
           top: 0;
@@ -274,9 +272,8 @@
 
         &::before{
           content: '';
-          width: var(--w-line-main-screen);
+          border-left: var(--w-line-main-screen) solid var(--c-line);
           height: 200%;
-          background: var(--c-line);
           position: absolute;
           z-index: 1;
           top: 0;
