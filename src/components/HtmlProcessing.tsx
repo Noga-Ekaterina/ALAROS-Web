@@ -49,7 +49,7 @@ const HtmlProcessing = ({html}:Props) => {
         href=`${href}${href.includes("?")? "&":"?"}download=1`
         return React.createElement("a", {...props, href}, props.children);
       } 
-      else if (props.href.startsWith(pathname) && props.href.includes('#') && !props.download){
+      else if (props.href.startsWith(`${pathname}#`) && !props.download){
         const index=props.href.indexOf("#")
         return React.createElement("a", { ...props, href: props.href.substring(index), onClick: handleHashed, }, props.children);
       }
