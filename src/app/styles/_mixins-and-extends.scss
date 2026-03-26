@@ -243,6 +243,7 @@ $base-widths: (
   letter-spacing: 0.01em;
   transition: 0.3s;
   text-decoration: none;
+  border-radius: 0;
 
   @include adaptive((
           font-size: (
@@ -251,7 +252,7 @@ $base-widths: (
                   xl: 18,
                   sm: 13
           ),
-          --width: (default: 153rem, xxl: 384, xl: 286, sm: 170)
+          --width: (default: 153rem, xxl: 384, xl: 286, md: 109, sm: 170)
   ));
 
   &:hover{
