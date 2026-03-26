@@ -29,7 +29,7 @@
   }
 
   &__text{
-    @include standard-font(true);
+    @include body-font;
     grid-column: 7/12;
 
     @include xl{

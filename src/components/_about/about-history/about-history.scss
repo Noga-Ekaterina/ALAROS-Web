@@ -180,7 +180,7 @@
     flex-direction: column;
     gap: 1.3em;
 
-    @include standard-font(true);
+    @include body-font;
 
     @include sm{
       font-size: 10rem;

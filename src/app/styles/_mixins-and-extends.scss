@@ -132,6 +132,11 @@ $base-widths: (
   ));
 }
 
+@mixin body-font{
+    @include standard-font(true);
+    font-weight: 300;
+    line-height: 1.3;
+}
 
 @mixin standard-font-big{
   @include adaptive((

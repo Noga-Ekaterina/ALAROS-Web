@@ -25,9 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.3em;
-    @include standard-font(true);
-    line-height: 1.3em;
-    font-weight: 300;
+    @include body-font;
 
     @include xl{
       margin-top: 30rem;

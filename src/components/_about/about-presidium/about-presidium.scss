@@ -148,4 +148,8 @@
 
     @include standard-font-big;
   }
+
+  &__job-title{
+    line-height: 1.3em;
+  }
 }

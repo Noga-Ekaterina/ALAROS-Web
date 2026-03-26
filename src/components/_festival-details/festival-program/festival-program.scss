@@ -3,20 +3,8 @@
   background: #fff;
   padding-block: 25rem 50rem;
 
-  @mixin table-font{
-    @include adaptive((
-            font-size: (
-                    default: 12rem,
-                    xxl: 27,
-                    xl: 22,
-                    md: 10,
-                    sm: 13
-            )
-    ));
-  }
-
   *{
-    @include table-font
+    @include body-font
   }
 
   &__title{
@@ -201,7 +189,7 @@
     margin-top: 31rem;
 
     *{
-      @include table-font
+      @include body-font
     }
   }
 

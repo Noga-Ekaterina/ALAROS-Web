@@ -23,10 +23,9 @@
     display: flex;
     margin-top: 44rem;
     padding-inline: 68rem 20rem;
-    font-weight: 300;
     column-gap: 6%;
 
-    @include standard-font(true);
+    @include body-font();
 
     @include xxl{
       column-gap: 0;

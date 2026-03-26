@@ -85,7 +85,7 @@ const AboutPresidium = ({data, title}:Props) => {
                                             <p className="about-presidium__name">{nonBreakingSpaces(item.name)}</p><p
                                              className="yellow">{nonBreakingSpaces(item.place)}</p>
                                          </div>
-                                         <HtmlProcessing html={`<p>${item.jobTitle}</p>`}/>
+                                         <p className='about-presidium__job-title'>{item.jobTitle}</p>
                                       </SmoothScrolling>
                                    </div>
                                 </>
