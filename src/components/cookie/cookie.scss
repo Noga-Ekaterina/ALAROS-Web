@@ -10,11 +10,16 @@
   display: flex;
   align-items: flex-start;
   gap: 20rem;
+  
+  @include md {
+    transform: scale(1.085) translateX(3.85%);
+  }
 
   @include sm{
     flex-direction: column;
     padding: 7rem 8rem;
     gap: 28rem;
+    transform: scale(1);
   }
 
   *{
