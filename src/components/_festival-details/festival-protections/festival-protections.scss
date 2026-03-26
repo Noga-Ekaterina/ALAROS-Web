@@ -143,6 +143,8 @@
     overflow: hidden;
     &, *{
       text-align: left;
+      line-height: 1.5em;
+      height: 1.5em;
 
       @extend %text-overflow-ellipsis
     }
