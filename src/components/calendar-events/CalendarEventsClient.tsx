@@ -308,7 +308,7 @@ const CalendarEventsClient = ({title, calendarEvents}:Props) => {
               ref={swiperEventRef}
               className="calendar-events__event-slider"
               onActiveIndexChange={handleActiveEvent}
-              spaceBetween="10rem"
+              spaceBetween="1px"
           >
             {
               eventsStart.map(start => {
