@@ -1,7 +1,7 @@
 @import "@/app/styles/mixins-and-extends";
 .festival-program{
   background: #fff;
-  padding-block: 25rem 50rem;
+  padding-block: 25rem 30rem;
 
   *{
     @include body-font
@@ -200,6 +200,28 @@
 
     @include sm{
       font-size: 10rem;
+    }
+  }
+
+  &__btn-wrap{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 17rem;
+    margin-top: 40rem;
+    
+    >*:first-child{
+      grid-column: 5/-1;
+      padding-left: 8.5rem;
+
+      @include sm {
+        grid-column: 1/-1;
+        padding-left: 0;
+      }
+    }
+    
+    a{
+      @extend %btn-grey;
+      text-decoration: none;
     }
   }
 }

@@ -281,6 +281,7 @@ export interface IFestivalDetails{
   festivalProgramTitle: string
   festivalProgramColumns: string
   festivalProgram: IFestivalProgramDay[]
+  festivalProgramButton: string
   businessProgramTitle: string
   businessProgram: IBusinessProgramDay[]
   isShowProtectionsDays: boolean

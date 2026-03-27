@@ -78,6 +78,10 @@ const FestivalProgram = ({pageData, festivalProgram}:Props) => {
               }
             </div>
           </HorizontalScrollSection>
+
+          <div className="festival-program__btn-wrap">
+            <HtmlProcessing html={pageData.festivalProgramButton}/>
+          </div>
         </div>
       </div>
   );
