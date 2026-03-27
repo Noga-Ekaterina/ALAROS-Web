@@ -48,6 +48,8 @@
 
   &__menu{
     width: calc(19.8rem * var(--header-scale));
+    position: relative;
+    top: calc(0.5rem * var(--header-scale));
 
     .header--menu & {
       width: calc(12rem * var(--header-scale));
@@ -65,26 +67,36 @@
 
       @include flex-sb-c;
 
+      @include hover-scale;
+
       @include sm{
         font-size: 15rem;
       }
     }
   }
 
-  &__search{
-    width: calc(13.8rem * var(--header-scale));
-
-    .header--menu & *{
-      fill: transparent;
-      stroke: #fff;
-    }
-  }
-
   &__contacts{
-    width: calc(14.4rem * var(--header-scale));
+    width: calc(14rem * var(--header-scale));
     position: relative;
-    top: calc(-0.5rem * var(--header-scale));
+    top: calc(1rem * var(--header-scale));
 
-    @include hover-scale;
+    &-wrapp{
+      position: relative;
+      top: calc(-0.5rem * var(--header-scale));
+      font-size: calc(12rem * var(--header-scale));
+      letter-spacing: 0.02em;
+      color: var(--c-main);
+      gap: calc(20rem * var(--header-scale));
+      position: relative;
+      top: calc(0rem * var(--header-scale));
+
+      @include flex-sb-c;
+
+      @include hover-scale;
+
+      @include sm{
+        font-size: 15rem;
+      }
+    }
   }
 }
