@@ -53,7 +53,6 @@
 
     .header--menu & {
       width: calc(12rem * var(--header-scale));
-      position: relative;
       top: calc(1rem * var(--header-scale));
     }
 
@@ -81,14 +80,10 @@
     top: calc(1rem * var(--header-scale));
 
     &-wrapp{
-      position: relative;
-      top: calc(-0.5rem * var(--header-scale));
       font-size: calc(12rem * var(--header-scale));
       letter-spacing: 0.02em;
       color: var(--c-main);
       gap: calc(20rem * var(--header-scale));
-      position: relative;
-      top: calc(0rem * var(--header-scale));
 
       @include flex-sb-c;
 
