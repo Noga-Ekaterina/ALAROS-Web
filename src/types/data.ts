@@ -68,6 +68,8 @@ export interface IFooter{
   mobileColumn: number
   socials: string
   socialsColumn: number
+  privacyPolicy: string
+  privacyPolicyColumn: number
 }
 
 export interface IMenuSection {

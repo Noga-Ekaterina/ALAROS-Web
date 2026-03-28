@@ -29,6 +29,10 @@ const Footer = async () => {
         <div className="container footer__container">
           <div className="footer__item footer__item--1 footer__item--mobile-visible footer__item--mobile-visible-2 footer__navigation">
             <HtmlProcessing html={data.navigationColumn}/>
+
+            <div className='footer__policy footer__policy--mobile-visible'>
+              <HtmlProcessing html={data.privacyPolicy}/>
+            </div>
           </div>
           {data.columns.map(({text}, index) => (
               <div
@@ -40,10 +44,17 @@ const Footer = async () => {
                           && `footer__item--mobile-visible footer__item--mobile-visible-1`
                   )}
               >
-                <HtmlProcessing html={text}/>
+                <div className="footer__text">
+                  <HtmlProcessing html={text}/>
+                </div>
                 {index + 1 === data.socialsColumn && (
                     <div className='footer__socials'>
                       <HtmlProcessing html={data.socials}/>
+                    </div>
+                )}
+                {index + 1 === data.privacyPolicyColumn && (
+                    <div className='footer__policy'>
+                      <HtmlProcessing html={data.privacyPolicy}/>
                     </div>
                 )}
               </div>
