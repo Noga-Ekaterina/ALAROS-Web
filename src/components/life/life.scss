@@ -21,17 +21,16 @@
   }
 
   &__signature{
-    width: 482rem;
+    @include adaptive((
+      width: (
+        default: 482rem,
+        xxl: 1098,
+        md: 348,
+        sm: 100%
+      )
+    ));
 
     @include body-font;
-
-    @include xxl{
-      width: vu(1098, xxl);
-    }
-
-    @include sm{
-      width: 100%;
-    }
   }
 
   &__progress{
