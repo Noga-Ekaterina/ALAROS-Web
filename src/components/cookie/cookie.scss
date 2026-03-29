@@ -16,8 +16,9 @@
   }
 
   @include sm{
+    bottom: 11rem;
     flex-direction: column;
-    padding: 7rem 8rem;
+    padding: 12rem 8rem 7rem;
     gap: 28rem;
     transform: scale(1);
   }
