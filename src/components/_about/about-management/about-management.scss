@@ -117,6 +117,12 @@
       gap: 1.3em;
     }
 
+    .top{
+      @include sm {
+        width: 158rem;
+      }
+    }
+
     h3{
       line-height: 1.18em;
       font-weight: 500;
@@ -157,6 +163,10 @@
   &__details{
     display: flex;
     flex-direction: column-reverse;
+
+    @include sm {
+      width: 170rem;
+    }
   }
 
 
@@ -220,7 +230,7 @@
     &.open{
 
       .lenis.lenis-smooth {
-        max-height: 277rem;
+        max-height: 274rem;
       }
     }
   }
