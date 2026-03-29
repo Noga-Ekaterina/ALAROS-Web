@@ -74,6 +74,10 @@
       @include xxl{
         font-size: vu(22, xxl);
       }
+
+      &:last-child{
+        line-height: 1.3em;
+      }
     }
   }
 }

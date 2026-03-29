@@ -46,6 +46,7 @@
   &__name{
     color: var(--c-dark);
     font-weight: 500;
+    line-height: 1.1;
 
     @include standard-font-big;
 
@@ -58,6 +59,7 @@
     color: var(--c-grey-dark);
     font-weight: 300;
     padding-bottom: 9rem;
+    line-height: 1.3;
 
     @include xxl{
       padding-bottom: vu(28, xxl);

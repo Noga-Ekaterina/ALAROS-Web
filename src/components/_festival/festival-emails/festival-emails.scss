@@ -43,7 +43,11 @@
       color: var(--c-grey-dark);
       font-weight: 300;
 
-      @include standard-font-small
+      @include standard-font-small;
+
+      &:last-child{
+        line-height: 1.3em;
+      }
     }
   }
 }

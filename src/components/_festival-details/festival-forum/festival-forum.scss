@@ -32,6 +32,7 @@
 
   .life{
     background: none;
+    padding-block: 40rem 15rem;
   }
 
   &__descriptions{
@@ -83,7 +84,7 @@
         }
 
         @include sm{
-          grid-column: 1/-2;
+          grid-column: 2/-1;
           padding-right: 0;
         }
       }
@@ -96,7 +97,7 @@
         }
 
         @include sm{
-          grid-column: 1/-2;
+          grid-column: 2/-1;
         }
       }
     }
@@ -206,6 +207,8 @@
 
     p:last-child {
       &, *{
+        color: var(--c-grey-dark);
+
         @include standard-font-small;
 
         @include xxl {
@@ -227,7 +230,7 @@
       grid-template-columns: repeat(12, 1fr);
       padding-inline: var(--p-x);
       background: linear-gradient(-90deg, #F8F8F8 0%, #FFF 66.82%);
-      padding-block: 18rem;
+      padding-block: 21rem 18rem;
 
       @include body-font();
 
@@ -283,7 +286,7 @@
         h3{
           @include sm {
             margin-bottom: 30rem;
-            width: 83.33;
+            width: 83.33%;
           }
         }
       }
@@ -336,8 +339,10 @@
       p {
         color: var(--c-grey-dark);
         font-weight: 300;
+        line-height: 1.3em;
 
         &:first-child {
+          line-height: normal;
           padding-bottom: 9rem;
 
           @include md {

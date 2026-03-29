@@ -96,6 +96,7 @@
     @include standard-font-big;
 
     @include sm{
+      font-size: 15rem;
       font-weight: 400;
       margin-bottom: 20rem;
     }

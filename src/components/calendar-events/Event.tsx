@@ -13,7 +13,7 @@ const Event = ({ event }: Props) => {
   const descRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const [isTruncated, setIsTruncated] = useState(false);
-  const lineHeight=1.2;
+  const lineHeight=1.3;
   const [lastLineWidth, setLastLineWidth] = useState(0);
   const dateStart=formaterDate(event.start)
   const dateEnd=formaterDate(event.end)

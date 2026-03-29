@@ -310,7 +310,7 @@
       --gap: calc(var(--f-content)*0.7);
       --lines: 2;
 
-      width: 75%;
+      width: 80%;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
@@ -339,7 +339,7 @@
     align-self: flex-end;
     font-weight: 300;
     margin-top: -1.25em;
-    max-height: 4.8em;
+    max-height: calc(var(--line-height) * 4);
     overflow: hidden;
     position: relative;
     padding-right: 0.9em;
@@ -350,8 +350,9 @@
             width: (default: 193rem, xxl: 420, xl: 316, sm: 100%),
     ));
 
-    *{
+    &,*{
       color: var(--c-grey-dark);
+      line-height: var(--line-height);
     }
 
     /* Многоточие */
