@@ -55,7 +55,11 @@
 
       @include adaptive((
               margin-block: (default: 80rem, xl: 136,)
-      ))
+      ));
+
+      @include sm {
+        margin-block: 80rem 40rem;
+      }
     }
   }
 

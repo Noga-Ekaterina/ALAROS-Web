@@ -16,6 +16,10 @@
   &__session{
     padding-block: 41rem 65rem;
 
+    @include sm {
+      padding-block: 26rem 30rem;
+    }
+
     &:first-child{
       background: linear-gradient(180deg, var(--c-grey-bg-light) 0%, rgba(239, 239, 239, 0) 230rem);
 

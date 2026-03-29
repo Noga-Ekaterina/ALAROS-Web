@@ -32,7 +32,7 @@
 
     &__slide {
       @include adaptive((
-              --h: (default: 45rem, xl: 72, xxl: 97, sm: 36)
+              --h: (default: 45rem, xl: 72, xxl: 97, sm: 50)
       ));
     }
   }
