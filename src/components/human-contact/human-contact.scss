@@ -49,10 +49,6 @@
     line-height: 1.1;
 
     @include standard-font-big;
-
-    @include sm{
-      font-size: 15rem;
-    }
   }
 
   &__job-title{

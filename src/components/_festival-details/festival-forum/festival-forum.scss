@@ -277,7 +277,7 @@
 
         @include sm{
           background: var(--c-grey-bg-light-2);
-          padding-block: 26rem 70rem;
+          padding-block: 26rem 30rem;
           padding-inline: var(--p-x);
           grid-column: 1/-1;
           margin-top: 34rem;
@@ -321,7 +321,6 @@
     .festival-forum__block-text {
       gap: 15rem;
       justify-content: end;
-      height: 70rem;
       line-height: 1.1em;
 
       @include adaptive((
