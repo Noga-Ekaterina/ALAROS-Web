@@ -15,6 +15,10 @@
 
     &:first-child{
       background: var(--c-green-text);
+
+      .link-block__title{
+        top: 0;
+      }
     }
   }
 }
