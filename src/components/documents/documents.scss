@@ -17,7 +17,11 @@
       background: var(--c-green-text);
 
       .link-block__title{
-        top: 0;
+        top: 0.2rem;
+        
+        @include sm{
+          top: 0;
+        }
       }
     }
   }
