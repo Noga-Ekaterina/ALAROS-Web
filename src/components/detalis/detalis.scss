@@ -61,7 +61,7 @@
 
       >*:first-child{
         position: relative;
-        top: -0.4rem;
+        top: 0;
         line-height: 1.5em;
 
         @extend %text-overflow-ellipsis;
