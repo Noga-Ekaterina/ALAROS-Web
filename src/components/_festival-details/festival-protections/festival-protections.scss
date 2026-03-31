@@ -66,28 +66,22 @@
     }
 
     &--opened{
-      table{
-        overflow-x: auto;
-      }
-
-      tbody tr:hover{
+      .festival-protections__body .festival-protections__row:hover{
         background: var(--c-red);
 
-        *, .red, .red *{
+        *, .festival-protections__cell--red{
           color: #fff !important;
         }
       }
     }
   }
 
-  table{
+  &__table{
     min-width: 734rem;
+  }
 
-    >*{
-      display: block;
-    }
-
-    *{
+  &__table,
+  &__table *{
       font-weight: 500;
       @include adaptive((
               font-size: (
@@ -98,33 +92,24 @@
                       sm: 13
               )
       ));
-    }
-
-
-    thead{
-      position: sticky;
-      top: 0;
-      margin-bottom: 2em;
-    }
-
-    tbody{
-      display: flex;
-      flex-direction: column;
-      gap: 0.08em;
-
-      &::-webkit-scrollbar { width: 0 !important }
-    }
-
-    tr{
-      line-height: 1.5em;
-    }
   }
 
-  tr{
+  &__head{
+    margin-block: 10rem 2em;
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+    gap: 0.08em;
+
+    &::-webkit-scrollbar { width: 0 !important }
+  }
+
+  &__row{
     min-width: 734rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr) 5fr 3fr;
-    align-items: baseline;
     gap: 6rem;
     transition: 0.3s;
     padding-block: 3rem;
@@ -139,46 +124,55 @@
     }
   }
 
-  td, th{
+  &__cell{
     overflow: hidden;
-    &, *{
-      text-align: left;
-      line-height: 1.5em;
-      height: 1.5em;
+    text-align: left;
+    line-height: 1.5em;
+    height: 1.5em;
 
-      @extend %text-overflow-ellipsis
+    @extend %text-overflow-ellipsis;
+
+    .festival-protections__body &{
+      transform: translateX(0.5rem);
     }
   }
 
-  th, th *{
+  &__cell--head{
     color: var(--c-grey);
 
     @include standard-font-small;
   }
 
-  td{
-    &:first-child {
-      &, * {
-        font-weight: 600;
+  &__cell--red{
+    color: var(--c-red);
+  }
 
-        @include sm {
-          font-weight: 500;
-        }
+  &__row > &__cell{
+    &:first-child {
+      font-weight: 600;
+
+      @include sm {
+        font-weight: 500;
       }
     }
-    &:nth-child(2) {
-      &, * {
-        text-align: center;
 
-        @include xxl {
-          text-align: left;
-        }
+    &:nth-child(2) {
+      text-align: center;
+
+      @include xxl {
+        text-align: left;
       }
     }
   }
 
+  &__row--break{
+
+    *{
+      color: var(--c-grey);
+    }
+  }
+
   .lenis {
-    max-height: 316rem;
-    margin-top: 18rem;
+    max-height: 275rem;
   }
 }
