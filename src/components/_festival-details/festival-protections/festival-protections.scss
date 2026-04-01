@@ -72,6 +72,10 @@
         *, .festival-protections__cell--red{
           color: #fff !important;
         }
+
+        .festival-protections__hover-marquee-elipsis{
+          background: var(--c-red);
+        }
       }
     }
   }
@@ -83,6 +87,8 @@
   &__table,
   &__table *{
       font-weight: 500;
+      font-variant-numeric: lining-nums tabular-nums;
+
       @include adaptive((
               font-size: (
                       default: 12rem,
@@ -130,8 +136,6 @@
     line-height: 1.5em;
     height: 1.5em;
 
-    @extend %text-overflow-ellipsis;
-
     .festival-protections__body &{
       transform: translateX(0.5rem);
     }
@@ -139,6 +143,8 @@
 
   &__cell--head{
     color: var(--c-grey);
+
+    @extend %text-overflow-ellipsis;
 
     @include standard-font-small;
   }
@@ -162,6 +168,36 @@
       @include xxl {
         text-align: left;
       }
+    }
+  }
+
+  &__hover-marquee{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-elipsis{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      transition: 0.3s;
+    }
+  }
+
+  &__hover-marquee-text{
+    display: block;
+    text-wrap: nowrap;
+    width: fit-content;
+  }
+
+  &__hover-marquee-track{
+    min-width: 100%;
+
+    .festival-protections__hover-marquee-text{
+      width: auto;
+      padding-right: 24rem;
+      white-space: nowrap;
     }
   }
 

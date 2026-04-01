@@ -9,6 +9,7 @@ import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import SmoothScrolling from "@/app/SmoothScrolling";
 import HorizontalScrollSection from "@/app/HorizontalScrollSection";
 import cn from "classnames";
+import HoverMarquee from "./HoverMarquee";
 
 interface Props {
   title: string
@@ -59,19 +60,29 @@ const FestivalProtections = ({title, protectionsDays, protectionsRightSignature,
                                         "festival-protections__row--break": protection.isBreak
                                       })}
                                   >
-                                    <div className="festival-protections__cell">{protection.time}</div>
+                                    <div className="festival-protections__cell">
+                                      <HoverMarquee text={protection.time}/>
+                                    </div>
                                     {
                                       protection.isBreak?
-                                          <div className="festival-protections__cell">{protection.breakTitle}</div>
+                                          <div className="festival-protections__cell">
+                                            {protection.breakTitle}
+                                          </div>
                                       :
                                           <>
                                             <div className="festival-protections__cell festival-protections__cell--red">
                                               {protection.isOnline &&"online"}
                                             </div>
                                             <div className="festival-protections__cell">{protection.number}</div>
-                                            <div className="festival-protections__cell">{protection.nomination}</div>
-                                            <div className="festival-protections__cell">{protection.winner}</div>
-                                            <div className="festival-protections__cell">{protection.name}</div>
+                                            <div className="festival-protections__cell">
+                                              <HoverMarquee text={protection.nomination}/>
+                                            </div>
+                                            <div className="festival-protections__cell">
+                                              <HoverMarquee text={protection.winner}/>
+                                            </div>
+                                            <div className="festival-protections__cell">
+                                              <HoverMarquee text={protection.name}/>
+                                            </div>
                                           </>
                                     }
                                   </div>
