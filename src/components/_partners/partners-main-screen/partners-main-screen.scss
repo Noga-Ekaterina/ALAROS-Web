@@ -9,7 +9,7 @@
       width: 512rem;
 
       @include sm{
-        height: 42.5%;
+        height: 50%;
       }
     }
   }
@@ -24,7 +24,7 @@
     padding-inline: var(--p-x) 10rem;
 
     @include sm{
-      height: 57.5%;
+      height: 50%;
     }
 
     *{

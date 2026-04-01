@@ -14,7 +14,7 @@
     position: relative;
 
     @include sm{
-      height: 65%;
+      height: 50%;
     }
   }
 
@@ -34,7 +34,7 @@
     overflow: hidden;
 
     @include sm{
-      height: 35%;
+      height: 50%;
     }
 
     &::before{

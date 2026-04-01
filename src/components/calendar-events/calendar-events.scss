@@ -7,6 +7,7 @@
 
   @include sm{
     padding-top: 38rem;
+    margin-bottom: 0;
   }
 
 
@@ -19,7 +20,7 @@
 
     @include sm{
       top: auto;
-      bottom: -80rem;
+      bottom: -40rem;
       right: auto;
       left: -250rem;
       width: 900rem;
@@ -43,6 +44,10 @@
 
     &-slider{
       padding-bottom: 48rem;
+
+      @include sm {
+        padding-bottom: 30rem;
+      }
     }
   }
 

@@ -4,11 +4,20 @@
   padding-block: 40rem 32rem;
   position: relative;
 
+  @include sm {
+  padding-block: 10rem 32rem;
+  }
+
   .titles-block{
     margin-bottom: 50rem;
 
     @include lg{
       margin-bottom: 78rem;
+    }
+
+    @include sm {
+      width: 245rem;
+      margin-bottom: 40rem;
     }
   }
 
