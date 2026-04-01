@@ -37,7 +37,7 @@
 
     *{
       @include sm{
-        font-size: 15rem;
+        font-size: 20rem;
       }
     }
   }
@@ -46,14 +46,15 @@
     display: flex;
   }
   &__arrow{
-    width: 8rem;
+    width: 12rem;
 
     svg{
       width: auto;
-      height: 8rem;
+      height: 12rem;
       transform: rotate(-90deg);
       position: relative;
-      left: 1.4rem;
+      left: 2.5rem;
+      top: 3rem;
 
       *{
         stroke: currentColor;
