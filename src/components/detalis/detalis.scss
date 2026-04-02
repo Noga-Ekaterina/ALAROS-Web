@@ -71,6 +71,12 @@
         }
       }
 
+      .detalis__right-element *{
+        @include sm{
+          font-size: 20rem;
+        }
+      }
+
       .detalis__icon{
         position: relative;
         top: 2rem;

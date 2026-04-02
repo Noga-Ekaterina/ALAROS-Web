@@ -10,6 +10,10 @@
     padding: vu(19, xxl) 15rem vu(24.2, xxl) 12rem;
   }
 
+  @include sm {
+    align-items: center;
+  }
+
   *{
     color: #ffffff;
     font-weight: 300;
@@ -54,7 +58,7 @@
       transform: rotate(-90deg);
       position: relative;
       left: 2.5rem;
-      top: 3rem;
+      top: 1.5rem;
 
       *{
         stroke: currentColor;
