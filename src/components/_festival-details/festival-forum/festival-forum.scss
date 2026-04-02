@@ -130,25 +130,6 @@
     @include heading3
   }
 
-  ul li{
-    list-style: none;
-    display: flex;
-    align-items: start;
-    position: relative;
-    left: -0.3em;
-
-    &:before{
-      content: '';
-      width: 0.3em;
-      aspect-ratio: 1/1;
-      flex-shrink: 0;
-      position: relative;
-      top: 0.5em;
-      left: -0.9em;
-      background: var(--c-red);
-    }
-  }
-
   strong{
     font-weight: 600;
   }

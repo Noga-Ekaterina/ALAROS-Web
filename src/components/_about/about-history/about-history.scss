@@ -8,25 +8,6 @@
     font-weight: 600;
   }
 
-  ul li{
-    list-style: none;
-    display: flex;
-    align-items: start;
-    position: relative;
-    left: -0.25em;
-
-    &:before{
-      content: '';
-      width: 0.25em;
-      aspect-ratio: 1/1;
-      flex-shrink: 0;
-      position: relative;
-      top: 0.5em;
-      left: -0.9em;
-      background: var(--c-red);
-    }
-  }
-
   &__container{
     display: flex;
     justify-content: space-between;
@@ -229,7 +210,7 @@
         width: 100%;
       }
 
-      >p, ul{
+      >p, ul, ol{
         @include adaptive((
                 width: (default: 540rem, xxl: 1204, xl: 1058, sm: 100%)
         ))
