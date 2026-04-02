@@ -1,11 +1,38 @@
 @import "@/app/styles/mixins-and-extends";
 
 .festival-projects{
-  padding-block: 25rem 50rem;
+  padding-bottom: 50rem;
   background: var(--c-grey-bg-light);
+
+  @include sm{
+    padding-bottom: 31rem;
+  }
+
+  &__bg{
+    height: 8rem;
+    background: #fff;
+    margin-bottom: 25rem;
+  }
 
   .titles-block{
     margin-bottom: 25rem;
+  }
+
+  &__section {
+    &--mobile {
+      display: none;
+
+      @include sm {
+        display: block;
+        margin-top: 32rem;
+      }
+    }
+
+    &--desktop {
+      @include sm {
+        display: none;
+      }
+    }
   }
 
   &__slide{

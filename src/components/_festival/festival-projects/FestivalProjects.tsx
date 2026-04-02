@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import "./festival-projects.scss"
-import {Swiper, SwiperSlide} from "swiper/react";
+import {SwiperSlide} from "swiper/react";
 import Project from "@/components/_projects/project/Project";
 import BigSlider from "../../big-slider/BigSlider";
 import HtmlProcessing from "../../HtmlProcessing";
@@ -19,10 +19,11 @@ const FestivalProjects = ({pageData}:Props) => {
 
   return (
       <div className="festival-projects" id="projects">
+        <div className="festival-projects__bg"/>
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title titles-block__title--small">{nonBreakingSpaces(pageData.projectsTitle)}</h2>
-            <div className="titles-block__section">
+            <div className="titles-block__section festival-projects__section festival-projects__section--desktop">
               <HtmlProcessing html={pageData.projectsRightSignature}/>
             </div>
           </div>
@@ -36,6 +37,10 @@ const FestivalProjects = ({pageData}:Props) => {
               ))
             }
           </BigSlider>
+
+          <div className="titles-block__section festival-projects__section festival-projects__section--mobile">
+            <HtmlProcessing html={pageData.projectsRightSignature}/>
+          </div>
         </div>
       </div>
   );
