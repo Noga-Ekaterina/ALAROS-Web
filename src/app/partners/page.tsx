@@ -1,14 +1,11 @@
 import React from 'react';
+import PartnersMainScreen from "@/components/_partners/partners-main-screen/PartnersMainScreen";
 import AnimationPage from "@/app/AnimationPage";
-import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import type {Metadata} from "next";
 import {domain} from "@/variables";
 import {revalidateTag, unstable_cache} from "next/cache";
 import {fetchSingle} from "@/utils/strapFetch";
 import {IPartners} from "@/types/data";
-import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
-import PartnersMainScreen from "@/components/_partners/partners-main-screen/PartnersMainScreen";
-import Documents from "@/components/documents/Documents";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
 import PartnersClub from "@/components/_partners/partners-club/PartnersClub";
 import PartnersContacts from "@/components/_partners/partners-contacts/PartnersContacts";
@@ -52,5 +49,7 @@ export const metadata: Metadata = {
     canonical: `${domain}/partners`
   }
 };
+
+export const dynamic = "force-dynamic"
 
 export default MyComponent;
