@@ -39,6 +39,10 @@
     position: relative;
     top: 0.5rem;
 
+    @include sm{
+      top: -0.4rem;
+    }
+
     *{
       @include sm{
         font-size: 20rem;
