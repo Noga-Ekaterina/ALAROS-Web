@@ -63,6 +63,9 @@
     height: var(--height);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.51%, rgba(0, 0, 0, 0.70) 100%);
 
+    @include xxl {
+      --height: 202rem;
+    }
 
     @include sm{
       --height: 179rem;
