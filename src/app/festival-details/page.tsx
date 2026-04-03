@@ -43,7 +43,11 @@ const Page = async ({searchParams}:Props) => {
                 {data.isShowFestivalProgram && <FestivalProgram pageData={data} festivalProgram={data.festivalProgram}/>}
                 <FestivalBusinessProgram pageData={data}/>
                 {data.isShowProtectionsDays && <FestivalProtections title={data.protectionsTitle} protectionsRightSignature={data.protectionsRightSignature} protectionsDays={data.protectionsDays} protectionsColumns={data.protectionsColumns}/>}
-                {data.isShowInfopartners && <InfopartnersSlider />}
+                {data.isShowInfopartners && <InfopartnersSlider
+                  infopartners={data.infopartners}
+                  infopartnersTitle={data.infopartnersTitle}
+                  infopartnersText={data.infopartnersText}
+                />}
                 {data.isShowForum && <FestivalForum pageData={data}/>}
               </>
               :

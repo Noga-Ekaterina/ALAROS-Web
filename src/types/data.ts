@@ -109,8 +109,8 @@ export interface IPartnersSlider {
 }
 
 export interface IInfopartnersSlider {
-  title: string;
-  text: string
+  infopartnersTitle: string;
+  infopartnersText: string
   infopartners: IPartner[]
 }
 
@@ -275,7 +275,7 @@ export interface IBusinessProgramDay {
   sections: IBusinessProgramSession[]
 }
 
-export interface IFestivalDetails{
+export interface IFestivalDetails extends IInfopartnersSlider{
   mainScreenLeftSection: string
   mainScreenPhoto: IImage
   isShowAllContent: boolean
@@ -495,7 +495,7 @@ export interface IMainScreenImage{
   link: string
 }
 
-export interface IPartners{
+export interface IPartners extends IInfopartnersSlider{
   mainScreenLeftSection: string
   mainScreenImages: IMainScreenImage[]
 
@@ -517,8 +517,10 @@ export interface IPartners{
   life: ILifeItem[]
 
   isShowInfopartners: boolean
-  
+
   eventsTitle: string
   events: IHtml[]
   isShowEvents: boolean
+
+  isShowPartners: boolean
 }

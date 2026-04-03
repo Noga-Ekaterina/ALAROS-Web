@@ -36,9 +36,13 @@ const MyComponent = async ({searchParams}: Props) => {
         <PartnersClub pageData={pageData}/>
         <PartnersContacts pageData={pageData}/>
         <Life title={pageData.lifeTitle} signatures={pageData.lifeSignatures} life={pageData.life}/>
-        {pageData.isShowInfopartners && <InfopartnersSlider />}
+        {pageData.isShowInfopartners && <InfopartnersSlider
+          infopartners={pageData.infopartners}
+          infopartnersTitle={pageData.infopartnersTitle}
+          infopartnersText={pageData.infopartnersText}
+        />}
         {pageData.isShowEvents && <PartnersEvents pageData={pageData}/>}
-        <PartnersSlider/>
+        {pageData.isShowPartners && <PartnersSlider/>}
       </AnimationPage>
   );
 };
