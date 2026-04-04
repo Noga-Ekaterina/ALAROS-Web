@@ -11,6 +11,7 @@ interface Props{
 const PartnersEvents = ({pageData}: Props) => {
   return (
       <div className="partners-events" id="events">
+        <img src='/Assets/Pages/Partners/3.svg' className="partners-events__bg"/>
         <div className="container">
           <div className="titles-block">
             <h2 className="titles-block__title">{nonBreakingSpaces(pageData.eventsTitle)}</h2>

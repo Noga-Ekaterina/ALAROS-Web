@@ -3,16 +3,37 @@
 .partners-events{
   background: #fff;
   padding-bottom: 47rem;
+  position: relative;
+  overflow: hidden;
+
+  >*{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bg{
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: none;
+
+    @include sm {
+      display: block;
+    }
+  }
 
   &__text-wrap{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 70rem;
-    row-gap: 25rem;
+    row-gap: 20rem;
 
     @include sm{
       flex-direction: column;
+      margin-top: 40rem;
     }
   }
 
@@ -22,7 +43,7 @@
 
     @include adaptive((
             max-width: (default: 237rem, xxl: 588, xl: 429, md: 170, sm: 220),
-            gap: (default: 20rem, xl: 30)
+            gap: (default: 20rem, xl: 30, sm: 11)
     ));
 
     @include sm{
@@ -35,11 +56,6 @@
       &:nth-child(4n + 3),
       &:nth-child(4n + 4) {
         align-self: end;
-      }
-
-      &:nth-child(4n + 2),
-      &:nth-child(4n + 4){
-        padding-top: 20rem;
       }
     }
 
