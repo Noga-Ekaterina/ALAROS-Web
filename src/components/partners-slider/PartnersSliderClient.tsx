@@ -1,10 +1,9 @@
 'use client'
-import React, {FC, useEffect, useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import "./partners-slider.scss"
 import {Swiper, SwiperRef, SwiperSlide} from "swiper/react";
 import {SwiperNavigation} from "../../utils/SwiperNavigation";
 import {IPartner} from "@/types/data";
-import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import {Autoplay} from "swiper/modules";
 import {useMediaQuery} from "react-responsive";
 import {useGetRem} from "@/hoocs/useGetRem";
@@ -43,6 +42,7 @@ const PartnersSliderClient = ({partners, slidesPerView=6, slidesPerViewMobile=2,
               autoplay={{delay: 2000, disableOnInteraction: false}}
               loop={true}
               modules={[Autoplay]}
+              lazyPreloadPrevNext={1}
               className="partners-slider__swiper"
               ref={swiperRef}
           >
