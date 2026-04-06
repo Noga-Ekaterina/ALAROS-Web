@@ -48,6 +48,7 @@ const BigSlider = (props: IProps) => {
             spaceBetween={props.spaceBetween || (bigDesktopScreen? 8:10)*rem}
             ref={swiperRef}
             onActiveIndexChange={togleSwiper}
+            lazyPreloadPrevNext={1}
         >
           {props.children}
         </Swiper>

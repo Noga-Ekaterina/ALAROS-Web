@@ -166,10 +166,14 @@ const ProjectImagesSlider = ({project, scale, handleScale}:Props) => {
           }
           {
             project.images.map((image, index) => (
-                <SwiperSlide key={index} onClick={()=> {
-                  setActiveImage(index)
-                  handleScale(1.5)
-                }}>
+                <SwiperSlide 
+                  key={index} 
+                  onClick={()=> {
+                    setActiveImage(index)
+                    handleScale(1.5)
+                  }}
+                  style={{aspectRatio: `${image.width}/${image.height}`}}
+                >
                   <Image image={image}/>
                 </SwiperSlide>
             ))

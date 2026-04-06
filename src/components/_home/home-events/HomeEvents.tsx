@@ -33,6 +33,7 @@ const HomeEvents = ({homeData}:Props) => {
               autoplay={{delay:3000, disableOnInteraction: false}}
               pagination={{clickable: true, el:'.home-events__slider-pagination', bulletClass: 'home-events__slider-pagination-item', bulletActiveClass: 'home-events__slider-pagination-item--active'}}
               loop={true}
+              lazyPreloadPrevNext={1}
           >
             {
               (mobileScreen && isClient)?
