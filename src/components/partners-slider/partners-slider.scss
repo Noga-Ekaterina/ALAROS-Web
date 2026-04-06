@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 
   @include adaptive((
     margin-bottom: (default: 9rem, xxl: 20, xl: 15)

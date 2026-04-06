@@ -42,7 +42,11 @@ const MyComponent = async ({searchParams}: Props) => {
           infopartnersText={pageData.infopartnersText}
         />}
         {pageData.isShowEvents && <PartnersEvents pageData={pageData}/>}
-        {pageData.isShowPartners && <PartnersSlider/>}
+        {pageData.isShowPartners && 
+          <div style={{background:"#fff", overflow:"hidden"}}>
+            <PartnersSlider/>
+          </div>
+        }
       </AnimationPage>
   );
 };

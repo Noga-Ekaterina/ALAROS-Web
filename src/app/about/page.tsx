@@ -72,7 +72,9 @@ const MyComponent = async ({searchParams}:Props) => {
         <Life title={pageData.lifeTitle} signatures={pageData.lifeSignature} life={pageData.life}/>
         <AboutPress pageData={pageData}/>
         <AboutMap pageData={pageData}/>
-        <PartnersSlider/>
+        <div style={{background:"#fff", overflow:"hidden"}}>
+          <PartnersSlider/>
+        </div>
       </AnimationPage>
   );
 };

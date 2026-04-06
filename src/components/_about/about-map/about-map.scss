@@ -1,12 +1,11 @@
 @import "@/app/styles/mixins-and-extends";
 
 .about-map {
-  padding-top: 42rem;
+  padding-top: 92rem;
   padding-bottom: 35rem;
   position: relative;
   z-index: 1;
   background: #fff;
-  overflow: hidden;
 
   &__line {
     position: absolute;
@@ -14,7 +13,7 @@
     width: 100%;
     height: auto;
     left: 0;
-    bottom: -100rem;
+    bottom: -160rem;
     object-fit: contain;
   }
 
@@ -88,7 +87,7 @@
       height: 716rem;
       width: auto;
       left: -270rem;
-      bottom: 0;
+      bottom: -110rem;
     }
 
     &__top {

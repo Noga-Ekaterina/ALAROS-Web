@@ -1,8 +1,9 @@
 @import "@/app/styles/mixins-and-extends";
 
 .about-press{
-  padding-bottom: 50rem;
   background: #fff;
+  position: relative;
+  z-index: 2;
 
   .titles-block{
     margin-bottom: 35rem;
