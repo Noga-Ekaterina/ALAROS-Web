@@ -18,10 +18,15 @@
 
       .link-block__title{
         top: 0.4rem;
-        
+
         @include sm{
-          top: 0;
+          top: 0.8rem;
         }
+      }
+
+      .link-block__link{
+        top:1.2rem;
+
       }
     }
   }
