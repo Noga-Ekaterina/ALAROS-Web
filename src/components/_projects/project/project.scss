@@ -8,7 +8,7 @@
   --p-scale: 1;
 
   @include sm {
-    --p-scale: 0.66;
+    --p-scale: 0.8;
   }
 
   
@@ -86,14 +86,29 @@
       gap: 8rem;
       padding: calc(15rem * var(--p-scale)) calc(16rem * var(--p-scale));
       min-height: var(--height);
+
+      @include xxl {
+        gap: 5rem;
+      }
+      
+      @include sm {
+        gap: 6rem;
+      }
     }
   }
 
   &__winner{
     font-weight: 400;
-    width: 156rem;
 
     @include standard-font-small;
+    
+    @include md {
+      font-weight: 300;
+    }
+
+    @include sm {
+      font-weight: 400;
+    }
   }
 
   &__nomination{
