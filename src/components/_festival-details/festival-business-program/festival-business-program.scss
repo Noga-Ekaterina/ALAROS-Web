@@ -73,14 +73,8 @@
     }
 
     h3{
-      @include title-small-font2;
-
-      font-weight: 400;
       margin-bottom: 36rem;
-
-      @include sm{
-        font-weight: 500;
-      }
+      @include heading3
     }
   }
 
@@ -94,14 +88,11 @@
   }
 
   &__rolle{
-    font-weight: 400;
     margin-bottom: 36rem;
 
-    @include standard-font-big;
+    @include body-font;
 
     @include sm{
-      font-size: 15rem;
-      font-weight: 400;
       margin-bottom: 20rem;
     }
   }
