@@ -1,10 +1,8 @@
 'use client'
 import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink"
-import { useGetRem } from "@/hoocs/useGetRem"
 import { IProject } from "@/types/data"
 import { nonBreakingSpaces } from "@/utils/nonBreakingSpaces"
 import { useState, useRef, useEffect } from "react"
-import { useMediaQuery } from "react-responsive"
 import { EffectFade, Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
@@ -17,22 +15,44 @@ const HomeMainScreenSlider = ({projects, mainTitle}: Props) => {
   const [diagonalWidth, setDiagonalWidth] = useState(0)
   const [diagonalDeg, setDiagonalDeg] = useState(0)
   const [diagonalRight, setDiagonalRight] = useState(0)
-  const rem= useGetRem()
   const block= useRef<HTMLDivElement>(null)
-  const mobileScreen = useMediaQuery({maxWidth: 660});
-  const mdBoockScreen = useMediaQuery({minWidth: 660.1, minHeight: "80vw"});
+  const timerRef= useRef<NodeJS.Timeout>()
 
   useEffect(() => {
     if (!block.current) return
 
-    const width= block.current.clientWidth/ ((mobileScreen || mdBoockScreen)?1: 2)
-    const height= block.current.clientHeight/2
-    const diagonal= Math.sqrt(Math.pow(width, 2)+Math.pow(height, 2))
+    const fn=()=>{
+      console.log("resize")
+      if (!block.current) return
 
-    setDiagonalWidth(diagonal)
-    setDiagonalDeg(Math.asin(height/diagonal) * (180 / Math.PI)* (mobileScreen? 1: -1))
-    setDiagonalRight((diagonal-width)/2)
-  }, [rem, mobileScreen, mdBoockScreen, block]);
+      if (timerRef.current) {
+        clearTimeout(timerRef.current)
+      }
+  
+      timerRef.current= setTimeout(()=>{
+        if (!block.current) return
+        const mobileScreen = window.matchMedia("(max-width: 660px)").matches;
+        const mdBoockScreen = window.matchMedia("(min-width: 660.1px) and (min-height: 80vw)").matches;
+        const width= block.current.clientWidth/ ((mobileScreen || mdBoockScreen)?1: 2)
+        const height= block.current.clientHeight/2
+        const diagonal= Math.sqrt(Math.pow(width, 2)+Math.pow(height, 2))
+
+        setDiagonalWidth(diagonal)
+        setDiagonalDeg(Math.asin(height/diagonal) * (180 / Math.PI)* (mobileScreen? 1: -1))
+        setDiagonalRight((diagonal-width)/2)
+        timerRef.current= undefined
+      }, 300)
+    }
+
+    fn()
+
+    window.addEventListener("resize", fn)
+
+    return ()=>{
+      window.removeEventListener("resize", fn)
+    }
+
+  }, [block]);
 
   return (
     <div className="home-main-screen__slider-wrapp" ref={block}>
