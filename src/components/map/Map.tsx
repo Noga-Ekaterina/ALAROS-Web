@@ -123,7 +123,7 @@ const GrayMap = ({ coordinates: coordinatesObj, className }: Props) => {
         <YMapDefaultSchemeLayer />
         <YMapDefaultFeaturesLayer />
         <YMapMarker coordinates={center} >
-          <img src='/Assets/Icons/Mark.svg' alt='marker' />
+          <img src='/Assets/Icons/Mark.svg' alt='marker' className="map__marker" />
         </YMapMarker>
       </YMap>
       <ZoomControl onZoomIn={onZoomIn} onZoomOut={onZoomOut} />
