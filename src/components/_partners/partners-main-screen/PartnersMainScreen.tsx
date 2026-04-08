@@ -1,5 +1,4 @@
 import React from 'react';
-import './partners-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
 import {IPartners} from "@/types/data";
 import PartnersMainScreenSlider from "@/components/_partners/partners-main-screen/PartnersMainScreenSlider";

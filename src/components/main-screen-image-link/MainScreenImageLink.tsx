@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import "./main-screen-image-link.scss"
 import {IWithChildren, IWithClass} from "@/types/tehnic";
 import {IImageSize, IMainScreenImage, IMediaSizes, IProject} from "@/types/data";
 import {buildLink} from "@/utils/buildLink";

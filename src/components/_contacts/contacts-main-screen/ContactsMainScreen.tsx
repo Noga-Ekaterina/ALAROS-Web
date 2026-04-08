@@ -1,5 +1,4 @@
 import React from 'react';
-import "./contacts-main-screen.scss"
 import {IContacts} from "@/types/data";
 import HtmlProcessing from "@/components/HtmlProcessing";
 import Image from '@/components/Image';

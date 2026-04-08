@@ -1,5 +1,4 @@
 import React from 'react';
-import './abouts-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
 import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";
 import {IAbout} from "@/types/data";

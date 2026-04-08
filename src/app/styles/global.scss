@@ -271,31 +271,6 @@ h1, h2, h3, h4, h5{
   }
 }
 
-.main-screen{
-  height: calc(#{svh(100, true)} - var(--header-height));
-  width: 100%;
-  max-height: 80vw;
-  display: flex;
-  overflow: hidden;
-
-  @include sm{
-    max-height: unset;
-    flex-direction: column;
-
-    >*{
-      width: 100% !important;
-    }
-  }
-
-  &__bg{
-    position: absolute !important;
-    inset: 5rem;
-    z-index: 1 !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
 .titles-block{
   display: flex;
   justify-content: space-between;
@@ -416,3 +391,4 @@ h1, h2, h3, h4, h5{
     }
   }
 }
+@import "@/app/styles/main-screens";

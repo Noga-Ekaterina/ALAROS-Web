@@ -1,5 +1,4 @@
 import React, {} from 'react';
-import "./home-main-screen.scss"
 import 'swiper/css/effect-fade';
 import HtmlProcessing from "../../HtmlProcessing";
 import {IHomeData} from "@/types/data";

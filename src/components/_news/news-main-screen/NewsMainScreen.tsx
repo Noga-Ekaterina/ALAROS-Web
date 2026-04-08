@@ -1,5 +1,4 @@
 import React from 'react';
-import './news-main-screen.scss'
 import {INews} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import MainScreenImageLink from "@/components/main-screen-image-link/MainScreenImageLink";

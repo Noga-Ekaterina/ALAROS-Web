@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-import './festival-details-main-screen.scss'
 import HtmlProcessing from "../../HtmlProcessing";
 import {IFestival, IFestivalDetails} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
