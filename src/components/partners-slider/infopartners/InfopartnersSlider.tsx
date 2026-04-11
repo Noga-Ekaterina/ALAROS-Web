@@ -5,7 +5,7 @@ import {IInfopartnersSlider} from "@/types/data";
 import {nonBreakingSpaces} from "@/utils/nonBreakingSpaces";
 import HtmlProcessing from "@/components/HtmlProcessing";
 
-const InfopartnersSlider =({infopartners, infopartnersTitle: infopartnersTitle, infopartnersText: infopartnersText }: IInfopartnersSlider) => {
+const InfopartnersSlider =({infopartners, infopartnersTitle, infopartnersText }: IInfopartnersSlider) => {
 
   return (
       <div className="infopartners">
