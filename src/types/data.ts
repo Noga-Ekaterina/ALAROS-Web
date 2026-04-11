@@ -24,6 +24,11 @@ export interface IImageFormats  {
   thumbnail?: IImageFormat;
 }
 
+export interface IImagePosition {
+  x: number; // от 0 до 100, где 0 - левый край, 100 - правый край
+  y: number; // от 0 до 100, где 0 - верхний край, 100 - нижний край
+} 
+
 export interface IFile{
   id: number;
   url: string;
@@ -38,6 +43,7 @@ export interface IImage extends IFile{
   width: number;
   height: number;
   formats: null | IImageFormats;
+  focalPoint: null | IImagePosition;
 }
 
 export interface IMediaSizes {

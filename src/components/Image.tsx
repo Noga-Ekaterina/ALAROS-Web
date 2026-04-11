@@ -106,6 +106,9 @@ const Image: React.FC<Props> = ({
       loading={loading}
       onLoad={onLoad}
       onError={onError}
+      style={image.focalPoint ? {
+        objectPosition: `${image.focalPoint.x}% ${image.focalPoint.y}%`
+      } : undefined}
     />
   );
 };
