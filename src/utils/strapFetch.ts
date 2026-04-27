@@ -16,7 +16,7 @@ interface IQury{
   pagination?: {
     page?: number, pageSize?: number
   },
-  sort?: string
+  sort?: string|string[]
 }
 
 export const fetchSingle=async <T>(name: string)=>{

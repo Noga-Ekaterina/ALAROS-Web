@@ -35,7 +35,7 @@ const getProjects=unstable_cache( async (year: undefined| string, nomination: un
 
   const data= await fetchColection<IProject>({
     name: 'projects',
-    sort: "year:desc",
+    sort: ["year:desc", "id:desc"],
     filters,
     pagination:{
       pageSize: 20,
