@@ -26,13 +26,15 @@
     }
   }
 
-  &:hover {
-    > * {
-      color: var(--c-dark);
-    }
+  @include hover {
+    &:hover {
+      > * {
+        color: var(--c-dark);
+      }
 
-    img{
-      transform: scale(1.03);
+      img{
+        transform: scale(1.03);
+      }
     }
   }
 

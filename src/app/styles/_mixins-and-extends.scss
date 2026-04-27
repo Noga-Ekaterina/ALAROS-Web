@@ -256,10 +256,12 @@ $base-widths: (
           --width: (default: 153rem, xxl: 384, xl: 286, md: 109, sm: 170)
   ));
 
-  &:hover{
-    background: var(--c-main);
-    color: #fff;
-    text-decoration: none;
+  @include hover{
+    &:hover{
+      background: var(--c-main);
+      color: #fff;
+      text-decoration: none;
+    }
   }
 
   &:active {
@@ -295,8 +297,10 @@ $base-widths: (
 @mixin hover-scale($scale: 1.2){
   transition: 0.5s;
 
-  &:hover{
-    transform: scale($scale);
+  @include hover{
+    &:hover{
+      transform: scale($scale);
+    }
   }
 
   &:active{

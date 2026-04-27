@@ -10,6 +10,7 @@
     line-height: 1.8em;
     color: #fff;
     font-weight: 200;
+    text-decoration-thickness: 0.05em !important;
 
     @include adaptive((
             font-size: (

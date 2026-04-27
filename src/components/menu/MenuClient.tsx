@@ -110,7 +110,7 @@ const MenuClient = ({data}:Props) => {
                     data.sections.map((section, index)=>(
                         <div
                             key={index}
-                            className={cn("menu__section-link", {"yellow": index===indexActiveSection})}
+                            className={cn("menu__section-link", {"menu__section-link--active": index===indexActiveSection})}
                             onMouseOver={()=> {
                               setIndexActiveSection(index)
                               setActiveSection(section)
@@ -135,7 +135,7 @@ const MenuClient = ({data}:Props) => {
                           activeSection.subsections.map((subsection, index) => (
                               <div
                                   key={index}
-                                  className={cn("menu__subsection-link", {"yellow": isMultiPage && isActiveLink(subsection.text)})}
+                                  className={cn("menu__subsection-link", {"menu__subsection-link--active": isMultiPage && isActiveLink(subsection.text)})}
                                   onClick={togleMenu}
                               >
                                 <HtmlProcessing html={subsection.text}/>
@@ -156,7 +156,7 @@ const MenuClient = ({data}:Props) => {
                           data.additionals.map(({text}, index) => (
                               <div
                                   key={index}
-                                  className={cn("menu__subsection-link", {"yellow": isActiveLink(text)})}
+                                  className={cn("menu__subsection-link", {"menu__subsection-link--active": isActiveLink(text)})}
                                   onClick={togleMenu}
                               >
                                 <HtmlProcessing html={text}/>

@@ -74,6 +74,10 @@
     *{
       color: inherit;
     }
+    
+    &--active{
+      color: var(--c-yellow);
+    }
   }
 
   &__subsection-link{
@@ -90,6 +94,10 @@
     }
 
     a:hover{
+      color: var(--c-yellow);
+    }
+
+    &--active{
       color: var(--c-yellow);
     }
   }

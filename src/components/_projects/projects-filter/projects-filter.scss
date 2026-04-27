@@ -77,8 +77,10 @@
             width: (default: 150rem, xxl: 322, xl: 247, sm: 185)
     ));
 
-    &:hover{
-      background: var(--c-main);
+    @include hover{
+      &:hover{
+        background: var(--c-main);
+      }
     }
 
     &:active{

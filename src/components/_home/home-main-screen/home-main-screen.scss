@@ -195,8 +195,10 @@
                   width: (default: 173rem, xxl: 365, md: 130, md-book: 182, sm: 189)
           ));
 
-          &:hover{
-            background: var(--c-green-text);
+          @include hover{
+            &:hover{
+              background: var(--c-green-text);
+            }
           }
 
           &:active{

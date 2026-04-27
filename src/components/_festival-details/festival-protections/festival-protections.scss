@@ -50,8 +50,10 @@
         font-size: 15rem;
       }
 
-      &:hover{
-        color: #A11E0E;
+      @include hover{
+        &:hover{
+          color: #A11E0E;
+        }
       }
     }
 

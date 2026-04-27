@@ -50,8 +50,10 @@
     background: var(--c-grey-bg-light);
     padding: 0.7em;
 
-    &:hover{
-      background: var(--c-grey-bg)
+    @include hover{
+      &:hover{
+        background: var(--c-grey-bg)
+      }
     }
 
     @mixin standard-font-small{
@@ -69,8 +71,10 @@
       color: #fff;
       background: var(--c-main);
 
-      &:hover{
-        background: var(--c-green-text)
+      @include hover{
+        &:hover{
+          background: var(--c-green-text)
+        }
       }
     }
   }

@@ -41,8 +41,10 @@
       gap: vu(25, xxl);
     }
 
-    &:hover{
-      border-bottom: max(1px, 1rem) solid currentColor;
+    @include hover{
+      &:hover{
+        border-bottom: max(1px, 1rem) solid currentColor;
+      }
     }
 
     &-text{
