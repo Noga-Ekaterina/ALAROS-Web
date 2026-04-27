@@ -9,6 +9,7 @@ import HtmlProcessing from "@/components/HtmlProcessing";
 import {usePathname} from "next/navigation";
 import cn from "classnames";
 import {useHash} from "@/hoocs/useHash";
+import {useLenis} from "@studio-freight/react-lenis";
 
 interface Props{
   data: IMenu
@@ -28,8 +29,11 @@ const MenuClient = ({data}:Props) => {
 
   const {isMenuOpened, togleMenu} = store;
   const isMenuOpenedRef= useRef(isMenuOpened)
+  const interactiveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname= usePathname()
+  const lenis = useLenis()
   const hash= useHash()
+  const [isMenuInteractive, setIsMenuInteractive] = useState(false)
   const [activeSection, setActiveSection] = useState<null | IMenuSection>(null)
   const [indexActiveSection, setIndexActiveSection] = useState<null | number>(null)
   const [isMultiPage, setIsMultiPage] = useState(false)
@@ -75,6 +79,41 @@ const MenuClient = ({data}:Props) => {
     isMenuOpenedRef.current=isMenuOpened
   }, [isMenuOpened]);
 
+  useEffect(() => {
+    if (isMenuOpened) {
+      lenis?.stop()
+    } else {
+      lenis?.start()
+    }
+
+    return () => {
+      lenis?.start()
+    }
+  }, [isMenuOpened, lenis]);
+
+  useEffect(() => {
+    if (interactiveTimerRef.current) {
+      clearTimeout(interactiveTimerRef.current)
+      interactiveTimerRef.current = null
+    }
+
+    setIsMenuInteractive(false)
+
+    if (isMenuOpened) {
+      interactiveTimerRef.current = setTimeout(() => {
+        setIsMenuInteractive(true)
+        interactiveTimerRef.current = null
+      }, 500)
+    }
+
+    return () => {
+      if (interactiveTimerRef.current) {
+        clearTimeout(interactiveTimerRef.current)
+        interactiveTimerRef.current = null
+      }
+    }
+  }, [isMenuOpened]);
+
   const handleEsc = useCallback((event: KeyboardEvent) => {
     if (event.code === 'Escape') {
       if (isMenuOpenedRef.current)
@@ -96,10 +135,11 @@ const MenuClient = ({data}:Props) => {
       <AnimatePresence> {/* Обёртка для анимаций */}
         {isMenuOpened && (
             <motion.div
-                initial={{y: "-100vh", pointerEvents: "none"}}
-                animate={{y: 0, pointerEvents: "auto"}}
-                exit={{y: "-100vh", pointerEvents: "none"}}
+                initial={{y: "-100vh"}}
+                animate={{y: 0}}
+                exit={{y: "-100vh"}}
                 transition={{duration: 0.5, ease: 'easeInOut'}}
+                style={{pointerEvents: isMenuInteractive ? "auto" : "none"}}
                 className="menu"
             >
               <Header isMenuOpened={true}/>
@@ -111,7 +151,7 @@ const MenuClient = ({data}:Props) => {
                         <div
                             key={index}
                             className={cn("menu__section-link", {"menu__section-link--active": index===indexActiveSection})}
-                            onMouseOver={()=> {
+                            onMouseEnter={()=> {
                               setIndexActiveSection(index)
                               setActiveSection(section)
                             }}

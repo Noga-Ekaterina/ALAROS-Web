@@ -51,7 +51,7 @@
   box-sizing: border-box;
   color: var(--c-dark);
   white-space: pre-line;
-  transition: color 0.5s, text-decoration-color 0.5s;
+  transition: text-decoration-color 0.5s;
 }
 
 html{
@@ -169,6 +169,10 @@ button, [type="submit"] {
     pointer-events: none;
     cursor: default;
   }
+}
+
+a, button, [type="submit"], label{
+  transition: color 0.5s, text-decoration-color 0.5s;
 }
 
 input{
