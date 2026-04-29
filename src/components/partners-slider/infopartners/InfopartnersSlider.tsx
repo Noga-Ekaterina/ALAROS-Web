@@ -16,7 +16,7 @@ const InfopartnersSlider =({infopartners, infopartnersTitle, infopartnersText }:
           <div className="infopartners__block-text">
             <HtmlProcessing html={infopartnersText}/>
           </div>
-          <PartnersSliderClient partners={infopartners} slidesPerViewMobile={3} slidesPerView={7} slidesPerViewBigDesktop={8}/>
+          <PartnersSliderClient partners={infopartners} slidesPerViewMobile={3} slidesPerViewDesktop={7} slidesPerViewBigDesktop={8}/>
         </div>
       </div>
   )

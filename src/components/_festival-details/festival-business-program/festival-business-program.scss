@@ -51,28 +51,29 @@
         margin-bottom: 1.3em;
         line-height: 1.3em;
 
-        @include adaptive((
-                font-size: (
-                        default: 11rem,
-                        xxl: 22,
-                        xl: 18,
-                        md: 11,
-                        sm: 13
-                )
-        ));
+        @include body-font;
 
         @include sm{
           width: 100%;
           margin-left: 0;
         }
 
-        + h3, +.festival-business-program__content, + .swiper{
+        +.festival-business-program__content, + .swiper{
           margin-top: 40.3rem;
+        }
+
+        + h3{
+          margin-top: 0;
+
+          @include sm {
+            margin-top: 28rem;
+          }
         }
       }
     }
 
     h3{
+      margin-top: 36px;
       margin-bottom: 36rem;
       @include heading3
     }
@@ -91,6 +92,8 @@
     margin-bottom: 36rem;
 
     @include body-font;
+
+    font-weight: 600;
 
     @include sm{
       margin-bottom: 20rem;

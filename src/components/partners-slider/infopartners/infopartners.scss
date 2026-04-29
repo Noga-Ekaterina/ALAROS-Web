@@ -12,14 +12,20 @@
     background: none;
     padding-left: 0;
     padding-right: 0;
-    margin-block: 8rem 9rem;
+    padding-block: 33rem 27rem;
+    margin-block: 0;
 
     @include adaptive((
             gap: (default: 18rem, xl: 89, xxl: 72, sm: 15)
     ));
 
+    @include xl {
+      margin-block: 0;
+      padding-block: vu(58, xl);
+    }
+
     @include sm{
-      margin-top: 0;
+      margin-block: 0 9rem;
       padding-top: 13rem;
     }
 
@@ -32,7 +38,7 @@
 
     &__slide {
       @include adaptive((
-              --h: (default: 45rem, xl: 72, xxl: 97, sm: 50)
+              --h: (default: 60rem, xl: 72, xxl: 97, sm: 50)
       ));
     }
   }

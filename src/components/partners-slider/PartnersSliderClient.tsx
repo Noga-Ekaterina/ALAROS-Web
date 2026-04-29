@@ -13,13 +13,15 @@ interface Props{
   partners: IPartner[]
   slidesPerView?: number
   slidesPerViewMobile?: number
+  slidesPerViewDesktop?: number
   slidesPerViewBigDesktop?: number
 }
 
-const PartnersSliderClient = ({partners, slidesPerView=6, slidesPerViewMobile=2, slidesPerViewBigDesktop=7}:Props) => {
+const PartnersSliderClient = ({partners, slidesPerView=6, slidesPerViewMobile=2, slidesPerViewDesktop=6, slidesPerViewBigDesktop=7}:Props) => {
   const swiperRef = useRef<SwiperRef>(null);
   const swiperNav= new SwiperNavigation(swiperRef)
   const mobileScreen = useMediaQuery({maxWidth: 660});
+  const desktopScreen = useMediaQuery({minWidth: 1920});
   const bigDesktopScreen = useMediaQuery({minWidth: 2560});
   const rem=useGetRem()
 
@@ -37,7 +39,7 @@ const PartnersSliderClient = ({partners, slidesPerView=6, slidesPerViewMobile=2,
             <img src="/Assets/Icons/arrow.svg" alt=''/>
           </button>
           <Swiper
-              slidesPerView={mobileScreen? slidesPerViewMobile: bigDesktopScreen? slidesPerViewBigDesktop:slidesPerView}
+              slidesPerView={mobileScreen? slidesPerViewMobile: bigDesktopScreen? slidesPerViewBigDesktop: desktopScreen? slidesPerViewDesktop: slidesPerView}
               spaceBetween={15*rem}
               autoplay={{delay: 2000, disableOnInteraction: false}}
               loop={true}
