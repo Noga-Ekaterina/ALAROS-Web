@@ -1,5 +1,6 @@
 'use client'
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {createPortal} from 'react-dom';
 import "./alert.scss"
 import {motion} from "framer-motion";
 
@@ -8,7 +9,17 @@ interface Props{
 }
 
 const Alert = ({message}:Props) => {
-  return (
+  const [portalContainer, setPortalContainer] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setPortalContainer(document.body);
+  }, []);
+
+  if (!portalContainer) {
+    return null;
+  }
+
+  return createPortal(
       <motion.div
           initial={{opacity: 0,}}
           animate={{opacity: 1}}
@@ -17,8 +28,9 @@ const Alert = ({message}:Props) => {
           className="alert"
       >
         {message}
-      </motion.div>
-      );
+      </motion.div>,
+      portalContainer
+  );
 };
 
 export default Alert;
