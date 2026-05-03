@@ -151,16 +151,13 @@
 
   &__main-title{
     padding-left: var(--p-x);
-    width: 340rem;
+    flex: 1 1 0;
+    min-width: 0;
     align-self: start;
-
-    @include xxl{
-      width: vu(579, xxl);
-    }
 
     @include sm{
       width: 100%;
-      flex-shrink: 0;
+      flex: 0 0 100%;
       padding-left: calc(var(--p-x) - 4rem);
     }
   }
