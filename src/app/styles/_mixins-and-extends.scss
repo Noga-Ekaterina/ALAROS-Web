@@ -244,7 +244,9 @@ $base-widths: (
   letter-spacing: 0.01em;
   transition: 0.3s;
   text-decoration: none;
-  border-radius: 0;
+  border-radius: 0 !important;
+  border: none;
+  border-image: none;
 
   @include adaptive((
           font-size: (
@@ -290,7 +292,7 @@ $base-widths: (
 
 %text-overflow-ellipsis{
   overflow: hidden;
-  text-wrap: nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 

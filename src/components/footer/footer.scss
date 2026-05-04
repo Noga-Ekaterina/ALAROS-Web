@@ -6,6 +6,17 @@
   padding-block: 17rem 15rem;
   background: var(--c-main);
 
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: var(--c-main);
+    pointer-events: none;
+  }
+
   *{
     line-height: 1.8em;
     color: #fff;

@@ -174,7 +174,12 @@
 
       .festival-forum__block-text *{
         line-height: 1.3em;
+      }
 
+      h3{
+        @include sm {
+          width: 90%;
+        }
       }
     }
 

@@ -155,13 +155,17 @@ fieldset {
 }
 
 button, [type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
   display: inline-block;
   box-shadow: none;
   background: none;
   border: none;
+  border-radius: 0;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  color: inherit;
   cursor: pointer;
   transition: 0.3s;
 
@@ -176,10 +180,14 @@ a, button, [type="submit"], label{
 }
 
 input{
+  -webkit-appearance: none;
+  appearance: none;
   box-shadow: none;
   background-color: transparent;
   background: none;
   border: none;
+  border-radius: 0;
+  color: inherit;
 
   &:focus{
     border: none;
