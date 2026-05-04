@@ -1,6 +1,6 @@
 'use client'
 
-import React, {JSX, useEffect, useState} from 'react';
+import React, {JSX, ReactNode, useEffect, useState} from 'react';
 import "./link-block.scss"
 import HtmlProcessing from "@/components/HtmlProcessing";
 import parse from "html-react-parser";
@@ -16,9 +16,37 @@ interface Props extends IWithClass{
   mobileIcon?: string|JSX.Element
 }
 
+type LinkElement = React.ReactElement<{children?: ReactNode}>
+
+const findLinkElement = (node: ReactNode): LinkElement | null => {
+  if (Array.isArray(node)) {
+    for (const child of node) {
+      const linkElement = findLinkElement(child)
+
+      if (linkElement) {
+        return linkElement
+      }
+    }
+
+    return null
+  }
+
+  if (!React.isValidElement<{children?: ReactNode}>(node)) {
+    return null
+  }
+
+  if (node.type === 'a') {
+    return node
+  }
+
+  return findLinkElement(node.props.children)
+}
+
 const LinkBlock = ({title, link, mobileIcon, className}:Props) => {
   const getLinkElement=(mobile: boolean)=>{
     const jsx= parse(link)
+    const linkJsx = findLinkElement(jsx)
+    
     const icon= (
         <div className="link-block__icon">
           [
@@ -31,9 +59,8 @@ const LinkBlock = ({title, link, mobileIcon, className}:Props) => {
     return (
         <>
           {
-            (!mobile|| typeof jsx==='string' ||Array.isArray(jsx))? <HtmlProcessing html={link}/>:
-                React.createElement(jsx.type, jsx.props, icon
-                )
+            (!mobile)? <HtmlProcessing html={link}/>:
+              React.createElement(linkJsx?.type || "div", linkJsx?.props, icon)
           }
         </>
     )
