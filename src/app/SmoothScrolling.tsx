@@ -20,9 +20,36 @@ function SmoothScrolling({
                            noAnimation= false
                          }: Props) {
   const lenis = useLenis();
+  const touchStartX = useRef(0);
   const touchStartY = useRef(0);
   const lastTouchY = useRef(0);
+  const touchDirection = useRef<"horizontal" | "vertical" | null>(null);
+  const isHorizontalTouchArea = useRef(false);
+  const contentRef = useRef<HTMLDivElement>(null);
   const lenisRef=useRef<{lenis: Lenis | undefined}>(null)
+  const touchDirectionThreshold = 8;
+
+  const getHorizontalTouchArea = (target: EventTarget | null) => {
+    if (!(target instanceof HTMLElement)) return null;
+
+    return target.closest(".swiper, [data-horizontal-scroll-lock]");
+  };
+
+  const lockTouchDirection = (touch: Pick<Touch, "clientX" | "clientY">) => {
+    const deltaXFromStart = touch.clientX - touchStartX.current;
+    const deltaYFromStart = touch.clientY - touchStartY.current;
+    const absDeltaXFromStart = Math.abs(deltaXFromStart);
+    const absDeltaYFromStart = Math.abs(deltaYFromStart);
+
+    if (
+        !touchDirection.current &&
+        Math.max(absDeltaXFromStart, absDeltaYFromStart) > touchDirectionThreshold
+    ) {
+      touchDirection.current = absDeltaXFromStart > absDeltaYFromStart
+          ? "horizontal"
+          : "vertical";
+    }
+  };
 
   // Анимация границ
   const animation = (target: HTMLElement, direction: "top"|"bottom") => {
@@ -64,12 +91,23 @@ function SmoothScrolling({
 
   // Обработчики событий
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
     lastTouchY.current = e.touches[0].clientY;
+    touchDirection.current = null;
+    isHorizontalTouchArea.current = Boolean(getHorizontalTouchArea(e.target));
   };
 
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     const currentTouchY = e.touches[0].clientY;
+    if (isHorizontalTouchArea.current) {
+      lockTouchDirection(e.touches[0]);
+    }
+
+    if (isHorizontalTouchArea.current && touchDirection.current === "horizontal") {
+      return;
+    }
+
     const deltaY = -(currentTouchY - lastTouchY.current);
     lastTouchY.current = currentTouchY;
 
@@ -121,6 +159,54 @@ function SmoothScrolling({
     return () => observer.disconnect();
   }, [lenis]);
 
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    const handleNativeTouchStart = (e: TouchEvent) => {
+      touchStartX.current = e.touches[0].clientX;
+      touchStartY.current = e.touches[0].clientY;
+      lastTouchY.current = e.touches[0].clientY;
+      touchDirection.current = null;
+      isHorizontalTouchArea.current = Boolean(getHorizontalTouchArea(e.target));
+    };
+
+    const handleNativeTouchMove = (e: TouchEvent) => {
+      if (!isHorizontalTouchArea.current || e.touches.length !== 1) return;
+
+      lockTouchDirection(e.touches[0]);
+
+      if (touchDirection.current === "horizontal") {
+        lenisRef.current?.lenis?.stop();
+
+        if (getHorizontalTouchArea(e.target)?.hasAttribute("data-horizontal-scroll-lock")) {
+          e.preventDefault();
+        }
+      }
+    };
+
+    const handleNativeTouchEnd = () => {
+      if (touchDirection.current === "horizontal") {
+        lenisRef.current?.lenis?.start();
+      }
+
+      isHorizontalTouchArea.current = false;
+      touchDirection.current = null;
+    };
+
+    content.addEventListener("touchstart", handleNativeTouchStart, {capture: true, passive: true});
+    content.addEventListener("touchmove", handleNativeTouchMove, {capture: true, passive: false});
+    content.addEventListener("touchend", handleNativeTouchEnd, {capture: true});
+    content.addEventListener("touchcancel", handleNativeTouchEnd, {capture: true});
+
+    return () => {
+      content.removeEventListener("touchstart", handleNativeTouchStart, {capture: true});
+      content.removeEventListener("touchmove", handleNativeTouchMove, {capture: true});
+      content.removeEventListener("touchend", handleNativeTouchEnd, {capture: true});
+      content.removeEventListener("touchcancel", handleNativeTouchEnd, {capture: true});
+    };
+  }, []);
+
   return (
       <ReactLenis
           root={root}
@@ -134,6 +220,7 @@ function SmoothScrolling({
           ref={lenisRef}
       >
         <div
+            ref={contentRef}
             className={cn("lenis__content", {enableScrollTransfer})}
             onWheel={handleWheel}
             onTouchStart={handleTouchStart}

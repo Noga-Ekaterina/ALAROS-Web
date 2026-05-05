@@ -85,6 +85,11 @@ html{
   &::-webkit-scrollbar { width: 0 !important }
 }
 
+.swiper,
+[data-horizontal-scroll-lock] {
+  overscroll-behavior: contain;
+}
+
 body {
   font-family: 'PT Root VF', sans-serif;
   background: var(--c-grey-bg-light-2);
