@@ -19,6 +19,7 @@
     &:disabled {
       *, input::placeholder {
         color: var(--c-grey-bg) !important;
+        opacity: 1;
       }
 
       .input, .input *, button{
