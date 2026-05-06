@@ -160,6 +160,10 @@
 
     label{
       color: var(--c-grey-dark);
+
+      &:hover{
+        color: var(--c-dark);
+      }
     }
   }
 }

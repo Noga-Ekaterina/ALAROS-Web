@@ -68,6 +68,8 @@
     border-top: solid var(--w-line) var(--c-grey-bg);
     margin-top: 0.7em;
     font-weight: 500;
+    transition: color 0.5s;
+
 
     @include standard-font(true);
 

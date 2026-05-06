@@ -6,6 +6,7 @@
 
   >*{
     color: var(--c-grey);
+    transition: color 0.5s;
 
     @include adaptive((
             font-size: (
