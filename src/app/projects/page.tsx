@@ -4,7 +4,6 @@ import ProjectsList from "../../components/_projects/projects-list/ProjectsList"
 import {IProject, IProjectsPage} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import Pagination from "@/components/pagination/Pagination";
 import {fetchColection, fetchSingle} from "@/utils/strapFetch";
@@ -71,7 +70,7 @@ const Page = async ({searchParams}: Props) => {
   }
 
   return (
-      <AnimationPage>
+      <>
         <ProjectModal projects={projectsData.data} searchParams={searchParams}/>
         <div className="container" style={{paddingBlock: "52rem", position: "relative", zIndex: 4}}>
           <div className="titles-block">
@@ -81,7 +80,7 @@ const Page = async ({searchParams}: Props) => {
           <ProjectsList projects={projectsData.data}/>
         </div>
         <Pagination pages={projectsData.meta.pagination.pageCount}/>
-      </AnimationPage>
+      </>
   );
 };
 

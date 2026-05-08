@@ -1,7 +1,6 @@
 import React from 'react';
 import {IContacts} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import ContactsMainScreen from "@/components/_contacts/contacts-main-screen/ContactsMainScreen";
 import ContactsAddressesSocials from "@/components/_contacts/contacts-addresses-socials/ContactsAddressesSocials";
@@ -27,11 +26,11 @@ const Page = async ({searchParams}:Props) => {
   }
 
   return (
-      <AnimationPage>
+      <>
         <ContactsMainScreen data={pageData}/>
         <ContactsAddressesSocials data={pageData}/>
         <ContactsForm title={pageData.formTitle} inputs={pageData.formInputs} agreement={pageData.formAgreement} />
-      </AnimationPage>
+      </>
   );
 };
 

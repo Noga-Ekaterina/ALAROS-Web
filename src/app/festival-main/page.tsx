@@ -13,7 +13,6 @@ import {IFestival, IHtmlString,} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import {fetchSingle} from "@/utils/strapFetch";
 import {domain} from "@/variables";
@@ -39,7 +38,7 @@ const Page = async ({searchParams}:Props) => {
   }
 
   return (
-      <AnimationPage>
+      <>
         <ProjectModal projects={data.projects} searchParams={searchParams}/>
         <FestivalMainScreen pageData={data}/>
         <FestivalPremiya pageData={data}/>
@@ -52,7 +51,7 @@ const Page = async ({searchParams}:Props) => {
         <FestivalJuries title={data.juriesTitle} juriesCommiteds={data.juriesCommited}/>
         <FestivalProjects pageData={data}/>
         <PartnersSlider/>
-      </AnimationPage>
+      </>
 
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimationPage from "@/app/AnimationPage";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import type {Metadata} from "next";
 import {revalidateTag, unstable_cache} from "next/cache";
@@ -61,7 +60,7 @@ const MyComponent = async ({searchParams}:Props) => {
   }
 
   return (
-      <AnimationPage>
+      <>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <AboutMainScreen pageData={pageData}/>
         <AboutMain pageData={pageData}/>
@@ -75,7 +74,7 @@ const MyComponent = async ({searchParams}:Props) => {
         <div style={{background:"#fff", overflow:"hidden"}}>
           <PartnersSlider/>
         </div>
-      </AnimationPage>
+      </>
   );
 };
 

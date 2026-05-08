@@ -5,7 +5,6 @@ import {INews, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import CalendarEvents from "@/components/calendar-events/CalendarEvents";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import Pagination from "@/components/pagination/Pagination";
 import {fetchColection, fetchSingle, getNews} from '@/utils/strapFetch';
@@ -36,7 +35,7 @@ const Page = async ({searchParams}:Props) => {
     return <div>произошла ошибка{pageData && `: ${pageData}`}, перезагрузите страницу</div>
   }
   return (
-      <AnimationPage>
+      <>
         <ProjectModal projects={[pageData.mainScreenProject]} searchParams={searchParams}/>
         <NewsMainScreen data={pageData}/>
         <div style={{ overflow: "hidden"}}>
@@ -44,7 +43,7 @@ const Page = async ({searchParams}:Props) => {
           <NewsList news={data.news} pageData={pageData}/>
           <Pagination pages={data.pageCount} hash="#news-list"/>
         </div>
-      </AnimationPage>
+      </>
   );
 };
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import PartnersMainScreen from "@/components/_partners/partners-main-screen/PartnersMainScreen";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import {domain} from "@/variables";
 import {revalidateTag, unstable_cache} from "next/cache";
@@ -31,7 +30,7 @@ const MyComponent = async ({searchParams}: Props) => {
   }
 
   return (
-      <AnimationPage>
+      <>
         <PartnersMainScreen pageData={pageData}/>
         <PartnersClub pageData={pageData}/>
         <PartnersContacts pageData={pageData}/>
@@ -47,7 +46,7 @@ const MyComponent = async ({searchParams}: Props) => {
             <PartnersSlider/>
           </div>
         }
-      </AnimationPage>
+      </>
   );
 };
 

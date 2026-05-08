@@ -7,7 +7,6 @@ import {IEventsDataYear, IHomeData, INewsItem} from "@/types/data";
 import {revalidateTag, unstable_cache} from "next/cache";
 import ProjectModal from "@/components/_projects/project-modal/ProjectModal";
 import PartnersSlider from "@/components/partners-slider/PartnersSlider";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import {fetchSingle, getNews} from "@/utils/strapFetch";
 import {domain} from "@/variables";
@@ -32,14 +31,14 @@ const Home = async ({searchParams}:Props) => {
   }
 
   return (
-      <AnimationPage>
+      <>
         <ProjectModal projects={homeData.projects} searchParams={searchParams}/>
         <HomeMainScreen homeData={homeData}/>
         <HomeEvents homeData={homeData}/>
         <CalendarEvents/>
         <HomeNewsSlider title={homeData.newsTitle} news={news?.news}/>
         <PartnersSlider/>
-      </AnimationPage>
+      </>
   );
 };
 

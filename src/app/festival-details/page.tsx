@@ -7,7 +7,6 @@ import {revalidateTag, unstable_cache} from "next/cache";
 import FestivalDetailsMainScreen
   from "@/components/_festival-details/festival-details-main-screen/FestivalDetailsMainScreen";
 import FestivalProgram from "@/components/_festival-details/festival-program/FestivalProgram";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import InfopartnersSlider from "@/components/partners-slider/infopartners/InfopartnersSlider";
@@ -35,7 +34,7 @@ const Page = async ({searchParams}:Props) => {
 
 
   return (
-      <AnimationPage>
+      <>
         <FestivalDetailsMainScreen pageData={data}/>
         {
           data.isShowAllContent?
@@ -53,7 +52,7 @@ const Page = async ({searchParams}:Props) => {
               :
               <NotFoundSample title={"Скоро тут что-то будет"} mainText={"Soon"} mainTextMobile={"So\non"} subtitle="Но пока ещё ничего нет"/>
         }
-      </AnimationPage>
+      </>
 
   );
 };

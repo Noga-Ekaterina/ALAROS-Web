@@ -1,10 +1,11 @@
 'use client'
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import { AnimatePresence, motion } from "framer-motion"
 import {IWithChildren, IWithClass} from "@/types/tehnic";
 import {useGetHashPosition} from "@/hoocs/useGetHashPosition";
 import {smoothScroll} from "@/utils/smoothScroll";
 import store from "@/store/store";
+import {usePathname} from "next/navigation";
 
 interface Props extends IWithChildren, IWithClass{
   conditions?: boolean
@@ -16,6 +17,8 @@ interface Props extends IWithChildren, IWithClass{
 const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isModal }: Props) => {
   const getHashPosition= useGetHashPosition()
   const {isBack, setIsBack}=store
+  const pathname = usePathname()
+  const isFirstRender = useRef(true)
 
   useEffect(() => {
     if (isModal) return
@@ -26,7 +29,13 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isM
     }
 
     window.scrollTo(0,0)
-    setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 500)
+    const timer = setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 500)
+
+    return () => clearTimeout(timer)
+  }, [pathname]);
+
+  useEffect(() => {
+    isFirstRender.current = false
   }, []);
 
   return (
@@ -34,8 +43,8 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isM
         {
           (conditions== undefined || conditions)&& (
                 <motion.div
-                    key={JSON.stringify(conditions)}
-                    initial={{opacity: 0, pointerEvents: "none"}}
+                    key={isModal ? JSON.stringify(conditions) : pathname}
+                    initial={!isModal && isFirstRender.current ? false : {opacity: 0, pointerEvents: "none"}}
                     animate={{opacity: 1, pointerEvents: "auto"}}
                     exit={{opacity: 0, pointerEvents: "none"}}
                     transition={{duration: 0.5, ease: 'easeInOut'}}

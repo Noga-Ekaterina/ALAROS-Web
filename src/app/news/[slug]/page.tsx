@@ -3,7 +3,6 @@ import "./news-article.scss"
 import {INews, INewsItem} from "../../../types/data";
 import NewsArticle from "@/app/news/[slug]/NewsArticle";
 import {revalidateTag, unstable_cache} from "next/cache";
-import AnimationPage from "@/app/AnimationPage";
 import type {Metadata} from "next";
 import NotFoundSample from "@/components/not-found-sample/NotFoundSample";
 import {fetchColection} from "@/utils/strapFetch";
@@ -35,9 +34,9 @@ const Page = async ({params}:Props) => {
 
   if (slug.length>=256){
     return (
-        <AnimationPage>
+        <>
           <NotFoundSample title={`Тут ничего \nне нашлось`} mainText={"404"} mainTextMobile={`40\n04`}/>
-        </AnimationPage>
+        </>
     )
   }
 
@@ -49,16 +48,16 @@ const Page = async ({params}:Props) => {
   }
   if (news === undefined){
     return (
-        <AnimationPage>
+        <>
           <NotFoundSample title={`Тут ничего \nне нашлось`} mainText={"404"} mainTextMobile={`40\n04`}/>
-        </AnimationPage>
+        </>
     )
   }
 
   return (
-      <AnimationPage>
+      <>
         <NewsArticle news={news}/>
-      </AnimationPage>
+      </>
   );
 };
 

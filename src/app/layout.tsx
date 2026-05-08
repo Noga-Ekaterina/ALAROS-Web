@@ -12,6 +12,7 @@ import Loader from "@/components/loader/Loader";
 import Back from "@/components/back/Back";
 import Cookie from "@/components/cookie/Cookie";
 import dynamic from "next/dynamic";
+import AnimationPage from "@/app/AnimationPage";
 const Metrika =dynamic(()=> import("@/app/Metrika"), {ssr: false})
 
 export const viewport: Viewport= {
@@ -37,7 +38,9 @@ export default function RootLayout({
           <Menu/>
           <SmoothScrolling root noAnimation>
             <div style={{minHeight: "100vh"}}>
-              {children}
+              <AnimationPage>
+                {children}
+              </AnimationPage>
             </div>
             <Footer/>
           </SmoothScrolling>
