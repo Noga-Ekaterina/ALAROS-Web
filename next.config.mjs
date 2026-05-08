@@ -1,3 +1,9 @@
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+   enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
    webpack: (config, { isServer, dev }) => {
       if (!isServer && !dev) {
@@ -38,3 +44,5 @@ const nextConfig = {
       return config;
    },
 };
+
+export default withBundleAnalyzer(nextConfig);
