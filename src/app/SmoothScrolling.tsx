@@ -144,6 +144,19 @@ function SmoothScrolling({
     }
   };
 
+  useEffect(() => {
+  const originalScrollTo = window.scrollTo
+
+  window.scrollTo = ((...args: any[]) => {
+    console.trace('window.scrollTo called with:', args)
+    return originalScrollTo.apply(window, args as any)
+  }) as typeof window.scrollTo
+
+  return () => {
+    window.scrollTo = originalScrollTo
+  }
+}, [])
+
   // Наблюдатель за изменениями DOM
   useEffect(() => {
     const observer = new MutationObserver(() => {
