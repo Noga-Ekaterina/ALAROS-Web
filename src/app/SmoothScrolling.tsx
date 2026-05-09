@@ -1,7 +1,7 @@
 'use client'
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import { IWithChildren } from "@/types/tehnic";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import type Lenis from "@studio-freight/lenis";
 import cn from "classnames";
 
@@ -27,6 +27,7 @@ function SmoothScrolling({
   const isHorizontalTouchArea = useRef(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const lenisRef=useRef<{lenis: Lenis | undefined}>(null)
+  const initialScrollY = useRef(typeof window === "undefined" ? 0 : window.scrollY);
   const touchDirectionThreshold = 8;
 
   const getHorizontalTouchArea = (target: EventTarget | null) => {
@@ -144,30 +145,35 @@ function SmoothScrolling({
     }
   };
 
-useEffect(() => {
-  let prev = window.scrollY
+  useEffect(() => {
+    const scrollY = initialScrollY.current;
+    if (scrollY <= 0) return;
 
-  const onScroll = () => {
-    const current = window.scrollY
+    const frame = requestAnimationFrame(() => {
+      const lenisCurrent = lenisRef.current?.lenis;
 
-    if (prev > 100 && current === 0) {
-      console.trace('Returned to top without scrollTo')
-    }
+      if (window.scrollY === 0) {
+        window.scrollTo(0, scrollY);
+      }
 
-    prev = current
-  }
+      lenisCurrent?.scrollTo(scrollY, {immediate: true});
+      lenisCurrent?.resize();
+    });
 
-  window.addEventListener('scroll', onScroll, { passive: true })
-
-  return () => {
-    window.removeEventListener('scroll', onScroll)
-  }
-}, [])
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   // Наблюдатель за изменениями DOM
   useEffect(() => {
+    let resizeFrame: number | null = null;
+
     const observer = new MutationObserver(() => {
-      lenis?.resize();
+      if (resizeFrame !== null) return;
+
+      resizeFrame = requestAnimationFrame(() => {
+        lenis?.resize();
+        resizeFrame = null;
+      });
     });
 
     observer.observe(document.body, {
@@ -176,7 +182,13 @@ useEffect(() => {
       attributes: true
     });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+
+      if (resizeFrame !== null) {
+        cancelAnimationFrame(resizeFrame);
+      }
+    };
   }, [lenis]);
 
   useEffect(() => {
