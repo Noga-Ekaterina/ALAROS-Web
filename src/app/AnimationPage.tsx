@@ -23,6 +23,11 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isM
   useEffect(() => {
     if (isModal) return
 
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+
     if (isBack){
       setIsBack(false)
       return;
@@ -33,10 +38,6 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isM
 
     return () => clearTimeout(timer)
   }, [pathname]);
-
-  useEffect(() => {
-    isFirstRender.current = false
-  }, []);
 
   return (
       <AnimatePresence mode={isNoWait ? 'sync' : 'wait'}>
