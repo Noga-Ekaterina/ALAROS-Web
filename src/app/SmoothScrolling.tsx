@@ -144,16 +144,23 @@ function SmoothScrolling({
     }
   };
 
-  useEffect(() => {
-  const originalScrollTo = window.scrollTo
+useEffect(() => {
+  let prev = window.scrollY
 
-  window.scrollTo = ((...args: any[]) => {
-    console.trace('window.scrollTo called with:', args)
-    return originalScrollTo.apply(window, args as any)
-  }) as typeof window.scrollTo
+  const onScroll = () => {
+    const current = window.scrollY
+
+    if (prev > 100 && current === 0) {
+      console.trace('Returned to top without scrollTo')
+    }
+
+    prev = current
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true })
 
   return () => {
-    window.scrollTo = originalScrollTo
+    window.removeEventListener('scroll', onScroll)
   }
 }, [])
 

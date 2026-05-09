@@ -5,6 +5,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
+   reactStrictMode: false,
    webpack: (config, { isServer, dev }) => {
       if (!isServer && !dev) {
          config.optimization.splitChunks = {
