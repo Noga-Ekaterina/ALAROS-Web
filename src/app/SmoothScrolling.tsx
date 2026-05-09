@@ -27,8 +27,55 @@ function SmoothScrolling({
   const isHorizontalTouchArea = useRef(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const lenisRef=useRef<{lenis: Lenis | undefined}>(null)
-  const initialScrollY = useRef(typeof window === "undefined" ? 0 : window.scrollY);
+  const restoreGuardUntil = useRef(typeof window === "undefined" ? 0 : Date.now() + 8000);
+  const recentScrollUpIntentUntil = useRef(0);
+  const lastKnownScrollY = useRef(
+      typeof window === "undefined"
+          ? 0
+          : Math.max(window.scrollY, document.documentElement.scrollTop, document.body.scrollTop)
+  );
   const touchDirectionThreshold = 8;
+
+  const getScrollY = () => {
+    if (typeof window === "undefined") return 0;
+
+    const lenisCurrent = lenisRef.current?.lenis;
+
+    return Math.max(
+        window.scrollY,
+        document.documentElement.scrollTop,
+        document.body.scrollTop,
+        lenisCurrent?.actualScroll ?? 0,
+        lenisCurrent?.rootElement?.scrollTop ?? 0
+    );
+  };
+
+  const rememberScrollY = (scrollY = getScrollY()) => {
+    if (scrollY > 0) {
+      lastKnownScrollY.current = scrollY;
+    }
+  };
+
+  const restoreScrollY = (scrollY = lastKnownScrollY.current) => {
+    if (scrollY <= 0) return;
+
+    const lenisCurrent = lenisRef.current?.lenis;
+    const rootElement = lenisCurrent?.rootElement ?? document.documentElement;
+
+    rootElement.scrollTop = scrollY;
+    document.documentElement.scrollTop = scrollY;
+    document.body.scrollTop = scrollY;
+    window.scrollTo(0, scrollY);
+    lenisCurrent?.scrollTo(scrollY, {immediate: true, force: true});
+  };
+
+  const restoreIfUnexpectedTop = () => {
+    if (Date.now() > restoreGuardUntil.current) return;
+    if (Date.now() < recentScrollUpIntentUntil.current) return;
+    if (lastKnownScrollY.current <= 100 || getScrollY() !== 0) return;
+
+    restoreScrollY();
+  };
 
   const getHorizontalTouchArea = (target: EventTarget | null) => {
     if (!(target instanceof HTMLElement)) return null;
@@ -112,6 +159,12 @@ function SmoothScrolling({
     const deltaY = -(currentTouchY - lastTouchY.current);
     lastTouchY.current = currentTouchY;
 
+    if (deltaY < 0) {
+      recentScrollUpIntentUntil.current = Date.now() + 700;
+    } else if (deltaY > 0) {
+      requestAnimationFrame(() => rememberScrollY());
+    }
+
     const el = (e.target as HTMLElement).closest(".lenis.lenis-smooth");
     if (!el) return;
 
@@ -129,6 +182,12 @@ function SmoothScrolling({
   };
 
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (e.deltaY < 0) {
+      recentScrollUpIntentUntil.current = Date.now() + 700;
+    } else if (e.deltaY > 0) {
+      requestAnimationFrame(() => rememberScrollY());
+    }
+
     const el = (e.target as HTMLElement).closest(".lenis.lenis-smooth");
     if (!el) return;
 
@@ -146,21 +205,50 @@ function SmoothScrolling({
   };
 
   useEffect(() => {
-    const scrollY = initialScrollY.current;
-    if (scrollY <= 0) return;
+    rememberScrollY();
 
-    const frame = requestAnimationFrame(() => {
-      const lenisCurrent = lenisRef.current?.lenis;
-
-      if (window.scrollY === 0) {
-        window.scrollTo(0, scrollY);
-      }
-
-      lenisCurrent?.scrollTo(scrollY, {immediate: true});
-      lenisCurrent?.resize();
+    const syncFrame = requestAnimationFrame(() => {
+      restoreIfUnexpectedTop();
+      lenisRef.current?.lenis?.resize();
     });
 
-    return () => cancelAnimationFrame(frame);
+    const handleScroll = () => {
+      const scrollY = getScrollY();
+
+      if (scrollY > 0) {
+        rememberScrollY(scrollY);
+        return;
+      }
+
+      requestAnimationFrame(restoreIfUnexpectedTop);
+    };
+
+    const handleWheel = (event: WheelEvent) => {
+      if (event.deltaY < 0) {
+        recentScrollUpIntentUntil.current = Date.now() + 700;
+      }
+    };
+
+    const handleTouchMove = (event: TouchEvent) => {
+      if (event.touches.length !== 1) return;
+
+      const currentTouchY = event.touches[0].clientY;
+
+      if (currentTouchY > lastTouchY.current) {
+        recentScrollUpIntentUntil.current = Date.now() + 700;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, {passive: true});
+    window.addEventListener("wheel", handleWheel, {capture: true, passive: true});
+    window.addEventListener("touchmove", handleTouchMove, {capture: true, passive: true});
+
+    return () => {
+      cancelAnimationFrame(syncFrame);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleWheel, {capture: true});
+      window.removeEventListener("touchmove", handleTouchMove, {capture: true});
+    };
   }, []);
 
   // Наблюдатель за изменениями DOM
@@ -172,6 +260,7 @@ function SmoothScrolling({
 
       resizeFrame = requestAnimationFrame(() => {
         lenis?.resize();
+        restoreIfUnexpectedTop();
         resizeFrame = null;
       });
     });
