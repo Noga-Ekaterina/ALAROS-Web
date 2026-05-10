@@ -18,14 +18,36 @@ interface Props{
 }
 
 function Loader({isClient}: Props) {
-  const {isLoading, noIsFirstOpen, chekedIsFirstOpen} = store;
+  const {isLoading, noIsFirstOpen, chekedIsFirstOpen, togleLoading, setIsLoaderClosing} = store;
 
   useEffect(() => {
+    if (!isClient) {
+      togleLoading(true)
+    }
+
     return ()=>{
+      if (!isClient) {
+        togleLoading(false)
+        setIsLoaderClosing(true)
+        setTimeout(() => setIsLoaderClosing(false), 300)
+      }
+
       if (!noIsFirstOpen)
         chekedIsFirstOpen()
     }
   }, []);
+
+  if(!isClient){
+    return (
+      <div className="loader">
+        <Lottie
+          animationData={logo}
+          loop={true}
+          className="loader__icon"
+        />
+      </div>
+    )
+  }
 
   return (
       <AnimatePresence mode="wait">

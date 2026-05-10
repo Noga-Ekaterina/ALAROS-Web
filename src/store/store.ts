@@ -3,6 +3,7 @@ import { makeAutoObservable } from 'mobx';
 class Store {
   isMenuOpened = false;
   isLoading= false;
+  isLoaderClosing= false;
   noIsFirstOpen= false
   isCookie = false
   isBack= false
@@ -17,6 +18,10 @@ class Store {
 
   togleLoading=(value: boolean)=>{
     this.isLoading= value
+  }
+
+  setIsLoaderClosing=(value: boolean)=>{
+    this.isLoaderClosing= value
   }
 
   chekedIsFirstOpen=()=>{

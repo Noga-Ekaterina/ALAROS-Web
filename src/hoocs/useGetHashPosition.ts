@@ -13,6 +13,6 @@ export const useGetHashPosition=()=>{
     const {top} = el.getBoundingClientRect()
 
     return top - 48 * rem * (mobileScreen? 1.3:1)
-  }, [rem])
+  }, [mobileScreen, rem])
 }
 
