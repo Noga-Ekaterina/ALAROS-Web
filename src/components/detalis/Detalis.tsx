@@ -26,6 +26,8 @@ interface IProps extends IWithChildren {
 const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, disabled, isSticky, showClue, children }: IProps) => {
   const activeHash= useHash()
   const [isOpen, setIsOpen] = useState(startIsOpen??false);
+  const [isContentHidden, setIsContentHidden] = useState(!(startIsOpen??false));
+  const [isPendingOpen, setIsPendingOpen] = useState(false);
   const [isInit, setIsInit] = useState(false)
   const contentRef = useRef<HTMLFieldSetElement>(null);
   const rem = useGetRem();
@@ -37,7 +39,23 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
   useEffect(() => {
     setIsClient(true)
   }, [])
-  const handleClick = () => setIsOpen(!isOpen);
+
+  const openDetails = () => {
+    if (isOpen)
+      return;
+
+    setIsContentHidden(false);
+    setIsPendingOpen(true);
+  };
+
+  const handleClick = () => {
+    if (!isOpen) {
+      openDetails();
+      return;
+    }
+
+    setIsOpen(false);
+  };
 
   // Обработчики с правильными сигнатурами
   const handleEnter = (node: HTMLElement) => {
@@ -63,11 +81,16 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
     node.style.transition = 'margin-top 500ms ease-in-out'
   };
 
+  const handleExited = () => {
+    setIsContentHidden(true);
+  };
+
   useLayoutEffect(() => {
     const currentHash = window.location.hash.slice(1);
 
-    if (hash && (hash === activeHash || hash === currentHash))
-      setIsOpen(true)
+    if (hash && (hash === activeHash || hash === currentHash)) {
+      openDetails();
+    }
 
     setIsInit(true)
   }, [activeHash, hash]);
@@ -81,20 +104,33 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
         node.style.transition = isInit ? 'margin-top 500ms ease-in-out' : 'none';
         node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
         node.parentElement?.style.setProperty('overflow', "hidden");
-      }else {
-        node.style.marginTop = '0';
-        node.style.transition = 'margin-top 500ms ease-in-out'
-        node.parentElement?.style.setProperty('overflow', 'visible');
       }
     }
   }, [isOpen, isInit, rem]);
+
+  useLayoutEffect(() => {
+    if (!isPendingOpen || isContentHidden || !contentRef.current)
+      return;
+
+    const node = contentRef.current;
+    node.style.transition = 'none';
+    node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
+    node.parentElement?.style.setProperty('overflow', "hidden");
+
+    const animationFrame = requestAnimationFrame(() => {
+      setIsOpen(true);
+      setIsPendingOpen(false);
+    });
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isPendingOpen, isContentHidden, rem]);
 
   useEffect(() => {
     setTimeout(()=>lenis?.resize(), 1000)
   }, [isOpen]);
 
   const defaultTrigger = showClue ? <DetalisClue disabled={disabled} isOpen={isOpen} /> : <span className="detalis__icon">+</span>
-  const initialContentWrapperStyle: React.CSSProperties | undefined = !isInit && !isOpen
+  const contentWrapperStyle: React.CSSProperties | undefined = isContentHidden
     ? { height: 0, overflow: "hidden" }
     : undefined;
 
@@ -123,7 +159,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
           }
         </button>
 
-        <div style={initialContentWrapperStyle}>
+        <div style={contentWrapperStyle}>
           <CSSTransition
               in={isOpen}
               timeout={500}
@@ -133,6 +169,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
               onEntered={() => contentRef.current && handleEntered(contentRef.current)}
               onExit={() => contentRef.current && handleExit(contentRef.current)}
               onExiting={() => contentRef.current && handleExiting(contentRef.current)}
+              onExited={handleExited}
           >
             <fieldset disabled={!isOpen} className="detalis__content" ref={contentRef}>
               {children}
