@@ -5,7 +5,7 @@ import {motion} from "framer-motion";
 import store from "@/store/store";
 
 const Cookie = () => {
-  const [isShow, setIsShow] = useState(true)
+  const [isShow, setIsShow] = useState(false)
   const {setIsCookie}=store
 
   useEffect(() => {
