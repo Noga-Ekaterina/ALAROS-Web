@@ -49,6 +49,7 @@
     width: 10.5em;
     background: var(--c-grey-bg-light);
     padding: 0.7em;
+    transition: background 0.5s;
 
     @include hover{
       &:hover{
