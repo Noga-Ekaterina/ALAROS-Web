@@ -4,6 +4,7 @@ import { IWithChildren } from "@/types/tehnic";
 import React, { useEffect, useRef } from 'react';
 import type Lenis from "@studio-freight/lenis";
 import cn from "classnames";
+import {usePathname} from "next/navigation";
 
 interface Props extends IWithChildren {
   wrapper?: HTMLDivElement | null;
@@ -20,6 +21,7 @@ function SmoothScrolling({
                            noAnimation= false
                          }: Props) {
   const lenis = useLenis();
+  const pathname = usePathname();
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
   const lastTouchY = useRef(0);
@@ -34,6 +36,7 @@ function SmoothScrolling({
           ? 0
           : Math.max(window.scrollY, document.documentElement.scrollTop, document.body.scrollTop)
   );
+  const previousPathname = useRef(pathname);
   const touchDirectionThreshold = 8;
 
   const getScrollY = () => {
@@ -67,6 +70,18 @@ function SmoothScrolling({
     document.body.scrollTop = scrollY;
     window.scrollTo(0, scrollY);
     lenisCurrent?.scrollTo(scrollY, {immediate: true, force: true});
+  };
+
+  const resetScrollY = () => {
+    const lenisCurrent = lenisRef.current?.lenis;
+    const rootElement = lenisCurrent?.rootElement ?? document.documentElement;
+
+    lastKnownScrollY.current = 0;
+    rootElement.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
+    lenisCurrent?.scrollTo(0, {immediate: true, force: true});
   };
 
   const restoreIfUnexpectedTop = () => {
@@ -252,6 +267,18 @@ function SmoothScrolling({
   }, []);
 
   // Наблюдатель за изменениями DOM
+  useEffect(() => {
+    if (previousPathname.current === pathname) return;
+
+    previousPathname.current = pathname;
+
+    if (window.location.hash) return;
+
+    restoreGuardUntil.current = 0;
+    resetScrollY();
+    requestAnimationFrame(resetScrollY);
+  }, [pathname]);
+
   useEffect(() => {
     let resizeFrame: number | null = null;
 
