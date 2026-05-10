@@ -5,6 +5,21 @@ import { useCallback } from 'react';
 
 type NavigationMethod = 'push' | 'replace';
 
+const scrollToTop = () => {
+  const rootElement = document.querySelector<HTMLElement>(".lenis.lenis-smooth") ?? document.documentElement;
+
+  rootElement.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  window.scrollTo(0, 0);
+};
+
+const resetScrollAfterNavigation = () => {
+  scrollToTop();
+  requestAnimationFrame(scrollToTop);
+  setTimeout(scrollToTop, 50);
+};
+
 export const useSearchParamsControl = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -19,6 +34,10 @@ export const useSearchParamsControl = () => {
           router.replace(`${pathname}${queryString}`, {scroll});
         } else {
           router.push(`${pathname}${queryString}`, {scroll});
+        }
+
+        if (scroll !== false) {
+          resetScrollAfterNavigation();
         }
       },
       [router, pathname]
