@@ -64,32 +64,39 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
   };
 
   useLayoutEffect(() => {
-    if (hash===activeHash)
+    const currentHash = window.location.hash.slice(1);
+
+    if (hash && (hash === activeHash || hash === currentHash))
       setIsOpen(true)
 
     setIsInit(true)
-  }, [activeHash]);
+  }, [activeHash, hash]);
 
   // Инициализация начального состояния
   useLayoutEffect(() => {
-    setTimeout(()=>{
-      if (contentRef.current){
-        const node = contentRef.current;
-        if (!isOpen && (hash!==window.location.hash.slice(1) ||isInit)) {
-          node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
-          node.parentElement?.style.setProperty('overflow', "hidden");
-        }else {
-          node.style.transition = 'margin-top 500ms ease-in-out'
-        }
+    if (contentRef.current){
+      const node = contentRef.current;
+
+      if (!isOpen) {
+        node.style.transition = isInit ? 'margin-top 500ms ease-in-out' : 'none';
+        node.style.marginTop = `-${node.getBoundingClientRect().height}px`;
+        node.parentElement?.style.setProperty('overflow', "hidden");
+      }else {
+        node.style.marginTop = '0';
+        node.style.transition = 'margin-top 500ms ease-in-out'
+        node.parentElement?.style.setProperty('overflow', 'visible');
       }
-    }, 200)
-  }, [isOpen, rem]);
+    }
+  }, [isOpen, isInit, rem]);
 
   useEffect(() => {
     setTimeout(()=>lenis?.resize(), 1000)
   }, [isOpen]);
 
   const defaultTrigger = showClue ? <DetalisClue disabled={disabled} isOpen={isOpen} /> : <span className="detalis__icon">+</span>
+  const initialContentWrapperStyle: React.CSSProperties | undefined = !isInit && !isOpen
+    ? { height: 0, overflow: "hidden" }
+    : undefined;
 
   return (
       <div
@@ -116,7 +123,7 @@ const Detalis = ({ title, rightElement, hash, startIsOpen, isBigGray, isBtnBg, d
           }
         </button>
 
-        <div>
+        <div style={initialContentWrapperStyle}>
           <CSSTransition
               in={isOpen}
               timeout={500}

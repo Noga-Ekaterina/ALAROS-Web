@@ -8,7 +8,7 @@ export const useGetHashPosition=()=>{
 
   return useCallback((hash: string)=>{
     const el= document.getElementById(hash.slice(1))
-    if (!el) return window.scrollY
+    if (!el) return 0
 
     const {top} = el.getBoundingClientRect()
 

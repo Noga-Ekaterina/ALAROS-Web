@@ -52,6 +52,7 @@
   color: var(--c-dark);
   white-space: pre-line;
   transition: text-decoration-color 0.5s;
+  scroll-margin-top: var(--header-height);
 }
 
 html{

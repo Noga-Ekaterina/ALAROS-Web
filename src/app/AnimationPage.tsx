@@ -40,9 +40,11 @@ const AnimationPage = ({ children, conditions, className, isNoWait, onClick, isM
       return;
     }
 
-    const timer = setTimeout(()=>smoothScroll(getHashPosition(window.location.hash)), 500)
 
-    return () => clearTimeout(timer)
+
+    // const timer = setTimeout(()=>window.scrollTo(0, getHashPosition(window.location.hash)), 50)
+
+    // return () => clearTimeout(timer)
   }, [pathname]);
 
   const content = (conditions== undefined || conditions) && (
