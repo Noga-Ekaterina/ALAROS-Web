@@ -138,6 +138,10 @@
 
     ul{
       margin-block: 0.9em;
+
+      li{
+        margin-left: var(--ul-li-offset);
+      }
     }
 
     table{

@@ -209,33 +209,42 @@ input{
 }
 
 ul li{
+  --ul-li-marker-width: 0.3em;
+  --ul-li-gap: 0.7em;
+  --ul-li-offset: calc(var(--ul-li-marker-width) + var(--ul-li-gap));
+
   list-style: none;
-  display: flex;
-  align-items: start;
   position: relative;
-  left: -0.3em;
 
   &:before{
     content: '';
-    width: 0.3em;
+    width: var(--ul-li-marker-width);
     aspect-ratio: 1/1;
     flex-shrink: 0;
-    position: relative;
+    position: absolute;
     top: 0.5em;
-    left: -0.9em;
+    left: calc(-1 * var(--ul-li-offset));
     background: var(--c-red);
   }
 }
 
 ol li {
+  --ol-li-marker-width: 1.33em;
+  --ol-li-gap: 0.7em;
+  --ol-li-offset: calc(var(--ol-li-marker-width) + var(--ol-li-gap));
+
   list-style: none;
   counter-increment: num;
-  display: flex;
-  gap: 0.7em;
-
+  position: relative;
+  padding-left: var(--ol-li-offset);
+  
   &::before{
     content: counter(num) '.';
-    width: 1.08em;
+    font-variant-numeric: lining-nums proportional-nums;
+    width: var(--ol-li-marker-width);
+    display: block;
+    position: absolute;
+    left: 0;
   }
 }
 
@@ -383,10 +392,12 @@ h1, h2, h3, h4, h5{
     transform: rotate(-45deg);
     padding: 0;
 
-    &:hover{
-      transform: rotate(-45deg) scale(1.2);
+    @include hover{
+      &:hover{
+        transform: rotate(-45deg) scale(1.2);
+      }
     }
-
+    
     &:active{
       transform: rotate(-45deg) scale(1);
     }
