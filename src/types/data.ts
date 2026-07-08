@@ -179,6 +179,7 @@ export interface IContentComponent {
 }
 
 export interface INewsItem {
+  id: number
   title: string
   cover: IImage
   description: string

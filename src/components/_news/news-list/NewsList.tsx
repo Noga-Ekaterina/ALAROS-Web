@@ -110,7 +110,7 @@ const NewsList: FC<Props> = ({news, pageData}) => {
                 return (
                   <NewsItem
                       news={item}
-                      key={`news-list-item-${index}`}
+                      key={`news-list-item-${item.id}`}
                       mediaSizes={
                         (
                             (index===0 && reverse) ||
